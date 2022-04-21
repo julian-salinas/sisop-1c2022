@@ -1,0 +1,12 @@
+[INFO] 00:05:36:504 memoria/(677:677): Memoria lista para recibir al cliente
+[INFO] 00:16:57:447 memoria/(1853:1853): Memoria lista para recibir al cliente
+[INFO] 20:51:47:210 memoria/(5357:5357): Memoria lista para recibir al cliente
+[INFO] 20:55:14:572 memoria/(5882:5882): Memoria lista para recibir al cliente
+[INFO] 21:22:16:628 memoria/(9565:9565): Memoria lista para recibir al cliente
+[INFO] 00:52:53:471 memoria/(24025:24025): Memoria lista para recibir al cliente
+[INFO] 00:53:05:512 memoria/(24025:24025): Se conecto un cliente!
+[ERROR] 00:53:05:512 memoria/(24025:24025): el cliente se desconecto. Terminando servidor
+[INFO] 00:54:34:725 memoria/(24137:24137): Memoria lista para recibir al cliente
+[INFO] 00:54:44:099 memoria/(24137:24137): Se conecto un cliente!
+[INFO] 00:54:44:100 memoria/(24137:24137): Me llego el mensaje LRU
+[ERROR] 00:54:44:100 memoria/(24137:24137): el cliente se desconecto. Terminando servidor
