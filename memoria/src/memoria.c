@@ -11,6 +11,21 @@
 #include "memoria.h"
 
 int main(void) {
+
+	//ini config
+	ini_config();
+
+	//ini proceso -> creación estructuras necesarias
+
+	//suspension proceso ->liberar espacio de memoria escribiendo en SWAP
+
+	//acceso a tabla de páginas
+	// 1er nivel responder el n° de tabla 2
+	// 2do nivel responder el marco (cargar si corresponde y lo que conlleva)
+
+	//acceso a espacio de usuario
+
+
 	//servidor para CPU
 	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_DEBUG);
 
@@ -38,7 +53,10 @@ int main(void) {
 				break;
 			}
 		}
-		return EXIT_SUCCESS;
+
+	//liberar memoria
+	config_destroy(config_memoria);
+	return EXIT_SUCCESS;
 }
 
 void iterator(char* value) {

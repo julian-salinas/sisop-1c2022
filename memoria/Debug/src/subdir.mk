@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../src/memoria.c \
+../src/utils-memoria.c \
 ../src/utils.c 
 
 OBJS += \
 ./src/memoria.o \
+./src/utils-memoria.o \
 ./src/utils.o 
 
 C_DEPS += \
 ./src/memoria.d \
+./src/utils-memoria.d \
 ./src/utils.d 
 
 

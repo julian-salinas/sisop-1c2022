@@ -3,13 +3,16 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<sys/socket.h>
+#include<signal.h>
 #include<unistd.h>
+#include<sys/types.h>
+#include<sys/socket.h>
 #include<netdb.h>
-#include<commons/log.h>
-#include<commons/collections/list.h>
 #include<string.h>
 #include<assert.h>
+#include<commons/log.h>
+#include<commons/config.h>
+#include<commons/collections/list.h>
 
 #define IP_MEMORIA "127.0.0.1"
 #define PUERTO_MEMORIA "8002"
@@ -21,6 +24,7 @@ typedef enum
 }op_code;
 
 t_log* logger;
+
 
 void* recibir_buffer(int*, int);
 

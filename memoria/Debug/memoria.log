@@ -10,3 +10,4 @@
 [INFO] 00:54:44:099 memoria/(24137:24137): Se conecto un cliente!
 [INFO] 00:54:44:100 memoria/(24137:24137): Me llego el mensaje LRU
 [ERROR] 00:54:44:100 memoria/(24137:24137): el cliente se desconecto. Terminando servidor
+[INFO] 12:00:47:385 memoria/(14198:14198): Memoria lista para recibir al cliente
