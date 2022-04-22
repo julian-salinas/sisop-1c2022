@@ -4,6 +4,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<netdb.h>
+#include<fcntl.h> 
+#include<unistd.h>
+#include<string.h>
 
 #define TAMANIO_DEFAULT_BUFFER 64
 
@@ -83,7 +86,7 @@ void destruir_paquete(t_paquete* paquete);
 
 
 /**
- * @DESC: Agregar una cadena a un paquete
+ * @DESC: Agregar una cadena al buffer de un paquete
  * @param paquete: puntero a t_paquete donde se agregará el valor
  * @param valor_a_agregar: valor que se agregará al buffer del paquete
  * @param tamanio: tamanio del valor a agregar
