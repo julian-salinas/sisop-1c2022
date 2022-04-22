@@ -6,6 +6,8 @@
 #include<netdb.h>
 #include<sys/socket.h>
 #include<string.h>
+#include<fcntl.h>
+#include<unistd.h>
 
 
 /**

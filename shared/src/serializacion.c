@@ -5,6 +5,7 @@ t_buffer* crear_buffer(size_t tamanio) {
     tmp -> offset = 0;
     tmp -> tamanio = tamanio;
     tmp -> stream = malloc(tamanio);
+    return tmp;
 }
 
 
@@ -37,7 +38,7 @@ t_paquete* crear_paquete(uint8_t header, size_t tamanio) {
     t_paquete* tmp = malloc(sizeof(t_paquete));
     tmp -> header = header;
     tmp -> payload = crear_buffer(tamanio);
-    return tamanio;
+    return (void*) tamanio;
 }
 
 
