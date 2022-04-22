@@ -30,5 +30,4 @@ void liberar_socket_cliente(int socket_cliente);
  */
 int crear_socket_servidor(char *ip, char *puerto);
 
-
-#endif NETWORKING_H
+#endif /* NETWORKING_H */

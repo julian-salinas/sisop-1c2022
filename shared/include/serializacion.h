@@ -7,16 +7,6 @@
 
 #define TAMANIO_DEFAULT_BUFFER 64
 
-/**
- * @DESC: Contenido de un paquete
- *        - Header del mensaje (Sacado de un Enum probablemente)
- *        - Payload (Contenido del mensaje)
- */
-typedef struct {
-    uint8_t header;
-    t_buffer* payload;
-} t_paquete;
-
 
 /**
  * @DESC: Contenido de un buffer para serialización
@@ -29,6 +19,17 @@ typedef struct {
     size_t tamanio;
     void* stream;
 } t_buffer;
+
+
+/**
+ * @DESC: Contenido de un paquete
+ *        - Header del mensaje (Sacado de un Enum probablemente)
+ *        - Payload (Contenido del mensaje)
+ */
+typedef struct {
+    uint8_t header;
+    t_buffer* payload;
+} t_paquete;
 
 
 /**
@@ -90,4 +91,4 @@ void destruir_paquete(t_paquete* paquete);
 void agregar_a_paquete(t_paquete* paquete, void* valor_a_agregar, size_t tamanio);
 
 
-#endif SERIALIZACION_H
+#endif /* SERIALIZACION_H */
