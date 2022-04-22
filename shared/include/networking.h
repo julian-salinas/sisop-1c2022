@@ -8,6 +8,7 @@
     #include<string.h>
     #include<fcntl.h>
     #include<unistd.h>
+    #include<commons/collections/list.h>    
 
 
     /**
@@ -31,5 +32,35 @@
      * @param puerto: puerto al cual va a conectarse el socket
      */
     int crear_socket_servidor(char *ip, char *puerto);
+
+
+        /**
+     * @DESC: Prepara al servidor para recibir un cliente (listen)
+     * @param socket_servidor: socket del server que se quiere preparar para recibir al cliente
+     */ 
+    int esperar_cliente(int socket_servidor);
+
+
+    /**
+     * @DESC: Recibe el código de operacion, esta funcion probablemente la implementemos para hacer 
+     *        el handshake
+     * @param socket_cliente: socket del que vamos a extraer codigo de operacion para aceptar o rechazar luego
+     */
+    int recibir_operacion(int socket_cliente); 
+
+
+    /**
+     * @DESC: Recibe el buffer del socket cliente
+     * @param socket_cliente: socket que nos va a enviar el buffer
+     * @param tamanio_buffer: tamanio del buffer
+     */
+    void* recibir_buffer(int socket_cliente, size_t* tamanio_buffer); 
+
+
+    /**
+     * @DESC: Devuelve una lista con todos los valores que llegaron en el paquete enviado, proceso de deserialización
+     * @param socket_cliente: socket que nos envía el paquete
+     */
+    t_list* recibir_paquete(int socket_cliente); 
 
 #endif /* NETWORKING_H */

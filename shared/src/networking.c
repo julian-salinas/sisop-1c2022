@@ -57,3 +57,61 @@ int crear_socket_servidor(char *ip, char* puerto) {
 
 	return socket_servidor;
 }
+
+// Todas las funciones que están despues de esto están prácticamente igual que en tp0 //
+int esperar_cliente(int socket_servidor) {
+	int socket_cliente;
+	socket_cliente = accept(socket_servidor, NULL, NULL);
+	return socket_cliente;
+}
+
+
+int recibir_operacion(int socket_cliente) {
+	uint8_t cod_op;
+
+	if(recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0) {
+		return cod_op;
+    }
+	
+    else {
+		close(socket_cliente);
+		return -1;
+	}
+}
+
+
+void* recibir_buffer(int socket_cliente, size_t* tamanio_buffer) {
+	void * buffer;
+
+	recv(socket_cliente, tamanio_buffer, sizeof(int), MSG_WAITALL);
+	
+    buffer = malloc(*tamanio_buffer);
+	recv(socket_cliente, buffer, *tamanio_buffer, MSG_WAITALL);
+
+	return buffer;
+}
+
+
+t_list* recibir_paquete(int socket_cliente) {
+	size_t tamanio_buffer;
+	size_t tamanio_valor; // esta variable va cambiando segun los valores que contiene el buffer
+	
+    int desplazamiento = 0; // offset
+	void* buffer;
+
+	t_list* valores = list_create();
+	buffer = recibir_buffer(socket_cliente, &tamanio_buffer);
+    
+	while(desplazamiento < tamanio_buffer) {
+		memcpy(&tamanio_valor, buffer + desplazamiento, sizeof(int));
+		desplazamiento += sizeof(int);
+		char* valor = malloc(tamanio_valor);
+
+		memcpy(valor, buffer + desplazamiento, tamanio_valor);
+		desplazamiento += tamanio_valor;
+		list_add(valores, valor);
+	}
+
+	free(buffer);
+	return valores;
+}
