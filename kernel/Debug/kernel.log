@@ -1,0 +1,4 @@
+[INFO] 23:29:51:79 kernel/(13554:13554): Kernel lista para recibir al cliente
+[INFO] 23:29:56:404 kernel/(13554:13554): Se conecto un cliente!
+[INFO] 23:29:56:419 kernel/(13554:13554): Me llego el mensaje hola
+[ERROR] 23:29:56:424 kernel/(13554:13554): el cliente se desconecto. Terminando servidor
