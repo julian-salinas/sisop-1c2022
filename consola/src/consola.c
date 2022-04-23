@@ -30,8 +30,8 @@ int main(void) {
 		ip_kernel = config_get_string_value(config,"IP_KERNEL");
 		puerto_kernel = config_get_string_value(config,"PUERTO_KERNEL");
 		valor_prueba = "hola";
-		printf("%s \ņ", ip_kernel);
-		printf("%s \ņ", puerto_kernel);
+		printf("%s", ip_kernel);
+		printf("%s", puerto_kernel);
 
 		conexion_kernel  = crear_conexion(ip_kernel,puerto_kernel);
 
