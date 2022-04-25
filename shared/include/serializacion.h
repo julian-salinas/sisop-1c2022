@@ -19,6 +19,8 @@
      */ 
     typedef enum {
         CONFIGS,
+        MENSAJE,
+        PAQUETE
     } codigo_operacion;
 
     /**

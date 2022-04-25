@@ -11,7 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "utils.h"
+#include "networking.h"
+#include "serializacion.h"
 #include "utils-memoria.h"
 
 void iterator(char* value);

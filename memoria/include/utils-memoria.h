@@ -1,7 +1,8 @@
 #ifndef UTILS_MEMORIA_H_
 #define UTILS_MEMORIA_H_
 
-#include "utils.h"
+#include "networking.h"
+#include "serializacion.h"
 
 typedef struct
 {

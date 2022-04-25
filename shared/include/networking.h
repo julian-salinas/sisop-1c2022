@@ -1,15 +1,26 @@
 #ifndef NETWORKING_H
 #define NETWORKING_H
 
-    #include<stdio.h>
-    #include<stdlib.h>
-    #include<netdb.h>
-    #include<sys/socket.h>
-    #include<string.h>
-    #include<fcntl.h>
-    #include<unistd.h>
-    #include<commons/collections/list.h>    
+#include<stdio.h>
+#include<stdlib.h>
+#include<signal.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<netdb.h>
+#include<string.h>
+#include<assert.h>
+#include<commons/log.h>
+#include<commons/config.h>
+#include<commons/collections/list.h>    
 
+#include "serializacion.h"
+
+#define IP_MEMORIA "127.0.0.1"
+#define PUERTO_MEMORIA "8002"
+
+
+    t_log* logger;
 
     /**
      * @DESC: Función que devuelve un socket cliente para conectarse
@@ -62,5 +73,13 @@
      * @param socket_cliente: socket que nos envía el paquete
      */
     t_list* recibir_paquete(int socket_cliente); 
+
+    //de tp0
+    int iniciar_servidor(void);
+    void recibir_mensaje(int);
+    void enviar_mensaje(char* mensaje, int socket_cliente);
+    void liberar_conexion(int socket_cliente);
+    void eliminar_paquete(t_paquete* paquete);
+    
 
 #endif /* NETWORKING_H */

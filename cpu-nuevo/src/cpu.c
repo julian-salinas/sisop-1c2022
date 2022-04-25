@@ -21,7 +21,7 @@ int main(void) {
 	conexion_memoria = crear_socket_cliente(ip_memoria, puerto_memoria);
 
 	enviar_config(config, conexion_memoria);
-
+	
 	terminar_programa(conexion_memoria, logger, config);
 }
 

@@ -1,3 +1,16 @@
 [INFO] 00:00:39:131 memoria/(32559:32559): Memoria lista para recibir al cliente
 [INFO] 23:38:56:713 memoria/(19822:19822): Memoria lista para recibir al cliente
 [INFO] 00:41:23:045 memoria/(23324:23324): Memoria lista para recibir al cliente
+[INFO] 13:23:54:362 memoria/(17083:17083): Memoria lista para recibir al cliente
+[INFO] 13:25:27:081 memoria/(17357:17357): Memoria lista para recibir al cliente
+[INFO] 13:48:33:192 memoria/(20492:20492): Memoria lista para recibir al cliente
+[INFO] 14:27:03:465 memoria/(26433:26433): Memoria lista para recibir al cliente
+[ERROR] 14:27:12:079 memoria/(26433:26433): el cliente se desconecto. Terminando servidor
+[INFO] 14:59:23:537 memoria/(30747:30747): Memoria lista para recibir al cliente
+[ERROR] 14:59:42:318 memoria/(30747:30747): el cliente se desconecto. Terminando servidor
+[INFO] 15:01:28:145 memoria/(31094:31094): Memoria lista para recibir al cliente
+[ERROR] 15:02:33:817 memoria/(31094:31094): el cliente se desconecto. Terminando servidor
+[INFO] 15:03:23:122 memoria/(31419:31419): Memoria lista para recibir al cliente
+[INFO] 15:09:22:198 memoria/(32401:32401): Memoria lista para recibir al cliente
+[INFO] 15:13:29:666 memoria/(614:614): Memoria lista para recibir al cliente
+[INFO] 15:14:08:210 memoria/(736:736): Memoria lista para recibir al cliente
