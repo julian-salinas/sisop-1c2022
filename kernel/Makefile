@@ -1,4 +1,4 @@
-PROCESS_NAME=memoria
+PROCESS_NAME=kernel
 IDIR =./src
 SHARED_IDIR = ../shared/include
 CC=gcc

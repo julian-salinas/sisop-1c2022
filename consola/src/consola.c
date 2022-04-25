@@ -1,13 +1,3 @@
-/*
- ============================================================================
- Name        : consola.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "consola.h"
@@ -15,29 +5,29 @@
 int main(void) {
 
 	int conexion_kernel;
-		char* ip_kernel;
-		char* puerto_kernel;
-		char* valor_prueba;
+	char* ip_kernel;
+	char* puerto_kernel;
+	char* valor_prueba;
 
-		t_log* logger;
-		t_config* config;
+	t_log* logger;
+	t_config* config;
 
-		logger = iniciar_logger();
-		log_info(logger,"Consola iniciada");
+	logger = iniciar_logger();
+	log_info(logger,"Consola iniciada");
 
-		config = iniciar_config(CONFIG_PATH);
+	config = iniciar_config(CONFIG_PATH);
 
-		ip_kernel = config_get_string_value(config,"IP_KERNEL");
-		puerto_kernel = config_get_string_value(config,"PUERTO_KERNEL");
-		valor_prueba = "hola";
-		printf("%s", ip_kernel);
-		printf("%s", puerto_kernel);
+	ip_kernel = config_get_string_value(config,"IP_KERNEL");
+	puerto_kernel = config_get_string_value(config,"PUERTO_KERNEL");
+	valor_prueba = "hola";
+	printf("%s", ip_kernel);
+	printf("%s", puerto_kernel);
 
-		conexion_kernel  = crear_conexion(ip_kernel,puerto_kernel);
+	conexion_kernel  = crear_conexion(ip_kernel,puerto_kernel);
 
-		enviar_mensaje(valor_prueba,conexion_kernel);
+	enviar_mensaje(valor_prueba,conexion_kernel);
 
-		terminar_programa(conexion_kernel, logger, config);
+	terminar_programa(conexion_kernel, logger, config);
 
 }
 

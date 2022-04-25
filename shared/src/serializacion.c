@@ -54,17 +54,8 @@ void agregar_a_paquete(t_paquete* paquete, void* valor_a_agregar, size_t tamanio
 }
 
 
-void enviar_paquete(t_paquete* paquete, int socket_cliente) {
-    size_t bytes = (paquete -> payload -> tamanio) + (2 * sizeof(int));
-    void* a_enviar = serializar_paquete(paquete, bytes);
-
-    send(socket_cliente, a_enviar, bytes, 0);
-    free(a_enviar);
-}
-
-
 void* serializar_paquete(t_paquete* paquete, size_t bytes){
-    void * magic = malloc(bytes);
+    void* magic = malloc(bytes);
     int desplazamiento = 0;
 
     memcpy(magic + desplazamiento, &(paquete -> header), sizeof(int));
@@ -77,4 +68,46 @@ void* serializar_paquete(t_paquete* paquete, size_t bytes){
     desplazamiento += paquete -> payload -> tamanio;
 
     return magic;
+}
+
+/*
+-------------------- Comunicación entre consola y kernel ------------------------------------
+*/
+
+t_instruccion* crear_instruccion(t_identificador identificador) {
+    t_instruccion* tmp = malloc(sizeof(t_instruccion));
+    
+    tmp -> identificador = identificador;
+    tmp -> parametros = list_create();
+    
+    return tmp;
+}
+
+
+void destruir_instruccion(t_instruccion* instruccion) {
+    list_destroy(instruccion -> parametros);
+    free(instruccion);
+}
+
+
+void agregar_parametro_a_instruccion(t_instruccion* instruccion, int parametro) {
+    list_add(instruccion -> parametros, (void*) parametro);
+}
+
+
+t_lista_instrucciones* crear_lista_instrucciones(void) {
+    t_lista_instrucciones* tmp = malloc(sizeof(t_lista_instrucciones));
+    tmp -> instrucciones = list_create();
+    return tmp;
+}
+
+
+void destruir_lista_instrucciones(t_lista_instrucciones *lista_instrucciones) {
+    list_destroy(lista_instrucciones -> instrucciones);
+    free(lista_instrucciones);
+}
+
+
+void agregar_instruccion_a_lista(t_lista_instrucciones* lista_instrucciones, t_instruccion* instruccion) {
+    list_add(lista_instrucciones -> instrucciones, instruccion);
 }

@@ -66,6 +66,15 @@ int esperar_cliente(int socket_servidor) {
 }
 
 
+void enviar_paquete(t_paquete* paquete, int socket_cliente) {
+    size_t bytes = (paquete -> payload -> tamanio) + (2 * sizeof(int));
+    void* a_enviar = serializar_paquete(paquete, bytes);
+
+    send(socket_cliente, a_enviar, bytes, 0);
+    free(a_enviar);
+}
+
+
 int recibir_operacion(int socket_cliente) {
 	uint8_t cod_op;
 
@@ -116,78 +125,89 @@ t_list* recibir_paquete(int socket_cliente) {
 	return valores;
 }
 
+
+void enviar_lista_instrucciones(t_lista_instrucciones* lista_instrucciones, int socket_cliente) {
+    t_paquete* paquete = crear_paquete(INSTRUCCIONES, TAMANIO_DEFAULT_BUFFER);
+	agregar_a_paquete(paquete, lista_instrucciones, sizeof(lista_instrucciones));
+	serializar_paquete(paquete, paquete -> payload -> tamanio + 2 * sizeof(int));
+	enviar_paquete(paquete, socket_cliente);
+}
+
+
 //de tp0
-int iniciar_servidor(void)
-{
-	int socket_servidor;
+// void enviar_mensaje(char* mensaje, int socket_cliente)
+// {
+// 	t_paquete* paquete = malloc(sizeof(t_paquete));
 
-	struct addrinfo hints, *servinfo, *p;
+// 	paquete->codigo_operacion = MENSAJE;
+// 	paquete->buffer = malloc(sizeof(t_buffer));
+// 	paquete->buffer->size = strlen(mensaje) + 1;
+// 	paquete->buffer->stream = malloc(paquete->buffer->size);
+// 	memcpy(paquete->buffer->stream, mensaje, paquete->buffer->size);
 
-	memset(&hints, 0, sizeof(hints));
-	hints.ai_family = AF_UNSPEC;
-	hints.ai_socktype = SOCK_STREAM;
-	hints.ai_flags = AI_PASSIVE;
+// 	int bytes = paquete->buffer->size + 2*sizeof(int);
 
-	getaddrinfo(IP_MEMORIA, PUERTO_MEMORIA, &hints, &servinfo);
+// 	void* a_enviar = serializar_paquete(paquete, bytes);
 
-	// Creamos el socket de escucha del servidor
-	for(p=servinfo; p != NULL; p->ai_next)
-	{
-		socket_servidor = socket(p->ai_family,p->ai_socktype,p->ai_protocol);
-		if(socket_servidor == 1)
-		{
-			continue;
-		}
-		// Asociamos el socket a un puerto
-		if(bind(socket_servidor,p->ai_addr,p->ai_addrlen) == 1)
-		{
-			close(socket_servidor);
-			continue;
-		}
-		break;
-	}
+// 	send(socket_cliente, a_enviar, bytes, 0);
 
-	// Escuchamos las conexiones entrantes
-	listen(socket_servidor,SOMAXCONN);
-
-	freeaddrinfo(servinfo);
-	log_trace(logger, "Listo para escuchar a mi cliente");
-
-	return socket_servidor;
-}
-
-void recibir_mensaje(int socket_cliente)
-{
-	int size;
-	char* buffer = recibir_buffer(&size, socket_cliente);
-	log_info(logger, "Me llego el mensaje %s", buffer);
-	free(buffer);
-}
+// 	free(a_enviar);
+// 	eliminar_paquete(paquete);
+// }
 
 
-void eliminar_paquete(t_paquete* paquete)
-{
-	free(paquete->buffer->stream);
-	free(paquete->buffer);
-	free(paquete);
-}
+// int iniciar_servidor(void)
+// {
+// 	int socket_servidor;
 
-void enviar_mensaje(char* mensaje, int socket_cliente)
-{
-	t_paquete* paquete = malloc(sizeof(t_paquete));
+// 	struct addrinfo hints, *servinfo, *p;
 
-	paquete->codigo_operacion = MENSAJE;
-	paquete->buffer = malloc(sizeof(t_buffer));
-	paquete->buffer->size = strlen(mensaje) + 1;
-	paquete->buffer->stream = malloc(paquete->buffer->size);
-	memcpy(paquete->buffer->stream, mensaje, paquete->buffer->size);
+// 	memset(&hints, 0, sizeof(hints));
+// 	hints.ai_family = AF_UNSPEC;
+// 	hints.ai_socktype = SOCK_STREAM;
+// 	hints.ai_flags = AI_PASSIVE;
 
-	int bytes = paquete->buffer->size + 2*sizeof(int);
+// 	getaddrinfo(IP_MEMORIA, PUERTO_MEMORIA, &hints, &servinfo);
 
-	void* a_enviar = serializar_paquete(paquete, bytes);
+// 	// Creamos el socket de escucha del servidor
+// 	for(p=servinfo; p != NULL; p->ai_next)
+// 	{
+// 		socket_servidor = socket(p->ai_family,p->ai_socktype,p->ai_protocol);
+// 		if(socket_servidor == 1)
+// 		{
+// 			continue;
+// 		}
+// 		// Asociamos el socket a un puerto
+// 		if(bind(socket_servidor,p->ai_addr,p->ai_addrlen) == 1)
+// 		{
+// 			close(socket_servidor);
+// 			continue;
+// 		}
+// 		break;
+// 	}
 
-	send(socket_cliente, a_enviar, bytes, 0);
+// 	// Escuchamos las conexiones entrantes
+// 	listen(socket_servidor,SOMAXCONN);
 
-	free(a_enviar);
-	eliminar_paquete(paquete);
-}
+// 	freeaddrinfo(servinfo);
+// 	log_trace(logger, "Listo para escuchar a mi cliente");
+
+// 	return socket_servidor;
+// }
+
+// void recibir_mensaje(int socket_cliente)
+// {
+// 	int size;
+// 	char* buffer = recibir_buffer(&size, socket_cliente);
+// 	log_info(logger, "Me llego el mensaje %s", buffer);
+// 	free(buffer);
+// }
+
+
+// void eliminar_paquete(t_paquete* paquete)
+// {
+// 	free(paquete->buffer->stream);
+// 	free(paquete->buffer);
+// 	free(paquete);
+// }
+

@@ -1,26 +1,38 @@
 #ifndef NETWORKING_H
 #define NETWORKING_H
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<signal.h>
-#include<unistd.h>
-#include<sys/types.h>
-#include<sys/socket.h>
-#include<netdb.h>
-#include<string.h>
-#include<assert.h>
-#include<commons/log.h>
-#include<commons/config.h>
-#include<commons/collections/list.h>    
+    #include<stdio.h>
+    #include<stdlib.h>
+    #include<signal.h>
+    #include<unistd.h>
+    #include<sys/types.h>
+    #include<sys/socket.h>
+    #include<netdb.h>
+    #include<string.h>
+    #include<assert.h>
+    #include<commons/log.h>
+    #include<commons/config.h>
+    #include<commons/collections/list.h>    
 
-#include "serializacion.h"
+    #include "serializacion.h"
 
-#define IP_MEMORIA "127.0.0.1"
-#define PUERTO_MEMORIA "8002"
+    #define IP_MEMORIA "127.0.0.1"
+    #define PUERTO_MEMORIA "8002"
 
 
-    t_log* logger;
+    /**
+     * @DESC: Esto es muy inicial todavía, acá vamos a estar
+     *        declarando los diferentes códigos de operacion posibles
+     *        por ahora, solo dejo uno para poder ir testeando el uso
+     *        de paquetes
+     */ 
+    typedef enum {
+        CONFIGS,
+        MENSAJE,
+        PAQUETE,
+        INSTRUCCIONES
+    } codigo_operacion;
+
 
     /**
      * @DESC: Función que devuelve un socket cliente para conectarse
@@ -53,6 +65,15 @@
 
 
     /**
+     * @DESC: Enviar un paquete al server
+     * @param paquete: puntero a t_paquete que contiene lo que vamos a enviar, en su 
+     *                 header contiene el codigo de operacion (uint*_t) y en el payload el buffer
+     * @param socket_cliente: socket que será el emisor el paquete
+     */
+    void enviar_paquete(t_paquete* paquete, int socket_cliente);
+
+
+    /**
      * @DESC: Recibe el código de operacion, esta funcion probablemente la implementemos para hacer 
      *        el handshake
      * @param socket_cliente: socket del que vamos a extraer codigo de operacion para aceptar o rechazar luego
@@ -74,12 +95,24 @@
      */
     t_list* recibir_paquete(int socket_cliente); 
 
+    /*
+    -------------------- Comunicación entre consola y kernel ------------------------------------
+    */
+    
+    /**
+     * @DESC: Enviar lista de instrucciones (Consola → Kernel)
+     * @param lista_instrucciones: lista que se va a enviar
+     * @param socket_cliente: socket que conectado a kernel
+     */
+    void enviar_lista_instrucciones(t_lista_instrucciones* lista_instrucciones, int socket_cliente); 
+
+
     //de tp0
-    int iniciar_servidor(void);
-    void recibir_mensaje(int);
-    void enviar_mensaje(char* mensaje, int socket_cliente);
-    void liberar_conexion(int socket_cliente);
-    void eliminar_paquete(t_paquete* paquete);
+    // int iniciar_servidor(void);
+    // void recibir_mensaje(int);
+    // void enviar_mensaje(char* mensaje, int socket_cliente);
+    // void liberar_conexion(int socket_cliente);
+    // void eliminar_paquete(t_paquete* paquete);
     
 
 #endif /* NETWORKING_H */
