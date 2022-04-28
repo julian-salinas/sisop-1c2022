@@ -1,13 +1,3 @@
-/*
- ============================================================================
- Name        : memoria.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
- */
-
 #include "memoria.h"
 
 int main(void) {
@@ -26,26 +16,32 @@ int main(void) {
 	//acceso a espacio de usuario
 
 
-	//servidor para CPU
-	logger = log_create("memoria.log", "memoria", 1, LOG_LEVEL_DEBUG);
-
-		int server_fd = iniciar_servidor();
+	//ini servidor
+		logger = iniciar_logger("cfg/memoria.log", "memoria");
+		log_info(logger, IP_MEMORIA);
+		log_info(logger, PUERTO_MEMORIA);
+		int server_fd = crear_socket_servidor(IP_MEMORIA, PUERTO_MEMORIA);
 		log_info(logger, "Memoria lista para recibir al cliente");
 		int cliente_fd = esperar_cliente(server_fd);
-
+		log_info(logger, "Se conecto un cliente!");
 		t_list* lista;
+
 		while (1) {
 			int cod_op = recibir_operacion(cliente_fd);
+			//log_info(logger, "Recibí un código de operación.");
+			// t_paquete* paquete = malloc(sizeof(t_paquete));
+			// paquete->payload = malloc(sizeof(t_buffer));	
+			// Primero recibimos el codigo de operacion
+			// recv(cliente_fd, &(paquete->header), sizeof(uint8_t), 0);		
+			//int cod_op = paquete->header;
+			log_info(logger, cod_op);
 			switch (cod_op) {
-			case MENSAJE:
-				recibir_mensaje(cliente_fd);
-				break;
-			case PAQUETE:
+			case CONFIGS:
 				lista = recibir_paquete(cliente_fd);
 				log_info(logger, "Me llegaron los siguientes valores:\n");
 				list_iterate(lista, (void*) iterator);
 				break;
-			case CONFIGS:
+			case PAQUETE:
 				lista = recibir_paquete(cliente_fd);
 				log_info(logger, "Me llegaron los siguientes valores:\n");
 				list_iterate(lista, (void*) iterator);

@@ -46,3 +46,94 @@
 [INFO] 18:44:51:275 CPU/(10097:10097): Modulo CPU iniciado
 [INFO] 18:45:00:051 CPU/(10101:10101): Modulo CPU iniciado
 [INFO] 18:47:31:326 CPU/(10337:10337): Modulo CPU iniciado
+[INFO] 19:41:52:415 CPU/(10598:10598): Modulo CPU iniciado
+[INFO] 19:42:13:256 CPU/(10642:10642): Modulo CPU iniciado
+[INFO] 19:42:59:129 CPU/(10714:10714): Modulo CPU iniciado
+[INFO] 19:44:22:585 CPU/(10871:10871): Modulo CPU iniciado
+[INFO] 19:44:35:089 CPU/(10915:10915): Modulo CPU iniciado
+[INFO] 20:12:54:848 CPU/(14851:14851): Modulo CPU iniciado
+[INFO] 20:25:14:667 CPU/(15889:15889): Modulo CPU iniciado
+[INFO] 20:30:41:231 CPU/(16404:16404): Modulo CPU iniciado
+[INFO] 20:34:31:989 CPU/(16746:16746): Modulo CPU iniciado
+[INFO] 20:57:48:461 CPU/(18842:18842): Modulo CPU iniciado
+[INFO] 21:00:17:754 CPU/(19154:19154): Modulo CPU iniciado
+[INFO] 21:01:48:557 CPU/(19368:19368): Modulo CPU iniciado
+[INFO] 21:01:48:558 CPU/(19368:19368):  Config iniciado
+[INFO] 21:01:48:558 CPU/(19368:19368): Valores obtenidos
+[INFO] 21:01:48:565 CPU/(19368:19368): Socket creado
+[INFO] 21:01:48:569 CPU/(19368:19368): Config enviado
+[INFO] 21:05:05:346 CPU/(19724:19724): Modulo CPU iniciado
+[INFO] 21:05:05:347 CPU/(19724:19724):  Config iniciado
+[INFO] 21:05:05:347 CPU/(19724:19724): Valores obtenidos
+[INFO] 21:05:05:349 CPU/(19724:19724): Socket creado
+[INFO] 21:05:05:353 CPU/(19724:19724): Config enviado
+[INFO] 21:06:25:181 CPU/(19867:19867): Modulo CPU iniciado
+[INFO] 21:06:25:181 CPU/(19867:19867):  Config iniciado
+[INFO] 21:06:25:182 CPU/(19867:19867): Valores obtenidos
+[INFO] 21:06:25:183 CPU/(19867:19867): Socket creado
+[INFO] 21:06:25:188 CPU/(19867:19867): Config enviado
+[INFO] 21:06:45:189 CPU/(19931:19931): Modulo CPU iniciado
+[INFO] 21:06:45:190 CPU/(19931:19931):  Config iniciado
+[INFO] 21:06:45:190 CPU/(19931:19931): Valores obtenidos
+[INFO] 21:06:45:191 CPU/(19931:19931): Socket creado
+[INFO] 21:06:45:196 CPU/(19931:19931): Config enviado
+[INFO] 22:06:03:170 CPU/(24872:24872): Modulo CPU iniciado
+[INFO] 22:06:03:171 CPU/(24872:24872):  Config iniciado
+[INFO] 22:06:03:171 CPU/(24872:24872): Valores obtenidos
+[INFO] 22:06:03:178 CPU/(24872:24872): Socket creado
+[INFO] 22:06:03:184 CPU/(24872:24872): Config enviado
+[INFO] 22:06:44:865 CPU/(24961:24961): Modulo CPU iniciado
+[INFO] 22:06:44:865 CPU/(24961:24961):  Config iniciado
+[INFO] 22:06:44:865 CPU/(24961:24961): Valores obtenidos
+[INFO] 22:06:44:867 CPU/(24961:24961): Socket creado
+[INFO] 22:06:44:886 CPU/(24961:24961): Config enviado
+[INFO] 22:27:49:160 CPU/(26837:26837): Modulo CPU iniciado
+[INFO] 22:27:49:161 CPU/(26837:26837):  Config iniciado
+[INFO] 22:27:49:161 CPU/(26837:26837): Valores obtenidos
+[INFO] 22:27:49:162 CPU/(26837:26837): Socket creado
+[INFO] 22:27:49:162 CPU/(26837:26837): Config enviado
+[INFO] 22:30:51:389 CPU/(27132:27132): Modulo CPU iniciado
+[INFO] 22:30:51:390 CPU/(27132:27132):  Config iniciado
+[INFO] 22:30:51:390 CPU/(27132:27132): Valores obtenidos
+[INFO] 22:30:51:397 CPU/(27132:27132): Socket creado
+[INFO] 22:30:51:397 CPU/(27132:27132): Config enviado
+[INFO] 22:31:06:434 CPU/(27179:27179): Modulo CPU iniciado
+[INFO] 22:31:06:434 CPU/(27179:27179):  Config iniciado
+[INFO] 22:31:06:434 CPU/(27179:27179): Valores obtenidos
+[INFO] 22:31:06:435 CPU/(27179:27179): Socket creado
+[INFO] 22:31:06:436 CPU/(27179:27179): Config enviado
+[INFO] 22:32:29:728 CPU/(27333:27333): Modulo CPU iniciado
+[INFO] 22:32:29:728 CPU/(27333:27333):  Config iniciado
+[INFO] 22:32:29:728 CPU/(27333:27333): Valores obtenidos
+[INFO] 22:32:29:729 CPU/(27333:27333): Socket creado
+[INFO] 22:32:29:730 CPU/(27333:27333): Config enviado
+[INFO] 22:32:56:417 CPU/(27401:27401): Modulo CPU iniciado
+[INFO] 22:32:56:417 CPU/(27401:27401):  Config iniciado
+[INFO] 22:32:56:418 CPU/(27401:27401): Valores obtenidos
+[INFO] 22:32:56:421 CPU/(27401:27401): Socket creado
+[INFO] 22:32:56:424 CPU/(27401:27401): Config enviado
+[INFO] 22:33:40:738 CPU/(27521:27521): Modulo CPU iniciado
+[INFO] 22:33:40:739 CPU/(27521:27521):  Config iniciado
+[INFO] 22:33:40:739 CPU/(27521:27521): Valores obtenidos
+[INFO] 22:33:40:742 CPU/(27521:27521): Socket creado
+[INFO] 22:33:40:768 CPU/(27521:27521): Config enviado
+[INFO] 22:37:44:945 CPU/(28035:28035): Modulo CPU iniciado
+[INFO] 22:37:44:946 CPU/(28035:28035):  Config iniciado
+[INFO] 22:37:44:946 CPU/(28035:28035): Valores obtenidos
+[INFO] 22:37:44:947 CPU/(28035:28035): Socket creado
+[INFO] 22:37:44:947 CPU/(28035:28035): Config enviado
+[INFO] 22:38:30:250 CPU/(28123:28123): Modulo CPU iniciado
+[INFO] 22:38:30:251 CPU/(28123:28123):  Config iniciado
+[INFO] 22:38:30:251 CPU/(28123:28123): Valores obtenidos
+[INFO] 22:38:30:255 CPU/(28123:28123): Socket creado
+[INFO] 22:38:30:263 CPU/(28123:28123): Config enviado
+[INFO] 22:42:54:530 CPU/(28607:28607): Modulo CPU iniciado
+[INFO] 22:42:54:531 CPU/(28607:28607):  Config iniciado
+[INFO] 22:42:54:531 CPU/(28607:28607): Valores obtenidos
+[INFO] 22:42:54:534 CPU/(28607:28607): Socket creado
+[INFO] 22:42:54:534 CPU/(28607:28607): Config enviado
+[INFO] 22:43:32:628 CPU/(28691:28691): Modulo CPU iniciado
+[INFO] 22:43:32:628 CPU/(28691:28691):  Config iniciado
+[INFO] 22:43:32:628 CPU/(28691:28691): Valores obtenidos
+[INFO] 22:43:32:629 CPU/(28691:28691): Socket creado
+[INFO] 22:43:32:630 CPU/(28691:28691): Config enviado

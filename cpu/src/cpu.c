@@ -13,15 +13,12 @@ int main(void) {
 	log_info(logger,"Modulo CPU iniciado");
 
 	config = iniciar_config("cfg/cpu.config");
-
+	
 	// obtener valores ip y puerto del archivo cpu.config
 	ip_memoria = config_get_string_value(config, "IP_MEMORIA");
 	puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-
 	conexion_memoria = crear_socket_cliente(ip_memoria, puerto_memoria);
-
 	enviar_config(config, conexion_memoria);
-	
 	terminar_programa(conexion_memoria, logger, config);
 }
 
@@ -42,7 +39,7 @@ void enviar_config(t_config* config, int socket_cliente) {
 	// primero, crear un paquete vacío
 	t_paquete* paquete = crear_paquete(CONFIGS, TAMANIO_DEFAULT_BUFFER);
 	agregar_a_paquete(paquete, valor_tlb, (strlen(valor_tlb) + 1) * sizeof(char));
-	agregar_a_paquete(paquete, valor_noop, strlen(valor_noop + 1) * sizeof(char));
+	agregar_a_paquete(paquete, valor_noop, (strlen(valor_noop) + 1) * sizeof(char));
 
 	enviar_paquete(paquete, socket_cliente);
 

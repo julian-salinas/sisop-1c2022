@@ -11,9 +11,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "utils-memoria.h"
+
+//includes de shared
 #include "networking.h"
 #include "serializacion.h"
-#include "utils-memoria.h"
+#include "logging.h"
+#include "config.h"
+
+t_log* logger;
 
 void iterator(char* value);
 

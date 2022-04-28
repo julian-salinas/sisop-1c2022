@@ -15,23 +15,10 @@
     #include<commons/collections/list.h>    
 
     #include "serializacion.h"
-
+    #include "enum.h"
+    
     #define IP_MEMORIA "127.0.0.1"
     #define PUERTO_MEMORIA "8002"
-
-
-    /**
-     * @DESC: Esto es muy inicial todavía, acá vamos a estar
-     *        declarando los diferentes códigos de operacion posibles
-     *        por ahora, solo dejo uno para poder ir testeando el uso
-     *        de paquetes
-     */ 
-    typedef enum {
-        CONFIGS,
-        MENSAJE,
-        PAQUETE,
-        INSTRUCCIONES
-    } codigo_operacion;
 
 
     /**
@@ -106,13 +93,6 @@
      */
     void enviar_lista_instrucciones(t_lista_instrucciones* lista_instrucciones, int socket_cliente); 
 
-
-    //de tp0
-    // int iniciar_servidor(void);
-    // void recibir_mensaje(int);
-    // void enviar_mensaje(char* mensaje, int socket_cliente);
-    // void liberar_conexion(int socket_cliente);
-    // void eliminar_paquete(t_paquete* paquete);
     
 
 #endif /* NETWORKING_H */

@@ -7,10 +7,11 @@
     #include<fcntl.h> 
     #include<unistd.h>
     #include<string.h>
-    #include<commons/collections/list.h>        
+    #include<commons/collections/list.h>
 
     #define TAMANIO_DEFAULT_BUFFER 64
 
+    #include "enum.h"
     /**
      * @DESC: Contenido de un buffer para serialización
      *        - offset (Usado para "recorrer" el buffer)
@@ -30,7 +31,7 @@
      *        - Payload (Contenido del mensaje)
      */
     typedef struct {
-        uint8_t header;
+        codigo_operacion header;
         t_buffer* payload;
     } t_paquete;
 

@@ -2,7 +2,7 @@
 
 void ini_config(void)
 {
-	t_config* config_memoria = config_create("memoria.config");
+	t_config* config_memoria = config_create("cfg/memoria.config");
 
 	if (config_memoria == NULL) {
 		perror("Archivo de configuracion de memoria no encontrado.");
