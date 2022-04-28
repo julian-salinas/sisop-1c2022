@@ -13,6 +13,7 @@
     #include<commons/log.h>
     #include<commons/config.h>
     #include<commons/collections/list.h>    
+    #include <pthread.h>
 
     #include "serializacion.h"
     #include "enum.h"
@@ -20,6 +21,12 @@
     #define IP_MEMORIA "127.0.0.1"
     #define PUERTO_MEMORIA "8002"
 
+
+    typedef struct {
+        t_log* log;
+        int fd;
+        char* server_name;
+    } t_procesar_conexion_args;
 
     /**
      * @DESC: Función que devuelve un socket cliente para conectarse
@@ -44,7 +51,40 @@
     int crear_socket_servidor(char *ip, char *puerto);
 
 
-        /**
+    /* --------------------------- NUEVA FUNCION -------------------------- */
+    /**
+     * @DESC: Crear un socket servidor para recibir a cliente
+     * @param logger: logger ya creado, que va a loggear el resultado de la operación
+     * @param name: nombre del servidor que se está levantando
+     * @param ip: ip a la cual va a conectarse el socket
+     * @param puerto: puerto al cual va a conectarse el socket
+     * @return: devuelve el socket servidor
+     */ 
+    int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
+
+    
+    /* --------------------------- NUEVA FUNCION -------------------------- */
+    /**
+     * @DESC: Escuchar a nuevos clientes, crear un hilo si un cliente se conecta
+     * @param logger: logger que va a loggear el resultado de la operación
+     * @param server_name: nombre del servidor (módulo)
+     * @param server_socket: socket del servidor
+     * @param func_procesar_conexion: función propia de cada modulo, que contiene el switch con 
+     *                                codigos de operacion y toda la bola
+     */ 
+    int server_escuchar(t_log* logger, char* server_name, int server_socket, void* func_procesar_conexion);
+
+
+    /**
+     * @DESC: No estoy lo suficientemente informado para dejar una descripción xd
+     * @param logger: logger que va a loggear el resultado de la operacion
+     * @param name: nombre del servidor
+     * @param socket_servidor: socket del servidor
+     */
+    int esperar_clientes(t_log* logger, const char* name, int socket_servidor); 
+
+
+    /**
      * @DESC: Prepara al servidor para recibir un cliente (listen)
      * @param socket_servidor: socket del server que se quiere preparar para recibir al cliente
      */ 

@@ -58,6 +58,85 @@ int crear_socket_servidor(char *ip, char* puerto) {
 	return socket_servidor;
 }
 
+
+int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
+    int socket_servidor;
+    struct addrinfo hints, *servinfo;
+
+    // Inicializando hints
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags = AI_PASSIVE;
+
+    // Recibe los addrinfo
+    getaddrinfo(ip, puerto, &hints, &servinfo);
+
+    bool conecto = false;
+
+    // Itera por cada addrinfo devuelto
+    for (struct addrinfo *p = servinfo; p != NULL; p = p->ai_next) {
+        socket_servidor = socket(p->ai_family, p->ai_socktype, p->ai_protocol);
+
+        if (socket_servidor == -1) // fallo al crear socket
+            continue;
+
+        if (bind(socket_servidor, p->ai_addr, p->ai_addrlen) == -1) {
+            // Fallo en el bind
+            close(socket_servidor);
+            continue;
+        }
+
+        // Ni bien conecta uno nos vamos del for
+        conecto = true;
+        break;
+    }
+
+    if(!conecto) {
+        free(servinfo);
+        return 0;
+    }
+
+    listen(socket_servidor, SOMAXCONN); // Escuchando (hasta SOMAXCONN conexiones simultaneas)
+
+    // Loggear resultado
+    log_info(logger, "Escuchando en %s:%s (%s)\n", ip, puerto, name);
+
+    freeaddrinfo(servinfo);
+
+    return socket_servidor;
+}
+
+
+int server_escuchar(t_log* logger, char* server_name, int server_socket, void* func_procesar_conexion) {
+    int cliente_socket = esperar_clientes(logger, server_name, server_socket);
+
+    if (cliente_socket != -1) {
+        pthread_t hilo;
+        t_procesar_conexion_args* args = malloc(sizeof(t_procesar_conexion_args));
+        args->log = logger;
+        args->fd = cliente_socket;
+        args->server_name = server_name;
+        pthread_create(&hilo, NULL, func_procesar_conexion, (void*) args);
+        pthread_detach(hilo);
+        return 1;
+    }
+    return 0;
+}
+
+
+int esperar_clientes(t_log* logger, const char* name, int socket_servidor) {
+    struct sockaddr_in dir_cliente;
+    socklen_t tam_direccion = sizeof(struct sockaddr_in);
+
+    int socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
+
+    log_info(logger, "Cliente conectado (a %s)\n", name);
+
+    return socket_cliente;
+}
+
+
 // Todas las funciones que están despues de esto están prácticamente igual que en tp0 //
 int esperar_cliente(int socket_servidor) {
 	int socket_cliente;
@@ -76,7 +155,6 @@ void enviar_paquete(t_paquete* paquete, int socket_cliente) {
 
 
 int recibir_operacion(int socket_cliente) {
-	//int cod_op;
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 	if(recv(socket_cliente, &(paquete->header), sizeof(int), MSG_WAITALL) > 0) {
 		return paquete->header;
@@ -97,7 +175,7 @@ void* recibir_buffer(int socket_cliente, size_t* tamanio_buffer) {
     buffer = malloc(*tamanio_buffer);
 	recv(socket_cliente, buffer, *tamanio_buffer, MSG_WAITALL);
 
-	return buffer;
+	return (void*) buffer;
 }
 
 

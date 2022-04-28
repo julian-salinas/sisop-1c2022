@@ -15,34 +15,17 @@
 #include<commons/collections/list.h>
 #include <pthread.h>
 
+#include "networking.h"
+#include "enum.h"
+
 #define IP_KERNEL "127.0.0.1"
 #define PUERTO_KERNEL "8002"
-
-typedef enum
-{
-	MENSAJE,
-	PAQUETE
-}op_code;
-
-typedef struct {
-    t_log* log;
-    int fd;
-    char* server_name;
-} t_procesar_conexion_args;
-
 
 t_log* logger;
 
 void iterator(char* value);
 
-int server_escuchar(t_log*, char*, int);
-int esperar_clientes(t_log*, const char*, int);
-
-
-void* recibir_buffer(int*, int);
-
-int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
-
+void* procesar_conexion(void* void_args);
 
 void recibir_mensaje(int);
 
