@@ -3,7 +3,7 @@
 #include "consola.h"
 
 
-int main(void) {
+int main(int argc, const char *argv[]) {
 
 	int conexion_kernel;
 	char* ip_kernel;
@@ -29,7 +29,10 @@ int main(void) {
 	enviar_mensaje(valor_prueba,conexion_kernel);
 
 	terminar_programa(conexion_kernel, logger, config);
-
+	// TODO: Obtener valores de argv
+	// TODO: Parsear archivo de Pseudocódigo
+	// TODO: Enviar instrucciones a Kernel
+	// Esperar nuevas instrucciones por consola
 }
 
 
