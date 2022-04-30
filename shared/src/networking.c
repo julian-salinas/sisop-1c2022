@@ -136,7 +136,7 @@ int esperar_clientes(t_log* logger, const char* name, int socket_servidor) {
     return socket_cliente;
 }
 
-/*-------------------------------- Envío de paquetes --------------------------------------*/
+
 int send_all(int socket, void *buffer, size_t size){
     while (size > 0){
         int i = send(socket, buffer, size, 0);

@@ -55,15 +55,6 @@
 
 
     /**
-     * @DESC: Agregar un valor al buffer
-     * @param buffer: puntero a t_buffer donde se agregará el valor
-     * @param valor_a_agregar: serie de caracteres a agregar al buffer
-     * @param tamanio: tamanio del valor a agregar (bytes)
-     */ 
-    void agregar_a_buffer(t_buffer* buffer, void* valor_a_agregar, size_t tamanio);
-
-
-    /**
      * @DESC: Realocar memoria del buffer, si el buffer se queda corto de tamanio, se le agregan TAMANIO_DEFAULT_BUFFER
      *        bytes más
      * @param buffer: puntero a t_buffer, donde se modificará el tamaño alocado
@@ -88,6 +79,15 @@
 
 
     /**
+     * @DESC: Agregar un valor al buffer
+     * @param buffer: puntero a t_buffer donde se agregará el valor
+     * @param valor_a_agregar: serie de caracteres a agregar al buffer
+     * @param tamanio: tamanio del valor a agregar (bytes)
+     */ 
+    void agregar_a_buffer(t_buffer* buffer, void* valor_a_agregar, size_t tamanio);
+
+
+    /**
      * @DESC: Agregar una cadena al buffer de un paquete
      * @param paquete: puntero a t_paquete donde se agregará el valor
      * @param valor_a_agregar: valor que se agregará al buffer del paquete
@@ -104,44 +104,86 @@
     void* serializar_paquete(t_paquete* paquete, size_t bytes);
 
 
-    void agregar_a_buffer_INT32_P(t_buffer* stream, void* source);
+    /**
+     * @DESC: Agregar un int de 32 bytes al buffer
+     * @param buffer: buffer al cual se va a agregar el valor
+     * @param value: valor a agregar
+     */ 
+    void agregar_a_buffer_INT32(t_buffer* buffer, int32_t value);
 
-    void agregar_a_buffer_INT32(t_buffer* stream, int32_t value);
 
-    void agregar_a_buffer_UINT32_P(t_buffer* stream, void* source);
+    /**
+     * @DESC: Agregar un unsigned int de 32 bytes al buffer
+     * @param buffer: buffer al cual se va a agregar el valor
+     * @param value: valor a agregar
+     */
+    void agregar_a_buffer_UINT32(t_buffer* buffer, uint32_t value);
 
-    void agregar_a_buffer_UINT32(t_buffer* stream, uint32_t value);
 
-    void agregar_a_buffer_UINT8_P(t_buffer* stream, void* source);
+    /**
+     * @DESC: Agregar un unsigned int de 8 bytes al buffer
+     * @param buffer: buffer al cual se va a agregar el valor
+     * @param value: valor a agregar
+     */
+    void agregar_a_buffer_UINT8(t_buffer* buffer, uint8_t value);
 
-    void agregar_a_buffer_UINT8(t_buffer* stream, uint8_t value);
 
-    void agregar_a_buffer_STRING_P(t_buffer* paquete, void* source);
+    /**
+     * @DESC: Agregar un string al buffer
+     * @param buffer: buffer al cual se va a agregar el valor
+     * @param value: valor a agregar
+     */
+    void agregar_a_buffer_STRING(t_buffer* buffer, char* valor);
 
-    void agregar_a_buffer_STRING(t_buffer* stream, char* source);
 
-    // ------------------------- Ir leyendo paquete ------------------------- //
+    // --------------------- Funciones para "leer" buffer --------------------- //
 
+    /**
+     * @DESC: Obtener valores del buffer. Esta función no debe usarse directamente, sino
+     *        que hay que usar los derivados (detalladas mas abajo, por tipo)
+     * @param buffer: buffer al cual se va a obtener el valor
+     * @param dest: donde se guardará esa info que se lee
+     * @param size: tamanio de lo que se va a leer
+     */
     void buffer_take(t_buffer* buffer, void** dest, size_t size);
 
-    void buffer_take_INT32_P(t_buffer* stream, void** dest);
 
-    int32_t buffer_take_INT32(t_buffer* stream);
+    /**
+     * @DESC: Obtener un int de 32 bytes del buffer
+     * @param buffer: buffer al cual se va a obtener el valor
+     * @return: int de 32 bytes
+     */
+    int32_t buffer_take_INT32(t_buffer* buffer);
 
-    void buffer_take_UINT32_P(t_buffer* stream, void** dest);
 
-    uint32_t buffer_take_UINT32(t_buffer* stream);
+    /**
+     * @DESC: Obtener un unsigned int de 32 bytes del buffer
+     * @param buffer: buffer al cual se va a obtener el valor
+     * @return: unsigned int de 32 bytes
+     */
+    uint32_t buffer_take_UINT32(t_buffer* buffer);
 
-    void buffer_take_UINT8_P(t_buffer* stream, void** dest);
 
-    uint8_t buffer_take_UINT8(t_buffer* stream);
+    /**
+     * @DESC: Obtener un unsigned int de 8 bytes del buffer
+     * @param buffer: buffer al cual se va a obtener el valor
+     * @return: int de 8 bytes
+     */
+    uint8_t buffer_take_UINT8(t_buffer* buffer);
 
-    void buffer_take_STRING_P(t_buffer* stream, void** dest);
 
-    char* buffer_take_STRING(t_buffer* stream);
+    /**
+     * @DESC: Obtener un string del buffer
+     * @param buffer: buffer al cual se va a obtener el valor
+     * @return: puntero a char con string
+     */
+    char* buffer_take_STRING(t_buffer* buffer);
+
 
     /*
     -------------------- Comunicación entre consola y kernel ------------------------------------
+    IMPORTANTE: Como acabo de modificar muchas funciones de serialización,
+    es altamente probable que lo que sigue de código no sirva
     */
 
    /**
