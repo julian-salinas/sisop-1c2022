@@ -136,79 +136,78 @@ int esperar_clientes(t_log* logger, const char* name, int socket_servidor) {
     return socket_cliente;
 }
 
-
-// Todas las funciones que están despues de esto están prácticamente igual que en tp0 //
-int esperar_cliente(int socket_servidor) {
-	int socket_cliente;
-	socket_cliente = accept(socket_servidor, NULL, NULL);
-	return socket_cliente;
-}
-
-
-void enviar_paquete(t_paquete* paquete, int socket_cliente) {
-    size_t bytes = (paquete -> payload -> tamanio) + (2 * sizeof(int));
-    void* a_enviar = serializar_paquete(paquete, bytes);
-
-    send(socket_cliente, a_enviar, bytes, 0);
-    free(a_enviar);
-}
-
-
-int recibir_operacion(int socket_cliente) {
-	t_paquete* paquete = malloc(sizeof(t_paquete));
-	if(recv(socket_cliente, &(paquete->header), sizeof(int), MSG_WAITALL) > 0) {
-		return paquete->header;
+/*-------------------------------- Envío de paquetes --------------------------------------*/
+int send_all(int socket, void *buffer, size_t size){
+    while (size > 0){
+        int i = send(socket, buffer, size, 0);
+        if (i == 0) return 0;
+        if (i < 0) return -1;
+        buffer += i;
+        size -= i;
     }
-	
-    else {
-		close(socket_cliente);
-		return -1;
-	}
+    return 1;
 }
 
 
-void* recibir_buffer(int socket_cliente, size_t* tamanio_buffer) {
-	void * buffer;
-
-	recv(socket_cliente, tamanio_buffer, sizeof(int), MSG_WAITALL);
-	
-    buffer = malloc(*tamanio_buffer);
-	recv(socket_cliente, buffer, *tamanio_buffer, MSG_WAITALL);
-
-	return (void*) buffer;
+int recv_all(int socket, void *destino, size_t size){
+    while (size > 0){
+        int i = recv(socket, destino, size, 0);
+        if (i == 0) return 0;
+        if (i < 0) return -1;
+        destino += i;
+        size -= i;
+    }
+    return 1;
 }
 
 
-t_list* recibir_paquete(int socket_cliente) {
-	size_t tamanio_buffer;
-	size_t tamanio_valor; // esta variable va cambiando segun los valores que contiene el buffer
-	
-    int desplazamiento = 0; // offset
-	void* buffer;
+void socket_send(int socket, void* source, size_t size){
+    send_all(socket, source, size);
+}
 
-	t_list* valores = list_create();
-	buffer = recibir_buffer(socket_cliente, &tamanio_buffer);
+
+void enviar_header(int socket, uint8_t header){
+    uint8_t tmpHeader = header;
+    socket_send(socket, (void*)&tmpHeader, sizeof(uint8_t));
+}
+
+
+bool socket_get(int socket, void* dest, size_t size){
+    if(size != 0){
+        int rc = recv_all(socket, dest, size);
+        if(rc < 1) return false;
+    }
+    return true;
+}
+
+
+void enviar_paquete(int socket, t_paquete* paquete){
+    enviar_header(socket, paquete->header);
+    socket_send(socket, (void*) &paquete->payload->offset, sizeof(uint32_t));
+    socket_send(socket, (void*)paquete->payload->stream, paquete->payload->offset);
+}
+
+
+uint8_t recibir_header(int socket){
+    uint8_t header;
+    socket_get(socket, &header, sizeof(uint8_t));
+    return header;
+}
+
+
+t_paquete* recibir_paquete(int socket, uint8_t header){
+    uint32_t tamanio_buffer;
+
+    if(!socket_get(socket, &tamanio_buffer, sizeof(uint32_t)))
+        return NULL;
     
-	while(desplazamiento < tamanio_buffer) {
-		memcpy(&tamanio_valor, buffer + desplazamiento, sizeof(int));
-		desplazamiento += sizeof(int);
-		char* valor = malloc(tamanio_valor);
+    t_paquete* paquete = crear_paquete(header, tamanio_buffer);
+    
+    if(!socket_get(socket, paquete->payload->stream, tamanio_buffer)){
+        destruir_paquete(paquete);
+        paquete = NULL;
+    }
 
-		memcpy(valor, buffer + desplazamiento, tamanio_valor);
-		desplazamiento += tamanio_valor;
-		list_add(valores, valor);
-	}
-
-	free(buffer);
-	return valores;
+    return paquete;
 }
-
-
-void enviar_lista_instrucciones(t_lista_instrucciones* lista_instrucciones, int socket_cliente) {
-    t_paquete* paquete = crear_paquete(INSTRUCCIONES, TAMANIO_DEFAULT_BUFFER);
-	agregar_a_paquete(paquete, lista_instrucciones, sizeof(lista_instrucciones));
-	serializar_paquete(paquete, paquete -> payload -> tamanio + 2 * sizeof(int));
-	enviar_paquete(paquete, socket_cliente);
-}
-
 

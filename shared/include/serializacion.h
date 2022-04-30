@@ -8,6 +8,7 @@
     #include<unistd.h>
     #include<string.h>
     #include<commons/collections/list.h>
+    #include<commons/string.h>
 
     #define TAMANIO_DEFAULT_BUFFER 64
 
@@ -102,6 +103,42 @@
      */ 
     void* serializar_paquete(t_paquete* paquete, size_t bytes);
 
+
+    void agregar_a_buffer_INT32_P(t_buffer* stream, void* source);
+
+    void agregar_a_buffer_INT32(t_buffer* stream, int32_t value);
+
+    void agregar_a_buffer_UINT32_P(t_buffer* stream, void* source);
+
+    void agregar_a_buffer_UINT32(t_buffer* stream, uint32_t value);
+
+    void agregar_a_buffer_UINT8_P(t_buffer* stream, void* source);
+
+    void agregar_a_buffer_UINT8(t_buffer* stream, uint8_t value);
+
+    void agregar_a_buffer_STRING_P(t_buffer* paquete, void* source);
+
+    void agregar_a_buffer_STRING(t_buffer* stream, char* source);
+
+    // ------------------------- Ir leyendo paquete ------------------------- //
+
+    void buffer_take(t_buffer* buffer, void** dest, size_t size);
+
+    void buffer_take_INT32_P(t_buffer* stream, void** dest);
+
+    int32_t buffer_take_INT32(t_buffer* stream);
+
+    void buffer_take_UINT32_P(t_buffer* stream, void** dest);
+
+    uint32_t buffer_take_UINT32(t_buffer* stream);
+
+    void buffer_take_UINT8_P(t_buffer* stream, void** dest);
+
+    uint8_t buffer_take_UINT8(t_buffer* stream);
+
+    void buffer_take_STRING_P(t_buffer* stream, void** dest);
+
+    char* buffer_take_STRING(t_buffer* stream);
 
     /*
     -------------------- Comunicación entre consola y kernel ------------------------------------

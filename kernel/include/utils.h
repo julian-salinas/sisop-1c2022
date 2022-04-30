@@ -16,6 +16,7 @@
 #include <pthread.h>
 
 #include "networking.h"
+#include "serializacion.h"
 #include "enum.h"
 
 #define IP_KERNEL "127.0.0.1"

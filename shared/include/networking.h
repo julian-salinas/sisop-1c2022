@@ -90,6 +90,16 @@
      */ 
     int esperar_cliente(int socket_servidor);
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    int send_all(int socket, void *buffer, size_t size);
+    int recv_all(int socket, void *destino, size_t size);
+    void socket_send(int socket, void* source, size_t size);
+    void enviar_header(int socket, uint8_t header);
+    void enviar_paquete(int socket, t_paquete* paquete);
+    bool socket_get(int socket, void* dest, size_t size);
+    uint8_t recibir_header(int socket);
+    t_paquete* recibir_paquete(int socket, uint8_t header);
+
 
     /**
      * @DESC: Enviar un paquete al server
@@ -97,7 +107,7 @@
      *                 header contiene el codigo de operacion (uint*_t) y en el payload el buffer
      * @param socket_cliente: socket que será el emisor el paquete
      */
-    void enviar_paquete(t_paquete* paquete, int socket_cliente);
+    // void enviar_paquete(t_paquete* paquete, int socket_cliente);
 
 
     /**
@@ -105,7 +115,7 @@
      *        el handshake
      * @param socket_cliente: socket del que vamos a extraer codigo de operacion para aceptar o rechazar luego
      */
-    int recibir_operacion(int socket_cliente); 
+    // int recibir_operacion(int socket_cliente); 
 
 
     /**
@@ -113,14 +123,14 @@
      * @param socket_cliente: socket que nos va a enviar el buffer
      * @param tamanio_buffer: tamanio del buffer
      */
-    void* recibir_buffer(int socket_cliente, size_t* tamanio_buffer); 
+    // void* recibir_buffer(int socket_cliente, size_t* tamanio_buffer); 
 
 
     /**
      * @DESC: Devuelve una lista con todos los valores que llegaron en el paquete enviado, proceso de deserialización
      * @param socket_cliente: socket que nos envía el paquete
      */
-    t_list* recibir_paquete(int socket_cliente); 
+    // t_list* recibir_paquete(int socket_cliente); 
 
     /*
     -------------------- Comunicación entre consola y kernel ------------------------------------

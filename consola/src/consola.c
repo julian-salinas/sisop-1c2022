@@ -26,7 +26,12 @@ int main(int argc, const char *argv[]) {
 
 	conexion_kernel = crear_socket_cliente(ip_kernel,puerto_kernel);
 
-	enviar_mensaje(valor_prueba,conexion_kernel);
+	t_paquete* paquete = crear_paquete(PAQUETE, TAMANIO_DEFAULT_BUFFER);
+	agregar_a_buffer_STRING(paquete -> payload, valor_prueba);
+	enviar_paquete(conexion_kernel, paquete);
+	destruir_paquete(paquete);
+
+	// enviar_mensaje(valor_prueba,conexion_kernel);
 
 	terminar_programa(conexion_kernel, logger, config);
 	// TODO: Obtener valores de argv
