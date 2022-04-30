@@ -11,13 +11,17 @@ void* procesar_conexion(void* void_args) {
     int socket_cliente = args->fd;
     char* nombre_servidor = args->server_name;
     
-    free(args);
+    // free(args);
 
     codigo_operacion op_code;
 
     while (socket_cliente != -1) {
         t_paquete* paquete;
         op_code = recibir_header(socket_cliente);
+
+        if (!op_code) {
+            return;
+        }
 
         switch (op_code) {
             case PAQUETE:

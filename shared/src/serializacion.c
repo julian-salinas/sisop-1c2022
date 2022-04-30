@@ -57,51 +57,31 @@ void agregar_a_paquete(t_paquete* paquete, void* valor_a_agregar, size_t tamanio
 
 /* -------------------------- int 32 bytes -------------------------- */
 
-void agregar_a_buffer_INT32_P(t_buffer* buffer, void* valor){
-    agregar_a_buffer(buffer, valor, sizeof(int32_t));
-}
-
-
 void agregar_a_buffer_INT32(t_buffer* buffer, int32_t valor){
-    agregar_a_buffer_INT32_P(buffer, (void*) &valor);
+    agregar_a_buffer(buffer, (void*) &valor, sizeof(int32_t));
 }
-
 
 /* ---------------------- unsigned int 32 bytes ---------------------- */
 
-void agregar_a_buffer_UINT32_P(t_buffer* buffer, void* valor){
-    agregar_a_buffer(buffer, valor, sizeof(uint32_t));
-}
-
 
 void agregar_a_buffer_UINT32(t_buffer* buffer, uint32_t valor){
-    agregar_a_buffer_UINT32_P(buffer, (void*)&valor);
+    agregar_a_buffer(buffer, (void*) &valor, sizeof(uint32_t));
 }
 
 
 /* ---------------------- unsigned int 8 bytes ---------------------- */
 
-void agregar_a_buffer_UINT8_P(t_buffer* buffer, void* valor){
-    agregar_a_buffer(buffer, valor, sizeof(uint8_t));
-}
-
-
 void agregar_a_buffer_UINT8(t_buffer* buffer, uint8_t valor){
-    agregar_a_buffer_UINT8_P(buffer, (void*)&valor);
+    agregar_a_buffer(buffer, (void*) valor, sizeof(uint8_t));
 }
 
 
 /* -------------------------- strings -------------------------- */
 
-void agregar_a_buffer_STRING_P(t_buffer* paquete, void* valor){
-    uint32_t tamanio = string_length((char*)valor) + 1;
-    agregar_a_buffer_UINT32(paquete, tamanio);
-    agregar_a_buffer(paquete, valor, tamanio);
-}
-
-
 void agregar_a_buffer_STRING(t_buffer* buffer, char* valor){
-    agregar_a_buffer_STRING_P(buffer, (void*) valor);
+    uint32_t tamanio = string_length((char*) valor) + 1;
+    agregar_a_buffer_UINT32(buffer, tamanio);
+    agregar_a_buffer(buffer, (void*) valor, tamanio);
 }
 
 
@@ -116,44 +96,29 @@ void buffer_take(t_buffer* buffer, void** dest, size_t tamanio){
 
 /* ------------------------ int 32 bytes ------------------------ */
 
-void buffer_take_INT32_P(t_buffer* buffer, void** dest){
-    buffer_take(buffer, dest, sizeof(int32_t));
-}
-
-
 int32_t buffer_take_INT32(t_buffer* buffer){
     int32_t tmp;
     int32_t* puntero_a_tmp = &tmp;
-    buffer_take_INT32_P(buffer, (void**) &puntero_a_tmp);
+    buffer_take(buffer, (void**) &puntero_a_tmp, sizeof(int32_t));
     return tmp;
 }
 
 /* ---------------------- unsigned int 32 bytes ---------------------- */
 
-void buffer_take_UINT32_P(t_buffer* buffer, void** dest){
-    buffer_take(buffer, dest, sizeof(uint32_t));
-}
-
-
 uint32_t buffer_take_UINT32(t_buffer* buffer){
     uint32_t tmp;
     uint32_t* puntero_a_tmp = &tmp;
-    buffer_take_UINT32_P(buffer, (void**) &puntero_a_tmp);
+    buffer_take(buffer, (void**) &puntero_a_tmp, sizeof(uint32_t));
     return tmp;
 }
 
 
 /* ---------------------- unsigned int 8 bytes ---------------------- */
 
-void buffer_take_UINT8_P(t_buffer* buffer, void** dest){
-    buffer_take(buffer, dest, sizeof(uint8_t));
-}
-
-
 uint8_t buffer_take_UINT8(t_buffer* buffer){
     uint8_t tmp;
     uint8_t* puntero_a_tmp = &tmp;
-    buffer_take_UINT8_P(buffer, (void**) &puntero_a_tmp);
+    buffer_take(buffer, (void**) &puntero_a_tmp, sizeof(uint8_t));
     return tmp;
 }
 
@@ -167,7 +132,8 @@ void buffer_take_STRING_P(t_buffer* buffer, void** dest){
 
 char* buffer_take_STRING(t_buffer* buffer){
     char* tmp = NULL;
-    buffer_take_STRING_P(buffer, (void**) &tmp);
+    uint32_t tamanio = buffer_take_UINT32(buffer);
+    buffer_take(buffer, (void**) &tmp, tamanio);
     return tmp;
 }
 
