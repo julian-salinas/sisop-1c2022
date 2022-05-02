@@ -23,6 +23,15 @@
 #define PUERTO_KERNEL "8002"
 
 t_log* logger;
+t_config* config;
+
+int conexion_cpu;
+char* ip_cpu;
+char* puerto_cpu_dispach;
+
+int conexion_memoria;
+char* ip_memoria;
+char* puerto_memoria;
 
 void iterator(char* value);
 
