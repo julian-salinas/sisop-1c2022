@@ -11,18 +11,16 @@ int main(void) {
 	obtener_config_memoria();	
 
 	//iniciar servidor cpu
-	int server_cpu = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8030");
+	int server_cpu = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8013");
 	log_info(logger, "CPU lista como servidor");
-	int corte=1;
-	while (corte==1) {
+	while (1) {
 		int cliente_fd = esperar_clientes(logger, "CPU", server_cpu);
 		int cod_op = recibir_header(cliente_fd);
 		switch (cod_op) {
 		case CONEXION_CPU_MEMORIA:
 			//recibe cantidad de entradas por tabla de páginas y tamaño de página;
 			//recibir_config_memoria
-			log_info(logger, "Llegó configuración de memoria ok.\n");
-			corte=0;	
+			log_info(logger, "Llegó configuración de memoria ok.\n");	
 			break;
 		case PAQUETE:
 			//lista = recibir_paquete(cliente_fd);

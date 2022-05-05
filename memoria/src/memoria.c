@@ -22,16 +22,15 @@ int main(void) {
 	log_info(logger, PUERTO_MEMORIA);
 	int server_memoria = iniciar_servidor(logger,"Memoria",IP_MEMORIA, PUERTO_MEMORIA);
 	log_info(logger, "Memoria lista para recibir al cliente");
-	
-	int corte=1;
-	while (corte==1) {
+	while (1) {
 		int cliente_fd = esperar_clientes(logger, "Memoria", server_memoria);
 		int cod_op = recibir_header(cliente_fd);
 		switch (cod_op) {
 		case CONEXION_CPU_MEMORIA:
 			//enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
-			enviar_config_a_cpu();	
-			corte=0;
+			conexion_cpu = crear_socket_cliente(IP_MEMORIA, "8013");
+			log_info(logger, "Socket cliente memoria-cpu creado.");
+			enviar_config_a_cpu(conexion_cpu);	
 			break;
 		case -1:
 			log_error(logger, "el cliente se desconecto. Terminando servidor");
@@ -42,20 +41,23 @@ int main(void) {
 		}
 	}
 
-	//liberar memoria
-	config_destroy(config_memoria);
+	//terminar_programa
+	terminar_programa();
 	return EXIT_SUCCESS;
 }
 
+void terminar_programa(){
+		liberar_socket_cliente(conexion_cpu);
+		log_destroy(logger);
+		config_destroy(config_memoria);
+}
 
-void enviar_config_a_cpu(){
+void enviar_config_a_cpu(int socket_cliente){
 
-	int conexion_cpu = crear_socket_cliente(IP_MEMORIA, "8030");
-	log_info(logger, "Socket cliente creado.");
 	t_paquete* paquete = serializar_config_cpu_memoria(config_data.paginas_por_tabla, config_data.tam_pagina);
-	enviar_paquete(conexion_cpu,paquete);
+	log_info(logger, "Serializo ok.");	
+	enviar_paquete(socket_cliente,paquete);
 	destruir_paquete(paquete);
-	liberar_socket_cliente(conexion_cpu);
 	log_info(logger, "Config enviado.");
 
 }

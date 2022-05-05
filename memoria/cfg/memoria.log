@@ -7,3 +7,102 @@
 
 [INFO] 23:23:49:107 memoria/(7663:7663): Socket cliente creado.
 [INFO] 23:23:49:107 memoria/(7663:7663): Config enviado.
+[INFO] 13:27:00:280 memoria/(4919:4919): 127.0.0.1
+[INFO] 13:27:00:281 memoria/(4919:4919): 8002
+[INFO] 13:27:00:282 memoria/(4919:4919): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 13:27:00:282 memoria/(4919:4919): Memoria lista para recibir al cliente
+[INFO] 13:27:25:014 memoria/(4919:4919): Cliente conectado (a Memoria)
+
+[INFO] 13:27:25:034 memoria/(4919:4919): Socket cliente creado.
+[INFO] 13:27:25:034 memoria/(4919:4919): Config enviado.
+[INFO] 13:29:20:987 memoria/(5383:5383): 127.0.0.1
+[INFO] 13:29:20:987 memoria/(5383:5383): 8002
+[INFO] 13:29:20:987 memoria/(5383:5383): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 13:29:20:988 memoria/(5383:5383): Memoria lista para recibir al cliente
+[INFO] 13:29:30:322 memoria/(5383:5383): Cliente conectado (a Memoria)
+
+[INFO] 13:29:30:323 memoria/(5383:5383): Socket cliente creado.
+[INFO] 13:29:30:323 memoria/(5383:5383): Serializo ok.
+[INFO] 13:29:30:323 memoria/(5383:5383): Config enviado.
+[INFO] 13:29:57:064 memoria/(5507:5507): 127.0.0.1
+[INFO] 13:29:57:065 memoria/(5507:5507): 8002
+[INFO] 13:29:57:065 memoria/(5507:5507): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 13:29:57:065 memoria/(5507:5507): Memoria lista para recibir al cliente
+[INFO] 13:30:03:369 memoria/(5507:5507): Cliente conectado (a Memoria)
+
+[INFO] 13:30:03:370 memoria/(5507:5507): Socket cliente creado.
+[INFO] 13:30:03:371 memoria/(5507:5507): Serializo ok.
+[INFO] 13:30:03:371 memoria/(5507:5507): Config enviado.
+[INFO] 13:34:07:267 memoria/(6026:6026): 127.0.0.1
+[INFO] 13:34:07:276 memoria/(6026:6026): 8002
+[INFO] 13:34:07:276 memoria/(6026:6026): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 13:34:07:277 memoria/(6026:6026): Memoria lista para recibir al cliente
+[INFO] 13:34:13:516 memoria/(6026:6026): Cliente conectado (a Memoria)
+
+[INFO] 13:34:13:518 memoria/(6026:6026): Socket cliente creado.
+[INFO] 13:34:13:518 memoria/(6026:6026): Serializo ok.
+[INFO] 13:34:13:518 memoria/(6026:6026): Config enviado.
+[INFO] 14:06:30:549 memoria/(10047:10047): 127.0.0.1
+[INFO] 14:06:30:550 memoria/(10047:10047): 8002
+[INFO] 14:06:30:550 memoria/(10047:10047): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 14:06:30:550 memoria/(10047:10047): Memoria lista para recibir al cliente
+[INFO] 14:06:36:551 memoria/(10047:10047): Cliente conectado (a Memoria)
+
+[INFO] 14:06:36:552 memoria/(10047:10047): Socket cliente creado.
+[INFO] 14:06:36:552 memoria/(10047:10047): Serializo ok.
+[INFO] 14:06:36:552 memoria/(10047:10047): Config enviado.
+[INFO] 16:34:32:923 memoria/(15033:15033): 127.0.0.1
+[INFO] 16:34:32:943 memoria/(15033:15033): 8002
+[INFO] 16:34:32:943 memoria/(15033:15033): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 16:34:32:944 memoria/(15033:15033): Memoria lista para recibir al cliente
+[INFO] 16:34:40:631 memoria/(15033:15033): Cliente conectado (a Memoria)
+
+[INFO] 16:34:40:633 memoria/(15033:15033): Socket cliente creado.
+[INFO] 16:34:40:633 memoria/(15033:15033): Serializo ok.
+[INFO] 16:34:40:633 memoria/(15033:15033): Config enviado.
+[INFO] 16:45:12:291 memoria/(16390:16390): 127.0.0.1
+[INFO] 16:45:12:300 memoria/(16390:16390): 8002
+[INFO] 16:45:12:306 memoria/(16390:16390): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 16:45:12:306 memoria/(16390:16390): Memoria lista para recibir al cliente
+[INFO] 16:45:18:560 memoria/(16390:16390): Cliente conectado (a Memoria)
+
+[INFO] 16:45:18:561 memoria/(16390:16390): Socket cliente memoria-cpu creado.
+[INFO] 16:45:18:561 memoria/(16390:16390): Serializo ok.
+[INFO] 16:45:18:561 memoria/(16390:16390): Config enviado.
+[INFO] 16:45:53:988 memoria/(16487:16487): 127.0.0.1
+[INFO] 16:45:53:996 memoria/(16487:16487): 8002
+[INFO] 16:45:53:996 memoria/(16487:16487): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 16:45:53:996 memoria/(16487:16487): Memoria lista para recibir al cliente
+[INFO] 16:46:05:972 memoria/(16487:16487): Cliente conectado (a Memoria)
+
+[INFO] 16:46:05:975 memoria/(16487:16487): Socket cliente memoria-cpu creado.
+[INFO] 16:46:05:975 memoria/(16487:16487): Serializo ok.
+[INFO] 16:46:05:975 memoria/(16487:16487): Config enviado.
+[INFO] 16:48:44:684 memoria/(16853:16853): 127.0.0.1
+[INFO] 16:48:44:685 memoria/(16853:16853): 8002
+[INFO] 16:48:44:685 memoria/(16853:16853): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 16:48:44:686 memoria/(16853:16853): Memoria lista para recibir al cliente
+[INFO] 16:48:50:960 memoria/(16893:16893): 127.0.0.1
+[INFO] 16:48:50:969 memoria/(16893:16893): 8002
+[INFO] 16:48:50:969 memoria/(16893:16893): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 16:48:50:970 memoria/(16893:16893): Memoria lista para recibir al cliente
+[INFO] 16:49:10:012 memoria/(16951:16951): 127.0.0.1
+[INFO] 16:49:10:027 memoria/(16951:16951): 8002
+[INFO] 16:49:10:028 memoria/(16951:16951): Escuchando en 127.0.0.1:8002 (Memoria)
+
+[INFO] 16:49:10:029 memoria/(16951:16951): Memoria lista para recibir al cliente
+[INFO] 16:49:17:340 memoria/(16951:16951): Cliente conectado (a Memoria)
+
+[INFO] 16:49:17:341 memoria/(16951:16951): Socket cliente memoria-cpu creado.
+[INFO] 16:49:17:341 memoria/(16951:16951): Serializo ok.
+[INFO] 16:49:17:341 memoria/(16951:16951): Config enviado.
