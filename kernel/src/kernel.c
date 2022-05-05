@@ -24,7 +24,11 @@ int main(void) {
 
 	log_info(logger, "Kernel lista para recibir al cliente");
 	
-	while(server_escuchar(logger, "Kernel", server_fd, procesar_conexion));
+	while(server_escuchar(logger, "Kernel", server_fd, procesar_conexion)) {
+		// recibir de la consola
+		// crear_PCB(lo que me da la consola);
+		// enviar a la cpu el pcb
+	}
 
 	terminar_programa(conexion_memoria, conexion_cpu, logger, config);
 

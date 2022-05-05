@@ -45,3 +45,14 @@ void* procesar_conexion(void* void_args) {
     log_warning(logger, "El cliente se desconecto de %s server", nombre_servidor);
     return;
 }
+
+t_PCB* crear_PCB(/*lo que me da la consola*/) {
+    t_PCB* pcb = malloc(sizeof(t_PCB));
+    //pcb -> PID = algo
+    //pcb -> tamanio = algo
+    //pcb -> lista_instrucciones = algo
+    //pcb -> program_counter = algo
+    //pcb -> tabla_paginas = algo
+    //pcb -> estimacion_rafaga = algo
+    return pcb;
+}
