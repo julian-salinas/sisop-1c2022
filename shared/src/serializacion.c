@@ -72,7 +72,7 @@ void agregar_a_buffer_UINT32(t_buffer* buffer, uint32_t valor){
 /* ---------------------- unsigned int 8 bytes ---------------------- */
 
 void agregar_a_buffer_UINT8(t_buffer* buffer, uint8_t valor){
-    agregar_a_buffer(buffer, (void*) valor, sizeof(uint8_t));
+    agregar_a_buffer(buffer, (void*) &valor, sizeof(uint8_t));
 }
 
 
@@ -177,4 +177,20 @@ void destruir_lista_instrucciones(t_lista_instrucciones *lista_instrucciones) {
 
 void agregar_instruccion_a_lista(t_lista_instrucciones* lista_instrucciones, t_instruccion* instruccion) {
     list_add(lista_instrucciones -> instrucciones, instruccion);
+}
+
+/*
+-------------------- Comunicación entre cpu y memoria ------------------------------------
+*/
+
+t_paquete* serializar_config_cpu_memoria(uint8_t paginas_por_tabla, uint8_t tam_pagina) {
+    t_paquete* paquete= crear_paquete(CONEXION_CPU_MEMORIA, sizeof(uint8_t)*2);
+    agregar_a_buffer_UINT8(paquete->payload, paginas_por_tabla);
+    agregar_a_buffer_UINT8(paquete->payload, tam_pagina);
+    return paquete;
+}
+
+void deserializar_config_cpu_memoria(void* stream, uint8_t* paginas_por_tabla, uint8_t* tam_pagina) {
+    memcpy(paginas_por_tabla, stream, sizeof(uint8_t));
+    memcpy(tam_pagina, stream+sizeof(uint8_t), sizeof(uint8_t));
 }

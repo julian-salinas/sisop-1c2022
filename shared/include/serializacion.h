@@ -264,5 +264,23 @@
      */ 
     void agregar_instruccion_a_lista(t_lista_instrucciones* lista_instrucciones, t_instruccion* instruccion);
 
+      /*
+    -------------------- Comunicación entre cpu y memoria ------------------------------------
+    IMPORTANTE: por ahora nada
+    */
+
+   /**
+     * @DESC: Config de memoria
+     *        - paginas por tabla
+     *        - tam_pagina
+     */
+    typedef struct {
+        uint8_t paginas_por_tabla;
+        uint8_t tam_pagina;
+    } t_conexion_cpu_memoria;
+
+    t_paquete* serializar_config_cpu_memoria(uint8_t paginas_por_tabla, uint8_t tam_pagina);
+    void deserializar_config_cpu_memoria(void* stream, uint8_t* paginas_por_tabla, uint8_t* tam_pagina);
+
 
 #endif /* SERIALIZACION_H */

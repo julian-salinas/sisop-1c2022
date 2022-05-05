@@ -5,7 +5,7 @@ int main(void) {
 	//ini config
 	ini_config();
 
-	//ini proceso -> creación estructuras necesarias
+	//ini estructuras
 
 	//suspension proceso ->liberar espacio de memoria escribiendo en SWAP
 
@@ -20,31 +20,18 @@ int main(void) {
 	logger = iniciar_logger("cfg/memoria.log", "memoria");
 	log_info(logger, IP_MEMORIA);
 	log_info(logger, PUERTO_MEMORIA);
-	int server_fd = crear_socket_servidor(IP_MEMORIA, PUERTO_MEMORIA);
+	int server_memoria = iniciar_servidor(logger,"Memoria",IP_MEMORIA, PUERTO_MEMORIA);
 	log_info(logger, "Memoria lista para recibir al cliente");
-	int cliente_fd = esperar_cliente(server_fd);
-	log_info(logger, "Se conecto un cliente!");
-	t_list* lista;
-
-	while (1) {
-		int cod_op = recibir_operacion(cliente_fd);
-		//log_info(logger, "Recibí un código de operación.");
-		// t_paquete* paquete = malloc(sizeof(t_paquete));
-		// paquete->payload = malloc(sizeof(t_buffer));	
-		// Primero recibimos el codigo de operacion
-		// recv(cliente_fd, &(paquete->header), sizeof(uint8_t), 0);		
-		//int cod_op = paquete->header;
-		log_info(logger, cod_op);
+	
+	int corte=1;
+	while (corte==1) {
+		int cliente_fd = esperar_clientes(logger, "Memoria", server_memoria);
+		int cod_op = recibir_header(cliente_fd);
 		switch (cod_op) {
-		case CONFIGS:
-			lista = recibir_paquete(cliente_fd);
-			log_info(logger, "Me llegaron los siguientes valores:\n");
-			list_iterate(lista, (void*) iterator);
-			break;
-		case PAQUETE:
-			lista = recibir_paquete(cliente_fd);
-			log_info(logger, "Me llegaron los siguientes valores:\n");
-			list_iterate(lista, (void*) iterator);
+		case CONEXION_CPU_MEMORIA:
+			//enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
+			enviar_config_a_cpu();	
+			corte=0;
 			break;
 		case -1:
 			log_error(logger, "el cliente se desconecto. Terminando servidor");
@@ -60,7 +47,15 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
-void iterator(char* value) {
-	log_info(logger,"%s", value);
-}
 
+void enviar_config_a_cpu(){
+
+	int conexion_cpu = crear_socket_cliente(IP_MEMORIA, "8030");
+	log_info(logger, "Socket cliente creado.");
+	t_paquete* paquete = serializar_config_cpu_memoria(config_data.paginas_por_tabla, config_data.tam_pagina);
+	enviar_paquete(conexion_cpu,paquete);
+	destruir_paquete(paquete);
+	liberar_socket_cliente(conexion_cpu);
+	log_info(logger, "Config enviado.");
+
+}

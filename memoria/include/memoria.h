@@ -22,6 +22,6 @@
 
 t_log* logger;
 
-void iterator(char* value);
+void enviar_config_a_cpu();
 
 #endif /* MEMORIA_H_ */

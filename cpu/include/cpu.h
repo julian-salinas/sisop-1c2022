@@ -28,4 +28,9 @@
     // esta funcion es para test, despues se va a eliminar
     void enviar_config(t_config* config, int socket_cliente);
 
+    //estas funciones son para conectar cpu con memoria
+    t_paquete* ini_conexion_cpu_memoria();
+    void request_config_memoria(t_paquete* paquete, int socket_cliente);
+    void obtener_config_memoria();
+
 #endif /* CPU_H_ */

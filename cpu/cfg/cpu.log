@@ -140,3 +140,9 @@
 [INFO] 19:08:12:144 CPU/(4279:4279): Modulo CPU iniciado
 [INFO] 19:12:06:804 CPU/(4447:4447): Modulo CPU iniciado
 [INFO] 19:15:04:384 CPU/(4846:4846): Modulo CPU iniciado
+[INFO] 23:23:49:099 CPU/(7680:7680): Modulo CPU iniciado
+[INFO] 23:23:49:106 CPU/(7680:7680): Socket cliente creado.
+[INFO] 23:23:49:108 CPU/(7680:7680): Request config memoria enviada.
+[INFO] 23:23:49:118 CPU/(7680:7680): Escuchando en 127.0.0.1:8030 (CPU)
+
+[INFO] 23:23:49:118 CPU/(7680:7680): CPU lista como servidor
