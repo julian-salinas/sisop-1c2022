@@ -140,22 +140,6 @@
      * @param paquete: puntero a t_paquete que contiene lo que vamos a enviar, en su 
      *                 header contiene el codigo de operacion (uint*_t) y en el payload el buffer
      */
-    void enviar_paquete(int socket_cliente, t_paquete* paquete);
-
-
-    /*
-    -------------------- Comunicación entre consola y kernel ------------------------------------
-    IMPORTANTE: Como acabo de modificar muchas funciones de serialización,
-    es altamente probable que lo que sigue de código no sirva
-    */
-    
-    /**
-     * @DESC: Enviar lista de instrucciones (Consola → Kernel)
-     * @param lista_instrucciones: lista que se va a enviar
-     * @param socket_cliente: socket que conectado a kernel
-     */
-    void enviar_lista_instrucciones(t_lista_instrucciones* lista_instrucciones, int socket_cliente); 
-
-    
+    void enviar_paquete(int socket_cliente, t_paquete* paquete);    
 
 #endif /* NETWORKING_H */

@@ -29,7 +29,12 @@ void* procesar_conexion(void* void_args) {
                 paquete = recibir_paquete(socket_cliente, op_code);
 
                 // Acá se lee el valor q mandó consola, esto es un ejemplo
-                char* valor_prueba = buffer_take_STRING(paquete -> payload);
+                // char* valor_prueba = buffer_take_STRING(paquete -> payload);
+                break;
+            
+            case INSTRUCCIONES:
+                log_info(logger, "Se recibieron instrucciones");
+                paquete = recibir_paquete(socket_cliente, op_code);
                 break;
 
             case -1:

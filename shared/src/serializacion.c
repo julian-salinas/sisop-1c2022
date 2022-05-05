@@ -85,6 +85,19 @@ void agregar_a_buffer_STRING(t_buffer* buffer, char* valor){
 }
 
 
+/* -------------------------- lista -------------------------- */
+
+void agregar_a_buffer_LIST(t_buffer* buffer, t_list* source, void(*agregar_a_buffer_TIPO)(t_buffer*, void*)){
+    void _magia_negra(void* elem) {
+        agregar_a_buffer_TIPO(buffer, elem);
+    };
+
+    uint32_t tamanioLista = source -> elements_count;
+    agregar_a_buffer_UINT32(buffer, tamanioLista);
+    list_iterate(source, _magia_negra);
+}
+
+
 // ------------------------- Tomar valores del buffer ------------------------- //
 
 void buffer_take(t_buffer* buffer, void** dest, size_t tamanio){
@@ -137,47 +150,6 @@ char* buffer_take_STRING(t_buffer* buffer){
     return tmp;
 }
 
-/*
--------------------- Comunicación entre consola y kernel ------------------------------------
-*/
-
-t_instruccion* crear_instruccion(t_identificador identificador) {
-    t_instruccion* tmp = malloc(sizeof(t_instruccion));
-    
-    tmp -> identificador = identificador;
-    tmp -> parametros = list_create();
-    
-    return tmp;
-}
-
-
-void destruir_instruccion(t_instruccion* instruccion) {
-    list_destroy(instruccion -> parametros);
-    free(instruccion);
-}
-
-
-void agregar_parametro_a_instruccion(t_instruccion* instruccion, int parametro) {
-    list_add(instruccion -> parametros, (void*) parametro);
-}
-
-
-t_lista_instrucciones* crear_lista_instrucciones(void) {
-    t_lista_instrucciones* tmp = malloc(sizeof(t_lista_instrucciones));
-    tmp -> instrucciones = list_create();
-    return tmp;
-}
-
-
-void destruir_lista_instrucciones(t_lista_instrucciones *lista_instrucciones) {
-    list_destroy(lista_instrucciones -> instrucciones);
-    free(lista_instrucciones);
-}
-
-
-void agregar_instruccion_a_lista(t_lista_instrucciones* lista_instrucciones, t_instruccion* instruccion) {
-    list_add(lista_instrucciones -> instrucciones, instruccion);
-}
 
 /*
 -------------------- Comunicación entre cpu y memoria ------------------------------------

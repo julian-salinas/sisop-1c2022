@@ -21,6 +21,7 @@
     #include "networking.h"
     #include "config.h"
     #include "logging.h"
+    #include "instrucciones.h"
 
     #define CONFIG_PATH "/home/utnso/tp2022/tp-2022-1c-Grupo-Final-Final/consola/consola.config"
 

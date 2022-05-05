@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "consola.h"
 
 
@@ -8,36 +6,41 @@ int main(int argc, const char *argv[]) {
 	int conexion_kernel;
 	char* ip_kernel;
 	char* puerto_kernel;
-	char* valor_prueba;
 
 	t_log* logger;
 	t_config* config;
 
+	// Crear logger y loggear inicio de consola
 	logger = iniciar_logger("cfg/consola.log", "Consola");
 	log_info(logger,"Consola iniciada");
 
+	// Obtener configs
 	config = iniciar_config("cfg/consola.config");
 
 	ip_kernel = config_get_string_value(config,"IP_KERNEL");
 	puerto_kernel = config_get_string_value(config,"PUERTO_KERNEL");
-	valor_prueba = "hola";
-	printf("%s", ip_kernel);
-	printf("%s", puerto_kernel);
 
 	conexion_kernel = crear_socket_cliente(ip_kernel,puerto_kernel);
 
-	t_paquete* paquete = crear_paquete(PAQUETE, TAMANIO_DEFAULT_BUFFER);
-	agregar_a_buffer_STRING(paquete -> payload, valor_prueba);
-	enviar_paquete(conexion_kernel, paquete);
-	destruir_paquete(paquete);
+	/* ----------------------------------------------------------
+	Voy a crear una instrucción de ejemplo para mandarla a kernel 
+	------------------------------------------------------------ */
+	// Armo una lista de instrucciones random
+	t_lista_instrucciones* lista_instrucciones_ejemplo = crear_lista_instrucciones();
+	t_instruccion* instruccion_ejemplo = crear_instruccion(COPY);
 
-	// enviar_mensaje(valor_prueba,conexion_kernel);
+	agregar_parametro_a_instruccion(instruccion_ejemplo, 4);
+	agregar_parametro_a_instruccion(instruccion_ejemplo, 8);
+
+	agregar_instruccion_a_lista(lista_instrucciones_ejemplo, instruccion_ejemplo);
+
+ 	enviar_lista_instrucciones(conexion_kernel, lista_instrucciones_ejemplo);
+
+	destruir_lista_instrucciones(lista_instrucciones_ejemplo);
+	destruir_instruccion(instruccion_ejemplo);
+	/*------------------------------------------------------------ */
 
 	terminar_programa(conexion_kernel, logger, config);
-	// TODO: Obtener valores de argv
-	// TODO: Parsear archivo de Pseudocódigo
-	// TODO: Enviar instrucciones a Kernel
-	// Esperar nuevas instrucciones por consola
 }
 
 
