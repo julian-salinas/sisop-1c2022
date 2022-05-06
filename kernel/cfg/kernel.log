@@ -626,3 +626,73 @@
 [INFO] 03:21:32:906 kernel/(22857:22925): Se recibieron instrucciones
 [ERROR] 03:21:32:906 kernel/(22857:22925): Algo anduvo mal en el server de Kernel
 [INFO] 03:21:32:907 kernel/(22857:22925): Cop: 0
+[INFO] 14:05:14:457 kernel/(5332:5332): Kernel iniciado
+[INFO] 14:05:14:461 kernel/(5332:5332): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 14:05:14:462 kernel/(5332:5332): Kernel lista para recibir al cliente
+[INFO] 14:05:19:418 kernel/(5332:5332): Cliente conectado (a Kernel)
+
+[INFO] 14:05:19:437 kernel/(5332:5348): Se recibieron instrucciones
+[ERROR] 14:05:19:443 kernel/(5332:5348): Algo anduvo mal en el server de Kernel
+[INFO] 14:05:19:443 kernel/(5332:5348): Cop: 0
+[INFO] 14:05:23:843 kernel/(5332:5332): Cliente conectado (a Kernel)
+
+[INFO] 14:05:23:857 kernel/(5332:5353): Se recibieron instrucciones
+[ERROR] 14:05:23:858 kernel/(5332:5353): Algo anduvo mal en el server de Kernel
+[INFO] 14:05:23:858 kernel/(5332:5353): Cop: 0
+[INFO] 15:40:54:192 kernel/(8189:8189): Kernel iniciado
+[INFO] 15:40:54:204 kernel/(8189:8189): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 15:40:54:204 kernel/(8189:8189): Kernel lista para recibir al cliente
+[INFO] 15:41:05:627 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:41:05:629 kernel/(8189:8220): Se recibieron instrucciones
+[WARNING] 15:41:05:657 kernel/(8189:8220): El cliente se desconecto de Kernel server
+[INFO] 15:48:50:438 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:48:50:445 kernel/(8189:8394): Se recibieron instrucciones
+[WARNING] 15:48:50:445 kernel/(8189:8394): El cliente se desconecto de Kernel server
+[INFO] 15:49:12:541 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:49:12:562 kernel/(8189:8408): Se recibieron instrucciones
+[WARNING] 15:49:12:562 kernel/(8189:8408): El cliente se desconecto de Kernel server
+[INFO] 15:49:12:762 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:49:12:780 kernel/(8189:8412): Se recibieron instrucciones
+[WARNING] 15:49:12:782 kernel/(8189:8412): El cliente se desconecto de Kernel server
+[INFO] 15:49:12:984 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:49:12:986 kernel/(8189:8415): Se recibieron instrucciones
+[WARNING] 15:49:13:003 kernel/(8189:8415): El cliente se desconecto de Kernel server
+[INFO] 15:49:13:187 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:49:13:205 kernel/(8189:8419): Se recibieron instrucciones
+[WARNING] 15:49:13:206 kernel/(8189:8419): El cliente se desconecto de Kernel server
+[INFO] 15:49:13:332 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:49:13:353 kernel/(8189:8421): Se recibieron instrucciones
+[WARNING] 15:49:13:353 kernel/(8189:8421): El cliente se desconecto de Kernel server
+[INFO] 15:49:13:479 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:49:13:486 kernel/(8189:8423): Se recibieron instrucciones
+[WARNING] 15:49:13:489 kernel/(8189:8423): El cliente se desconecto de Kernel server
+[INFO] 15:49:38:944 kernel/(8189:8189): Cliente conectado (a Kernel)
+
+[INFO] 15:49:38:963 kernel/(8189:8466): Se recibieron instrucciones
+[WARNING] 15:49:38:964 kernel/(8189:8466): El cliente se desconecto de Kernel server
+[INFO] 16:38:02:156 kernel/(10617:10617): Kernel iniciado
+[INFO] 16:38:02:157 kernel/(10617:10617): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 16:38:02:157 kernel/(10617:10617): Kernel lista para recibir al cliente
+[INFO] 16:38:06:338 kernel/(10617:10617): Cliente conectado (a Kernel)
+
+[INFO] 16:38:06:351 kernel/(10617:10629): Se recibieron instrucciones
+[WARNING] 16:38:06:372 kernel/(10617:10629): El cliente se desconecto de server Kernel
+[INFO] 16:38:09:676 kernel/(10617:10617): Cliente conectado (a Kernel)
+
+[INFO] 16:38:09:678 kernel/(10617:10645): Se recibieron instrucciones
+[WARNING] 16:38:09:699 kernel/(10617:10645): El cliente se desconecto de server Kernel
+[INFO] 16:38:10:544 kernel/(10617:10617): Cliente conectado (a Kernel)
+
+[INFO] 16:38:10:561 kernel/(10617:10650): Se recibieron instrucciones
+[WARNING] 16:38:10:561 kernel/(10617:10650): El cliente se desconecto de server Kernel

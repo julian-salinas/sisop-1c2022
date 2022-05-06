@@ -24,7 +24,6 @@
 #define PUERTO_KERNEL "8000"
 
 t_log* logger;
-t_config* config;
 
 int conexion_cpu;
 char* ip_cpu;

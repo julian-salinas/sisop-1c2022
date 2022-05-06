@@ -121,6 +121,7 @@ int server_escuchar(t_log* logger, char* server_name, int server_socket, void(*f
         pthread_detach(hilo);
         return 1;
     }
+    
     return 0;
 }
 

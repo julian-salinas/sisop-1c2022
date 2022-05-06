@@ -2,44 +2,36 @@
 
 int main(void) {
 
-	logger = log_create("cfg/kernel.log", "kernel", 1, LOG_LEVEL_DEBUG);
+	// Crear logger
+	t_log* logger = log_create("cfg/kernel.log", "kernel", 1, LOG_LEVEL_DEBUG);
 	log_info(logger,"Kernel iniciado");
 
-	config = iniciar_config("cfg/kernel.config");
+	// Inicializar configuración
+	t_kernel_config* kernel_config = ini_kernel_config("cfg/kernel.config");
 
-	// conexion con memoria
-	ip_memoria = config_get_string_value(config, "IP_MEMORIA");
-	puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-	conexion_memoria = crear_socket_cliente(ip_memoria, puerto_memoria);
-	enviar_config(config, conexion_memoria);
+	// Conexión con memoria
+	conexion_memoria = crear_socket_cliente(kernel_config -> ip_memoria, kernel_config -> puerto_memoria);
 	
-	//conexion con CPU
-	ip_cpu = config_get_string_value(config, "IP_CPU");
-	puerto_cpu_dispach = config_get_string_value(config, "PUERTO_CPU_DISPATCH");
-	conexion_cpu = crear_socket_cliente(ip_cpu, puerto_cpu_dispach);
-	enviar_config(config, conexion_cpu);
+	// Conexion con CPU
+	conexion_cpu = crear_socket_cliente(kernel_config -> ip_cpu, kernel_config -> puerto_cpu_dispatch);
 	
-	//inicio el servidor para que se conecte la consola
-	int server_fd = iniciar_servidor(logger, "Kernel", IP_KERNEL, PUERTO_KERNEL);
+	// Iniciar servidor para que se conecte la consola
+	int server_fd = iniciar_servidor(logger, "Kernel", kernel_config -> ip_kernel, kernel_config -> puerto_escucha);
 
 	log_info(logger, "Kernel lista para recibir al cliente");
 	
-	while(server_escuchar(logger, "Kernel", server_fd, procesar_conexion)) {
-		// recibir de la consola
-		// crear_PCB(lo que me da la consola);
-		// enviar a la cpu el pcb
-	}
+	while(server_escuchar(logger, "Kernel", server_fd, (void*)(*procesar_conexion)));
 
-	terminar_programa(conexion_memoria, conexion_cpu, logger, config);
+	terminar_programa(conexion_memoria, conexion_cpu, logger, kernel_config);
 
 	//liberar memoria
 	return EXIT_SUCCESS;
 }
 
-void terminar_programa(int conexion, int otraConexion, t_log* logger, t_config* config) {
+void terminar_programa(int conexion, int otraConexion, t_log* logger, t_kernel_config* config) {
 	liberar_socket_cliente(conexion);
-	liberar_socket_cliente(otraConexion); // liberar conexion
+	liberar_socket_cliente(otraConexion);
 	log_destroy(logger);
-	config_destroy(config);
+	destruir_kernel_config(config);
 }
 
