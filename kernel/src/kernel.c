@@ -7,7 +7,7 @@ int main(void) {
 
 	config = iniciar_config("cfg/kernel.config");
 
-	//conexion con memoria
+	// conexion con memoria
 	ip_memoria = config_get_string_value(config, "IP_MEMORIA");
 	puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
 	conexion_memoria = crear_socket_cliente(ip_memoria, puerto_memoria);

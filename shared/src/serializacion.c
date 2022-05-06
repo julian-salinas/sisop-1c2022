@@ -49,10 +49,6 @@ void destruir_paquete(t_paquete* paquete) {
 }
 
 
-void agregar_a_paquete(t_paquete* paquete, void* valor_a_agregar, size_t tamanio) {
-    agregar_a_buffer(paquete -> payload, valor_a_agregar, tamanio);
-}
-
 //------------- Agregar distintos Tipos de datos a un Paquete -------------//
 
 /* -------------------------- int 32 bytes -------------------------- */
@@ -87,16 +83,18 @@ void agregar_a_buffer_STRING(t_buffer* buffer, char* valor){
 
 /* -------------------------- lista -------------------------- */
 
-void agregar_a_buffer_LIST(t_buffer* buffer, t_list* source, void(*agregar_a_buffer_TIPO)(t_buffer*, void*)){
+void agregar_a_buffer_LIST(t_buffer* buffer, t_list* lista, void(*agregar_a_buffer_TIPO)(t_buffer*, void*)){
     void _magia_negra(void* elem) {
         agregar_a_buffer_TIPO(buffer, elem);
     };
 
-    uint32_t tamanioLista = source -> elements_count;
+    uint32_t tamanioLista = lista -> elements_count;
     agregar_a_buffer_UINT32(buffer, tamanioLista);
-    list_iterate(source, _magia_negra);
+    list_iterate(lista, _magia_negra);
 }
 
+
+// ------------------------- Tomar valores del buffer ------------------------- //
 
 // ------------------------- Tomar valores del buffer ------------------------- //
 
@@ -138,15 +136,25 @@ uint8_t buffer_take_UINT8(t_buffer* buffer){
 
 /* ------------------------- strings ------------------------- */
 
-void buffer_take_STRING_P(t_buffer* buffer, void** dest){
-    uint32_t tamanio = buffer_take_UINT32(buffer);
-    buffer_take(buffer, dest, tamanio);
-}
-
 char* buffer_take_STRING(t_buffer* buffer){
     char* tmp = NULL;
     uint32_t tamanio = buffer_take_UINT32(buffer);
     buffer_take(buffer, (void**) &tmp, tamanio);
+    return tmp;
+}
+
+
+/* ------------------------- lista ------------------------- */
+
+t_list* buffer_take_LIST(t_buffer* buffer, void*(*buffer_take_TIPO)(t_buffer*)) {
+    t_list* tmp = list_create();
+    uint32_t tamanio_lista = buffer_take_UINT32(buffer);
+
+    for (uint32_t i = 0; i < tamanio_lista; i++) {
+        void* elem = buffer_take_TIPO(buffer);
+        list_add(tmp, elem);
+    }
+
     return tmp;
 }
 

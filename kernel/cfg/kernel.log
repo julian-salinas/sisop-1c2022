@@ -45,3 +45,584 @@
 [INFO] 02:30:54:001 kernel/(19579:19579): Cliente conectado (a Kernel)
 
 [INFO] 02:30:59:154 kernel/(19579:19587): Se recibieron instrucciones
+[INFO] 19:09:08:184 kernel/(8452:8452): Kernel iniciado
+[INFO] 19:09:08:190 kernel/(8452:8452): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:09:08:191 kernel/(8452:8452): Kernel lista para recibir al cliente
+[INFO] 19:09:19:365 kernel/(8452:8452): Cliente conectado (a Kernel)
+
+[INFO] 19:09:19:373 kernel/(8452:8493): Se recibieron instrucciones
+[INFO] 19:11:17:196 kernel/(8601:8601): Kernel iniciado
+[INFO] 19:11:17:198 kernel/(8601:8601): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:11:17:198 kernel/(8601:8601): Kernel lista para recibir al cliente
+[INFO] 19:11:20:159 kernel/(8601:8601): Cliente conectado (a Kernel)
+
+[INFO] 19:11:26:838 kernel/(8601:8608): Se recibieron instrucciones
+[INFO] 19:14:18:713 kernel/(8824:8824): Kernel iniciado
+[INFO] 19:14:18:714 kernel/(8824:8824): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:14:18:714 kernel/(8824:8824): Kernel lista para recibir al cliente
+[INFO] 19:14:21:153 kernel/(8824:8824): Cliente conectado (a Kernel)
+
+[INFO] 19:14:26:456 kernel/(8824:8831): Se recibieron instrucciones
+[INFO] 19:15:39:790 kernel/(8905:8905): Kernel iniciado
+[INFO] 19:15:39:791 kernel/(8905:8905): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:15:39:791 kernel/(8905:8905): Kernel lista para recibir al cliente
+[INFO] 19:15:41:842 kernel/(8905:8905): Cliente conectado (a Kernel)
+
+[INFO] 19:15:41:851 kernel/(8905:8915): Se recibieron instrucciones
+[INFO] 19:16:30:003 kernel/(8949:8949): Kernel iniciado
+[INFO] 19:16:30:005 kernel/(8949:8949): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:16:30:006 kernel/(8949:8949): Kernel lista para recibir al cliente
+[INFO] 19:16:35:022 kernel/(8967:8967): Kernel iniciado
+[INFO] 19:16:35:025 kernel/(8967:8967): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:16:35:025 kernel/(8967:8967): Kernel lista para recibir al cliente
+[INFO] 19:16:37:650 kernel/(8967:8967): Cliente conectado (a Kernel)
+
+[INFO] 19:16:37:653 kernel/(8967:8972): Se recibieron instrucciones
+[INFO] 19:16:55:300 kernel/(9004:9004): Kernel iniciado
+[INFO] 19:16:55:304 kernel/(9004:9004): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:16:55:305 kernel/(9004:9004): Kernel lista para recibir al cliente
+[INFO] 19:16:57:583 kernel/(9004:9004): Cliente conectado (a Kernel)
+
+[INFO] 19:16:57:603 kernel/(9004:9007): Se recibieron instrucciones
+[INFO] 19:18:20:293 kernel/(9146:9146): Kernel iniciado
+[INFO] 19:18:20:293 kernel/(9146:9146): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:18:20:294 kernel/(9146:9146): Kernel lista para recibir al cliente
+[INFO] 19:18:23:263 kernel/(9146:9146): Cliente conectado (a Kernel)
+
+[INFO] 19:18:27:441 kernel/(9146:9153): Se recibieron instrucciones
+[INFO] 19:19:26:672 kernel/(9273:9273): Kernel iniciado
+[INFO] 19:19:26:673 kernel/(9273:9273): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:19:26:673 kernel/(9273:9273): Kernel lista para recibir al cliente
+[INFO] 19:19:30:294 kernel/(9273:9273): Cliente conectado (a Kernel)
+
+[INFO] 19:19:36:246 kernel/(9273:9281): Se recibieron instrucciones
+[INFO] 19:20:51:358 kernel/(9359:9359): Kernel iniciado
+[INFO] 19:20:51:359 kernel/(9359:9359): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:20:51:359 kernel/(9359:9359): Kernel lista para recibir al cliente
+[INFO] 19:20:54:400 kernel/(9370:9370): Kernel iniciado
+[INFO] 19:20:54:403 kernel/(9370:9370): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:20:54:404 kernel/(9370:9370): Kernel lista para recibir al cliente
+[INFO] 19:20:56:647 kernel/(9370:9370): Cliente conectado (a Kernel)
+
+[INFO] 19:20:56:655 kernel/(9370:9380): Se recibieron instrucciones
+[INFO] 19:20:58:625 kernel/(9370:9370): Cliente conectado (a Kernel)
+
+[INFO] 19:20:58:629 kernel/(9370:9384): Se recibieron instrucciones
+[INFO] 19:20:59:108 kernel/(9370:9370): Cliente conectado (a Kernel)
+
+[INFO] 19:20:59:128 kernel/(9370:9388): Se recibieron instrucciones
+[INFO] 19:21:00:625 kernel/(9370:9370): Cliente conectado (a Kernel)
+
+[INFO] 19:21:00:656 kernel/(9370:9392): Se recibieron instrucciones
+[INFO] 19:21:41:487 kernel/(9444:9444): Kernel iniciado
+[INFO] 19:21:41:489 kernel/(9444:9444): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:21:41:490 kernel/(9444:9444): Kernel lista para recibir al cliente
+[INFO] 19:21:43:737 kernel/(9444:9444): Cliente conectado (a Kernel)
+
+[INFO] 19:21:43:759 kernel/(9444:9447): Se recibieron instrucciones
+[INFO] 19:22:11:374 kernel/(9490:9490): Kernel iniciado
+[INFO] 19:22:11:375 kernel/(9490:9490): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:22:11:375 kernel/(9490:9490): Kernel lista para recibir al cliente
+[INFO] 19:22:13:424 kernel/(9490:9490): Cliente conectado (a Kernel)
+
+[INFO] 19:22:13:440 kernel/(9490:9493): Se recibieron instrucciones
+[INFO] 19:22:27:932 kernel/(9579:9579): Kernel iniciado
+[INFO] 19:22:27:932 kernel/(9579:9579): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:22:27:932 kernel/(9579:9579): Kernel lista para recibir al cliente
+[INFO] 19:22:30:119 kernel/(9579:9579): Cliente conectado (a Kernel)
+
+[INFO] 19:22:34:489 kernel/(9579:9589): Se recibieron instrucciones
+[INFO] 19:24:03:447 kernel/(9743:9743): Kernel iniciado
+[INFO] 19:24:03:448 kernel/(9743:9743): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:24:03:448 kernel/(9743:9743): Kernel lista para recibir al cliente
+[INFO] 19:24:06:468 kernel/(9743:9743): Cliente conectado (a Kernel)
+
+[INFO] 19:24:10:801 kernel/(9743:9750): Se recibieron instrucciones
+[INFO] 19:25:27:131 kernel/(9871:9871): Kernel iniciado
+[INFO] 19:25:27:131 kernel/(9871:9871): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:25:27:132 kernel/(9871:9871): Kernel lista para recibir al cliente
+[INFO] 19:26:30:702 kernel/(9967:9967): Kernel iniciado
+[INFO] 19:26:30:703 kernel/(9967:9967): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:26:30:703 kernel/(9967:9967): Kernel lista para recibir al cliente
+[INFO] 19:26:32:669 kernel/(9967:9967): Cliente conectado (a Kernel)
+
+[INFO] 19:26:32:672 kernel/(9967:9972): Se recibieron instrucciones
+[INFO] 19:26:34:065 kernel/(9967:9967): Cliente conectado (a Kernel)
+
+[INFO] 19:26:34:067 kernel/(9967:9976): Se recibieron instrucciones
+[INFO] 19:26:56:275 kernel/(10020:10020): Kernel iniciado
+[INFO] 19:26:56:276 kernel/(10020:10020): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:26:56:276 kernel/(10020:10020): Kernel lista para recibir al cliente
+[INFO] 19:26:57:443 kernel/(10020:10020): Cliente conectado (a Kernel)
+
+[INFO] 19:26:57:451 kernel/(10020:10023): Se recibieron instrucciones
+[INFO] 19:27:05:710 kernel/(10101:10101): Kernel iniciado
+[INFO] 19:27:05:710 kernel/(10101:10101): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:27:05:710 kernel/(10101:10101): Kernel lista para recibir al cliente
+[INFO] 19:27:09:894 kernel/(10101:10101): Cliente conectado (a Kernel)
+
+[INFO] 19:27:14:535 kernel/(10101:10108): Se recibieron instrucciones
+[INFO] 19:28:32:418 kernel/(10245:10245): Kernel iniciado
+[INFO] 19:28:32:418 kernel/(10245:10245): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:28:32:418 kernel/(10245:10245): Kernel lista para recibir al cliente
+[INFO] 19:28:36:915 kernel/(10245:10245): Cliente conectado (a Kernel)
+
+[INFO] 19:28:41:288 kernel/(10245:10252): Se recibieron instrucciones
+[INFO] 19:33:42:093 kernel/(10478:10478): Kernel iniciado
+[INFO] 19:33:42:094 kernel/(10478:10478): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:33:42:096 kernel/(10478:10478): Kernel lista para recibir al cliente
+[INFO] 19:33:53:438 kernel/(10559:10559): Kernel iniciado
+[INFO] 19:33:53:439 kernel/(10559:10559): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:33:53:439 kernel/(10559:10559): Kernel lista para recibir al cliente
+[INFO] 19:33:55:946 kernel/(10559:10559): Cliente conectado (a Kernel)
+
+[INFO] 19:34:00:603 kernel/(10559:10566): Se recibieron instrucciones
+[INFO] 19:35:12:899 kernel/(10690:10690): Kernel iniciado
+[INFO] 19:35:12:899 kernel/(10690:10690): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:35:12:899 kernel/(10690:10690): Kernel lista para recibir al cliente
+[INFO] 19:38:11:968 kernel/(10690:10690): Cliente conectado (a Kernel)
+
+[INFO] 19:38:15:862 kernel/(10690:10737): Se recibieron instrucciones
+[INFO] 19:40:36:981 kernel/(10844:10844): Kernel iniciado
+[INFO] 19:40:36:983 kernel/(10844:10844): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:40:36:985 kernel/(10844:10844): Kernel lista para recibir al cliente
+[INFO] 19:40:39:141 kernel/(10844:10844): Cliente conectado (a Kernel)
+
+[INFO] 19:40:44:134 kernel/(10844:10852): Se recibieron instrucciones
+[INFO] 23:22:18:579 kernel/(12700:12700): Kernel iniciado
+[INFO] 23:22:18:579 kernel/(12700:12700): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 23:22:18:579 kernel/(12700:12700): Kernel lista para recibir al cliente
+[INFO] 00:01:20:448 kernel/(12700:12700): Cliente conectado (a Kernel)
+
+[INFO] 00:01:47:669 kernel/(12700:13173): Se recibieron instrucciones
+[INFO] 00:48:16:987 kernel/(14111:14111): Kernel iniciado
+[INFO] 00:48:16:997 kernel/(14111:14111): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:48:16:997 kernel/(14111:14111): Kernel lista para recibir al cliente
+[INFO] 00:48:19:340 kernel/(14111:14111): Cliente conectado (a Kernel)
+
+[INFO] 00:48:19:355 kernel/(14111:14114): Se recibieron instrucciones
+[INFO] 00:48:27:053 kernel/(14128:14128): Kernel iniciado
+[INFO] 00:48:27:060 kernel/(14128:14128): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:48:27:060 kernel/(14128:14128): Kernel lista para recibir al cliente
+[INFO] 00:48:28:557 kernel/(14128:14128): Cliente conectado (a Kernel)
+
+[INFO] 00:48:28:571 kernel/(14128:14131): Se recibieron instrucciones
+[INFO] 00:49:10:037 kernel/(14238:14238): Kernel iniciado
+[INFO] 00:49:10:037 kernel/(14238:14238): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:49:10:037 kernel/(14238:14238): Kernel lista para recibir al cliente
+[INFO] 00:49:11:549 kernel/(14238:14238): Cliente conectado (a Kernel)
+
+[INFO] 00:49:17:520 kernel/(14238:14246): Se recibieron instrucciones
+[INFO] 00:50:35:850 kernel/(14366:14366): Kernel iniciado
+[INFO] 00:50:35:850 kernel/(14366:14366): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:50:35:850 kernel/(14366:14366): Kernel lista para recibir al cliente
+[INFO] 00:50:39:936 kernel/(14366:14366): Cliente conectado (a Kernel)
+
+[INFO] 00:50:42:628 kernel/(14366:14382): Se recibieron instrucciones
+[INFO] 00:51:08:743 kernel/(14462:14462): Kernel iniciado
+[INFO] 00:51:08:743 kernel/(14462:14462): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:51:08:743 kernel/(14462:14462): Kernel lista para recibir al cliente
+[INFO] 00:51:10:782 kernel/(14462:14462): Cliente conectado (a Kernel)
+
+[INFO] 00:51:15:072 kernel/(14462:14471): Se recibieron instrucciones
+[INFO] 01:05:38:479 kernel/(14778:14778): Kernel iniciado
+[INFO] 01:05:38:479 kernel/(14778:14778): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:05:38:479 kernel/(14778:14778): Kernel lista para recibir al cliente
+[INFO] 01:05:41:382 kernel/(14778:14778): Cliente conectado (a Kernel)
+
+[INFO] 01:05:44:773 kernel/(14778:14792): Se recibieron instrucciones
+[INFO] 01:08:18:384 kernel/(14903:14903): Kernel iniciado
+[INFO] 01:08:18:385 kernel/(14903:14903): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:08:18:385 kernel/(14903:14903): Kernel lista para recibir al cliente
+[INFO] 01:08:22:711 kernel/(14903:14903): Cliente conectado (a Kernel)
+
+[INFO] 01:08:28:248 kernel/(14903:14911): Se recibieron instrucciones
+[INFO] 01:10:10:945 kernel/(15040:15040): Kernel iniciado
+[INFO] 01:10:10:945 kernel/(15040:15040): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:10:10:945 kernel/(15040:15040): Kernel lista para recibir al cliente
+[INFO] 01:10:12:720 kernel/(15040:15040): Cliente conectado (a Kernel)
+
+[INFO] 01:10:18:464 kernel/(15040:15049): Se recibieron instrucciones
+[INFO] 01:39:19:884 kernel/(15905:15905): Kernel iniciado
+[INFO] 01:39:19:885 kernel/(15905:15905): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:39:19:885 kernel/(15905:15905): Kernel lista para recibir al cliente
+[INFO] 01:39:26:720 kernel/(15905:15905): Cliente conectado (a Kernel)
+
+[INFO] 01:39:26:731 kernel/(15905:15916): Se recibieron instrucciones
+[INFO] 01:42:26:601 kernel/(16063:16063): Kernel iniciado
+[INFO] 01:42:26:602 kernel/(16063:16063): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:42:26:602 kernel/(16063:16063): Kernel lista para recibir al cliente
+[INFO] 01:42:29:108 kernel/(16063:16063): Cliente conectado (a Kernel)
+
+[INFO] 01:43:10:238 kernel/(16171:16171): Kernel iniciado
+[INFO] 01:43:10:239 kernel/(16171:16171): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:43:10:239 kernel/(16171:16171): Kernel lista para recibir al cliente
+[INFO] 01:43:14:073 kernel/(16171:16171): Cliente conectado (a Kernel)
+
+[INFO] 01:43:19:715 kernel/(16171:16188): Se recibieron instrucciones
+[INFO] 01:45:43:027 kernel/(16223:16223): Kernel iniciado
+[INFO] 01:45:43:028 kernel/(16223:16223): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:45:43:028 kernel/(16223:16223): Kernel lista para recibir al cliente
+[INFO] 01:45:50:623 kernel/(16223:16223): Cliente conectado (a Kernel)
+
+[INFO] 01:45:50:641 kernel/(16223:16235): Se recibieron instrucciones
+[INFO] 01:46:04:218 kernel/(16313:16313): Kernel iniciado
+[INFO] 01:46:04:219 kernel/(16313:16313): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:46:04:219 kernel/(16313:16313): Kernel lista para recibir al cliente
+[INFO] 01:46:09:850 kernel/(16313:16313): Cliente conectado (a Kernel)
+
+[INFO] 01:46:26:339 kernel/(16313:16313): Cliente conectado (a Kernel)
+
+[INFO] 01:46:32:862 kernel/(16313:16328): Se recibieron instrucciones
+[INFO] 01:46:42:662 kernel/(16313:16356): Se recibieron instrucciones
+[INFO] 01:52:39:733 kernel/(16537:16537): Kernel iniciado
+[INFO] 01:52:39:733 kernel/(16537:16537): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:52:39:733 kernel/(16537:16537): Kernel lista para recibir al cliente
+[INFO] 01:52:42:727 kernel/(16537:16537): Cliente conectado (a Kernel)
+
+[INFO] 01:52:51:101 kernel/(16537:16546): Se recibieron instrucciones
+[INFO] 01:54:46:256 kernel/(16686:16686): Kernel iniciado
+[INFO] 01:54:46:257 kernel/(16686:16686): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:54:46:257 kernel/(16686:16686): Kernel lista para recibir al cliente
+[INFO] 01:54:47:779 kernel/(16686:16686): Cliente conectado (a Kernel)
+
+[INFO] 01:54:51:738 kernel/(16686:16695): Se recibieron instrucciones
+[INFO] 01:54:59:394 kernel/(16686:16695): leido: 4
+[INFO] 01:57:34:197 kernel/(16876:16876): Kernel iniciado
+[INFO] 01:57:34:198 kernel/(16876:16876): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:57:34:198 kernel/(16876:16876): Kernel lista para recibir al cliente
+[INFO] 01:57:37:754 kernel/(16876:16876): Cliente conectado (a Kernel)
+
+[INFO] 01:57:41:889 kernel/(16876:16883): Se recibieron instrucciones
+[INFO] 01:58:04:622 kernel/(16974:16974): Kernel iniciado
+[INFO] 01:58:04:622 kernel/(16974:16974): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:58:04:622 kernel/(16974:16974): Kernel lista para recibir al cliente
+[INFO] 01:58:05:621 kernel/(16974:16974): Cliente conectado (a Kernel)
+
+[INFO] 01:58:07:321 kernel/(16974:16982): Se recibieron instrucciones
+[INFO] 01:58:49:120 kernel/(17099:17099): Kernel iniciado
+[INFO] 01:58:49:121 kernel/(17099:17099): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:58:49:121 kernel/(17099:17099): Kernel lista para recibir al cliente
+[INFO] 01:58:50:999 kernel/(17099:17099): Cliente conectado (a Kernel)
+
+[INFO] 01:58:52:702 kernel/(17099:17106): Se recibieron instrucciones
+[INFO] 01:58:52:705 kernel/(17099:17106): Instruccion: 4
+[INFO] 01:59:11:582 kernel/(17193:17193): Kernel iniciado
+[INFO] 01:59:11:582 kernel/(17193:17193): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:59:11:582 kernel/(17193:17193): Kernel lista para recibir al cliente
+[INFO] 01:59:13:210 kernel/(17193:17193): Cliente conectado (a Kernel)
+
+[INFO] 01:59:15:873 kernel/(17193:17201): Se recibieron instrucciones
+[INFO] 01:59:20:553 kernel/(17193:17201): Instruccion: 4
+[INFO] 02:00:02:170 kernel/(17324:17324): Kernel iniciado
+[INFO] 02:00:02:171 kernel/(17324:17324): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:00:02:171 kernel/(17324:17324): Kernel lista para recibir al cliente
+[INFO] 02:00:03:654 kernel/(17324:17324): Cliente conectado (a Kernel)
+
+[INFO] 02:00:05:361 kernel/(17324:17331): Se recibieron instrucciones
+[INFO] 02:00:06:555 kernel/(17324:17331): Instruccion: 4
+[INFO] 02:01:16:157 kernel/(17463:17463): Kernel iniciado
+[INFO] 02:01:16:158 kernel/(17463:17463): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:01:16:158 kernel/(17463:17463): Kernel lista para recibir al cliente
+[INFO] 02:01:18:220 kernel/(17463:17463): Cliente conectado (a Kernel)
+
+[INFO] 02:01:21:647 kernel/(17463:17475): Se recibieron instrucciones
+[INFO] 02:01:21:647 kernel/(17463:17475): Todo OK - Código de Instruccion: 4
+[INFO] 02:02:27:747 kernel/(17603:17603): Kernel iniciado
+[INFO] 02:02:27:748 kernel/(17603:17603): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:02:27:748 kernel/(17603:17603): Kernel lista para recibir al cliente
+[INFO] 02:02:28:858 kernel/(17603:17603): Cliente conectado (a Kernel)
+
+[INFO] 02:02:30:276 kernel/(17603:17613): Se recibieron instrucciones
+[INFO] 02:02:34:306 kernel/(17603:17613): Todo MAL - Código de Instruccion: 4
+[INFO] 02:03:00:203 kernel/(17720:17720): Kernel iniciado
+[INFO] 02:03:00:203 kernel/(17720:17720): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:03:00:204 kernel/(17720:17720): Kernel lista para recibir al cliente
+[INFO] 02:03:04:510 kernel/(17720:17720): Cliente conectado (a Kernel)
+
+[INFO] 02:03:06:275 kernel/(17720:17736): Se recibieron instrucciones
+[INFO] 02:03:06:276 kernel/(17720:17736): Todo OK - Código de Instruccion: 5
+[INFO] 02:04:49:575 kernel/(17866:17866): Kernel iniciado
+[INFO] 02:04:49:575 kernel/(17866:17866): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:04:49:575 kernel/(17866:17866): Kernel lista para recibir al cliente
+[INFO] 02:04:51:207 kernel/(17866:17866): Cliente conectado (a Kernel)
+
+[INFO] 02:05:08:743 kernel/(17866:17874): Se recibieron instrucciones
+[INFO] 02:05:50:766 kernel/(17981:17981): Kernel iniciado
+[INFO] 02:05:50:767 kernel/(17981:17981): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:05:50:767 kernel/(17981:17981): Kernel lista para recibir al cliente
+[INFO] 02:05:51:739 kernel/(17981:17981): Cliente conectado (a Kernel)
+
+[INFO] 02:05:55:358 kernel/(17981:17989): Se recibieron instrucciones
+[INFO] 02:07:28:676 kernel/(18130:18130): Kernel iniciado
+[INFO] 02:07:28:676 kernel/(18130:18130): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:07:28:676 kernel/(18130:18130): Kernel lista para recibir al cliente
+[INFO] 02:07:34:619 kernel/(18130:18130): Cliente conectado (a Kernel)
+
+[INFO] 02:07:38:035 kernel/(18130:18138): Se recibieron instrucciones
+[INFO] 02:10:08:282 kernel/(18345:18345): Kernel iniciado
+[INFO] 02:10:08:282 kernel/(18345:18345): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:10:08:283 kernel/(18345:18345): Kernel lista para recibir al cliente
+[INFO] 02:10:10:000 kernel/(18345:18345): Cliente conectado (a Kernel)
+
+[INFO] 02:10:13:858 kernel/(18345:18351): Se recibieron instrucciones
+[INFO] 02:11:25:286 kernel/(18471:18471): Kernel iniciado
+[INFO] 02:11:25:287 kernel/(18471:18471): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:11:25:287 kernel/(18471:18471): Kernel lista para recibir al cliente
+[INFO] 02:11:28:190 kernel/(18471:18471): Cliente conectado (a Kernel)
+
+[INFO] 02:11:31:905 kernel/(18471:18477): Se recibieron instrucciones
+[INFO] 02:14:10:343 kernel/(18629:18629): Kernel iniciado
+[INFO] 02:14:10:343 kernel/(18629:18629): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:14:10:344 kernel/(18629:18629): Kernel lista para recibir al cliente
+[INFO] 02:14:14:767 kernel/(18629:18629): Cliente conectado (a Kernel)
+
+[INFO] 02:14:23:000 kernel/(18629:18644): Se recibieron instrucciones
+[INFO] 02:15:08:579 kernel/(18670:18670): Kernel iniciado
+[INFO] 02:15:08:590 kernel/(18670:18670): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:15:08:590 kernel/(18670:18670): Kernel lista para recibir al cliente
+[INFO] 02:15:27:391 kernel/(18670:18670): Cliente conectado (a Kernel)
+
+[INFO] 02:17:16:361 kernel/(18670:18761): Se recibieron instrucciones
+[INFO] 02:17:16:362 kernel/(18670:18761): Todo OK - Código de Instruccion: 5
+[INFO] 02:17:48:373 kernel/(18873:18873): Kernel iniciado
+[INFO] 02:17:48:374 kernel/(18873:18873): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:17:48:374 kernel/(18873:18873): Kernel lista para recibir al cliente
+[INFO] 02:17:51:988 kernel/(18873:18873): Cliente conectado (a Kernel)
+
+[INFO] 02:17:51:992 kernel/(18873:18886): Se recibieron instrucciones
+[INFO] 02:34:04:844 kernel/(19484:19484): Kernel iniciado
+[INFO] 02:34:04:844 kernel/(19484:19484): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:34:04:845 kernel/(19484:19484): Kernel lista para recibir al cliente
+[INFO] 02:34:08:131 kernel/(19484:19484): Cliente conectado (a Kernel)
+
+[INFO] 02:34:08:162 kernel/(19484:19496): Se recibieron instrucciones
+[INFO] 02:35:03:760 kernel/(19618:19618): Kernel iniciado
+[INFO] 02:35:03:761 kernel/(19618:19618): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:35:03:761 kernel/(19618:19618): Kernel lista para recibir al cliente
+[INFO] 02:35:09:097 kernel/(19618:19618): Cliente conectado (a Kernel)
+
+[INFO] 02:35:09:112 kernel/(19618:19625): Se recibieron instrucciones
+[INFO] 02:41:39:228 kernel/(19825:19825): Kernel iniciado
+[INFO] 02:41:39:228 kernel/(19825:19825): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:41:39:228 kernel/(19825:19825): Kernel lista para recibir al cliente
+[INFO] 02:41:48:917 kernel/(19825:19825): Cliente conectado (a Kernel)
+
+[INFO] 02:41:48:923 kernel/(19825:19841): Se recibieron instrucciones
+[INFO] 02:48:55:474 kernel/(20243:20243): Kernel iniciado
+[INFO] 02:48:55:474 kernel/(20243:20243): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:48:55:475 kernel/(20243:20243): Kernel lista para recibir al cliente
+[INFO] 02:48:59:500 kernel/(20243:20243): Cliente conectado (a Kernel)
+
+[INFO] 02:48:59:522 kernel/(20243:20253): Se recibieron instrucciones
+[INFO] 02:50:00:446 kernel/(20377:20377): Kernel iniciado
+[INFO] 02:50:00:447 kernel/(20377:20377): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:50:00:447 kernel/(20377:20377): Kernel lista para recibir al cliente
+[INFO] 02:50:03:240 kernel/(20377:20377): Cliente conectado (a Kernel)
+
+[INFO] 02:50:03:277 kernel/(20377:20384): Se recibieron instrucciones
+[INFO] 02:50:06:230 kernel/(20377:20384): Todo OK - Código de Instruccion: 5
+[INFO] 02:51:34:555 kernel/(20517:20517): Kernel iniciado
+[INFO] 02:51:34:555 kernel/(20517:20517): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:51:34:555 kernel/(20517:20517): Kernel lista para recibir al cliente
+[INFO] 02:51:35:647 kernel/(20517:20517): Cliente conectado (a Kernel)
+
+[INFO] 02:51:35:676 kernel/(20517:20524): Se recibieron instrucciones
+[INFO] 02:56:08:001 kernel/(20788:20788): Kernel iniciado
+[INFO] 02:56:08:001 kernel/(20788:20788): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:56:08:001 kernel/(20788:20788): Kernel lista para recibir al cliente
+[INFO] 02:56:22:081 kernel/(20788:20788): Cliente conectado (a Kernel)
+
+[INFO] 02:56:22:098 kernel/(20788:20810): Se recibieron instrucciones
+[INFO] 02:57:16:581 kernel/(20926:20926): Kernel iniciado
+[INFO] 02:57:16:582 kernel/(20926:20926): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:57:16:582 kernel/(20926:20926): Kernel lista para recibir al cliente
+[INFO] 02:57:19:199 kernel/(20926:20926): Cliente conectado (a Kernel)
+
+[INFO] 02:57:19:216 kernel/(20926:20932): Se recibieron instrucciones
+[INFO] 03:03:46:055 kernel/(21410:21410): Kernel iniciado
+[INFO] 03:03:46:056 kernel/(21410:21410): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:03:46:056 kernel/(21410:21410): Kernel lista para recibir al cliente
+[INFO] 03:03:48:125 kernel/(21410:21410): Cliente conectado (a Kernel)
+
+[INFO] 03:03:48:138 kernel/(21410:21417): Se recibieron instrucciones
+[INFO] 03:04:19:881 kernel/(21515:21515): Kernel iniciado
+[INFO] 03:04:19:881 kernel/(21515:21515): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:04:19:883 kernel/(21515:21515): Kernel lista para recibir al cliente
+[INFO] 03:04:27:339 kernel/(21515:21515): Cliente conectado (a Kernel)
+
+[INFO] 03:04:58:007 kernel/(21607:21607): Kernel iniciado
+[INFO] 03:04:58:007 kernel/(21607:21607): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:04:58:007 kernel/(21607:21607): Kernel lista para recibir al cliente
+[INFO] 03:05:01:358 kernel/(21607:21607): Cliente conectado (a Kernel)
+
+[INFO] 03:05:05:893 kernel/(21607:21629): Se recibieron instrucciones
+[INFO] 03:11:18:565 kernel/(21845:21845): Kernel iniciado
+[INFO] 03:11:18:569 kernel/(21845:21845): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:11:18:571 kernel/(21845:21845): Kernel lista para recibir al cliente
+[INFO] 03:11:20:712 kernel/(21845:21845): Cliente conectado (a Kernel)
+
+[ERROR] 03:11:20:724 kernel/(21845:21852): Algo anduvo mal en el server de Kernel
+[INFO] 03:11:20:725 kernel/(21845:21852): Cop: 4355
+[INFO] 03:11:23:878 kernel/(21845:21845): Cliente conectado (a Kernel)
+
+[ERROR] 03:11:23:897 kernel/(21845:21855): Algo anduvo mal en el server de Kernel
+[INFO] 03:11:23:911 kernel/(21845:21855): Cop: 4355
+[INFO] 03:12:01:795 kernel/(21944:21944): Kernel iniciado
+[INFO] 03:12:01:796 kernel/(21944:21944): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:12:01:796 kernel/(21944:21944): Kernel lista para recibir al cliente
+[INFO] 03:12:09:923 kernel/(21944:21944): Cliente conectado (a Kernel)
+
+[INFO] 03:14:12:352 kernel/(22099:22099): Kernel iniciado
+[INFO] 03:14:12:352 kernel/(22099:22099): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:14:12:352 kernel/(22099:22099): Kernel lista para recibir al cliente
+[INFO] 03:14:15:915 kernel/(22099:22099): Cliente conectado (a Kernel)
+
+[INFO] 03:14:22:661 kernel/(22099:22112): Se recibieron instrucciones
+[ERROR] 03:14:29:956 kernel/(22099:22112): Algo anduvo mal en el server de Kernel
+[INFO] 03:14:30:588 kernel/(22099:22112): Cop: 0
+[INFO] 03:16:06:909 kernel/(22309:22309): Kernel iniciado
+[INFO] 03:16:06:909 kernel/(22309:22309): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:16:06:909 kernel/(22309:22309): Kernel lista para recibir al cliente
+[INFO] 03:16:16:005 kernel/(22309:22309): Cliente conectado (a Kernel)
+
+[INFO] 03:16:21:789 kernel/(22309:22328): Se recibieron instrucciones
+[INFO] 03:17:25:542 kernel/(22448:22448): Kernel iniciado
+[INFO] 03:17:25:542 kernel/(22448:22448): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:17:25:542 kernel/(22448:22448): Kernel lista para recibir al cliente
+[INFO] 03:17:29:579 kernel/(22448:22448): Cliente conectado (a Kernel)
+
+[INFO] 03:17:29:592 kernel/(22448:22463): Se recibieron instrucciones
+[INFO] 03:18:10:225 kernel/(22563:22563): Kernel iniciado
+[INFO] 03:18:10:225 kernel/(22563:22563): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:18:10:225 kernel/(22563:22563): Kernel lista para recibir al cliente
+[INFO] 03:18:12:527 kernel/(22563:22563): Cliente conectado (a Kernel)
+
+[INFO] 03:18:16:678 kernel/(22563:22569): Se recibieron instrucciones
+[INFO] 03:18:59:420 kernel/(22682:22682): Kernel iniciado
+[INFO] 03:18:59:420 kernel/(22682:22682): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:18:59:420 kernel/(22682:22682): Kernel lista para recibir al cliente
+[INFO] 03:19:01:401 kernel/(22682:22682): Cliente conectado (a Kernel)
+
+[INFO] 03:19:46:701 kernel/(22798:22798): Kernel iniciado
+[INFO] 03:19:46:701 kernel/(22798:22798): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:19:46:701 kernel/(22798:22798): Kernel lista para recibir al cliente
+[INFO] 03:19:56:998 kernel/(22798:22798): Cliente conectado (a Kernel)
+
+[INFO] 03:20:04:716 kernel/(22798:22819): Se recibieron instrucciones
+[ERROR] 03:20:04:716 kernel/(22798:22819): Algo anduvo mal en el server de Kernel
+[INFO] 03:20:04:716 kernel/(22798:22819): Cop: 0
+[INFO] 03:20:31:765 kernel/(22857:22857): Kernel iniciado
+[INFO] 03:20:31:766 kernel/(22857:22857): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 03:20:31:767 kernel/(22857:22857): Kernel lista para recibir al cliente
+[INFO] 03:20:33:590 kernel/(22857:22857): Cliente conectado (a Kernel)
+
+[INFO] 03:20:33:607 kernel/(22857:22859): Se recibieron instrucciones
+[ERROR] 03:20:33:933 kernel/(22857:22859): Algo anduvo mal en el server de Kernel
+[INFO] 03:20:33:935 kernel/(22857:22859): Cop: 0
+[INFO] 03:20:38:166 kernel/(22857:22857): Cliente conectado (a Kernel)
+
+[INFO] 03:20:38:178 kernel/(22857:22862): Se recibieron instrucciones
+[ERROR] 03:20:38:483 kernel/(22857:22862): Algo anduvo mal en el server de Kernel
+[INFO] 03:20:38:485 kernel/(22857:22862): Cop: 0
+[INFO] 03:20:39:706 kernel/(22857:22857): Cliente conectado (a Kernel)
+
+[INFO] 03:20:39:723 kernel/(22857:22865): Se recibieron instrucciones
+[ERROR] 03:20:40:040 kernel/(22857:22865): Algo anduvo mal en el server de Kernel
+[INFO] 03:20:40:040 kernel/(22857:22865): Cop: 0
+[INFO] 03:21:20:574 kernel/(22857:22857): Cliente conectado (a Kernel)
+
+[INFO] 03:21:20:594 kernel/(22857:22903): Se recibieron instrucciones
+[ERROR] 03:21:20:849 kernel/(22857:22903): Algo anduvo mal en el server de Kernel
+[INFO] 03:21:20:849 kernel/(22857:22903): Cop: 0
+[INFO] 03:21:24:307 kernel/(22857:22857): Cliente conectado (a Kernel)
+
+[INFO] 03:21:24:324 kernel/(22857:22906): Se recibieron instrucciones
+[ERROR] 03:21:24:636 kernel/(22857:22906): Algo anduvo mal en el server de Kernel
+[INFO] 03:21:24:636 kernel/(22857:22906): Cop: 0
+[INFO] 03:21:31:503 kernel/(22857:22857): Cliente conectado (a Kernel)
+
+[INFO] 03:21:31:531 kernel/(22857:22923): Se recibieron instrucciones
+[ERROR] 03:21:31:534 kernel/(22857:22923): Algo anduvo mal en el server de Kernel
+[INFO] 03:21:31:535 kernel/(22857:22923): Cop: 0
+[INFO] 03:21:32:897 kernel/(22857:22857): Cliente conectado (a Kernel)
+
+[INFO] 03:21:32:906 kernel/(22857:22925): Se recibieron instrucciones
+[ERROR] 03:21:32:906 kernel/(22857:22925): Algo anduvo mal en el server de Kernel
+[INFO] 03:21:32:907 kernel/(22857:22925): Cop: 0

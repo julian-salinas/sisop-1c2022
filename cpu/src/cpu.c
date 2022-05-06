@@ -13,6 +13,7 @@ int main(void) {
 	//iniciar servidor cpu
 	int server_cpu = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8013");
 	log_info(logger, "CPU lista como servidor");
+	
 	while (1) {
 		int cliente_fd = esperar_clientes(logger, "CPU", server_cpu);
 		int cod_op = recibir_header(cliente_fd);

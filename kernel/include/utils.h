@@ -36,7 +36,7 @@ char* puerto_memoria;
 
 void iterator(char* value);
 
-void* procesar_conexion(void* void_args);
+void procesar_conexion(void* void_args);
 
 void recibir_mensaje(int);
 

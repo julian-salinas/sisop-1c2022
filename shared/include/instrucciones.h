@@ -91,7 +91,7 @@
      * @param buffer: buffer donde se agregará la instrucción
      * @param instrucción: instrucción a agregar
      */ 
-    void agregar_instruccion_a_buffer(t_buffer* buffer, t_instruccion* instruccion);
+    void agregar_a_buffer_INSTRUCCION(t_buffer* buffer, t_instruccion* instruccion);
 
 
     /**
@@ -101,6 +101,12 @@
      */
     void enviar_lista_instrucciones(int socket, t_lista_instrucciones* lista_instrucciones); 
 
+
+    /**
+     * @DESC: Toma una lista de instrucciones del buffer
+     * @param buffer: buffer de donde se tomará la lista de instrucciones
+     */ 
+    t_instruccion* buffer_take_INSTRUCCION(t_buffer* buffer);
 
     
 #endif /* INSTRUCCIONES_H */

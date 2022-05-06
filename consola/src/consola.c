@@ -26,8 +26,8 @@ int main(int argc, const char *argv[]) {
 	Voy a crear una instrucción de ejemplo para mandarla a kernel 
 	------------------------------------------------------------ */
 	// Armo una lista de instrucciones random
+	t_instruccion* instruccion_ejemplo = crear_instruccion(EXIT);
 	t_lista_instrucciones* lista_instrucciones_ejemplo = crear_lista_instrucciones();
-	t_instruccion* instruccion_ejemplo = crear_instruccion(COPY);
 
 	agregar_parametro_a_instruccion(instruccion_ejemplo, 4);
 	agregar_parametro_a_instruccion(instruccion_ejemplo, 8);
@@ -37,7 +37,6 @@ int main(int argc, const char *argv[]) {
  	enviar_lista_instrucciones(conexion_kernel, lista_instrucciones_ejemplo);
 
 	destruir_lista_instrucciones(lista_instrucciones_ejemplo);
-	destruir_instruccion(instruccion_ejemplo);
 	/*------------------------------------------------------------ */
 
 	terminar_programa(conexion_kernel, logger, config);

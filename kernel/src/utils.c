@@ -5,48 +5,42 @@ void iterator(char* value) {
 }
 
 
-void* procesar_conexion(void* void_args) {
+void procesar_conexion(void* void_args) {
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* logger = args->log;
     int socket_cliente = args->fd;
     char* nombre_servidor = args->server_name;
-    
-    // free(args);
+    free(args);
 
-    codigo_operacion op_code;
+    int header;
 
     while (socket_cliente != -1) {
-        t_paquete* paquete;
-        op_code = recibir_header(socket_cliente);
 
-        if (!op_code) {
-            return;
-        }
+        header = recibir_header(socket_cliente);
 
-        switch (op_code) {
-            case PAQUETE:
-                log_info(logger, "RECIBIMOS CODIGO PAQUETE");
-                paquete = recibir_paquete(socket_cliente, op_code);
+        switch (header) {
 
-                // Acá se lee el valor q mandó consola, esto es un ejemplo
-                // char* valor_prueba = buffer_take_STRING(paquete -> payload);
-                break;
-            
             case INSTRUCCIONES:
                 log_info(logger, "Se recibieron instrucciones");
-                paquete = recibir_paquete(socket_cliente, op_code);
-                break;
+                t_paquete* paquete = recibir_paquete(socket_cliente, header);
+                t_lista_instrucciones* instrucciones = buffer_take_LIST(paquete -> payload, (void*)*buffer_take_INSTRUCCION);
+                
+                // Esto lo dejo aca para poder observar un poquito si recibimos algo coherente
+                t_instruccion* instruccion = list_get(instrucciones, 0);
+
+                break;  
 
             case -1:
                 log_error(logger, "Cliente desconectado de %s...", nombre_servidor);
                 return;
 
             default:
-                log_error(logger, "Algo anduvo mal en el server de %s", op_code);
-                log_info(logger, "Cop: %d", op_code);
+                log_error(logger, "Algo anduvo mal en el server de %s", nombre_servidor);
+                log_info(logger, "Cop: %d", header);
                 return;
         }
     }
+
     log_warning(logger, "El cliente se desconecto de %s server", nombre_servidor);
     return;
 }

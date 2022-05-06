@@ -28,6 +28,12 @@ t_lista_instrucciones* crear_lista_instrucciones(void) {
 
 
 void destruir_lista_instrucciones(t_lista_instrucciones *lista_instrucciones) {
+    uint32_t tamanio_lista = list_size(lista_instrucciones);
+
+    for (uint32_t i = 0; i < tamanio_lista; i++) {
+        destruir_instruccion(list_get(lista_instrucciones, 0));
+    }
+    
     list_destroy(lista_instrucciones);
 }
 
@@ -37,14 +43,32 @@ void agregar_instruccion_a_lista(t_lista_instrucciones* lista_instrucciones, t_i
 }
 
 
-void agregar_instruccion_a_buffer(t_buffer* buffer, t_instruccion* instruccion) {
+void agregar_a_buffer_INSTRUCCION(t_buffer* buffer, t_instruccion* instruccion) {
     agregar_a_buffer_UINT8(buffer, instruccion -> identificador);
     agregar_a_buffer_LIST(buffer, instruccion -> parametros, (void*) agregar_a_buffer_INT32);
 }
 
+
 void enviar_lista_instrucciones(int socket, t_lista_instrucciones* lista_instrucciones) {
-    t_paquete* paquete = crear_paquete(INSTRUCCIONES, sizeof(t_list) * list_size(lista_instrucciones));
-    agregar_a_buffer_LIST(paquete -> payload, lista_instrucciones, (void*) agregar_instruccion_a_buffer);
+    t_paquete* paquete = crear_paquete(INSTRUCCIONES, sizeof(t_list));
+    agregar_a_buffer_LIST(paquete -> payload, lista_instrucciones, (void*) agregar_a_buffer_INSTRUCCION);
     enviar_paquete(socket, paquete);
     destruir_paquete(paquete);
+}
+
+
+t_instruccion* buffer_take_INSTRUCCION(t_buffer* buffer) {
+    t_instruccion* tmp = malloc(sizeof(t_instruccion));
+
+    uint8_t identificador;
+    identificador = buffer_take_UINT8(buffer);
+
+    t_list* parametros = malloc(sizeof(t_list));
+    parametros = buffer_take_LIST(buffer, (void*) buffer_take_UINT32);
+
+    tmp -> identificador = identificador;
+    tmp -> parametros = malloc(sizeof(t_list));
+    tmp -> parametros = parametros;
+
+    return tmp;
 }

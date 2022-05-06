@@ -88,23 +88,6 @@
 
 
     /**
-     * @DESC: Agregar una cadena al buffer de un paquete
-     * @param paquete: puntero a t_paquete donde se agregará el valor
-     * @param valor_a_agregar: valor que se agregará al buffer del paquete
-     * @param tamanio: tamanio del valor a agregar
-     */
-    void agregar_a_paquete(t_paquete* paquete, void* valor_a_agregar, size_t tamanio);
-
-
-    /**
-     * @DESC: Serializar un paquete, esa funcion es usada por enviar_paquete
-     * @param paquete: puntero a t_paquete, se va a serializar su contenido
-     * @param bytes: tamanio del paquete a serializar
-     */ 
-    void* serializar_paquete(t_paquete* paquete, size_t bytes);
-
-
-    /**
      * @DESC: Agregar un int de 32 bytes al buffer
      * @param buffer: buffer al cual se va a agregar el valor
      * @param value: valor a agregar
@@ -160,7 +143,7 @@
 
     /**
      * @DESC: Obtener un int de 32 bytes del buffer
-     * @param buffer: buffer al cual se va a obtener el valor
+     * @param buffer: buffer del cual se va a obtener el valor
      * @return: int de 32 bytes
      */
     int32_t buffer_take_INT32(t_buffer* buffer);
@@ -168,7 +151,7 @@
 
     /**
      * @DESC: Obtener un unsigned int de 32 bytes del buffer
-     * @param buffer: buffer al cual se va a obtener el valor
+     * @param buffer: buffer del cual se va a obtener el valor
      * @return: unsigned int de 32 bytes
      */
     uint32_t buffer_take_UINT32(t_buffer* buffer);
@@ -176,7 +159,7 @@
 
     /**
      * @DESC: Obtener un unsigned int de 8 bytes del buffer
-     * @param buffer: buffer al cual se va a obtener el valor
+     * @param buffer: buffer del cual se va a obtener el valor
      * @return: int de 8 bytes
      */
     uint8_t buffer_take_UINT8(t_buffer* buffer);
@@ -184,11 +167,20 @@
 
     /**
      * @DESC: Obtener un string del buffer
-     * @param buffer: buffer al cual se va a obtener el valor
+     * @param buffer: buffer del cual se va a obtener el valor
      * @return: puntero a char con string
      */
     char* buffer_take_STRING(t_buffer* buffer);
 
+
+    /**
+     * @DESC: Obtener una lista del buffer
+     * @param buffer: buffer de donde se obtiene el valor
+     * @param buffer_take_tipo: función que se va a usar para sacar los valores de la lista
+     *                          del buffer
+     */ 
+    t_list* buffer_take_LIST(t_buffer* buffer, void*(*buffer_take_TIPO)(t_buffer*));
+    
 
     /*
     -------------------- Comunicación entre cpu y memoria ------------------------------------
