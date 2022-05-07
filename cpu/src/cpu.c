@@ -2,25 +2,43 @@
 
 int main(void) {
 
-	int conexion_memoria;
-	char* ip_memoria;
-	char* puerto_memoria;
-
-	t_log* logger;
-	t_config* config;
-
 	logger = iniciar_logger("cfg/cpu.log", "CPU");
 	log_info(logger,"Modulo CPU iniciado");
 
 	config = iniciar_config("cfg/cpu.config");
 	
 	// obtener valores ip y puerto del archivo cpu.config
-	ip_memoria = config_get_string_value(config, "IP_MEMORIA");
-	puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
-	conexion_memoria = crear_socket_cliente(ip_memoria, puerto_memoria);
-	enviar_config(config, conexion_memoria);
+	obtener_config_memoria();	
+
+	//iniciar servidor cpu
+	int server_cpu = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8013");
+	log_info(logger, "CPU lista como servidor");
+	
+	while (1) {
+		int cliente_fd = esperar_clientes(logger, "CPU", server_cpu);
+		int cod_op = recibir_header(cliente_fd);
+		switch (cod_op) {
+		case CONEXION_CPU_MEMORIA:
+			//recibe cantidad de entradas por tabla de páginas y tamaño de página;
+			//recibir_config_memoria
+			log_info(logger, "Llegó configuración de memoria ok.\n");	
+			break;
+		case PAQUETE:
+			//lista = recibir_paquete(cliente_fd);
+			log_info(logger, "Me llegaron los siguientes valores:\n");
+			//list_iterate(lista, (void*) iterator);
+			break;
+		case -1:
+			log_error(logger, "el cliente se desconecto. Terminando servidor");
+			return EXIT_FAILURE;
+		default:
+			log_warning(logger,"Operacion desconocida. No quieras meter la pata");
+			break;
+		}
+	}
+
 	terminar_programa(conexion_memoria, logger, config);
-}
+} //end main
 
 
 void terminar_programa(int conexion, t_log* logger, t_config* config) {
@@ -29,21 +47,24 @@ void terminar_programa(int conexion, t_log* logger, t_config* config) {
 	config_destroy(config);
 }
 
+void obtener_config_memoria(){
+	ip_memoria = config_get_string_value(config, "IP_MEMORIA");
+	puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
+	conexion_memoria = crear_socket_cliente(ip_memoria, puerto_memoria);
+	log_info(logger, "Socket cliente creado.");
+	t_paquete* req_config_memoria=ini_conexion_cpu_memoria();
+	request_config_memoria(req_config_memoria,conexion_memoria);
+	liberar_socket_cliente(conexion_memoria);
+	log_info(logger, "Request config memoria enviada.");
 
-////////// funcion de prueba para testear el envío de paquetes /////////////////////
-void enviar_config(t_config* config, int socket_cliente) {
-	// leo algunos valores para mandarlos
-	char* valor_tlb = config_get_string_value(config, "REEMPLAZO_TLB");
-	char* valor_noop = config_get_string_value(config, "RETARDO_NOOP");
+}
 
-	// primero, crear un paquete vacío
-	t_paquete* paquete = crear_paquete(CONFIGS, TAMANIO_DEFAULT_BUFFER);
-	agregar_a_paquete(paquete, valor_tlb, (strlen(valor_tlb) + 1) * sizeof(char));
-	agregar_a_paquete(paquete, valor_noop, (strlen(valor_noop) + 1) * sizeof(char));
+t_paquete* ini_conexion_cpu_memoria(){
+	t_paquete* tmp = crear_paquete(CONEXION_CPU_MEMORIA, sizeof(uint8_t)*2);
+	return tmp;
+}
 
-	enviar_paquete(paquete, socket_cliente);
-
+void request_config_memoria(t_paquete* paquete, int socket_cliente) {
+	enviar_paquete(conexion_memoria,paquete);
 	destruir_paquete(paquete);
-	free(valor_tlb);
-	free(valor_noop);
 }

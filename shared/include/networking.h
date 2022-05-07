@@ -72,7 +72,7 @@
      * @param func_procesar_conexion: función propia de cada modulo, que contiene el switch con 
      *                                codigos de operacion y toda la bola
      */ 
-    int server_escuchar(t_log* logger, char* server_name, int server_socket, void* func_procesar_conexion);
+    int server_escuchar(t_log* logger, char* server_name, int server_socket, void(*func_procesar_conexion)(void));
 
 
     /**
@@ -90,59 +90,56 @@
      */ 
     int esperar_cliente(int socket_servidor);
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-    int send_all(int socket, void *buffer, size_t size);
-    int recv_all(int socket, void *destino, size_t size);
+
+    /**
+     * @DESC: Enviar los datos al server
+     * @param socket: socket con datos a enviar
+     * @param source: puntero a los datos enviados
+     * @param size: tamaño de los datos enviados
+     */
     void socket_send(int socket, void* source, size_t size);
+
+
+    /**
+     * @DESC: Enviar código de operación
+     * @param socket: socket con la info a enviar
+     * @param header: codigo_operacion para realizar handshake
+     */ 
     void enviar_header(int socket, uint8_t header);
-    void enviar_paquete(int socket, t_paquete* paquete);
+    
+    
+    /**
+     * @DESC: Obtener los valores que contiene un socket
+     * @param socket: socket que contiene la info
+     * @param dest: puntero donde se guardaran los datos
+     * @param size: tamaño de los datos que se van a leer
+     * @return: return false si hubo un error en la recepción de los datos
+     */ 
     bool socket_get(int socket, void* dest, size_t size);
+
+
+    /**
+     * @DESC: Obtener header del socket (codigo de operacion)
+     * @param socket: socket que contiene el request
+     * @return: devuelve el código leído
+     */ 
     uint8_t recibir_header(int socket);
+    
+    
+    /**
+     * @DESC: Recibir un paquete
+     * @param socket: socket que contiene el paquete
+     * @param header: header QUE YA SE LEYÓ (habría q mejorar esto)
+     */ 
     t_paquete* recibir_paquete(int socket, uint8_t header);
 
 
     /**
      * @DESC: Enviar un paquete al server
+     * @param socket_cliente: socket que será el emisor el paquete
      * @param paquete: puntero a t_paquete que contiene lo que vamos a enviar, en su 
      *                 header contiene el codigo de operacion (uint*_t) y en el payload el buffer
-     * @param socket_cliente: socket que será el emisor el paquete
      */
-    // void enviar_paquete(t_paquete* paquete, int socket_cliente);
-
-
-    /**
-     * @DESC: Recibe el código de operacion, esta funcion probablemente la implementemos para hacer 
-     *        el handshake
-     * @param socket_cliente: socket del que vamos a extraer codigo de operacion para aceptar o rechazar luego
-     */
-    // int recibir_operacion(int socket_cliente); 
-
-
-    /**
-     * @DESC: Recibe el buffer del socket cliente
-     * @param socket_cliente: socket que nos va a enviar el buffer
-     * @param tamanio_buffer: tamanio del buffer
-     */
-    // void* recibir_buffer(int socket_cliente, size_t* tamanio_buffer); 
-
-
-    /**
-     * @DESC: Devuelve una lista con todos los valores que llegaron en el paquete enviado, proceso de deserialización
-     * @param socket_cliente: socket que nos envía el paquete
-     */
-    // t_list* recibir_paquete(int socket_cliente); 
-
-    /*
-    -------------------- Comunicación entre consola y kernel ------------------------------------
-    */
-    
-    /**
-     * @DESC: Enviar lista de instrucciones (Consola → Kernel)
-     * @param lista_instrucciones: lista que se va a enviar
-     * @param socket_cliente: socket que conectado a kernel
-     */
-    void enviar_lista_instrucciones(t_lista_instrucciones* lista_instrucciones, int socket_cliente); 
-
-    
+    void enviar_paquete(int socket_cliente, t_paquete* paquete);    
 
 #endif /* NETWORKING_H */

@@ -10,7 +10,8 @@
         CONFIGS,
         MENSAJE,
         PAQUETE,
-        INSTRUCCIONES
+        INSTRUCCIONES,
+        CONEXION_CPU_MEMORIA
     } codigo_operacion;
 
 #endif /* ENUM_H */

@@ -10,7 +10,10 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/consola",
-            "args": [],
+            "args": [
+                "argc",
+                "argv"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

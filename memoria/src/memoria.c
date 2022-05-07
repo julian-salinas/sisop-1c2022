@@ -5,7 +5,7 @@ int main(void) {
 	//ini config
 	ini_config();
 
-	//ini proceso -> creación estructuras necesarias
+	//ini estructuras
 
 	//suspension proceso ->liberar espacio de memoria escribiendo en SWAP
 
@@ -20,47 +20,48 @@ int main(void) {
 	logger = iniciar_logger("cfg/memoria.log", "memoria");
 	log_info(logger, IP_MEMORIA);
 	log_info(logger, PUERTO_MEMORIA);
-	int server_fd = crear_socket_servidor(IP_MEMORIA, PUERTO_MEMORIA);
+	int server_memoria = iniciar_servidor(logger,"Memoria",IP_MEMORIA, PUERTO_MEMORIA);
 	log_info(logger, "Memoria lista para recibir al cliente");
-	int cliente_fd = esperar_cliente(server_fd);
-	log_info(logger, "Se conecto un cliente!");
-	t_list* lista;
 
 	while (1) {
-		int cod_op = recibir_operacion(cliente_fd);
-		//log_info(logger, "Recibí un código de operación.");
-		// t_paquete* paquete = malloc(sizeof(t_paquete));
-		// paquete->payload = malloc(sizeof(t_buffer));	
-		// Primero recibimos el codigo de operacion
-		// recv(cliente_fd, &(paquete->header), sizeof(uint8_t), 0);		
-		//int cod_op = paquete->header;
-		log_info(logger, cod_op);
+		int cliente_fd = esperar_clientes(logger, "Memoria", server_memoria);
+		int cod_op = recibir_header(cliente_fd);
+
 		switch (cod_op) {
-		case CONFIGS:
-			lista = recibir_paquete(cliente_fd);
-			log_info(logger, "Me llegaron los siguientes valores:\n");
-			list_iterate(lista, (void*) iterator);
-			break;
-		case PAQUETE:
-			lista = recibir_paquete(cliente_fd);
-			log_info(logger, "Me llegaron los siguientes valores:\n");
-			list_iterate(lista, (void*) iterator);
-			break;
-		case -1:
-			log_error(logger, "el cliente se desconecto. Terminando servidor");
-			return EXIT_FAILURE;
-		default:
-			log_warning(logger,"Operacion desconocida. No quieras meter la pata");
-			break;
+			case CONEXION_CPU_MEMORIA:
+				//enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
+				conexion_cpu = crear_socket_cliente(IP_MEMORIA, "8013");
+				log_info(logger, "Socket cliente memoria-cpu creado.");
+				enviar_config_a_cpu(conexion_cpu);	
+				break;
+			
+			case -1:
+				log_error(logger, "el cliente se desconecto. Terminando servidor");
+				return EXIT_FAILURE;
+			
+			default:
+				log_warning(logger,"Operacion desconocida. No quieras meter la pata");
+				break;
 		}
 	}
 
-	//liberar memoria
-	config_destroy(config_memoria);
+	//terminar_programa
+	terminar_programa();
 	return EXIT_SUCCESS;
 }
 
-void iterator(char* value) {
-	log_info(logger,"%s", value);
+void terminar_programa(){
+		liberar_socket_cliente(conexion_cpu);
+		log_destroy(logger);
+		config_destroy(config_memoria);
 }
 
+void enviar_config_a_cpu(int socket_cliente){
+
+	t_paquete* paquete = serializar_config_cpu_memoria(config_data.paginas_por_tabla, config_data.tam_pagina);
+	log_info(logger, "Serializo ok.");	
+	enviar_paquete(socket_cliente,paquete);
+	destruir_paquete(paquete);
+	log_info(logger, "Config enviado.");
+
+}

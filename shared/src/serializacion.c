@@ -49,10 +49,6 @@ void destruir_paquete(t_paquete* paquete) {
 }
 
 
-void agregar_a_paquete(t_paquete* paquete, void* valor_a_agregar, size_t tamanio) {
-    agregar_a_buffer(paquete -> payload, valor_a_agregar, tamanio);
-}
-
 //------------- Agregar distintos Tipos de datos a un Paquete -------------//
 
 /* -------------------------- int 32 bytes -------------------------- */
@@ -72,7 +68,7 @@ void agregar_a_buffer_UINT32(t_buffer* buffer, uint32_t valor){
 /* ---------------------- unsigned int 8 bytes ---------------------- */
 
 void agregar_a_buffer_UINT8(t_buffer* buffer, uint8_t valor){
-    agregar_a_buffer(buffer, (void*) valor, sizeof(uint8_t));
+    agregar_a_buffer(buffer, (void*) &valor, sizeof(uint8_t));
 }
 
 
@@ -84,6 +80,21 @@ void agregar_a_buffer_STRING(t_buffer* buffer, char* valor){
     agregar_a_buffer(buffer, (void*) valor, tamanio);
 }
 
+
+/* -------------------------- lista -------------------------- */
+
+void agregar_a_buffer_LIST(t_buffer* buffer, t_list* lista, void(*agregar_a_buffer_TIPO)(t_buffer*, void*)){
+    void _magia_negra(void* elem) {
+        agregar_a_buffer_TIPO(buffer, elem);
+    };
+
+    uint32_t tamanioLista = lista -> elements_count;
+    agregar_a_buffer_UINT32(buffer, tamanioLista);
+    list_iterate(lista, _magia_negra);
+}
+
+
+// ------------------------- Tomar valores del buffer ------------------------- //
 
 // ------------------------- Tomar valores del buffer ------------------------- //
 
@@ -125,11 +136,6 @@ uint8_t buffer_take_UINT8(t_buffer* buffer){
 
 /* ------------------------- strings ------------------------- */
 
-void buffer_take_STRING_P(t_buffer* buffer, void** dest){
-    uint32_t tamanio = buffer_take_UINT32(buffer);
-    buffer_take(buffer, dest, tamanio);
-}
-
 char* buffer_take_STRING(t_buffer* buffer){
     char* tmp = NULL;
     uint32_t tamanio = buffer_take_UINT32(buffer);
@@ -137,44 +143,34 @@ char* buffer_take_STRING(t_buffer* buffer){
     return tmp;
 }
 
+
+/* ------------------------- lista ------------------------- */
+
+t_list* buffer_take_LIST(t_buffer* buffer, void*(*buffer_take_TIPO)(t_buffer*)) {
+    t_list* tmp = list_create();
+    uint32_t tamanio_lista = buffer_take_UINT32(buffer);
+
+    for (uint32_t i = 0; i < tamanio_lista; i++) {
+        void* elem = buffer_take_TIPO(buffer);
+        list_add(tmp, elem);
+    }
+
+    return tmp;
+}
+
+
 /*
--------------------- Comunicación entre consola y kernel ------------------------------------
+-------------------- Comunicación entre cpu y memoria ------------------------------------
 */
 
-t_instruccion* crear_instruccion(t_identificador identificador) {
-    t_instruccion* tmp = malloc(sizeof(t_instruccion));
-    
-    tmp -> identificador = identificador;
-    tmp -> parametros = list_create();
-    
-    return tmp;
+t_paquete* serializar_config_cpu_memoria(uint8_t paginas_por_tabla, uint8_t tam_pagina) {
+    t_paquete* paquete= crear_paquete(CONEXION_CPU_MEMORIA, sizeof(uint8_t)*2);
+    agregar_a_buffer_UINT8(paquete->payload, paginas_por_tabla);
+    agregar_a_buffer_UINT8(paquete->payload, tam_pagina);
+    return paquete;
 }
 
-
-void destruir_instruccion(t_instruccion* instruccion) {
-    list_destroy(instruccion -> parametros);
-    free(instruccion);
-}
-
-
-void agregar_parametro_a_instruccion(t_instruccion* instruccion, int parametro) {
-    list_add(instruccion -> parametros, (void*) parametro);
-}
-
-
-t_lista_instrucciones* crear_lista_instrucciones(void) {
-    t_lista_instrucciones* tmp = malloc(sizeof(t_lista_instrucciones));
-    tmp -> instrucciones = list_create();
-    return tmp;
-}
-
-
-void destruir_lista_instrucciones(t_lista_instrucciones *lista_instrucciones) {
-    list_destroy(lista_instrucciones -> instrucciones);
-    free(lista_instrucciones);
-}
-
-
-void agregar_instruccion_a_lista(t_lista_instrucciones* lista_instrucciones, t_instruccion* instruccion) {
-    list_add(lista_instrucciones -> instrucciones, instruccion);
+void deserializar_config_cpu_memoria(void* stream, uint8_t* paginas_por_tabla, uint8_t* tam_pagina) {
+    memcpy(paginas_por_tabla, stream, sizeof(uint8_t));
+    memcpy(tam_pagina, stream+sizeof(uint8_t), sizeof(uint8_t));
 }

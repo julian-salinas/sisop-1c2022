@@ -108,7 +108,7 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
 }
 
 
-int server_escuchar(t_log* logger, char* server_name, int server_socket, void* func_procesar_conexion) {
+int server_escuchar(t_log* logger, char* server_name, int server_socket, void(*func_procesar_conexion)(void)) {
     int cliente_socket = esperar_clientes(logger, server_name, server_socket);
 
     if (cliente_socket != -1) {
@@ -117,10 +117,11 @@ int server_escuchar(t_log* logger, char* server_name, int server_socket, void* f
         args->log = logger;
         args->fd = cliente_socket;
         args->server_name = server_name;
-        pthread_create(&hilo, NULL, func_procesar_conexion, (void*) args);
+        pthread_create(&hilo, NULL, (void*) func_procesar_conexion, (void*) args);
         pthread_detach(hilo);
         return 1;
     }
+    
     return 0;
 }
 
@@ -136,7 +137,7 @@ int esperar_clientes(t_log* logger, const char* name, int socket_servidor) {
     return socket_cliente;
 }
 
-/*-------------------------------- Envío de paquetes --------------------------------------*/
+
 int send_all(int socket, void *buffer, size_t size){
     while (size > 0){
         int i = send(socket, buffer, size, 0);
