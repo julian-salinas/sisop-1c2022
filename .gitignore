@@ -54,3 +54,4 @@ dkms.conf
 *.code-workspace
 help.md
 
+**/.vscode
