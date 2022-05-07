@@ -17,6 +17,7 @@
     #include<commons/config.h>
     #include<commons/txt.h>
     #include "utils.h"
+    #include "consola_config.h"
 
     // Include de las shared
     #include "networking.h"
@@ -26,7 +27,7 @@
 
     #define CONFIG_PATH "/home/utnso/tp2022/tp-2022-1c-Grupo-Final-Final/consola/consola.config"
 
-    void terminar_programa(int, t_log*, t_config*);
+    void terminar_programa(int, t_log*, t_consola_config*);
 
     /*
      * @DESC: Mapea un string contra su enum correspondiente

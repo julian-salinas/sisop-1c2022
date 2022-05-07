@@ -53,3 +53,146 @@
 
 [INFO] 23:00:57:942 kernel/(17142:17192): Se recibieron instrucciones
 [WARNING] 23:00:57:942 kernel/(17142:17192): El cliente se desconecto de server Kernel
+[INFO] 00:42:14:576 kernel/(22988:22988): Kernel iniciado
+[INFO] 00:42:14:578 kernel/(22988:22988): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:42:14:579 kernel/(22988:22988): Kernel lista para recibir al cliente
+[INFO] 00:42:17:872 kernel/(22988:22988): Cliente conectado (a Kernel)
+
+[INFO] 00:42:17:878 kernel/(22988:22991): Se recibieron instrucciones
+[WARNING] 00:42:17:879 kernel/(22988:22991): El cliente se desconecto de server Kernel
+[INFO] 00:42:49:133 kernel/(22988:22988): Cliente conectado (a Kernel)
+
+[INFO] 00:42:49:139 kernel/(22988:23017): Se recibieron instrucciones
+[WARNING] 00:42:49:139 kernel/(22988:23017): El cliente se desconecto de server Kernel
+[INFO] 00:43:11:031 kernel/(23096:23096): Kernel iniciado
+[INFO] 00:43:11:035 kernel/(23096:23096): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:43:11:035 kernel/(23096:23096): Kernel lista para recibir al cliente
+[INFO] 00:43:16:645 kernel/(23096:23096): Cliente conectado (a Kernel)
+
+[INFO] 00:43:16:655 kernel/(23096:23110): Se recibieron instrucciones
+[WARNING] 00:43:16:655 kernel/(23096:23110): El cliente se desconecto de server Kernel
+[INFO] 00:43:45:502 kernel/(23228:23228): Kernel iniciado
+[INFO] 00:43:45:502 kernel/(23228:23228): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:43:45:503 kernel/(23228:23228): Kernel lista para recibir al cliente
+[INFO] 00:43:50:127 kernel/(23228:23228): Cliente conectado (a Kernel)
+
+[INFO] 00:43:52:873 kernel/(23228:23244): Se recibieron instrucciones
+[INFO] 00:44:48:740 kernel/(23375:23375): Kernel iniciado
+[INFO] 00:44:48:740 kernel/(23375:23375): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:44:48:740 kernel/(23375:23375): Kernel lista para recibir al cliente
+[INFO] 00:44:56:719 kernel/(23375:23375): Cliente conectado (a Kernel)
+
+[INFO] 00:44:58:659 kernel/(23375:23394): Se recibieron instrucciones
+[INFO] 00:50:33:707 kernel/(23669:23669): Kernel iniciado
+[INFO] 00:50:33:713 kernel/(23669:23669): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 00:50:33:717 kernel/(23669:23669): Kernel lista para recibir al cliente
+[INFO] 00:50:37:864 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[INFO] 00:50:37:874 kernel/(23669:23685): Se recibieron instrucciones
+[WARNING] 00:50:37:875 kernel/(23669:23685): El cliente se desconecto de server Kernel
+[INFO] 00:50:38:815 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[INFO] 00:50:38:820 kernel/(23669:23688): Se recibieron instrucciones
+[WARNING] 00:50:38:820 kernel/(23669:23688): El cliente se desconecto de server Kernel
+[INFO] 00:50:39:470 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[INFO] 00:50:39:475 kernel/(23669:23692): Se recibieron instrucciones
+[WARNING] 00:50:39:476 kernel/(23669:23692): El cliente se desconecto de server Kernel
+[INFO] 00:51:24:691 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[INFO] 00:51:24:701 kernel/(23669:23714): Se recibieron instrucciones
+[WARNING] 00:51:24:701 kernel/(23669:23714): El cliente se desconecto de server Kernel
+[INFO] 00:54:07:746 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[ERROR] 00:54:07:984 kernel/(23669:23784): Algo anduvo mal en el server de Kernel
+[INFO] 00:54:07:984 kernel/(23669:23784): Cop: 183
+[INFO] 00:54:28:993 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[INFO] 00:54:29:000 kernel/(23669:23809): Se recibieron instrucciones
+[WARNING] 00:54:29:000 kernel/(23669:23809): El cliente se desconecto de server Kernel
+[INFO] 00:54:44:469 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[ERROR] 00:54:44:804 kernel/(23669:23830): Algo anduvo mal en el server de Kernel
+[INFO] 00:54:44:804 kernel/(23669:23830): Cop: 183
+[INFO] 00:54:54:002 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[INFO] 00:54:54:013 kernel/(23669:23851): Se recibieron instrucciones
+[WARNING] 00:54:54:013 kernel/(23669:23851): El cliente se desconecto de server Kernel
+[INFO] 01:02:31:810 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[ERROR] 01:02:32:110 kernel/(23669:23929): Algo anduvo mal en el server de Kernel
+[INFO] 01:02:32:110 kernel/(23669:23929): Cop: 183
+[INFO] 01:02:41:834 kernel/(23669:23669): Cliente conectado (a Kernel)
+
+[ERROR] 01:02:42:142 kernel/(23669:23951): Algo anduvo mal en el server de Kernel
+[INFO] 01:02:42:142 kernel/(23669:23951): Cop: 183
+[INFO] 01:04:04:042 kernel/(24025:24025): Kernel iniciado
+[INFO] 01:04:04:045 kernel/(24025:24025): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 01:04:04:045 kernel/(24025:24025): Kernel lista para recibir al cliente
+[INFO] 01:04:08:589 kernel/(24025:24025): Cliente conectado (a Kernel)
+
+[INFO] 01:04:08:595 kernel/(24025:24042): Se recibieron instrucciones
+[INFO] 01:04:08:596 kernel/(24025:24042): Se recibio instruccion (null)
+[WARNING] 01:04:08:598 kernel/(24025:24042): El cliente se desconecto de server Kernel
+[INFO] 01:04:43:221 kernel/(24025:24025): Cliente conectado (a Kernel)
+
+[ERROR] 01:06:25:655 kernel/(24025:24139): Algo anduvo mal en el server de Kernel
+[INFO] 01:06:25:656 kernel/(24025:24139): Cop: 183
+[INFO] 01:55:45:920 kernel/(27974:27974): Kernel iniciado
+[INFO] 01:56:14:123 kernel/(28011:28011): Kernel iniciado
+[INFO] 01:57:05:870 kernel/(28262:28262): Kernel iniciado
+[INFO] 01:59:21:164 kernel/(28423:28423): Kernel iniciado
+[INFO] 02:02:29:074 kernel/(28556:28556): Kernel iniciado
+[INFO] 02:04:40:598 kernel/(28780:28780): Kernel iniciado
+[INFO] 02:04:45:692 kernel/(28780:28780): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:04:45:692 kernel/(28780:28780): Kernel lista para recibir al cliente
+[INFO] 02:06:17:675 kernel/(28983:28983): Kernel iniciado
+[INFO] 02:06:17:676 kernel/(28983:28983): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:06:17:676 kernel/(28983:28983): Kernel lista para recibir al cliente
+[INFO] 02:06:25:493 kernel/(28983:28983): Cliente conectado (a Kernel)
+
+[ERROR] 02:06:25:524 kernel/(28983:29017): Algo anduvo mal en el server de Kernel
+[INFO] 02:06:25:524 kernel/(28983:29017): Cop: 183
+[INFO] 02:06:35:458 kernel/(28983:28983): Cliente conectado (a Kernel)
+
+[ERROR] 02:06:35:729 kernel/(28983:29023): Algo anduvo mal en el server de Kernel
+[INFO] 02:06:35:729 kernel/(28983:29023): Cop: 183
+[INFO] 02:07:27:871 kernel/(29138:29138): Kernel iniciado
+[INFO] 02:07:27:872 kernel/(29138:29138): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:07:27:872 kernel/(29138:29138): Kernel lista para recibir al cliente
+[INFO] 02:10:58:329 kernel/(29705:29705): Kernel iniciado
+[INFO] 02:10:58:333 kernel/(29705:29705): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:10:58:333 kernel/(29705:29705): Kernel lista para recibir al cliente
+[INFO] 02:11:00:764 kernel/(29705:29705): Cliente conectado (a Kernel)
+
+[INFO] 02:11:00:793 kernel/(29705:29708): Se recibieron instrucciones
+[WARNING] 02:11:00:796 kernel/(29705:29708): El cliente se desconecto de server Kernel
+[INFO] 02:11:41:032 kernel/(29810:29810): Kernel iniciado
+[INFO] 02:11:41:032 kernel/(29810:29810): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:11:41:032 kernel/(29810:29810): Kernel lista para recibir al cliente
+[INFO] 02:11:46:029 kernel/(29810:29810): Cliente conectado (a Kernel)
+
+[INFO] 02:11:49:324 kernel/(29810:29818): Se recibieron instrucciones
+[INFO] 02:35:55:820 kernel/(31110:31110): Kernel iniciado
+[INFO] 02:35:55:821 kernel/(31110:31110): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:35:55:821 kernel/(31110:31110): Kernel lista para recibir al cliente
+[INFO] 02:36:32:925 kernel/(31243:31243): Kernel iniciado
+[INFO] 02:36:32:925 kernel/(31243:31243): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 02:36:32:929 kernel/(31243:31243): Kernel lista para recibir al cliente
+[INFO] 02:36:40:439 kernel/(31243:31243): Cliente conectado (a Kernel)
+
+[INFO] 02:36:43:435 kernel/(31243:31255): Se recibieron instrucciones
+[WARNING] 02:36:58:684 kernel/(31243:31255): El cliente se desconecto de server Kernel

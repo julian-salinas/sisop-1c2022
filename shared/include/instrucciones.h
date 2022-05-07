@@ -24,7 +24,7 @@
 
     /**
      * @DESC: Contenido de una instruccion
-     *        = identificador único
+     *        - identificador único
      *        - Puede tener 0, 1 o 2 parámetros
      */ 
     typedef struct {
@@ -38,6 +38,16 @@
      *        para ganar expresividad
      */  
     typedef t_list t_lista_instrucciones;
+
+
+    /**
+     * @DESC: Estructura que contiene un proceso, con tamanio (ingresado desde la consola) y lista de
+     *        instrucciones (pseudocódigo parseado)
+     */ 
+    typedef struct {
+        size_t tamanio;
+        t_lista_instrucciones* lista_instrucciones;
+    } t_proceso;
 
 
     /**
@@ -102,11 +112,22 @@
     void enviar_lista_instrucciones(int socket, t_lista_instrucciones* lista_instrucciones); 
 
 
+    t_proceso* crear_proceso(size_t tamanio, t_lista_instrucciones* lista_instrucciones);
+
+
+    void destruir_proceso(t_proceso* proceso);
+
+
+    void enviar_proceso(int socket, t_proceso* proceso);
+
     /**
      * @DESC: Toma una lista de instrucciones del buffer
      * @param buffer: buffer de donde se tomará la lista de instrucciones
      */ 
     t_instruccion* buffer_take_INSTRUCCION(t_buffer* buffer);
+
+
+    t_proceso* buffer_take_PROCESO(t_buffer* buffer);
 
     
 #endif /* INSTRUCCIONES_H */

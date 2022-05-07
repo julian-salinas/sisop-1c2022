@@ -16,13 +16,11 @@ void procesar_conexion(void* void_args) {
         case INSTRUCCIONES:
             log_info(logger, "Se recibieron instrucciones");
             t_paquete* paquete = recibir_paquete(socket_cliente, header);
-            t_lista_instrucciones* instrucciones = buffer_take_LIST(paquete -> payload, (void*)*buffer_take_INSTRUCCION);
-                
-            // Esto lo dejo aca para poder observar un poquito si recibimos algo coherente
-            t_instruccion* instruccion = list_get(instrucciones, 0);
 
-            // Crear PCB
-            // Enviar a memoria y cpu
+            t_proceso* proceso = buffer_take_PROCESO(paquete -> payload);                
+            
+            // Podés descomentar esto en caso de ser un desconfiado y querer apreciar algo de lo que llegó
+            // t_instruccion* instruccion = list_get(proceso -> lista_instrucciones, 0);
             break;  
 
         case -1:
