@@ -54,8 +54,3 @@ dkms.conf
 *.code-workspace
 help.md
 
-consola/.vscode/c_cpp_properties.json
-cpu/.vscode/c_cpp_properties.json
-kernel/.vscode/c_cpp_properties.json
-memoria/.vscode/c_cpp_properties.json
-shared/.vscode/c_cpp_properties.json
