@@ -7,9 +7,9 @@
 typedef struct
 {
 	int puerto_escucha; // Puerto por el cual se escuchará la conexión de módulo
-	int tam_memoria; // Tamaño expresado en bytes
-	int tam_pagina; // Tamaño de las páginas en bytes
-	int paginas_por_tabla; // Cantidad de entradas de cada tabla de páginas
+	uint32_t tam_memoria; // Tamaño expresado en bytes
+	uint8_t tam_pagina; // Tamaño de las páginas en bytes
+	uint8_t paginas_por_tabla; // Cantidad de entradas de cada tabla de páginas
 	int retardo_memoria; // Tiempo en milisegundos que se deberá esperar para dar una respuesta al CPU
 	char* algoritmo_reemplazo; // Algoritmo de reemplazo de páginas (CLOCK/CLOCK-M)
 	int marcos_por_proceso; // Cantidad de marcos permitidos por proceso en asignación fija

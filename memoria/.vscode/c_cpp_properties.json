@@ -15,7 +15,9 @@
                 "${workspaceFolder}/include",
                 "../shared/include"
             ],
-            "defines": ["_GNU_SOURCE"],
+            "defines": [
+                "_GNU_SOURCE"
+            ],
             "intelliSenseMode": "clang-x86",
             "browse": {
                 "path": [
@@ -39,5 +41,5 @@
             "cppStandard": "c++17"
         }
     ],
-    "version": 3
+    "version": 4
 }

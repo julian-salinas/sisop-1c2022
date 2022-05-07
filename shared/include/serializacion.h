@@ -88,23 +88,6 @@
 
 
     /**
-     * @DESC: Agregar una cadena al buffer de un paquete
-     * @param paquete: puntero a t_paquete donde se agregará el valor
-     * @param valor_a_agregar: valor que se agregará al buffer del paquete
-     * @param tamanio: tamanio del valor a agregar
-     */
-    void agregar_a_paquete(t_paquete* paquete, void* valor_a_agregar, size_t tamanio);
-
-
-    /**
-     * @DESC: Serializar un paquete, esa funcion es usada por enviar_paquete
-     * @param paquete: puntero a t_paquete, se va a serializar su contenido
-     * @param bytes: tamanio del paquete a serializar
-     */ 
-    void* serializar_paquete(t_paquete* paquete, size_t bytes);
-
-
-    /**
      * @DESC: Agregar un int de 32 bytes al buffer
      * @param buffer: buffer al cual se va a agregar el valor
      * @param value: valor a agregar
@@ -136,6 +119,16 @@
     void agregar_a_buffer_STRING(t_buffer* buffer, char* valor);
 
 
+    /**
+     * @DESC: Agregar una lista a un buffer
+     * @param buffer: buffer donde se va a agregar la lista
+     * @param lista: puntero a t_list que contiene la lista con valores a agregar
+     * @param agregar_a_buffer_TIPO: función que se va a ocupar de agregar los elementos de la lista, uno
+     *                               a uno, en el buffer
+     */ 
+    void agregar_a_buffer_LIST(t_buffer* buffer, t_list* lista, void(*agregar_a_buffer_TIPO)(t_buffer*, void*));
+
+
     // --------------------- Funciones para "leer" buffer --------------------- //
 
     /**
@@ -150,7 +143,7 @@
 
     /**
      * @DESC: Obtener un int de 32 bytes del buffer
-     * @param buffer: buffer al cual se va a obtener el valor
+     * @param buffer: buffer del cual se va a obtener el valor
      * @return: int de 32 bytes
      */
     int32_t buffer_take_INT32(t_buffer* buffer);
@@ -158,7 +151,7 @@
 
     /**
      * @DESC: Obtener un unsigned int de 32 bytes del buffer
-     * @param buffer: buffer al cual se va a obtener el valor
+     * @param buffer: buffer del cual se va a obtener el valor
      * @return: unsigned int de 32 bytes
      */
     uint32_t buffer_take_UINT32(t_buffer* buffer);
@@ -166,7 +159,7 @@
 
     /**
      * @DESC: Obtener un unsigned int de 8 bytes del buffer
-     * @param buffer: buffer al cual se va a obtener el valor
+     * @param buffer: buffer del cual se va a obtener el valor
      * @return: int de 8 bytes
      */
     uint8_t buffer_take_UINT8(t_buffer* buffer);
@@ -174,95 +167,38 @@
 
     /**
      * @DESC: Obtener un string del buffer
-     * @param buffer: buffer al cual se va a obtener el valor
+     * @param buffer: buffer del cual se va a obtener el valor
      * @return: puntero a char con string
      */
     char* buffer_take_STRING(t_buffer* buffer);
 
 
+    /**
+     * @DESC: Obtener una lista del buffer
+     * @param buffer: buffer de donde se obtiene el valor
+     * @param buffer_take_tipo: función que se va a usar para sacar los valores de la lista
+     *                          del buffer
+     */ 
+    t_list* buffer_take_LIST(t_buffer* buffer, void*(*buffer_take_TIPO)(t_buffer*));
+    
+
     /*
-    -------------------- Comunicación entre consola y kernel ------------------------------------
-    IMPORTANTE: Como acabo de modificar muchas funciones de serialización,
-    es altamente probable que lo que sigue de código no sirva
+    -------------------- Comunicación entre cpu y memoria ------------------------------------
+    IMPORTANTE: por ahora nada
     */
 
    /**
-    * @DESC: Enumerado con posibles instrucciones que va a parsear la consola
-    */ 
-    typedef enum {
-        NO_OP,
-        I_O,
-        READ,
-        WRITE,
-        COPY,
-        EXIT
-    } t_identificador;
-
-
-    /**
-     * @DESC: Contenido de una instruccion
-     *        = identificador único
-     *        - Puede tener 0, 1 o 2 parámetros
-     */ 
+     * @DESC: Config de memoria
+     *        - paginas por tabla
+     *        - tam_pagina
+     */
     typedef struct {
-        t_identificador identificador;
-        t_list* parametros;
-    } t_instruccion;
+        uint8_t paginas_por_tabla;
+        uint8_t tam_pagina;
+    } t_conexion_cpu_memoria;
 
-
-    /**
-     * @DESC: Estructura para referirse a una lista de instrucciones, no es más que un alias
-     *        para ganar expresividad
-     */  
-    typedef struct {
-        t_list* instrucciones; 
-    } t_lista_instrucciones;
-
-
-    /**
-     * @DESC: Crea una instrucción vacía
-     * @param tamanio: tamanio en memoria que va a ocupar la instruccion
-     * @return: devuelve un puntero a t_instruccion, con el identificador y una lista
-     *          de parámetros inicializada (vacía)
-     */  
-    t_instruccion* crear_instruccion(t_identificador identificador);
-
-
-    /**
-     * @DESC: Liberar de la memoria una instruccion, primero se libera
-     *        la lista de parámetros, y luego la instrucción en sí
-     * @param instrucción: instrucción que va a ser destruída
-     */
-    void destruir_instruccion(t_instruccion* instruccion); 
-
-
-    /**
-     * @DESC: Agregar un parámetro a una instruccion
-     * @param parametro: parámetro que va a agregarse a la lista de parámetros de la instrucción
-     */
-    void agregar_parametro_a_instruccion(t_instruccion* instruccion, int parametro); 
-
-
-    /**
-     * @DESC: Crear una lista de instrucciones vacía
-     * @return: puntero a lista de t_lista_instrucciones
-     */
-    t_lista_instrucciones* crear_lista_instrucciones(void); 
-
-
-    /**
-     * @DESC: Liberar de la memoria una lista de instrucciones
-     * @param lista_instrucciones: lista de instrucciones a liberar
-     */ 
-    void destruir_lista_instrucciones(t_lista_instrucciones *lista_instrucciones);
-
-
-    /**
-     * @DESC: Agregar una instruccion a una lista de instrucciones
-     * @param lista_instrucciones: lista a la cual se va a agregar la instruccion
-     * @param instruccion: instruccion que será agregada
-     */ 
-    void agregar_instruccion_a_lista(t_lista_instrucciones* lista_instrucciones, t_instruccion* instruccion);
+    t_paquete* serializar_config_cpu_memoria(uint8_t paginas_por_tabla, uint8_t tam_pagina);
+    void deserializar_config_cpu_memoria(void* stream, uint8_t* paginas_por_tabla, uint8_t* tam_pagina);
 
 
 #endif /* SERIALIZACION_H */

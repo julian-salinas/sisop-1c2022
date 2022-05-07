@@ -21,7 +21,7 @@
 #include "config.h"
 
 t_log* logger;
-
-void iterator(char* value);
+int conexion_cpu;
+void enviar_config_a_cpu();
 
 #endif /* MEMORIA_H_ */

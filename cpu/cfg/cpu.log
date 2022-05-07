@@ -140,3 +140,65 @@
 [INFO] 19:08:12:144 CPU/(4279:4279): Modulo CPU iniciado
 [INFO] 19:12:06:804 CPU/(4447:4447): Modulo CPU iniciado
 [INFO] 19:15:04:384 CPU/(4846:4846): Modulo CPU iniciado
+[INFO] 23:23:49:099 CPU/(7680:7680): Modulo CPU iniciado
+[INFO] 23:23:49:106 CPU/(7680:7680): Socket cliente creado.
+[INFO] 23:23:49:108 CPU/(7680:7680): Request config memoria enviada.
+[INFO] 23:23:49:118 CPU/(7680:7680): Escuchando en 127.0.0.1:8030 (CPU)
+
+[INFO] 23:23:49:118 CPU/(7680:7680): CPU lista como servidor
+[INFO] 13:27:25:011 CPU/(5028:5028): Modulo CPU iniciado
+[INFO] 13:27:25:016 CPU/(5028:5028): Socket cliente creado.
+[INFO] 13:27:25:034 CPU/(5028:5028): Request config memoria enviada.
+[INFO] 13:27:25:035 CPU/(5028:5028): Escuchando en 127.0.0.1:8030 (CPU)
+
+[INFO] 13:27:25:035 CPU/(5028:5028): CPU lista como servidor
+[INFO] 13:29:30:321 CPU/(5414:5414): Modulo CPU iniciado
+[INFO] 13:29:30:322 CPU/(5414:5414): Socket cliente creado.
+[INFO] 13:29:30:323 CPU/(5414:5414): Request config memoria enviada.
+[INFO] 13:29:30:323 CPU/(5414:5414): Escuchando en 127.0.0.1:8030 (CPU)
+
+[INFO] 13:29:30:323 CPU/(5414:5414): CPU lista como servidor
+[INFO] 13:30:03:367 CPU/(5521:5521): Modulo CPU iniciado
+[INFO] 13:30:03:370 CPU/(5521:5521): Socket cliente creado.
+[INFO] 13:30:03:375 CPU/(5521:5521): Request config memoria enviada.
+[INFO] 13:30:03:375 CPU/(5521:5521): Escuchando en 127.0.0.1:8030 (CPU)
+
+[INFO] 13:30:03:375 CPU/(5521:5521): CPU lista como servidor
+[INFO] 13:34:13:515 CPU/(6046:6046): Modulo CPU iniciado
+[INFO] 13:34:13:518 CPU/(6046:6046): Socket cliente creado.
+[INFO] 13:34:13:526 CPU/(6046:6046): Request config memoria enviada.
+[INFO] 13:34:13:530 CPU/(6046:6046): Escuchando en 127.0.0.1:8030 (CPU)
+
+[INFO] 13:34:13:530 CPU/(6046:6046): CPU lista como servidor
+[INFO] 14:06:36:551 CPU/(10066:10066): Modulo CPU iniciado
+[INFO] 14:06:36:552 CPU/(10066:10066): Socket cliente creado.
+[INFO] 14:06:36:552 CPU/(10066:10066): Request config memoria enviada.
+[INFO] 14:06:36:553 CPU/(10066:10066): Escuchando en 127.0.0.1:8030 (CPU)
+
+[INFO] 14:06:36:553 CPU/(10066:10066): CPU lista como servidor
+[INFO] 16:34:40:630 CPU/(15055:15055): Modulo CPU iniciado
+[INFO] 16:34:40:633 CPU/(15055:15055): Socket cliente creado.
+[INFO] 16:34:40:644 CPU/(15055:15055): Request config memoria enviada.
+[INFO] 16:34:40:645 CPU/(15055:15055): Escuchando en 127.0.0.1:8013 (CPU)
+
+[INFO] 16:34:40:645 CPU/(15055:15055): CPU lista como servidor
+[INFO] 16:45:18:560 CPU/(16405:16405): Modulo CPU iniciado
+[INFO] 16:45:18:561 CPU/(16405:16405): Socket cliente creado.
+[INFO] 16:45:18:561 CPU/(16405:16405): Request config memoria enviada.
+[INFO] 16:45:18:562 CPU/(16405:16405): Escuchando en 127.0.0.1:8013 (CPU)
+
+[INFO] 16:45:18:562 CPU/(16405:16405): CPU lista como servidor
+[INFO] 16:45:47:508 CPU/(16466:16466): Modulo CPU iniciado
+[INFO] 16:45:47:509 CPU/(16466:16466): Socket cliente creado.
+[INFO] 16:46:05:972 CPU/(16518:16518): Modulo CPU iniciado
+[INFO] 16:46:05:974 CPU/(16518:16518): Socket cliente creado.
+[INFO] 16:46:05:982 CPU/(16518:16518): Request config memoria enviada.
+[INFO] 16:46:05:986 CPU/(16518:16518): Escuchando en 127.0.0.1:8013 (CPU)
+
+[INFO] 16:46:05:986 CPU/(16518:16518): CPU lista como servidor
+[INFO] 16:49:17:339 CPU/(16966:16966): Modulo CPU iniciado
+[INFO] 16:49:17:341 CPU/(16966:16966): Socket cliente creado.
+[INFO] 16:49:17:347 CPU/(16966:16966): Request config memoria enviada.
+[INFO] 16:49:17:349 CPU/(16966:16966): Escuchando en 127.0.0.1:8013 (CPU)
+
+[INFO] 16:49:17:349 CPU/(16966:16966): CPU lista como servidor

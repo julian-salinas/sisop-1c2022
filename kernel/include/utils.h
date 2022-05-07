@@ -18,17 +18,28 @@
 #include "networking.h"
 #include "serializacion.h"
 #include "enum.h"
+#include "estructura.h"
 
 #define IP_KERNEL "127.0.0.1"
-#define PUERTO_KERNEL "8002"
+#define PUERTO_KERNEL "8000"
 
 t_log* logger;
 
+int conexion_cpu;
+char* ip_cpu;
+char* puerto_cpu_dispach;
+
+int conexion_memoria;
+char* ip_memoria;
+char* puerto_memoria;
+
 void iterator(char* value);
 
-void* procesar_conexion(void* void_args);
+void procesar_conexion(void* void_args);
 
 void recibir_mensaje(int);
+
+t_PCB* crear_PCB(/*lo que me da la consola*/);
 
 
 #endif /* UTILS_H_ */
