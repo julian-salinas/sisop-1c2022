@@ -25,8 +25,8 @@ int main(int argc, char** argv) {
 		return 0;
 	}
 
-	size_t size_proceso = atoi(argv[1]);
-	char* file_path = argv[2];
+	size_t size_proceso = 4;//atoi(argv[1]);
+	char* file_path = "pseudo/enunciado.txt";//argv[2];
 	
 	/*------------------ Parsear archivo de pseudocódigo ------------------*/
 	size_t read; //cantidad de caracteres leídos
@@ -45,31 +45,28 @@ int main(int argc, char** argv) {
 
 	// Leer líneas del archivo
 	while((read = getline(&line, &len, file_instrucciones)) != -1){
-		//Por cada línea que leo, obtengo los tokens, armo la instrucción con sus parámetros y la agrego a la lista
+
+		//Por cada línea que leo, obtengo los tokens, armo la instrucción con sus parámetros y la agrego a la lista 
 		t_list* lines = list_create();
-		
-		char* t = strtok(line, "\n");
-		char* token = strtok(t, " ");
+		char* t = strtok(line, "\n"); 
+		char** tokens = string_split(t, " "); 
 
-		// El identificador siempre viene primero, lo agregamos como char* para despues mapearlo
-		list_add(lines, token);
-		token = strtok(NULL, " ");
+		// Agregar a la lista el indentificador y los parámetros de la instrucción 
+		int i = 0; 
+		while(tokens[i] != NULL){ 
+			log_info(logger, "Se agregó el token %s", tokens[i]); 
+			list_add(lines, (void*) tokens[i]);
+            i++;
+        }
 
-		// Agregar a la lista los parámetros de la instrucción
-		while(token != NULL){
-			log_info(logger, "Se agregó el token %s", token);
-			list_add(lines, (void*) atoi(token));
-			token = strtok(NULL, " ");
-		}
+        t_identificador identificador = mapear_identificador(list_get(lines, 0));
 
-		t_identificador identificador = mapear_identificador(list_get(lines, 0));
-		
-		// Si hubo algun problema de sintaxis o algun identificador inválido, terminar ejecución del programa
-		if(identificador == -1) { 
-			log_info(logger, "Identificador inválido.");
-			terminar_programa(conexion_kernel, logger, consola_config);
-			return 0;
-		}
+        // Si hubo algun problema de sintaxis o algun identificador inválido, terminar ejecución del programa
+        if(identificador == -1) { 
+            log_info(logger, "Identificador inválido.");
+            terminar_programa(conexion_kernel, logger, consola_config);
+            return 0;
+        }
 
 		// Crear la instrucción a enviar
 		t_instruccion* instruccion = crear_instruccion(identificador);

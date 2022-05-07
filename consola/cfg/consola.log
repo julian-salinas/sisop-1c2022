@@ -576,3 +576,43 @@
 [INFO] 02:36:40:440 Consola/(31254:31254): Se agregó el token 0
 [INFO] 02:36:40:440 Consola/(31254:31254): Lista de instrucciones enviada.
 [INFO] 02:36:40:440 Consola/(31254:31254): Consola finalizada.
+[INFO] 17:02:47:405 Consola/(6318:6318): Consola iniciada
+[INFO] 17:02:47:406 Consola/(6318:6318): No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}
+[INFO] 17:02:47:406 Consola/(6318:6318): Consola finalizada.
+[INFO] 17:04:54:66 Consola/(6455:6455): Consola iniciada
+[INFO] 17:04:54:70 Consola/(6455:6455): No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}
+[INFO] 17:04:54:70 Consola/(6455:6455): Consola finalizada.
+[INFO] 17:05:51:308 Consola/(6485:6485): Consola iniciada
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token NO_OP
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token 5
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token I/O
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token 3000
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token WRITE
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token 4
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token 42
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token COPY
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token 0
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token 4
+[INFO] 17:05:51:313 Consola/(6485:6485): Se agregó el token READ
+[INFO] 17:05:51:314 Consola/(6485:6485): Se agregó el token 0
+[INFO] 17:05:51:314 Consola/(6485:6485): Se agregó el token EXIT
+[INFO] 17:06:29:757 Consola/(6605:6605): Consola iniciada
+[ERROR] 17:06:29:757 Consola/(6605:6605): No se pudo abrir el archivo en el path: argv
+[INFO] 17:06:29:758 Consola/(6605:6605): Consola finalizada.
+[INFO] 17:06:50:730 Consola/(6666:6666): Consola iniciada
+[ERROR] 17:06:50:730 Consola/(6666:6666): No se pudo abrir el archivo en el path: argv
+[INFO] 17:06:50:730 Consola/(6666:6666): Consola finalizada.
+[INFO] 17:07:39:721 Consola/(6787:6787): Consola iniciada
+[INFO] 17:09:27:693 Consola/(6787:6787): Se agregó el token NO_OP
+[INFO] 17:09:32:783 Consola/(6787:6787): Se agregó el token 5
+[INFO] 17:12:49:304 Consola/(6787:6787): Se agregó el token I/O
+[INFO] 17:12:51:778 Consola/(6787:6787): Se agregó el token 3000
+[INFO] 17:12:59:953 Consola/(6787:6787): Se agregó el token WRITE
+[INFO] 17:13:01:546 Consola/(6787:6787): Se agregó el token 4
+[INFO] 17:13:03:916 Consola/(6787:6787): Se agregó el token 42
+[INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token COPY
+[INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token 0
+[INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token 4
+[INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token READ
+[INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token 0
+[INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token EXIT
