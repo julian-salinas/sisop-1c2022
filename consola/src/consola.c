@@ -19,14 +19,14 @@ int main(int argc, char** argv) {
 	conexion_kernel = crear_socket_cliente(consola_config -> ip_kernel,consola_config -> puerto_kernel);
 
 	// Validar que se haya enviado tamanio del proceso y path a archivo de pseudocódigo
-	// if (argc < 3) {
-	// 	log_info(logger, "No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}");
-	// 	terminar_programa(conexion_kernel, logger, consola_config);
-	// 	return 0;
-	// }
+	if (argc < 3) {
+		log_info(logger, "No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}");
+		terminar_programa(conexion_kernel, logger, consola_config);
+		return 0;
+	}
 
-	size_t size_proceso = 10; //atoi(argv[1]);
-	char* file_path = "pseudo/enunciado.txt"; //argv[2];
+	size_t size_proceso = atoi(argv[1]);
+	char* file_path = argv[2];
 	
 	/*------------------ Parsear archivo de pseudocódigo ------------------*/
 	size_t read; //cantidad de caracteres leídos
