@@ -3,6 +3,13 @@
 
 int main(int argc, char** argv) {
 
+	/*
+	BORRAR LOS PARÁMETROS DEL MAIN Y AGREGAR LAS SIGUIENTES VARIABLES PARA PROBAR:
+		int argc = 2;
+		char** argv = (char*[]){"4", "/home/utnso/Documentos/test.txt"};
+ 	*/
+	
+
 	int conexion_kernel;
 	char* ip_kernel;
 	char* puerto_kernel;
@@ -53,11 +60,11 @@ int main(int argc, char** argv) {
 		}
 
 		t_identificador identificador = mapear_identificador(list_get(lines, 0));
-		if(identificador == NULL) { 
-			log_info(logger, "Identificador inválido.");
-			terminar_programa(conexion_kernel, logger, config);
-			return 0;
-		}
+		// if(identificador == NULL) { 
+		// 	log_info(logger, "Identificador inválido.");
+		// 	terminar_programa(conexion_kernel, logger, config);
+		// 	return 0;
+		// }
 		t_instruccion* instruccion = crear_instruccion(identificador);
 		agregar_parametros(identificador, &instruccion, lines);
 		agregar_instruccion_a_lista(lista_instrucciones, instruccion);
