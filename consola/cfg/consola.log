@@ -145,3 +145,21 @@
 [INFO] 21:09:12:72 Consola/(10603:10603): Consola iniciada
 [INFO] 21:12:57:325 Consola/(10907:10907): Consola iniciada
 [INFO] 21:14:36:420 Consola/(10996:10996): Consola iniciada
+[INFO] 22:53:18:809 Consola/(16343:16343): Consola iniciada
+[INFO] 22:53:40:292 Consola/(16425:16425): Consola iniciada
+[INFO] 22:54:09:345 Consola/(16481:16481): Consola iniciada
+[INFO] 22:55:08:12 Consola/(16500:16500): Consola iniciada
+[INFO] 22:56:45:513 Consola/(16759:16759): Consola iniciada
+[INFO] 22:57:19:88 Consola/(16828:16828): Consola iniciada
+[INFO] 22:57:19:93 Consola/(16828:16828): Parámetros agregados.
+[INFO] 22:57:59:259 Consola/(16896:16896): Consola iniciada
+[INFO] 22:57:59:265 Consola/(16896:16896): Parámetros agregados.
+[INFO] 22:57:59:265 Consola/(16896:16896): Lista de instrucciones enviada.
+[INFO] 22:57:59:265 Consola/(16896:16896): Consola finalizada.
+[INFO] 22:59:59:38 Consola/(17123:17123): Consola iniciada
+[INFO] 22:59:59:38 Consola/(17123:17123): No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}
+[INFO] 22:59:59:39 Consola/(17123:17123): Consola finalizada.
+[INFO] 23:00:57:937 Consola/(17190:17190): Consola iniciada
+[INFO] 23:00:57:941 Consola/(17190:17190): Parámetros agregados.
+[INFO] 23:00:57:941 Consola/(17190:17190): Lista de instrucciones enviada.
+[INFO] 23:00:57:941 Consola/(17190:17190): Consola finalizada.

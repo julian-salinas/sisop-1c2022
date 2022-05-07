@@ -8,7 +8,6 @@ int main(int argc, char** argv) {
 		int argc = 2;
 		char** argv = (char*[]){"4", "/home/utnso/Documentos/test.txt"};
  	*/
-	
 
 	int conexion_kernel;
 	char* ip_kernel;
@@ -28,14 +27,14 @@ int main(int argc, char** argv) {
 
 	conexion_kernel = crear_socket_cliente(ip_kernel,puerto_kernel);
 
-	if(argc < 2){
-		log_info(logger, "No se recibieron los parámetros correctos. Formato: {cantParametros} {tamañoProceso} {pathArchivo}");
+	if(argc < 3){
+		log_info(logger, "No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}");
 		terminar_programa(conexion_kernel, logger, config);
 		return 0;
 	}
 
-	size_t size_proceso = atoi(argv[0]);
-	char* file_path = argv[1];
+	size_t size_proceso = atoi(argv[1]);
+	char* file_path = argv[2];
 	ssize_t read; //cantidad de caracteres leídos
 	char* line = NULL; //línea leída
 	size_t len = 0; //tamaño de la línea leída
@@ -66,11 +65,13 @@ int main(int argc, char** argv) {
 		// 	return 0;
 		// }
 		t_instruccion* instruccion = crear_instruccion(identificador);
-		agregar_parametros(identificador, &instruccion, lines);
+		agregar_parametros(identificador, instruccion, lines);
+		log_info(logger, "Parámetros agregados.");
 		agregar_instruccion_a_lista(lista_instrucciones, instruccion);
 	}
 
 	enviar_lista_instrucciones(conexion_kernel, lista_instrucciones);
+	log_info(logger, "Lista de instrucciones enviada.");
 
 	destruir_lista_instrucciones(lista_instrucciones);
 
@@ -112,7 +113,7 @@ t_identificador mapear_identificador(char* identificador){
 		return cod_identificador;
 }
 
-void agregar_parametros(t_identificador identificador, t_instruccion** instruccion, t_list* parametros){
+void agregar_parametros(t_identificador identificador, t_instruccion* instruccion, t_list* parametros){
 
 	switch (identificador)
 		{

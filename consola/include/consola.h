@@ -37,6 +37,6 @@
     /*
      * @DESC: Agrega parámetros a una instruccion según identificador
      */ 
-    void agregar_parametros(t_identificador identificador, t_instruccion** instruccion, t_list* parametros);
+    void agregar_parametros(t_identificador identificador, t_instruccion* instruccion, t_list* parametros);
 
 #endif /* CONSOLA_H */
