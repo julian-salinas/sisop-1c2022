@@ -8,7 +8,7 @@
      */ 
 
     typedef struct {
-        int PID; // Process ID
+        uint32_t PID; // Process ID
         size_t tamanio; // en bytes, el mismo no cambia en ejecución
         t_lista_instrucciones lista_instrucciones;
         int program_counter; // número de la próxima instrucción a ejecutar.

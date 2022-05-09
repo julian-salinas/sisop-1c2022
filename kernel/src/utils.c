@@ -20,7 +20,9 @@ void procesar_conexion(void* void_args) {
             t_proceso* proceso = buffer_take_PROCESO(paquete -> payload);                
             
             // Podés descomentar esto en caso de ser un desconfiado y querer apreciar algo de lo que llegó
-            // t_instruccion* instruccion = list_get(proceso -> lista_instrucciones, 0);
+            //t_instruccion* instruccion = list_get(proceso -> lista_instrucciones, 0);
+
+            //t_PCB* pcb = crear_PCB(proceso); 
             break;  
 
         case -1:
@@ -38,13 +40,14 @@ void procesar_conexion(void* void_args) {
 }
 
 
-t_PCB* crear_PCB(/*lo que me da la consola*/) {
+t_PCB* crear_PCB(t_proceso* proceso) {
     t_PCB* pcb = malloc(sizeof(t_PCB));
-    //pcb -> PID = algo
-    //pcb -> tamanio = algo
-    //pcb -> lista_instrucciones = algo
+    pcb -> PID = contador_id_proceso;
+    pcb -> tamanio = proceso -> tamanio;
+    //pcb -> lista_instrucciones = proceso -> lista_instrucciones;
     //pcb -> program_counter = algo
-    //pcb -> tabla_paginas = algo
-    //pcb -> estimacion_rafaga = algo
+    //pcb -> tabla_paginas = recien cuando esté en READY
+    pcb -> estimacion_rafaga = estimacion_rafaga_inicial;
+    contador_id_proceso++;
     return pcb;
 }

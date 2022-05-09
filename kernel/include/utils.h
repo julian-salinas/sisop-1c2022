@@ -33,6 +33,9 @@ int conexion_memoria;
 char* ip_memoria;
 char* puerto_memoria;
 
+uint32_t contador_id_proceso;
+int estimacion_rafaga_inicial;
+
 void iterator(char* value);
 
 void procesar_conexion(void* void_args);
