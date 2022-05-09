@@ -13,6 +13,7 @@
     #define TAMANIO_DEFAULT_BUFFER 64
 
     #include "enum.h"
+
     /**
      * @DESC: Contenido de un buffer para serialización
      *        - offset (Usado para "recorrer" el buffer)
@@ -32,7 +33,7 @@
      *        - Payload (Contenido del mensaje)
      */
     typedef struct {
-        codigo_operacion header;
+        uint8_t header;
         t_buffer* payload;
     } t_paquete;
 

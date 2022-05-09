@@ -21,7 +21,8 @@ int main(int argc, char** argv) {
 	// Validar que se haya enviado tamanio del proceso y path a archivo de pseudocódigo
 	if (argc < 3) {
 		log_info(logger, "No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}");
-		terminar_programa(conexion_kernel, logger, consola_config);
+		terminar_programa("Consola", conexion_kernel, logger);
+		destruir_consola_config(consola_config);
 		return 0;
 	}
 
@@ -39,7 +40,8 @@ int main(int argc, char** argv) {
 	// Verificar que se haya podido acceder al archivo
 	if (file_instrucciones == NULL) {
 		log_error(logger, "No se pudo abrir el archivo en el path: %s", file_path);
-		terminar_programa(conexion_kernel, logger, consola_config);
+		terminar_programa("Consola", conexion_kernel, logger);
+		destruir_consola_config(consola_config);
 		return 0;
 	}
 
@@ -64,7 +66,8 @@ int main(int argc, char** argv) {
         // Si hubo algun problema de sintaxis o algun identificador inválido, terminar ejecución del programa
         if(identificador == -1) { 
             log_info(logger, "Identificador inválido.");
-            terminar_programa(conexion_kernel, logger, consola_config);
+            terminar_programa("Consola", conexion_kernel, logger);
+			destruir_consola_config(consola_config);
             return 0;
         }
 
@@ -81,69 +84,6 @@ int main(int argc, char** argv) {
 	log_info(logger, "Lista de instrucciones enviada.");
 
 	destruir_proceso(proceso);
-	terminar_programa(conexion_kernel, logger, consola_config);
-}
-
-
-// TODO: Pasar esto a shared
-void terminar_programa(int conexion, t_log* logger, t_consola_config* config)
-{
-	log_info(logger, "Consola finalizada.");
-	liberar_socket_cliente(conexion);
-	log_destroy(logger);
-	destruir_consola_config(config);
-}
-
-
-t_identificador mapear_identificador(char* identificador){
-	
-	t_identificador cod_identificador;
-		
-		if(strcmp(identificador, "NO_OP") == 0){
-			cod_identificador = NO_OP;
-		}
-		else if(strcmp(identificador, "I/O") == 0){
-			cod_identificador = I_O;
-		}
-		else if(strcmp(identificador, "READ") == 0){
-			cod_identificador = READ;
-		}
-		else if(strcmp(identificador, "WRITE") == 0){
-			cod_identificador = WRITE;
-		}
-		else if(strcmp(identificador, "COPY") == 0){
-			cod_identificador = COPY;
-		}
-		else if(strcmp(identificador, "EXIT") == 0){
-			cod_identificador = EXIT;
-		}
-		else {
-			cod_identificador = -1;
-		}
-		return cod_identificador;
-}
-
-
-void agregar_parametros(t_identificador identificador, t_instruccion* instruccion, t_list* parametros){
-
-	switch (identificador)
-		{
-		// Instrucciones que llevan 1 parámetro
-		case NO_OP:
-		case READ:
-		case I_O: ;
-			agregar_parametro_a_instruccion(instruccion, (int) list_get(parametros, 1));
-			break;
-
-		// Instrucciones que llevan 2 parámetros
-		case COPY:
-		case WRITE:
-			agregar_parametro_a_instruccion(instruccion, (int) list_get(parametros, 1));
-			agregar_parametro_a_instruccion(instruccion, (int) list_get(parametros, 2));
-			break;
-
-		// Instruccion que no lleva parámetros
-		case EXIT:
-			break;
-		}
+	destruir_consola_config(consola_config);
+	terminar_programa("Consola", conexion_kernel, logger);
 }
