@@ -10,9 +10,9 @@
     typedef struct {
         uint32_t PID; // Process ID
         size_t tamanio; // en bytes, el mismo no cambia en ejecución
-        t_lista_instrucciones lista_instrucciones;
+        t_lista_instrucciones* lista_instrucciones;
         int program_counter; // número de la próxima instrucción a ejecutar.
-        uint32_t tabla_paginas; //  identificador de tabla de páginas del proceso en memoria
+        int32_t tabla_paginas; //  identificador de tabla de páginas del proceso en memoria
         int estimacion_rafaga; // Valor estimado del tiempo del proceso en cpu
     } t_PCB;
 

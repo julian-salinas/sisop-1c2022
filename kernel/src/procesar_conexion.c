@@ -22,7 +22,7 @@ void procesar_conexion(void* void_args) {
             // Podés descomentar esto en caso de ser un desconfiado y querer apreciar algo de lo que llegó
             //t_instruccion* instruccion = list_get(proceso -> lista_instrucciones, 0);
 
-            //t_PCB* pcb = crear_PCB(proceso); 
+            t_PCB* pcb = crear_PCB(proceso); 
             break;  
 
         case -1:
@@ -44,9 +44,9 @@ t_PCB* crear_PCB(t_proceso* proceso) {
     t_PCB* pcb = malloc(sizeof(t_PCB));
     pcb -> PID = contador_id_proceso;
     pcb -> tamanio = proceso -> tamanio;
-    //pcb -> lista_instrucciones = proceso -> lista_instrucciones;
-    //pcb -> program_counter = algo
-    //pcb -> tabla_paginas = recien cuando esté en READY
+    pcb -> lista_instrucciones = proceso -> lista_instrucciones;
+    pcb -> program_counter = 0;
+    pcb -> tabla_paginas = -1; //recien cuando esté en READY
     pcb -> estimacion_rafaga = estimacion_rafaga_inicial;
     contador_id_proceso++;
     return pcb;
