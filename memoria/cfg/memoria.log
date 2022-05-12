@@ -106,3 +106,12 @@
 [INFO] 16:49:17:341 memoria/(16951:16951): Socket cliente memoria-cpu creado.
 [INFO] 16:49:17:341 memoria/(16951:16951): Serializo ok.
 [INFO] 16:49:17:341 memoria/(16951:16951): Config enviado.
+[INFO] 00:25:27:702 memoria/(2709:2709): Memoria iniciada
+[INFO] 00:25:27:703 memoria/(2709:2709): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 00:25:27:704 memoria/(2709:2709): Memoria lista para recibir al cliente
+[INFO] 00:25:39:017 memoria/(2709:2709): Cliente conectado (a memoria)
+
+[INFO] 00:25:39:037 memoria/(2709:2728): Socket cliente memoria-cpu creado.
+[INFO] 00:25:39:038 memoria/(2709:2728): Config enviado.
+[WARNING] 00:25:39:038 memoria/(2709:2728): El cliente se desconecto de server memoria

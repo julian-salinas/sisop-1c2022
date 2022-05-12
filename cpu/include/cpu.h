@@ -8,11 +8,14 @@
     #include<commons/string.h>
     #include<commons/config.h>
 
+    #include "procesar_conexion.h"
+
     // includes de shared
     #include "logging.h"
     #include "config.h"
     #include "serializacion.h"
     #include "networking.h"
+    #include "utils.h"
 
     int conexion_memoria;
 	char* ip_memoria;
@@ -23,14 +26,7 @@
 	t_config* config;
 	t_list* lista;
 
-    void terminar_programa(int, t_log*, t_config*);
-    
-    // esta funcion es para test, despues se va a eliminar
-    void enviar_config(t_config* config, int socket_cliente);
-
-    //estas funciones son para conectar cpu con memoria
-    t_paquete* ini_conexion_cpu_memoria();
-    void request_config_memoria(t_paquete* paquete, int socket_cliente);
+    //esta función es para pedirle a memoria su configuración
     void obtener_config_memoria();
 
 #endif /* CPU_H_ */
