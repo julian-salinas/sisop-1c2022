@@ -13,6 +13,7 @@
 #include "serializacion.h"
 #include "enum.h"
 #include "estructura.h"
+#include "kernel_config.h"
 
 t_log* logger;
 
@@ -29,6 +30,9 @@ int estimacion_rafaga_inicial;
 
 void procesar_conexion(void* void_args);
 
-t_PCB* crear_PCB(/*lo que me da la consola*/);
+t_PCB* crear_PCB(t_proceso* proceso);
+
+// Inicializar configuración
+int conexion_cpu;
 
 #endif /* PROCESAR_CONEXION_H */

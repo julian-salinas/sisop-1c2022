@@ -14,6 +14,7 @@
     #include "logging.h"
     #include "config.h"
     #include "serializacion.h"
+    #include "estructura.h"
     #include "networking.h"
     #include "utils.h"
 

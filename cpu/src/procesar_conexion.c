@@ -18,6 +18,13 @@ void procesar_conexion(void* void_args) {
             log_info(logger, "Se recibió configuración de memoria.");
             break;
 
+        case PCB:
+            log_info(logger, "Se recibió pcb del Kernel.");
+            t_paquete* paquete = recibir_paquete(socket_cliente, header);
+
+            t_PCB* pcb = buffer_take_PCB(paquete -> payload);  
+            break;
+
         case -1:
             log_error(logger, "Cliente desconectado de %s...", nombre_servidor);
             return;

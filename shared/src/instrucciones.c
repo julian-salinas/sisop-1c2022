@@ -61,6 +61,20 @@ t_proceso* crear_proceso(size_t tamanio, t_lista_instrucciones* lista_instruccio
     return tmp;
 }
 
+t_PCB* crear_pcb(uint32_t PID, size_t tamanio, t_lista_instrucciones* lista_instrucciones, int program_counter, int32_t tabla_paginas, int estimacion_rafaga) {
+    t_PCB* pcb = malloc(sizeof(t_PCB));
+
+    pcb -> PID = PID;
+    pcb -> tamanio = tamanio;
+    pcb -> lista_instrucciones = malloc(sizeof(t_lista_instrucciones));
+    pcb -> lista_instrucciones = lista_instrucciones;
+    pcb -> program_counter = program_counter;
+    pcb -> tabla_paginas = tabla_paginas;
+    pcb -> estimacion_rafaga = estimacion_rafaga;
+
+    return pcb;
+}
+
 
 void destruir_proceso(t_proceso* proceso) {
     destruir_lista_instrucciones(proceso -> lista_instrucciones);
@@ -72,6 +86,18 @@ void enviar_proceso(int socket, t_proceso* proceso) {
     t_paquete* paquete = crear_paquete(INSTRUCCIONES, sizeof(t_proceso));
     agregar_a_buffer_UINT32(paquete -> payload, proceso -> tamanio);
     agregar_a_buffer_LIST(paquete -> payload, proceso -> lista_instrucciones, (void*) agregar_a_buffer_INSTRUCCION);
+    enviar_paquete(socket, paquete);
+    destruir_paquete(paquete);
+}
+
+void enviar_pcb(int socket, t_PCB* pcb) {
+    t_paquete* paquete = crear_paquete(PCB, sizeof(t_PCB));
+    agregar_a_buffer_UINT32(paquete -> payload, pcb -> PID);
+    agregar_a_buffer_UINT32(paquete -> payload, pcb -> tamanio);
+    agregar_a_buffer_LIST(paquete -> payload, pcb -> lista_instrucciones, (void*) agregar_a_buffer_INSTRUCCION);
+    agregar_a_buffer_INT32(paquete -> payload, pcb -> program_counter);
+    agregar_a_buffer_INT32(paquete -> payload, pcb -> tabla_paginas);
+    agregar_a_buffer_INT32(paquete -> payload, pcb -> estimacion_rafaga);
     enviar_paquete(socket, paquete);
     destruir_paquete(paquete);
 }
@@ -104,4 +130,28 @@ t_proceso* buffer_take_PROCESO(t_buffer* buffer) {
     t_proceso* tmp = crear_proceso(tamanio_proceso, lista_instrucciones);
 
     return tmp;    
+}
+
+t_PCB* buffer_take_PCB(t_buffer* buffer) {
+    uint32_t PID_pcb;
+    PID_pcb = buffer_take_UINT32(buffer);
+    
+    uint32_t tamanio_pcb;
+    tamanio_pcb = buffer_take_UINT32(buffer);
+
+    t_lista_instrucciones* lista_instrucciones_pcb;
+    lista_instrucciones_pcb = buffer_take_LIST(buffer, (void*)*buffer_take_INSTRUCCION);
+
+    int32_t program_counter_pcb;
+    program_counter_pcb = buffer_take_INT32(buffer);
+
+    int32_t tabla_paginas_pcb;
+    tabla_paginas_pcb = buffer_take_INT32(buffer);
+
+    int32_t estimacion_rafaga_pcb;
+    estimacion_rafaga_pcb = buffer_take_INT32(buffer);
+
+    t_PCB* pcb = crear_pcb(PID_pcb, tamanio_pcb, lista_instrucciones_pcb, program_counter_pcb, tabla_paginas_pcb, estimacion_rafaga_pcb);
+
+    return pcb;    
 }

@@ -5,9 +5,11 @@
     #include<stdlib.h>
     #include<string.h>
     #include<commons/collections/list.h>
+    #include "estructura.h"
     #include "serializacion.h"
     #include "networking.h"
     #include "enum.h"
+    
 
    /**
     * @DESC: Enumerado con posibles instrucciones que va a parsear la consola
@@ -114,11 +116,14 @@
 
     t_proceso* crear_proceso(size_t tamanio, t_lista_instrucciones* lista_instrucciones);
 
+    t_PCB* crear_pcb(uint32_t PID, size_t tamanio, t_lista_instrucciones* lista_instrucciones, int program_counter, int32_t tabla_paginas, int estimacion_rafaga);
+
 
     void destruir_proceso(t_proceso* proceso);
 
-
     void enviar_proceso(int socket, t_proceso* proceso);
+
+    void enviar_pcb(int socket, t_PCB* pcb);
 
     /**
      * @DESC: Toma una lista de instrucciones del buffer
