@@ -1,6 +1,6 @@
 #include "procesar_conexion.h"
 
-void procesar_conexion(void* void_args, t_memoria_config* memoria_config) {
+void procesar_conexion(void* void_args) {
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* logger = args->log;
     int socket_cliente = args->fd;
@@ -14,7 +14,7 @@ void procesar_conexion(void* void_args, t_memoria_config* memoria_config) {
 
         case CONEXION_CPU_MEMORIA:;
             //enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
-            int conexion_cpu = crear_socket_cliente(IP_MEMORIA, "8013");
+            int conexion_cpu = crear_socket_cliente(IP_MEMORIA, "8001");
             log_info(logger, "Socket cliente memoria-cpu creado.");
             enviar_config_a_cpu(conexion_cpu, logger, memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);	
             break;

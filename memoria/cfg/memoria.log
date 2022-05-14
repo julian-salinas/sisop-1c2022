@@ -125,3 +125,42 @@
 [INFO] 00:51:04:309 memoria/(21302:21302): Memoria lista para recibir al cliente
 [INFO] 00:51:14:235 memoria/(21302:21302): Cliente conectado (a memoria)
 
+[INFO] 12:02:22:146 memoria/(9602:9602): Memoria iniciada
+[INFO] 12:02:22:148 memoria/(9602:9602): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:02:22:158 memoria/(9602:9602): Memoria lista para recibir al cliente
+[INFO] 12:02:34:363 memoria/(9602:9602): Cliente conectado (a memoria)
+
+[INFO] 12:02:34:371 memoria/(9602:9622): Socket cliente memoria-cpu creado.
+[INFO] 12:02:34:371 memoria/(9602:9622): Config enviado.
+[WARNING] 12:02:34:371 memoria/(9602:9622): El cliente se desconecto de server memoria
+[INFO] 12:03:34:095 memoria/(9751:9751): Memoria iniciada
+[INFO] 12:03:34:096 memoria/(9751:9751): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:03:34:099 memoria/(9751:9751): Memoria lista para recibir al cliente
+[INFO] 12:03:40:309 memoria/(9751:9751): Cliente conectado (a memoria)
+
+[INFO] 12:03:40:313 memoria/(9751:9759): Socket cliente memoria-cpu creado.
+[INFO] 12:03:40:318 memoria/(9751:9759): Config enviado.
+[WARNING] 12:03:40:319 memoria/(9751:9759): El cliente se desconecto de server memoria
+[INFO] 12:25:38:910 memoria/(12379:12379): Memoria iniciada
+[INFO] 12:25:38:920 memoria/(12379:12379): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:25:38:920 memoria/(12379:12379): Memoria lista para recibir al cliente
+[INFO] 12:26:36:395 memoria/(12589:12589): Memoria iniciada
+[INFO] 12:26:36:395 memoria/(12589:12589): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:26:36:396 memoria/(12589:12589): Memoria lista para recibir al cliente
+[INFO] 12:26:41:053 memoria/(12589:12589): Cliente conectado (a memoria)
+
+[INFO] 12:26:41:057 memoria/(12589:12603): Socket cliente memoria-cpu creado.
+[INFO] 12:27:13:513 memoria/(12589:12603): Config enviado.
+[INFO] 12:27:56:732 memoria/(12728:12728): Memoria iniciada
+[INFO] 12:27:56:733 memoria/(12728:12728): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:27:56:733 memoria/(12728:12728): Memoria lista para recibir al cliente
+[INFO] 12:28:29:767 memoria/(12728:12728): Cliente conectado (a memoria)
+
+[INFO] 12:28:29:768 memoria/(12728:12856): Socket cliente memoria-cpu creado.
+[INFO] 12:28:29:768 memoria/(12728:12856): Config enviado.
+[WARNING] 12:28:29:768 memoria/(12728:12856): El cliente se desconecto de server memoria
