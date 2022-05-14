@@ -1,6 +1,3 @@
-# vscode files
-**/.vscode
-
 # Prerequisites
 *.d
 
@@ -57,4 +54,13 @@ dkms.conf
 *.code-workspace
 help.md
 
+# a ver si dejan de joder los cpp properties
 **/.vscode
+.vscode
+.json
+consola/.vscode/
+kernel/.vscode/
+memoria/.vscode/
+cpu/.vscode/
+
+
