@@ -28,13 +28,13 @@ int main(void) {
 	
 	while(server_escuchar(logger, "Kernel", server_fd, (void*)(*procesar_conexion)));
 
-	terminar_programa(conexion_memoria, conexion_cpu, logger, kernel_config);
+	finalizar_kernel(conexion_memoria, conexion_cpu, logger, kernel_config);
+	
 
-	//liberar memoria
 	return EXIT_SUCCESS;
 }
 
-void terminar_programa(int conexion, int otraConexion, t_log* logger, t_kernel_config* config) {
+void finalizar_kernel(int conexion, int otraConexion, t_log* logger, t_kernel_config* config) {
 	liberar_socket_cliente(conexion);
 	liberar_socket_cliente(otraConexion);
 	log_destroy(logger);

@@ -616,3 +616,73 @@
 [INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token READ
 [INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token 0
 [INFO] 17:13:10:920 Consola/(6787:6787): Se agregó el token EXIT
+[INFO] 00:48:31:090 Consola/(20629:20629): Consola iniciada
+[INFO] 00:48:31:091 Consola/(20629:20629): No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}
+[INFO] 00:48:31:094 Consola/(20629:20629): Módulo Consola finalizado.
+[INFO] 00:48:38:720 Consola/(20659:20659): Consola iniciada
+[INFO] 00:48:38:722 Consola/(20659:20659): Se agregó el token NO_OP
+[INFO] 00:48:38:723 Consola/(20659:20659): Se agregó el token 5
+[INFO] 00:48:38:723 Consola/(20659:20659): Se agregó el token I/O
+[INFO] 00:48:38:723 Consola/(20659:20659): Se agregó el token 3000
+[INFO] 00:48:38:724 Consola/(20659:20659): Se agregó el token WRITE
+[INFO] 00:48:38:724 Consola/(20659:20659): Se agregó el token 4
+[INFO] 00:48:38:724 Consola/(20659:20659): Se agregó el token 42
+[INFO] 00:48:38:724 Consola/(20659:20659): Se agregó el token COPY
+[INFO] 00:48:38:725 Consola/(20659:20659): Se agregó el token 0
+[INFO] 00:48:38:725 Consola/(20659:20659): Se agregó el token 4
+[INFO] 00:48:38:725 Consola/(20659:20659): Se agregó el token READ
+[INFO] 00:48:38:725 Consola/(20659:20659): Se agregó el token 0
+[INFO] 00:48:38:725 Consola/(20659:20659): Se agregó el token EXIT
+[INFO] 00:48:38:726 Consola/(20659:20659): Lista de instrucciones enviada.
+[INFO] 00:48:38:726 Consola/(20659:20659): Módulo Consola finalizado.
+[INFO] 00:48:51:360 Consola/(20702:20702): Consola iniciada
+[INFO] 00:48:51:362 Consola/(20702:20702): No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}
+[INFO] 00:48:51:362 Consola/(20702:20702): Módulo Consola finalizado.
+[INFO] 00:49:00:030 Consola/(20707:20707): Consola iniciada
+[INFO] 00:49:00:031 Consola/(20707:20707): Se agregó el token NO_OP
+[INFO] 00:49:00:031 Consola/(20707:20707): Se agregó el token 5
+[INFO] 00:49:00:031 Consola/(20707:20707): Se agregó el token I/O
+[INFO] 00:49:00:032 Consola/(20707:20707): Se agregó el token 3000
+[INFO] 00:49:00:032 Consola/(20707:20707): Se agregó el token WRITE
+[INFO] 00:49:00:032 Consola/(20707:20707): Se agregó el token 4
+[INFO] 00:49:00:032 Consola/(20707:20707): Se agregó el token 42
+[INFO] 00:49:00:032 Consola/(20707:20707): Se agregó el token COPY
+[INFO] 00:49:00:038 Consola/(20707:20707): Se agregó el token 0
+[INFO] 00:49:00:038 Consola/(20707:20707): Se agregó el token 4
+[INFO] 00:49:00:040 Consola/(20707:20707): Se agregó el token READ
+[INFO] 00:49:00:040 Consola/(20707:20707): Se agregó el token 0
+[INFO] 00:49:00:040 Consola/(20707:20707): Se agregó el token EXIT
+[INFO] 00:49:00:041 Consola/(20707:20707): Lista de instrucciones enviada.
+[INFO] 00:49:00:041 Consola/(20707:20707): Módulo Consola finalizado.
+[INFO] 00:49:01:268 Consola/(20858:20858): Consola iniciada
+[INFO] 00:49:01:270 Consola/(20858:20858): Se agregó el token NO_OP
+[INFO] 00:49:01:270 Consola/(20858:20858): Se agregó el token 5
+[INFO] 00:49:01:270 Consola/(20858:20858): Se agregó el token I/O
+[INFO] 00:49:01:270 Consola/(20858:20858): Se agregó el token 3000
+[INFO] 00:49:01:270 Consola/(20858:20858): Se agregó el token WRITE
+[INFO] 00:49:01:270 Consola/(20858:20858): Se agregó el token 4
+[INFO] 00:49:01:270 Consola/(20858:20858): Se agregó el token 42
+[INFO] 00:49:01:272 Consola/(20858:20858): Se agregó el token COPY
+[INFO] 00:49:01:272 Consola/(20858:20858): Se agregó el token 0
+[INFO] 00:49:01:272 Consola/(20858:20858): Se agregó el token 4
+[INFO] 00:49:01:272 Consola/(20858:20858): Se agregó el token READ
+[INFO] 00:49:01:272 Consola/(20858:20858): Se agregó el token 0
+[INFO] 00:49:01:272 Consola/(20858:20858): Se agregó el token EXIT
+[INFO] 00:49:01:273 Consola/(20858:20858): Lista de instrucciones enviada.
+[INFO] 00:49:01:273 Consola/(20858:20858): Módulo Consola finalizado.
+[INFO] 00:51:18:343 Consola/(21323:21323): Consola iniciada
+[INFO] 00:51:18:344 Consola/(21323:21323): Se agregó el token NO_OP
+[INFO] 00:51:18:345 Consola/(21323:21323): Se agregó el token 5
+[INFO] 00:51:18:345 Consola/(21323:21323): Se agregó el token I/O
+[INFO] 00:51:18:345 Consola/(21323:21323): Se agregó el token 3000
+[INFO] 00:51:18:345 Consola/(21323:21323): Se agregó el token WRITE
+[INFO] 00:51:18:345 Consola/(21323:21323): Se agregó el token 4
+[INFO] 00:51:18:346 Consola/(21323:21323): Se agregó el token 42
+[INFO] 00:51:18:346 Consola/(21323:21323): Se agregó el token COPY
+[INFO] 00:51:18:346 Consola/(21323:21323): Se agregó el token 0
+[INFO] 00:51:18:346 Consola/(21323:21323): Se agregó el token 4
+[INFO] 00:51:18:346 Consola/(21323:21323): Se agregó el token READ
+[INFO] 00:51:18:346 Consola/(21323:21323): Se agregó el token 0
+[INFO] 00:51:18:346 Consola/(21323:21323): Se agregó el token EXIT
+[INFO] 00:51:18:347 Consola/(21323:21323): Lista de instrucciones enviada.
+[INFO] 00:51:18:347 Consola/(21323:21323): Módulo Consola finalizado.
