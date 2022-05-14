@@ -5,6 +5,7 @@
     #include <stdlib.h>
     #include <string.h>
 
+    // includes del módulo
     #include "procesar_conexion.h"
     #include "memoria_config.h"
 
@@ -14,6 +15,7 @@
     #include "logging.h"
     #include "config.h"
     #include "utils.h"
+    #include "proceso.h"
 
     int conexion_cpu;
 

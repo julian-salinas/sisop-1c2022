@@ -115,3 +115,13 @@
 [INFO] 00:25:39:037 memoria/(2709:2728): Socket cliente memoria-cpu creado.
 [INFO] 00:25:39:038 memoria/(2709:2728): Config enviado.
 [WARNING] 00:25:39:038 memoria/(2709:2728): El cliente se desconecto de server memoria
+[INFO] 00:49:13:003 memoria/(20935:20935): Memoria iniciada
+[INFO] 00:49:13:004 memoria/(20935:20935): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 00:49:13:005 memoria/(20935:20935): Memoria lista para recibir al cliente
+[INFO] 00:51:04:309 memoria/(21302:21302): Memoria iniciada
+[INFO] 00:51:04:309 memoria/(21302:21302): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 00:51:04:309 memoria/(21302:21302): Memoria lista para recibir al cliente
+[INFO] 00:51:14:235 memoria/(21302:21302): Cliente conectado (a memoria)
+

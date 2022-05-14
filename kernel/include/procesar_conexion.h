@@ -1,38 +1,35 @@
 #ifndef PROCESAR_CONEXION_H
 #define PROCESAR_CONEXION_H
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<sys/types.h>
-#include<string.h>
-#include<sys/socket.h>
-#include<commons/log.h>
-#include<commons/collections/list.h>
+    #include<stdio.h>
+    #include<stdlib.h>
+    #include<string.h>
+    #include<commons/log.h>
 
-#include "networking.h"
-#include "serializacion.h"
-#include "enum.h"
-#include "estructura.h"
-#include "kernel_config.h"
+    // includes de shared
+    #include "networking.h"
+    #include "serializacion.h"
+    #include "enum.h"
+    #include "proceso.h"
 
-t_log* logger;
+    t_log* logger;
 
-int conexion_cpu;
-char* ip_cpu;
-char* puerto_cpu_dispach;
+    int conexion_cpu;
+    char* ip_cpu;
+    char* puerto_cpu_dispach;
 
-int conexion_memoria;
-char* ip_memoria;
-char* puerto_memoria;
+    int conexion_memoria;
+    char* ip_memoria;
+    char* puerto_memoria;
 
-uint32_t contador_id_proceso;
-int estimacion_rafaga_inicial;
+    uint32_t contador_id_proceso;
+    int estimacion_rafaga_inicial;
 
-void procesar_conexion(void* void_args);
+    void procesar_conexion(void* void_args);
 
-t_PCB* crear_PCB(t_proceso* proceso);
+    t_PCB* crear_PCB(t_proceso* proceso);
 
-// Inicializar configuración
-int conexion_cpu;
+    // Inicializar configuración
+    int conexion_cpu;
 
 #endif /* PROCESAR_CONEXION_H */

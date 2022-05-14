@@ -8,3 +8,19 @@
 
 [INFO] 00:25:39:038 CPU/(2727:2727): Llegó configuración de memoria ok.
 
+[INFO] 00:49:21:884 CPU/(20977:20977): Modulo CPU iniciado
+[INFO] 00:49:21:886 CPU/(20977:20977): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 00:49:21:886 CPU/(20977:20977): CPU lista como servidor
+[INFO] 00:51:01:610 CPU/(21300:21300): Modulo CPU iniciado
+[INFO] 00:51:01:610 CPU/(21300:21300): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 00:51:01:611 CPU/(21300:21300): CPU lista como servidor
+[INFO] 00:51:07:895 CPU/(21310:21310): Modulo CPU iniciado
+[INFO] 00:51:07:896 CPU/(21310:21310): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 00:51:07:896 CPU/(21310:21310): CPU lista como servidor
+[INFO] 00:51:14:236 CPU/(21310:21310): Cliente conectado (a CPU)
+
+[INFO] 00:51:18:349 CPU/(21310:21319): Se recibió pcb del Kernel.
+[WARNING] 00:51:18:349 CPU/(21310:21319): El cliente se desconecto de server CPU

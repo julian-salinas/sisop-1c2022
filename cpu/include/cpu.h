@@ -8,14 +8,13 @@
     #include<commons/string.h>
     #include<commons/config.h>
 
+    // includes del módulo
     #include "procesar_conexion.h"
 
     // includes de shared
-    #include "logging.h"
-    #include "config.h"
-    #include "serializacion.h"
-    #include "estructura.h"
     #include "networking.h"
+    #include "config.h"
+    #include "proceso.h"
     #include "utils.h"
 
     int conexion_memoria;
@@ -26,7 +25,7 @@
 	t_log* logger;
 	t_config* config;
 	t_list* lista;
-
+ 
     //esta función es para pedirle a memoria su configuración
     void obtener_config_memoria();
 

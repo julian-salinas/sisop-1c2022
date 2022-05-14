@@ -5,6 +5,8 @@
     #include "serializacion.h"
     #include "networking.h"
     #include "memoria_config.h"
+    #include "estructura.h"
+    #include "proceso.h"
 
     void procesar_conexion(void* void_args, t_memoria_config* memoria_config);
 
