@@ -3,7 +3,7 @@
 int main(void) {
 
 	//ini config
-	t_memoria_config* memoria_config = ini_memoria_config("cfg/memoria.config");
+	memoria_config = ini_memoria_config("cfg/memoria.config");
 
 	//suspension proceso ->liberar espacio de memoria escribiendo en SWAP
 

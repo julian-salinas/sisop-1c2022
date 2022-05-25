@@ -8,7 +8,7 @@ int main(void) {
 	config = iniciar_config("cfg/cpu.config");
 	
 	// obtener valores ip y puerto del archivo config del módulo memoria
-	//obtener_config_memoria();	
+	obtener_config_memoria();	
 
 	//iniciar servidor cpu
 	int server_cpu = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8001");

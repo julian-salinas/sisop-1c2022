@@ -19,4 +19,6 @@
 
     int conexion_cpu;
 
+    t_memoria_config* memoria_config;
+
 #endif /* MEMORIA_H_ */

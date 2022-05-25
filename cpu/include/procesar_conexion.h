@@ -6,6 +6,7 @@
     #include "logging.h"
     #include "enum.h"
     #include "proceso.h"
+    #include "cpu.h"
 
     void procesar_conexion(void* void_args);
 
