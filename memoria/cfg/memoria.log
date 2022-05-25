@@ -125,3 +125,121 @@
 [INFO] 00:51:04:309 memoria/(21302:21302): Memoria lista para recibir al cliente
 [INFO] 00:51:14:235 memoria/(21302:21302): Cliente conectado (a memoria)
 
+[INFO] 12:29:33:554 memoria/(4134:4134): Memoria iniciada
+[INFO] 12:29:33:555 memoria/(4134:4134): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:29:33:555 memoria/(4134:4134): Memoria lista para recibir al cliente
+[INFO] 12:30:18:221 memoria/(4134:4134): Cliente conectado (a memoria)
+
+[INFO] 12:30:54:943 memoria/(4211:4211): Memoria iniciada
+[INFO] 12:30:54:944 memoria/(4211:4211): Memoria lista para recibir al cliente
+[INFO] 12:30:54:944 memoria/(4211:4211): Cliente conectado (a memoria)
+
+[INFO] 12:30:54:945 memoria/(4211:4211): Módulo Memoria finalizado.
+[INFO] 12:31:00:323 memoria/(4220:4220): Memoria iniciada
+[INFO] 12:31:00:323 memoria/(4220:4220): Memoria lista para recibir al cliente
+[INFO] 12:31:00:323 memoria/(4220:4220): Cliente conectado (a memoria)
+
+[INFO] 12:31:00:323 memoria/(4220:4220): Módulo Memoria finalizado.
+[INFO] 12:31:03:990 memoria/(4222:4222): Memoria iniciada
+[INFO] 12:31:03:991 memoria/(4222:4222): Memoria lista para recibir al cliente
+[INFO] 12:31:03:991 memoria/(4222:4222): Cliente conectado (a memoria)
+
+[INFO] 12:31:03:991 memoria/(4222:4222): Módulo Memoria finalizado.
+[INFO] 12:31:05:100 memoria/(4224:4224): Memoria iniciada
+[INFO] 12:31:05:100 memoria/(4224:4224): Memoria lista para recibir al cliente
+[INFO] 12:31:05:100 memoria/(4224:4224): Cliente conectado (a memoria)
+
+[INFO] 12:31:05:100 memoria/(4224:4224): Módulo Memoria finalizado.
+[INFO] 12:31:06:831 memoria/(4226:4226): Memoria iniciada
+[INFO] 12:31:06:832 memoria/(4226:4226): Memoria lista para recibir al cliente
+[INFO] 12:31:06:832 memoria/(4226:4226): Cliente conectado (a memoria)
+
+[INFO] 12:31:06:832 memoria/(4226:4226): Módulo Memoria finalizado.
+[INFO] 12:31:47:452 memoria/(4594:4594): Memoria iniciada
+[INFO] 12:31:47:453 memoria/(4594:4594): Memoria lista para recibir al cliente
+[INFO] 12:31:47:453 memoria/(4594:4594): Cliente conectado (a memoria)
+
+[INFO] 12:31:47:453 memoria/(4594:4594): Módulo Memoria finalizado.
+[INFO] 12:32:04:378 memoria/(4612:4612): Memoria iniciada
+[INFO] 12:32:04:378 memoria/(4612:4612): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:32:04:379 memoria/(4612:4612): Memoria lista para recibir al cliente
+[INFO] 12:32:21:525 memoria/(4612:4612): Cliente conectado (a memoria)
+
+[INFO] 12:35:16:987 memoria/(4820:4820): Memoria iniciada
+[INFO] 12:35:16:988 memoria/(4820:4820): Memoria lista para recibir al cliente
+[INFO] 12:35:16:988 memoria/(4820:4820): Cliente conectado (a memoria)
+
+[INFO] 12:35:16:988 memoria/(4820:4820): Módulo Memoria finalizado.
+[INFO] 12:35:21:050 memoria/(4824:4824): Memoria iniciada
+[INFO] 12:35:21:050 memoria/(4824:4824): Memoria lista para recibir al cliente
+[INFO] 12:35:21:051 memoria/(4824:4824): Cliente conectado (a memoria)
+
+[INFO] 12:35:21:051 memoria/(4824:4824): Módulo Memoria finalizado.
+[INFO] 12:35:25:335 memoria/(4826:4826): Memoria iniciada
+[INFO] 12:35:25:336 memoria/(4826:4826): Memoria lista para recibir al cliente
+[INFO] 12:35:25:336 memoria/(4826:4826): Cliente conectado (a memoria)
+
+[INFO] 12:35:25:336 memoria/(4826:4826): Módulo Memoria finalizado.
+[INFO] 12:35:26:738 memoria/(4828:4828): Memoria iniciada
+[INFO] 12:35:26:739 memoria/(4828:4828): Memoria lista para recibir al cliente
+[INFO] 12:35:26:739 memoria/(4828:4828): Cliente conectado (a memoria)
+
+[INFO] 12:35:26:739 memoria/(4828:4828): Módulo Memoria finalizado.
+[INFO] 12:35:33:729 memoria/(4832:4832): Memoria iniciada
+[INFO] 12:35:33:729 memoria/(4832:4832): Memoria lista para recibir al cliente
+[INFO] 12:35:33:730 memoria/(4832:4832): Cliente conectado (a memoria)
+
+[INFO] 12:35:33:730 memoria/(4832:4832): Módulo Memoria finalizado.
+[INFO] 12:35:35:506 memoria/(4834:4834): Memoria iniciada
+[INFO] 12:35:35:507 memoria/(4834:4834): Memoria lista para recibir al cliente
+[INFO] 12:35:35:507 memoria/(4834:4834): Cliente conectado (a memoria)
+
+[INFO] 12:35:35:507 memoria/(4834:4834): Módulo Memoria finalizado.
+[INFO] 12:35:45:261 memoria/(4837:4837): Memoria iniciada
+[INFO] 12:35:45:262 memoria/(4837:4837): Memoria lista para recibir al cliente
+[INFO] 12:35:45:262 memoria/(4837:4837): Cliente conectado (a memoria)
+
+[INFO] 12:35:45:262 memoria/(4837:4837): Módulo Memoria finalizado.
+[INFO] 12:35:55:782 memoria/(4841:4841): Memoria iniciada
+[INFO] 12:35:55:783 memoria/(4841:4841): Memoria lista para recibir al cliente
+[INFO] 12:35:55:783 memoria/(4841:4841): Cliente conectado (a memoria)
+
+[INFO] 12:35:55:784 memoria/(4841:4841): Módulo Memoria finalizado.
+[INFO] 12:36:05:681 memoria/(4850:4850): Memoria iniciada
+[INFO] 12:36:05:681 memoria/(4850:4850): Memoria lista para recibir al cliente
+[INFO] 12:36:05:682 memoria/(4850:4850): Cliente conectado (a memoria)
+
+[INFO] 12:36:05:682 memoria/(4850:4850): Módulo Memoria finalizado.
+[INFO] 12:36:10:509 memoria/(4853:4853): Memoria iniciada
+[INFO] 12:36:10:510 memoria/(4853:4853): Memoria lista para recibir al cliente
+[INFO] 12:36:10:510 memoria/(4853:4853): Cliente conectado (a memoria)
+
+[INFO] 12:36:10:510 memoria/(4853:4853): Módulo Memoria finalizado.
+[INFO] 12:36:22:515 memoria/(4859:4859): Memoria iniciada
+[INFO] 12:36:22:515 memoria/(4859:4859): Memoria lista para recibir al cliente
+[INFO] 12:36:22:515 memoria/(4859:4859): Cliente conectado (a memoria)
+
+[INFO] 12:36:22:515 memoria/(4859:4859): Módulo Memoria finalizado.
+[INFO] 12:36:28:511 memoria/(4863:4863): Memoria iniciada
+[INFO] 12:36:28:511 memoria/(4863:4863): Memoria lista para recibir al cliente
+[INFO] 12:36:28:512 memoria/(4863:4863): Cliente conectado (a memoria)
+
+[INFO] 12:36:28:512 memoria/(4863:4863): Módulo Memoria finalizado.
+[INFO] 12:37:14:764 memoria/(4916:4916): Memoria iniciada
+[INFO] 12:37:14:764 memoria/(4916:4916): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:37:14:765 memoria/(4916:4916): Memoria lista para recibir al cliente
+[INFO] 12:37:45:958 memoria/(4916:4916): Cliente conectado (a memoria)
+
+[ERROR] 12:38:58:978 memoria/(4916:5024): Algo anduvo mal en el server de memoria
+[INFO] 12:38:58:978 memoria/(4916:5024): Cop: 183
+[INFO] 12:39:23:647 memoria/(5097:5097): Memoria iniciada
+[INFO] 12:39:23:648 memoria/(5097:5097): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 12:39:23:648 memoria/(5097:5097): Memoria lista para recibir al cliente
+[INFO] 12:40:19:956 memoria/(5097:5097): Cliente conectado (a memoria)
+
+[ERROR] 12:41:17:691 memoria/(5097:5214): Algo anduvo mal en el server de memoria
+[INFO] 12:41:17:691 memoria/(5097:5214): Cop: 183

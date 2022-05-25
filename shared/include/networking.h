@@ -72,7 +72,7 @@
      * @param func_procesar_conexion: función propia de cada modulo, que contiene el switch con 
      *                                codigos de operacion y toda la bola
      */ 
-    int server_escuchar(t_log* logger, char* server_name, int server_socket, void(*func_procesar_conexion)(void));
+    int server_listen(t_log* logger, char* server_name, int server_socket, void(*func_procesar_conexion)(void));
 
 
     /**
@@ -125,13 +125,21 @@
      */ 
     uint8_t recibir_header(int socket);
     
-    
+
+    /**
+     * @DESC: Obtener payload (buffer) del socket
+     * @param socket: socket que contiene los datos
+     * @return: devuelve el buffer leído
+     */
+    t_buffer* recibir_payload(int socket);
+
+
     /**
      * @DESC: Recibir un paquete
      * @param socket: socket que contiene el paquete
      * @param header: header QUE YA SE LEYÓ (habría q mejorar esto)
      */ 
-    t_paquete* recibir_paquete(int socket, uint8_t header);
+    t_paquete* recibir_paquete(int socket);
 
 
     /**
