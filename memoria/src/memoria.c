@@ -21,7 +21,7 @@ int main(void) {
 	int server_fd = iniciar_servidor(logger, "memoria", memoria_config -> ip_memoria, memoria_config -> puerto_escucha);	
 	log_info(logger, "Memoria lista para recibir al cliente");
 
-	while(server_escuchar(logger, "memoria", server_fd, (void*)(*procesar_conexion)));
+	while(server_listen(logger, "memoria", server_fd, (void*)(*procesar_conexion)));
 
 	terminar_programa("Memoria", server_fd, logger);
 	

@@ -14,7 +14,7 @@ int main(void) {
 	int server_cpu = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8001");
 	log_info(logger, "CPU lista como servidor");
 
-	while(server_escuchar(logger, "CPU", server_cpu, (void*)(*procesar_conexion)));
+	while(server_listen(logger, "CPU", server_cpu, (void*)(*procesar_conexion)));
 
 	terminar_programa("CPU", server_cpu, logger);
 

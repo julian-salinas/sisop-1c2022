@@ -24,6 +24,94 @@
 
 [INFO] 00:51:18:349 CPU/(21310:21319): Se recibió pcb del Kernel.
 [WARNING] 00:51:18:349 CPU/(21310:21319): El cliente se desconecto de server CPU
+<<<<<<< HEAD
+[INFO] 12:30:02:555 CPU/(4160:4160): Modulo CPU iniciado
+[INFO] 12:30:02:557 CPU/(4160:4160): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:30:02:558 CPU/(4160:4160): CPU lista como servidor
+[INFO] 12:30:18:222 CPU/(4160:4160): Cliente conectado (a CPU)
+
+[INFO] 12:30:20:549 CPU/(4160:4168): Se recibió pcb del Kernel.
+[WARNING] 12:30:20:549 CPU/(4160:4168): El cliente se desconecto de server CPU
+[INFO] 12:30:47:960 CPU/(4207:4207): Modulo CPU iniciado
+[INFO] 12:30:47:961 CPU/(4207:4207): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:30:47:961 CPU/(4207:4207): CPU lista como servidor
+[INFO] 12:30:53:279 CPU/(4209:4209): Modulo CPU iniciado
+[INFO] 12:30:53:280 CPU/(4209:4209): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:30:53:280 CPU/(4209:4209): CPU lista como servidor
+[INFO] 12:32:02:134 CPU/(4609:4609): Modulo CPU iniciado
+[INFO] 12:32:02:135 CPU/(4609:4609): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:32:02:135 CPU/(4609:4609): CPU lista como servidor
+[INFO] 12:32:11:758 CPU/(4614:4614): Modulo CPU iniciado
+[INFO] 12:32:11:759 CPU/(4614:4614): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:32:11:759 CPU/(4614:4614): CPU lista como servidor
+[INFO] 12:32:21:525 CPU/(4614:4614): Cliente conectado (a CPU)
+
+[INFO] 12:32:34:438 CPU/(4614:4623): Se recibió pcb del Kernel.
+[WARNING] 12:32:34:439 CPU/(4614:4623): El cliente se desconecto de server CPU
+[INFO] 12:35:19:273 CPU/(4822:4822): Modulo CPU iniciado
+[INFO] 12:35:19:273 CPU/(4822:4822): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:35:19:274 CPU/(4822:4822): CPU lista como servidor
+[INFO] 12:35:30:062 CPU/(4830:4830): Modulo CPU iniciado
+[INFO] 12:35:30:062 CPU/(4830:4830): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:35:30:062 CPU/(4830:4830): CPU lista como servidor
+[INFO] 12:35:54:497 CPU/(4839:4839): Modulo CPU iniciado
+[INFO] 12:35:54:497 CPU/(4839:4839): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:35:54:497 CPU/(4839:4839): CPU lista como servidor
+[INFO] 12:37:20:583 CPU/(4918:4918): Modulo CPU iniciado
+[INFO] 12:37:20:583 CPU/(4918:4918): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:37:20:583 CPU/(4918:4918): CPU lista como servidor
+[INFO] 12:37:45:958 CPU/(4918:4918): Cliente conectado (a CPU)
+
+[INFO] 12:38:41:917 CPU/(4918:5025): Se recibió pcb del Kernel.
+[WARNING] 12:38:41:917 CPU/(4918:5025): El cliente se desconecto de server CPU
+[INFO] 12:38:52:256 CPU/(5070:5070): Modulo CPU iniciado
+[INFO] 12:38:52:256 CPU/(5070:5070): CPU lista como servidor
+[INFO] 12:38:52:257 CPU/(5070:5070): Cliente conectado (a CPU)
+
+[INFO] 12:38:52:257 CPU/(5070:5070): Módulo CPU finalizado.
+[INFO] 12:39:12:300 CPU/(5095:5095): Modulo CPU iniciado
+[INFO] 12:39:12:300 CPU/(5095:5095): CPU lista como servidor
+[INFO] 12:39:12:300 CPU/(5095:5095): Cliente conectado (a CPU)
+
+[INFO] 12:39:12:301 CPU/(5095:5095): Módulo CPU finalizado.
+[INFO] 12:39:27:887 CPU/(5099:5099): Modulo CPU iniciado
+[INFO] 12:39:27:888 CPU/(5099:5099): CPU lista como servidor
+[INFO] 12:39:27:888 CPU/(5099:5099): Cliente conectado (a CPU)
+
+[INFO] 12:39:27:888 CPU/(5099:5099): Módulo CPU finalizado.
+[INFO] 12:39:34:815 CPU/(5106:5106): Modulo CPU iniciado
+[INFO] 12:39:34:816 CPU/(5106:5106): CPU lista como servidor
+[INFO] 12:39:34:816 CPU/(5106:5106): Cliente conectado (a CPU)
+
+[INFO] 12:39:34:816 CPU/(5106:5106): Módulo CPU finalizado.
+[INFO] 12:39:46:387 CPU/(5116:5116): Modulo CPU iniciado
+[INFO] 12:39:46:388 CPU/(5116:5116): CPU lista como servidor
+[INFO] 12:39:46:388 CPU/(5116:5116): Cliente conectado (a CPU)
+
+[INFO] 12:39:46:388 CPU/(5116:5116): Módulo CPU finalizado.
+[INFO] 12:39:52:247 CPU/(5119:5119): Modulo CPU iniciado
+[INFO] 12:39:52:248 CPU/(5119:5119): CPU lista como servidor
+[INFO] 12:39:52:248 CPU/(5119:5119): Cliente conectado (a CPU)
+
+[INFO] 12:39:52:248 CPU/(5119:5119): Módulo CPU finalizado.
+[INFO] 12:40:08:237 CPU/(5125:5125): Modulo CPU iniciado
+[INFO] 12:40:08:237 CPU/(5125:5125): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:40:08:237 CPU/(5125:5125): CPU lista como servidor
+[INFO] 12:40:19:956 CPU/(5125:5125): Cliente conectado (a CPU)
+
+[INFO] 12:41:00:400 CPU/(5125:5215): Se recibió pcb del Kernel.
+[WARNING] 12:41:00:400 CPU/(5125:5215): El cliente se desconecto de server CPU
+=======
 [INFO] 12:02:34:360 CPU/(9621:9621): Modulo CPU iniciado
 [INFO] 12:02:34:370 CPU/(9621:9621): Socket cliente creado.
 [INFO] 12:02:34:370 CPU/(9621:9621): Request config memoria enviada.
@@ -58,3 +146,4 @@
 [INFO] 12:28:29:767 CPU/(12849:12849): CPU lista como servidor
 [INFO] 12:28:29:767 CPU/(12849:12849): Cliente conectado (a CPU)
 
+>>>>>>> main

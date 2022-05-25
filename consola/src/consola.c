@@ -26,8 +26,8 @@ int main(int argc, char** argv) {
 		return 0;
 	}
 
-	size_t size_proceso = 4;//atoi(argv[1]);
-	char* file_path = "pseudo/enunciado.txt";//argv[2];
+	size_t size_proceso = atoi(argv[1]);
+	char* file_path = (char*) argv[2];
 	
 	/*------------------ Parsear archivo de pseudocódigo ------------------*/
 	size_t read; //cantidad de caracteres leídos

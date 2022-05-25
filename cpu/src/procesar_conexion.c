@@ -22,9 +22,9 @@ void procesar_conexion(void* void_args) {
 
         case PCB:
             log_info(logger, "Se recibió pcb del Kernel.");
-            t_paquete* paquete = recibir_paquete(socket_cliente, header);
+            t_buffer* buffer = recibir_payload(socket_cliente);
 
-            t_PCB* pcb = buffer_take_PCB(paquete -> payload);  
+            t_PCB* pcb = buffer_take_PCB(buffer);  
             break;
 
         case -1:

@@ -26,7 +26,7 @@ int main(void) {
 
 	log_info(logger, "Kernel lista para recibir al cliente");
 	
-	while(server_escuchar(logger, "Kernel", server_fd, (void*)(*procesar_conexion)));
+	while(server_listen(logger, "Kernel", server_fd, (void*)(*procesar_conexion)));
 
 	finalizar_kernel(conexion_memoria, conexion_cpu, logger, kernel_config);
 	
