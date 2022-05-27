@@ -219,6 +219,7 @@ t_buffer* recibir_payload(int socket) {
     return buffer;
 }
 
+
 t_paquete* recibir_paquete(int socket){
     uint8_t header = recibir_header(socket);
     uint32_t tamanio_buffer;

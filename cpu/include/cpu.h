@@ -22,11 +22,9 @@
 	char* puerto_memoria;
 	char* pueto_escucha_dispatch;
 
-	t_log* logger;
 	t_config* config;
-	t_list* lista;
  
-    //esta función es para pedirle a memoria su configuración
-    void obtener_config_memoria();
+    // esta función es para pedirle a memoria su configuración
+    void obtener_config_memoria(t_log* logger);
 
 #endif /* CPU_H_ */

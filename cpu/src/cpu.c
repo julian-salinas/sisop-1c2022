@@ -2,13 +2,13 @@
 
 int main(void) {
 
-	logger = iniciar_logger("cfg/cpu.log", "CPU");
+	t_log* logger = iniciar_logger("cfg/cpu.log", "CPU");
 	log_info(logger,"Modulo CPU iniciado");
 
 	config = iniciar_config("cfg/cpu.config");
 	
 	// obtener valores ip y puerto del archivo config del módulo memoria
-	//obtener_config_memoria();	
+	obtener_config_memoria(logger);
 
 	//iniciar servidor cpu
 	int server_cpu = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8001");
@@ -21,7 +21,7 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 
-void obtener_config_memoria(){
+void obtener_config_memoria(t_log* logger){
 	ip_memoria = config_get_string_value(config, "IP_MEMORIA");
 	puerto_memoria = config_get_string_value(config, "PUERTO_MEMORIA");
 	conexion_memoria = crear_socket_cliente(ip_memoria, puerto_memoria);
@@ -31,5 +31,4 @@ void obtener_config_memoria(){
 	destruir_paquete(paquete);
 	liberar_socket_cliente(conexion_memoria);
 	log_info(logger, "Request config memoria enviada.");
-
 }
