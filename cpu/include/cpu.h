@@ -13,6 +13,7 @@
 
     // includes de shared
     #include "networking.h"
+    #include "serializacion.h"
     #include "config.h"
     #include "proceso.h"
     #include "utils.h"
@@ -26,5 +27,9 @@
  
     // esta función es para pedirle a memoria su configuración
     void obtener_config_memoria(t_log* logger);
+
+    uint8_t paginas_por_tabla;
+
+    t_paquete* paquete;
 
 #endif /* CPU_H_ */
