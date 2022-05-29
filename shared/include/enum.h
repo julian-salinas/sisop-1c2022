@@ -12,7 +12,9 @@
         PAQUETE,
         INSTRUCCIONES,
         CONEXION_CPU_MEMORIA,
-        PCB
+        PCB,
+        BLOQUEO,
+        FINALIZACION
     } codigo_operacion;
 
 #endif /* ENUM_H */

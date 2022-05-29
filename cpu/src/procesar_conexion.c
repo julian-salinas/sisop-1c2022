@@ -15,7 +15,7 @@ void procesar_conexion(void* void_args) {
         case CONEXION_CPU_MEMORIA:
             /* TODO
             / recibir paquete y guardar paginas por tabla y tamanio pagina */
-            paquete = recibir_paquete(socket_cliente, header);
+            paquete = recibir_paquete(socket_cliente);
             paginas_por_tabla = buffer_take_UINT8(paquete->payload);
             log_info(logger, "Se recibió configuración de memoria.");
             break;
@@ -23,8 +23,9 @@ void procesar_conexion(void* void_args) {
         case PCB:
             log_info(logger, "Se recibió pcb del Kernel.");
             t_buffer* buffer = recibir_payload(socket_cliente);
-
             t_PCB* pcb = buffer_take_PCB(buffer);  
+            //acá debería ir un mutex???
+            ejecutar_ciclo_instruccion(pcb);
             break;
 
         case -1:
