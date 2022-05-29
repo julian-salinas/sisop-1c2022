@@ -285,3 +285,9 @@
 [INFO] 12:28:29:768 memoria/(12728:12856): Config enviado.
 [WARNING] 12:28:29:768 memoria/(12728:12856): El cliente se desconecto de server memoria
 >>>>>>> main
+[INFO] 19:51:01:969 memoria/(11365:11365): Memoria iniciada
+[INFO] 19:51:01:970 memoria/(11365:11365): Escuchando en 127.0.0.1:8002 (memoria)
+
+[INFO] 19:51:01:971 memoria/(11365:11365): Memoria lista para recibir al cliente
+[INFO] 19:51:33:790 memoria/(11365:11365): Cliente conectado (a memoria)
+

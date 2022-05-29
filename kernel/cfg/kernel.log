@@ -306,3 +306,7 @@
 [INFO] 19:19:56:991 kernel/(5151:5151): Cliente conectado (a Kernel)
 
 [INFO] 19:20:21:822 kernel/(5151:5159): Se recibieron instrucciones
+[INFO] 19:51:33:787 kernel/(11413:11413): Kernel iniciado
+[INFO] 19:51:33:790 kernel/(11413:11413): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 19:51:33:791 kernel/(11413:11413): Kernel lista para recibir al cliente

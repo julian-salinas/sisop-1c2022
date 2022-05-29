@@ -6,7 +6,7 @@ int main(void) {
 	log_info(logger,"Modulo CPU iniciado");
 
 	//ini config
-	cpu_config = ini_cpu_config("cfg/memoria.config");
+	cpu_config = ini_cpu_config("cfg/cpu.config");
 	
 	// obtener valores ip y puerto del archivo config del módulo memoria
 	obtener_config_memoria(conexion_memoria);	
