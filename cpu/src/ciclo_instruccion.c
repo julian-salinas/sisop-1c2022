@@ -25,15 +25,15 @@ uint32_t buscar_operando(int direccion_logica){
     return 999;
 }
 
-int parametro_instruccion(t_instruccion* instruccion, int index){
-    return (int) list_get(instruccion,index);
+int parametro_instruccion(t_list* parametros_instruccion, int index){
+    return (int) list_get(parametros_instruccion,index);
 }
 
 void traer_operandos(t_instruccion* instruccion, int direccion_logica, uint32_t valor_2){
     //busca en memoria y carga en direccion_logica, valor_2 los valores correspondientes    
-    int direccion_logica_aux = parametro_instruccion(instruccion,2);
+    int direccion_logica_aux = parametro_instruccion(instruccion->parametros,1);
     valor_2 = buscar_operando(direccion_logica_aux);
-    direccion_logica = parametro_instruccion(instruccion,1);
+    direccion_logica = parametro_instruccion(instruccion->parametros,0);
 }
 
 void ejecutar_ciclo_instruccion(t_PCB* pcb){
@@ -48,7 +48,7 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
     //Decode
     switch (instruccion->identificador){
         case NO_OP:
-            sleep_time = cpu_config->retardo_noop * parametro_instruccion(instruccion,1); 
+            sleep_time = cpu_config->retardo_noop * parametro_instruccion(instruccion->parametros,0); 
             //Execute
             sleep(sleep_time);
         break;
@@ -56,14 +56,14 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
             // se bloquea
         break;
         case READ:
-            direccion_logica = parametro_instruccion(instruccion,1);
+            direccion_logica = parametro_instruccion(instruccion->parametros,0);
             valor = buscar_operando(direccion_logica);
             //Execute
             printf("%d",valor);
         break;
         case WRITE:
-            direccion_logica = parametro_instruccion(instruccion,1);
-            valor=parametro_instruccion(instruccion,2);
+            direccion_logica = parametro_instruccion(instruccion->parametros,0);
+            valor=parametro_instruccion(instruccion->parametros,1);
             //Execute
             escribir_operando(direccion_logica, valor);
         break;
