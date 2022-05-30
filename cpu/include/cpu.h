@@ -10,7 +10,8 @@
 
     // includes del módulo
     #include "procesar_conexion.h"
-
+    #include "cpu_config.h"
+    #include "ciclo_instruccion.h"
     // includes de shared
     #include "networking.h"
     #include "serializacion.h"
@@ -18,6 +19,7 @@
     #include "proceso.h"
     #include "utils.h"
 
+    t_cpu_config* cpu_config;
     int conexion_memoria;
 	char* ip_memoria;
 	char* puerto_memoria;
@@ -29,7 +31,8 @@
     void obtener_config_memoria(t_log* logger);
 
     uint8_t paginas_por_tabla;
+    //falta también recibir uint8_t tamanio_pagina;
 
-    t_paquete* paquete;
+    int interrupcion; //0 el kernel no envio interrupcion, 1 interrumpir ejecución
 
 #endif /* CPU_H_ */
