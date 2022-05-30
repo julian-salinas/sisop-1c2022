@@ -310,3 +310,11 @@
 [INFO] 19:51:33:790 kernel/(11413:11413): Escuchando en 127.0.0.1:8000 (Kernel)
 
 [INFO] 19:51:33:791 kernel/(11413:11413): Kernel lista para recibir al cliente
+[INFO] 11:52:23:175 kernel/(10561:10561): Kernel iniciado
+[INFO] 11:52:23:200 kernel/(10561:10561): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 11:52:23:207 kernel/(10561:10561): Kernel lista para recibir al cliente
+[INFO] 11:53:09:309 kernel/(10561:10561): Cliente conectado (a Kernel)
+
+[INFO] 11:53:09:319 kernel/(10561:10658): Se recibieron instrucciones
+[WARNING] 11:53:09:342 kernel/(10561:10658): El cliente se desconecto de server Kernel

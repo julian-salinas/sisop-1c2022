@@ -18,13 +18,14 @@ int main(void) {
 	while(server_listen(logger, "CPU", server_cpu, (void*)(*procesar_conexion)));
 
 	terminar_programa("CPU", server_cpu, logger);
+	destruir_cpu_config(cpu_config);
 
 	return EXIT_SUCCESS;
 }
 
 void obtener_config_memoria(int conexion_memoria){
 
-	conexion_memoria = crear_socket_cliente(cpu_config->ip_memoria,(char*)&cpu_config->puerto_memoria);
+	conexion_memoria = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_memoria);
 	log_info(logger, "Socket cliente creado.");
 	t_paquete* paquete = crear_paquete(CONEXION_CPU_MEMORIA, sizeof(uint8_t)*2);
 	enviar_paquete(conexion_memoria,paquete);
