@@ -21,14 +21,14 @@
 
     t_cpu_config* cpu_config;
     int conexion_memoria;
-    
-	t_log* logger;
-	t_config* config;
-	t_list* lista;
-    t_paquete* paquete;
+	char* ip_memoria;
+	char* puerto_memoria;
+	char* pueto_escucha_dispatch;
 
-    //esta función es para pedirle a memoria su configuración
-    void obtener_config_memoria();
+	t_config* config;
+ 
+    // esta función es para pedirle a memoria su configuración
+    void obtener_config_memoria(t_log* logger);
 
     uint8_t paginas_por_tabla;
     //falta también recibir uint8_t tamanio_pagina;

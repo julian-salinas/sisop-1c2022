@@ -18,16 +18,16 @@ int main(int argc, char** argv) {
 
 	conexion_kernel = crear_socket_cliente(consola_config -> ip_kernel,consola_config -> puerto_kernel);
 
-	// Validar que se haya enviado tamanio del proceso y path a archivo de pseudocódigo
-	if (argc < 3) {
-		log_info(logger, "No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}");
-		terminar_programa("Consola", conexion_kernel, logger);
-		destruir_consola_config(consola_config);
-		return 0;
-	}
+	// // Validar que se haya enviado tamanio del proceso y path a archivo de pseudocódigo
+	// if (argc < 3) {
+	// 	log_info(logger, "No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}");
+	// 	terminar_programa("Consola", conexion_kernel, logger);
+	// 	destruir_consola_config(consola_config);
+	// 	return 0;
+	// }
 
-	size_t size_proceso = atoi(argv[1]);
-	char* file_path = (char*) argv[2];
+	size_t size_proceso = 10; //atoi(argv[1]);
+	char* file_path = "pseudo/enunciado.txt"; // (char*) argv[2];
 	
 	/*------------------ Parsear archivo de pseudocódigo ------------------*/
 	size_t read; //cantidad de caracteres leídos
@@ -54,10 +54,21 @@ int main(int argc, char** argv) {
 		char** tokens = string_split(t, " "); 
 
 		// Agregar a la lista el indentificador y los parámetros de la instrucción 
-		int i = 0; 
+		int param, i = 0;
+
 		while(tokens[i] != NULL){ 
 			log_info(logger, "Se agregó el token %s", tokens[i]); 
-			list_add(lines, (void*) tokens[i]);
+
+			if (i >= 1) {
+				param = atoi(tokens[i]);
+				list_add(lines, param);
+			}
+
+			else {
+				param = (void*) tokens[i];
+				list_add(lines, (void*) tokens[i]);
+			}
+
             i++;
         }
 

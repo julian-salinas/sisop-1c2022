@@ -2,6 +2,8 @@
 
 int main(void) {
 
+	inicializar_semaforos();
+
 	// Inicializo contador de Procesos para PCB
 	contador_id_proceso = 1;
 	
@@ -41,3 +43,8 @@ void finalizar_kernel(int conexion, int otraConexion, t_log* logger, t_kernel_co
 	destruir_kernel_config(config);
 }
 
+void inicializar_semaforos() {
+	mutex_contador_id_proceso = malloc(sizeof(pthread_mutex_t));
+
+	pthread_mutex_init(mutex_contador_id_proceso, NULL);
+}

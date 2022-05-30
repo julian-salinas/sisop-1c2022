@@ -1,6 +1,5 @@
 #include "procesar_conexion.h"
 
-
 void procesar_conexion(void* void_args) {
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* logger = args->log;
@@ -19,9 +18,6 @@ void procesar_conexion(void* void_args) {
 
             t_proceso* proceso = buffer_take_PROCESO(payload);                
             
-            // Podés descomentar esto en caso de ser un desconfiado y querer apreciar algo de lo que llegó
-            t_instruccion* instruccion = list_get(proceso -> lista_instrucciones, 0);
-
             t_PCB* pcb = crear_PCB(proceso);
             enviar_pcb(conexion_cpu,pcb); 
             break;  
@@ -48,6 +44,11 @@ t_PCB* crear_PCB(t_proceso* proceso) {
     pcb -> program_counter = 0;
     pcb -> tabla_paginas = -1; //recien cuando esté en READY
     pcb -> estimacion_rafaga = estimacion_rafaga_inicial;
+
+    pthread_mutex_lock(&mutex_contador_id_proceso);
     contador_id_proceso++;
+    pthread_mutex_unlock(&mutex_contador_id_proceso);
+    
     return pcb;
+
 }

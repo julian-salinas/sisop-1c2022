@@ -24,7 +24,6 @@
 
 [INFO] 00:51:18:349 CPU/(21310:21319): Se recibió pcb del Kernel.
 [WARNING] 00:51:18:349 CPU/(21310:21319): El cliente se desconecto de server CPU
-<<<<<<< HEAD
 [INFO] 12:30:02:555 CPU/(4160:4160): Modulo CPU iniciado
 [INFO] 12:30:02:557 CPU/(4160:4160): Escuchando en 127.0.0.1:8001 (CPU)
 
@@ -111,7 +110,6 @@
 
 [INFO] 12:41:00:400 CPU/(5125:5215): Se recibió pcb del Kernel.
 [WARNING] 12:41:00:400 CPU/(5125:5215): El cliente se desconecto de server CPU
-=======
 [INFO] 12:02:34:360 CPU/(9621:9621): Modulo CPU iniciado
 [INFO] 12:02:34:370 CPU/(9621:9621): Socket cliente creado.
 [INFO] 12:02:34:370 CPU/(9621:9621): Request config memoria enviada.
@@ -146,7 +144,6 @@
 [INFO] 12:28:29:767 CPU/(12849:12849): CPU lista como servidor
 [INFO] 12:28:29:767 CPU/(12849:12849): Cliente conectado (a CPU)
 
->>>>>>> main
 [INFO] 19:51:15:763 CPU/(11387:11387): Modulo CPU iniciado
 [INFO] 19:51:39:019 CPU/(11424:11424): Modulo CPU iniciado
 [INFO] 11:09:42:294 CPU/(4586:4586): Modulo CPU iniciado
