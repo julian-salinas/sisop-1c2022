@@ -398,3 +398,18 @@
 [INFO] 11:53:09:319 kernel/(10561:10658): Se recibieron instrucciones
 [WARNING] 11:53:09:342 kernel/(10561:10658): El cliente se desconecto de server Kernel
 >>>>>>> main
+[INFO] 20:13:30:506 kernel/(13546:13546): Kernel iniciado
+[INFO] 20:13:30:510 kernel/(13546:13546): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 20:13:30:510 kernel/(13546:13546): Kernel lista para recibir al cliente
+[INFO] 20:13:41:806 kernel/(13546:13546): Cliente conectado (a Kernel)
+
+[ERROR] 20:13:41:808 kernel/(13546:13604): Algo anduvo mal en el server de Kernel
+[INFO] 20:13:41:811 kernel/(13546:13604): Cop: 183
+[INFO] 20:14:12:693 kernel/(13641:13641): Kernel iniciado
+[INFO] 20:14:12:700 kernel/(13641:13641): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 20:14:12:700 kernel/(13641:13641): Kernel lista para recibir al cliente
+[INFO] 20:14:16:674 kernel/(13641:13641): Cliente conectado (a Kernel)
+
+[INFO] 20:14:16:679 kernel/(13641:13652): Se recibieron instrucciones

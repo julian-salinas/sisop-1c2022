@@ -1209,3 +1209,22 @@
 [INFO] 11:53:09:316 Consola/(10657:10657): Se agregó el token EXIT
 [INFO] 11:53:09:316 Consola/(10657:10657): Lista de instrucciones enviada.
 [INFO] 11:53:09:316 Consola/(10657:10657): Módulo Consola finalizado.
+[INFO] 20:13:41:805 Consola/(13603:13603): Consola iniciada
+[INFO] 20:13:41:806 Consola/(13603:13603): No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}
+[INFO] 20:13:41:806 Consola/(13603:13603): Módulo Consola finalizado.
+[INFO] 20:14:16:668 Consola/(13651:13651): Consola iniciada
+[INFO] 20:14:16:674 Consola/(13651:13651): Se agregó el token NO_OP
+[INFO] 20:14:16:675 Consola/(13651:13651): Se agregó el token 5
+[INFO] 20:14:16:675 Consola/(13651:13651): Se agregó el token I/O
+[INFO] 20:14:16:675 Consola/(13651:13651): Se agregó el token 3000
+[INFO] 20:14:16:675 Consola/(13651:13651): Se agregó el token WRITE
+[INFO] 20:14:16:675 Consola/(13651:13651): Se agregó el token 4
+[INFO] 20:14:16:676 Consola/(13651:13651): Se agregó el token 42
+[INFO] 20:14:16:677 Consola/(13651:13651): Se agregó el token COPY
+[INFO] 20:14:16:677 Consola/(13651:13651): Se agregó el token 0
+[INFO] 20:14:16:677 Consola/(13651:13651): Se agregó el token 4
+[INFO] 20:14:16:677 Consola/(13651:13651): Se agregó el token READ
+[INFO] 20:14:16:677 Consola/(13651:13651): Se agregó el token 0
+[INFO] 20:14:16:679 Consola/(13651:13651): Se agregó el token EXIT
+[INFO] 20:14:16:679 Consola/(13651:13651): Lista de instrucciones enviada.
+[INFO] 20:14:16:680 Consola/(13651:13651): Módulo Consola finalizado.

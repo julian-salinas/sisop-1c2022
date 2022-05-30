@@ -9,6 +9,7 @@
     // includes del módulo
     #include "procesar_conexion.h"
     #include "kernel_config.h"
+    #include "planificador_kernel.h"
 
     // includes de shared
     #include "networking.h"
