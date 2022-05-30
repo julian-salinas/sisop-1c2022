@@ -18,9 +18,6 @@ void procesar_conexion(void* void_args) {
 
             t_proceso* proceso = buffer_take_PROCESO(payload);                
             
-            // Podés descomentar esto en caso de ser un desconfiado y querer apreciar algo de lo que llegó
-            t_instruccion* instruccion = list_get(proceso -> lista_instrucciones, 0);
-
             t_PCB* pcb = crear_PCB(proceso);
             enviar_pcb(conexion_cpu,pcb); 
             break;  

@@ -63,7 +63,7 @@ kernel/.vscode/
 memoria/.vscode/
 cpu/.vscode/
 
-.# Agrego esto acá todo croto para que no se comiteen los 
+# Agrego esto acá todo croto para que no se comiteen los 
 consola/cfg/consola.log
 cpu/cfg/cpu.log
 kernel/cfg/kernel.log

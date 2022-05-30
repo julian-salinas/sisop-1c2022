@@ -306,3 +306,80 @@
 [INFO] 19:19:56:991 kernel/(5151:5151): Cliente conectado (a Kernel)
 
 [INFO] 19:20:21:822 kernel/(5151:5159): Se recibieron instrucciones
+[INFO] 18:00:06:520 kernel/(3628:3628): Kernel iniciado
+[INFO] 18:00:06:521 kernel/(3628:3628): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:00:06:522 kernel/(3628:3628): Kernel lista para recibir al cliente
+[INFO] 18:00:17:841 kernel/(3628:3628): Cliente conectado (a Kernel)
+
+[INFO] 18:00:20:650 kernel/(3628:3649): Se recibieron instrucciones
+[INFO] 18:02:09:522 kernel/(4069:4069): Kernel iniciado
+[INFO] 18:02:09:526 kernel/(4069:4069): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:02:09:527 kernel/(4069:4069): Kernel lista para recibir al cliente
+[INFO] 18:02:14:710 kernel/(4069:4069): Cliente conectado (a Kernel)
+
+[INFO] 18:02:14:728 kernel/(4069:4081): Se recibieron instrucciones
+[INFO] 18:02:53:306 kernel/(4130:4130): Kernel iniciado
+[INFO] 18:02:53:309 kernel/(4130:4130): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:02:53:313 kernel/(4130:4130): Kernel lista para recibir al cliente
+[INFO] 18:02:55:675 kernel/(4130:4130): Cliente conectado (a Kernel)
+
+[INFO] 18:02:55:679 kernel/(4130:4133): Se recibieron instrucciones
+[INFO] 18:02:55:691 kernel/(4130:4133): parametro 140104224
+[INFO] 18:03:15:184 kernel/(4179:4179): Kernel iniciado
+[INFO] 18:03:15:185 kernel/(4179:4179): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:03:15:185 kernel/(4179:4179): Kernel lista para recibir al cliente
+[INFO] 18:03:18:159 kernel/(4198:4198): Kernel iniciado
+[INFO] 18:03:18:163 kernel/(4198:4198): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:03:18:163 kernel/(4198:4198): Kernel lista para recibir al cliente
+[INFO] 18:03:21:662 kernel/(4198:4198): Cliente conectado (a Kernel)
+
+[INFO] 18:03:21:675 kernel/(4198:4202): Se recibieron instrucciones
+[INFO] 18:03:21:676 kernel/(4198:4202): parametro 136122912
+[INFO] 18:31:26:266 kernel/(7047:7047): Kernel iniciado
+[INFO] 18:31:26:268 kernel/(7047:7047): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:31:26:269 kernel/(7047:7047): Kernel lista para recibir al cliente
+[INFO] 18:31:30:121 kernel/(7047:7047): Cliente conectado (a Kernel)
+
+[ERROR] 18:31:30:405 kernel/(7047:7054): Algo anduvo mal en el server de Kernel
+[INFO] 18:31:30:405 kernel/(7047:7054): Cop: 183
+[INFO] 18:31:59:070 kernel/(7047:7047): Cliente conectado (a Kernel)
+
+[ERROR] 18:31:59:348 kernel/(7047:7082): Algo anduvo mal en el server de Kernel
+[INFO] 18:31:59:349 kernel/(7047:7082): Cop: 183
+[INFO] 18:32:27:069 kernel/(7164:7164): Kernel iniciado
+[INFO] 18:32:27:070 kernel/(7164:7164): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:32:27:070 kernel/(7164:7164): Kernel lista para recibir al cliente
+[INFO] 18:32:31:589 kernel/(7164:7164): Cliente conectado (a Kernel)
+
+[INFO] 18:34:49:610 kernel/(7464:7464): Kernel iniciado
+[INFO] 18:34:49:610 kernel/(7464:7464): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:34:49:611 kernel/(7464:7464): Kernel lista para recibir al cliente
+[INFO] 18:34:56:498 kernel/(7464:7464): Cliente conectado (a Kernel)
+
+[INFO] 18:34:56:516 kernel/(7464:7482): Se recibieron instrucciones
+[INFO] 18:34:56:517 kernel/(7464:7482): parametro 5
+[INFO] 18:35:28:077 kernel/(7529:7529): Kernel iniciado
+[INFO] 18:35:28:080 kernel/(7529:7529): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:35:28:081 kernel/(7529:7529): Kernel lista para recibir al cliente
+[INFO] 18:35:32:110 kernel/(7529:7529): Cliente conectado (a Kernel)
+
+[INFO] 18:35:32:120 kernel/(7529:7540): Se recibieron instrucciones
+[INFO] 18:35:32:121 kernel/(7529:7540): parametro 3000
+[INFO] 18:36:01:854 kernel/(7589:7589): Kernel iniciado
+[INFO] 18:36:01:856 kernel/(7589:7589): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 18:36:01:857 kernel/(7589:7589): Kernel lista para recibir al cliente
+[INFO] 18:36:04:278 kernel/(7589:7589): Cliente conectado (a Kernel)
+
+[INFO] 18:36:04:300 kernel/(7589:7593): Se recibieron instrucciones
+[INFO] 18:36:04:301 kernel/(7589:7593): parametro 4
+[INFO] 18:36:04:301 kernel/(7589:7593): parametro 42

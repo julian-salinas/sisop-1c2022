@@ -946,3 +946,250 @@
 [INFO] 19:19:56:995 Consola/(5158:5158): Se agregó el token EXIT
 [INFO] 19:19:56:995 Consola/(5158:5158): Lista de instrucciones enviada.
 [INFO] 19:19:56:995 Consola/(5158:5158): Módulo Consola finalizado.
+[INFO] 18:00:17:840 Consola/(3648:3648): Consola iniciada
+[INFO] 18:00:17:845 Consola/(3648:3648): Se agregó el token NO_OP
+[INFO] 18:00:17:845 Consola/(3648:3648): Se agregó el token 5
+[INFO] 18:00:17:845 Consola/(3648:3648): Se agregó el token I/O
+[INFO] 18:00:17:845 Consola/(3648:3648): Se agregó el token 3000
+[INFO] 18:00:17:848 Consola/(3648:3648): Se agregó el token WRITE
+[INFO] 18:00:17:848 Consola/(3648:3648): Se agregó el token 4
+[INFO] 18:00:17:848 Consola/(3648:3648): Se agregó el token 42
+[INFO] 18:00:17:848 Consola/(3648:3648): Se agregó el token COPY
+[INFO] 18:00:17:848 Consola/(3648:3648): Se agregó el token 0
+[INFO] 18:00:17:848 Consola/(3648:3648): Se agregó el token 4
+[INFO] 18:00:17:848 Consola/(3648:3648): Se agregó el token READ
+[INFO] 18:00:17:849 Consola/(3648:3648): Se agregó el token 0
+[INFO] 18:00:17:849 Consola/(3648:3648): Se agregó el token EXIT
+[INFO] 18:00:17:849 Consola/(3648:3648): Lista de instrucciones enviada.
+[INFO] 18:00:17:849 Consola/(3648:3648): Módulo Consola finalizado.
+[INFO] 18:02:14:710 Consola/(4080:4080): Consola iniciada
+[INFO] 18:02:14:711 Consola/(4080:4080): Se agregó el token NO_OP
+[INFO] 18:02:14:711 Consola/(4080:4080): Se agregó el token 5
+[INFO] 18:02:14:712 Consola/(4080:4080): Se agregó el token I/O
+[INFO] 18:02:14:712 Consola/(4080:4080): Se agregó el token 3000
+[INFO] 18:02:14:712 Consola/(4080:4080): Se agregó el token WRITE
+[INFO] 18:02:14:716 Consola/(4080:4080): Se agregó el token 4
+[INFO] 18:02:14:717 Consola/(4080:4080): Se agregó el token 42
+[INFO] 18:02:14:717 Consola/(4080:4080): Se agregó el token COPY
+[INFO] 18:02:14:717 Consola/(4080:4080): Se agregó el token 0
+[INFO] 18:02:14:717 Consola/(4080:4080): Se agregó el token 4
+[INFO] 18:02:14:717 Consola/(4080:4080): Se agregó el token READ
+[INFO] 18:02:14:717 Consola/(4080:4080): Se agregó el token 0
+[INFO] 18:02:14:717 Consola/(4080:4080): Se agregó el token EXIT
+[INFO] 18:02:14:718 Consola/(4080:4080): Lista de instrucciones enviada.
+[INFO] 18:02:14:718 Consola/(4080:4080): Módulo Consola finalizado.
+[INFO] 18:02:55:674 Consola/(4132:4132): Consola iniciada
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token NO_OP
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token 5
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token I/O
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token 3000
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token WRITE
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token 4
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token 42
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token COPY
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token 0
+[INFO] 18:02:55:677 Consola/(4132:4132): Se agregó el token 4
+[INFO] 18:02:55:678 Consola/(4132:4132): Se agregó el token READ
+[INFO] 18:02:55:678 Consola/(4132:4132): Se agregó el token 0
+[INFO] 18:02:55:678 Consola/(4132:4132): Se agregó el token EXIT
+[INFO] 18:02:55:678 Consola/(4132:4132): Lista de instrucciones enviada.
+[INFO] 18:02:55:678 Consola/(4132:4132): Módulo Consola finalizado.
+[INFO] 18:03:21:661 Consola/(4201:4201): Consola iniciada
+[INFO] 18:03:21:663 Consola/(4201:4201): Se agregó el token NO_OP
+[INFO] 18:03:21:664 Consola/(4201:4201): Se agregó el token 5
+[INFO] 18:03:21:664 Consola/(4201:4201): Se agregó el token I/O
+[INFO] 18:03:21:668 Consola/(4201:4201): Se agregó el token 3000
+[INFO] 18:03:21:668 Consola/(4201:4201): Se agregó el token WRITE
+[INFO] 18:03:21:668 Consola/(4201:4201): Se agregó el token 4
+[INFO] 18:03:21:668 Consola/(4201:4201): Se agregó el token 42
+[INFO] 18:03:21:668 Consola/(4201:4201): Se agregó el token COPY
+[INFO] 18:03:21:671 Consola/(4201:4201): Se agregó el token 0
+[INFO] 18:03:21:671 Consola/(4201:4201): Se agregó el token 4
+[INFO] 18:03:21:671 Consola/(4201:4201): Se agregó el token READ
+[INFO] 18:03:21:671 Consola/(4201:4201): Se agregó el token 0
+[INFO] 18:03:21:671 Consola/(4201:4201): Se agregó el token EXIT
+[INFO] 18:03:21:671 Consola/(4201:4201): Lista de instrucciones enviada.
+[INFO] 18:03:21:672 Consola/(4201:4201): Módulo Consola finalizado.
+[INFO] 18:08:06:773 Consola/(4982:4982): Consola iniciada
+[INFO] 18:08:06:774 Consola/(4982:4982): Se agregó el token NO_OP
+[INFO] 18:08:06:774 Consola/(4982:4982): Se agregó el token 5
+[INFO] 18:08:36:577 Consola/(5078:5078): Consola iniciada
+[INFO] 18:08:57:400 Consola/(5078:5078): Se agregó el token NO_OP
+[INFO] 18:09:06:816 Consola/(5078:5078): Se agregó el token 5
+[INFO] 18:12:33:812 Consola/(5326:5326): Consola iniciada
+[INFO] 18:12:33:813 Consola/(5326:5326): Se agregó el token NO_OP
+[INFO] 18:12:33:813 Consola/(5326:5326): Se agregó el token 5
+[INFO] 18:14:18:212 Consola/(5465:5465): Consola iniciada
+[INFO] 18:14:18:212 Consola/(5465:5465): Se agregó el token NO_OP
+[INFO] 18:14:34:029 Consola/(5465:5465): Se agregó el token 5
+[INFO] 18:15:04:741 Consola/(5556:5556): Consola iniciada
+[INFO] 18:15:04:741 Consola/(5556:5556): Se agregó el token NO_OP
+[INFO] 18:15:05:516 Consola/(5556:5556): Se agregó el token 5
+[INFO] 18:16:10:506 Consola/(5696:5696): Consola iniciada
+[INFO] 18:16:12:885 Consola/(5696:5696): Se agregó el token NO_OP
+[INFO] 18:16:21:337 Consola/(5696:5696): Se agregó el token 5
+[INFO] 18:19:02:686 Consola/(5849:5849): Consola iniciada
+[INFO] 18:19:25:248 Consola/(5849:5849): Se agregó el token NO_OP
+[INFO] 18:19:33:952 Consola/(5849:5849): Se agregó el token 5
+[INFO] 18:21:37:058 Consola/(5995:5995): Consola iniciada
+[INFO] 18:21:37:058 Consola/(5995:5995): Se agregó el token NO_OP
+[INFO] 18:21:37:058 Consola/(5995:5995): Se agregó el token 5
+[INFO] 18:22:08:811 Consola/(6120:6120): Consola iniciada
+[INFO] 18:22:08:811 Consola/(6120:6120): Se agregó el token NO_OP
+[INFO] 18:22:08:811 Consola/(6120:6120): Se agregó el token 5
+[INFO] 18:22:11:052 Consola/(6120:6120): parametro: 134537760
+[INFO] 18:23:01:089 Consola/(6236:6236): Consola iniciada
+[INFO] 18:23:01:089 Consola/(6236:6236): Se agregó el token NO_OP
+[INFO] 18:23:01:089 Consola/(6236:6236): Se agregó el token 5
+[INFO] 18:23:01:089 Consola/(6236:6236): parametro: 134537760
+[INFO] 18:24:00:741 Consola/(6363:6363): Consola iniciada
+[INFO] 18:24:00:742 Consola/(6363:6363): Se agregó el token NO_OP
+[INFO] 18:24:00:742 Consola/(6363:6363): Se agregó el token 5
+[INFO] 18:24:05:417 Consola/(6363:6363): parametro: 134537760
+[INFO] 18:24:54:952 Consola/(6527:6527): Consola iniciada
+[INFO] 18:24:54:952 Consola/(6527:6527): Se agregó el token NO_OP
+[INFO] 18:26:23:380 Consola/(6648:6648): Consola iniciada
+[INFO] 18:26:23:381 Consola/(6648:6648): Se agregó el token NO_OP
+[INFO] 18:26:44:584 Consola/(6648:6648): Se agregó el token 5
+[INFO] 18:29:39:041 Consola/(6907:6907): Consola iniciada
+[INFO] 18:29:39:042 Consola/(6907:6907): Se agregó el token NO_OP
+[INFO] 18:29:39:042 Consola/(6907:6907): Se agregó el token 5
+[INFO] 18:29:45:749 Consola/(6907:6907): parametro: 5
+[INFO] 18:31:30:121 Consola/(7053:7053): Consola iniciada
+[INFO] 18:31:30:123 Consola/(7053:7053): Se agregó el token NO_OP
+[INFO] 18:31:30:123 Consola/(7053:7053): Se agregó el token 5
+[INFO] 18:31:30:123 Consola/(7053:7053): parametro: 5
+[INFO] 18:31:30:124 Consola/(7053:7053): Se agregó el token I/O
+[INFO] 18:31:30:134 Consola/(7053:7053): Se agregó el token 3000
+[INFO] 18:31:30:136 Consola/(7053:7053): parametro: 3000
+[INFO] 18:31:30:136 Consola/(7053:7053): Se agregó el token WRITE
+[INFO] 18:31:30:136 Consola/(7053:7053): Se agregó el token 4
+[INFO] 18:31:30:136 Consola/(7053:7053): Se agregó el token 42
+[INFO] 18:31:30:136 Consola/(7053:7053): parametro: 4
+[INFO] 18:31:30:137 Consola/(7053:7053): Se agregó el token COPY
+[INFO] 18:31:30:137 Consola/(7053:7053): Se agregó el token 0
+[INFO] 18:31:30:137 Consola/(7053:7053): Se agregó el token 4
+[INFO] 18:31:30:137 Consola/(7053:7053): parametro: 0
+[INFO] 18:31:30:137 Consola/(7053:7053): Se agregó el token READ
+[INFO] 18:31:30:137 Consola/(7053:7053): Se agregó el token 0
+[INFO] 18:31:30:137 Consola/(7053:7053): parametro: 0
+[INFO] 18:31:30:137 Consola/(7053:7053): Se agregó el token EXIT
+[INFO] 18:31:59:069 Consola/(7081:7081): Consola iniciada
+[INFO] 18:31:59:072 Consola/(7081:7081): Se agregó el token NO_OP
+[INFO] 18:31:59:072 Consola/(7081:7081): Se agregó el token 5
+[INFO] 18:31:59:072 Consola/(7081:7081): parametro: 5
+[INFO] 18:31:59:072 Consola/(7081:7081): Se agregó el token I/O
+[INFO] 18:31:59:083 Consola/(7081:7081): Se agregó el token 3000
+[INFO] 18:31:59:084 Consola/(7081:7081): parametro: 3000
+[INFO] 18:31:59:084 Consola/(7081:7081): Se agregó el token WRITE
+[INFO] 18:31:59:084 Consola/(7081:7081): Se agregó el token 4
+[INFO] 18:31:59:084 Consola/(7081:7081): Se agregó el token 42
+[INFO] 18:31:59:084 Consola/(7081:7081): parametro: 4
+[INFO] 18:31:59:084 Consola/(7081:7081): Se agregó el token COPY
+[INFO] 18:31:59:084 Consola/(7081:7081): Se agregó el token 0
+[INFO] 18:31:59:084 Consola/(7081:7081): Se agregó el token 4
+[INFO] 18:31:59:084 Consola/(7081:7081): parametro: 0
+[INFO] 18:31:59:085 Consola/(7081:7081): Se agregó el token READ
+[INFO] 18:31:59:085 Consola/(7081:7081): Se agregó el token 0
+[INFO] 18:31:59:085 Consola/(7081:7081): parametro: 0
+[INFO] 18:31:59:085 Consola/(7081:7081): Se agregó el token EXIT
+[INFO] 18:32:31:589 Consola/(7181:7181): Consola iniciada
+[INFO] 18:32:31:589 Consola/(7181:7181): Se agregó el token NO_OP
+[INFO] 18:32:31:590 Consola/(7181:7181): Se agregó el token 5
+[INFO] 18:32:31:595 Consola/(7181:7181): parametro: 5
+[INFO] 18:32:31:596 Consola/(7181:7181): Se agregó el token I/O
+[INFO] 18:32:31:596 Consola/(7181:7181): Se agregó el token 3000
+[INFO] 18:32:31:596 Consola/(7181:7181): parametro: 3000
+[INFO] 18:32:31:596 Consola/(7181:7181): Se agregó el token WRITE
+[INFO] 18:32:31:596 Consola/(7181:7181): Se agregó el token 4
+[INFO] 18:32:31:597 Consola/(7181:7181): Se agregó el token 42
+[INFO] 18:32:31:597 Consola/(7181:7181): parametro: 4
+[INFO] 18:32:31:597 Consola/(7181:7181): Se agregó el token COPY
+[INFO] 18:32:31:597 Consola/(7181:7181): Se agregó el token 0
+[INFO] 18:32:31:598 Consola/(7181:7181): Se agregó el token 4
+[INFO] 18:32:31:601 Consola/(7181:7181): parametro: 0
+[INFO] 18:32:31:601 Consola/(7181:7181): Se agregó el token READ
+[INFO] 18:32:31:601 Consola/(7181:7181): Se agregó el token 0
+[INFO] 18:32:31:602 Consola/(7181:7181): parametro: 0
+[INFO] 18:32:31:602 Consola/(7181:7181): Se agregó el token EXIT
+[INFO] 18:34:16:299 Consola/(7325:7325): Consola iniciada
+[INFO] 18:34:16:299 Consola/(7325:7325): Se agregó el token NO_OP
+[INFO] 18:34:16:299 Consola/(7325:7325): Se agregó el token 5
+[INFO] 18:34:16:299 Consola/(7325:7325): parametro: 5
+[INFO] 18:34:21:111 Consola/(7325:7325): Se agregó el token I/O
+[INFO] 18:34:21:111 Consola/(7325:7325): Se agregó el token 3000
+[INFO] 18:34:21:111 Consola/(7325:7325): parametro: 3000
+[INFO] 18:34:23:710 Consola/(7325:7325): Se agregó el token WRITE
+[INFO] 18:34:23:710 Consola/(7325:7325): Se agregó el token 4
+[INFO] 18:34:23:710 Consola/(7325:7325): Se agregó el token 42
+[INFO] 18:34:23:710 Consola/(7325:7325): parametro: 4
+[INFO] 18:34:23:710 Consola/(7325:7325): Se agregó el token COPY
+[INFO] 18:34:23:711 Consola/(7325:7325): Se agregó el token 0
+[INFO] 18:34:23:711 Consola/(7325:7325): Se agregó el token 4
+[INFO] 18:34:23:711 Consola/(7325:7325): parametro: 0
+[INFO] 18:34:23:711 Consola/(7325:7325): Se agregó el token READ
+[INFO] 18:34:23:711 Consola/(7325:7325): Se agregó el token 0
+[INFO] 18:34:23:711 Consola/(7325:7325): parametro: 0
+[INFO] 18:34:23:711 Consola/(7325:7325): Se agregó el token EXIT
+[INFO] 18:34:41:362 Consola/(7449:7449): Consola iniciada
+[INFO] 18:34:41:363 Consola/(7449:7449): Se agregó el token NO_OP
+[INFO] 18:34:41:363 Consola/(7449:7449): Se agregó el token 5
+[INFO] 18:34:41:363 Consola/(7449:7449): Se agregó el token I/O
+[INFO] 18:34:41:363 Consola/(7449:7449): Se agregó el token 3000
+[INFO] 18:34:41:363 Consola/(7449:7449): Se agregó el token WRITE
+[INFO] 18:34:41:363 Consola/(7449:7449): Se agregó el token 4
+[INFO] 18:34:41:363 Consola/(7449:7449): Se agregó el token 42
+[INFO] 18:34:41:363 Consola/(7449:7449): Se agregó el token COPY
+[INFO] 18:34:41:364 Consola/(7449:7449): Se agregó el token 0
+[INFO] 18:34:41:364 Consola/(7449:7449): Se agregó el token 4
+[INFO] 18:34:41:364 Consola/(7449:7449): Se agregó el token READ
+[INFO] 18:34:41:364 Consola/(7449:7449): Se agregó el token 0
+[INFO] 18:34:41:364 Consola/(7449:7449): Se agregó el token EXIT
+[INFO] 18:34:56:498 Consola/(7481:7481): Consola iniciada
+[INFO] 18:34:56:499 Consola/(7481:7481): Se agregó el token NO_OP
+[INFO] 18:34:56:499 Consola/(7481:7481): Se agregó el token 5
+[INFO] 18:34:56:499 Consola/(7481:7481): Se agregó el token I/O
+[INFO] 18:34:56:499 Consola/(7481:7481): Se agregó el token 3000
+[INFO] 18:34:56:500 Consola/(7481:7481): Se agregó el token WRITE
+[INFO] 18:34:56:500 Consola/(7481:7481): Se agregó el token 4
+[INFO] 18:34:56:500 Consola/(7481:7481): Se agregó el token 42
+[INFO] 18:34:56:500 Consola/(7481:7481): Se agregó el token COPY
+[INFO] 18:34:56:512 Consola/(7481:7481): Se agregó el token 0
+[INFO] 18:34:56:512 Consola/(7481:7481): Se agregó el token 4
+[INFO] 18:34:56:513 Consola/(7481:7481): Se agregó el token READ
+[INFO] 18:34:56:513 Consola/(7481:7481): Se agregó el token 0
+[INFO] 18:34:56:513 Consola/(7481:7481): Se agregó el token EXIT
+[INFO] 18:34:56:513 Consola/(7481:7481): Lista de instrucciones enviada.
+[INFO] 18:34:56:513 Consola/(7481:7481): Módulo Consola finalizado.
+[INFO] 18:35:32:107 Consola/(7539:7539): Consola iniciada
+[INFO] 18:35:32:111 Consola/(7539:7539): Se agregó el token NO_OP
+[INFO] 18:35:32:111 Consola/(7539:7539): Se agregó el token 5
+[INFO] 18:35:32:111 Consola/(7539:7539): Se agregó el token I/O
+[INFO] 18:35:32:111 Consola/(7539:7539): Se agregó el token 3000
+[INFO] 18:35:32:111 Consola/(7539:7539): Se agregó el token WRITE
+[INFO] 18:35:32:111 Consola/(7539:7539): Se agregó el token 4
+[INFO] 18:35:32:111 Consola/(7539:7539): Se agregó el token 42
+[INFO] 18:35:32:118 Consola/(7539:7539): Se agregó el token COPY
+[INFO] 18:35:32:119 Consola/(7539:7539): Se agregó el token 0
+[INFO] 18:35:32:119 Consola/(7539:7539): Se agregó el token 4
+[INFO] 18:35:32:119 Consola/(7539:7539): Se agregó el token READ
+[INFO] 18:35:32:119 Consola/(7539:7539): Se agregó el token 0
+[INFO] 18:35:32:119 Consola/(7539:7539): Se agregó el token EXIT
+[INFO] 18:35:32:119 Consola/(7539:7539): Lista de instrucciones enviada.
+[INFO] 18:35:32:119 Consola/(7539:7539): Módulo Consola finalizado.
+[INFO] 18:36:04:277 Consola/(7592:7592): Consola iniciada
+[INFO] 18:36:04:278 Consola/(7592:7592): Se agregó el token NO_OP
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token 5
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token I/O
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token 3000
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token WRITE
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token 4
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token 42
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token COPY
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token 0
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token 4
+[INFO] 18:36:04:279 Consola/(7592:7592): Se agregó el token READ
+[INFO] 18:36:04:280 Consola/(7592:7592): Se agregó el token 0
+[INFO] 18:36:04:280 Consola/(7592:7592): Se agregó el token EXIT
+[INFO] 18:36:04:280 Consola/(7592:7592): Lista de instrucciones enviada.
+[INFO] 18:36:04:280 Consola/(7592:7592): Módulo Consola finalizado.
