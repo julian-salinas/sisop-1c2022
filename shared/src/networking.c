@@ -108,7 +108,7 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
 }
 
 
-int server_escuchar(t_log* logger, char* server_name, int server_socket, void(*func_procesar_conexion)(void)) {
+int server_listen(t_log* logger, char* server_name, int server_socket, void(*func_procesar_conexion)(void)) {
     int cliente_socket = esperar_clientes(logger, server_name, server_socket);
 
     if (cliente_socket != -1) {
@@ -153,8 +153,14 @@ int send_all(int socket, void *buffer, size_t size){
 int recv_all(int socket, void *destino, size_t size){
     while (size > 0){
         int i = recv(socket, destino, size, 0);
-        if (i == 0) return 0;
-        if (i < 0) return -1;
+        if (i == 0) {
+            return 0;
+        } 
+        
+        if (i < 0) {
+            return -1;
+        } 
+
         destino += i;
         size -= i;
     }
@@ -196,7 +202,26 @@ uint8_t recibir_header(int socket){
 }
 
 
-t_paquete* recibir_paquete(int socket, uint8_t header){
+t_buffer* recibir_payload(int socket) {
+    uint32_t tamanio_buffer;
+
+    if(!socket_get(socket, &tamanio_buffer, sizeof(uint32_t)))
+        return NULL;
+
+    t_buffer* buffer = crear_buffer(tamanio_buffer);
+
+    if(!socket_get(socket, buffer -> stream, tamanio_buffer)){
+        destruir_buffer(buffer);
+        buffer = NULL;
+
+    }
+
+    return buffer;
+}
+
+
+t_paquete* recibir_paquete(int socket){
+    uint8_t header = recibir_header(socket);
     uint32_t tamanio_buffer;
 
     if(!socket_get(socket, &tamanio_buffer, sizeof(uint32_t)))
@@ -211,4 +236,3 @@ t_paquete* recibir_paquete(int socket, uint8_t header){
 
     return paquete;
 }
-

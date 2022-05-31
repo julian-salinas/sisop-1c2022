@@ -1,27 +1,24 @@
-/*
- * memoria.h
- *
- *  Created on: 19 abr. 2022
- *      Author: utnso
- */
-
 #ifndef MEMORIA_H_
 #define MEMORIA_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <string.h>
 
-#include "utils-memoria.h"
+    // includes del módulo
+    #include "procesar_conexion.h"
+    #include "memoria_config.h"
 
-//includes de shared
-#include "networking.h"
-#include "serializacion.h"
-#include "logging.h"
-#include "config.h"
+    //includes de shared
+    #include "networking.h"
+    #include "serializacion.h"
+    #include "logging.h"
+    #include "config.h"
+    #include "utils.h"
+    #include "proceso.h"
 
-t_log* logger;
-int conexion_cpu;
-void enviar_config_a_cpu();
+    int conexion_cpu;
+
+    t_memoria_config* memoria_config;
 
 #endif /* MEMORIA_H_ */

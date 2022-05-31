@@ -8,29 +8,28 @@
     #include<commons/string.h>
     #include<commons/config.h>
 
+    // includes del módulo
+    #include "procesar_conexion.h"
+    #include "cpu_config.h"
+    #include "ciclo_instruccion.h"
     // includes de shared
-    #include "logging.h"
-    #include "config.h"
-    #include "serializacion.h"
     #include "networking.h"
+    #include "serializacion.h"
+    #include "config.h"
+    #include "proceso.h"
+    #include "utils.h"
 
-    int conexion_memoria;
-	char* ip_memoria;
-	char* puerto_memoria;
-	char* pueto_escucha_dispatch;
-
-	t_log* logger;
+    t_cpu_config* cpu_config;
+    int conexion_memoria, tamanio_pagina;
+    t_paquete* paquete;
 	t_config* config;
-	t_list* lista;
-
-    void terminar_programa(int, t_log*, t_config*);
-    
-    // esta funcion es para test, despues se va a eliminar
-    void enviar_config(t_config* config, int socket_cliente);
-
-    //estas funciones son para conectar cpu con memoria
-    t_paquete* ini_conexion_cpu_memoria();
-    void request_config_memoria(t_paquete* paquete, int socket_cliente);
+    t_log* logger;
+    // esta función es para pedirle a memoria su configuración
     void obtener_config_memoria();
+
+    uint8_t paginas_por_tabla;
+    //falta también recibir uint8_t tamanio_pagina;
+
+    int interrupcion; //0 el kernel no envio interrupcion, 1 interrumpir ejecución
 
 #endif /* CPU_H_ */
