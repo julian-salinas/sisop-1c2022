@@ -21,7 +21,6 @@
 
     // Includes de shared
     #include "networking.h"
-    #include "config.h"
     #include "logging.h"
     #include "instrucciones.h"
     #include "proceso.h"

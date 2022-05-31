@@ -1,6 +1,5 @@
 #include "consola.h"
 
-
 int main(int argc, char** argv) {
 
 	/*
@@ -20,19 +19,20 @@ int main(int argc, char** argv) {
 
 	// Validar que se haya enviado tamanio del proceso y path a archivo de pseudocódigo
 	if (argc < 3) {
-		log_info(logger, "No se recibieron los parámetros correctos. Formato: {./consola} {cantParametros} {tamañoProceso} {pathArchivo}");
+		log_info(logger, "No se recibieron los parámetros correctos. Formato: {./consola} {tamañoProceso} {pathArchivo}");
 		terminar_programa("Consola", conexion_kernel, logger);
 		destruir_consola_config(consola_config);
 		return 0;
 	}
 
-	size_t size_proceso = 10; //atoi(argv[1]);
-	char* file_path = "pseudo/enunciado.txt"; // (char*) argv[2];
+	// Tomar valores enviados por consola por el usuario
+	size_t size_proceso = atoi(argv[1]);
+	char* file_path = (char*) argv[2];
 	
 	/*------------------ Parsear archivo de pseudocódigo ------------------*/
-	size_t read; //cantidad de caracteres leídos
-	char* line = NULL; //línea leída
-	size_t len = 0; //tamaño de la línea leída
+	size_t read; // Cantidad de caracteres leídos
+	char* line = NULL; // Línea leída
+	size_t len = 0; // Tamaño de la línea leída
 	
 	t_lista_instrucciones* lista_instrucciones = crear_lista_instrucciones();
 	FILE* file_instrucciones = fopen(file_path, "r");
@@ -48,34 +48,26 @@ int main(int argc, char** argv) {
 	// Leer líneas del archivo
 	while((read = getline(&line, &len, file_instrucciones)) != -1){
 
-		//Por cada línea que leo, obtengo los tokens, armo la instrucción con sus parámetros y la agrego a la lista 
+		// Por cada línea que leo, obtengo los tokens, armo la instrucción con sus parámetros y la agrego a la lista 
 		t_list* lines = list_create();
 		char* t = strtok(line, "\n"); 
 		char** tokens = string_split(t, " "); 
 
 		// Agregar a la lista el indentificador y los parámetros de la instrucción 
-		int param, i = 0;
-
+		list_add(lines, (void*) tokens[0]);
+		log_info(logger, "Se agregó el operador %s", tokens[0]); 
+		
+		int i = 1;
 		while(tokens[i] != NULL){ 
-			log_info(logger, "Se agregó el token %s", tokens[i]); 
-
-			if (i >= 1) {
-				param = atoi(tokens[i]);
-				list_add(lines, param);
-			}
-
-			else {
-				param = (void*) tokens[i];
-				list_add(lines, (void*) tokens[i]);
-			}
-
+			list_add(lines, (void*) (uint64_t) atoi(tokens[i]));
+			log_info(logger, "Se agregó el parametro %d", atoi(tokens[i])); 
             i++;
         }
 
         t_identificador identificador = mapear_identificador(list_get(lines, 0));
 
         // Si hubo algun problema de sintaxis o algun identificador inválido, terminar ejecución del programa
-        if(identificador == -1) { 
+        if (identificador == -1) { 
             log_info(logger, "Identificador inválido.");
             terminar_programa("Consola", conexion_kernel, logger);
 			destruir_consola_config(consola_config);
