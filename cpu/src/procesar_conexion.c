@@ -13,13 +13,16 @@ void procesar_conexion(void* void_args) {
     switch (header) {
 
         case CONEXION_CPU_MEMORIA:
+        {
             /* TODO
             / recibir paquete y guardar paginas por tabla y tamanio pagina */
-            paquete = recibir_paquete(socket_cliente);
-            paginas_por_tabla = buffer_take_UINT8(paquete->payload);
+            t_buffer* payload = recibir_payload(socket_cliente);
+            //paginas_por_tabla = buffer_take_UINT8(payload);
+            //tamanio_pagina = buffer_take_UINT8(payload);
+            //paginas_por_tabla tamanio_memoria
             log_info(logger, "Se recibió configuración de memoria.");
-            break;
-
+            break; 
+        }
         case PCB:
             log_info(logger, "Se recibió pcb del Kernel.");
             t_buffer* buffer = recibir_payload(socket_cliente);
