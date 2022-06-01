@@ -59,6 +59,13 @@ void inicializar_semaforos_plani(){
     sem_init(mutex_cola_blocked, 0, 1);
 }
 
+void finalizar_semaforos_plani() {
+    free(mutex_cola_new);
+    free(mutex_cola_ready);
+    free(mutex_cola_exit);
+    free(mutex_cola_blocked);
+}
+
 /* LAS SIGUIENTES FUNCIONES MUEVEN LOS PROCESOS DE UNA COLA A OTRA. HABRÍA QUE MANEJAR ESTADOS Y OBTENER EL PROCESO Y EL PCB */
 
 void new_a_ready(){

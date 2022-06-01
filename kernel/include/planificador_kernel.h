@@ -25,6 +25,7 @@
     void elegir_algoritmo(char* algoritmo);
     void iniciar_planificacion();
     void inicializar_semaforos_plani();
+    void finalizar_semaforos_plani();
     void new_a_ready();
     void new_a_running();
     void running_a_ready(t_proceso* procesoAMover);
