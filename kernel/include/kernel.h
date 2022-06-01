@@ -15,6 +15,9 @@
     #include "networking.h"
     #include "proceso.h"
 
+    t_log* logger;
+    t_kernel_config* kernel_config;
+
 	int conexion_memoria, conexion_cpu;    
 
     void finalizar_kernel(int conexion, int otraConexion, t_log* logger, t_kernel_config* config);
