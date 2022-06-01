@@ -453,3 +453,30 @@
 
 [INFO] 14:50:59:212 CPU/(21882:21886): Se recibió configuración de memoria.
 [WARNING] 14:50:59:213 CPU/(21882:21886): El cliente se desconecto de server CPU
+[INFO] 21:59:12:164 CPU/(6136:6136): Modulo CPU iniciado
+[INFO] 21:59:12:169 CPU/(6136:6136): Config CPU load
+[INFO] 21:59:12:169 CPU/(6136:6136): Conexión memoria ok.
+[INFO] 21:59:12:170 CPU/(6136:6136): Request config memoria enviada.
+[INFO] 21:59:12:170 CPU/(6136:6136): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 21:59:12:170 CPU/(6136:6136): CPU lista como servidor
+[INFO] 22:03:03:073 CPU/(6319:6319): Modulo CPU iniciado
+[INFO] 22:03:03:077 CPU/(6319:6319): Config CPU load
+[INFO] 22:03:03:077 CPU/(6319:6319): Conexión memoria ok.
+[INFO] 22:03:03:078 CPU/(6319:6319): Request config memoria enviada.
+[INFO] 22:03:03:078 CPU/(6319:6319): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 22:03:03:078 CPU/(6319:6319): CPU lista como servidor
+[INFO] 22:03:03:082 CPU/(6319:6322): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 22:03:03:083 CPU/(6319:6322): CPU lista como servidor
+[INFO] 22:04:37:881 CPU/(6366:6366): Modulo CPU iniciado
+[INFO] 22:04:37:885 CPU/(6366:6366): Config CPU load
+[INFO] 22:04:37:886 CPU/(6366:6366): Conexión memoria ok.
+[INFO] 22:04:37:886 CPU/(6366:6366): Request config memoria enviada.
+[INFO] 22:04:37:890 CPU/(6366:6366): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 22:04:37:892 CPU/(6366:6366): CPU interrupt lista como servidor
+[INFO] 22:04:37:900 CPU/(6366:6369): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 22:04:37:900 CPU/(6366:6369): CPU Dispatch lista como servidor

@@ -14,13 +14,32 @@ int main(void) {
 	log_info(logger,"Conexión memoria ok.");
 	obtener_config_memoria();	
 
-	//iniciar servidor cpu
-	int server_cpu = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8001");
-	log_info(logger, "CPU lista como servidor");
+	int pid = fork();
 
-	while(server_listen(logger, "CPU", server_cpu, (void*)(*procesar_conexion)));
+	if(pid == 0){
+	//iniciar servidor cpu - Dispatch
+	int server_cpu_dispatch = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8001");
+	log_info(logger, "CPU Dispatch lista como servidor");
 
-	terminar_programa("CPU", server_cpu, logger);
+	while(server_listen(logger, "CPU", server_cpu_dispatch, (void*)(*procesar_conexion)));
+
+	terminar_programa("CPU", server_cpu_dispatch, logger);
+	}
+
+	else if(pid > 0){
+	//iniciar servidor cpu - Interrupt
+	int server_cpu_interrupt = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8005");
+	log_info(logger, "CPU interrupt lista como servidor");
+	//Deberia usar otra funcion en vez de procesar conexion, exclusivamente para atender las interrupciones
+	while(server_listen(logger, "CPU", server_cpu_interrupt, (void*)(*procesar_conexion)));
+	terminar_programa("CPU", server_cpu_interrupt, logger);
+	}
+
+	else {
+		perror("forkeando");
+	}
+
+	
 	destruir_cpu_config(cpu_config);
 
 	return EXIT_SUCCESS;

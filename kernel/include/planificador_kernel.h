@@ -12,7 +12,16 @@
     
     #include "kernel.h"
 
+    typedef enum {
+        FIFO,
+        SRT
+    } algoritmo_planificacion;
+
+    algoritmo_planificacion algoritmo_elegido;
+
     int calcular_estimacion(t_PCB* pcb);
+
+    void elegir_algoritmo(char* algoritmo);
 
 
 #endif /* PLANIFICADOR_KERNEL_H */

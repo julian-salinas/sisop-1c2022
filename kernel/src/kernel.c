@@ -8,11 +8,11 @@ int main(void) {
 	contador_id_proceso = 1;
 	
 	// Crear logger
-	t_log* logger = log_create("cfg/kernel.log", "kernel", 1, LOG_LEVEL_DEBUG);
+	logger = log_create("cfg/kernel.log", "kernel", 1, LOG_LEVEL_DEBUG);
 	log_info(logger,"Kernel iniciado");
 
 	// Inicializar configuración
-	t_kernel_config* kernel_config = ini_kernel_config("cfg/kernel.config");
+	kernel_config = ini_kernel_config("cfg/kernel.config");
 
 	// Incializo estimacion de rafaga para PCB
 	estimacion_rafaga_inicial = kernel_config -> estimacion_inicial;
