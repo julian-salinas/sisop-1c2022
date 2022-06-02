@@ -20,7 +20,7 @@
     #include "utils.h"
 
     t_cpu_config* cpu_config;
-    int conexion_memoria, tamanio_pagina;
+    int conexion_memoria;
     t_paquete* paquete;
 	t_config* config;
     t_log* logger;
@@ -28,7 +28,7 @@
     void obtener_config_memoria();
 
     uint8_t paginas_por_tabla;
-    //falta también recibir uint8_t tamanio_pagina;
+    uint8_t tamanio_pagina;
 
     int interrupcion; //0 el kernel no envio interrupcion, 1 interrumpir ejecución
 

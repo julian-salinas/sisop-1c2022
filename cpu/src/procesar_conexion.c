@@ -17,10 +17,12 @@ void procesar_conexion(void* void_args) {
             /* TODO
             / recibir paquete y guardar paginas por tabla y tamanio pagina */
             t_buffer* payload = recibir_payload(socket_cliente);
-            //paginas_por_tabla = buffer_take_UINT8(payload);
-            //tamanio_pagina = buffer_take_UINT8(payload);
-            //paginas_por_tabla tamanio_memoria
+            paginas_por_tabla = buffer_take_UINT8(payload);
+            tamanio_pagina = buffer_take_UINT8(payload);
+            //funciona 
             log_info(logger, "Se recibió configuración de memoria.");
+            printf("Páginas por tabla: %u\n",paginas_por_tabla);
+            printf("Tamaño de página: %u\n",tamanio_pagina);
             break; 
         }
         case PCB:

@@ -11,8 +11,8 @@ int main(void) {
 
 	// obtener valores ip y puerto del archivo config del módulo memoria
 	conexion_memoria = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_memoria);
-	log_info(logger,"Conexión memoria ok.");
-	obtener_config_memoria();	
+	log_info(logger,"Conexión cpu-memoria ok.");
+		
 
 	int pid = fork();
 
@@ -20,7 +20,7 @@ int main(void) {
 	//iniciar servidor cpu - Dispatch
 	int server_cpu_dispatch = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8001");
 	log_info(logger, "CPU Dispatch lista como servidor");
-
+    obtener_config_memoria();
 	while(server_listen(logger, "CPU", server_cpu_dispatch, (void*)(*procesar_conexion)));
 
 	terminar_programa("CPU", server_cpu_dispatch, logger);
@@ -34,13 +34,12 @@ int main(void) {
 	while(server_listen(logger, "CPU", server_cpu_interrupt, (void*)(*procesar_conexion)));
 	terminar_programa("CPU", server_cpu_interrupt, logger);
 	}
-
 	else {
 		perror("forkeando");
 	}
 
 	
-	destruir_cpu_config(cpu_config);
+	//destruir_cpu_config(cpu_config);
 
 	return EXIT_SUCCESS;
 }
