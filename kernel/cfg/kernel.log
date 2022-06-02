@@ -413,3 +413,7 @@
 [INFO] 20:14:16:674 kernel/(13641:13641): Cliente conectado (a Kernel)
 
 [INFO] 20:14:16:679 kernel/(13641:13652): Se recibieron instrucciones
+[INFO] 21:53:55:328 kernel/(5708:5708): Kernel iniciado
+[INFO] 21:53:55:336 kernel/(5708:5708): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 21:53:55:336 kernel/(5708:5708): Kernel lista para recibir al cliente

@@ -18,7 +18,7 @@ void procesar_conexion(void* void_args) {
 
             t_proceso* proceso = buffer_take_PROCESO(payload);                
             
-            t_PCB* pcb = crear_PCB(proceso);
+            t_PCB* pcb = crear_PCB(proceso, socket_cliente);
             enviar_pcb(conexion_cpu,pcb); 
             break;  
 
@@ -36,7 +36,7 @@ void procesar_conexion(void* void_args) {
 }
 
 
-t_PCB* crear_PCB(t_proceso* proceso) {
+t_PCB* crear_PCB(t_proceso* proceso, int fd) {
     t_PCB* pcb = malloc(sizeof(t_PCB));
     pcb -> PID = contador_id_proceso;
     pcb -> tamanio = proceso -> tamanio;
@@ -44,6 +44,9 @@ t_PCB* crear_PCB(t_proceso* proceso) {
     pcb -> program_counter = 0;
     pcb -> tabla_paginas = -1; //recien cuando esté en READY
     pcb -> estimacion_rafaga = estimacion_rafaga_inicial;
+    pcb -> tiempo_ejecucion = 0;
+    pcb -> socket_cliente = fd;
+    pcb -> estado = NEW;
 
     pthread_mutex_lock(&mutex_contador_id_proceso);
     contador_id_proceso++;

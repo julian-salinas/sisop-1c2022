@@ -24,6 +24,6 @@
 
     void procesar_conexion(void* void_args);
 
-    t_PCB* crear_PCB(t_proceso* proceso);
+    t_PCB* crear_PCB(t_proceso* proceso, int fd);
 
 #endif /* PROCESAR_CONEXION_H */
