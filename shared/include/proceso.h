@@ -14,7 +14,7 @@
         RUNNING,
         BLOCKED,
         SUSPENDED_BLOCKED,
-        SUSPENDED_READY,
+        SUSPENDED_READY
     } estado_proceso;
 
     typedef struct {
@@ -24,7 +24,7 @@
         int program_counter;
         int32_t tabla_paginas;
         int estimacion_rafaga;
-        int tiempo_ejecucion;
+        double tiempo_ejecucion;
         int socket_cliente;
         estado_proceso estado;
 
