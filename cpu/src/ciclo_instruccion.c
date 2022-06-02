@@ -43,9 +43,10 @@ void traer_operandos(t_instruccion* instruccion, int direccion_logica, uint32_t 
 
 void devolver_pcb(t_PCB* pcb){
     end_t=clock();
+    pcb->program_counter++;
     pcb->tiempo_ejecucion += start_t-end_t; 
     //quizás dividir por 1000 para pasarlo a milisegundos??
-    //Falta devolver PCB a kernel
+    enviar_pcb(conexion_kernel,pcb);
 }
 
 //TODO MMU 
@@ -70,6 +71,7 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
         case I_O:
             // se bloquea
             pcb->estado=BLOCKED;
+            pcb->tiempo_bloqueo=parametro_instruccion(instruccion->parametros,0);
             devolver_pcb(pcb);
         break;
         case READ:

@@ -611,3 +611,12 @@
 
 [INFO] 00:06:06:316 CPU/(30484:30487): Se recibió configuración de memoria.
 [WARNING] 00:06:06:317 CPU/(30484:30487): El cliente se desconecto de server CPU
+[INFO] 18:00:32:895 CPU/(9022:9022): Modulo CPU iniciado
+[INFO] 18:00:32:898 CPU/(9022:9022): Config CPU load
+[INFO] 18:00:32:899 CPU/(9022:9022): Conexión cpu-memoria ok.
+[INFO] 18:00:32:899 CPU/(9022:9022): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 18:00:32:899 CPU/(9022:9022): CPU interrupt lista como servidor
+[INFO] 18:00:32:900 CPU/(9022:9023): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 18:00:32:900 CPU/(9022:9023): CPU Dispatch lista como servidor

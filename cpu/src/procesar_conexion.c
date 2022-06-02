@@ -32,6 +32,9 @@ void procesar_conexion(void* void_args) {
             //acá debería ir un mutex???
             ejecutar_ciclo_instruccion(pcb);
             break;
+        case INTERRUPCION:
+            interrupcion=1;
+            break;
 
         case -1:
             log_error(logger, "Cliente desconectado de %s...", nombre_servidor);

@@ -12,7 +12,10 @@ int main(void) {
 	// obtener valores ip y puerto del archivo config del módulo memoria
 	conexion_memoria = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_memoria);
 	log_info(logger,"Conexión cpu-memoria ok.");
-		
+
+   //Conexión con kernel		
+   conexion_kernel = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_escucha_dispatch);
+
 
 	int pid = fork();
 

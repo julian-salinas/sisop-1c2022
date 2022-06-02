@@ -20,7 +20,7 @@
     #include "utils.h"
 
     t_cpu_config* cpu_config;
-    int conexion_memoria;
+    int conexion_memoria, conexion_kernel;
     t_paquete* paquete;
 	t_config* config;
     t_log* logger;

@@ -14,7 +14,8 @@
         CONEXION_CPU_MEMORIA,
         PCB,
         BLOQUEO,
-        FINALIZACION
+        FINALIZACION,
+        INTERRUPCION
     } codigo_operacion;
 
 #endif /* ENUM_H */

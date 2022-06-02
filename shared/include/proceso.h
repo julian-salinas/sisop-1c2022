@@ -26,6 +26,7 @@
         int estimacion_rafaga;
         double tiempo_ejecucion;
         int socket_cliente;
+        int tiempo_bloqueo;
         estado_proceso estado;
 
     } t_PCB;
