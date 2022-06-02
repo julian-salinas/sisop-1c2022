@@ -417,3 +417,11 @@
 [INFO] 21:53:55:336 kernel/(5708:5708): Escuchando en 127.0.0.1:8000 (Kernel)
 
 [INFO] 21:53:55:336 kernel/(5708:5708): Kernel lista para recibir al cliente
+[INFO] 15:52:53:038 kernel/(6337:6337): Kernel iniciado
+[INFO] 15:52:53:044 kernel/(6337:6337): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 15:52:53:045 kernel/(6337:6337): Kernel lista para recibir al cliente
+[INFO] 16:24:36:102 kernel/(8843:8843): Kernel iniciado
+[INFO] 16:24:36:111 kernel/(8843:8843): Escuchando en 127.0.0.1:8000 (Kernel)
+
+[INFO] 16:24:36:111 kernel/(8843:8843): Kernel lista para recibir al cliente

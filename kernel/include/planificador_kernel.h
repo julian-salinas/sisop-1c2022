@@ -4,7 +4,7 @@
     #include<stdio.h>
     #include<stdlib.h>
     #include<commons/config.h>
-    #include <commons/collections/queue.h>
+    #include <commons/collections/list.h>
     #include <semaphore.h>
 
     #include "networking.h"
@@ -37,16 +37,26 @@
     void ready_a_exit();
 
     //Colas
-    t_queue* cola_new;
-    t_queue* cola_ready;
-    t_queue* cola_exit;
-    t_queue* cola_blocked;
+    t_list* lista_new;
+    t_list* lista_ready;
+    t_list* lista_exit;
+    t_list* lista_blocked;
+    t_list* lista_suspended_blocked;
+    t_list* lista_suspended_ready;
 
-    //Semáforos colas
-    sem_t* mutex_cola_new;
-    sem_t* mutex_cola_ready;
-    sem_t* mutex_cola_exit;
-    sem_t* mutex_cola_blocked;
+    //Semáforos listas
+    sem_t* mutex_lista_new;
+    sem_t* mutex_lista_ready;
+    sem_t* mutex_lista_exit;
+    sem_t* mutex_lista_blocked;
+    sem_t* mutex_lista_suspended_blocked;
+    sem_t* mutex_lista_suspended_ready;
+
+
+    typedef struct {
+        t_proceso* proceso1;
+        t_proceso* proceso2;
+    } t_son_mismo_proceso_args;
 
 
 #endif /* PLANIFICADOR_KERNEL_H */
