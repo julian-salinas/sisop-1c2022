@@ -28,159 +28,200 @@ void elegir_algoritmo(char* algoritmo) {
         log_info(logger, "Se eligio el algoritmo FIFO");
     }
 
-    if(strcmp(algoritmo,"SRT") == 0) {
-        algoritmo_elegido = SRT;
-        log_info(logger, "Se eligio el algoritmo SRT");
+    if((strcmp(algoritmo,"SRT") == 0) || (strcmp(algoritmo,"SJF") == 0)) {
+        algoritmo_elegido = SJF;
+        log_info(logger, "Se eligio el algoritmo SRT/SJF");
     }
 }
 
-void iniciar_planificacion(){
+void inicializar_colas(){
 
-    lista_new = list_create();
-    lista_ready = list_create();
-    lista_exit = list_create();
-    lista_blocked = list_create();
-    lista_suspended_blocked = list_create();
-    lista_suspended_ready = list_create();
-
-
-
+    cola_new = queue_create();
+    cola_ready = queue_create();
+    cola_exit = queue_create();
+    cola_blocked = queue_create();
+    cola_suspended_blocked = queue_create();
+    cola_suspended_ready = queue_create();
 
     inicializar_semaforos_plani();
 }
 
 void inicializar_semaforos_plani(){
 
-    mutex_lista_new = malloc(sizeof(sem_t));
-    sem_init(mutex_lista_new, 0, 1);
+    mutex_cola_new = malloc(sizeof(sem_t));
+    sem_init(mutex_cola_new, 0, 1);
 
-    mutex_lista_ready = malloc(sizeof(sem_t));
-    sem_init(mutex_lista_ready, 0, 1);
+    mutex_cola_ready = malloc(sizeof(sem_t));
+    sem_init(mutex_cola_ready, 0, 1);
 
-    mutex_lista_exit = malloc(sizeof(sem_t));
-    sem_init(mutex_lista_exit, 0, 1);
+    mutex_cola_exit = malloc(sizeof(sem_t));
+    sem_init(mutex_cola_exit, 0, 1);
 
-    mutex_lista_blocked = malloc(sizeof(sem_t));
-    sem_init(mutex_lista_blocked, 0, 1);
+    mutex_cola_blocked = malloc(sizeof(sem_t));
+    sem_init(mutex_cola_blocked, 0, 1);
     
-    mutex_lista_suspended_blocked = malloc(sizeof(sem_t));
-    sem_init(mutex_lista_suspended_blocked, 0, 1);
+    mutex_cola_suspended_blocked = malloc(sizeof(sem_t));
+    sem_init(mutex_cola_suspended_blocked, 0, 1);
 
-    mutex_lista_suspended_ready = malloc(sizeof(sem_t));
-    sem_init(mutex_lista_suspended_ready, 0, 1);
-
-
-
-
+    mutex_cola_suspended_ready = malloc(sizeof(sem_t));
+    sem_init(mutex_cola_suspended_ready, 0, 1);
+    
+    mutex_proceso_buscado = malloc(sizeof(sem_t));
+    sem_init(mutex_proceso_buscado, 0, 1);
 }
 
 void finalizar_semaforos_plani() {
-    free(mutex_lista_new);
-    free(mutex_lista_ready);
-    free(mutex_lista_exit);
-    free(mutex_lista_blocked);
+    free(mutex_cola_new);
+    free(mutex_cola_ready);
+    free(mutex_cola_exit);
+    free(mutex_cola_blocked);
 }
 
 /* LAS SIGUIENTES FUNCIONES MUEVEN LOS PROCESOS DE UNA COLA A OTRA. HABRÍA QUE MANEJAR ESTADOS Y OBTENER EL PROCESO Y EL PCB */
 
-void new_a_ready(t_proceso* procesoAMover){
+void new_a_ready(){
 
-    sem_wait(mutex_lista_new);
-    //funcion que toma proceso y lo saca de la lista
-    sem_post(mutex_lista_new);
+    sem_wait(mutex_cola_new);
+        t_PCB* procesoAMover = queue_pop(cola_new);
+    sem_post(mutex_cola_new);
 
-    sem_wait(mutex_lista_ready);
-    list_add(lista_new, procesoAMover);
-    sem_post(mutex_lista_ready);
+    sem_wait(mutex_cola_ready);
+        queue_push(cola_ready, procesoAMover);
+    sem_post(mutex_cola_ready);
 
-    //log_info(logger, "El proceso con Id:  pasó de NEW a READY.") //acá no tengo el PCB para obtener el id del proceso.
+    log_info(logger, "El proceso con Id:%d pasó de NEW a READY.", procesoAMover -> PID);
+
 }
 
-void new_a_running(t_proceso* procesoAMover){
+void new_a_running(t_PCB* procesoAMover){
 
-    sem_wait(mutex_lista_new);
- //   queue_pop(lista_new);
-    sem_post(mutex_lista_new);
+    sem_wait(mutex_cola_new);
+        queue_pop(cola_new);
+    sem_post(mutex_cola_new);
 
-    //log_info(logger, "El proceso con Id:  pasó de NEW a RUNNING.") //acá no tengo el PCB para obtener el id del proceso.
+    log_info(logger, "El proceso con Id:%d  pasó de NEW a RUNNING.", procesoAMover -> PID);
+
 }
 
-void running_a_ready(t_proceso* procesoAMover){
+void running_a_ready(t_PCB* procesoAMover){
 
-    sem_wait(mutex_lista_ready);
-//    queue_push(lista_new, procesoAMover);
-    sem_post(mutex_lista_ready);
+    procesoAMover -> estado = READY;
 
-    //log_info(logger, "El proceso con Id:  pasó de RUNNING a READY.") //acá no tengo el PCB para obtener el id del proceso.
+    sem_wait(mutex_cola_ready);
+        queue_push(cola_new, procesoAMover);
+    sem_post(mutex_cola_ready);
+
+    log_info(logger, "El proceso con Id:%d  pasó de RUNNING a READY.", procesoAMover -> PID);
+
 }
 
-void running_a_blocked(t_proceso* procesoAMover){
+void running_a_blocked(t_PCB* procesoAMover){
 
-    sem_wait(mutex_lista_blocked);
- //   queue_push(lista_blocked, procesoAMover);
-    sem_post(mutex_lista_blocked);
+    sem_wait(mutex_cola_blocked);
+        queue_push(cola_blocked, procesoAMover);
+    sem_post(mutex_cola_blocked);
 
-    //log_info(logger, "El proceso con Id:  pasó de RUNNING a BLOCKED.") //acá no tengo el PCB para obtener el id del proceso.
+    log_info(logger, "El proceso con Id:%d  pasó de RUNNING a BLOCKED.", procesoAMover -> PID);
+
 }
 
-void blocked_a_ready(t_proceso* procesoAMover){
+void blocked_a_ready(){
 
-    sem_wait(mutex_lista_blocked);
- //   t_proceso* procesoAMover = queue_pop(lista_blocked);
-    sem_post(mutex_lista_blocked);
+    sem_wait(mutex_cola_blocked);
+        t_PCB* procesoAMover = queue_pop(cola_blocked);
+    sem_post(mutex_cola_blocked);
 
-    sem_wait(mutex_lista_ready);
-//    queue_push(lista_ready, procesoAMover);
-    sem_post(mutex_lista_ready);
+    procesoAMover -> estado = READY;
 
-    //log_info(logger, "El proceso con Id:  pasó de BLOCKED a READY.") //acá no tengo el PCB para obtener el id del proceso.
+    sem_wait(mutex_cola_ready);
+        queue_push(cola_ready, procesoAMover);
+    sem_post(mutex_cola_ready);
+
+    log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a READY.", procesoAMover -> PID);
+
 }
 
-void blocked_a_exit(t_proceso* procesoAMover){
 
-    sem_wait(mutex_lista_blocked);
-//    t_proceso* procesoAMover = queue_pop(lista_blocked);
-    sem_post(mutex_lista_blocked);
+void blocked_a_exit(t_PCB* procesoAMover){
 
-    sem_wait(mutex_lista_exit);
-//    queue_push(lista_exit, procesoAMover);
-    sem_post(mutex_lista_exit);
+    pasar_a_exit(cola_blocked, mutex_cola_blocked, procesoAMover);
 
-    //log_info(logger, "El proceso con Id:  pasó de BLOCKED a EXIT.") //acá no tengo el PCB para obtener el id del proceso.
+    log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a EXIT.", procesoAMover -> PID);
+
 }
 
-void new_a_exit(t_proceso* procesoAMover){
+void new_a_exit(t_PCB* procesoAMover){
 
-    sem_wait(mutex_lista_new);
- //   t_proceso* procesoAMover = queue_pop(lista_new);
-    sem_post(mutex_lista_new);
+    pasar_a_exit(cola_new, mutex_cola_new, procesoAMover);
 
-    sem_wait(mutex_lista_exit);
- //   queue_push(lista_exit, procesoAMover);
-    sem_post(mutex_lista_exit);
+    log_info(logger, "El proceso con Id:%d  pasó de NEW a EXIT.", procesoAMover -> PID);
 
-    //log_info(logger, "El proceso con Id:  pasó de NEW a EXIT.") //acá no tengo el PCB para obtener el id del proceso.
 }
 
-void running_a_exit(t_proceso* procesoAMover){
+void running_a_exit(t_PCB* procesoAMover) {
 
-    sem_wait(mutex_lista_exit);
- //   queue_push(lista_exit, procesoAMover);
-    sem_post(mutex_lista_exit);
+    procesoAMover -> estado = EXIT;
 
-    //log_info(logger, "El proceso con Id:  pasó de RUNNING a EXIT.") //acá no tengo el PCB para obtener el id del proceso.
+    sem_wait(mutex_cola_exit);
+        queue_push(cola_exit, procesoAMover);
+    sem_post(mutex_cola_exit);
+
+    log_info(logger, "El proceso con Id:%d  pasó de RUNNING a EXIT.", procesoAMover -> PID);
+    
 }
 
-void ready_a_exit(t_proceso* procesoAMover){
+void ready_a_exit(t_PCB* procesoAMover){
 
-    sem_wait(mutex_lista_ready);
- //   t_proceso* procesoAMover = queue_pop(lista_ready);
-    sem_post(mutex_lista_ready);
+    pasar_a_exit(cola_ready, mutex_cola_ready, procesoAMover);
 
-    sem_wait(mutex_lista_exit);
- //   queue_push(lista_exit, procesoAMover);
-    sem_post(mutex_lista_exit);
+    log_info(logger, "El proceso con Id %d:  pasó de READY a EXIT.", procesoAMover -> PID);
 
-    //log_info(logger, "El proceso con Id:  pasó de READY a EXIT.") //acá no tengo el PCB para obtener el id del proceso.
 }
 
+void agregar_a_new(t_PCB* procesoAMover) {
+    
+    procesoAMover -> estado = NEW;
+
+    sem_wait(mutex_cola_new);
+        queue_push(cola_new, procesoAMover);
+    sem_post(mutex_cola_new);
+
+}
+
+void suspended_ready_a_ready() {
+    
+    sem_wait(mutex_cola_ready);
+        t_PCB* procesoAMover = queue_pop(cola_suspended_ready);
+    sem_post(mutex_cola_ready);
+
+    procesoAMover -> estado = READY;
+
+    sem_wait(mutex_cola_suspended_ready);
+        queue_push(cola_ready, procesoAMover);
+    sem_post(mutex_cola_suspended_ready);
+}
+
+bool procesos_son_iguales(void* proceso) {
+    return (((t_PCB*) proceso) -> PID == proceso_buscado);
+}
+
+
+pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso) {
+
+    wait(mutex_proceso_buscado);
+        
+        proceso_buscado = proceso -> PID;
+
+        sem_wait(semaforo);
+            cola -> elements = list_remove_by_condition(cola -> elements, *(procesos_son_iguales));
+        sem_post(semaforo);
+
+    sem_post(mutex_proceso_buscado);
+
+    proceso -> estado = EXIT;
+
+    sem_wait(mutex_cola_exit);
+        queue_push(cola_exit, proceso);
+    sem_post(mutex_cola_exit);
+    
+}

@@ -19,7 +19,13 @@ void procesar_conexion(void* void_args) {
             t_proceso* proceso = buffer_take_PROCESO(payload);                
             
             t_PCB* pcb = crear_PCB(proceso, socket_cliente);
-            enviar_pcb(conexion_cpu,pcb); 
+
+            agregar_a_new(pcb);
+
+            // enviar_pcb(conexion_cpu,pcb); 
+            
+            sem_post(sem_nuevo_proceso);
+            
             break;  
 
         case -1:

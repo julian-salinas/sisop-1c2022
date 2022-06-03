@@ -15,7 +15,8 @@
         PCB,
         BLOQUEO,
         FINALIZACION,
-        INTERRUPCION
+        INTERRUPCION,
+        NUEVO_PROCESO,
     } codigo_operacion;
 
 #endif /* ENUM_H */
