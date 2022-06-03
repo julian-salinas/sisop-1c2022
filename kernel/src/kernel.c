@@ -112,7 +112,7 @@ void* func_corto_plazo(void* args){
 void planificar(void) {	
 	if (algoritmo_elegido == SJF) {
 		sem_wait(mutex_cola_ready);
-		magia_blanca(cola_ready -> elements, (bool) *algoritmo_SJF(void* void*));
+			list_sort(cola_ready -> elements, (void*) *(algoritmo_SJF));
 		sem_post(mutex_cola_ready);
 	}
 }
