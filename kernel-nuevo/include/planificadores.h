@@ -40,6 +40,9 @@
     /* Función que inicializa todos los threads de kernel */
     void ini_threads(void);
 
+    /* Función que finaliza todos los semáforos de kernel */
+    void finalizar_semaforos_plani();
+
     /* Funciones que van a ocupar los hilos de los planificadores */
     void* func_corto_plazo(void* args);
     

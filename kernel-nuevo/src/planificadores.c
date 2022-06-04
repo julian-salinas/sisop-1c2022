@@ -51,6 +51,23 @@ void ini_threads(void) {
 
 }
 
+void finalizar_semaforos_plani() {
+    free(mutex_cola_new);
+    free(mutex_cola_ready);
+    free(mutex_cola_exit);
+    free(mutex_cola_blocked);
+    free(mutex_cola_suspended_ready);
+    free(mutex_proceso_corriendo);
+    free(mutex_proceso_buscado);
+    
+    free(mutex_pid);
+    free(mutex_mediano_plazo);
+    free(sem_multiprogramacion);
+    free(sem_mediano_plazo);
+    free(sem_corto_plazo);
+    free(sem_largo_plazo);
+}
+
 
 void* func_corto_plazo(void* args){
     t_PCB* procesoAMover;
