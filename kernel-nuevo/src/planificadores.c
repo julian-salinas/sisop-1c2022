@@ -177,7 +177,11 @@ void* func_io(void* args) {
         // Si tiempo bloqueo > tiempo maximo
             // Bloquear tiempo maximo (hilo IO)
             // Pasar proceso a suspended blocked (avisar a planificador mediano plazo para que lo haga)
+                // hacer un post a mediano plazo
+                // variable transicion -> true
             // Bloquear tiempo restante
             // Pasar a suspended-ready (avisar a planificador mediano plazo para que lo haga)
+                // hacer un post a mediano plazo
+                // variable transicion -> true
     }
 }

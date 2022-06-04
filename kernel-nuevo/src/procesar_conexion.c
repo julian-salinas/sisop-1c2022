@@ -11,6 +11,8 @@ void procesar_conexion(void* void_args) {
     transicion_new_a_ready = false;
     transicion_running_a_exit = false;
     transicion_running_a_blocked = false;
+    transicion_block_a_suspended_block = false;
+    transicion_suspended_block_a_suspended_ready = false;
 
     int header;
     header = recibir_header(socket_cliente);

@@ -27,6 +27,7 @@
 
     /* Flags para transiciones */
     bool transicion_new_a_ready, transicion_running_a_exit, transicion_running_a_blocked, transicion_ready_a_running;
+    bool transicion_block_a_suspended_block, transicion_suspended_block_a_suspended_ready;
 
     /* Calcula estimacion de un proceso */
     int calcular_estimacion(t_PCB* pcb);
