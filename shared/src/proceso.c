@@ -16,7 +16,7 @@ void destruir_proceso(t_proceso* proceso) {
 }
 
 void enviar_proceso(int socket, t_proceso* proceso) {
-    t_paquete* paquete = crear_paquete(INSTRUCCIONES, sizeof(t_proceso));
+    t_paquete* paquete = crear_paquete(NUEVO_PROCESO, sizeof(t_proceso));
     agregar_a_buffer_PROCESO(paquete -> payload, proceso);
     enviar_paquete(socket, paquete);
     destruir_paquete(paquete);
