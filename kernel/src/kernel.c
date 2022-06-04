@@ -64,11 +64,11 @@ void inicializar_semaforos() {
 	mutex_contador_id_proceso = malloc(sizeof(sem_t));
 	sem_init(mutex_contador_id_proceso, 0, 1);
 
-	sem_nuevo_proceso = malloc(sizeof(sem_t));
-	sem_init(sem_nuevo_proceso, 0, 0);
+	sem_mediano_plazo = malloc(sizeof(sem_t));
+	sem_init(sem_mediano_plazo, 0, 0);
 
 	cont_multiprogramacion = malloc(sizeof(sem_t));
-	sem_init(sem_nuevo_proceso, 0, kernel_config -> grado_multiprogramacion);
+	sem_init(sem_mediano_plazo, 0, kernel_config -> grado_multiprogramacion);
 }
 
 void* func_largo_plazo(void* args){;}
@@ -76,7 +76,7 @@ void* func_largo_plazo(void* args){;}
 void* func_mediano_plazo(void* args){
 	
 	while (1) {
-		sem_wait(sem_nuevo_proceso);
+		sem_wait(sem_mediano_plazo);
 		sem_wait(cont_multiprogramacion);
 
 		if (cola_esta_vacia(cola_suspended_ready)) {

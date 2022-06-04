@@ -16,7 +16,7 @@
     sem_t* sem_multiprogramacion;
 
     // Semáforos binarios? Para despertar procesos - Arrancan en 0 todos
-    sem_t* sem_nuevo_proceso;
+    sem_t* sem_mediano_plazo;
     sem_t* sem_corto_plazo, *sem_mediano_plazo, *sem_largo_plazo;
 
     // Inicializar todos los semaforos

@@ -24,7 +24,7 @@ void procesar_conexion(void* void_args) {
 
             // enviar_pcb(conexion_cpu,pcb); 
             
-            sem_post(sem_nuevo_proceso);
+            sem_post(sem_mediano_plazo);
             
             break;  
 

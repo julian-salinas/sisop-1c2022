@@ -25,7 +25,7 @@
 
     sem_t* sem_largo_plazo, *sem_corto_plazo;
 
-    sem_t* mutex_contador_id_proceso, *sem_nuevo_proceso;
+    sem_t* mutex_contador_id_proceso, *sem_mediano_plazo;
 
 	int conexion_memoria, conexion_cpu;    
 

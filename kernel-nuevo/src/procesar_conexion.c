@@ -33,7 +33,7 @@ void procesar_conexion(void* void_args) {
             sem_wait(mutex_mediano_plazo);
                 
                 agregar_a_new(pcb);
-                sem_post(sem_nuevo_proceso);
+                sem_post(sem_mediano_plazo);
 
                 log_info(logger, "Proceso PID:%d se ahora en estado NEW", pcb -> PID);
                  enviar_pcb(conexion_cpu, pcb);
