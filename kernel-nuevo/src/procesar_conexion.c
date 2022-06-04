@@ -27,7 +27,7 @@ void procesar_conexion(void* void_args) {
             payload = recibir_payload(socket_cliente);
             t_proceso* proceso = buffer_take_PROCESO(payload);                
             t_PCB* pcb = crear_PCB(proceso, socket_cliente);
-
+            
             // Agregar a New
             // Sem post nuevo proceso
             sem_wait(mutex_mediano_plazo);
@@ -36,7 +36,8 @@ void procesar_conexion(void* void_args) {
                 sem_post(sem_nuevo_proceso);
 
                 log_info(logger, "Proceso PID:%d se ahora en estado NEW", pcb -> PID);
-
+                 enviar_pcb(conexion_cpu, pcb);
+                 log_info(logger, "la pcb se mando es tu culpa cpu");
             sem_post(mutex_mediano_plazo);
 
             destruir_buffer(payload);

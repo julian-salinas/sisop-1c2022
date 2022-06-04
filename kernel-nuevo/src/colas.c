@@ -41,21 +41,21 @@ void new_a_ready(void) {
     procesoAMover -> estado = READY;
 
     // Solicitar tabla de páginas a memoria
-    enviar_pcb(conexion_memoria, procesoAMover);
+    //enviar_pcb(conexion_memoria, procesoAMover);
     
     // ¿Habría que destruir procesoAMover en este momento?
+    //no se sabe
+    //uint8_t resp_memoria = recibir_header(conexion_memoria);
 
-    uint8_t resp_memoria = recibir_header(conexion_memoria);
+    // if (resp_memoria != MEMORIA_OK) {
+    //     close(procesoAMover -> socket_cliente);
 
-    if (resp_memoria != MEMORIA_OK) {
-        close(procesoAMover -> socket_cliente);
+    //     // Modificar: No se puede hacer un continue si no hay un loop
+    //     return;
+    // }
 
-        // Modificar: No se puede hacer un continue si no hay un loop
-        return;
-    }
-
-    t_buffer* payload = recibir_payload(conexion_memoria);
-    procesoAMover = buffer_take_PCB(payload);
+    // t_buffer* payload = recibir_payload(conexion_memoria);
+    // procesoAMover = buffer_take_PCB(payload);
 
     sem_wait(mutex_cola_ready);
         queue_push(cola_ready, procesoAMover);

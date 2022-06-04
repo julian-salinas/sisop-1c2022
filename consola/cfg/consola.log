@@ -1341,3 +1341,108 @@
 [INFO] 22:42:10:140 Consola/(101486:101486): Se agregó el operador EXIT
 [INFO] 22:42:10:140 Consola/(101486:101486): Lista de instrucciones enviada.
 [INFO] 22:42:10:140 Consola/(101486:101486): Módulo Consola finalizado.
+[INFO] 01:15:18:027 Consola/(7717:7717): Consola iniciada
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el operador NO_OP
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el parametro 5
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el operador I/O
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el parametro 3000
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el operador WRITE
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el parametro 4
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el parametro 42
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el operador COPY
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el parametro 0
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el parametro 4
+[INFO] 01:15:18:028 Consola/(7717:7717): Se agregó el operador READ
+[INFO] 01:15:18:029 Consola/(7717:7717): Se agregó el parametro 0
+[INFO] 01:15:18:029 Consola/(7717:7717): Se agregó el operador EXIT
+[INFO] 01:15:18:029 Consola/(7717:7717): Lista de instrucciones enviada.
+[INFO] 01:16:05:399 Consola/(7799:7799): Consola iniciada
+[INFO] 01:16:05:399 Consola/(7799:7799): Se agregó el operador NO_OP
+[INFO] 01:16:05:399 Consola/(7799:7799): Se agregó el parametro 5
+[INFO] 01:16:05:399 Consola/(7799:7799): Se agregó el operador I/O
+[INFO] 01:16:05:399 Consola/(7799:7799): Se agregó el parametro 3000
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el operador WRITE
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el parametro 4
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el parametro 42
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el operador COPY
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el parametro 0
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el parametro 4
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el operador READ
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el parametro 0
+[INFO] 01:16:05:400 Consola/(7799:7799): Se agregó el operador EXIT
+[INFO] 01:16:05:400 Consola/(7799:7799): Lista de instrucciones enviada.
+[INFO] 01:16:17:130 Consola/(7799:7799): Respuesta recibida: 191
+[INFO] 01:16:17:130 Consola/(7799:7799): Modulo consola finalizado
+[INFO] 01:17:43:758 Consola/(7956:7956): Consola iniciada
+[INFO] 01:17:43:758 Consola/(7956:7956): Se agregó el operador NO_OP
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el parametro 5
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el operador I/O
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el parametro 3000
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el operador WRITE
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el parametro 4
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el parametro 42
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el operador COPY
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el parametro 0
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el parametro 4
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el operador READ
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el parametro 0
+[INFO] 01:17:43:759 Consola/(7956:7956): Se agregó el operador EXIT
+[INFO] 01:17:43:759 Consola/(7956:7956): Lista de instrucciones enviada.
+[INFO] 01:27:55:900 Consola/(7956:7956): Respuesta recibida: 191
+[INFO] 01:27:55:900 Consola/(7956:7956): Modulo consola finalizado
+[INFO] 01:29:23:468 Consola/(9777:9777): Consola iniciada
+[INFO] 01:29:23:469 Consola/(9777:9777): Se agregó el operador NO_OP
+[INFO] 01:29:23:469 Consola/(9777:9777): Se agregó el parametro 5
+[INFO] 01:29:23:469 Consola/(9777:9777): Se agregó el operador I/O
+[INFO] 01:29:23:469 Consola/(9777:9777): Se agregó el parametro 3000
+[INFO] 01:29:23:469 Consola/(9777:9777): Se agregó el operador WRITE
+[INFO] 01:29:23:469 Consola/(9777:9777): Se agregó el parametro 4
+[INFO] 01:29:23:469 Consola/(9777:9777): Se agregó el parametro 42
+[INFO] 01:29:23:469 Consola/(9777:9777): Se agregó el operador COPY
+[INFO] 01:29:23:470 Consola/(9777:9777): Se agregó el parametro 0
+[INFO] 01:29:23:470 Consola/(9777:9777): Se agregó el parametro 4
+[INFO] 01:29:23:470 Consola/(9777:9777): Se agregó el operador READ
+[INFO] 01:29:23:470 Consola/(9777:9777): Se agregó el parametro 0
+[INFO] 01:29:23:470 Consola/(9777:9777): Se agregó el operador EXIT
+[INFO] 01:29:23:470 Consola/(9777:9777): Lista de instrucciones enviada.
+[INFO] 01:34:36:691 Consola/(9777:9777): Respuesta recibida: 191
+[INFO] 01:34:36:691 Consola/(9777:9777): Modulo consola finalizado
+[INFO] 01:40:43:358 Consola/(11015:11015): Consola iniciada
+[INFO] 01:40:43:359 Consola/(11015:11015): Se agregó el operador EXIT
+[INFO] 01:40:43:359 Consola/(11015:11015): Lista de instrucciones enviada.
+[INFO] 01:44:32:801 Consola/(11015:11015): Respuesta recibida: 191
+[INFO] 01:44:32:801 Consola/(11015:11015): Modulo consola finalizado
+[INFO] 01:46:09:095 Consola/(11595:11595): Consola iniciada
+[INFO] 01:46:09:096 Consola/(11595:11595): Se agregó el operador EXIT
+[INFO] 01:46:09:096 Consola/(11595:11595): Lista de instrucciones enviada.
+[INFO] 01:48:26:680 Consola/(11595:11595): Respuesta recibida: 191
+[INFO] 01:48:26:680 Consola/(11595:11595): Modulo consola finalizado
+[INFO] 01:50:03:162 Consola/(12013:12013): Consola iniciada
+[INFO] 01:50:03:162 Consola/(12013:12013): Se agregó el operador EXIT
+[INFO] 01:50:03:163 Consola/(12013:12013): Lista de instrucciones enviada.
+[INFO] 01:55:21:613 Consola/(12013:12013): Respuesta recibida: 191
+[INFO] 01:55:21:613 Consola/(12013:12013): Modulo consola finalizado
+[INFO] 01:58:18:183 Consola/(12941:12941): Consola iniciada
+[INFO] 01:58:18:183 Consola/(12941:12941): Se agregó el operador EXIT
+[INFO] 01:58:18:183 Consola/(12941:12941): Lista de instrucciones enviada.
+[INFO] 02:01:31:174 Consola/(12941:12941): Respuesta recibida: 191
+[INFO] 02:01:31:174 Consola/(12941:12941): Modulo consola finalizado
+[INFO] 02:03:22:715 Consola/(13526:13526): Consola iniciada
+[INFO] 02:03:22:715 Consola/(13526:13526): Se agregó el operador EXIT
+[INFO] 02:03:22:715 Consola/(13526:13526): Lista de instrucciones enviada.
+[INFO] 02:04:18:605 Consola/(13663:13663): Consola iniciada
+[INFO] 02:04:18:605 Consola/(13663:13663): Se agregó el operador EXIT
+[INFO] 02:04:18:605 Consola/(13663:13663): Lista de instrucciones enviada.
+[INFO] 02:04:18:606 Consola/(13663:13663): Respuesta recibida: 191
+[INFO] 02:04:18:606 Consola/(13663:13663): Modulo consola finalizado
+[INFO] 02:06:41:271 Consola/(13918:13918): Consola iniciada
+[INFO] 02:06:41:272 Consola/(13918:13918): Se agregó el operador EXIT
+[INFO] 02:06:41:272 Consola/(13918:13918): Lista de instrucciones enviada.
+[INFO] 02:07:07:975 Consola/(13961:13961): Consola iniciada
+[INFO] 02:07:07:975 Consola/(13961:13961): Se agregó el operador EXIT
+[INFO] 02:07:07:975 Consola/(13961:13961): Lista de instrucciones enviada.
+[INFO] 02:07:07:976 Consola/(13961:13961): Respuesta recibida: 191
+[INFO] 02:07:07:976 Consola/(13961:13961): Modulo consola finalizado
+[INFO] 02:08:51:826 Consola/(14170:14170): Consola iniciada
+[INFO] 02:08:51:826 Consola/(14170:14170): Se agregó el operador EXIT
+[INFO] 02:08:51:826 Consola/(14170:14170): Lista de instrucciones enviada.

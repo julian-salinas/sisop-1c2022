@@ -30,7 +30,8 @@ int main(void) {
 	conexion_memoria = crear_socket_cliente(kernel_config -> ip_memoria, kernel_config -> puerto_memoria);
 	
 	// Conexion con CPU
-	conexion_cpu = crear_socket_cliente(kernel_config -> ip_cpu, kernel_config -> puerto_cpu_dispatch);
+	//conexion_cpu = crear_socket_cliente(kernel_config -> ip_cpu, kernel_config -> puerto_cpu_dispatch);
+	conexion_cpu = crear_socket_cliente("127.0.0.1", "8001");
 	
 	// Iniciar servidor para que se conecte la consola
 	int server_fd = iniciar_servidor(logger, "Kernel", kernel_config -> ip_kernel, kernel_config -> puerto_escucha);

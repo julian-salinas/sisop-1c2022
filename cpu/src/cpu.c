@@ -12,18 +12,19 @@ int main(void) {
 	// obtener valores ip y puerto del archivo config del módulo memoria
 	conexion_memoria = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_memoria);
 	log_info(logger,"Conexión cpu-memoria ok.");
-
+    obtener_config_memoria();
    //Conexión con kernel		
    conexion_kernel = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_escucha_dispatch);
-
+    log_info(logger,"Conexión cpu-kernel ok.");
+    
    int server_cpu_dispatch = iniciar_servidor(logger, "CPU Dispatch",IP_MEMORIA, "8001");
    server_cpu_interrupt = iniciar_servidor(logger, "CPU Interrupt",IP_MEMORIA, "8005");
-   int cliente_dispatch = esperar_cliente(server_cpu_dispatch);
-    
+   
    while(1){	
 	int header;
+   int cliente_dispatch = esperar_cliente(server_cpu_dispatch);
     header = recibir_header(cliente_dispatch);
-
+    log_info(logger, "cod op %d", header);
     switch (header) {
 
         case CONEXION_CPU_MEMORIA:
@@ -44,6 +45,7 @@ int main(void) {
             t_buffer* buffer = recibir_payload(cliente_dispatch);
             t_PCB* pcb = buffer_take_PCB(buffer);  
             //acá debería ir un mutex???
+            log_info(logger, "Voy a ejecutar un ciclo de instruccion.");
             ejecutar_ciclo_instruccion(pcb);
             break;
         case INTERRUPCION:

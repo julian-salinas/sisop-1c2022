@@ -59,9 +59,9 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
     
     start_t=clock();
     do{ 
-    //Fetch    
+    //Fetch   
     instruccion = list_get(pcb->lista_instrucciones, pcb->program_counter);
-
+    log_info(logger, "voy a decode instruccion.");
     //Decode
     switch (instruccion->identificador){
         case NO_OP:
@@ -95,8 +95,10 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
         break;
         case EXIT:
             // Syscall finalización de proceso
+            log_info(logger, "devolvi la pcb");
             pcb->estado=EXIT;
             devolver_pcb(pcb);
+            
         break;
         }
 
