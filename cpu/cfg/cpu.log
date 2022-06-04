@@ -620,3 +620,10 @@
 [INFO] 18:00:32:900 CPU/(9022:9023): Escuchando en 127.0.0.1:8001 (CPU)
 
 [INFO] 18:00:32:900 CPU/(9022:9023): CPU Dispatch lista como servidor
+[INFO] 01:02:41:154 CPU/(5480:5480): Modulo CPU iniciado
+[INFO] 01:02:41:172 CPU/(5480:5480): Config CPU load
+[INFO] 01:02:41:172 CPU/(5480:5480): Conexión cpu-memoria ok.
+[INFO] 01:02:41:173 CPU/(5480:5480): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 01:02:41:173 CPU/(5480:5480): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+

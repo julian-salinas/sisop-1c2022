@@ -16,30 +16,51 @@ int main(void) {
    //Conexión con kernel		
    conexion_kernel = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_escucha_dispatch);
 
+   int server_cpu_dispatch = iniciar_servidor(logger, "CPU Dispatch",IP_MEMORIA, "8001");
+   server_cpu_interrupt = iniciar_servidor(logger, "CPU Interrupt",IP_MEMORIA, "8005");
+   int cliente_dispatch = esperar_cliente(server_cpu_dispatch);
+    
+   while(1){	
+	int header;
+    header = recibir_header(cliente_dispatch);
 
-	int pid = fork();
+    switch (header) {
 
-	if(pid == 0){
-	//iniciar servidor cpu - Dispatch
-	int server_cpu_dispatch = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8001");
-	log_info(logger, "CPU Dispatch lista como servidor");
-    obtener_config_memoria();
-	while(server_listen(logger, "CPU", server_cpu_dispatch, (void*)(*procesar_conexion)));
+        case CONEXION_CPU_MEMORIA:
+        {
+            /* TODO
+            / recibir paquete y guardar paginas por tabla y tamanio pagina */
+            t_buffer* payload = recibir_payload(cliente_dispatch);
+            paginas_por_tabla = buffer_take_UINT8(payload);
+            tamanio_pagina = buffer_take_UINT8(payload);
+            //funciona 
+            log_info(logger, "Se recibió configuración de memoria.");
+            printf("Páginas por tabla: %u\n",paginas_por_tabla);
+            printf("Tamaño de página: %u\n",tamanio_pagina);
+            break; 
+        }
+        case PCB:
+            log_info(logger, "Se recibió pcb del Kernel.");
+            t_buffer* buffer = recibir_payload(cliente_dispatch);
+            t_PCB* pcb = buffer_take_PCB(buffer);  
+            //acá debería ir un mutex???
+            ejecutar_ciclo_instruccion(pcb);
+            break;
+        case INTERRUPCION:
+            interrupcion=1;
+            break;
 
-	terminar_programa("CPU", server_cpu_dispatch, logger);
-	}
+        case -1:
+            log_error(logger, "Cliente desconectado de s...");
+            return;
 
-	else if(pid > 0){
-	//iniciar servidor cpu - Interrupt
-	int server_cpu_interrupt = iniciar_servidor(logger, "CPU",IP_MEMORIA, "8005");
-	log_info(logger, "CPU interrupt lista como servidor");
-	//Deberia usar otra funcion en vez de procesar conexion, exclusivamente para atender las interrupciones
-	while(server_listen(logger, "CPU", server_cpu_interrupt, (void*)(*procesar_conexion)));
-	terminar_programa("CPU", server_cpu_interrupt, logger);
-	}
-	else {
-		perror("forkeando");
-	}
+        default:
+            log_error(logger, "Algo anduvo mal en el server de s");
+            log_info(logger, "Cop: %d", header);
+            return;
+    }//fin switch
+
+	}//fin ciclo infinito
 
 	
 	//destruir_cpu_config(cpu_config);
@@ -54,4 +75,16 @@ void obtener_config_memoria(){
 	destruir_paquete(paquete_config);
 	//liberar_socket_cliente(conexion_memoria);
 	log_info(logger, "Request config memoria enviada.");
+}
+
+int esperar_cliente(int socket_servidor)
+{
+	// Quitar esta línea cuando hayamos terminado de implementar la funcion
+	// assert(!"no implementado!");
+
+	// Aceptamos un nuevo cliente
+	int socket_cliente = accept(socket_servidor, NULL, NULL);
+	log_info(logger, "Se conecto un cliente!");
+
+	return socket_cliente;
 }

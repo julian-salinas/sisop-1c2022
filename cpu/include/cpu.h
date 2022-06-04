@@ -20,7 +20,7 @@
     #include "utils.h"
 
     t_cpu_config* cpu_config;
-    int conexion_memoria, conexion_kernel;
+    int conexion_memoria, conexion_kernel, server_cpu_interrupt;
     t_paquete* paquete;
 	t_config* config;
     t_log* logger;
@@ -31,5 +31,7 @@
     uint8_t tamanio_pagina;
 
     int interrupcion; //0 el kernel no envio interrupcion, 1 interrumpir ejecución
+
+    int esperar_cliente(int socket_servidor);
 
 #endif /* CPU_H_ */
