@@ -67,6 +67,7 @@ void* func_corto_plazo(void* args){
             // Empezar a contabilizar tiempo bloqueado
 
             // pasar transicion running a blocked a false
+            transicion_running_a_blocked = false;
         }
 
         else if (transicion_ready_a_running) {

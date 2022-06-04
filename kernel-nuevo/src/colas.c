@@ -61,6 +61,8 @@ void new_a_ready(void) {
         queue_push(cola_ready, procesoAMover);
     sem_post(mutex_cola_ready);
 
+    transicion_new_a_ready = false;
+
     log_info(logger, "El proceso con Id:%d pasó de NEW a READY.", procesoAMover -> PID);
 }
 
@@ -77,6 +79,8 @@ void suspended_ready_a_ready(void) {
         queue_push(cola_ready, procesoAMover);
     sem_post(mutex_cola_ready);
 
+    transicion_suspended_ready_a_ready = false;
+
     log_info(logger, "El proceso con Id:%d pasó de SUSPENDED-READY a READY.", procesoAMover -> PID);
 }
 
@@ -92,8 +96,9 @@ void running_a_ready(t_PCB* procesoAMover) {
         proceso_corriendo = false;
     sem_post(mutex_proceso_corriendo);
 
-    log_info(logger, "El proceso con Id:%d pasó de RUNNING a READY.", procesoAMover -> PID);
+    transicion_running_a_ready = false;
 
+    log_info(logger, "El proceso con Id:%d pasó de RUNNING a READY.", procesoAMover -> PID);
 }
 
 t_PCB* ready_a_running(void) {
@@ -111,6 +116,8 @@ t_PCB* ready_a_running(void) {
 
     sem_post(sem_multiprogramacion);
 
+    transicion_ready_a_running = false;
+
     return procesoAMover;
 }
 
@@ -122,6 +129,7 @@ void running_a_blocked(t_PCB* procesoAMover){
 
     log_info(logger, "El proceso con Id:%d  pasó de RUNNING a BLOCKED.", procesoAMover -> PID);
 
+    transicion_running_a_blocked = false;
 }
 
 void blocked_a_ready(){
@@ -138,6 +146,7 @@ void blocked_a_ready(){
 
     log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a READY.", procesoAMover -> PID);
 
+    transicion_blocked_a_ready = false;
 }
 
 void blocked_a_exit(t_PCB* procesoAMover){
@@ -145,6 +154,8 @@ void blocked_a_exit(t_PCB* procesoAMover){
     pasar_a_exit(cola_blocked, mutex_cola_blocked, procesoAMover);
 
     log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a EXIT.", procesoAMover -> PID);
+
+    transicion_blocked_a_exit = false;
 
     //avisar a memoria que desaloje el proceso
 }
@@ -154,6 +165,8 @@ void new_a_exit(t_PCB* procesoAMover){
     pasar_a_exit(cola_new, mutex_cola_new, procesoAMover);
 
     log_info(logger, "El proceso con Id:%d  pasó de NEW a EXIT.", procesoAMover -> PID);
+
+    transicion_new_a_exit = false;
 
     //avisar a memoria que desaloje el proceso
 }
@@ -168,8 +181,9 @@ void running_a_exit(t_PCB* procesoAMover) {
 
     log_info(logger, "El proceso con Id:%d  pasó de RUNNING a EXIT.", procesoAMover -> PID);
 
+    transicion_running_a_exit = false;
+
     //avisar a memoria que desaloje el proceso
-    
 }
 
 void ready_a_exit(t_PCB* procesoAMover){
@@ -178,12 +192,15 @@ void ready_a_exit(t_PCB* procesoAMover){
 
     log_info(logger, "El proceso con Id %d:  pasó de READY a EXIT.", procesoAMover -> PID);
 
-    //avisar a memoria que desaloje el proceso
+    transicion_ready_a_exit = false;
 
+    //avisar a memoria que desaloje el proceso
 }
 
 void blocked_a_suspended_blocked(t_PCB* procesoAMover){
     procesoAMover -> estado = SUSPENDED_BLOCKED;
+
+    transacion_blocked_a_suspended_blocked = false;
 }
 
 pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso) {

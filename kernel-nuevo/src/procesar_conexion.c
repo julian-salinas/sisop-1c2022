@@ -14,6 +14,14 @@ void procesar_conexion(void* void_args) {
     transicion_running_a_blocked = false;
     transicion_block_a_suspended_block = false;
     transicion_suspended_block_a_suspended_ready = false;
+    transicion_suspended_ready_a_ready = false;
+    transicion_running_a_ready = false;
+    transicion_ready_a_running = false;
+    transicion_blocked_a_ready = false;
+    transicion_blocked_a_exit = false;
+    transicion_new_a_exit = false;
+    transicion_ready_a_exit = false;
+    transacion_blocked_a_suspended_blocked = false;
 
     int header;
     header = recibir_header(socket_cliente);
