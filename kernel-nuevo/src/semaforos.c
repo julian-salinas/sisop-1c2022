@@ -11,8 +11,8 @@ void ini_semaforos(void) {
 	sem_multiprogramacion = malloc(sizeof(sem_t));
 	sem_init(sem_multiprogramacion, 0, kernel_config -> grado_multiprogramacion);
 
-	sem_nuevo_proceso = malloc(sizeof(sem_t));
-	sem_init(sem_nuevo_proceso, 0, 0);
+	sem_mediano_plazo = malloc(sizeof(sem_t));
+	sem_init(sem_mediano_plazo, 0, 0);
 
 	sem_corto_plazo = malloc(sizeof(sem_t));
 	sem_init(sem_corto_plazo, 0, 0);

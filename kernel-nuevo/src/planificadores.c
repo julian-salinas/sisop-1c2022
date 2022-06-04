@@ -108,7 +108,7 @@ void* func_mediano_plazo(void* args) {
 
     while (1) {
         sem_wait(sem_multiprogramacion);
-        sem_wait(sem_nuevo_proceso);
+        sem_wait(sem_mediano_plazo);
         sem_wait(mutex_mediano_plazo);
 
             if(cola_esta_vacia(cola_suspended_ready)) {
