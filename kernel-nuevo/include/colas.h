@@ -21,7 +21,6 @@
     t_queue* cola_ready;
     t_queue* cola_exit;
     t_queue* cola_blocked;
-    t_queue* cola_suspended_blocked;
     t_queue* cola_suspended_ready;
 
     //Semáforos colas
@@ -29,7 +28,6 @@
     sem_t* mutex_cola_ready;
     sem_t* mutex_cola_exit;
     sem_t* mutex_cola_blocked;
-    sem_t* mutex_cola_suspended_blocked;
     sem_t* mutex_cola_suspended_ready;
 
     sem_t* mutex_proceso_corriendo;

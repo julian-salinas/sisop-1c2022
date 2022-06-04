@@ -61,8 +61,8 @@ void* func_corto_plazo(void* args){
 
         if (transicion_running_a_blocked) {
             // Agarrar variable global que contiene PCB
-
             // Agregarlo a cola blocked
+            running_a_blocked(proceso_desalojado);
 
             // Empezar a contabilizar tiempo bloqueado
 
@@ -141,11 +141,13 @@ void* func_largo_plazo(void* args){
             
             sem_post(sem_corto_plazo);
         }
-
         else if (transicion_running_a_exit) {
             // Pasar proceso a exit
+            running_a_exit(proceso_desalojado);
             // Informar a consola que finalizó
+            enviar_header(proceso_desalojado -> socket_cliente, PROCESO_FINALIZADO);
             // devolver variable a false
+            transicion_running_a_exit = false;
         }
     }
 }
@@ -183,5 +185,7 @@ void* func_io(void* args) {
             // Pasar a suspended-ready (avisar a planificador mediano plazo para que lo haga)
                 // hacer un post a mediano plazo
                 // variable transicion -> true
+
+        //Hacer un post del semaforo de IO
     }
 }

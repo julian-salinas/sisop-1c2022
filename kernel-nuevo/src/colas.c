@@ -17,6 +17,8 @@ void inicializar_semaforos_plani(void) {
 void inicializar_colas(void) {
     cola_new = queue_create();
     cola_ready = queue_create();
+    cola_blocked = queue_create();
+    cola_exit = queue_create();
     cola_suspended_ready = queue_create();
 }
 
@@ -144,6 +146,7 @@ void blocked_a_exit(t_PCB* procesoAMover){
 
     log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a EXIT.", procesoAMover -> PID);
 
+    //avisar a memoria que desaloje el proceso
 }
 
 void new_a_exit(t_PCB* procesoAMover){
@@ -152,6 +155,7 @@ void new_a_exit(t_PCB* procesoAMover){
 
     log_info(logger, "El proceso con Id:%d  pasó de NEW a EXIT.", procesoAMover -> PID);
 
+    //avisar a memoria que desaloje el proceso
 }
 
 void running_a_exit(t_PCB* procesoAMover) {
@@ -163,6 +167,8 @@ void running_a_exit(t_PCB* procesoAMover) {
     sem_post(mutex_cola_exit);
 
     log_info(logger, "El proceso con Id:%d  pasó de RUNNING a EXIT.", procesoAMover -> PID);
+
+    //avisar a memoria que desaloje el proceso
     
 }
 
@@ -171,6 +177,13 @@ void ready_a_exit(t_PCB* procesoAMover){
     pasar_a_exit(cola_ready, mutex_cola_ready, procesoAMover);
 
     log_info(logger, "El proceso con Id %d:  pasó de READY a EXIT.", procesoAMover -> PID);
+
+    //avisar a memoria que desaloje el proceso
+
+}
+
+void blocked_a_suspended_blocked(t_PCB* procesoAMover){
+    procesoAMover -> estado = SUSPENDED_BLOCKED;
 }
 
 pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso) {

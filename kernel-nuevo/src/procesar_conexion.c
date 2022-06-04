@@ -4,6 +4,7 @@ void procesar_conexion(void* void_args) {
 
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* logger = args->log;
+    t_buffer* payload;
     int socket_cliente = args->fd;
     char* nombre_servidor = args->server_name;
     free(args);
@@ -23,7 +24,7 @@ void procesar_conexion(void* void_args) {
             log_info(logger, "Se recibio un proceso");
 
             // Recibir el paquete del cliente y crear PCB del mismo
-            t_buffer* payload = recibir_payload(socket_cliente);
+            payload = recibir_payload(socket_cliente);
             t_proceso* proceso = buffer_take_PROCESO(payload);                
             t_PCB* pcb = crear_PCB(proceso, socket_cliente);
 
@@ -47,10 +48,12 @@ void procesar_conexion(void* void_args) {
             transicion_running_a_exit = true;
 
             // Recibir pcb de CPU
-
             // Guardar pcb en variable global
+            payload = recibir_payload(conexion_cpu);
+            proceso_desalojado = buffer_take_PCB(payload);
 
             // sem post a planificador largo plazo
+            sem_post(sem_largo_plazo);
             
             break;
 
@@ -59,10 +62,12 @@ void procesar_conexion(void* void_args) {
             transicion_running_a_blocked = true;
 
             // Recibir pcb de CPU
-
             // Guardar pcb en variable global
+            payload = recibir_payload(conexion_cpu);
+            proceso_desalojado = buffer_take_PCB(payload);
 
             // sem post a planificador corto plazo
+            sem_post(sem_corto_plazo);
             
             break;
 
