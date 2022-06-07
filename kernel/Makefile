@@ -1,4 +1,4 @@
-PROCESS_NAME=kernel
+PROCESS_NAME=kernel-nuevo
 IDIR =./include
 SHARED_IDIR = ../shared/include
 CC=gcc

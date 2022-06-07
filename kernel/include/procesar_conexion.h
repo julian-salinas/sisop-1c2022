@@ -15,15 +15,16 @@
     #include "proceso.h"
     
     #include "kernel.h"
-
+    #include "semaforos.h"
+    #include "colas.h"
+    #include "planificadores.h"
 
     uint32_t contador_id_proceso;
 
     int estimacion_rafaga_inicial;
-    pthread_mutex_t* mutex_contador_id_proceso;
 
     void procesar_conexion(void* void_args);
 
-    t_PCB* crear_PCB(t_proceso* proceso);
+    t_PCB* crear_PCB(t_proceso* proceso, int fd);
 
 #endif /* PROCESAR_CONEXION_H */

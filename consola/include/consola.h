@@ -18,14 +18,16 @@
     // Includes del módulo
     #include "consola_config.h"
     #include "identificador.h"
-
+    #include "parser.h"
+    #include "validaciones.h"
     // Includes de shared
     #include "networking.h"
-    #include "config.h"
     #include "logging.h"
     #include "instrucciones.h"
     #include "proceso.h"
     #include "utils.h"
 
 
+    t_log* logger_consola;
+    
 #endif /* CONSOLA_H */

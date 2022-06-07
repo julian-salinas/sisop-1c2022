@@ -14,7 +14,14 @@
         CONEXION_CPU_MEMORIA,
         PCB,
         BLOQUEO,
-        FINALIZACION
+        FINALIZACION,
+        INTERRUPCION,
+        NUEVO_PROCESO, // esto es lo que le manda consola a kernel
+        CPU_OK,
+        MEMORIA_OK,
+        NUEVO_PROCESO_READY,
+        PROCESO_FINALIZADO,
+        PROCESO_BLOQUEADO,
     } codigo_operacion;
 
 #endif /* ENUM_H */

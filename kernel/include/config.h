@@ -1,5 +1,5 @@
-#ifndef INI_CONFIG_H
-#define INI_CONFIG_H
+#ifndef CONFIG_H
+#define CONFIG_H
 
     #include<stdio.h>
     #include<stdlib.h>

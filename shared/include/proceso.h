@@ -7,6 +7,16 @@
     #include "serializacion.h"
     #include "instrucciones.h"
 
+
+    typedef enum {
+        NEW,
+        READY,
+        RUNNING,
+        BLOCKED,
+        SUSPENDED_BLOCKED,
+        SUSPENDED_READY
+    } estado_proceso;
+
     typedef struct {
         uint32_t PID;
         size_t tamanio; 
@@ -14,6 +24,11 @@
         int program_counter;
         int32_t tabla_paginas;
         int estimacion_rafaga;
+        double tiempo_ejecucion;
+        int socket_cliente;
+        int tiempo_bloqueo;
+        estado_proceso estado;
+
     } t_PCB;
 
     t_proceso* crear_proceso(size_t tamanio, t_lista_instrucciones* lista_instrucciones);

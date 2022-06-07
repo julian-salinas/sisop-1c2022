@@ -1,4 +1,4 @@
-#include "kernel_config.h"
+#include "config.h"
 
 
 t_kernel_config* ini_kernel_config(char* path_a_config) {
