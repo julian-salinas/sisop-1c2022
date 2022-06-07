@@ -15,7 +15,9 @@
     #include "proceso.h"
     
     #include "kernel.h"
-
+    #include "semaforos.h"
+    #include "colas.h"
+    #include "planificadores.h"
 
     uint32_t contador_id_proceso;
 
