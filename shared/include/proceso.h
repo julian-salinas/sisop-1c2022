@@ -41,7 +41,13 @@
 
     t_proceso* buffer_take_PROCESO(t_buffer* buffer);
 
-    void enviar_pcb(int socket, t_PCB* pcb);
+    /**
+     * @DESC: Agregar pcb a buffer de un paquete y enviarlo al socket correspondiente
+     * @param socket: socket servidor a donde se va a enviar el pcb
+     * @param header: header del mensaje para que el modulo que recibe sepa que hacer
+     * @param pcb: pcb a enviar
+     */ 
+    void enviar_pcb(int socket, uint8_t header, t_PCB* pcb);
 
     t_PCB* buffer_take_PCB(t_buffer* buffer);
                 

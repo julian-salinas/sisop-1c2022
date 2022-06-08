@@ -22,6 +22,7 @@
         NUEVO_PROCESO_READY,
         PROCESO_FINALIZADO,
         PROCESO_BLOQUEADO,
+        SOL_TABLA_PAGINAS,
     } codigo_operacion;
 
 #endif /* ENUM_H */
