@@ -33,7 +33,9 @@ void procesar_conexion(void* void_args) {
             ejecutar_ciclo_instruccion(pcb);
             break;
         case INTERRUPCION:
+            sem_wait(mutex_interrupt);
             interrupcion=1;
+            sem_post(mutex_interrupt);
             break;
 
         case -1:

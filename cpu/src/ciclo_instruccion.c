@@ -55,13 +55,11 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
     t_instruccion* instruccion;
     int direccion_logica, sleep_time;
     uint32_t valor;
-    int cliente_interrupt, header_interrupt;
-    
     start_t=clock();
     do{ 
     //Fetch   
     instruccion = list_get(pcb->lista_instrucciones, pcb->program_counter);
-    log_info(logger, "voy a decode instruccion.");
+    log_info(logger, "Decode instrucción.");
     //Decode
     switch (instruccion->identificador){
         case NO_OP:
@@ -95,7 +93,7 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
         break;
         case EXIT:
             // Syscall finalización de proceso
-            log_info(logger, "devolvi la pcb");
+            log_info(logger, "Finaliza proceso. EXIT");
             pcb->estado=EXIT;
             devolver_pcb(pcb);
             
@@ -103,13 +101,6 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
         }
 
         pcb->program_counter++;
-
-    cliente_interrupt=esperar_cliente(server_cpu_interrupt);
-    header_interrupt = recibir_header(cliente_interrupt);
-
-    if(header_interrupt==INTERRUPCION){
-        interrupcion=1;
-    }
 
     }while(!interrupcion);//Check Interrupt //Ciclo de instruccion
 
