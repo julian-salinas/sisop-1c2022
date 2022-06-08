@@ -30,10 +30,7 @@
     sem_t* mutex_cola_blocked;
     sem_t* mutex_cola_suspended_ready;
 
-    sem_t* mutex_proceso_corriendo;
-
     int proceso_buscado;
-    sem_t* mutex_proceso_buscado;
 
     // Inicializa todos los semáforos de colas
     void inicializar_semaforos_plani();

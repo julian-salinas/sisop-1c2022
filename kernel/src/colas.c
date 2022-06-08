@@ -10,9 +10,8 @@ void inicializar_semaforos_plani(void) {
     mutex_cola_suspended_ready = malloc(sizeof(sem_t));
     sem_init(mutex_cola_suspended_ready, 0, 1);
 
-    mutex_proceso_corriendo = malloc(sizeof(sem_t));
-    sem_init(mutex_proceso_corriendo, 0, 1);
 }
+
 
 void inicializar_colas(void) {
     cola_new = queue_create();
@@ -22,15 +21,18 @@ void inicializar_colas(void) {
     cola_suspended_ready = queue_create();
 }
 
+
 bool cola_esta_vacia(t_queue* cola) {
     return queue_is_empty(cola);
 }
+
 
 void agregar_a_new(t_PCB* procesoAMover) {
     sem_wait(mutex_cola_new);
         queue_push(cola_new, procesoAMover);
     sem_post(mutex_cola_new);
 }
+
 
 void new_a_ready(void) {
 
@@ -41,29 +43,29 @@ void new_a_ready(void) {
     procesoAMover -> estado = READY;
 
     // Solicitar tabla de páginas a memoria
-    //enviar_pcb(conexion_memoria, procesoAMover);
+    enviar_pcb(conexion_memoria, SOL_TABLA_PAGINAS, procesoAMover);
     
-    // ¿Habría que destruir procesoAMover en este momento?
-    //no se sabe
-    //uint8_t resp_memoria = recibir_header(conexion_memoria);
+    // ¿Habría que destruir procesoAMover en este momento? nadie sabe
 
-    // if (resp_memoria != MEMORIA_OK) {
-    //     close(procesoAMover -> socket_cliente);
+    uint8_t resp_memoria = recibir_header(conexion_memoria);
 
-    //     // Modificar: No se puede hacer un continue si no hay un loop
-    //     return;
-    // }
+    if (resp_memoria != MEMORIA_OK) {
+        close(procesoAMover -> socket_cliente);
+        return;
+    }
 
-    // t_buffer* payload = recibir_payload(conexion_memoria);
-    // procesoAMover = buffer_take_PCB(payload);
+    t_buffer* payload = recibir_payload(conexion_memoria);
+    procesoAMover = buffer_take_PCB(payload);
 
     sem_wait(mutex_cola_ready);
         queue_push(cola_ready, procesoAMover);
     sem_post(mutex_cola_ready);
 
-    transicion_new_a_ready = false;
+    sem_wait(mutex_transicion_new_a_ready);
+        transicion_new_a_ready = false;
+    sem_post(mutex_transicion_new_a_ready);
 
-    log_info(logger, "El proceso con Id:%d pasó de NEW a READY.", procesoAMover -> PID);
+    log_info(logger, "El proceso con ID:%d pasó de NEW a READY.", procesoAMover -> PID);
 }
 
 
@@ -81,8 +83,9 @@ void suspended_ready_a_ready(void) {
 
     transicion_suspended_ready_a_ready = false;
 
-    log_info(logger, "El proceso con Id:%d pasó de SUSPENDED-READY a READY.", procesoAMover -> PID);
+    log_info(logger, "El proceso con ID:%d pasó de SUSPENDED-READY a READY.", procesoAMover -> PID);
 }
+
 
 void running_a_ready(t_PCB* procesoAMover) {
 
@@ -96,10 +99,13 @@ void running_a_ready(t_PCB* procesoAMover) {
         proceso_corriendo = false;
     sem_post(mutex_proceso_corriendo);
 
-    transicion_running_a_ready = false;
+    sem_wait(mutex_transicion_running_a_ready);
+        transicion_running_a_ready = false;
+    sem_post(mutex_transicion_running_a_ready);
 
     log_info(logger, "El proceso con Id:%d pasó de RUNNING a READY.", procesoAMover -> PID);
 }
+
 
 t_PCB* ready_a_running(void) {
     sem_wait(mutex_cola_ready);
@@ -114,12 +120,13 @@ t_PCB* ready_a_running(void) {
 
     log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
 
-    sem_post(sem_multiprogramacion);
-
-    transicion_ready_a_running = false;
+    sem_wait(mutex_transicion_ready_a_running);
+        transicion_ready_a_running = false;
+    sem_post(mutex_transicion_ready_a_running);
 
     return procesoAMover;
 }
+
 
 void running_a_blocked(t_PCB* procesoAMover){
 
@@ -127,10 +134,13 @@ void running_a_blocked(t_PCB* procesoAMover){
         queue_push(cola_blocked, procesoAMover);
     sem_post(mutex_cola_blocked);
 
-    log_info(logger, "El proceso con Id:%d  pasó de RUNNING a BLOCKED.", procesoAMover -> PID);
+    log_info(logger, "El proceso con ID:%d  pasó de RUNNING a BLOCKED.", procesoAMover -> PID);
 
-    transicion_running_a_blocked = false;
+    sem_wait(mutex_transicion_running_a_blocked);
+        transicion_running_a_blocked = false;
+    sem_post(mutex_transicion_running_a_blocked);
 }
+
 
 void blocked_a_ready(){
 
@@ -149,6 +159,7 @@ void blocked_a_ready(){
     transicion_blocked_a_ready = false;
 }
 
+
 void blocked_a_exit(t_PCB* procesoAMover){
 
     pasar_a_exit(cola_blocked, mutex_cola_blocked, procesoAMover);
@@ -159,6 +170,7 @@ void blocked_a_exit(t_PCB* procesoAMover){
 
     //avisar a memoria que desaloje el proceso
 }
+
 
 void new_a_exit(t_PCB* procesoAMover){
 
@@ -171,6 +183,7 @@ void new_a_exit(t_PCB* procesoAMover){
     //avisar a memoria que desaloje el proceso
 }
 
+
 void running_a_exit(t_PCB* procesoAMover) {
 
     procesoAMover -> estado = EXIT;
@@ -181,10 +194,14 @@ void running_a_exit(t_PCB* procesoAMover) {
 
     log_info(logger, "El proceso con Id:%d  pasó de RUNNING a EXIT.", procesoAMover -> PID);
 
-    transicion_running_a_exit = false;
+    sem_wait(mutex_transicion_running_a_exit);
+        transicion_running_a_exit = false;
+    sem_post(mutex_transicion_running_a_exit);
 
-    //avisar a memoria que desaloje el proceso
+    // Avisar a memoria que desaloje el proceso
+    sem_post(sem_multiprogramacion);
 }
+
 
 void ready_a_exit(t_PCB* procesoAMover){
 
@@ -197,13 +214,19 @@ void ready_a_exit(t_PCB* procesoAMover){
     //avisar a memoria que desaloje el proceso
 }
 
+
 void blocked_a_suspended_blocked(t_PCB* procesoAMover){
     procesoAMover -> estado = SUSPENDED_BLOCKED;
 
-    transacion_blocked_a_suspended_blocked = false;
+    sem_wait(mutex_transicion_blocked_a_suspended_blocked);
+        transicion_blocked_a_suspended_blocked = false;
+    sem_post(mutex_transicion_blocked_a_suspended_blocked);
+
+    log_info(logger, "El proceso con ID:%d pasó de BLOCKED a SUSPENDED-BLOCKED", procesoAMover -> PID);
 }
 
-pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso) {
+
+void pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso) {
 
     sem_wait(mutex_proceso_buscado);
         

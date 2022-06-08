@@ -21,13 +21,17 @@ void procesar_conexion(void* void_args) {
     transicion_blocked_a_exit = false;
     transicion_new_a_exit = false;
     transicion_ready_a_exit = false;
-    transacion_blocked_a_suspended_blocked = false;
+    transicion_blocked_a_suspended_blocked = false;
 
     int header;
     header = recibir_header(socket_cliente);
 
-    switch(header) {
+    switch (header) {
+
         case NUEVO_PROCESO:
+            /** Consola envía un proceso que acaba de crearse
+             *  - Pasar proceso de NEW a READY en caso de que el grado de multiprogramación lo permita
+             */ 
 
             log_info(logger, "Se recibio un proceso");
 
@@ -36,20 +40,20 @@ void procesar_conexion(void* void_args) {
             t_proceso* proceso = buffer_take_PROCESO(payload);                
             t_PCB* pcb = crear_PCB(proceso, socket_cliente);
             
-            // Agregar a New
-            // Sem post nuevo proceso
             sem_wait(mutex_mediano_plazo);
-                
-                agregar_a_new(pcb);
-                sem_post(sem_mediano_plazo);
+                agregar_a_new(pcb);  // Se agrega proceso a cola NEW y se actualiza su estado
 
+                /* 
+                // ¿y esto que hacía acá?
+                enviar_pcb(conexion_cpu, pcb);
+                log_info(logger, "la pcb se mando es tu culpa cpu");
+                */
+
+                sem_post(sem_nuevo_proceso);
                 log_info(logger, "Proceso PID:%d se ahora en estado NEW", pcb -> PID);
-                 enviar_pcb(conexion_cpu, pcb);
-                 log_info(logger, "la pcb se mando es tu culpa cpu");
+
             sem_post(mutex_mediano_plazo);
-
             destruir_buffer(payload);
-
             break;
 
         case PROCESO_FINALIZADO:  // mensaje de CPU

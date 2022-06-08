@@ -73,50 +73,29 @@ void* func_corto_plazo(void* args){
     t_PCB* procesoAMover;
     
     while (1) {
-
         sem_wait(sem_corto_plazo);
 
         if (transicion_running_a_blocked) {
-            // Agarrar variable global que contiene PCB
-            // Agregarlo a cola blocked
+            // Agarrar variable global que contiene PCB y agregarlo a cola blocked
             running_a_blocked(proceso_desalojado);
 
-            // Empezar a contabilizar tiempo bloqueado
+            // Empezar a contabilizar tiempo bloqueado ¿cuanto tiempo tiene que bloquearse?
 
-            // pasar transicion running a blocked a false
-            transicion_running_a_blocked = false;
         }
 
         else if (transicion_ready_a_running) {
 
-            if (proceso_corriendo) {
-
-                // Avisar a CPU
-                enviar_header(conexion_cpu, NUEVO_PROCESO_READY);
-
-                uint8_t resp_cpu = recibir_header(conexion_cpu);
-
-                if (resp_cpu != CPU_OK) {
-                    log_error(logger, "Planif. Corto Plazo - Fallo comunicación con CPU");
-                    
-                    // Recursividad hasta que la CPU responda
-                    sem_post(sem_corto_plazo);
-                    continue;
-                }
-
-                t_buffer* payload = recibir_payload(conexion_cpu);
-                procesoAMover = buffer_take_PCB(payload);
-
+            if ((algoritmo_elegido == SJF) && (proceso_corriendo)) {
+                enviar_header(conexion_cpu, INTERRUPCION);  // Avisar a CPU para que desaloje proceso actual
+                t_paquete* resp_cpu = recibir_paquete(conexion_cpu);
+                procesoAMover = buffer_take_PCB(resp_cpu -> payload);
                 running_a_ready(procesoAMover);
+                ordenar_cola_ready();  // Solo es necesario ordenar la cola ready cuando usamos SJF
+                log_info(logger, "Se reordenó la cola READY.");
             }
 
-            ordenar_cola_ready();
-
-            log_info(logger, "Cola ready ordenada");
-
-            procesoAMover = ready_a_running();
-            
-            enviar_pcb(conexion_cpu, procesoAMover);
+            procesoAMover = ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
+            enviar_pcb(conexion_cpu, PCB, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
         }
     }
 }
@@ -137,8 +116,11 @@ void* func_mediano_plazo(void* args) {
 
             suspended_ready_a_ready();
 
-            // Avisar al planificador de corto plazo para que planifique
-            sem_post(sem_corto_plazo);
+            sem_wait(mutex_transicion_ready_a_running);
+                transicion_ready_a_running = true;
+            sem_post(mutex_transicion_ready_a_running);
+
+            sem_post(sem_corto_plazo);  // Despertar planificador de corto plazo
 
         sem_post(mutex_mediano_plazo);
     }
@@ -154,18 +136,12 @@ void* func_largo_plazo(void* args){
             sem_wait(mutex_mediano_plazo);
                 new_a_ready();
             sem_post(mutex_mediano_plazo);
-
-            transicion_ready_a_running = true;
-            
             sem_post(sem_corto_plazo);
-        }
-        else if (transicion_running_a_exit) {
-            // Pasar proceso a exit
-            running_a_exit(proceso_desalojado);
-            // Informar a consola que finalizó
-            enviar_header(proceso_desalojado -> socket_cliente, PROCESO_FINALIZADO);
-            // devolver variable a false
-            transicion_running_a_exit = false;
+            
+        } else if (transicion_running_a_exit) {
+            running_a_exit(proceso_desalojado);  // Pasar proceso a exit
+            enviar_header(proceso_desalojado -> socket_cliente, PROCESO_FINALIZADO); // Informar a consola que finalizó
+            transicion_running_a_exit = false; // devolver variable a false
         }
     }
 }
