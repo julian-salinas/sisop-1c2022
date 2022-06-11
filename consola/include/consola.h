@@ -20,13 +20,13 @@
     #include "identificador.h"
     #include "parser.h"
     #include "validaciones.h"
+
     // Includes de shared
     #include "networking.h"
     #include "logging.h"
     #include "instrucciones.h"
     #include "proceso.h"
     #include "utils.h"
-
 
     t_log* logger_consola;
     

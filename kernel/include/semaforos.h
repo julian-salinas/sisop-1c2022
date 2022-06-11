@@ -9,6 +9,9 @@
     // Semáforos mutex para variables - Arrancan en 1 todos
     sem_t* mutex_pid;
 
+    // Indica que hay procesos esperando a ser planificados o procesos en estado ready
+    sem_t* sem_procesos_esperando, *sem_procesos_en_ready, *sem_cpu_disponible, *sem_procesos_bloqueados;
+
     // Semáforos mutex para planificadores - Arrancan en 1 todos
     sem_t* mutex_mediano_plazo;
     
@@ -21,6 +24,7 @@
     // Semáforos binarios? Para despertar procesos - Arrancan en 0 todos
     sem_t* sem_mediano_plazo;
     sem_t* sem_corto_plazo, *sem_mediano_plazo, *sem_largo_plazo;
+    sem_t* sem_io;
 
     // Semáforos de transiciones
     sem_t* mutex_transicion_new_a_ready;

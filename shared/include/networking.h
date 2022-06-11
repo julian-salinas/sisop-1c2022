@@ -150,4 +150,11 @@
      */
     void enviar_paquete(int socket_cliente, t_paquete* paquete);    
 
+
+    /**
+     * @DESC: Aumentar el offset del header de un socket, para omitirlo al momento de extraer más datos
+     * @param socket: socket al cual se le omitirá el header
+     */
+    void omitir_header(int socket); 
+
 #endif /* NETWORKING_H */

@@ -220,7 +220,7 @@ t_buffer* recibir_payload(int socket) {
 }
 
 
-t_paquete* recibir_paquete(int socket){
+t_paquete* recibir_paquete(int socket_cliente){
     uint8_t header = recibir_header(socket);
     uint32_t tamanio_buffer;
 
@@ -236,3 +236,10 @@ t_paquete* recibir_paquete(int socket){
 
     return paquete;
 }
+
+
+void omitir_header(int socket_cliente) {
+    uint8_t header;
+    socket_get(socket_cliente, &header, sizeof(uint8_t));
+}
+

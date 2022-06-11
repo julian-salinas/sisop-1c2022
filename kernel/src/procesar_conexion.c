@@ -4,11 +4,11 @@ void procesar_conexion(void* void_args) {
 
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* logger = args->log;
-    t_buffer* payload;
-    int socket_cliente = args->fd;
+    int socket = args->fd;
     char* nombre_servidor = args->server_name;
     free(args);
 
+    /*
     transicion_new_a_ready = false;
     transicion_running_a_exit = false;
     transicion_running_a_blocked = false;
@@ -22,66 +22,38 @@ void procesar_conexion(void* void_args) {
     transicion_new_a_exit = false;
     transicion_ready_a_exit = false;
     transicion_blocked_a_suspended_blocked = false;
+    */
 
-    int header;
-    header = recibir_header(socket_cliente);
+    int header = recibir_header(socket);
+    t_PCB* pcb;
+    t_buffer* payload;
 
     switch (header) {
 
         case NUEVO_PROCESO:
-            /** Consola envía un proceso que acaba de crearse
-             *  - Pasar proceso de NEW a READY en caso de que el grado de multiprogramación lo permita
-             */ 
-
-            log_info(logger, "Se recibio un proceso");
-
-            // Recibir el paquete del cliente y crear PCB del mismo
-            payload = recibir_payload(socket_cliente);
-            t_proceso* proceso = buffer_take_PROCESO(payload);                
-            t_PCB* pcb = crear_PCB(proceso, socket_cliente);
-            
-            sem_wait(mutex_mediano_plazo);
-                agregar_a_new(pcb);  // Se agrega proceso a cola NEW y se actualiza su estado
-
-                /* 
-                // ¿y esto que hacía acá?
-                enviar_pcb(conexion_cpu, pcb);
-                log_info(logger, "la pcb se mando es tu culpa cpu");
-                */
-
-                sem_post(sem_nuevo_proceso);
-                log_info(logger, "Proceso PID:%d se ahora en estado NEW", pcb -> PID);
-
-            sem_post(mutex_mediano_plazo);
-            destruir_buffer(payload);
+            pcb = socket_create_PCB(socket);
+            agregar_a_new(pcb);  // Se agrega proceso a cola NEW y se actualiza su estado
             break;
 
-        case PROCESO_FINALIZADO:  // mensaje de CPU
-            
-            transicion_running_a_exit = true;
 
-            // Recibir pcb de CPU
-            // Guardar pcb en variable global
-            payload = recibir_payload(conexion_cpu);
-            proceso_desalojado = buffer_take_PCB(payload);
-
-            // sem post a planificador largo plazo
-            sem_post(sem_largo_plazo);
-            
+        case PROCESO_FINALIZADO:
+            sem_post(sem_cpu_disponible);
+            pcb = socket_get_PCB(socket);
+            enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb);  // Avisarle a memoria para que desaloje al proceso
+            enviar_header(pcb -> socket_cliente, PROCESO_FINALIZADO);  // Avisarle a consola que terminó la ejecución
             break;
 
-        case PROCESO_BLOQUEADO: // mensaje de cpu
-            
-            transicion_running_a_blocked = true;
 
-            // Recibir pcb de CPU
-            // Guardar pcb en variable global
-            payload = recibir_payload(conexion_cpu);
-            proceso_desalojado = buffer_take_PCB(payload);
+        case PROCESO_BLOQUEADO:
+            sem_post(sem_cpu_disponible);
+            pcb = socket_get_PCB(socket);
 
-            // sem post a planificador corto plazo
-            sem_post(sem_corto_plazo);
+            if ((pcb -> tiempo_bloqueo) > (double) (kernel_config -> tiempo_maximo_bloqueado)) {
+                pcb -> estado = SUSPENDED_BLOCKED;
+                // ¿Mandarle una solicitud a memoria para que saque al proceso de memoria?
+            }
             
+            running_a_blocked(pcb);
             break;
 
         case -1:
@@ -95,11 +67,10 @@ void procesar_conexion(void* void_args) {
 
     // Finalizar atender un cliente
     log_warning(logger, "El cliente se desconecto de server %s", nombre_servidor);
-
 }
 
 
-t_PCB* crear_PCB(t_proceso* proceso, int fd) {
+t_PCB* crear_PCB(t_proceso* proceso, int socket) {
     
     t_PCB* pcb = malloc(sizeof(t_PCB));
     pcb -> PID = contador_id_proceso;
@@ -109,13 +80,23 @@ t_PCB* crear_PCB(t_proceso* proceso, int fd) {
     pcb -> tabla_paginas = -1;
     pcb -> estimacion_rafaga = kernel_config -> estimacion_inicial;
     pcb -> tiempo_ejecucion = 0;
-    pcb -> socket_cliente = fd;
+    pcb -> socket_cliente = socket;
     pcb -> estado = NEW;
+    pcb -> tiempo_bloqueo = -1; // vo deci?
 
     sem_wait(mutex_pid);
         contador_id_proceso++;
     sem_post(mutex_pid);
     
     return pcb;
+}
 
+
+t_PCB* socket_create_PCB(int socket) {
+    t_buffer* payload = recibir_payload(socket);
+    t_proceso* proceso = buffer_take_PROCESO(payload);
+    t_PCB* pcb = crear_PCB(proceso, socket);
+    destruir_buffer(payload);
+
+    return pcb;
 }

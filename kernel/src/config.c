@@ -15,7 +15,7 @@ t_kernel_config* ini_kernel_config(char* path_a_config) {
     kernel_config -> estimacion_inicial = config_get_int_value(kernel_config -> config, "ESTIMACION_INICIAL");
     kernel_config -> alfa = config_get_int_value(kernel_config -> config, "ALFA");
     kernel_config -> grado_multiprogramacion = config_get_int_value(kernel_config -> config, "GRADO_MULTIPROGRAMACION");
-    kernel_config -> tiempo_maximo_bloqueado = config_get_int_value(kernel_config -> config, "TIEMPO_MAXIMO_BLOQUEADO");
+    kernel_config -> tiempo_maximo_bloqueado = (double) config_get_int_value(kernel_config -> config, "TIEMPO_MAXIMO_BLOQUEADO");
 
     return kernel_config;
 }
@@ -31,9 +31,5 @@ void destruir_kernel_config(t_kernel_config* kernel_config) {
     free((void*) kernel_config -> puerto_cpu_interrupt);   
     free((void*) kernel_config -> puerto_escucha);   
     free((void*) kernel_config -> algoritmo_planificacion);   
-    free((void*) kernel_config -> estimacion_inicial);   
-    free((void*) kernel_config -> alfa);   
-    free((void*) kernel_config -> grado_multiprogramacion);   
-    free((void*) kernel_config -> tiempo_maximo_bloqueado);
     free((void*) kernel_config);   
 }

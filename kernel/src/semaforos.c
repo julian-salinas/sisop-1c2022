@@ -23,6 +23,9 @@ void ini_semaforos(void) {
 	sem_largo_plazo = malloc(sizeof(sem_t));
 	sem_init(sem_largo_plazo, 0, 0);
 
+	sem_io = malloc(sizeof(sem_t));
+	sem_init(sem_io, 0, 0);
+
 	/* ==================== Mutex de transiciones ==================== */
 	mutex_transicion_new_a_ready = malloc(sizeof(sem_t));
 	sem_init(mutex_transicion_new_a_ready, 0, 1);
@@ -52,4 +55,16 @@ void ini_semaforos(void) {
 	/* ========= Semáforos para indicar eventos/condiciones ========== */
 	sem_nuevo_proceso = malloc(sizeof(sem_t));
 	sem_init(sem_nuevo_proceso, 0, 0);
+
+	sem_procesos_esperando = malloc(sizeof(sem_t));
+	sem_init(sem_procesos_esperando, 0, 0);
+
+	sem_procesos_en_ready = malloc(sizeof(sem_t));
+	sem_init(sem_procesos_en_ready, 0, 0);
+
+	sem_cpu_disponible = malloc(sizeof(sem_t));
+	sem_init(sem_cpu_disponible, 0, 1);
+
+	sem_procesos_bloqueados = malloc(sizeof(sem_t));
+	sem_init(sem_procesos_bloqueados, 0, 0);
 }

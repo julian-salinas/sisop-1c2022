@@ -16,13 +16,16 @@
         BLOQUEO,
         FINALIZACION,
         INTERRUPCION,
-        NUEVO_PROCESO, // esto es lo que le manda consola a kernel
         CPU_OK,
         MEMORIA_OK,
         NUEVO_PROCESO_READY,
-        PROCESO_FINALIZADO,
-        PROCESO_BLOQUEADO,
         SOL_TABLA_PAGINAS,
+
+        /* CODIGOS QUE SÍ O SI SON PARA COMUNICARSE CON KERNEL */
+        NUEVO_PROCESO,  // Header para paquete que contiene un proceso (CONSOLA -> KERNEL)
+        PROCESO_BLOQUEADO, // Header para paquete que contiene un proceso (CPU -> KERNEL)
+        PROCESO_FINALIZADO, // Header para paquete que contiene un proceso (CPU -> KERNEL) 
+        DESALOJAR_PROCESO, // Header que se manda sin paquete (KERNEL -> CPU)
     } codigo_operacion;
 
 #endif /* ENUM_H */

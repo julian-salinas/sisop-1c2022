@@ -11,10 +11,9 @@
     #include <semaphore.h>
 
     #include "networking.h"
-
     #include "kernel.h"
     #include "proceso.h"
-
+    #include "semaforos.h"
 
     //Colas
     t_queue* cola_new;
@@ -32,29 +31,75 @@
 
     int proceso_buscado;
 
-    // Inicializa todos los semáforos de colas
-    void inicializar_semaforos_plani();
+    /**
+     * @DESC: Inicializar todos los semáforos mutex de las colas
+     */ 
+    void inicializar_mutex_colas(void);
 
-    // Inicializa todas las colas
-    void inicializar_colas();
+    /**
+     * @DESC: Inicializar todas las colas
+     */ 
+    void inicializar_colas(void);
 
-    // Devuelve true si la cola está vacía (y si)
-    bool cola_esta_vacia(t_queue* cola);
-
-    // Transiciones entre colas
+    /* ========================================= Transiciones ========================================= */
+    
+    /**
+     * @DESC: Recibe un proceso y lo pone en estado NEW y lo agrega a la cola new.
+     *        * Hace un post del semáforo sem_procesos_esperando
+     * @param proceso: pcb de un proceso a pasar a new
+     */ 
     void agregar_a_new(t_PCB* proceso);
 
+
+    /**
+     * @DESC: Realiza la transición SUSPENDED-READY -> READY. Mueve al proceso de cola
+     * @wait sem_procesos_esperando
+     * @post sem_procesos_en_ready
+     */ 
     void suspended_ready_a_ready(void);
 
+
+    /**
+     * @DESC: Realiza la transición NEW -> READY. Mueve al proceso de cola 
+     * @wait sem_procesos_esperando
+     * @post sem_procesos_en_ready
+     */ 
     void new_a_ready(void);
 
+
+    /**
+     * @DESC: Realiza la transición RUNNING -> READY. Agrega el proceso a la cola READY
+     * @post sem_procesos_en_ready
+     */ 
     void running_a_ready(t_PCB* procesoAMover);
 
-    t_PCB* ready_a_running(void);
 
+    /**
+     * @DESC: Realiza la transición READY -> RUNNING. Extrae proceso de cola.
+     *        * Envía PCB a cpu con el proceso a ejecutar
+     */ 
+    void ready_a_running(void);
+
+
+    /**
+     * @DESC: Realiza la transición RUNNING -> BLOCKED. Agrega el proceso a la cola BLOCKED
+     * @post sem_procesos_bloqueados
+     */ 
     void running_a_blocked(t_PCB* procesoAMover);
 
-    void blocked_a_ready();
+    
+    /**
+     * @DESC: Realiza la transición BLOCKED -> READY. Mueve al proceso de cola.
+     * @post procesos_en_ready
+     */ 
+    void blocked_a_ready(void);
+
+
+    /**
+     * @DESC: Realiza la transición BLOCKED -> SUSPENDED-READY. Mueve al proceso de cola.
+     * @post sem_procesos_esperando
+     */ 
+    void blocked_a_suspended_ready(void);
 
     void blocked_a_exit(t_PCB* procesoAMover);
 

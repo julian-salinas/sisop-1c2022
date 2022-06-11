@@ -79,3 +79,11 @@ t_PCB* buffer_take_PCB(t_buffer* buffer) {
     return pcb;
 }
 
+
+t_PCB* socket_get_PCB(int socket) {
+    t_buffer* payload = recibir_payload(socket);
+    t_PCB* pcb = buffer_take_PCB(payload);
+    destruir_buffer(payload);
+
+    return pcb;
+}

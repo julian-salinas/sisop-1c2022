@@ -50,5 +50,14 @@
     void enviar_pcb(int socket, uint8_t header, t_PCB* pcb);
 
     t_PCB* buffer_take_PCB(t_buffer* buffer);
-                
+
+    /**
+     * @DESC: Obtener un PCB de un socket
+     *  IMPORTANTE: El socket que se envía debe contener SOLO EL BUFFER, o sea, la función da por hecho
+     *  que el HEADER del socket ya fue extraído.
+     * @param socket: socket cliente de donde se va a extraer el pcb
+     */
+    t_PCB* socket_get_PCB(int socket);
+    
+
 #endif
