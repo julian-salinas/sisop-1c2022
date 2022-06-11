@@ -24,7 +24,7 @@
         int program_counter;
         int32_t tabla_paginas;
         int estimacion_rafaga;
-        double tiempo_ejecucion;
+        int tiempo_ejecucion;
         int socket_cliente;
         int tiempo_bloqueo;
         estado_proceso estado;

@@ -34,6 +34,6 @@
     uint8_t paginas_por_tabla;
     uint8_t tamanio_pagina;
 
-    int interrupcion; //0 el kernel no envio interrupcion, 1 interrumpir ejecución
+    int interrupcion, finCicloInstruccion; //0 el kernel no envio interrupcion, 1 interrumpir ejecución
 
 #endif /* CPU_H_ */

@@ -26,7 +26,7 @@ int main(void) {
 
 void liberar_conexiones(void){
     liberar_socket_cliente(conexion_memoria);
-    liberar_socket_cliente(conexion_kernel);
+    //liberar_socket_cliente(conexion_kernel);
 }
 
 void ini_conexiones(void){
@@ -35,10 +35,11 @@ void ini_conexiones(void){
 	log_info(logger,"Conexión cpu-memoria ok.");
 
     //Conexión con kernel		
-    conexion_kernel = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_escucha_dispatch);
-    log_info(logger,"Conexión cpu-kernel ok.");
+    //conexion_kernel = crear_socket_cliente(cpu_config->ip_memoria, cpu_config->puerto_escucha_dispatch);
+        //Conexión con test
 
-}
+    
+ }
 
 void finalizar_semaforos_cpu(void) {
     free(mutex_interrupt);

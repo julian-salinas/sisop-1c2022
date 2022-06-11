@@ -18,7 +18,7 @@
     } t_PCB;
 */
 
-clock_t start_t, end_t;
+time_t start_t, end_t;
 
 // TODO cuando este memoria
 void escribir_operando(int direccion_logica, uint32_t valor_1){
@@ -41,12 +41,15 @@ void traer_operandos(t_instruccion* instruccion, int direccion_logica, uint32_t 
     direccion_logica = parametro_instruccion(instruccion->parametros,0);
 }
 
-void devolver_pcb(t_PCB* pcb){
-    end_t=clock();
+void devolver_pcb(t_PCB* pcb, codigo_operacion header){
+    end_t=time(NULL);
     pcb->program_counter++;
-    pcb->tiempo_ejecucion += start_t-end_t; 
-    //quizás dividir por 1000 para pasarlo a milisegundos??
-    enviar_pcb(conexion_kernel,pcb);
+    pcb->tiempo_ejecucion += end_t-start_t; 
+  
+    log_info(logger,"devolviendo pcb %d",header);
+    log_info(logger,"tiempo de ejecucion %d",pcb->tiempo_ejecucion);
+    enviar_pcb(conexion_kernel,header, pcb);
+    finCicloInstruccion = 1;
 }
 
 //TODO MMU 
@@ -55,23 +58,30 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
     t_instruccion* instruccion;
     int direccion_logica, sleep_time;
     uint32_t valor;
-    start_t=clock();
+    start_t=time(NULL);
+    finCicloInstruccion = 0;
     do{ 
     //Fetch   
     instruccion = list_get(pcb->lista_instrucciones, pcb->program_counter);
     log_info(logger, "Decode instrucción.");
+    log_info(logger, "program counter %d", pcb->program_counter);
+    log_info(logger,"cantidad de instrucciones: %d", list_size(pcb->lista_instrucciones));
     //Decode
     switch (instruccion->identificador){
         case NO_OP:
-            sleep_time = cpu_config->retardo_noop * parametro_instruccion(instruccion->parametros,0) / 1000; 
+            sleep_time = cpu_config->retardo_noop * parametro_instruccion(instruccion->parametros,0) * 1000; 
             //Execute
-            sleep(sleep_time);
+            log_info(logger,"tiempo de sleep %d", sleep_time);
+            log_info(logger, "Ejecutando NO_OP.");
+            usleep(sleep_time);
         break;
         case I_O:
             // se bloquea
+            log_info(logger, "PCB se bloquea.");
             pcb->estado=BLOCKED;
             pcb->tiempo_bloqueo=parametro_instruccion(instruccion->parametros,0);
-            devolver_pcb(pcb);
+            log_info(logger, "Pre devolver PCB.");
+            devolver_pcb(pcb, PROCESO_BLOQUEADO);
         break;
         case READ:
             direccion_logica = parametro_instruccion(instruccion->parametros,0);
@@ -94,18 +104,23 @@ void ejecutar_ciclo_instruccion(t_PCB* pcb){
         case EXIT:
             // Syscall finalización de proceso
             log_info(logger, "Finaliza proceso. EXIT");
-            pcb->estado=EXIT;
-            devolver_pcb(pcb);
-            
+            pcb->estado=PROCESO_FINALIZADO;
+            devolver_pcb(pcb, PROCESO_FINALIZADO);
+              
         break;
         }
-
         pcb->program_counter++;
+        log_info(logger, "program counter %d", pcb->program_counter);
+    sem_wait(mutex_interrupt);
+    if(interrupcion==1){
+        finCicloInstruccion=1;
+        //Regreso por interrupcion
+        pcb->estado=SUSPENDED_BLOCKED;
+        devolver_pcb(pcb, INTERRUPCION);
+    }
+    sem_post(mutex_interrupt);
 
-    }while(!interrupcion);//Check Interrupt //Ciclo de instruccion
-
-    //Regreso por interrupcion
-    pcb->estado=SUSPENDED_BLOCKED;
-    devolver_pcb(pcb);
+    }while(!finCicloInstruccion);//Check Interrupt //Ciclo de instruccion
+    
 
 }

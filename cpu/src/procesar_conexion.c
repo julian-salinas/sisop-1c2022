@@ -26,11 +26,14 @@ void procesar_conexion(void* void_args) {
             break; 
         }
         case PCB:
+            conexion_kernel = crear_socket_cliente(cpu_config->ip_memoria, "8009");
+            log_info(logger,"Conexión cpu-test ok.");
             log_info(logger, "Se recibió pcb del Kernel.");
             t_buffer* buffer = recibir_payload(socket_cliente);
             t_PCB* pcb = buffer_take_PCB(buffer);  
             //acá debería ir un mutex???
             ejecutar_ciclo_instruccion(pcb);
+            liberar_socket_cliente(conexion_kernel);
             break;
         case INTERRUPCION:
             sem_wait(mutex_interrupt);

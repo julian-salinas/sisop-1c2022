@@ -977,3 +977,1504 @@
 
 [INFO] 20:26:29:310 CPU/(26070:26074): Se recibió configuración de memoria.
 [WARNING] 20:26:29:310 CPU/(26070:26074): El cliente se desconecto de server CPU Dispatch
+[INFO] 21:05:40:477 CPU/(13645:13645): Modulo CPU iniciado
+[INFO] 21:05:40:482 CPU/(13645:13645): Config CPU load
+[INFO] 21:05:40:483 CPU/(13645:13645): Conexión cpu-memoria ok.
+[INFO] 21:05:40:483 CPU/(13645:13645): Conexión cpu-kernel ok.
+[INFO] 21:05:40:484 CPU/(13645:13647): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 21:05:40:488 CPU/(13645:13646): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 21:05:40:488 CPU/(13645:13646): Request config memoria enviada.
+[INFO] 11:29:07:463 CPU/(3804:3804): Modulo CPU iniciado
+[INFO] 11:29:07:469 CPU/(3804:3804): Config CPU load
+[INFO] 11:29:07:470 CPU/(3804:3804): Conexión cpu-memoria ok.
+[INFO] 11:29:07:470 CPU/(3804:3804): Conexión cpu-kernel ok.
+[INFO] 11:29:07:471 CPU/(3804:3807): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 11:29:07:471 CPU/(3804:3806): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 11:29:07:472 CPU/(3804:3806): Request config memoria enviada.
+[INFO] 11:29:07:473 CPU/(3804:3806): Cliente conectado (a CPU Dispatch)
+
+[INFO] 11:29:07:474 CPU/(3804:3808): Se recibió configuración de memoria.
+[WARNING] 11:29:07:474 CPU/(3804:3808): El cliente se desconecto de server CPU Dispatch
+[INFO] 11:29:39:213 CPU/(3804:3806): Cliente conectado (a CPU Dispatch)
+
+[INFO] 11:29:39:214 CPU/(3804:3807): Cliente conectado (a CPU Interrupt)
+
+[ERROR] 11:29:39:222 CPU/(3804:3875): Algo anduvo mal en el server de CPU Dispatch
+[INFO] 11:29:39:223 CPU/(3804:3875): Cop: 9
+[ERROR] 13:39:54:615 CPU/(3804:3876): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 13:39:54:618 CPU/(3804:3876): Cop: 183
+[INFO] 13:40:00:911 CPU/(3804:3806): Cliente conectado (a CPU Dispatch)
+
+[INFO] 13:40:00:912 CPU/(3804:3807): Cliente conectado (a CPU Interrupt)
+
+[INFO] 13:40:00:913 CPU/(3804:10496): Se recibió pcb del Kernel.
+[INFO] 13:40:00:914 CPU/(3804:10496): Decode instrucción.
+[INFO] 13:40:03:914 CPU/(3804:10496): Decode instrucción.
+[INFO] 13:48:38:488 CPU/(11603:11603): Modulo CPU iniciado
+[INFO] 13:48:38:489 CPU/(11603:11603): Config CPU load
+[INFO] 13:48:38:489 CPU/(11603:11603): Conexión cpu-memoria ok.
+[INFO] 13:48:38:489 CPU/(11603:11603): Conexión cpu-kernel ok.
+[INFO] 13:48:38:489 CPU/(11603:11605): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 13:48:38:489 CPU/(11603:11604): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 13:52:12:943 CPU/(12040:12040): Modulo CPU iniciado
+[INFO] 13:52:12:944 CPU/(12040:12040): Config CPU load
+[INFO] 13:52:12:944 CPU/(12040:12040): Conexión cpu-memoria ok.
+[INFO] 13:52:12:944 CPU/(12040:12040): Conexión cpu-kernel ok.
+[INFO] 13:52:12:944 CPU/(12040:12042): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 13:52:12:944 CPU/(12040:12041): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 13:55:16:894 CPU/(12458:12458): Modulo CPU iniciado
+[INFO] 13:55:16:895 CPU/(12458:12458): Config CPU load
+[INFO] 13:55:16:895 CPU/(12458:12458): Conexión cpu-memoria ok.
+[INFO] 13:55:16:895 CPU/(12458:12460): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 13:55:16:895 CPU/(12458:12459): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 13:58:29:179 CPU/(12908:12908): Modulo CPU iniciado
+[INFO] 13:58:29:179 CPU/(12908:12908): Config CPU load
+[INFO] 13:58:29:180 CPU/(12908:12908): Conexión cpu-memoria ok.
+[INFO] 13:58:29:180 CPU/(12908:12910): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 13:58:29:180 CPU/(12908:12909): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 13:59:36:816 CPU/(13057:13057): Modulo CPU iniciado
+[INFO] 13:59:36:817 CPU/(13057:13057): Config CPU load
+[INFO] 13:59:36:827 CPU/(13057:13057): Conexión cpu-memoria ok.
+[INFO] 13:59:36:831 CPU/(13057:13060): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 13:59:36:831 CPU/(13057:13059): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 13:59:36:832 CPU/(13057:13059): Request config memoria enviada.
+[INFO] 13:59:36:834 CPU/(13057:13059): Cliente conectado (a CPU Dispatch)
+
+[INFO] 13:59:36:835 CPU/(13057:13061): Se recibió configuración de memoria.
+[WARNING] 13:59:36:835 CPU/(13057:13061): El cliente se desconecto de server CPU Dispatch
+[INFO] 13:59:49:648 CPU/(13057:13059): Cliente conectado (a CPU Dispatch)
+
+[INFO] 13:59:49:648 CPU/(13057:13060): Cliente conectado (a CPU Interrupt)
+
+[INFO] 13:59:49:649 CPU/(13057:13090): Conexión cpu-test ok.
+[INFO] 13:59:49:649 CPU/(13057:13090): Se recibió pcb del Kernel.
+[INFO] 13:59:49:649 CPU/(13057:13090): Decode instrucción.
+[INFO] 13:59:49:649 CPU/(13057:13090): Ejecutando NO_OP.
+[INFO] 13:59:52:649 CPU/(13057:13090): Decode instrucción.
+[INFO] 13:59:52:650 CPU/(13057:13090): PCB se bloquea.
+[ERROR] 14:14:13:379 CPU/(13057:13091): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 14:14:13:379 CPU/(13057:13091): Cop: 183
+[INFO] 14:19:01:529 CPU/(15895:15895): Modulo CPU iniciado
+[INFO] 14:19:01:530 CPU/(15895:15895): Config CPU load
+[INFO] 14:19:01:531 CPU/(15895:15895): Conexión cpu-memoria ok.
+[INFO] 14:19:01:532 CPU/(15895:15895): Conexión cpu-test ok.
+[INFO] 14:19:01:532 CPU/(15895:15898): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 14:19:01:532 CPU/(15895:15897): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 14:19:01:533 CPU/(15895:15897): Request config memoria enviada.
+[INFO] 14:19:01:552 CPU/(15895:15897): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:19:01:553 CPU/(15895:15901): Se recibió configuración de memoria.
+[WARNING] 14:19:01:553 CPU/(15895:15901): El cliente se desconecto de server CPU Dispatch
+[INFO] 14:19:06:051 CPU/(15895:15897): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:19:06:051 CPU/(15895:15898): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:19:06:052 CPU/(15895:15916): Se recibió pcb del Kernel.
+[INFO] 14:19:06:052 CPU/(15895:15916): Decode instrucción.
+[INFO] 14:19:06:052 CPU/(15895:15916): Ejecutando NO_OP.
+[INFO] 14:19:09:053 CPU/(15895:15916): Decode instrucción.
+[INFO] 14:19:09:053 CPU/(15895:15916): PCB se bloquea.
+[INFO] 14:20:41:311 CPU/(16104:16104): Modulo CPU iniciado
+[INFO] 14:20:41:311 CPU/(16104:16104): Config CPU load
+[INFO] 14:20:41:313 CPU/(16104:16104): Conexión cpu-memoria ok.
+[INFO] 14:20:41:313 CPU/(16104:16104): Conexión cpu-test ok.
+[INFO] 14:20:41:313 CPU/(16104:16108): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 14:20:41:313 CPU/(16104:16107): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 14:20:41:313 CPU/(16104:16107): Request config memoria enviada.
+[INFO] 14:20:41:327 CPU/(16104:16107): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:20:41:327 CPU/(16104:16111): Se recibió configuración de memoria.
+[WARNING] 14:20:41:328 CPU/(16104:16111): El cliente se desconecto de server CPU Dispatch
+[INFO] 14:20:52:619 CPU/(16104:16107): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:20:52:619 CPU/(16104:16108): Cliente conectado (a CPU Interrupt)
+
+[ERROR] 14:20:52:621 CPU/(16104:16139): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 14:20:52:621 CPU/(16104:16139): Cop: 183
+[INFO] 14:20:52:621 CPU/(16104:16138): Se recibió pcb del Kernel.
+[INFO] 14:20:52:621 CPU/(16104:16138): Decode instrucción.
+[INFO] 14:20:52:621 CPU/(16104:16138): Ejecutando NO_OP.
+[INFO] 14:20:55:622 CPU/(16104:16138): Decode instrucción.
+[INFO] 14:20:55:622 CPU/(16104:16138): PCB se bloquea.
+[INFO] 14:25:54:960 CPU/(16815:16815): Modulo CPU iniciado
+[INFO] 14:25:54:960 CPU/(16815:16815): Config CPU load
+[INFO] 14:25:54:960 CPU/(16815:16815): Conexión cpu-memoria ok.
+[INFO] 14:25:54:960 CPU/(16815:16815): Conexión cpu-test ok.
+[INFO] 14:25:54:961 CPU/(16815:16818): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 14:25:54:961 CPU/(16815:16817): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 14:25:54:961 CPU/(16815:16817): Request config memoria enviada.
+[INFO] 14:25:54:961 CPU/(16815:16817): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:25:54:962 CPU/(16815:16819): Se recibió configuración de memoria.
+[WARNING] 14:25:54:962 CPU/(16815:16819): El cliente se desconecto de server CPU Dispatch
+[INFO] 14:26:02:809 CPU/(16815:16817): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:26:02:810 CPU/(16815:16818): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:26:02:812 CPU/(16815:16856): Se recibió pcb del Kernel.
+[INFO] 14:26:02:813 CPU/(16815:16856): Decode instrucción.
+[INFO] 14:26:02:813 CPU/(16815:16856): Ejecutando NO_OP.
+[INFO] 14:26:05:814 CPU/(16815:16856): Decode instrucción.
+[INFO] 14:26:05:815 CPU/(16815:16856): PCB se bloquea.
+[INFO] 15:16:53:467 CPU/(19625:19625): Modulo CPU iniciado
+[INFO] 15:16:53:468 CPU/(19625:19625): Config CPU load
+[INFO] 15:16:53:468 CPU/(19625:19625): Conexión cpu-memoria ok.
+[INFO] 15:16:53:468 CPU/(19625:19625): Conexión cpu-test ok.
+[INFO] 15:16:53:468 CPU/(19625:19628): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:16:53:468 CPU/(19625:19627): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:16:53:469 CPU/(19625:19627): Request config memoria enviada.
+[INFO] 15:16:53:469 CPU/(19625:19627): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:16:53:470 CPU/(19625:19629): Se recibió configuración de memoria.
+[WARNING] 15:16:53:470 CPU/(19625:19629): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:16:58:561 CPU/(19625:19627): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:16:58:562 CPU/(19625:19628): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:16:58:564 CPU/(19625:19645): Se recibió pcb del Kernel.
+[INFO] 15:16:58:565 CPU/(19625:19645): Decode instrucción.
+[INFO] 15:16:58:565 CPU/(19625:19645): Ejecutando NO_OP.
+[INFO] 15:17:01:565 CPU/(19625:19645): Decode instrucción.
+[INFO] 15:17:01:565 CPU/(19625:19645): PCB se bloquea.
+[INFO] 15:17:42:894 CPU/(19722:19722): Modulo CPU iniciado
+[INFO] 15:17:42:894 CPU/(19722:19722): Config CPU load
+[INFO] 15:17:42:895 CPU/(19722:19722): Conexión cpu-memoria ok.
+[INFO] 15:17:42:895 CPU/(19722:19722): Conexión cpu-test ok.
+[INFO] 15:17:42:895 CPU/(19722:19725): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:17:42:895 CPU/(19722:19724): Request config memoria enviada.
+[INFO] 15:17:42:897 CPU/(19722:19724): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:17:50:417 CPU/(19743:19743): Modulo CPU iniciado
+[INFO] 15:17:50:417 CPU/(19743:19743): Config CPU load
+[INFO] 15:17:50:418 CPU/(19743:19743): Conexión cpu-memoria ok.
+[INFO] 15:17:50:418 CPU/(19743:19743): Conexión cpu-test ok.
+[INFO] 15:17:50:418 CPU/(19743:19746): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:17:50:418 CPU/(19743:19745): Request config memoria enviada.
+[INFO] 15:17:50:419 CPU/(19743:19745): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:18:40:645 CPU/(19823:19823): Modulo CPU iniciado
+[INFO] 15:18:40:646 CPU/(19823:19823): Config CPU load
+[INFO] 15:18:40:646 CPU/(19823:19823): Conexión cpu-memoria ok.
+[INFO] 15:18:40:647 CPU/(19823:19823): Conexión cpu-test ok.
+[INFO] 15:18:40:647 CPU/(19823:19826): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:18:40:647 CPU/(19823:19825): Request config memoria enviada.
+[INFO] 15:18:40:648 CPU/(19823:19825): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:18:53:606 CPU/(19823:19826): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:20:16:832 CPU/(19984:19984): Modulo CPU iniciado
+[INFO] 15:20:16:832 CPU/(19984:19984): Config CPU load
+[INFO] 15:20:16:833 CPU/(19984:19984): Conexión cpu-memoria ok.
+[INFO] 15:20:16:833 CPU/(19984:19984): Conexión cpu-test ok.
+[INFO] 15:20:16:833 CPU/(19984:19987): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:20:16:833 CPU/(19984:19986): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:20:16:833 CPU/(19984:19986): Request config memoria enviada.
+[INFO] 15:20:16:834 CPU/(19984:19986): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:20:16:834 CPU/(19984:19988): Se recibió configuración de memoria.
+[WARNING] 15:20:16:834 CPU/(19984:19988): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:20:22:156 CPU/(19984:19986): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:20:22:157 CPU/(19984:19987): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:20:22:158 CPU/(19984:20006): Se recibió pcb del Kernel.
+[INFO] 15:20:22:159 CPU/(19984:20006): Decode instrucción.
+[INFO] 15:20:22:159 CPU/(19984:20006): Ejecutando NO_OP.
+[INFO] 15:20:25:159 CPU/(19984:20006): Decode instrucción.
+[INFO] 15:20:25:159 CPU/(19984:20006): PCB se bloquea.
+[INFO] 15:21:07:656 CPU/(20092:20092): Modulo CPU iniciado
+[INFO] 15:21:07:657 CPU/(20092:20092): Config CPU load
+[INFO] 15:21:07:657 CPU/(20092:20092): Conexión cpu-memoria ok.
+[INFO] 15:21:07:657 CPU/(20092:20092): Conexión cpu-test ok.
+[INFO] 15:21:07:657 CPU/(20092:20095): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:21:07:658 CPU/(20092:20094): Request config memoria enviada.
+[INFO] 15:21:07:659 CPU/(20092:20094): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:22:27:446 CPU/(20227:20227): Modulo CPU iniciado
+[INFO] 15:22:27:447 CPU/(20227:20227): Config CPU load
+[INFO] 15:22:27:447 CPU/(20227:20227): Conexión cpu-memoria ok.
+[INFO] 15:22:27:447 CPU/(20227:20227): Conexión cpu-test ok.
+[INFO] 15:22:27:447 CPU/(20227:20230): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:22:27:448 CPU/(20227:20229): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:22:27:448 CPU/(20227:20229): Request config memoria enviada.
+[INFO] 15:22:27:448 CPU/(20227:20229): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:22:27:449 CPU/(20227:20231): Se recibió configuración de memoria.
+[WARNING] 15:22:27:449 CPU/(20227:20231): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:22:32:171 CPU/(20227:20229): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:22:32:172 CPU/(20227:20230): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:22:32:180 CPU/(20227:20250): Se recibió pcb del Kernel.
+[INFO] 15:22:32:180 CPU/(20227:20250): Decode instrucción.
+[INFO] 15:22:32:180 CPU/(20227:20250): Ejecutando NO_OP.
+[INFO] 15:22:35:182 CPU/(20227:20250): Decode instrucción.
+[INFO] 15:22:35:182 CPU/(20227:20250): PCB se bloquea.
+[INFO] 15:24:13:860 CPU/(20408:20408): Modulo CPU iniciado
+[INFO] 15:24:13:861 CPU/(20408:20408): Config CPU load
+[INFO] 15:24:13:861 CPU/(20408:20408): Conexión cpu-memoria ok.
+[INFO] 15:24:13:861 CPU/(20408:20408): Conexión cpu-test ok.
+[INFO] 15:24:13:861 CPU/(20408:20411): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:24:13:862 CPU/(20408:20410): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:24:13:862 CPU/(20408:20410): Request config memoria enviada.
+[INFO] 15:24:13:862 CPU/(20408:20410): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:24:13:863 CPU/(20408:20412): Se recibió configuración de memoria.
+[WARNING] 15:24:13:863 CPU/(20408:20412): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:24:19:783 CPU/(20408:20410): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:24:19:784 CPU/(20408:20411): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:24:19:784 CPU/(20408:20428): Se recibió pcb del Kernel.
+[INFO] 15:24:19:785 CPU/(20408:20428): Decode instrucción.
+[INFO] 15:24:19:785 CPU/(20408:20428): Ejecutando NO_OP.
+[INFO] 15:24:22:785 CPU/(20408:20428): Decode instrucción.
+[INFO] 15:24:22:785 CPU/(20408:20428): PCB se bloquea.
+[INFO] 15:24:22:785 CPU/(20408:20428): Pre devolver PCB.
+[INFO] 15:26:52:866 CPU/(20697:20697): Modulo CPU iniciado
+[INFO] 15:26:52:867 CPU/(20697:20697): Config CPU load
+[INFO] 15:26:52:868 CPU/(20697:20697): Conexión cpu-memoria ok.
+[INFO] 15:26:52:868 CPU/(20697:20700): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:26:52:869 CPU/(20697:20699): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:26:52:869 CPU/(20697:20699): Request config memoria enviada.
+[INFO] 15:26:52:871 CPU/(20697:20699): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:26:52:874 CPU/(20697:20701): Se recibió configuración de memoria.
+[WARNING] 15:26:52:881 CPU/(20697:20701): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:26:59:113 CPU/(20697:20699): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:26:59:114 CPU/(20697:20700): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:26:59:115 CPU/(20697:20722): Se recibió pcb del Kernel.
+[INFO] 15:26:59:115 CPU/(20697:20722): Conexión cpu-test ok.
+[INFO] 15:26:59:115 CPU/(20697:20722): Decode instrucción.
+[INFO] 15:26:59:116 CPU/(20697:20722): Ejecutando NO_OP.
+[INFO] 15:27:02:116 CPU/(20697:20722): Decode instrucción.
+[INFO] 15:27:02:116 CPU/(20697:20722): PCB se bloquea.
+[INFO] 15:27:02:117 CPU/(20697:20722): Pre devolver PCB.
+[ERROR] 15:29:58:308 CPU/(20697:20723): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 15:29:58:312 CPU/(20697:20723): Cop: 183
+[INFO] 15:33:03:302 CPU/(21362:21362): Modulo CPU iniciado
+[INFO] 15:33:03:302 CPU/(21362:21362): Config CPU load
+[INFO] 15:33:03:303 CPU/(21362:21362): Conexión cpu-memoria ok.
+[INFO] 15:33:03:303 CPU/(21362:21365): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:33:03:303 CPU/(21362:21364): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:33:03:303 CPU/(21362:21364): Request config memoria enviada.
+[INFO] 15:33:03:303 CPU/(21362:21364): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:33:03:304 CPU/(21362:21366): Se recibió configuración de memoria.
+[WARNING] 15:33:03:304 CPU/(21362:21366): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:33:06:909 CPU/(21362:21364): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:33:06:910 CPU/(21362:21365): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:33:06:911 CPU/(21362:21379): Se recibió pcb del Kernel.
+[INFO] 15:33:06:912 CPU/(21362:21379): Conexión cpu-test ok.
+[INFO] 15:33:06:912 CPU/(21362:21379): Decode instrucción.
+[INFO] 15:33:06:913 CPU/(21362:21379): Ejecutando NO_OP.
+[INFO] 15:33:09:913 CPU/(21362:21379): Decode instrucción.
+[INFO] 15:33:09:913 CPU/(21362:21379): PCB se bloquea.
+[INFO] 15:33:09:914 CPU/(21362:21379): Pre devolver PCB.
+[INFO] 15:38:29:785 CPU/(21864:21864): Modulo CPU iniciado
+[INFO] 15:38:29:786 CPU/(21864:21864): Config CPU load
+[INFO] 15:38:29:786 CPU/(21864:21864): Conexión cpu-memoria ok.
+[INFO] 15:38:29:786 CPU/(21864:21867): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:38:29:786 CPU/(21864:21866): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:38:29:787 CPU/(21864:21866): Request config memoria enviada.
+[INFO] 15:38:29:787 CPU/(21864:21866): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:38:29:788 CPU/(21864:21868): Se recibió configuración de memoria.
+[WARNING] 15:38:29:788 CPU/(21864:21868): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:38:33:188 CPU/(21864:21866): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:38:33:189 CPU/(21864:21867): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:38:33:208 CPU/(21864:21885): Se recibió pcb del Kernel.
+[INFO] 15:38:33:209 CPU/(21864:21885): Conexión cpu-test ok.
+[INFO] 15:38:33:210 CPU/(21864:21885): Decode instrucción.
+[INFO] 15:38:33:210 CPU/(21864:21885): Ejecutando NO_OP.
+[INFO] 15:38:36:210 CPU/(21864:21885): Decode instrucción.
+[INFO] 15:38:36:210 CPU/(21864:21885): PCB se bloquea.
+[INFO] 15:38:36:210 CPU/(21864:21885): Pre devolver PCB.
+[INFO] 15:39:57:784 CPU/(22025:22025): Modulo CPU iniciado
+[INFO] 15:39:57:785 CPU/(22025:22025): Config CPU load
+[INFO] 15:39:57:785 CPU/(22025:22025): Conexión cpu-memoria ok.
+[INFO] 15:39:57:786 CPU/(22025:22028): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:39:57:786 CPU/(22025:22027): Request config memoria enviada.
+[INFO] 15:39:57:786 CPU/(22025:22027): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:42:10:557 CPU/(22211:22211): Modulo CPU iniciado
+[INFO] 15:42:10:558 CPU/(22211:22211): Config CPU load
+[INFO] 15:42:10:559 CPU/(22211:22211): Conexión cpu-memoria ok.
+[INFO] 15:42:10:560 CPU/(22211:22214): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:42:10:560 CPU/(22211:22213): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:42:10:561 CPU/(22211:22213): Request config memoria enviada.
+[INFO] 15:42:10:562 CPU/(22211:22213): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:42:10:563 CPU/(22211:22215): Se recibió configuración de memoria.
+[WARNING] 15:42:10:564 CPU/(22211:22215): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:42:15:022 CPU/(22211:22213): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:42:15:024 CPU/(22211:22214): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:42:15:026 CPU/(22211:22234): Se recibió pcb del Kernel.
+[INFO] 15:42:15:027 CPU/(22211:22234): Conexión cpu-test ok.
+[INFO] 15:42:15:028 CPU/(22211:22234): Decode instrucción.
+[INFO] 15:42:15:028 CPU/(22211:22234): Ejecutando NO_OP.
+[INFO] 15:42:18:029 CPU/(22211:22234): Decode instrucción.
+[INFO] 15:42:18:029 CPU/(22211:22234): PCB se bloquea.
+[INFO] 15:42:18:030 CPU/(22211:22234): Pre devolver PCB.
+[INFO] 15:43:33:185 CPU/(22375:22375): Modulo CPU iniciado
+[INFO] 15:43:33:186 CPU/(22375:22375): Config CPU load
+[INFO] 15:43:33:186 CPU/(22375:22375): Conexión cpu-memoria ok.
+[INFO] 15:43:33:187 CPU/(22375:22378): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:43:33:187 CPU/(22375:22377): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:43:33:188 CPU/(22375:22377): Request config memoria enviada.
+[INFO] 15:43:33:189 CPU/(22375:22377): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:43:33:190 CPU/(22375:22379): Se recibió configuración de memoria.
+[WARNING] 15:43:33:190 CPU/(22375:22379): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:43:36:508 CPU/(22375:22377): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:43:36:509 CPU/(22375:22378): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:43:36:511 CPU/(22375:22395): Se recibió pcb del Kernel.
+[INFO] 15:43:36:511 CPU/(22375:22395): Decode instrucción.
+[INFO] 15:43:36:511 CPU/(22375:22395): Ejecutando NO_OP.
+[INFO] 15:43:39:512 CPU/(22375:22395): Decode instrucción.
+[INFO] 15:43:39:513 CPU/(22375:22395): PCB se bloquea.
+[INFO] 15:43:39:513 CPU/(22375:22395): Pre devolver PCB.
+[ERROR] 15:46:30:173 CPU/(22375:22396): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 15:46:30:177 CPU/(22375:22396): Cop: 183
+[INFO] 15:46:42:161 CPU/(22665:22665): Modulo CPU iniciado
+[INFO] 15:46:42:161 CPU/(22665:22665): Config CPU load
+[INFO] 15:46:42:162 CPU/(22665:22665): Conexión cpu-memoria ok.
+[INFO] 15:46:42:162 CPU/(22665:22668): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:46:42:163 CPU/(22665:22667): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:46:42:163 CPU/(22665:22667): Request config memoria enviada.
+[INFO] 15:46:42:165 CPU/(22665:22667): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:46:42:165 CPU/(22665:22669): Se recibió configuración de memoria.
+[WARNING] 15:46:42:166 CPU/(22665:22669): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:46:47:465 CPU/(22665:22667): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:46:47:466 CPU/(22665:22668): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:46:47:467 CPU/(22665:22685): Se recibió pcb del Kernel.
+[INFO] 15:46:47:468 CPU/(22665:22685): Decode instrucción.
+[INFO] 15:46:47:468 CPU/(22665:22685): Ejecutando NO_OP.
+[INFO] 15:46:50:468 CPU/(22665:22685): Decode instrucción.
+[INFO] 15:46:50:469 CPU/(22665:22685): PCB se bloquea.
+[INFO] 15:46:50:469 CPU/(22665:22685): Pre devolver PCB.
+[INFO] 15:49:40:916 CPU/(22964:22964): Modulo CPU iniciado
+[INFO] 15:49:40:917 CPU/(22964:22964): Config CPU load
+[INFO] 15:49:40:918 CPU/(22964:22964): Conexión cpu-memoria ok.
+[INFO] 15:49:40:918 CPU/(22964:22964): Conexión cpu-test ok.
+[INFO] 15:49:40:918 CPU/(22964:22967): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:49:40:919 CPU/(22964:22966): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:49:40:919 CPU/(22964:22966): Request config memoria enviada.
+[INFO] 15:49:40:919 CPU/(22964:22966): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:49:40:920 CPU/(22964:22968): Se recibió configuración de memoria.
+[WARNING] 15:49:40:920 CPU/(22964:22968): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:49:46:119 CPU/(22964:22966): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:49:46:120 CPU/(22964:22967): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:49:46:122 CPU/(22964:22984): Se recibió pcb del Kernel.
+[INFO] 15:49:46:122 CPU/(22964:22984): Decode instrucción.
+[INFO] 15:49:46:123 CPU/(22964:22984): Ejecutando NO_OP.
+[INFO] 15:49:49:124 CPU/(22964:22984): Decode instrucción.
+[INFO] 15:49:49:125 CPU/(22964:22984): PCB se bloquea.
+[INFO] 15:49:49:125 CPU/(22964:22984): Pre devolver PCB.
+[INFO] 15:51:22:211 CPU/(23142:23142): Modulo CPU iniciado
+[INFO] 15:51:22:212 CPU/(23142:23142): Config CPU load
+[INFO] 15:51:22:213 CPU/(23142:23142): Conexión cpu-memoria ok.
+[INFO] 15:51:22:213 CPU/(23142:23142): Conexión cpu-test ok.
+[INFO] 15:51:22:214 CPU/(23142:23145): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:51:22:214 CPU/(23142:23144): Request config memoria enviada.
+[INFO] 15:51:22:218 CPU/(23142:23144): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:52:15:214 CPU/(23228:23228): Modulo CPU iniciado
+[INFO] 15:52:15:214 CPU/(23228:23228): Config CPU load
+[INFO] 15:52:15:215 CPU/(23228:23228): Conexión cpu-memoria ok.
+[INFO] 15:52:15:216 CPU/(23228:23228): Conexión cpu-test ok.
+[INFO] 15:52:15:216 CPU/(23228:23231): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:52:15:217 CPU/(23228:23230): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:52:15:217 CPU/(23228:23230): Request config memoria enviada.
+[INFO] 15:52:15:219 CPU/(23228:23230): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:52:15:219 CPU/(23228:23232): Se recibió configuración de memoria.
+[WARNING] 15:52:15:220 CPU/(23228:23232): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:52:21:680 CPU/(23228:23230): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:52:21:681 CPU/(23228:23231): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:52:21:682 CPU/(23228:23248): Se recibió pcb del Kernel.
+[INFO] 15:52:21:682 CPU/(23228:23248): Decode instrucción.
+[INFO] 15:52:21:682 CPU/(23228:23248): Ejecutando NO_OP.
+[INFO] 15:52:24:682 CPU/(23228:23248): Decode instrucción.
+[INFO] 15:52:24:682 CPU/(23228:23248): PCB se bloquea.
+[INFO] 15:52:24:682 CPU/(23228:23248): Pre devolver PCB.
+[INFO] 15:55:08:595 CPU/(23503:23503): Modulo CPU iniciado
+[INFO] 15:55:08:595 CPU/(23503:23503): Config CPU load
+[INFO] 15:55:08:596 CPU/(23503:23503): Conexión cpu-memoria ok.
+[INFO] 15:55:08:597 CPU/(23503:23503): Conexión cpu-test ok.
+[INFO] 15:55:08:597 CPU/(23503:23507): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:55:08:597 CPU/(23503:23506): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:55:08:597 CPU/(23503:23506): Request config memoria enviada.
+[INFO] 15:55:08:598 CPU/(23503:23506): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:55:08:598 CPU/(23503:23508): Se recibió configuración de memoria.
+[WARNING] 15:55:08:598 CPU/(23503:23508): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:55:15:878 CPU/(23503:23506): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:55:15:879 CPU/(23503:23507): Cliente conectado (a CPU Interrupt)
+
+[ERROR] 15:55:15:881 CPU/(23503:23536): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 15:55:15:881 CPU/(23503:23536): Cop: 183
+[INFO] 15:55:15:881 CPU/(23503:23535): Se recibió pcb del Kernel.
+[INFO] 15:55:15:881 CPU/(23503:23535): Decode instrucción.
+[INFO] 15:55:15:881 CPU/(23503:23535): Ejecutando NO_OP.
+[INFO] 15:55:18:882 CPU/(23503:23535): Decode instrucción.
+[INFO] 15:55:18:882 CPU/(23503:23535): PCB se bloquea.
+[INFO] 15:55:18:882 CPU/(23503:23535): Pre devolver PCB.
+[INFO] 15:55:18:882 CPU/(23503:23535): devolviendo pcb
+[INFO] 15:56:18:450 CPU/(23642:23642): Modulo CPU iniciado
+[INFO] 15:56:18:451 CPU/(23642:23642): Config CPU load
+[INFO] 15:56:18:452 CPU/(23642:23642): Conexión cpu-memoria ok.
+[INFO] 15:56:18:452 CPU/(23642:23642): Conexión cpu-test ok.
+[INFO] 15:56:18:453 CPU/(23642:23645): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:56:18:453 CPU/(23642:23644): Request config memoria enviada.
+[INFO] 15:56:18:457 CPU/(23642:23644): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:56:34:355 CPU/(23672:23672): Modulo CPU iniciado
+[INFO] 15:56:34:356 CPU/(23672:23672): Config CPU load
+[INFO] 15:56:34:357 CPU/(23672:23672): Conexión cpu-memoria ok.
+[INFO] 15:56:34:357 CPU/(23672:23672): Conexión cpu-test ok.
+[INFO] 15:56:34:358 CPU/(23672:23675): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:56:34:358 CPU/(23672:23674): Request config memoria enviada.
+[INFO] 15:56:34:362 CPU/(23672:23674): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:59:41:816 CPU/(23928:23928): Modulo CPU iniciado
+[INFO] 15:59:41:816 CPU/(23928:23928): Config CPU load
+[INFO] 15:59:41:817 CPU/(23928:23928): Conexión cpu-memoria ok.
+[INFO] 15:59:41:817 CPU/(23928:23928): Conexión cpu-test ok.
+[INFO] 15:59:41:817 CPU/(23928:23931): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 15:59:41:817 CPU/(23928:23930): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 15:59:41:817 CPU/(23928:23930): Request config memoria enviada.
+[INFO] 15:59:41:818 CPU/(23928:23930): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:59:41:818 CPU/(23928:23932): Se recibió configuración de memoria.
+[WARNING] 15:59:41:818 CPU/(23928:23932): El cliente se desconecto de server CPU Dispatch
+[INFO] 15:59:45:643 CPU/(23928:23930): Cliente conectado (a CPU Dispatch)
+
+[INFO] 15:59:45:644 CPU/(23928:23931): Cliente conectado (a CPU Interrupt)
+
+[INFO] 15:59:45:647 CPU/(23928:23950): Se recibió pcb del Kernel.
+[INFO] 15:59:45:647 CPU/(23928:23950): Decode instrucción.
+[INFO] 15:59:45:647 CPU/(23928:23950): Ejecutando NO_OP.
+[INFO] 15:59:48:648 CPU/(23928:23950): Decode instrucción.
+[INFO] 15:59:48:648 CPU/(23928:23950): PCB se bloquea.
+[INFO] 15:59:48:648 CPU/(23928:23950): Pre devolver PCB.
+[INFO] 15:59:48:648 CPU/(23928:23950): devolviendo pcb
+[INFO] 19:03:57:375 CPU/(3848:3848): Modulo CPU iniciado
+[INFO] 19:03:57:377 CPU/(3848:3848): Config CPU load
+[INFO] 19:03:57:378 CPU/(3848:3848): Conexión cpu-memoria ok.
+[INFO] 19:03:57:378 CPU/(3848:3848): Conexión cpu-test ok.
+[INFO] 19:03:57:378 CPU/(3848:3851): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:03:57:379 CPU/(3848:3850): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:03:57:379 CPU/(3848:3850): Request config memoria enviada.
+[INFO] 19:03:57:380 CPU/(3848:3850): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:03:57:381 CPU/(3848:3852): Se recibió configuración de memoria.
+[WARNING] 19:03:57:381 CPU/(3848:3852): El cliente se desconecto de server CPU Dispatch
+[INFO] 19:04:03:859 CPU/(3848:3850): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:04:03:860 CPU/(3848:3851): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:04:03:862 CPU/(3848:3869): Se recibió pcb del Kernel.
+[INFO] 19:04:03:866 CPU/(3848:3869): Decode instrucción.
+[INFO] 19:04:03:867 CPU/(3848:3869): Ejecutando NO_OP.
+[INFO] 19:04:06:867 CPU/(3848:3869): Decode instrucción.
+[INFO] 19:04:06:868 CPU/(3848:3869): PCB se bloquea.
+[INFO] 19:04:06:868 CPU/(3848:3869): Pre devolver PCB.
+[INFO] 19:04:06:868 CPU/(3848:3869): devolviendo pcb
+[INFO] 19:16:25:920 CPU/(5775:5775): Modulo CPU iniciado
+[INFO] 19:16:25:950 CPU/(5775:5775): Config CPU load
+[INFO] 19:16:25:951 CPU/(5775:5775): Conexión cpu-memoria ok.
+[INFO] 19:16:25:951 CPU/(5775:5775): Conexión cpu-test ok.
+[INFO] 19:16:25:952 CPU/(5775:5779): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:16:25:952 CPU/(5775:5778): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:16:25:953 CPU/(5775:5778): Request config memoria enviada.
+[INFO] 19:16:25:954 CPU/(5775:5778): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:16:25:956 CPU/(5775:5780): Se recibió configuración de memoria.
+[WARNING] 19:16:25:957 CPU/(5775:5780): El cliente se desconecto de server CPU Dispatch
+[INFO] 19:16:30:553 CPU/(5775:5778): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:16:30:554 CPU/(5775:5779): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:16:30:556 CPU/(5775:5795): Se recibió pcb del Kernel.
+[INFO] 19:16:30:557 CPU/(5775:5795): Decode instrucción.
+[INFO] 19:16:30:557 CPU/(5775:5795): Ejecutando NO_OP.
+[INFO] 19:16:33:558 CPU/(5775:5795): Decode instrucción.
+[INFO] 19:16:33:558 CPU/(5775:5795): PCB se bloquea.
+[INFO] 19:16:33:558 CPU/(5775:5795): Pre devolver PCB.
+[INFO] 19:16:33:558 CPU/(5775:5795): devolviendo pcb
+[INFO] 19:19:17:164 CPU/(6265:6265): Modulo CPU iniciado
+[INFO] 19:19:17:165 CPU/(6265:6265): Config CPU load
+[INFO] 19:19:17:166 CPU/(6265:6265): Conexión cpu-memoria ok.
+[INFO] 19:19:17:167 CPU/(6265:6265): Conexión cpu-test ok.
+[INFO] 19:19:17:167 CPU/(6265:6268): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:19:17:168 CPU/(6265:6267): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:19:17:171 CPU/(6265:6267): Request config memoria enviada.
+[INFO] 19:19:17:171 CPU/(6265:6267): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:19:17:182 CPU/(6265:6269): Se recibió configuración de memoria.
+[WARNING] 19:19:17:183 CPU/(6265:6269): El cliente se desconecto de server CPU Dispatch
+[INFO] 19:19:20:527 CPU/(6265:6267): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:19:20:528 CPU/(6265:6268): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:19:20:531 CPU/(6265:6279): Se recibió pcb del Kernel.
+[INFO] 19:19:20:532 CPU/(6265:6279): Decode instrucción.
+[INFO] 19:19:20:532 CPU/(6265:6279): Ejecutando NO_OP.
+[INFO] 19:19:23:537 CPU/(6265:6279): Decode instrucción.
+[INFO] 19:19:23:537 CPU/(6265:6279): PCB se bloquea.
+[INFO] 19:19:23:537 CPU/(6265:6279): Pre devolver PCB.
+[INFO] 19:19:23:537 CPU/(6265:6279): devolviendo pcb
+[INFO] 19:41:30:136 CPU/(8756:8756): Modulo CPU iniciado
+[INFO] 19:41:30:137 CPU/(8756:8756): Config CPU load
+[INFO] 19:41:30:138 CPU/(8756:8756): Conexión cpu-memoria ok.
+[INFO] 19:41:30:139 CPU/(8756:8756): Conexión cpu-test ok.
+[INFO] 19:41:30:140 CPU/(8756:8759): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:41:30:140 CPU/(8756:8758): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:41:30:142 CPU/(8756:8758): Request config memoria enviada.
+[INFO] 19:41:30:143 CPU/(8756:8758): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:41:30:144 CPU/(8756:8760): Se recibió configuración de memoria.
+[WARNING] 19:41:30:153 CPU/(8756:8760): El cliente se desconecto de server CPU Dispatch
+[INFO] 19:41:32:785 CPU/(8756:8758): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:41:32:786 CPU/(8756:8759): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:41:32:789 CPU/(8756:8768): Se recibió pcb del Kernel.
+[INFO] 19:41:32:789 CPU/(8756:8768): Decode instrucción.
+[INFO] 19:41:32:790 CPU/(8756:8768): Ejecutando NO_OP.
+[INFO] 19:41:35:791 CPU/(8756:8768): Decode instrucción.
+[INFO] 19:41:35:792 CPU/(8756:8768): PCB se bloquea.
+[INFO] 19:41:35:792 CPU/(8756:8768): Pre devolver PCB.
+[INFO] 19:41:35:793 CPU/(8756:8768): devolviendo pcb
+[INFO] 19:44:13:043 CPU/(9117:9117): Modulo CPU iniciado
+[INFO] 19:44:13:044 CPU/(9117:9117): Config CPU load
+[INFO] 19:44:13:045 CPU/(9117:9117): Conexión cpu-memoria ok.
+[INFO] 19:44:13:045 CPU/(9117:9117): Conexión cpu-test ok.
+[INFO] 19:44:13:046 CPU/(9117:9120): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:44:13:047 CPU/(9117:9119): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:44:13:049 CPU/(9117:9119): Request config memoria enviada.
+[INFO] 19:44:13:049 CPU/(9117:9119): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:44:13:050 CPU/(9117:9121): Se recibió configuración de memoria.
+[WARNING] 19:44:13:060 CPU/(9117:9121): El cliente se desconecto de server CPU Dispatch
+[INFO] 19:44:15:670 CPU/(9117:9119): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:44:15:671 CPU/(9117:9120): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:44:15:674 CPU/(9117:9134): Se recibió pcb del Kernel.
+[INFO] 19:44:15:674 CPU/(9117:9134): Decode instrucción.
+[INFO] 19:44:15:674 CPU/(9117:9134): Ejecutando NO_OP.
+[INFO] 19:44:18:675 CPU/(9117:9134): Decode instrucción.
+[INFO] 19:44:18:676 CPU/(9117:9134): PCB se bloquea.
+[INFO] 19:44:18:676 CPU/(9117:9134): Pre devolver PCB.
+[INFO] 19:44:18:676 CPU/(9117:9134): devolviendo pcb 14
+[INFO] 19:46:32:016 CPU/(9479:9479): Modulo CPU iniciado
+[INFO] 19:46:32:017 CPU/(9479:9479): Config CPU load
+[INFO] 19:46:32:018 CPU/(9479:9479): Conexión cpu-memoria ok.
+[INFO] 19:46:32:019 CPU/(9479:9482): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:46:32:020 CPU/(9479:9481): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:46:32:022 CPU/(9479:9481): Request config memoria enviada.
+[INFO] 19:46:32:033 CPU/(9479:9481): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:46:32:034 CPU/(9479:9483): Se recibió configuración de memoria.
+[WARNING] 19:46:32:035 CPU/(9479:9483): El cliente se desconecto de server CPU Dispatch
+[INFO] 19:46:34:965 CPU/(9479:9481): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:46:34:966 CPU/(9479:9482): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:46:34:969 CPU/(9479:9491): Conexión cpu-test ok.
+[INFO] 19:46:34:969 CPU/(9479:9491): Se recibió pcb del Kernel.
+[INFO] 19:46:34:970 CPU/(9479:9491): Decode instrucción.
+[INFO] 19:46:34:970 CPU/(9479:9491): Ejecutando NO_OP.
+[INFO] 19:46:37:971 CPU/(9479:9491): Decode instrucción.
+[INFO] 19:46:37:971 CPU/(9479:9491): PCB se bloquea.
+[INFO] 19:46:37:972 CPU/(9479:9491): Pre devolver PCB.
+[INFO] 19:46:37:972 CPU/(9479:9491): devolviendo pcb 14
+[INFO] 19:46:37:972 CPU/(9479:9491): la pcb se envió
+[INFO] 19:50:16:377 CPU/(10049:10049): Modulo CPU iniciado
+[INFO] 19:50:16:378 CPU/(10049:10049): Config CPU load
+[INFO] 19:50:16:379 CPU/(10049:10049): Conexión cpu-memoria ok.
+[INFO] 19:50:16:380 CPU/(10049:10052): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:50:16:381 CPU/(10049:10051): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:50:16:381 CPU/(10049:10051): Request config memoria enviada.
+[INFO] 19:50:16:383 CPU/(10049:10051): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:50:16:384 CPU/(10049:10053): Se recibió configuración de memoria.
+[WARNING] 19:50:16:396 CPU/(10049:10053): El cliente se desconecto de server CPU Dispatch
+[INFO] 19:50:20:186 CPU/(10049:10051): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:50:20:187 CPU/(10049:10052): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:50:20:190 CPU/(10049:10065): Conexión cpu-test ok.
+[INFO] 19:50:20:190 CPU/(10049:10065): Se recibió pcb del Kernel.
+[INFO] 19:50:20:191 CPU/(10049:10065): Decode instrucción.
+[INFO] 19:50:20:191 CPU/(10049:10065): Ejecutando NO_OP.
+[INFO] 19:50:23:192 CPU/(10049:10065): Decode instrucción.
+[INFO] 19:50:23:193 CPU/(10049:10065): PCB se bloquea.
+[INFO] 19:50:23:193 CPU/(10049:10065): Pre devolver PCB.
+[INFO] 19:50:23:193 CPU/(10049:10065): devolviendo pcb 14
+[INFO] 19:50:23:193 CPU/(10049:10065): tiempo de ejecucion 3
+[INFO] 19:50:23:193 CPU/(10049:10065): la pcb se envió ok
+[INFO] 19:54:13:818 CPU/(10570:10570): Modulo CPU iniciado
+[INFO] 19:54:13:819 CPU/(10570:10570): Config CPU load
+[INFO] 19:54:13:821 CPU/(10570:10570): Conexión cpu-memoria ok.
+[INFO] 19:54:13:821 CPU/(10570:10573): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:54:13:822 CPU/(10570:10572): Request config memoria enviada.
+[INFO] 19:54:13:840 CPU/(10570:10572): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:54:35:815 CPU/(10618:10618): Modulo CPU iniciado
+[INFO] 19:54:35:816 CPU/(10618:10618): Config CPU load
+[INFO] 19:54:35:817 CPU/(10618:10618): Conexión cpu-memoria ok.
+[INFO] 19:54:35:818 CPU/(10618:10621): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:54:35:818 CPU/(10618:10620): Request config memoria enviada.
+[INFO] 19:54:35:822 CPU/(10618:10620): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:57:23:603 CPU/(10927:10927): Modulo CPU iniciado
+[INFO] 19:57:23:604 CPU/(10927:10927): Config CPU load
+[INFO] 19:57:23:605 CPU/(10927:10927): Conexión cpu-memoria ok.
+[INFO] 19:57:23:606 CPU/(10927:10930): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:57:23:606 CPU/(10927:10929): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:57:23:607 CPU/(10927:10929): Request config memoria enviada.
+[INFO] 19:57:23:610 CPU/(10927:10929): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:57:23:620 CPU/(10927:10931): Se recibió configuración de memoria.
+[WARNING] 19:57:23:622 CPU/(10927:10931): El cliente se desconecto de server CPU Dispatch
+[INFO] 19:57:26:794 CPU/(10927:10929): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:57:26:796 CPU/(10927:10930): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:57:26:799 CPU/(10927:10946): Conexión cpu-test ok.
+[INFO] 19:57:26:799 CPU/(10927:10946): Se recibió pcb del Kernel.
+[INFO] 19:57:26:801 CPU/(10927:10946): Decode instrucción.
+[INFO] 19:57:26:806 CPU/(10927:10946): Ejecutando NO_OP.
+[INFO] 19:57:29:807 CPU/(10927:10946): Decode instrucción.
+[INFO] 19:57:29:808 CPU/(10927:10946): Finaliza proceso. EXIT
+[INFO] 19:57:29:808 CPU/(10927:10946): devolviendo pcb 13
+[INFO] 19:57:29:808 CPU/(10927:10946): tiempo de ejecucion 3
+[INFO] 19:57:29:808 CPU/(10927:10946): la pcb se envió ok
+[INFO] 19:59:13:708 CPU/(11167:11167): Modulo CPU iniciado
+[INFO] 19:59:13:708 CPU/(11167:11167): Config CPU load
+[INFO] 19:59:13:708 CPU/(11167:11167): Conexión cpu-memoria ok.
+[INFO] 19:59:13:708 CPU/(11167:11170): Cliente conectado (a CPU Interrupt)
+
+[INFO] 19:59:13:708 CPU/(11167:11169): Request config memoria enviada.
+[INFO] 19:59:13:710 CPU/(11167:11169): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:01:53:288 CPU/(11454:11454): Modulo CPU iniciado
+[INFO] 20:01:53:289 CPU/(11454:11454): Config CPU load
+[INFO] 20:01:53:290 CPU/(11454:11454): Conexión cpu-memoria ok.
+[INFO] 20:01:53:291 CPU/(11454:11457): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:01:53:292 CPU/(11454:11456): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:01:53:294 CPU/(11454:11456): Request config memoria enviada.
+[INFO] 20:01:53:294 CPU/(11454:11456): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:01:53:295 CPU/(11454:11458): Se recibió configuración de memoria.
+[WARNING] 20:01:53:305 CPU/(11454:11458): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:01:56:437 CPU/(11454:11456): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:01:56:438 CPU/(11454:11457): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:01:56:442 CPU/(11454:11471): Conexión cpu-test ok.
+[INFO] 20:01:56:442 CPU/(11454:11471): Se recibió pcb del Kernel.
+[INFO] 20:01:56:443 CPU/(11454:11471): Decode instrucción.
+[INFO] 20:01:56:449 CPU/(11454:11471): Ejecutando NO_OP.
+[INFO] 20:01:59:449 CPU/(11454:11471): Decode instrucción.
+[INFO] 20:01:59:449 CPU/(11454:11471): Finaliza proceso. EXIT
+[INFO] 20:01:59:450 CPU/(11454:11471): devolviendo pcb 13
+[INFO] 20:01:59:450 CPU/(11454:11471): tiempo de ejecucion 3
+[INFO] 20:01:59:450 CPU/(11454:11471): la pcb se envió ok
+[INFO] 20:04:47:982 CPU/(11831:11831): Modulo CPU iniciado
+[INFO] 20:04:47:983 CPU/(11831:11831): Config CPU load
+[INFO] 20:04:47:985 CPU/(11831:11831): Conexión cpu-memoria ok.
+[INFO] 20:04:47:986 CPU/(11831:11834): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:04:47:986 CPU/(11831:11833): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:04:47:987 CPU/(11831:11833): Request config memoria enviada.
+[INFO] 20:04:47:988 CPU/(11831:11833): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:04:48:001 CPU/(11831:11835): Se recibió configuración de memoria.
+[WARNING] 20:04:48:001 CPU/(11831:11835): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:04:52:024 CPU/(11831:11833): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:04:52:025 CPU/(11831:11834): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:04:52:028 CPU/(11831:11843): Conexión cpu-test ok.
+[INFO] 20:04:52:029 CPU/(11831:11843): Se recibió pcb del Kernel.
+[INFO] 20:04:52:029 CPU/(11831:11843): Decode instrucción.
+[INFO] 20:04:52:030 CPU/(11831:11843): Ejecutando NO_OP.
+[INFO] 20:04:55:032 CPU/(11831:11843): Decode instrucción.
+[INFO] 20:04:55:033 CPU/(11831:11843): Ejecutando NO_OP.
+[INFO] 20:10:53:768 CPU/(12525:12525): Modulo CPU iniciado
+[INFO] 20:10:53:769 CPU/(12525:12525): Config CPU load
+[INFO] 20:10:53:770 CPU/(12525:12525): Conexión cpu-memoria ok.
+[INFO] 20:10:53:771 CPU/(12525:12528): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:10:53:771 CPU/(12525:12527): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:10:53:772 CPU/(12525:12527): Request config memoria enviada.
+[INFO] 20:10:53:774 CPU/(12525:12527): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:10:53:775 CPU/(12525:12529): Se recibió configuración de memoria.
+[WARNING] 20:10:53:784 CPU/(12525:12529): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:10:56:234 CPU/(12525:12527): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:10:56:235 CPU/(12525:12528): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:10:56:239 CPU/(12525:12537): Conexión cpu-test ok.
+[INFO] 20:10:56:239 CPU/(12525:12537): Se recibió pcb del Kernel.
+[INFO] 20:10:56:239 CPU/(12525:12537): Decode instrucción.
+[INFO] 20:10:56:240 CPU/(12525:12537): Ejecutando NO_OP.
+[INFO] 20:10:59:240 CPU/(12525:12537): Decode instrucción.
+[INFO] 20:10:59:241 CPU/(12525:12537): Ejecutando NO_OP.
+[INFO] 20:14:59:360 CPU/(13010:13010): Modulo CPU iniciado
+[INFO] 20:14:59:361 CPU/(13010:13010): Config CPU load
+[INFO] 20:14:59:362 CPU/(13010:13010): Conexión cpu-memoria ok.
+[INFO] 20:14:59:363 CPU/(13010:13013): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:14:59:364 CPU/(13010:13012): Request config memoria enviada.
+[INFO] 20:14:59:385 CPU/(13010:13012): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:15:38:316 CPU/(13094:13094): Modulo CPU iniciado
+[INFO] 20:15:38:317 CPU/(13094:13094): Config CPU load
+[INFO] 20:15:38:318 CPU/(13094:13094): Conexión cpu-memoria ok.
+[INFO] 20:15:38:318 CPU/(13094:13097): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:15:38:319 CPU/(13094:13096): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:15:38:320 CPU/(13094:13096): Request config memoria enviada.
+[INFO] 20:15:38:322 CPU/(13094:13096): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:15:38:323 CPU/(13094:13098): Se recibió configuración de memoria.
+[WARNING] 20:15:38:333 CPU/(13094:13098): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:15:47:060 CPU/(13094:13096): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:15:47:061 CPU/(13094:13097): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:15:47:064 CPU/(13094:13121): Conexión cpu-test ok.
+[INFO] 20:15:47:064 CPU/(13094:13121): Se recibió pcb del Kernel.
+[INFO] 20:15:47:065 CPU/(13094:13121): Decode instrucción.
+[INFO] 20:15:47:065 CPU/(13094:13121): Ejecutando NO_OP.
+[INFO] 20:15:50:066 CPU/(13094:13121): program counter 0
+[INFO] 20:15:50:066 CPU/(13094:13121): Decode instrucción.
+[INFO] 20:15:50:066 CPU/(13094:13121): Ejecutando NO_OP.
+[INFO] 20:15:53:066 CPU/(13094:13121): program counter 1
+[INFO] 20:24:28:352 CPU/(14183:14183): Modulo CPU iniciado
+[INFO] 20:24:28:353 CPU/(14183:14183): Config CPU load
+[INFO] 20:24:28:354 CPU/(14183:14183): Conexión cpu-memoria ok.
+[INFO] 20:24:28:355 CPU/(14183:14186): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:24:28:355 CPU/(14183:14185): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:24:28:356 CPU/(14183:14185): Request config memoria enviada.
+[INFO] 20:24:28:357 CPU/(14183:14185): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:24:28:358 CPU/(14183:14187): Se recibió configuración de memoria.
+[WARNING] 20:24:28:358 CPU/(14183:14187): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:24:30:668 CPU/(14183:14185): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:24:30:669 CPU/(14183:14186): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:24:30:670 CPU/(14183:14191): Conexión cpu-test ok.
+[INFO] 20:24:30:670 CPU/(14183:14191): Se recibió pcb del Kernel.
+[INFO] 20:24:30:670 CPU/(14183:14191): Decode instrucción.
+[INFO] 20:24:30:671 CPU/(14183:14191): cantidad de instrucciones: 4
+[INFO] 20:24:30:671 CPU/(14183:14191): Ejecutando NO_OP.
+[INFO] 20:24:33:671 CPU/(14183:14191): program counter 0
+[INFO] 20:24:33:672 CPU/(14183:14191): Decode instrucción.
+[INFO] 20:24:33:672 CPU/(14183:14191): cantidad de instrucciones: 4
+[INFO] 20:24:33:673 CPU/(14183:14191): Ejecutando NO_OP.
+[INFO] 20:24:36:674 CPU/(14183:14191): program counter 1
+[INFO] 20:26:15:203 CPU/(14435:14435): Modulo CPU iniciado
+[INFO] 20:26:15:204 CPU/(14435:14435): Config CPU load
+[INFO] 20:26:15:205 CPU/(14435:14435): Conexión cpu-memoria ok.
+[INFO] 20:26:15:206 CPU/(14435:14438): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:26:15:206 CPU/(14435:14437): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:26:15:207 CPU/(14435:14437): Request config memoria enviada.
+[INFO] 20:26:15:208 CPU/(14435:14437): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:26:15:218 CPU/(14435:14439): Se recibió configuración de memoria.
+[WARNING] 20:26:15:218 CPU/(14435:14439): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:26:17:668 CPU/(14435:14437): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:26:17:669 CPU/(14435:14438): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:26:17:672 CPU/(14435:14447): Conexión cpu-test ok.
+[INFO] 20:26:17:673 CPU/(14435:14447): Se recibió pcb del Kernel.
+[INFO] 20:26:17:673 CPU/(14435:14447): Decode instrucción.
+[INFO] 20:26:17:673 CPU/(14435:14447): cantidad de instrucciones: 4
+[INFO] 20:26:17:674 CPU/(14435:14447): Ejecutando NO_OP.
+[INFO] 20:26:17:683 CPU/(14435:14447): program counter 0
+[INFO] 20:26:17:683 CPU/(14435:14447): Decode instrucción.
+[INFO] 20:26:17:683 CPU/(14435:14447): cantidad de instrucciones: 4
+[INFO] 20:26:17:683 CPU/(14435:14447): Ejecutando NO_OP.
+[INFO] 20:26:17:686 CPU/(14435:14447): program counter 1
+[ERROR] 20:28:58:329 CPU/(14435:14448): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 20:28:58:333 CPU/(14435:14448): Cop: 183
+[INFO] 20:29:46:372 CPU/(14895:14895): Modulo CPU iniciado
+[INFO] 20:29:46:372 CPU/(14895:14895): Config CPU load
+[INFO] 20:29:46:374 CPU/(14895:14895): Conexión cpu-memoria ok.
+[INFO] 20:29:46:374 CPU/(14895:14898): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:29:46:375 CPU/(14895:14897): Request config memoria enviada.
+[INFO] 20:29:46:391 CPU/(14895:14897): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:29:56:873 CPU/(14919:14919): Modulo CPU iniciado
+[INFO] 20:29:56:874 CPU/(14919:14919): Config CPU load
+[INFO] 20:29:56:875 CPU/(14919:14919): Conexión cpu-memoria ok.
+[INFO] 20:29:56:876 CPU/(14919:14922): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:29:56:876 CPU/(14919:14921): Request config memoria enviada.
+[INFO] 20:29:56:899 CPU/(14919:14921): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:30:08:008 CPU/(14919:14922): Cliente conectado (a CPU Interrupt)
+
+[ERROR] 20:30:08:011 CPU/(14919:14945): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 20:30:08:012 CPU/(14919:14945): Cop: 183
+[INFO] 20:32:08:404 CPU/(15160:15160): Modulo CPU iniciado
+[INFO] 20:32:08:405 CPU/(15160:15160): Config CPU load
+[INFO] 20:32:08:406 CPU/(15160:15160): Conexión cpu-memoria ok.
+[INFO] 20:32:08:406 CPU/(15160:15163): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:32:08:406 CPU/(15160:15162): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:32:08:407 CPU/(15160:15162): Request config memoria enviada.
+[INFO] 20:32:08:407 CPU/(15160:15162): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:32:08:407 CPU/(15160:15164): Se recibió configuración de memoria.
+[WARNING] 20:32:08:408 CPU/(15160:15164): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:32:11:345 CPU/(15160:15162): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:32:11:346 CPU/(15160:15163): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:32:11:346 CPU/(15160:15176): Conexión cpu-test ok.
+[INFO] 20:32:11:346 CPU/(15160:15176): Se recibió pcb del Kernel.
+[INFO] 20:32:11:347 CPU/(15160:15176): Decode instrucción.
+[INFO] 20:32:11:347 CPU/(15160:15176): cantidad de instrucciones: 3
+[INFO] 20:32:11:347 CPU/(15160:15176): Ejecutando NO_OP.
+[INFO] 20:32:11:350 CPU/(15160:15176): program counter 0
+[INFO] 20:32:11:350 CPU/(15160:15176): Decode instrucción.
+[INFO] 20:32:11:350 CPU/(15160:15176): cantidad de instrucciones: 3
+[INFO] 20:32:11:350 CPU/(15160:15176): Ejecutando NO_OP.
+[INFO] 20:32:11:354 CPU/(15160:15176): program counter 1
+[INFO] 20:36:32:564 CPU/(15766:15766): Modulo CPU iniciado
+[INFO] 20:36:32:565 CPU/(15766:15766): Config CPU load
+[INFO] 20:36:32:567 CPU/(15766:15766): Conexión cpu-memoria ok.
+[INFO] 20:36:32:567 CPU/(15766:15769): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:36:32:568 CPU/(15766:15768): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:36:32:568 CPU/(15766:15768): Request config memoria enviada.
+[INFO] 20:36:32:570 CPU/(15766:15768): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:36:32:572 CPU/(15766:15770): Se recibió configuración de memoria.
+[WARNING] 20:36:32:579 CPU/(15766:15770): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:36:35:085 CPU/(15766:15768): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:36:35:086 CPU/(15766:15769): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:36:35:088 CPU/(15766:15774): Conexión cpu-test ok.
+[INFO] 20:36:35:088 CPU/(15766:15774): Se recibió pcb del Kernel.
+[INFO] 20:36:35:089 CPU/(15766:15774): Decode instrucción.
+[INFO] 20:36:35:092 CPU/(15766:15774): cantidad de instrucciones: 2
+[INFO] 20:36:35:092 CPU/(15766:15774): Ejecutando NO_OP.
+[INFO] 20:36:35:099 CPU/(15766:15774): program counter 0
+[INFO] 20:36:35:099 CPU/(15766:15774): Decode instrucción.
+[INFO] 20:36:35:099 CPU/(15766:15774): cantidad de instrucciones: 2
+[INFO] 20:36:35:099 CPU/(15766:15774): Finaliza proceso. EXIT
+[INFO] 20:36:35:100 CPU/(15766:15774): devolviendo pcb 13
+[INFO] 20:36:35:100 CPU/(15766:15774): tiempo de ejecucion 0
+[INFO] 20:36:35:100 CPU/(15766:15774): la pcb se envió ok
+[INFO] 20:36:35:100 CPU/(15766:15774): program counter 2
+[ERROR] 20:37:22:918 CPU/(15766:15775): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 20:37:22:921 CPU/(15766:15775): Cop: 183
+[INFO] 20:37:24:580 CPU/(15766:15768): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:37:24:581 CPU/(15766:15769): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:37:24:582 CPU/(15766:15901): Conexión cpu-test ok.
+[INFO] 20:37:24:582 CPU/(15766:15901): Se recibió pcb del Kernel.
+[INFO] 20:37:24:582 CPU/(15766:15901): Decode instrucción.
+[INFO] 20:37:24:582 CPU/(15766:15901): cantidad de instrucciones: 3
+[INFO] 20:37:24:582 CPU/(15766:15901): Ejecutando NO_OP.
+[INFO] 20:37:24:586 CPU/(15766:15901): program counter 0
+[INFO] 20:39:41:570 CPU/(16157:16157): Modulo CPU iniciado
+[INFO] 20:39:41:570 CPU/(16157:16157): Config CPU load
+[INFO] 20:39:41:570 CPU/(16157:16157): Conexión cpu-memoria ok.
+[INFO] 20:39:41:571 CPU/(16157:16160): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:39:41:571 CPU/(16157:16159): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:39:41:571 CPU/(16157:16159): Request config memoria enviada.
+[INFO] 20:39:41:572 CPU/(16157:16159): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:39:41:572 CPU/(16157:16161): Se recibió configuración de memoria.
+[WARNING] 20:39:41:572 CPU/(16157:16161): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:39:44:660 CPU/(16157:16159): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:39:44:660 CPU/(16157:16160): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:39:44:661 CPU/(16157:16169): Conexión cpu-test ok.
+[INFO] 20:39:44:661 CPU/(16157:16169): Se recibió pcb del Kernel.
+[INFO] 20:39:44:661 CPU/(16157:16169): Decode instrucción.
+[INFO] 20:39:44:661 CPU/(16157:16169): cantidad de instrucciones: 3
+[INFO] 20:39:44:661 CPU/(16157:16169): Ejecutando NO_OP.
+[INFO] 20:39:44:665 CPU/(16157:16169): program counter 0
+[INFO] 20:39:44:665 CPU/(16157:16169): Decode instrucción.
+[INFO] 20:39:44:665 CPU/(16157:16169): cantidad de instrucciones: 3
+[INFO] 20:39:44:665 CPU/(16157:16169): Ejecutando NO_OP.
+[INFO] 20:39:44:671 CPU/(16157:16169): program counter 1
+[INFO] 20:48:07:905 CPU/(17109:17109): Modulo CPU iniciado
+[INFO] 20:48:07:905 CPU/(17109:17109): Config CPU load
+[INFO] 20:48:07:907 CPU/(17109:17109): Conexión cpu-memoria ok.
+[INFO] 20:48:07:907 CPU/(17109:17112): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 20:48:07:908 CPU/(17109:17111): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 20:48:07:908 CPU/(17109:17111): Request config memoria enviada.
+[INFO] 20:48:07:910 CPU/(17109:17111): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:48:07:910 CPU/(17109:17113): Se recibió configuración de memoria.
+[WARNING] 20:48:07:911 CPU/(17109:17113): El cliente se desconecto de server CPU Dispatch
+[INFO] 20:48:10:791 CPU/(17109:17111): Cliente conectado (a CPU Dispatch)
+
+[INFO] 20:48:10:792 CPU/(17109:17112): Cliente conectado (a CPU Interrupt)
+
+[INFO] 20:48:10:793 CPU/(17109:17125): Conexión cpu-test ok.
+[INFO] 20:48:10:793 CPU/(17109:17125): Se recibió pcb del Kernel.
+[INFO] 20:48:10:793 CPU/(17109:17125): Decode instrucción.
+[INFO] 20:48:10:793 CPU/(17109:17125): cantidad de instrucciones: 3
+[INFO] 20:48:10:793 CPU/(17109:17125): tiempo de sleep 3000
+[INFO] 20:48:10:793 CPU/(17109:17125): Ejecutando NO_OP.
+[INFO] 20:48:10:796 CPU/(17109:17125): program counter 0
+[INFO] 20:48:10:797 CPU/(17109:17125): Decode instrucción.
+[INFO] 20:48:10:797 CPU/(17109:17125): cantidad de instrucciones: 3
+[INFO] 20:48:10:797 CPU/(17109:17125): tiempo de sleep 5000
+[INFO] 20:48:10:797 CPU/(17109:17125): Ejecutando NO_OP.
+[INFO] 20:48:10:802 CPU/(17109:17125): program counter 1
+[INFO] 21:01:41:630 CPU/(18600:18600): Modulo CPU iniciado
+[INFO] 21:01:41:630 CPU/(18600:18600): Config CPU load
+[INFO] 21:01:41:631 CPU/(18600:18600): Conexión cpu-memoria ok.
+[INFO] 21:01:41:631 CPU/(18600:18603): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 21:01:41:631 CPU/(18600:18602): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 21:01:41:631 CPU/(18600:18602): Request config memoria enviada.
+[INFO] 21:01:41:632 CPU/(18600:18602): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:01:41:632 CPU/(18600:18604): Se recibió configuración de memoria.
+[WARNING] 21:01:41:632 CPU/(18600:18604): El cliente se desconecto de server CPU Dispatch
+[INFO] 21:01:43:722 CPU/(18600:18602): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:01:43:722 CPU/(18600:18603): Cliente conectado (a CPU Interrupt)
+
+[INFO] 21:01:43:723 CPU/(18600:18616): Conexión cpu-test ok.
+[INFO] 21:01:43:723 CPU/(18600:18616): Se recibió pcb del Kernel.
+[INFO] 21:01:43:723 CPU/(18600:18616): Decode instrucción.
+[INFO] 21:01:43:723 CPU/(18600:18616): program counter 0
+[INFO] 21:01:43:723 CPU/(18600:18616): cantidad de instrucciones: 3
+[INFO] 21:01:43:723 CPU/(18600:18616): tiempo de sleep 3000
+[INFO] 21:01:43:723 CPU/(18600:18616): Ejecutando NO_OP.
+[INFO] 21:01:43:726 CPU/(18600:18616): program counter 0
+[INFO] 21:01:43:727 CPU/(18600:18616): Decode instrucción.
+[INFO] 21:01:43:727 CPU/(18600:18616): program counter 1
+[INFO] 21:01:43:727 CPU/(18600:18616): cantidad de instrucciones: 3
+[INFO] 21:01:43:727 CPU/(18600:18616): tiempo de sleep 5000
+[INFO] 21:01:43:727 CPU/(18600:18616): Ejecutando NO_OP.
+[INFO] 21:01:43:734 CPU/(18600:18616): program counter 1
+[ERROR] 21:02:07:772 CPU/(18600:18617): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 21:02:07:775 CPU/(18600:18617): Cop: 183
+[INFO] 21:02:34:578 CPU/(18745:18745): Modulo CPU iniciado
+[INFO] 21:02:34:579 CPU/(18745:18745): Config CPU load
+[INFO] 21:02:34:580 CPU/(18745:18745): Conexión cpu-memoria ok.
+[INFO] 21:02:34:580 CPU/(18745:18748): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 21:02:34:581 CPU/(18745:18747): Request config memoria enviada.
+[INFO] 21:02:34:585 CPU/(18745:18747): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:04:15:819 CPU/(18939:18939): Modulo CPU iniciado
+[INFO] 21:04:15:819 CPU/(18939:18939): Config CPU load
+[INFO] 21:04:15:821 CPU/(18939:18939): Conexión cpu-memoria ok.
+[INFO] 21:04:15:821 CPU/(18939:18942): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 21:04:15:822 CPU/(18939:18941): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 21:04:15:822 CPU/(18939:18941): Request config memoria enviada.
+[INFO] 21:04:15:824 CPU/(18939:18941): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:04:15:824 CPU/(18939:18943): Se recibió configuración de memoria.
+[WARNING] 21:04:15:825 CPU/(18939:18943): El cliente se desconecto de server CPU Dispatch
+[INFO] 21:04:18:049 CPU/(18939:18941): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:04:18:050 CPU/(18939:18942): Cliente conectado (a CPU Interrupt)
+
+[INFO] 21:04:18:052 CPU/(18939:18951): Conexión cpu-test ok.
+[INFO] 21:04:18:053 CPU/(18939:18951): Se recibió pcb del Kernel.
+[INFO] 21:04:18:053 CPU/(18939:18951): Decode instrucción.
+[INFO] 21:04:18:054 CPU/(18939:18951): program counter 0
+[INFO] 21:04:18:054 CPU/(18939:18951): cantidad de instrucciones: 3
+[INFO] 21:04:18:054 CPU/(18939:18951): tiempo de sleep 3000
+[INFO] 21:04:18:054 CPU/(18939:18951): Ejecutando NO_OP.
+[INFO] 21:04:18:063 CPU/(18939:18951): program counter 1
+[INFO] 21:04:18:063 CPU/(18939:18951): Decode instrucción.
+[INFO] 21:04:18:063 CPU/(18939:18951): program counter 1
+[INFO] 21:04:18:063 CPU/(18939:18951): cantidad de instrucciones: 3
+[INFO] 21:04:18:063 CPU/(18939:18951): tiempo de sleep 5000
+[INFO] 21:04:18:063 CPU/(18939:18951): Ejecutando NO_OP.
+[INFO] 21:04:18:069 CPU/(18939:18951): program counter 2
+[INFO] 21:10:41:285 CPU/(19776:19776): Modulo CPU iniciado
+[INFO] 21:10:41:285 CPU/(19776:19776): Config CPU load
+[INFO] 21:10:41:285 CPU/(19776:19776): Conexión cpu-memoria ok.
+[INFO] 21:10:41:285 CPU/(19776:19779): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 21:10:41:286 CPU/(19776:19778): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 21:10:41:286 CPU/(19776:19778): Request config memoria enviada.
+[INFO] 21:10:41:286 CPU/(19776:19778): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:10:41:286 CPU/(19776:19780): Se recibió configuración de memoria.
+[WARNING] 21:10:41:287 CPU/(19776:19780): El cliente se desconecto de server CPU Dispatch
+[INFO] 21:10:44:044 CPU/(19776:19778): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:10:44:045 CPU/(19776:19779): Cliente conectado (a CPU Interrupt)
+
+[INFO] 21:10:44:045 CPU/(19776:19785): Conexión cpu-test ok.
+[INFO] 21:10:44:045 CPU/(19776:19785): Se recibió pcb del Kernel.
+[INFO] 21:10:44:046 CPU/(19776:19785): Decode instrucción.
+[INFO] 21:10:44:046 CPU/(19776:19785): program counter 0
+[INFO] 21:10:44:046 CPU/(19776:19785): cantidad de instrucciones: 4
+[INFO] 21:10:44:046 CPU/(19776:19785): tiempo de sleep 3000
+[INFO] 21:10:44:046 CPU/(19776:19785): Ejecutando NO_OP.
+[INFO] 21:10:44:049 CPU/(19776:19785): program counter 1
+[INFO] 21:10:44:049 CPU/(19776:19785): Decode instrucción.
+[INFO] 21:10:44:049 CPU/(19776:19785): program counter 1
+[INFO] 21:10:44:050 CPU/(19776:19785): cantidad de instrucciones: 4
+[INFO] 21:10:44:050 CPU/(19776:19785): tiempo de sleep 5000
+[INFO] 21:10:44:050 CPU/(19776:19785): Ejecutando NO_OP.
+[INFO] 21:10:44:056 CPU/(19776:19785): program counter 2
+[INFO] 21:10:44:056 CPU/(19776:19785): Decode instrucción.
+[INFO] 21:10:44:056 CPU/(19776:19785): program counter 2
+[INFO] 21:10:44:056 CPU/(19776:19785): cantidad de instrucciones: 4
+[INFO] 21:10:44:056 CPU/(19776:19785): tiempo de sleep 7000
+[INFO] 21:10:44:056 CPU/(19776:19785): Ejecutando NO_OP.
+[INFO] 21:10:44:064 CPU/(19776:19785): program counter 3
+[INFO] 21:10:44:064 CPU/(19776:19785): Decode instrucción.
+[INFO] 21:10:44:064 CPU/(19776:19785): program counter 3
+[INFO] 21:10:44:064 CPU/(19776:19785): cantidad de instrucciones: 4
+[INFO] 21:10:44:064 CPU/(19776:19785): Finaliza proceso. EXIT
+[INFO] 21:10:44:064 CPU/(19776:19785): devolviendo pcb 13
+[INFO] 21:10:44:064 CPU/(19776:19785): tiempo de ejecucion 0
+[INFO] 21:10:44:064 CPU/(19776:19785): la pcb se envió ok
+[INFO] 21:10:44:065 CPU/(19776:19785): program counter 5
+[INFO] 21:14:28:664 CPU/(20312:20312): Modulo CPU iniciado
+[INFO] 21:14:28:665 CPU/(20312:20312): Config CPU load
+[INFO] 21:14:28:666 CPU/(20312:20312): Conexión cpu-memoria ok.
+[INFO] 21:14:28:666 CPU/(20312:20315): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 21:14:28:667 CPU/(20312:20314): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 21:14:28:667 CPU/(20312:20314): Request config memoria enviada.
+[INFO] 21:14:28:669 CPU/(20312:20314): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:14:28:670 CPU/(20312:20316): Se recibió configuración de memoria.
+[WARNING] 21:14:28:671 CPU/(20312:20316): El cliente se desconecto de server CPU Dispatch
+[INFO] 21:14:31:309 CPU/(20312:20314): Cliente conectado (a CPU Dispatch)
+
+[INFO] 21:14:31:310 CPU/(20312:20315): Cliente conectado (a CPU Interrupt)
+
+[INFO] 21:14:31:312 CPU/(20312:20324): Conexión cpu-test ok.
+[INFO] 21:14:31:313 CPU/(20312:20324): Se recibió pcb del Kernel.
+[INFO] 21:14:31:313 CPU/(20312:20324): Decode instrucción.
+[INFO] 21:14:31:314 CPU/(20312:20324): program counter 0
+[INFO] 21:14:31:314 CPU/(20312:20324): cantidad de instrucciones: 4
+[INFO] 21:14:31:314 CPU/(20312:20324): tiempo de sleep 3000
+[INFO] 21:14:31:315 CPU/(20312:20324): Ejecutando NO_OP.
+[INFO] 21:14:31:322 CPU/(20312:20324): program counter 1
+[INFO] 21:14:31:322 CPU/(20312:20324): Decode instrucción.
+[INFO] 21:14:31:322 CPU/(20312:20324): program counter 1
+[INFO] 21:14:31:322 CPU/(20312:20324): cantidad de instrucciones: 4
+[INFO] 21:14:31:322 CPU/(20312:20324): tiempo de sleep 5000
+[INFO] 21:14:31:323 CPU/(20312:20324): Ejecutando NO_OP.
+[INFO] 21:14:31:328 CPU/(20312:20324): program counter 2
+[INFO] 21:14:31:328 CPU/(20312:20324): Decode instrucción.
+[INFO] 21:14:31:328 CPU/(20312:20324): program counter 2
+[INFO] 21:14:31:328 CPU/(20312:20324): cantidad de instrucciones: 4
+[INFO] 21:14:31:328 CPU/(20312:20324): tiempo de sleep 7000
+[INFO] 21:14:31:328 CPU/(20312:20324): Ejecutando NO_OP.
+[INFO] 21:14:31:345 CPU/(20312:20324): program counter 3
+[INFO] 21:14:31:345 CPU/(20312:20324): Decode instrucción.
+[INFO] 21:14:31:345 CPU/(20312:20324): program counter 3
+[INFO] 21:14:31:345 CPU/(20312:20324): cantidad de instrucciones: 4
+[INFO] 21:14:31:345 CPU/(20312:20324): Finaliza proceso. EXIT
+[INFO] 21:14:31:345 CPU/(20312:20324): devolviendo pcb 13
+[INFO] 21:14:31:345 CPU/(20312:20324): tiempo de ejecucion 0
+[INFO] 21:14:31:345 CPU/(20312:20324): program counter 5
+[WARNING] 21:14:31:345 CPU/(20312:20324): El cliente se desconecto de server CPU Dispatch
+[INFO] 02:16:56:217 CPU/(22817:22817): Modulo CPU iniciado
+[INFO] 02:16:56:218 CPU/(22817:22817): Config CPU load
+[INFO] 02:16:56:219 CPU/(22817:22817): Conexión cpu-memoria ok.
+[INFO] 02:16:56:219 CPU/(22817:22820): Cliente conectado (a CPU Interrupt)
+
+[INFO] 02:16:56:220 CPU/(22817:22819): Request config memoria enviada.
+[INFO] 02:16:56:221 CPU/(22817:22819): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:17:04:453 CPU/(22840:22840): Modulo CPU iniciado
+[INFO] 02:17:04:454 CPU/(22840:22840): Config CPU load
+[INFO] 02:17:04:455 CPU/(22840:22840): Conexión cpu-memoria ok.
+[INFO] 02:17:04:455 CPU/(22840:22843): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 02:17:04:456 CPU/(22840:22842): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 02:17:04:457 CPU/(22840:22842): Request config memoria enviada.
+[INFO] 02:17:04:458 CPU/(22840:22842): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:17:04:460 CPU/(22840:22844): Se recibió configuración de memoria.
+[WARNING] 02:17:04:460 CPU/(22840:22844): El cliente se desconecto de server CPU Dispatch
+[INFO] 02:17:07:675 CPU/(22840:22842): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:17:07:675 CPU/(22840:22843): Cliente conectado (a CPU Interrupt)
+
+[INFO] 02:17:07:676 CPU/(22840:22852): Conexión cpu-test ok.
+[INFO] 02:17:07:676 CPU/(22840:22852): Se recibió pcb del Kernel.
+[INFO] 02:17:07:676 CPU/(22840:22852): Decode instrucción.
+[INFO] 02:17:07:676 CPU/(22840:22852): program counter 0
+[INFO] 02:17:07:676 CPU/(22840:22852): cantidad de instrucciones: 4
+[INFO] 02:17:07:676 CPU/(22840:22852): tiempo de sleep 3000
+[INFO] 02:17:07:676 CPU/(22840:22852): Ejecutando NO_OP.
+[INFO] 02:17:07:680 CPU/(22840:22852): program counter 1
+[INFO] 02:17:07:680 CPU/(22840:22852): Decode instrucción.
+[INFO] 02:17:07:680 CPU/(22840:22852): program counter 1
+[INFO] 02:17:07:680 CPU/(22840:22852): cantidad de instrucciones: 4
+[INFO] 02:17:07:681 CPU/(22840:22852): tiempo de sleep 5000
+[INFO] 02:17:07:681 CPU/(22840:22852): Ejecutando NO_OP.
+[INFO] 02:17:07:686 CPU/(22840:22852): program counter 2
+[INFO] 02:17:07:686 CPU/(22840:22852): Decode instrucción.
+[INFO] 02:17:07:686 CPU/(22840:22852): program counter 2
+[INFO] 02:17:07:686 CPU/(22840:22852): cantidad de instrucciones: 4
+[INFO] 02:17:07:686 CPU/(22840:22852): tiempo de sleep 7000
+[INFO] 02:17:07:686 CPU/(22840:22852): Ejecutando NO_OP.
+[INFO] 02:17:07:694 CPU/(22840:22852): program counter 3
+[INFO] 02:17:07:694 CPU/(22840:22852): Decode instrucción.
+[INFO] 02:17:07:694 CPU/(22840:22852): program counter 3
+[INFO] 02:17:07:694 CPU/(22840:22852): cantidad de instrucciones: 4
+[INFO] 02:17:07:694 CPU/(22840:22852): Finaliza proceso. EXIT
+[INFO] 02:17:07:694 CPU/(22840:22852): devolviendo pcb 13
+[INFO] 02:17:07:694 CPU/(22840:22852): tiempo de ejecucion 0
+[INFO] 02:17:07:694 CPU/(22840:22852): program counter 5
+[WARNING] 02:17:07:695 CPU/(22840:22852): El cliente se desconecto de server CPU Dispatch
+[INFO] 02:32:44:357 CPU/(24733:24733): Modulo CPU iniciado
+[INFO] 02:32:44:358 CPU/(24733:24733): Config CPU load
+[INFO] 02:32:44:358 CPU/(24733:24733): Conexión cpu-memoria ok.
+[INFO] 02:32:44:358 CPU/(24733:24736): Cliente conectado (a CPU Interrupt)
+
+[INFO] 02:32:44:358 CPU/(24733:24735): Request config memoria enviada.
+[INFO] 02:32:44:360 CPU/(24733:24735): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:32:50:952 CPU/(24753:24753): Modulo CPU iniciado
+[INFO] 02:32:50:953 CPU/(24753:24753): Config CPU load
+[INFO] 02:32:50:953 CPU/(24753:24753): Conexión cpu-memoria ok.
+[INFO] 02:32:50:953 CPU/(24753:24756): Cliente conectado (a CPU Interrupt)
+
+[INFO] 02:32:50:953 CPU/(24753:24755): Request config memoria enviada.
+[INFO] 02:32:50:955 CPU/(24753:24755): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:32:57:085 CPU/(24771:24771): Modulo CPU iniciado
+[INFO] 02:32:57:086 CPU/(24771:24771): Config CPU load
+[INFO] 02:32:57:087 CPU/(24771:24771): Conexión cpu-memoria ok.
+[INFO] 02:32:57:087 CPU/(24771:24774): Cliente conectado (a CPU Interrupt)
+
+[INFO] 02:32:57:088 CPU/(24771:24773): Request config memoria enviada.
+[INFO] 02:32:57:092 CPU/(24771:24773): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:33:04:390 CPU/(24792:24792): Modulo CPU iniciado
+[INFO] 02:33:04:391 CPU/(24792:24792): Config CPU load
+[INFO] 02:33:04:392 CPU/(24792:24792): Conexión cpu-memoria ok.
+[INFO] 02:33:04:393 CPU/(24792:24795): Cliente conectado (a CPU Interrupt)
+
+[INFO] 02:33:04:393 CPU/(24792:24794): Request config memoria enviada.
+[INFO] 02:33:04:397 CPU/(24792:24794): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:35:35:656 CPU/(25108:25108): Modulo CPU iniciado
+[INFO] 02:35:35:657 CPU/(25108:25108): Config CPU load
+[INFO] 02:35:35:657 CPU/(25108:25108): Conexión cpu-memoria ok.
+[INFO] 02:35:35:657 CPU/(25108:25111): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 02:35:35:657 CPU/(25108:25110): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 02:35:35:658 CPU/(25108:25110): Request config memoria enviada.
+[INFO] 02:35:35:658 CPU/(25108:25110): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:35:35:658 CPU/(25108:25112): Se recibió configuración de memoria.
+[WARNING] 02:35:35:659 CPU/(25108:25112): El cliente se desconecto de server CPU Dispatch
+[INFO] 02:35:38:643 CPU/(25108:25110): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:35:38:644 CPU/(25108:25111): Cliente conectado (a CPU Interrupt)
+
+[INFO] 02:35:38:647 CPU/(25108:25127): Conexión cpu-test ok.
+[INFO] 02:35:38:647 CPU/(25108:25127): Se recibió pcb del Kernel.
+[INFO] 02:35:38:647 CPU/(25108:25127): Decode instrucción.
+[INFO] 02:35:38:648 CPU/(25108:25127): program counter 0
+[INFO] 02:35:38:648 CPU/(25108:25127): cantidad de instrucciones: 4
+[INFO] 02:35:38:648 CPU/(25108:25127): tiempo de sleep 3000000
+[INFO] 02:35:38:649 CPU/(25108:25127): Ejecutando NO_OP.
+[INFO] 02:35:41:650 CPU/(25108:25127): program counter 1
+[INFO] 02:35:41:651 CPU/(25108:25127): Decode instrucción.
+[INFO] 02:35:41:651 CPU/(25108:25127): program counter 1
+[INFO] 02:35:41:651 CPU/(25108:25127): cantidad de instrucciones: 4
+[INFO] 02:35:41:651 CPU/(25108:25127): tiempo de sleep 5000000
+[INFO] 02:35:41:652 CPU/(25108:25127): Ejecutando NO_OP.
+[INFO] 02:35:46:653 CPU/(25108:25127): program counter 2
+[INFO] 02:35:46:653 CPU/(25108:25127): Decode instrucción.
+[INFO] 02:35:46:653 CPU/(25108:25127): program counter 2
+[INFO] 02:35:46:653 CPU/(25108:25127): cantidad de instrucciones: 4
+[INFO] 02:35:46:653 CPU/(25108:25127): tiempo de sleep 7000000
+[INFO] 02:35:46:653 CPU/(25108:25127): Ejecutando NO_OP.
+[INFO] 02:35:53:655 CPU/(25108:25127): program counter 3
+[INFO] 02:35:53:656 CPU/(25108:25127): Decode instrucción.
+[INFO] 02:35:53:656 CPU/(25108:25127): program counter 3
+[INFO] 02:35:53:656 CPU/(25108:25127): cantidad de instrucciones: 4
+[INFO] 02:35:53:656 CPU/(25108:25127): Finaliza proceso. EXIT
+[INFO] 02:35:53:656 CPU/(25108:25127): devolviendo pcb 13
+[INFO] 02:35:53:656 CPU/(25108:25127): tiempo de ejecucion 15
+[INFO] 02:35:53:657 CPU/(25108:25127): program counter 5
+[WARNING] 02:35:53:657 CPU/(25108:25127): El cliente se desconecto de server CPU Dispatch
+[INFO] 02:48:55:323 CPU/(26839:26839): Modulo CPU iniciado
+[INFO] 02:48:55:324 CPU/(26839:26839): Config CPU load
+[INFO] 02:48:55:325 CPU/(26839:26839): Conexión cpu-memoria ok.
+[INFO] 02:48:55:326 CPU/(26839:26842): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 02:48:55:326 CPU/(26839:26841): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 02:48:55:327 CPU/(26839:26841): Request config memoria enviada.
+[INFO] 02:48:55:329 CPU/(26839:26841): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:48:55:330 CPU/(26839:26843): Se recibió configuración de memoria.
+[WARNING] 02:48:55:330 CPU/(26839:26843): El cliente se desconecto de server CPU Dispatch
+[INFO] 02:48:59:439 CPU/(26839:26841): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:48:59:440 CPU/(26839:26842): Cliente conectado (a CPU Interrupt)
+
+[WARNING] 02:48:59:441 CPU/(26839:26854): El cliente se desconecto de server CPU Interrupt
+[INFO] 02:48:59:443 CPU/(26839:26853): Conexión cpu-test ok.
+[INFO] 02:48:59:443 CPU/(26839:26853): Se recibió pcb del Kernel.
+[INFO] 02:48:59:444 CPU/(26839:26853): Decode instrucción.
+[INFO] 02:48:59:444 CPU/(26839:26853): program counter 0
+[INFO] 02:48:59:444 CPU/(26839:26853): cantidad de instrucciones: 4
+[INFO] 02:48:59:445 CPU/(26839:26853): tiempo de sleep 3000000
+[INFO] 02:48:59:445 CPU/(26839:26853): Ejecutando NO_OP.
+[INFO] 02:49:02:446 CPU/(26839:26853): program counter 1
+[INFO] 02:49:02:446 CPU/(26839:26853): devolviendo pcb 8
+[INFO] 02:49:02:446 CPU/(26839:26853): tiempo de ejecucion 3
+[WARNING] 02:49:02:446 CPU/(26839:26853): El cliente se desconecto de server CPU Dispatch
+[INFO] 02:52:10:485 CPU/(27270:27270): Modulo CPU iniciado
+[INFO] 02:52:10:485 CPU/(27270:27270): Config CPU load
+[INFO] 02:52:10:487 CPU/(27270:27270): Conexión cpu-memoria ok.
+[INFO] 02:52:10:487 CPU/(27270:27273): Cliente conectado (a CPU Interrupt)
+
+[INFO] 02:52:10:488 CPU/(27270:27272): Request config memoria enviada.
+[INFO] 02:52:10:492 CPU/(27270:27272): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:53:26:916 CPU/(27410:27410): Modulo CPU iniciado
+[INFO] 02:53:26:917 CPU/(27410:27410): Config CPU load
+[INFO] 02:53:26:918 CPU/(27410:27410): Conexión cpu-memoria ok.
+[INFO] 02:53:26:918 CPU/(27410:27413): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 02:53:26:919 CPU/(27410:27412): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 02:53:26:919 CPU/(27410:27412): Request config memoria enviada.
+[INFO] 02:53:26:921 CPU/(27410:27412): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:53:26:922 CPU/(27410:27414): Se recibió configuración de memoria.
+[WARNING] 02:53:26:922 CPU/(27410:27414): El cliente se desconecto de server CPU Dispatch
+[INFO] 02:53:30:107 CPU/(27410:27412): Cliente conectado (a CPU Dispatch)
+
+[INFO] 02:53:30:107 CPU/(27410:27413): Cliente conectado (a CPU Interrupt)
+
+[WARNING] 02:53:30:108 CPU/(27410:27421): El cliente se desconecto de server CPU Interrupt
+[INFO] 02:53:30:108 CPU/(27410:27420): Conexión cpu-test ok.
+[INFO] 02:53:30:108 CPU/(27410:27420): Se recibió pcb del Kernel.
+[INFO] 02:53:30:109 CPU/(27410:27420): Decode instrucción.
+[INFO] 02:53:30:109 CPU/(27410:27420): program counter 0
+[INFO] 02:53:30:109 CPU/(27410:27420): cantidad de instrucciones: 4
+[INFO] 02:53:30:109 CPU/(27410:27420): tiempo de sleep 3000000
+[INFO] 02:53:30:109 CPU/(27410:27420): Ejecutando NO_OP.
+[INFO] 02:53:33:110 CPU/(27410:27420): program counter 1
+[INFO] 02:53:33:110 CPU/(27410:27420): devolviendo pcb 8
+[INFO] 02:53:33:111 CPU/(27410:27420): tiempo de ejecucion 3
+[WARNING] 02:53:33:111 CPU/(27410:27420): El cliente se desconecto de server CPU Dispatch
+[INFO] 03:06:12:800 CPU/(29072:29072): Modulo CPU iniciado
+[INFO] 03:06:12:801 CPU/(29072:29072): Config CPU load
+[INFO] 03:06:12:802 CPU/(29072:29072): Conexión cpu-memoria ok.
+[INFO] 03:06:12:802 CPU/(29072:29075): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 03:06:12:802 CPU/(29072:29074): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 03:06:12:802 CPU/(29072:29074): Request config memoria enviada.
+[INFO] 03:06:12:803 CPU/(29072:29074): Cliente conectado (a CPU Dispatch)
+
+[INFO] 03:06:12:803 CPU/(29072:29076): Se recibió configuración de memoria.
+[WARNING] 03:06:12:803 CPU/(29072:29076): El cliente se desconecto de server CPU Dispatch
+[INFO] 03:06:16:191 CPU/(29072:29074): Cliente conectado (a CPU Dispatch)
+
+[INFO] 03:06:16:192 CPU/(29072:29075): Cliente conectado (a CPU Interrupt)
+
+[WARNING] 03:06:16:192 CPU/(29072:29085): El cliente se desconecto de server CPU Interrupt
+[INFO] 03:06:16:192 CPU/(29072:29084): Conexión cpu-test ok.
+[INFO] 03:06:16:192 CPU/(29072:29084): Se recibió pcb del Kernel.
+[INFO] 03:06:16:192 CPU/(29072:29084): Decode instrucción.
+[INFO] 03:06:16:193 CPU/(29072:29084): program counter 0
+[INFO] 03:06:16:193 CPU/(29072:29084): cantidad de instrucciones: 4
+[INFO] 03:06:16:193 CPU/(29072:29084): tiempo de sleep 3000000
+[INFO] 03:06:16:193 CPU/(29072:29084): Ejecutando NO_OP.
+[INFO] 03:06:19:193 CPU/(29072:29084): program counter 1
+[INFO] 03:06:19:194 CPU/(29072:29084): devolviendo pcb 8
+[INFO] 03:06:19:194 CPU/(29072:29084): tiempo de ejecucion 3
+[WARNING] 03:06:19:194 CPU/(29072:29084): El cliente se desconecto de server CPU Dispatch
+[INFO] 03:08:05:323 CPU/(29333:29333): Modulo CPU iniciado
+[INFO] 03:08:05:323 CPU/(29333:29333): Config CPU load
+[INFO] 03:08:05:325 CPU/(29333:29333): Conexión cpu-memoria ok.
+[INFO] 03:08:05:325 CPU/(29333:29336): Cliente conectado (a CPU Interrupt)
+
+[INFO] 03:08:05:326 CPU/(29333:29335): Request config memoria enviada.
+[INFO] 03:08:05:330 CPU/(29333:29335): Cliente conectado (a CPU Dispatch)
+
+[INFO] 03:08:34:946 CPU/(29388:29388): Modulo CPU iniciado
+[INFO] 03:08:34:946 CPU/(29388:29388): Config CPU load
+[INFO] 03:08:34:947 CPU/(29388:29388): Conexión cpu-memoria ok.
+[INFO] 03:08:34:947 CPU/(29388:29391): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 03:08:34:947 CPU/(29388:29390): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 03:08:34:947 CPU/(29388:29390): Request config memoria enviada.
+[INFO] 03:08:34:948 CPU/(29388:29390): Cliente conectado (a CPU Dispatch)
+
+[INFO] 03:08:34:948 CPU/(29388:29392): Se recibió configuración de memoria.
+[WARNING] 03:08:34:949 CPU/(29388:29392): El cliente se desconecto de server CPU Dispatch
+[INFO] 03:08:38:251 CPU/(29388:29390): Cliente conectado (a CPU Dispatch)
+
+[INFO] 03:08:38:251 CPU/(29388:29391): Cliente conectado (a CPU Interrupt)
+
+[WARNING] 03:08:38:251 CPU/(29388:29405): El cliente se desconecto de server CPU Interrupt
+[INFO] 03:08:38:252 CPU/(29388:29404): Conexión cpu-test ok.
+[INFO] 03:08:38:252 CPU/(29388:29404): Se recibió pcb del Kernel.
+[INFO] 03:08:38:252 CPU/(29388:29404): Decode instrucción.
+[INFO] 03:08:38:252 CPU/(29388:29404): program counter 0
+[INFO] 03:08:38:252 CPU/(29388:29404): cantidad de instrucciones: 4
+[INFO] 03:08:38:252 CPU/(29388:29404): tiempo de sleep 3000000
+[INFO] 03:08:38:252 CPU/(29388:29404): Ejecutando NO_OP.
+[INFO] 03:08:41:253 CPU/(29388:29404): program counter 1
+[INFO] 03:08:41:255 CPU/(29388:29404): devolviendo pcb 8
+[INFO] 03:08:41:255 CPU/(29388:29404): tiempo de ejecucion 3
+[WARNING] 03:08:41:255 CPU/(29388:29404): El cliente se desconecto de server CPU Dispatch
+[INFO] 03:08:41:256 CPU/(29388:29390): Cliente conectado (a CPU Dispatch)
+
+[INFO] 03:08:41:258 CPU/(29388:29411): Conexión cpu-test ok.
+[INFO] 03:08:41:258 CPU/(29388:29411): Se recibió pcb del Kernel.
+[INFO] 03:08:41:259 CPU/(29388:29411): Decode instrucción.
+[INFO] 03:08:41:259 CPU/(29388:29411): program counter 0
+[INFO] 03:08:41:260 CPU/(29388:29411): cantidad de instrucciones: 1
+[INFO] 03:08:41:260 CPU/(29388:29411): Finaliza proceso. EXIT
+[INFO] 03:08:41:260 CPU/(29388:29411): devolviendo pcb 13
+[INFO] 03:08:41:260 CPU/(29388:29411): tiempo de ejecucion 0
+[INFO] 03:08:41:261 CPU/(29388:29411): program counter 2
+[INFO] 03:08:41:261 CPU/(29388:29411): devolviendo pcb 8
+[INFO] 03:08:41:261 CPU/(29388:29411): tiempo de ejecucion 0
+[WARNING] 03:08:41:262 CPU/(29388:29411): El cliente se desconecto de server CPU Dispatch
