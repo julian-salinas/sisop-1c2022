@@ -15,14 +15,14 @@
     #include "proceso.h"
     #include "semaforos.h"
 
-    //Colas
+    // Colas
     t_queue* cola_new;
     t_queue* cola_ready;
-    t_queue* cola_exit;
     t_queue* cola_blocked;
     t_queue* cola_suspended_ready;
+    t_queue* cola_exit;
 
-    //Semáforos colas
+    // Semáforos colas
     sem_t* mutex_cola_new;
     sem_t* mutex_cola_ready;
     sem_t* mutex_cola_exit;
@@ -96,10 +96,11 @@
 
 
     /**
-     * @DESC: Realiza la transición BLOCKED -> SUSPENDED-READY. Mueve al proceso de cola.
+     * @DESC: Realiza la transición SUSPENDED-BLOCKED -> SUSPENDED-READY. Mueve un proceso
+     *        de la cola BLOCKED a la cola SUSPENDED-BLOCKED.
      * @post sem_procesos_esperando
      */ 
-    void blocked_a_suspended_ready(void);
+    void suspended_blocked_a_suspended_ready(void);
 
     void blocked_a_exit(t_PCB* procesoAMover);
 

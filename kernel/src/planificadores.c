@@ -97,26 +97,18 @@ void* func_corto_plazo(void* args) {
 }
 
 
-
 void* func_mediano_plazo(void* args) {
 
     while (1) {
         sem_wait(sem_multiprogramacion); // Hay grado de multiprogramación disponible
         sem_wait(sem_procesos_esperando); // Hay algo para planificar
         sem_wait(mutex_mediano_plazo);
-
             if(queue_is_empty(cola_suspended_ready)) {
                 sem_post(sem_largo_plazo);
                 sem_post(mutex_mediano_plazo);
                 continue; 
             }
-
             suspended_ready_a_ready();
-
-            // sem_wait(mutex_transicion_ready_a_running);
-            //     transicion_ready_a_running = true;
-            // sem_post(mutex_transicion_ready_a_running);
-
         sem_post(mutex_mediano_plazo);
     }
 }
@@ -150,14 +142,14 @@ bool algoritmo_SJF(void* proceso1, void* proceso2) {
 void* func_io(void* args) {
 
     while (1) {
-        // Hacer un wait del semaforo que indica que le toca a IO
+        // Hacer un wait del semaforo que indica que hay procesos en blocked
         sem_wait(sem_procesos_bloqueados);
 
         sem_wait(mutex_cola_blocked);
             t_PCB* proceso = (t_PCB*) queue_pop(cola_blocked);
         sem_post(mutex_cola_blocked);
 
-        double tiempo_bloqueo = proceso -> tiempo_bloqueo * 1000.0;  // Pasar microseg a miliseg
+        int tiempo_bloqueo = proceso -> tiempo_bloqueo * 1000;  // Pasar microseg a miliseg
         
         // Devuelvo el proceso a la cola para que luego haga la transición
         queue_push(cola_blocked, (void*) proceso);
@@ -170,9 +162,9 @@ void* func_io(void* args) {
             sem_post(mutex_mediano_plazo);
         }
 
-        if (proceso -> estado == SUSPENDED_READY) {
+        if (proceso -> estado == SUSPENDED_BLOCKED) {
             sem_wait(mutex_mediano_plazo);
-                blocked_a_suspended_ready();
+                suspended_blocked_a_suspended_ready();
             sem_wait(mutex_mediano_plazo);
         }
     }

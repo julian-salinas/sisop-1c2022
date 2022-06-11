@@ -51,7 +51,6 @@
     int crear_socket_servidor(char *ip, char *puerto);
 
 
-    /* --------------------------- NUEVA FUNCION -------------------------- */
     /**
      * @DESC: Crear un socket servidor para recibir a cliente
      * @param logger: logger ya creado, que va a loggear el resultado de la operación
@@ -63,7 +62,6 @@
     int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
 
     
-    /* --------------------------- NUEVA FUNCION -------------------------- */
     /**
      * @DESC: Escuchar a nuevos clientes, crear un hilo si un cliente se conecta
      * @param logger: logger que va a loggear el resultado de la operación

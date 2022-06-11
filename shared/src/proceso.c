@@ -45,6 +45,7 @@ t_proceso* buffer_take_PROCESO(t_buffer* buffer) {
 }
 
 
+// TODO: AGREGAR TIEMPO_BLOQUEO
 void enviar_pcb(int socket, uint8_t header, t_PCB* pcb) {
     t_paquete* paquete = crear_paquete(header, sizeof(t_PCB));
 
@@ -63,6 +64,7 @@ void enviar_pcb(int socket, uint8_t header, t_PCB* pcb) {
 }
 
 
+// TODO: AGREGAR TIEMPO_BLOQUEO
 t_PCB* buffer_take_PCB(t_buffer* buffer) {
     t_PCB* pcb = malloc(sizeof(t_PCB));
 

@@ -15,7 +15,6 @@
         PCB,
         BLOQUEO,
         FINALIZACION,
-        INTERRUPCION,
         CPU_OK,
         MEMORIA_OK,
         NUEVO_PROCESO_READY,
@@ -25,7 +24,8 @@
         NUEVO_PROCESO,  // Header para paquete que contiene un proceso (CONSOLA -> KERNEL)
         PROCESO_BLOQUEADO, // Header para paquete que contiene un proceso (CPU -> KERNEL)
         PROCESO_FINALIZADO, // Header para paquete que contiene un proceso (CPU -> KERNEL) 
-        DESALOJAR_PROCESO, // Header que se manda sin paquete (KERNEL -> CPU)
+        INTERRUPCION, // Header que se manda sin paquete (KERNEL -> CPU)
+        EJECUTAR_PROCESO
     } codigo_operacion;
 
 #endif /* ENUM_H */

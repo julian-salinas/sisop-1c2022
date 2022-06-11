@@ -8,25 +8,8 @@ void procesar_conexion(void* void_args) {
     char* nombre_servidor = args->server_name;
     free(args);
 
-    /*
-    transicion_new_a_ready = false;
-    transicion_running_a_exit = false;
-    transicion_running_a_blocked = false;
-    transicion_block_a_suspended_block = false;
-    transicion_suspended_block_a_suspended_ready = false;
-    transicion_suspended_ready_a_ready = false;
-    transicion_running_a_ready = false;
-    transicion_ready_a_running = false;
-    transicion_blocked_a_ready = false;
-    transicion_blocked_a_exit = false;
-    transicion_new_a_exit = false;
-    transicion_ready_a_exit = false;
-    transicion_blocked_a_suspended_blocked = false;
-    */
-
     int header = recibir_header(socket);
     t_PCB* pcb;
-    t_buffer* payload;
 
     switch (header) {
 
@@ -41,6 +24,7 @@ void procesar_conexion(void* void_args) {
             pcb = socket_get_PCB(socket);
             enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb);  // Avisarle a memoria para que desaloje al proceso
             enviar_header(pcb -> socket_cliente, PROCESO_FINALIZADO);  // Avisarle a consola que terminó la ejecución
+            sem_post(sem_multiprogramacion); // Se libera multiprog. después de sacar al proceso de memoria
             break;
 
 
@@ -48,8 +32,11 @@ void procesar_conexion(void* void_args) {
             sem_post(sem_cpu_disponible);
             pcb = socket_get_PCB(socket);
 
-            if ((pcb -> tiempo_bloqueo) > (double) (kernel_config -> tiempo_maximo_bloqueado)) {
+            // Calcular la estimación en este momento sería piola
+
+            if (pcb -> tiempo_bloqueo > kernel_config -> tiempo_maximo_bloqueado) {
                 pcb -> estado = SUSPENDED_BLOCKED;
+                sem_post(sem_multiprogramacion);
                 // ¿Mandarle una solicitud a memoria para que saque al proceso de memoria?
             }
             
@@ -81,8 +68,8 @@ t_PCB* crear_PCB(t_proceso* proceso, int socket) {
     pcb -> estimacion_rafaga = kernel_config -> estimacion_inicial;
     pcb -> tiempo_ejecucion = 0;
     pcb -> socket_cliente = socket;
+    pcb -> tiempo_bloqueo = -1;
     pcb -> estado = NEW;
-    pcb -> tiempo_bloqueo = -1; // vo deci?
 
     sem_wait(mutex_pid);
         contador_id_proceso++;

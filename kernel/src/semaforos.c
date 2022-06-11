@@ -26,25 +26,6 @@ void ini_semaforos(void) {
 	sem_io = malloc(sizeof(sem_t));
 	sem_init(sem_io, 0, 0);
 
-	/* ==================== Mutex de transiciones ==================== */
-	mutex_transicion_new_a_ready = malloc(sizeof(sem_t));
-	sem_init(mutex_transicion_new_a_ready, 0, 1);
-
-	mutex_transicion_ready_a_running = malloc(sizeof(sem_t));
-	sem_init(mutex_transicion_ready_a_running, 0, 1);
-
-	mutex_transicion_running_a_ready = malloc(sizeof(sem_t));
-	sem_init(mutex_transicion_running_a_ready, 0, 1);
-
-	mutex_transicion_running_a_blocked = malloc(sizeof(sem_t));
-	sem_init(mutex_transicion_running_a_blocked, 0, 1);
-
-	mutex_transicion_running_a_exit = malloc(sizeof(sem_t));
-	sem_init(mutex_transicion_running_a_exit, 0, 1);
-
-	mutex_transicion_blocked_a_suspended_blocked = malloc(sizeof(sem_t));
-	sem_init(mutex_transicion_blocked_a_suspended_blocked, 0, 1);
-
 	/* =========== Mutex variables que contienen procesos ============ */
 	mutex_proceso_corriendo = malloc(sizeof(sem_t));
 	sem_init(mutex_proceso_corriendo, 0, 1);

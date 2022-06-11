@@ -26,14 +26,6 @@
     sem_t* sem_corto_plazo, *sem_mediano_plazo, *sem_largo_plazo;
     sem_t* sem_io;
 
-    // Semáforos de transiciones
-    sem_t* mutex_transicion_new_a_ready;
-    sem_t* mutex_transicion_ready_a_running;
-    sem_t* mutex_transicion_running_a_ready;
-    sem_t* mutex_transicion_running_a_blocked;
-    sem_t* mutex_transicion_running_a_exit;
-    sem_t* mutex_transicion_blocked_a_suspended_blocked;
-
     // Semáforo que protege variable booleana que indica si hay un proceso en CPU o no
     sem_t* mutex_proceso_buscado;
     sem_t* mutex_proceso_corriendo;
