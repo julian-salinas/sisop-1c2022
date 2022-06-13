@@ -16,31 +16,29 @@ void procesar_conexion(void* void_args) {
         case NUEVO_PROCESO:
             pcb = socket_create_PCB(socket);
             agregar_a_new(pcb);  // Se agrega proceso a cola NEW y se actualiza su estado
+            
             break;
-
 
         case PROCESO_FINALIZADO:
             sem_post(sem_cpu_disponible);
+
             pcb = socket_get_PCB(socket);
             enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb);  // Avisarle a memoria para que desaloje al proceso
             enviar_header(pcb -> socket_cliente, PROCESO_FINALIZADO);  // Avisarle a consola que terminó la ejecución
             sem_post(sem_multiprogramacion); // Se libera multiprog. después de sacar al proceso de memoria
+            
             break;
-
 
         case PROCESO_BLOQUEADO:
             sem_post(sem_cpu_disponible);
-            pcb = socket_get_PCB(socket);
 
-            // Calcular la estimación en este momento sería piola
+            pcb = socket_get_PCB(socket); // Obtener pcb del proceso bloqueado
+            running_a_blocked(pcb);  // Pasar a cola blocked
 
-            if (pcb -> tiempo_bloqueo > kernel_config -> tiempo_maximo_bloqueado) {
-                pcb -> estado = SUSPENDED_BLOCKED;
-                sem_post(sem_multiprogramacion);
-                // ¿Mandarle una solicitud a memoria para que saque al proceso de memoria?
-            }
-            
-            running_a_blocked(pcb);
+            // Iniciar hilo que se va a encargar de suspender al proceso en caso de que se zarpe de tiempo 
+            pthread_create(&thread_suspension, 0, (void*) func_suspension, (void*) pcb);
+            pthread_detach(thread_suspension);
+
             break;
 
         case -1:

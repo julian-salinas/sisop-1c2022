@@ -102,6 +102,11 @@
      */ 
     void suspended_blocked_a_suspended_ready(void);
 
+    /**
+     * IMPLEMENTAR: Que la función cambie el estado de un proceso y avise a memoria para que lo desaloje
+     */ 
+    void blocked_a_suspended_blocked(t_PCB* procesoAMover);
+
     void blocked_a_exit(t_PCB* procesoAMover);
 
     void new_a_exit(t_PCB* procesoAMover);

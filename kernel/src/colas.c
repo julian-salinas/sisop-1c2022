@@ -227,8 +227,6 @@ void blocked_a_exit(t_PCB* procesoAMover){
 
     log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a EXIT.", procesoAMover -> PID);
 
-    transicion_blocked_a_exit = false;
-
     // TODO: Avisar a memoria que desaloje el proceso
 }
 
