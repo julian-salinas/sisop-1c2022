@@ -152,6 +152,8 @@ void func_io(void* args) {
         // Devuelvo el proceso a la cola para que luego haga la transición
         queue_push(cola_blocked, (void*) proceso);
 
+        log_info(logger, "Arranca IO del proceso ID:%d", proceso -> PID);
+
         usleep(tiempo_bloqueo);
 
         sem_wait(mutex_suspension);
@@ -183,5 +185,6 @@ void func_suspension(void* args) {
         if (proceso -> estado == BLOCKED) {
             blocked_a_suspended_blocked(proceso);
         }
+
     sem_post(mutex_suspension);
 }

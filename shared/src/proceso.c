@@ -45,7 +45,6 @@ t_proceso* buffer_take_PROCESO(t_buffer* buffer) {
 }
 
 
-// TODO: AGREGAR TIEMPO_BLOQUEO
 void enviar_pcb(int socket, uint8_t header, t_PCB* pcb) {
     t_paquete* paquete = crear_paquete(header, sizeof(t_PCB));
 
@@ -57,6 +56,7 @@ void enviar_pcb(int socket, uint8_t header, t_PCB* pcb) {
     agregar_a_buffer_INT32(paquete -> payload, pcb -> estimacion_rafaga);
     agregar_a_buffer_INT32(paquete -> payload, pcb -> tiempo_ejecucion);
     agregar_a_buffer_INT32(paquete -> payload, pcb -> socket_cliente);
+    agregar_a_buffer_INT32(paquete -> payload, pcb -> tiempo_bloqueo);
     agregar_a_buffer_INT32(paquete -> payload, pcb -> estado);
 
     enviar_paquete(socket, paquete);
@@ -64,7 +64,6 @@ void enviar_pcb(int socket, uint8_t header, t_PCB* pcb) {
 }
 
 
-// TODO: AGREGAR TIEMPO_BLOQUEO
 t_PCB* buffer_take_PCB(t_buffer* buffer) {
     t_PCB* pcb = malloc(sizeof(t_PCB));
 
@@ -76,6 +75,7 @@ t_PCB* buffer_take_PCB(t_buffer* buffer) {
     pcb -> estimacion_rafaga = buffer_take_INT32(buffer);
     pcb -> tiempo_ejecucion = buffer_take_INT32(buffer);
     pcb -> socket_cliente = buffer_take_INT32(buffer);
+    pcb -> tiempo_bloqueo = buffer_take_INT32(buffer);
     pcb -> estado = buffer_take_INT32(buffer);
 
     return pcb;

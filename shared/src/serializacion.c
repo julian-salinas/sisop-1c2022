@@ -96,8 +96,6 @@ void agregar_a_buffer_LIST(t_buffer* buffer, t_list* lista, void(*agregar_a_buff
 
 // ------------------------- Tomar valores del buffer ------------------------- //
 
-// ------------------------- Tomar valores del buffer ------------------------- //
-
 void buffer_take(t_buffer* buffer, void** dest, size_t tamanio){
     if(*dest == NULL) *dest = calloc(1, tamanio);
     memcpy(*dest, buffer->stream + buffer->offset, tamanio);
