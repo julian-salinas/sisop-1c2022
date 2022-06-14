@@ -26,8 +26,8 @@
     /* Threads de I/O */
     pthread_t thread_io, thread_suspension;
 
-    /* Calcula estimacion de un proceso */
-    int calcular_estimacion(t_PCB* pcb);
+    /* Modificar el valor de estimacion de un proceso */
+    void ajustar_estimacion(t_PCB* pcb);
     
     /* Mapea algoritmo que llegó por config (SJF/SRT o FIFO) */
     void elegir_algoritmo(char* algoritmo);
