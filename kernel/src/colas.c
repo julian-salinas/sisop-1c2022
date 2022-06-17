@@ -136,11 +136,7 @@ void running_a_blocked(t_PCB* procesoAMover){
 }
 
 
-void blocked_a_ready(void){
-
-    sem_wait(mutex_cola_blocked);
-        t_PCB* procesoAMover = (t_PCB*) queue_pop(cola_blocked);
-    sem_post(mutex_cola_blocked);
+void blocked_a_ready(t_PCB* procesoAMover){
 
     procesoAMover -> estado = READY;
 
@@ -180,11 +176,7 @@ void blocked_a_suspended_blocked(t_PCB* procesoAMover){
 }
 
 
-void suspended_blocked_a_suspended_ready(void) {
-
-    sem_wait(mutex_cola_blocked);
-        t_PCB* procesoAMover = (t_PCB*) queue_pop(cola_blocked);
-    sem_post(mutex_cola_blocked);
+void suspended_blocked_a_suspended_ready(t_PCB* procesoAMover) {
 
     procesoAMover -> estado = SUSPENDED_READY;
 

@@ -135,9 +135,6 @@ void func_io(void* args) {
 
         int tiempo_bloqueo = proceso -> tiempo_bloqueo * 1000; // microseg -> miliseg
         
-        // Devuelvo el proceso a la cola para que luego haga la transición
-        queue_push(cola_blocked, (void*) proceso);
-
         log_info(logger, "Arranca IO del proceso ID:%d", proceso -> PID);
 
         usleep(tiempo_bloqueo);
@@ -146,13 +143,13 @@ void func_io(void* args) {
 
             if (proceso -> estado == BLOCKED) {
                 sem_wait(mutex_mediano_plazo);
-                    blocked_a_ready();
+                    blocked_a_ready(proceso);
                 sem_post(mutex_mediano_plazo);
             }
 
             if (proceso -> estado == SUSPENDED_BLOCKED) {
                 sem_wait(mutex_mediano_plazo);
-                    suspended_blocked_a_suspended_ready();
+                    suspended_blocked_a_suspended_ready(proceso);
                 sem_wait(mutex_mediano_plazo);
             }
 

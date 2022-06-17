@@ -89,18 +89,19 @@
 
     
     /**
-     * @DESC: Realiza la transición BLOCKED -> READY. Mueve al proceso de cola.
+     * @DESC: Realiza la transición BLOCKED -> READY. Agrega un proceso a cola READY.
+     * @param proceso: proceso a agregar en cola READY
      * @post procesos_en_ready
      */ 
-    void blocked_a_ready(void);
+    void blocked_a_ready(t_PCB* proceso);
 
 
     /**
-     * @DESC: Realiza la transición SUSPENDED-BLOCKED -> SUSPENDED-READY. Mueve un proceso
-     *        de la cola BLOCKED a la cola SUSPENDED-BLOCKED.
+     * @DESC: Realiza la transición SUSPENDED-BLOCKED -> SUSPENDED-READY. Agrega un proceso a cola SUSPENDED-READY.
+     * @param proceso: proceso a agregar en cola SUSPENDED-READY
      * @post sem_procesos_esperando
      */ 
-    void suspended_blocked_a_suspended_ready(void);
+    void suspended_blocked_a_suspended_ready(t_PCB* proceso);
 
     /**
      * IMPLEMENTAR: Que la función cambie el estado de un proceso y avise a memoria para que lo desaloje
