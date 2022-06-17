@@ -23,7 +23,7 @@
      *  - bit_modificado: 1 si el marco fue modificado
      */ 
     typedef struct {
-        uint32_t frame;
+        uint32_t marco;
         bool bit_presencia;
         bool bit_u;  // ¿y esto que es? - enunciado
         bool bit_modificado; 
