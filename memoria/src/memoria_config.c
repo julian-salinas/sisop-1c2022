@@ -23,13 +23,7 @@ void destruir_memoria_config(t_memoria_config* memoria_config) {
     config_destroy(memoria_config -> config);
     free((void*) memoria_config -> ip_memoria);   
     free((void*) memoria_config -> puerto_escucha);   
-    free((void*) memoria_config -> tamanio_memoria);   
-    free((void*) memoria_config -> tamanio_pagina);   
-    free((void*) memoria_config -> paginas_por_tabla);   
-    free((void*) memoria_config -> retardo_memoria);   
     free((void*) memoria_config -> algoritmo_reemplazo);   
-    free((void*) memoria_config -> marcos_por_proceso);   
-    free((void*) memoria_config -> retardo_swap);   
     free((void*) memoria_config -> path_swap);   
     free((void*) memoria_config);   
 }
