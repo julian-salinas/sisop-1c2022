@@ -25,7 +25,10 @@
         PROCESO_BLOQUEADO, // Header para paquete que contiene un proceso (CPU -> KERNEL)
         PROCESO_FINALIZADO, // Header para paquete que contiene un proceso (CPU -> KERNEL) 
         INTERRUPCION, // Header que se manda sin paquete (KERNEL -> CPU)
-        EJECUTAR_PROCESO
+        EJECUTAR_PROCESO,
+
+        /*ENUMS PARA COMUNICARSE CON MEMORIA */
+        PROCESO_SUSPENDIDO // (KERNEL -> MEMORIA)
     } codigo_operacion;
 
 #endif /* ENUM_H */
