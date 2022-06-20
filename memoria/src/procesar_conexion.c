@@ -19,6 +19,23 @@ void procesar_conexion(void* void_args) {
             enviar_config_a_cpu(conexion_cpu, logger, memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);	
             break;
 
+        case SOL_TABLA_PAGINAS:
+            //inicializar estructuras
+            //modificar pcb agregando el valor de tabla de paginas
+            //responder al kernel que salió todo OK - No sé si hace falta esto, pero es lo que espera el kernel
+            break;
+
+        case PROCESO_SUSPENDIDO:
+            //se libera su espacio en memoria
+            //se escribe en swap la info necesaria
+            break;
+
+        case PROCESO_FINALIZADO:
+            //se libera su espacio en memoria
+            //se elimina su archivo de swap
+            //se le avisa a consola o le avisa el kernel?
+            break;
+
         case -1:
             log_error(logger, "Cliente desconectado de %s...", nombre_servidor);
             return;

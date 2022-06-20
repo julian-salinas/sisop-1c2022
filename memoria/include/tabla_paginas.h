@@ -19,13 +19,13 @@
     /**
      * @DESC: Entrada de una tabla de segundo nivel
      *  - bit_presencia: 1 si el marco está en memoria principal
-     *  - bit_u: no tengo ni idea, lo puse por el enunciado
+     *  - bit_u: indica si la pagina fue usada recientemente, se pone en 1 cuando se trae a memoria y lo modifica el algoritmo clock
      *  - bit_modificado: 1 si el marco fue modificado
      */ 
     typedef struct {
         uint32_t marco;
         bool bit_presencia;
-        bool bit_u;  // ¿y esto que es? - enunciado
+        bool bit_u;
         bool bit_modificado; 
     } t_entrada_segundo_nivel;
 
