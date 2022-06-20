@@ -75,6 +75,13 @@ t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco, int bit_prese
 
 
 void agregar_entrada_primer_nivel(t_tabla_primer_nivel* tabla, t_entrada_primer_nivel* entrada) {
+    if (dictionariy_size(tabla -> entradas) >= memoria_config -> paginas_por_tabla) {
+        log_error(logger, "No se puede agregar una entrada más a la tabla %d, ya tiene %d entradas", 
+                  tabla -> id_tabla, 
+                  memoria_config -> paginas_por_tabla);
+        
+        return;
+    }
     dictionary_put(tabla -> entradas, 
                    (char*) string_from_format("entrada_%d", dictionary_size(tabla -> entradas)),
                    (void*) entrada);
@@ -82,6 +89,13 @@ void agregar_entrada_primer_nivel(t_tabla_primer_nivel* tabla, t_entrada_primer_
 
 
 void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla, t_entrada_segundo_nivel* entrada) {
+    if (dictionariy_size(tabla -> entradas) >= memoria_config -> paginas_por_tabla) {
+        log_error(logger, "No se puede agregar una entrada más a la tabla %d, ya tiene %d entradas", 
+                  tabla -> id_tabla, 
+                  memoria_config -> paginas_por_tabla);
+        
+        return;
+    }
     dictionary_put(tabla -> entradas, 
                 (char*) string_from_format("entrada_%d", dictionary_size(tabla -> entradas)),
                 (void*) entrada);

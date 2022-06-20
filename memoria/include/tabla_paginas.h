@@ -8,6 +8,8 @@
     #include <commons/string.h>
     #include <commons/collections/dictionary.h>
 
+    #include "memoria.h"
+
     // Contadores para IDs de tablas
     int contador_id_primer_nivel;
     int contador_id_segundo_nivel;
