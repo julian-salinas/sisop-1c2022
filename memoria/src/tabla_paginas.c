@@ -62,12 +62,12 @@ t_entrada_primer_nivel* crear_entrada_primer_nivel(int id_tabla_segundo_nivel) {
 }
 
 
-t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco, int bit_presencia, int bit_u, int bit_modificado) {
+t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco, int bit_presencia, int bit_uso, int bit_modificado) {
     t_entrada_segundo_nivel* tmp = malloc(sizeof(t_entrada_segundo_nivel));
     
     tmp -> id_marco = id_marco;
     tmp -> bit_presencia = bit_presencia;
-    tmp -> bit_u = bit_u;
+    tmp -> bit_uso = bit_uso;
     tmp -> bit_modificado = bit_modificado;
     
     return tmp;     

@@ -34,7 +34,7 @@
     typedef struct {
         uint32_t id_marco;
         int8_t bit_presencia;
-        int8_t bit_u;
+        int8_t bit_uso;
         int8_t bit_modificado; 
     } t_entrada_segundo_nivel;
 
@@ -106,10 +106,10 @@
      * @DESC: Crea un puntero a una estructura de tipo entrada para tabla de segundo nivel
      * @param id_marco: id del marco/frame que vincula una entrada a un marco
      * @param bit_presencia: 1 o 0. Indica si la tabla está presente en memoria RAM
-     * @param bit_u: 1 o 0. Ni idea que es esto
+     * @param bit_uso: 1 o 0. Indica si la pagina fue usada recientemente, se pone en 1 cuando se trae a memoria y lo modifica el algoritmo clock
      * @param bit_modificado: 1 o 0. Indica si el frame fue modificado
      */
-    t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco, int bit_presencia, int bit_u, int bit_modificado);
+    t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco, int bit_presencia, int bit_uso, int bit_modificado);
 
 
     /**
