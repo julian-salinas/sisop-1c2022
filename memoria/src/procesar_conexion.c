@@ -46,16 +46,15 @@ void procesar_conexion(void* void_args) {
             return;
     }
 
-    log_warning(logger, "El cliente se desconecto de server %s", nombre_servidor);
     return;
 }
 
 
 void enviar_config_a_cpu(int socket_cliente, t_log* logger, uint8_t paginas_por_tabla, uint8_t tamanio_pagina){
 
-	 t_paquete* paquete = serializar_config_cpu_memoria(paginas_por_tabla, tamanio_pagina);
-	 enviar_paquete(socket_cliente,paquete);
-	 destruir_paquete(paquete);
-	 log_info(logger, "Config enviado.");
+    t_paquete* paquete = serializar_config_cpu_memoria(paginas_por_tabla, tamanio_pagina);
+    enviar_paquete(socket_cliente,paquete);
+    destruir_paquete(paquete);
+    log_info(logger, "Config enviado.");
 
 }
