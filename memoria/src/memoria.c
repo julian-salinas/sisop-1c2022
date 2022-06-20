@@ -6,7 +6,7 @@ int main(void) {
 	memoria_config = ini_memoria_config("cfg/memoria.config");
 
 	// Crear logger
-	t_log* logger = log_create("cfg/memoria.log", "memoria", 1, LOG_LEVEL_DEBUG);
+	logger = log_create("cfg/memoria.log", "memoria", 1, LOG_LEVEL_DEBUG);
 	log_info(logger,"Memoria iniciada");
 
 	int server_fd = iniciar_servidor(logger, "memoria", memoria_config -> ip_memoria, memoria_config -> puerto_escucha);	

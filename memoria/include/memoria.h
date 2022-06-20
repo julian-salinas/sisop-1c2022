@@ -8,6 +8,7 @@
     // includes del módulo
     #include "procesar_conexion.h"
     #include "memoria_config.h"
+    #include "swap.h"
 
     //includes de shared
     #include "networking.h"
@@ -18,6 +19,9 @@
     #include "proceso.h"
 
     int conexion_cpu;
+
+    // Logger
+    t_log* logger;
 
     t_memoria_config* memoria_config;
 
