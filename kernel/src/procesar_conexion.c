@@ -35,6 +35,8 @@ void procesar_conexion(void* void_args) {
             pcb = socket_get_PCB(socket); // Obtener pcb del proceso bloqueado
             log_info(logger, "Se recibió proceso bloqueado por %d ms", pcb -> tiempo_bloqueo);
             
+            ajustar_estimacion(pcb);
+
             running_a_blocked(pcb);  // Pasar a cola blocked
 
             // Iniciar hilo que se va a encargar de suspender al proceso en caso de que se zarpe de tiempo 
@@ -51,7 +53,6 @@ void procesar_conexion(void* void_args) {
             log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
             break;
     }
-
 }
 
 

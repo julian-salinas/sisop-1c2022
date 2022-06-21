@@ -26,14 +26,6 @@ void ini_semaforos(void) {
 	sem_init(sem_largo_plazo, 0, 0);
 
 
-	/* =========== Mutex variables que contienen procesos ============ */
-
-	mutex_proceso_corriendo = malloc(sizeof(sem_t));
-	sem_init(mutex_proceso_corriendo, 0, 1);
-
-	mutex_proceso_buscado = malloc(sizeof(sem_t));
-	sem_init(mutex_proceso_buscado, 0, 1);
-
 	/* ========= Semáforos para indicar eventos/condiciones - CONTADORES ========== */
 	
 	sem_nuevo_proceso = malloc(sizeof(sem_t));

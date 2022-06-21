@@ -51,7 +51,7 @@
         int32_t cantidad_entradas;
         t_dictionary* entradas;
     } t_tabla_primer_nivel;
-
+    
 
     /**
      * Tabla de segundo nivel: contiene los marcos de un proceso

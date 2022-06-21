@@ -34,8 +34,8 @@ void ini_threads(void) {
 
     pthread_create(&thread_io, 0, (void*) func_io, NULL);
     pthread_detach(thread_io);
-
 }
+
 
 void finalizar_semaforos_plani() {
     free(mutex_cola_new);
@@ -43,8 +43,6 @@ void finalizar_semaforos_plani() {
     free(mutex_cola_exit);
     free(mutex_cola_blocked);
     free(mutex_cola_suspended_ready);
-    free(mutex_proceso_corriendo);
-    free(mutex_proceso_buscado);
     
     free(mutex_pid);
     free(mutex_mediano_plazo);
@@ -70,6 +68,10 @@ void func_corto_plazo(void* args) {
                 enviar_header(conexion_cpu_interrupt, INTERRUPCION);  // Avisar a CPU para que desaloje proceso actual
                 omitir_header(conexion_cpu_interrupt); // No nos interesa el header que se recibe, solo queremos el PCB
                 procesoAMover = socket_get_PCB(conexion_cpu_interrupt);
+
+                // Agregar tiempo restante al PCB
+                procesoAMover -> tiempo_restante = procesoAMover -> estimacion_rafaga - procesoAMover -> tiempo_ejecucion;
+
                 running_a_ready(procesoAMover);
             }
 
@@ -118,8 +120,11 @@ void ordenar_cola_ready(void) {
 }
 
 
-bool algoritmo_SJF(void* proceso1, void* proceso2) {
-    return ((t_PCB*) proceso1) -> estimacion_rafaga <= ((t_PCB*) proceso2) -> estimacion_rafaga;
+bool algoritmo_SJF(t_PCB* proceso1, t_PCB* proceso2) {
+    double p1 = proceso1 -> tiempo_restante ? proceso1 -> tiempo_restante : proceso1 -> estimacion_rafaga;
+    double p2 = proceso2 -> tiempo_restante ? proceso2 -> tiempo_restante : proceso2 -> estimacion_rafaga;
+
+    return (p1 <= p2);
 }
 
 

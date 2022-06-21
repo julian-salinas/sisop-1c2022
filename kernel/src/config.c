@@ -12,8 +12,8 @@ t_kernel_config* ini_kernel_config(char* path_a_config) {
 	kernel_config -> puerto_cpu_interrupt = config_get_string_value(kernel_config -> config, "PUERTO_CPU_INTERRUPT");
     kernel_config -> puerto_escucha = config_get_string_value(kernel_config -> config, "PUERTO_ESCUCHA");
     kernel_config -> algoritmo_planificacion = config_get_string_value(kernel_config -> config, "ALGORITMO_PLANIFICACION");
-    kernel_config -> estimacion_inicial = config_get_int_value(kernel_config -> config, "ESTIMACION_INICIAL");
-    kernel_config -> alfa = config_get_int_value(kernel_config -> config, "ALFA");
+    kernel_config -> estimacion_inicial = config_get_double_value(kernel_config -> config, "ESTIMACION_INICIAL");
+    kernel_config -> alfa = config_get_double_value(kernel_config -> config, "ALFA");
     kernel_config -> grado_multiprogramacion = config_get_int_value(kernel_config -> config, "GRADO_MULTIPROGRAMACION");
     kernel_config -> tiempo_maximo_bloqueado = config_get_int_value(kernel_config -> config, "TIEMPO_MAXIMO_BLOQUEADO");
 

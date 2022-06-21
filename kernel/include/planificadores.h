@@ -18,7 +18,6 @@
     algoritmo_planificacion algoritmo_elegido;
 
     bool proceso_corriendo;
-    t_PCB* proceso_desalojado; //representa al proceso que acaba de salir de running
 
     /* Threads de planificadores */
     pthread_t thread_corto_plazo, thread_mediano_plazo, thread_largo_plazo;
@@ -51,6 +50,6 @@
 
     void ordenar_cola_ready(void);
 
-    bool algoritmo_SJF(void* proceso1, void* proceso2);
+    bool algoritmo_SJF(t_PCB* proceso1, t_PCB* proceso2);
 
 #endif /* PLANIFICADORES_H */

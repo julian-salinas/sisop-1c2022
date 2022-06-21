@@ -1,5 +1,6 @@
 #include "swap.h"
 
+
 void crear_archivo_proceso(uint32_t PID) {
     char* nombre_archivo = string_from_format("%d.swap",PID);
     
@@ -13,6 +14,7 @@ void crear_archivo_proceso(uint32_t PID) {
 
     fclose(archivo);
 }
+
 
 void eliminar_archivo_proceso(uint32_t PID) {
     char* nombre_archivo = string_from_format("%d.swap",PID);

@@ -108,16 +108,16 @@
      */ 
     void blocked_a_suspended_blocked(t_PCB* procesoAMover);
 
-    void blocked_a_exit(t_PCB* procesoAMover);
+    // void blocked_a_exit(t_PCB* procesoAMover);
 
-    void new_a_exit(t_PCB* procesoAMover);
+    // void new_a_exit(t_PCB* procesoAMover);
             
-    void running_a_exit(t_PCB* procesoAMover);
+    // void running_a_exit(t_PCB* procesoAMover);
 
-    void ready_a_exit(t_PCB* procesoAMover);
+    // void ready_a_exit(t_PCB* procesoAMover);
 
-    void pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso);    
+    // void pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso);    
 
-    bool procesos_son_iguales(void* proceso);    
+    // bool procesos_son_iguales(void* proceso);    
         
 #endif

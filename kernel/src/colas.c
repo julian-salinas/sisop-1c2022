@@ -103,6 +103,7 @@ void ready_a_running(void) {
     sem_post(mutex_cola_ready);
 
     procesoAMover -> estado = RUNNING;
+    procesoAMover -> tiempo_restante = 0;
 
     enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
     
@@ -115,7 +116,7 @@ void running_a_ready(t_PCB* procesoAMover) {
     procesoAMover -> estado = READY;
 
     sem_wait(mutex_cola_ready);
-        queue_push(cola_new, (void*) procesoAMover);
+        queue_push(cola_ready, (void*) procesoAMover);
     sem_post(mutex_cola_ready);
 
     log_info(logger, "El proceso con ID:%d pasó de RUNNING a READY.", procesoAMover -> PID);
@@ -150,20 +151,20 @@ void blocked_a_ready(t_PCB* procesoAMover){
 }
 
 
-void running_a_exit(t_PCB* procesoAMover) {
+// void running_a_exit(t_PCB* procesoAMover) {
 
-    procesoAMover -> estado = EXIT;
+//     procesoAMover -> estado = EXIT;
 
-    sem_wait(mutex_cola_exit);
-        queue_push(cola_exit, (void*) procesoAMover);
-    sem_post(mutex_cola_exit);
+//     sem_wait(mutex_cola_exit);
+//         queue_push(cola_exit, (void*) procesoAMover);
+//     sem_post(mutex_cola_exit);
 
-    log_info(logger, "El proceso con ID:%d  pasó de RUNNING a EXIT.", procesoAMover -> PID);
+//     log_info(logger, "El proceso con ID:%d  pasó de RUNNING a EXIT.", procesoAMover -> PID);
 
-    // TODO: Avisar a memoria que desaloje el proceso
+//     // TODO: Avisar a memoria que desaloje el proceso
     
-    sem_post(sem_multiprogramacion);
-}
+//     sem_post(sem_multiprogramacion);
+// }
 
 
 void blocked_a_suspended_blocked(t_PCB* procesoAMover){
@@ -171,8 +172,7 @@ void blocked_a_suspended_blocked(t_PCB* procesoAMover){
 
     log_info(logger, "El proceso con ID:%d pasó de BLOCKED a SUSPENDED-BLOCKED", procesoAMover -> PID);
 
-    // TODO: Avisar a memoria para que desaloje al proceso
-
+    enviar_pcb(conexion_memoria, PROCESO_SUSPENDIDO, procesoAMover);
 }
 
 
@@ -190,58 +190,58 @@ void suspended_blocked_a_suspended_ready(t_PCB* procesoAMover) {
 }
 
 
-/* ==============================================================================  
-   ==================== TRANSICIONES QUE VAN DIRECTO A EXIT ===================== 
-   ============================================================================== */ 
+// /* ==============================================================================  
+//    ==================== TRANSICIONES QUE VAN DIRECTO A EXIT ===================== 
+//    ============================================================================== */ 
 
-void new_a_exit(t_PCB* procesoAMover){
+// void new_a_exit(t_PCB* procesoAMover){
 
-    pasar_a_exit(cola_new, mutex_cola_new, procesoAMover);
+//     pasar_a_exit(cola_new, mutex_cola_new, procesoAMover);
 
-    log_info(logger, "El proceso con Id:%d  pasó de NEW a EXIT.", procesoAMover -> PID);
+//     log_info(logger, "El proceso con Id:%d  pasó de NEW a EXIT.", procesoAMover -> PID);
 
-    // TODO: Avisar a memoria que desaloje el proceso
-}
+//     // TODO: Avisar a memoria que desaloje el proceso
+// }
 
-void ready_a_exit(t_PCB* procesoAMover){
+// void ready_a_exit(t_PCB* procesoAMover){
 
-    pasar_a_exit(cola_ready, mutex_cola_ready, procesoAMover);
+//     pasar_a_exit(cola_ready, mutex_cola_ready, procesoAMover);
 
-    log_info(logger, "El proceso con Id %d:  pasó de READY a EXIT.", procesoAMover -> PID);
+//     log_info(logger, "El proceso con Id %d:  pasó de READY a EXIT.", procesoAMover -> PID);
 
-    // TODO: Avisar a memoria que desaloje el proceso
-}
+//     // TODO: Avisar a memoria que desaloje el proceso
+// }
 
 
-void blocked_a_exit(t_PCB* procesoAMover){
+// void blocked_a_exit(t_PCB* procesoAMover){
 
-    pasar_a_exit(cola_blocked, mutex_cola_blocked, procesoAMover);
+//     pasar_a_exit(cola_blocked, mutex_cola_blocked, procesoAMover);
 
-    log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a EXIT.", procesoAMover -> PID);
+//     log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a EXIT.", procesoAMover -> PID);
 
-    // TODO: Avisar a memoria que desaloje el proceso
-}
+//     // TODO: Avisar a memoria que desaloje el proceso
+// }
 
-void pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso) {
+// void pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso) {
 
-    sem_wait(mutex_proceso_buscado);
+//     sem_wait(mutex_proceso_buscado);
         
-        proceso_buscado = proceso -> PID;
+//         proceso_buscado = proceso -> PID;
 
-        sem_wait(semaforo);
-            cola -> elements = list_remove_by_condition(cola -> elements, *(procesos_son_iguales));
-        sem_post(semaforo);
+//         sem_wait(semaforo);
+//             cola -> elements = list_remove_by_condition(cola -> elements, *(procesos_son_iguales));
+//         sem_post(semaforo);
 
-    sem_post(mutex_proceso_buscado);
+//     sem_post(mutex_proceso_buscado);
 
-    proceso -> estado = EXIT;
+//     proceso -> estado = EXIT;
 
-    sem_wait(mutex_cola_exit);
-        queue_push(cola_exit, proceso);
-    sem_post(mutex_cola_exit);
-}
+//     sem_wait(mutex_cola_exit);
+//         queue_push(cola_exit, proceso);
+//     sem_post(mutex_cola_exit);
+// }
 
 
-bool procesos_son_iguales(void* proceso) {
-    return (((t_PCB*) proceso) -> PID == proceso_buscado);
-}
+// bool procesos_son_iguales(void* proceso) {
+//     return (((t_PCB*) proceso) -> PID == proceso_buscado);
+// }

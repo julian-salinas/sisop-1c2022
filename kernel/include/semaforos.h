@@ -24,10 +24,6 @@
     // Semáforos binarios? Para despertar procesos - Arrancan en 0 todos
     sem_t* sem_largo_plazo;
 
-    // Semáforo que protege variable booleana que indica si hay un proceso en CPU o no
-    sem_t* mutex_proceso_buscado;
-    sem_t* mutex_proceso_corriendo;
-
     // Inicializar todos los semaforos
     void ini_semaforos(void);
 

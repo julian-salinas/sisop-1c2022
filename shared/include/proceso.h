@@ -23,8 +23,9 @@
         t_lista_instrucciones* lista_instrucciones;
         int program_counter;
         int32_t tabla_paginas;
-        int estimacion_rafaga;
-        int tiempo_ejecucion;
+        double estimacion_rafaga;
+        double tiempo_ejecucion;
+        double tiempo_restante;
         int socket_cliente;
         int tiempo_bloqueo;
         estado_proceso estado;
