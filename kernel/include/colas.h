@@ -20,12 +20,10 @@
     t_queue* cola_ready;
     t_queue* cola_blocked;
     t_queue* cola_suspended_ready;
-    t_queue* cola_exit;
 
     // Semáforos colas
     sem_t* mutex_cola_new;
     sem_t* mutex_cola_ready;
-    sem_t* mutex_cola_exit;
     sem_t* mutex_cola_blocked;
     sem_t* mutex_cola_suspended_ready;
 
@@ -107,17 +105,5 @@
      * IMPLEMENTAR: Que la función cambie el estado de un proceso y avise a memoria para que lo desaloje
      */ 
     void blocked_a_suspended_blocked(t_PCB* procesoAMover);
-
-    // void blocked_a_exit(t_PCB* procesoAMover);
-
-    // void new_a_exit(t_PCB* procesoAMover);
-            
-    // void running_a_exit(t_PCB* procesoAMover);
-
-    // void ready_a_exit(t_PCB* procesoAMover);
-
-    // void pasar_a_exit(t_queue* cola, sem_t* semaforo, t_PCB* proceso);    
-
-    // bool procesos_son_iguales(void* proceso);    
         
 #endif

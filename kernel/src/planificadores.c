@@ -40,7 +40,6 @@ void ini_threads(void) {
 void finalizar_semaforos_plani() {
     free(mutex_cola_new);
     free(mutex_cola_ready);
-    free(mutex_cola_exit);
     free(mutex_cola_blocked);
     free(mutex_cola_suspended_ready);
     
