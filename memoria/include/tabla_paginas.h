@@ -7,8 +7,17 @@
     #include <semaphore.h>
     #include <commons/string.h>
     #include <commons/collections/dictionary.h>
+    #include <commons/collections/list.h>
 
     #include "memoria.h"
+
+    // Diccionarios que contienen todas las tablas
+    t_dictionary* tablas_primer_nivel;
+    t_dictionary* tablas_segundo_nivel;
+
+    // Mutex para diccionarios de las tablas
+    sem_t* mutex_tablas_primer_nivel;
+    sem_t* mutex_tablas_segundo_nivel;
 
     // Contadores para IDs de tablas
     int contador_id_primer_nivel;
@@ -17,15 +26,6 @@
     // Mutex para contadores de IDs de tablas
     sem_t* mutex_id_primer_nivel;
     sem_t* mutex_id_segundo_nivel;
-
-    /**
-     * @DESC: Entrada de tabla de primer nivel
-     *  - numero_tabla: Hace referencia a una tabla del 2do nivel
-     */ 
-    typedef struct {
-        int32_t id_tabla_segundo_nivel;
-    } t_entrada_primer_nivel;
-
 
     /**
      * @DESC: Entrada de una tabla de segundo nivel
@@ -48,8 +48,7 @@
      */ 
     typedef struct {
         int32_t id_tabla;
-        int32_t cantidad_entradas;
-        t_dictionary* entradas;
+        t_list* entradas;
     } t_tabla_primer_nivel;
     
 
@@ -60,15 +59,14 @@
      */ 
     typedef struct {
         int32_t id_tabla;
-        int32_t cantidad_entradas;
-        t_dictionary* entradas;
+        t_list* entradas;
     } t_tabla_segundo_nivel;
 
 
     /**
      * @DESC: Inicializa contadores de IDs y semáforos mutex para creación de tablas
      */
-    void ini_tablas_de_paginas(void);
+    void inicializar_tablas_de_paginas(void);
 
 
     /**
@@ -98,35 +96,26 @@
     
 
     /**
-     * @DESC: Crea un puntero a una estructura de tipo entrada para tabla de primer nivel
-     * @param id_entrada_segundo_nivel: ID que vinculará la entrada a una tabla de segundo nivel
-     */ 
-    t_entrada_primer_nivel* crear_entrada_primer_nivel(int id_tabla_segundo_nivel);
-    
-
-    /**
      * @DESC: Crea un puntero a una estructura de tipo entrada para tabla de segundo nivel
      * @param id_marco: id del marco/frame que vincula una entrada a un marco
-     * @param bit_presencia: 1 o 0. Indica si la tabla está presente en memoria RAM
-     * @param bit_uso: 1 o 0. Indica si la pagina fue usada recientemente, se pone en 1 cuando se trae a memoria y lo modifica el algoritmo clock
-     * @param bit_modificado: 1 o 0. Indica si el frame fue modificado
+     * Todos los bits de estado están inicializados en 0
      */
-    t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco, int bit_presencia, int bit_uso, int bit_modificado);
+    t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco);
 
 
     /**
-     * @DESC: Agrega una entrada al diccionario de entradas de una tabla de primer nivel
+     * @DESC: Agrega una entrada a la lista de entradas de una tabla de primer nivel
      * @param tabla: estructura tabla de primer nivel a la que se agregará la entrada
      * @param entrada: estructura de entrada de tabla de primer nivel, que contiene ID de una tabla de segundo nivel
      */  
-    void agregar_entrada_primer_nivel(t_tabla_primer_nivel* tabla, t_entrada_primer_nivel* entrada);
+    void agregar_entrada_primer_nivel(t_tabla_primer_nivel* tabla, int32_t id_tabla_segundo_nivel);
 
 
     /**
-     * @DESC: Agrega una entrada al diccionario de entradas de una tabla de segundo nivel
+     * @DESC: Agrega una entrada a la lista de entradas de una tabla de segundo nivel
      * @param tabla: estructura tabla de segundo nivel a la que se agregará la entrada
      * @param entrada: estructura de entrada de tabla de segundo nivel, contiene id_marco, bit_p, bit_u y bit_m
      */ 
-    void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla, t_entrada_segundo_nivel* entrada);
+    void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla);
 
 #endif

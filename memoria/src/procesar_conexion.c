@@ -1,6 +1,8 @@
 #include "procesar_conexion.h"
 
+
 void procesar_conexion(void* void_args) {
+
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* logger = args->log;
     int socket_cliente = args->fd;

@@ -4,6 +4,7 @@
     #include <stdio.h>
     #include <stdlib.h>
     #include <string.h>
+    #include <stdint.h>
 
     // includes del módulo
     #include "procesar_conexion.h"
@@ -24,5 +25,11 @@
     t_log* logger;
 
     t_memoria_config* memoria_config;
+
+    typedef struct {
+        void* memoria;
+    } t_memoria;
+
+    t_memoria* inicializar_memoria(void);
 
 #endif /* MEMORIA_H_ */
