@@ -32,4 +32,15 @@
 
     t_memoria* inicializar_memoria(void);
 
+    typedef struct{
+        void* puntero_frame; //es la dirección de memoria a la que apunta
+        int32_t bit_ocupado; //indica si está en uso o no
+        int32_t pagina; //la pagina que lo ocupa
+        int32_t numero_frame; //es el número de frame 
+    }t_frame;
+
+    typedef t_list t_lista_frames;
+
+    void generarFrames(t_memoria* memoria, uint32_t tamanio_memoria, uint32_t tamanio_frame);
+
 #endif /* MEMORIA_H_ */
