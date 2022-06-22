@@ -106,7 +106,7 @@
     /**
      * @DESC: Agrega una entrada a la lista de entradas de una tabla de primer nivel
      * @param tabla: estructura tabla de primer nivel a la que se agregará la entrada
-     * @param entrada: estructura de entrada de tabla de primer nivel, que contiene ID de una tabla de segundo nivel
+     * @param id_tabla_segundo_nivel: id tabla de segundo nivel
      */  
     void agregar_entrada_primer_nivel(t_tabla_primer_nivel* tabla, int32_t id_tabla_segundo_nivel);
 
@@ -114,7 +114,6 @@
     /**
      * @DESC: Agrega una entrada a la lista de entradas de una tabla de segundo nivel
      * @param tabla: estructura tabla de segundo nivel a la que se agregará la entrada
-     * @param entrada: estructura de entrada de tabla de segundo nivel, contiene id_marco, bit_p, bit_u y bit_m
      */ 
     void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla);
 

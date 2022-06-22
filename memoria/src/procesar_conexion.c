@@ -29,7 +29,8 @@ void procesar_conexion(void* void_args) {
 
             pcb = socket_get_PCB(socket_cliente);
             //calculo cuántas tablas necesito
-            int cantidad_tablas_segundo_nivel = pcb -> tamanio / tamanio_tabla;
+            //int cantidad_tablas_segundo_nivel = pcb -> tamanio / tamanio_tabla;  --------_> esto no está en uso pero lo guardo porque siento que para algo va a servir :)
+            int cantidad_tablas_segundo_nivel = memoria_config -> paginas_por_tabla;
 
             //creo las tablas de primer nivel
             t_tabla_primer_nivel* tabla_primer_nivel = crear_tabla_primer_nivel();

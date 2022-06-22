@@ -9,6 +9,7 @@ void procesar_conexion(void* void_args) {
     free(args);
 
     int header = recibir_header(socket);
+    log_error(logger, "Se recibió el cod operacion %d  - %s", header, nombre_servidor);
     t_PCB* pcb;
 
     switch (header) {
@@ -65,10 +66,11 @@ t_PCB* crear_PCB(t_proceso* proceso, int socket) {
     pcb -> program_counter = 0;
     pcb -> tabla_paginas = -1;
     pcb -> estimacion_rafaga = kernel_config -> estimacion_inicial;
-    pcb -> tiempo_ejecucion = 0;
+    pcb -> tiempo_ejecucion = 0.0;
     pcb -> socket_cliente = socket;
     pcb -> tiempo_bloqueo = -1;
     pcb -> estado = NEW;
+    pcb -> tiempo_restante = 0.0;
 
     sem_wait(mutex_pid);
         contador_id_proceso++;

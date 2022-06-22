@@ -53,11 +53,12 @@ void enviar_pcb(int socket, uint8_t header, t_PCB* pcb) {
     agregar_a_buffer_LIST(paquete -> payload, pcb -> lista_instrucciones, (void*) agregar_a_buffer_INSTRUCCION);
     agregar_a_buffer_INT32(paquete -> payload, pcb -> program_counter);
     agregar_a_buffer_INT32(paquete -> payload, pcb -> tabla_paginas);
-    agregar_a_buffer_INT32(paquete -> payload, pcb -> estimacion_rafaga);
-    agregar_a_buffer_INT32(paquete -> payload, pcb -> tiempo_ejecucion);
+    agregar_a_buffer_DOUBLE(paquete -> payload, pcb -> estimacion_rafaga);
+    agregar_a_buffer_DOUBLE(paquete -> payload, pcb -> tiempo_ejecucion);
     agregar_a_buffer_INT32(paquete -> payload, pcb -> socket_cliente);
     agregar_a_buffer_INT32(paquete -> payload, pcb -> tiempo_bloqueo);
     agregar_a_buffer_INT32(paquete -> payload, pcb -> estado);
+    agregar_a_buffer_DOUBLE(paquete -> payload, pcb -> tiempo_restante);
 
     enviar_paquete(socket, paquete);
     destruir_paquete(paquete);
@@ -72,11 +73,12 @@ t_PCB* buffer_take_PCB(t_buffer* buffer) {
     pcb -> lista_instrucciones = buffer_take_LIST(buffer, (void*)*buffer_take_INSTRUCCION);
     pcb -> program_counter = buffer_take_INT32(buffer);
     pcb -> tabla_paginas = buffer_take_INT32(buffer);
-    pcb -> estimacion_rafaga = buffer_take_INT32(buffer);
-    pcb -> tiempo_ejecucion = buffer_take_INT32(buffer);
+    pcb -> estimacion_rafaga = buffer_take_DOUBLE(buffer);
+    pcb -> tiempo_ejecucion = buffer_take_DOUBLE(buffer);
     pcb -> socket_cliente = buffer_take_INT32(buffer);
     pcb -> tiempo_bloqueo = buffer_take_INT32(buffer);
     pcb -> estado = buffer_take_INT32(buffer);
+    pcb -> tiempo_restante = buffer_take_DOUBLE(buffer);
 
     return pcb;
 }
