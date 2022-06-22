@@ -57,7 +57,7 @@ void suspended_ready_a_ready(void) {
 
     procesoAMover = socket_get_PCB(conexion_memoria);
 
-    log_info(logger, "Se recibió el proceso con la tabla de páginas con id: %d", procesoAMover -> tabla_paginas);
+    log_info(logger, "Se recibió el proceso %d con la tabla de páginas %d",procesoAMover -> PID, procesoAMover -> tabla_paginas);
 
     sem_wait(mutex_cola_ready);
         queue_push(cola_ready, (void*) procesoAMover);
@@ -82,12 +82,14 @@ void new_a_ready(void) {
     enviar_pcb(conexion_memoria, SOL_TABLA_PAGINAS, procesoAMover);
     uint8_t resp_memoria = recibir_header(conexion_memoria);
 
-    if (resp_memoria != MEMORIA_OK) {
+    if (resp_memoria == PROCESO_RECHAZADO) {
+        log_warning(logger, "EL proceso %d fue rechazado por memoria por ser demasiado grande.", procesoAMover -> PID);
         close(procesoAMover -> socket_cliente);
         return;
     }
 
     procesoAMover = socket_get_PCB(conexion_memoria);
+    log_info(logger, "Se recibió el proceso %d con la tabla de páginas %d", procesoAMover -> PID, procesoAMover -> tabla_paginas);
 
     sem_wait(mutex_cola_ready);
         queue_push(cola_ready, (void*) procesoAMover);

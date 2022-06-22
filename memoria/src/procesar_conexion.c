@@ -29,8 +29,13 @@ void procesar_conexion(void* void_args) {
 
             pcb = socket_get_PCB(socket_cliente);
             //calculo cuántas tablas necesito
-            //int cantidad_tablas_segundo_nivel = pcb -> tamanio / tamanio_tabla;  --------_> esto no está en uso pero lo guardo porque siento que para algo va a servir :)
-            int cantidad_tablas_segundo_nivel = memoria_config -> paginas_por_tabla;
+            int cantidad_tablas_segundo_nivel = pcb -> tamanio / tamanio_tabla;
+            int cantidad_tablas_segundo_nivel_maximas = memoria_config -> paginas_por_tabla;
+
+            if (cantidad_tablas_segundo_nivel > cantidad_tablas_segundo_nivel_maximas){ //si el tamaño del proceso es mayor al máximo permitido
+                enviar_pcb(socket_cliente, PROCESO_RECHAZADO, pcb);
+                return;
+            }
 
             //creo las tablas de primer nivel
             t_tabla_primer_nivel* tabla_primer_nivel = crear_tabla_primer_nivel();

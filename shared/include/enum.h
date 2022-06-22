@@ -16,7 +16,7 @@
         BLOQUEO,
         FINALIZACION,
         CPU_OK,
-        MEMORIA_OK,
+        MEMORIA_OK, // (MEMORIA -> KERNEL) Respuesta de memoria tras crear las tablas de páginas de proceso.
         NUEVO_PROCESO_READY,
         SOL_TABLA_PAGINAS,
 
@@ -28,7 +28,8 @@
         EJECUTAR_PROCESO,
 
         /*ENUMS PARA COMUNICARSE CON MEMORIA */
-        PROCESO_SUSPENDIDO // (KERNEL -> MEMORIA)
+        PROCESO_SUSPENDIDO, // (KERNEL -> MEMORIA)
+        PROCESO_RECHAZADO // (MEMORIA -> KERNEL) Respuesta de memoria cuando el tamaño del proceso es mayor al máximo permitido
     } codigo_operacion;
 
 #endif /* ENUM_H */

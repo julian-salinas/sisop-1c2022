@@ -115,7 +115,7 @@
     /**
      * @DESC: Agregar un string al buffer
      * @param buffer: buffer al cual se va a agregar el valor
-     * @param value: valor a agregar
+     * @param valor: valor a agregar
      */
     void agregar_a_buffer_STRING(t_buffer* buffer, char* valor);
 
@@ -129,6 +129,12 @@
      */ 
     void agregar_a_buffer_LIST(t_buffer* buffer, t_list* lista, void(*agregar_a_buffer_TIPO)(t_buffer*, void*));
 
+    /**
+     * @DESC: Agregar un double a un buffer
+     * @param buffer: buffer donde se va a agregar el double
+     * @param valor: double a agregar
+     */ 
+    void agregar_a_buffer_DOUBLE(t_buffer* buffer, double valor);
 
     // --------------------- Funciones para "leer" buffer --------------------- //
 
@@ -182,6 +188,11 @@
      */ 
     t_list* buffer_take_LIST(t_buffer* buffer, void*(*buffer_take_TIPO)(t_buffer*));
     
+    /**
+     * @DESC: Obtener un double del buffer
+     * @param buffer: buffer del cual se va a obtener el valor
+     */
+    double buffer_take_DOUBLE(t_buffer* buffer);
 
     /*
     -------------------- Comunicación entre cpu y memoria ------------------------------------
