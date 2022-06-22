@@ -94,6 +94,13 @@ void agregar_a_buffer_LIST(t_buffer* buffer, t_list* lista, void(*agregar_a_buff
 }
 
 
+/* -------------------------- double -------------------------- */
+
+void agregar_a_buffer_DOUBLE(t_buffer* buffer, double valor){
+    agregar_a_buffer(buffer, (void*) &valor, sizeof(double));
+}
+
+
 // ------------------------- Tomar valores del buffer ------------------------- //
 
 void buffer_take(t_buffer* buffer, void** dest, size_t tamanio){
@@ -155,6 +162,16 @@ t_list* buffer_take_LIST(t_buffer* buffer, void*(*buffer_take_TIPO)(t_buffer*)) 
 
     return tmp;
 }
+
+/* ------------------------ double ------------------------ */
+
+double buffer_take_DOUBLE(t_buffer* buffer){
+    double tmp;
+    double* puntero_a_tmp = &tmp;
+    buffer_take(buffer, (void**) &puntero_a_tmp, sizeof(double));
+    return tmp;
+}
+
 
 
 /*

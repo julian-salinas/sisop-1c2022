@@ -7,10 +7,14 @@ void procesar_conexion(void* void_args) {
     t_log* logger = args->log;
     int socket_cliente = args->fd;
     char* nombre_servidor = args->server_name;
+    tamanio_tabla = memoria_config -> tamanio_pagina * memoria_config -> paginas_por_tabla;
     free(args);
 
     int header;
     header = recibir_header(socket_cliente);
+    t_PCB* pcb;
+
+    log_info(logger, "Se recibió el header %d", header);
 
     switch (header) {
 
@@ -22,9 +26,27 @@ void procesar_conexion(void* void_args) {
             break;
 
         case SOL_TABLA_PAGINAS:
-            //inicializar estructuras
+
+            pcb = socket_get_PCB(socket_cliente);
+            //calculo cuántas tablas necesito
+            //int cantidad_tablas_segundo_nivel = pcb -> tamanio / tamanio_tabla;  --------_> esto no está en uso pero lo guardo porque siento que para algo va a servir :)
+            int cantidad_tablas_segundo_nivel = memoria_config -> paginas_por_tabla;
+
+            //creo las tablas de primer nivel
+            t_tabla_primer_nivel* tabla_primer_nivel = crear_tabla_primer_nivel();
+
+            //creo las tablas de segundo nivel
+            for (size_t i = 0; i < cantidad_tablas_segundo_nivel; i++)
+            {
+                t_tabla_segundo_nivel* tablas_segundo_nivel = crear_tabla_segundo_nivel();
+                agregar_entrada_primer_nivel(tabla_primer_nivel, tablas_segundo_nivel -> id_tabla);
+            }
+
             //modificar pcb agregando el valor de tabla de paginas
-            //responder al kernel que salió todo OK - No sé si hace falta esto, pero es lo que espera el kernel
+            pcb -> tabla_paginas = tabla_primer_nivel -> id_tabla;
+
+            //devolver pcb al kernel
+            enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
             break;
 
         case PROCESO_SUSPENDIDO:

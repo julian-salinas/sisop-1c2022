@@ -46,6 +46,7 @@ void suspended_ready_a_ready(void) {
 
     // Re-insertar proceso en memoria - Solicitar tabla de páginas a memoria
     enviar_pcb(conexion_memoria, SOL_TABLA_PAGINAS, procesoAMover);
+    log_info(logger, "Se solicitó la tabla de páginas del proceso");
 
     uint8_t resp_memoria = recibir_header(conexion_memoria);
 
@@ -55,6 +56,8 @@ void suspended_ready_a_ready(void) {
     }
 
     procesoAMover = socket_get_PCB(conexion_memoria);
+
+    log_info(logger, "Se recibió el proceso con la tabla de páginas con id: %d", procesoAMover -> tabla_paginas);
 
     sem_wait(mutex_cola_ready);
         queue_push(cola_ready, (void*) procesoAMover);

@@ -55,8 +55,10 @@ void func_corto_plazo(void* args) {
     
     while (1) {
         if (algoritmo_elegido == FIFO) {
+            log_info(logger, "aaaaaaaaaaaaaaaa");
             sem_wait(sem_procesos_en_ready);
             sem_wait(sem_cpu_disponible);
+            log_info(logger, "Pasé los waits yay");
             ready_a_running();
         }
 
