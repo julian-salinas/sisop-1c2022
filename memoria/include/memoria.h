@@ -20,6 +20,7 @@
     #include "proceso.h"
 
     int conexion_cpu;
+    int tamanio_tabla;
 
     // Logger
     t_log* logger;
