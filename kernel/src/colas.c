@@ -65,7 +65,6 @@ void suspended_ready_a_ready(void) {
 
     log_info(logger, "El proceso con ID:%d pasó de SUSPENDED-READY a READY.", procesoAMover -> PID);
     
-    sem_wait(sem_procesos_esperando);
     sem_post(sem_procesos_en_ready);
 }
 
@@ -97,7 +96,6 @@ void new_a_ready(void) {
 
     log_info(logger, "El proceso con ID:%d pasó de NEW a READY.", procesoAMover -> PID);
 
-    sem_wait(sem_procesos_esperando);
     sem_post(sem_procesos_en_ready);
 }
 
@@ -110,7 +108,7 @@ void ready_a_running(void) {
     procesoAMover -> estado = RUNNING;
     procesoAMover -> tiempo_restante = 0;
 
-    enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
+    // enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
     
     log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
 }

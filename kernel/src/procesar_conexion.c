@@ -9,7 +9,7 @@ void procesar_conexion(void* void_args) {
     free(args);
 
     int header = recibir_header(socket);
-    log_error(logger, "Se recibió el cod operacion %d  - %s", header, nombre_servidor);
+    log_info(logger, "Se recibió el cod operacion %d  - %s", header, nombre_servidor);
     t_PCB* pcb;
 
     switch (header) {

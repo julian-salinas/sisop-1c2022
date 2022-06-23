@@ -25,7 +25,6 @@ void ini_semaforos(void) {
 	sem_largo_plazo = malloc(sizeof(sem_t));
 	sem_init(sem_largo_plazo, 0, 0);
 
-
 	/* ========= Semáforos para indicar eventos/condiciones - CONTADORES ========== */
 	
 	sem_nuevo_proceso = malloc(sizeof(sem_t));

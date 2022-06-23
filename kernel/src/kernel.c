@@ -9,13 +9,13 @@ int main(void) {
 	logger = log_create("cfg/kernel.log", "kernel", 1, LOG_LEVEL_INFO);
 	log_info(logger,"Kernel iniciado");
 
+	// Definir qué algoritmo se va a usar para planificar
+	elegir_algoritmo(kernel_config -> algoritmo_planificacion);
+
 	// Inicializar semáforos y colas
 	ini_semaforos();
 	inicializar_mutex_colas();
 	inicializar_colas();
-
-	// Definir qué algoritmo se va a usar para planificar
-	elegir_algoritmo(kernel_config -> algoritmo_planificacion);
 
 	// Inicializar contador de ID Procesos para PCB
 	contador_id_proceso = 1;

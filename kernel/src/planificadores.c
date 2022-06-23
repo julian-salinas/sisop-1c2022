@@ -52,13 +52,11 @@ void finalizar_semaforos_plani() {
 
 void func_corto_plazo(void* args) {
     t_PCB* procesoAMover;
-    
+
     while (1) {
         if (algoritmo_elegido == FIFO) {
-            log_info(logger, "aaaaaaaaaaaaaaaa");
-            sem_wait(sem_procesos_en_ready);
             sem_wait(sem_cpu_disponible);
-            log_info(logger, "Pasé los waits yay");
+            sem_wait(sem_procesos_en_ready);
             ready_a_running();
         }
 
