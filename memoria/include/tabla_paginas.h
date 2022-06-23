@@ -77,16 +77,16 @@
 
 
     /**
-     * @DESC: Liberar de memoria una estructura de tipo t_tabla_primer_nivel
-     */ 
-    void destruir_tabla_primer_nivel(t_tabla_primer_nivel* tabla);
-
-
-    /**
      * @DESC: Crear una tabla de segundo nivel (hacer malloc e inicializar valores)
      * @return t_tabla_segundo_nivel
      */ 
     t_tabla_segundo_nivel* crear_tabla_segundo_nivel(void);
+    
+    
+    /**
+     * @DESC: Liberar de memoria una estructura de tipo t_tabla_primer_nivel
+     */ 
+    void destruir_tabla_primer_nivel(t_tabla_primer_nivel* tabla);
     
     
     /**

@@ -34,16 +34,12 @@ t_tabla_primer_nivel* crear_tabla_primer_nivel(void) {
     char* string_id = string_from_format("%d", tmp -> id_tabla);
 
     sem_wait(mutex_tablas_primer_nivel);
-        dictionary_put(tablas_primer_nivel, string_id, (void*)tmp);
+        dictionary_put(tablas_primer_nivel, string_id, (void*) tmp);
     sem_post(mutex_tablas_primer_nivel);
 
+    free(string_id);
+
     return tmp;
-}
-
-
-void destruir_tabla_primer_nivel(t_tabla_primer_nivel* tabla) {
-    list_destroy(tabla -> entradas);
-    free(tabla);
 }
 
 
@@ -57,18 +53,26 @@ t_tabla_segundo_nivel* crear_tabla_segundo_nivel(void) {
 
     tmp -> entradas = list_create();
 
-    for (size_t i = 0; i < memoria_config -> paginas_por_tabla; i++)
-    {
-        agregar_entrada_segundo_nivel(tmp);
-    }
+    // for (size_t i = 0; i < memoria_config -> paginas_por_tabla; i++)
+    // {
+    //     agregar_entrada_segundo_nivel(tmp);
+    // }
 
     char* string_id = string_from_format("%d", tmp -> id_tabla);
 
     sem_wait(mutex_tablas_segundo_nivel);
-        dictionary_put(tablas_segundo_nivel, string_id, tmp);
+        dictionary_put(tablas_segundo_nivel, string_id, (void*) tmp);
     sem_post(mutex_tablas_segundo_nivel);
 
+    free(string_id);
+
     return tmp;    
+}
+
+
+void destruir_tabla_primer_nivel(t_tabla_primer_nivel* tabla) {
+    list_destroy(tabla -> entradas);
+    free(tabla);
 }
 
 

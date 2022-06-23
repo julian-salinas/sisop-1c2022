@@ -1,5 +1,6 @@
 #include "memoria.h"
 
+
 int main(void) {
 
 	// Inicializar config
@@ -9,7 +10,7 @@ int main(void) {
 	inicializar_tablas_de_paginas();
 	
 	// Inicializar memoria
-	t_memoria* memoria = inicializar_memoria();
+	void* memoria = inicializar_memoria();
 
 	// Crear logger
 	logger = log_create("cfg/memoria.log", "memoria", 1, LOG_LEVEL_DEBUG);
@@ -18,26 +19,27 @@ int main(void) {
 	generarFrames(memoria, memoria_config -> tamanio_memoria, memoria_config -> tamanio_pagina);
 
 	int server_fd = iniciar_servidor(logger, "memoria", memoria_config -> ip_memoria, memoria_config -> puerto_escucha);	
+	
 	log_info(logger, "Memoria lista para recibir al cliente");
-
 
 	while(server_listen(logger, "memoria", server_fd, (void*)(*procesar_conexion)));
 
-	terminar_programa("Memoria", server_fd, logger);
+	// terminar_programa("Memoria", server_fd, logger);
 	
 	return EXIT_SUCCESS;
 }
 
-t_memoria* inicializar_memoria(void) {
-	t_memoria* memoria = malloc(sizeof(t_memoria));
-	memoria -> memoria = malloc(memoria_config -> tamanio_memoria);
+
+void* inicializar_memoria(void) {
+	void* memoria = malloc(memoria_config -> tamanio_memoria);
 
 	return memoria;
 }
 
-void generarFrames(t_memoria* memoria, uint32_t tamanio_memoria, uint32_t tamanio_frame){
+
+void generarFrames(void* memoria, uint32_t tamanio_memoria, uint32_t tamanio_frame){
 	int cantidad_frames = tamanio_memoria / tamanio_frame;
-	void* aux = memoria -> memoria;
+	void* aux = memoria;
 	int contador_frame = 0;
 	t_lista_frames* lista_frames = list_create();
 
