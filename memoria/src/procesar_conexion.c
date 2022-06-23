@@ -65,6 +65,22 @@ void procesar_conexion(void* void_args) {
             //se le avisa a consola o le avisa el kernel?
             break;
 
+        case PRIMER_ACCESO_MEMORIA:
+            // se recibe número de tabla de página de primer nivel
+            // y entrada de la tabla de primer nivel 
+
+            // el proceso quiere conocer en qué tabla de páginas de 2do nivel
+            // está direccionado el marco en que se encuentra la página
+            break;
+        
+        case SEGUNDO_ACCESO_MEMORIA:
+            // conocer en qué marco está la misma
+            break;
+        
+        case TERCER_ACCESO_MEMORIA:
+            // acceder a la porción de memoria correspondiente 
+            break;
+
         case -1:
             log_error(logger, "Cliente desconectado de %s...", nombre_servidor);
             return;

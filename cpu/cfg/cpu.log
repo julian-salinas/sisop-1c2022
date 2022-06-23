@@ -2478,3 +2478,15 @@
 [INFO] 03:08:41:261 CPU/(29388:29411): devolviendo pcb 8
 [INFO] 03:08:41:261 CPU/(29388:29411): tiempo de ejecucion 0
 [WARNING] 03:08:41:262 CPU/(29388:29411): El cliente se desconecto de server CPU Dispatch
+[INFO] 23:28:35:213 CPU/(1175:1175): Modulo CPU iniciado
+[INFO] 23:28:35:216 CPU/(1175:1175): Config CPU load
+[INFO] 23:28:35:217 CPU/(1175:1175): Conexión cpu-memoria ok.
+[INFO] 23:28:35:217 CPU/(1175:1175): Se creó entrada de tlb 0
+[INFO] 23:28:35:217 CPU/(1175:1175): Se creó entrada de tlb 1
+[INFO] 23:28:35:218 CPU/(1175:1175): Se creó entrada de tlb 2
+[INFO] 23:28:35:218 CPU/(1175:1175): Se creó entrada de tlb 3
+[INFO] 23:28:35:229 CPU/(1175:1177): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 23:28:35:229 CPU/(1175:1176): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 23:28:35:230 CPU/(1175:1176): Request config memoria enviada.

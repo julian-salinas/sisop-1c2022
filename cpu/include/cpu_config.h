@@ -20,4 +20,4 @@
 
     void destruir_cpu_config(t_cpu_config* cpu_config);
 
-#endif /* MEMORIA_CONFIG */
+#endif /* CPU_CONFIG */

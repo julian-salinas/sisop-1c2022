@@ -20,6 +20,7 @@
     #include "config.h"
     #include "proceso.h"
     #include "utils.h"
+    #include "tlb.h"
 
     // Semáforo mutex para variable interrupt
     sem_t* mutex_interrupt;
@@ -35,5 +36,7 @@
     uint8_t tamanio_pagina;
 
     int interrupcion, finCicloInstruccion; //0 el kernel no envio interrupcion, 1 interrumpir ejecución
+
+    t_tlb* tlb;
 
 #endif /* CPU_H_ */

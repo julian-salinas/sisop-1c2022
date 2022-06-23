@@ -4,6 +4,7 @@
 #include "proceso.h" //aca está definido t_PCB, hay que moverlo?
 #include "instrucciones.h" //aca está el enum t_identificador y funciones
 #include <time.h>
+#include <math.h>
 /*
     typedef struct {
         uint32_t PID;
@@ -52,7 +53,17 @@ void devolver_pcb(t_PCB* pcb, codigo_operacion header){
     finCicloInstruccion = 1;
 }
 
-//TODO MMU 
+//TODO MMU
+void mmu(int direccion_logica){
+    float numero_pagina=floor(direccion_logica/tamanio_pagina);
+    float entrada_tabla_1er_nivel = floor(numero_pagina/paginas_por_tabla);
+
+    //hay que enviar a memoria
+
+
+    int entrada_tabla_2do_nivel = (int) numero_pagina % paginas_por_tabla;
+    int desplazamiento = (direccion_logica - (numero_pagina * tamanio_pagina));
+}
 
 void ejecutar_ciclo_instruccion(t_PCB* pcb){
     t_instruccion* instruccion;

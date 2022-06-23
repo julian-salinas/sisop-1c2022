@@ -29,7 +29,11 @@
 
         /*ENUMS PARA COMUNICARSE CON MEMORIA */
         PROCESO_SUSPENDIDO, // (KERNEL -> MEMORIA)
-        PROCESO_RECHAZADO // (MEMORIA -> KERNEL) Respuesta de memoria cuando el tamaño del proceso es mayor al máximo permitido
+        PROCESO_RECHAZADO, // (MEMORIA -> KERNEL) Respuesta de memoria cuando el tamaño del proceso es mayor al máximo permitido
+
+        PRIMER_ACCESO_MEMORIA, // para conocer en qué tabla de páginas de 2do nivel está direccionado el marco
+        SEGUNDO_ACCESO_MEMORIA, // en qué marco está la misma
+        TERCER_ACCESO_MEMORIA // acceder a la porción de memoria correspondiente
     } codigo_operacion;
 
 #endif /* ENUM_H */
