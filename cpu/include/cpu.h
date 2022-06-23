@@ -9,6 +9,7 @@
     // includes de las commons
     #include<commons/string.h>
     #include<commons/config.h>
+    #include <commons/log.h> 
 
     // includes del módulo
     #include "procesar_conexion.h"
