@@ -170,7 +170,7 @@ void suspended_blocked_a_suspended_ready(t_PCB* procesoAMover) {
         queue_push(cola_suspended_ready, (void*) procesoAMover);
     sem_post(mutex_cola_suspended_ready);
 
-    log_info(logger, "El proceso con Id:%d  pasó de SUSPENDED-BLOCKED a SUSPENDED-READY.", procesoAMover -> PID);
+    log_info(logger, "El proceso con ID:%d  pasó de SUSPENDED-BLOCKED a SUSPENDED-READY.", procesoAMover -> PID);
 
     sem_post(sem_procesos_esperando);
 }

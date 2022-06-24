@@ -1446,3 +1446,469 @@
 [INFO] 02:08:51:826 Consola/(14170:14170): Consola iniciada
 [INFO] 02:08:51:826 Consola/(14170:14170): Se agregó el operador EXIT
 [INFO] 02:08:51:826 Consola/(14170:14170): Lista de instrucciones enviada.
+[INFO] 00:54:50:935 Consola/(5421:5421): Consola iniciada
+[INFO] 00:54:50:937 Consola/(5421:5421): Se agregó el operador NO_OP
+[INFO] 00:54:50:937 Consola/(5421:5421): Se agregó el parametro 5
+[INFO] 00:54:50:938 Consola/(5421:5421): Se agregó el operador I/O
+[INFO] 00:54:50:938 Consola/(5421:5421): Se agregó el parametro 3000
+[INFO] 00:54:50:938 Consola/(5421:5421): Se agregó el operador WRITE
+[INFO] 00:54:50:938 Consola/(5421:5421): Se agregó el parametro 4
+[INFO] 00:54:50:946 Consola/(5421:5421): Se agregó el parametro 42
+[INFO] 00:54:50:946 Consola/(5421:5421): Se agregó el operador COPY
+[INFO] 00:54:50:947 Consola/(5421:5421): Se agregó el parametro 0
+[INFO] 00:54:50:947 Consola/(5421:5421): Se agregó el parametro 4
+[INFO] 00:54:50:947 Consola/(5421:5421): Se agregó el operador READ
+[INFO] 00:54:50:949 Consola/(5421:5421): Se agregó el parametro 0
+[INFO] 00:54:50:949 Consola/(5421:5421): Se agregó el operador EXIT
+[INFO] 00:54:50:949 Consola/(5421:5421): Se envió el cod operacion 12
+[INFO] 00:54:50:949 Consola/(5421:5421): Lista de instrucciones enviada.
+[INFO] 00:55:22:160 Consola/(5421:5421): Respuesta recibida: 191
+[INFO] 00:55:22:161 Consola/(5421:5421): Modulo consola finalizado
+[INFO] 00:57:16:509 Consola/(5692:5692): Consola iniciada
+[INFO] 00:57:16:525 Consola/(5692:5692): Se agregó el operador NO_OP
+[INFO] 00:57:16:527 Consola/(5692:5692): Se agregó el parametro 5
+[INFO] 00:57:16:528 Consola/(5692:5692): Se agregó el operador I/O
+[INFO] 00:57:16:528 Consola/(5692:5692): Se agregó el parametro 3000
+[INFO] 00:57:16:528 Consola/(5692:5692): Se agregó el operador WRITE
+[INFO] 00:57:16:528 Consola/(5692:5692): Se agregó el parametro 4
+[INFO] 00:57:16:528 Consola/(5692:5692): Se agregó el parametro 42
+[INFO] 00:57:16:533 Consola/(5692:5692): Se agregó el operador COPY
+[INFO] 00:57:16:534 Consola/(5692:5692): Se agregó el parametro 0
+[INFO] 00:57:16:534 Consola/(5692:5692): Se agregó el parametro 4
+[INFO] 00:57:16:535 Consola/(5692:5692): Se agregó el operador READ
+[INFO] 00:57:16:535 Consola/(5692:5692): Se agregó el parametro 0
+[INFO] 00:57:16:535 Consola/(5692:5692): Se agregó el operador EXIT
+[INFO] 00:57:16:535 Consola/(5692:5692): Se envió el cod operacion 12
+[INFO] 00:57:16:535 Consola/(5692:5692): Lista de instrucciones enviada.
+[INFO] 00:57:16:919 Consola/(5692:5692): Respuesta recibida: 191
+[INFO] 00:57:16:919 Consola/(5692:5692): Modulo consola finalizado
+[INFO] 01:40:45:803 Consola/(6861:6861): Consola iniciada
+[INFO] 01:40:45:815 Consola/(6861:6861): Se agregó el operador NO_OP
+[INFO] 01:40:45:815 Consola/(6861:6861): Se agregó el parametro 5
+[INFO] 01:40:45:815 Consola/(6861:6861): Se agregó el operador I/O
+[INFO] 01:40:45:815 Consola/(6861:6861): Se agregó el parametro 3000
+[INFO] 01:40:45:815 Consola/(6861:6861): Se agregó el operador WRITE
+[INFO] 01:40:45:816 Consola/(6861:6861): Se agregó el parametro 4
+[INFO] 01:40:45:816 Consola/(6861:6861): Se agregó el parametro 42
+[INFO] 01:40:45:816 Consola/(6861:6861): Se agregó el operador COPY
+[INFO] 01:40:45:816 Consola/(6861:6861): Se agregó el parametro 0
+[INFO] 01:40:45:816 Consola/(6861:6861): Se agregó el parametro 4
+[INFO] 01:40:45:816 Consola/(6861:6861): Se agregó el operador READ
+[INFO] 01:40:45:816 Consola/(6861:6861): Se agregó el parametro 0
+[INFO] 01:40:45:816 Consola/(6861:6861): Se agregó el operador EXIT
+[INFO] 01:40:45:816 Consola/(6861:6861): Se envió el cod operacion 12
+[INFO] 01:40:45:820 Consola/(6861:6861): Lista de instrucciones enviada.
+[INFO] 01:40:47:061 Consola/(6861:6861): Respuesta recibida: 191
+[INFO] 01:40:47:061 Consola/(6861:6861): Modulo consola finalizado
+[INFO] 01:42:09:324 Consola/(7090:7090): Consola iniciada
+[INFO] 01:42:09:332 Consola/(7090:7090): Se agregó el operador NO_OP
+[INFO] 01:42:09:332 Consola/(7090:7090): Se agregó el parametro 5
+[INFO] 01:42:09:332 Consola/(7090:7090): Se agregó el operador I/O
+[INFO] 01:42:09:332 Consola/(7090:7090): Se agregó el parametro 3000
+[INFO] 01:42:09:332 Consola/(7090:7090): Se agregó el operador WRITE
+[INFO] 01:42:09:332 Consola/(7090:7090): Se agregó el parametro 4
+[INFO] 01:42:09:332 Consola/(7090:7090): Se agregó el parametro 42
+[INFO] 01:42:09:332 Consola/(7090:7090): Se agregó el operador COPY
+[INFO] 01:42:09:334 Consola/(7090:7090): Se agregó el parametro 0
+[INFO] 01:42:09:334 Consola/(7090:7090): Se agregó el parametro 4
+[INFO] 01:42:09:334 Consola/(7090:7090): Se agregó el operador READ
+[INFO] 01:42:09:334 Consola/(7090:7090): Se agregó el parametro 0
+[INFO] 01:42:09:335 Consola/(7090:7090): Se agregó el operador EXIT
+[INFO] 01:42:09:335 Consola/(7090:7090): Se envió el cod operacion 12
+[INFO] 01:42:09:335 Consola/(7090:7090): Lista de instrucciones enviada.
+[INFO] 01:42:14:108 Consola/(7171:7171): Consola iniciada
+[INFO] 01:42:14:114 Consola/(7171:7171): Se agregó el operador NO_OP
+[INFO] 01:42:14:114 Consola/(7171:7171): Se agregó el parametro 5
+[INFO] 01:42:14:115 Consola/(7171:7171): Se agregó el operador I/O
+[INFO] 01:42:14:115 Consola/(7171:7171): Se agregó el parametro 3000
+[INFO] 01:42:14:115 Consola/(7171:7171): Se agregó el operador WRITE
+[INFO] 01:42:14:115 Consola/(7171:7171): Se agregó el parametro 4
+[INFO] 01:42:14:115 Consola/(7171:7171): Se agregó el parametro 42
+[INFO] 01:42:14:116 Consola/(7171:7171): Se agregó el operador COPY
+[INFO] 01:42:14:116 Consola/(7171:7171): Se agregó el parametro 0
+[INFO] 01:42:14:116 Consola/(7171:7171): Se agregó el parametro 4
+[INFO] 01:42:14:116 Consola/(7171:7171): Se agregó el operador READ
+[INFO] 01:42:14:116 Consola/(7171:7171): Se agregó el parametro 0
+[INFO] 01:42:14:116 Consola/(7171:7171): Se agregó el operador EXIT
+[INFO] 01:42:14:116 Consola/(7171:7171): Se envió el cod operacion 12
+[INFO] 01:42:14:116 Consola/(7171:7171): Lista de instrucciones enviada.
+[INFO] 01:42:20:057 Consola/(7254:7254): Consola iniciada
+[INFO] 01:42:20:071 Consola/(7254:7254): Se agregó el operador NO_OP
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el parametro 5
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el operador I/O
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el parametro 3000
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el operador WRITE
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el parametro 4
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el parametro 42
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el operador COPY
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el parametro 0
+[INFO] 01:42:20:072 Consola/(7254:7254): Se agregó el parametro 4
+[INFO] 01:42:20:073 Consola/(7254:7254): Se agregó el operador READ
+[INFO] 01:42:20:073 Consola/(7254:7254): Se agregó el parametro 0
+[INFO] 01:42:20:073 Consola/(7254:7254): Se agregó el operador EXIT
+[INFO] 01:42:20:073 Consola/(7254:7254): Se envió el cod operacion 12
+[INFO] 01:42:20:073 Consola/(7254:7254): Lista de instrucciones enviada.
+[INFO] 01:52:22:860 Consola/(7254:7254): Respuesta recibida: 191
+[INFO] 01:52:22:860 Consola/(7171:7171): Respuesta recibida: 191
+[INFO] 01:52:22:860 Consola/(7090:7090): Respuesta recibida: 191
+[INFO] 01:52:22:860 Consola/(7171:7171): Modulo consola finalizado
+[INFO] 01:52:22:860 Consola/(7090:7090): Modulo consola finalizado
+[INFO] 01:52:22:860 Consola/(7254:7254): Modulo consola finalizado
+[INFO] 02:18:26:228 Consola/(7854:7854): Consola iniciada
+[INFO] 02:18:26:241 Consola/(7854:7854): Se agregó el operador NO_OP
+[INFO] 02:18:26:241 Consola/(7854:7854): Se agregó el parametro 5
+[INFO] 02:18:26:241 Consola/(7854:7854): Se agregó el operador I/O
+[INFO] 02:18:26:241 Consola/(7854:7854): Se agregó el parametro 3000
+[INFO] 02:18:26:241 Consola/(7854:7854): Se agregó el operador WRITE
+[INFO] 02:18:26:241 Consola/(7854:7854): Se agregó el parametro 4
+[INFO] 02:18:26:241 Consola/(7854:7854): Se agregó el parametro 42
+[INFO] 02:18:26:242 Consola/(7854:7854): Se agregó el operador COPY
+[INFO] 02:18:26:242 Consola/(7854:7854): Se agregó el parametro 0
+[INFO] 02:18:26:242 Consola/(7854:7854): Se agregó el parametro 4
+[INFO] 02:18:26:242 Consola/(7854:7854): Se agregó el operador READ
+[INFO] 02:18:26:242 Consola/(7854:7854): Se agregó el parametro 0
+[INFO] 02:18:26:242 Consola/(7854:7854): Se agregó el operador EXIT
+[INFO] 02:18:26:242 Consola/(7854:7854): Se envió el cod operacion 12
+[INFO] 02:18:26:242 Consola/(7854:7854): Lista de instrucciones enviada.
+[INFO] 02:18:40:318 Consola/(7854:7854): Respuesta recibida: 191
+[INFO] 02:18:40:319 Consola/(7854:7854): Modulo consola finalizado
+[INFO] 02:20:03:676 Consola/(7948:7948): Consola iniciada
+[INFO] 02:20:03:686 Consola/(7948:7948): Se agregó el operador NO_OP
+[INFO] 02:20:03:686 Consola/(7948:7948): Se agregó el parametro 5
+[INFO] 02:20:03:686 Consola/(7948:7948): Se agregó el operador I/O
+[INFO] 02:20:03:686 Consola/(7948:7948): Se agregó el parametro 3000
+[INFO] 02:20:03:686 Consola/(7948:7948): Se agregó el operador WRITE
+[INFO] 02:20:03:686 Consola/(7948:7948): Se agregó el parametro 4
+[INFO] 02:20:03:686 Consola/(7948:7948): Se agregó el parametro 42
+[INFO] 02:20:03:687 Consola/(7948:7948): Se agregó el operador COPY
+[INFO] 02:20:03:687 Consola/(7948:7948): Se agregó el parametro 0
+[INFO] 02:20:03:688 Consola/(7948:7948): Se agregó el parametro 4
+[INFO] 02:20:03:688 Consola/(7948:7948): Se agregó el operador READ
+[INFO] 02:20:03:688 Consola/(7948:7948): Se agregó el parametro 0
+[INFO] 02:20:03:688 Consola/(7948:7948): Se agregó el operador EXIT
+[INFO] 02:20:03:688 Consola/(7948:7948): Se envió el cod operacion 12
+[INFO] 02:20:03:688 Consola/(7948:7948): Lista de instrucciones enviada.
+[INFO] 02:20:33:969 Consola/(8041:8041): Consola iniciada
+[INFO] 02:20:33:978 Consola/(8041:8041): Se agregó el operador NO_OP
+[INFO] 02:20:33:979 Consola/(8041:8041): Se agregó el parametro 5
+[INFO] 02:20:33:979 Consola/(8041:8041): Se agregó el operador I/O
+[INFO] 02:20:33:979 Consola/(8041:8041): Se agregó el parametro 3000
+[INFO] 02:20:33:979 Consola/(8041:8041): Se agregó el operador WRITE
+[INFO] 02:20:33:979 Consola/(8041:8041): Se agregó el parametro 4
+[INFO] 02:20:33:979 Consola/(8041:8041): Se agregó el parametro 42
+[INFO] 02:20:33:979 Consola/(8041:8041): Se agregó el operador COPY
+[INFO] 02:20:33:979 Consola/(8041:8041): Se agregó el parametro 0
+[INFO] 02:20:33:980 Consola/(8041:8041): Se agregó el parametro 4
+[INFO] 02:20:33:980 Consola/(8041:8041): Se agregó el operador READ
+[INFO] 02:20:33:980 Consola/(8041:8041): Se agregó el parametro 0
+[INFO] 02:20:33:980 Consola/(8041:8041): Se agregó el operador EXIT
+[INFO] 02:20:33:980 Consola/(8041:8041): Se envió el cod operacion 12
+[INFO] 02:20:33:980 Consola/(8041:8041): Lista de instrucciones enviada.
+[INFO] 02:20:47:849 Consola/(8129:8129): Consola iniciada
+[INFO] 02:20:47:856 Consola/(8129:8129): Se agregó el operador NO_OP
+[INFO] 02:20:47:857 Consola/(8129:8129): Se agregó el parametro 5
+[INFO] 02:20:47:857 Consola/(8129:8129): Se agregó el operador I/O
+[INFO] 02:20:47:858 Consola/(8129:8129): Se agregó el parametro 3000
+[INFO] 02:20:47:858 Consola/(8129:8129): Se agregó el operador WRITE
+[INFO] 02:20:47:858 Consola/(8129:8129): Se agregó el parametro 4
+[INFO] 02:20:47:858 Consola/(8129:8129): Se agregó el parametro 42
+[INFO] 02:20:47:858 Consola/(8129:8129): Se agregó el operador COPY
+[INFO] 02:20:47:858 Consola/(8129:8129): Se agregó el parametro 0
+[INFO] 02:20:47:858 Consola/(8129:8129): Se agregó el parametro 4
+[INFO] 02:20:47:858 Consola/(8129:8129): Se agregó el operador READ
+[INFO] 02:20:47:859 Consola/(8129:8129): Se agregó el parametro 0
+[INFO] 02:20:47:859 Consola/(8129:8129): Se agregó el operador EXIT
+[INFO] 02:20:47:859 Consola/(8129:8129): Se envió el cod operacion 12
+[INFO] 02:20:47:862 Consola/(8129:8129): Lista de instrucciones enviada.
+[INFO] 02:21:46:520 Consola/(8226:8226): Consola iniciada
+[INFO] 02:21:46:522 Consola/(8226:8226): Se agregó el operador NO_OP
+[INFO] 02:21:46:525 Consola/(8226:8226): Se agregó el parametro 5
+[INFO] 02:21:46:525 Consola/(8226:8226): Se agregó el operador I/O
+[INFO] 02:21:46:525 Consola/(8226:8226): Se agregó el parametro 3000
+[INFO] 02:21:46:525 Consola/(8226:8226): Se agregó el operador WRITE
+[INFO] 02:21:46:525 Consola/(8226:8226): Se agregó el parametro 4
+[INFO] 02:21:46:525 Consola/(8226:8226): Se agregó el parametro 42
+[INFO] 02:21:46:525 Consola/(8226:8226): Se agregó el operador COPY
+[INFO] 02:21:46:526 Consola/(8226:8226): Se agregó el parametro 0
+[INFO] 02:21:46:526 Consola/(8226:8226): Se agregó el parametro 4
+[INFO] 02:21:46:526 Consola/(8226:8226): Se agregó el operador READ
+[INFO] 02:21:46:526 Consola/(8226:8226): Se agregó el parametro 0
+[INFO] 02:21:46:526 Consola/(8226:8226): Se agregó el operador EXIT
+[INFO] 02:21:46:526 Consola/(8226:8226): Se envió el cod operacion 12
+[INFO] 02:21:46:526 Consola/(8226:8226): Lista de instrucciones enviada.
+[INFO] 02:24:04:968 Consola/(8482:8482): Consola iniciada
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el operador NO_OP
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el parametro 5
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el operador I/O
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el parametro 3000
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el operador WRITE
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el parametro 4
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el parametro 42
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el operador COPY
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el parametro 0
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el parametro 4
+[INFO] 02:24:04:970 Consola/(8482:8482): Se agregó el operador READ
+[INFO] 02:24:04:971 Consola/(8482:8482): Se agregó el parametro 0
+[INFO] 02:24:04:971 Consola/(8482:8482): Se agregó el operador EXIT
+[INFO] 02:24:04:971 Consola/(8482:8482): Se envió el cod operacion 12
+[INFO] 02:24:04:972 Consola/(8482:8482): Lista de instrucciones enviada.
+[INFO] 02:35:06:116 Consola/(8482:8482): Respuesta recibida: 191
+[INFO] 02:35:06:116 Consola/(8482:8482): Modulo consola finalizado
+[INFO] 02:36:58:971 Consola/(8834:8834): Consola iniciada
+[INFO] 02:36:58:975 Consola/(8834:8834): Se agregó el operador NO_OP
+[INFO] 02:36:58:975 Consola/(8834:8834): Se agregó el parametro 5
+[INFO] 02:36:58:975 Consola/(8834:8834): Se agregó el operador I/O
+[INFO] 02:36:58:975 Consola/(8834:8834): Se agregó el parametro 3000
+[INFO] 02:36:58:975 Consola/(8834:8834): Se agregó el operador WRITE
+[INFO] 02:36:58:975 Consola/(8834:8834): Se agregó el parametro 4
+[INFO] 02:36:58:975 Consola/(8834:8834): Se agregó el parametro 42
+[INFO] 02:36:58:975 Consola/(8834:8834): Se agregó el operador COPY
+[INFO] 02:36:58:976 Consola/(8834:8834): Se agregó el parametro 0
+[INFO] 02:36:58:976 Consola/(8834:8834): Se agregó el parametro 4
+[INFO] 02:36:58:976 Consola/(8834:8834): Se agregó el operador READ
+[INFO] 02:36:58:976 Consola/(8834:8834): Se agregó el parametro 0
+[INFO] 02:36:58:976 Consola/(8834:8834): Se agregó el operador EXIT
+[INFO] 02:36:58:976 Consola/(8834:8834): Se envió el cod operacion 12
+[INFO] 02:36:58:976 Consola/(8834:8834): Lista de instrucciones enviada.
+[INFO] 02:37:23:782 Consola/(8834:8834): Respuesta recibida: 191
+[INFO] 02:37:23:782 Consola/(8834:8834): Modulo consola finalizado
+[INFO] 02:47:00:335 Consola/(9086:9086): Consola iniciada
+[INFO] 02:47:00:352 Consola/(9086:9086): Se agregó el operador NO_OP
+[INFO] 02:47:00:352 Consola/(9086:9086): Se agregó el parametro 5
+[INFO] 02:47:00:352 Consola/(9086:9086): Se agregó el operador I/O
+[INFO] 02:47:00:352 Consola/(9086:9086): Se agregó el parametro 3000
+[INFO] 02:47:00:352 Consola/(9086:9086): Se agregó el operador WRITE
+[INFO] 02:47:00:352 Consola/(9086:9086): Se agregó el parametro 4
+[INFO] 02:47:00:352 Consola/(9086:9086): Se agregó el parametro 42
+[INFO] 02:47:00:353 Consola/(9086:9086): Se agregó el operador COPY
+[INFO] 02:47:00:353 Consola/(9086:9086): Se agregó el parametro 0
+[INFO] 02:47:00:353 Consola/(9086:9086): Se agregó el parametro 4
+[INFO] 02:47:00:353 Consola/(9086:9086): Se agregó el operador READ
+[INFO] 02:47:00:353 Consola/(9086:9086): Se agregó el parametro 0
+[INFO] 02:47:00:353 Consola/(9086:9086): Se agregó el operador EXIT
+[INFO] 02:47:00:353 Consola/(9086:9086): Se envió el cod operacion 12
+[INFO] 02:47:00:353 Consola/(9086:9086): Lista de instrucciones enviada.
+[INFO] 02:47:18:762 Consola/(9086:9086): Respuesta recibida: 191
+[INFO] 02:47:18:762 Consola/(9086:9086): Modulo consola finalizado
+[INFO] 02:51:30:874 Consola/(9361:9361): Consola iniciada
+[INFO] 02:51:30:888 Consola/(9361:9361): Se agregó el operador NO_OP
+[INFO] 02:51:30:888 Consola/(9361:9361): Se agregó el parametro 5
+[INFO] 02:51:30:888 Consola/(9361:9361): Se agregó el operador I/O
+[INFO] 02:51:30:888 Consola/(9361:9361): Se agregó el parametro 3000
+[INFO] 02:51:30:888 Consola/(9361:9361): Se agregó el operador WRITE
+[INFO] 02:51:30:888 Consola/(9361:9361): Se agregó el parametro 4
+[INFO] 02:51:30:889 Consola/(9361:9361): Se agregó el parametro 42
+[INFO] 02:51:30:889 Consola/(9361:9361): Se agregó el operador COPY
+[INFO] 02:51:30:889 Consola/(9361:9361): Se agregó el parametro 0
+[INFO] 02:51:30:889 Consola/(9361:9361): Se agregó el parametro 4
+[INFO] 02:51:30:889 Consola/(9361:9361): Se agregó el operador READ
+[INFO] 02:51:30:889 Consola/(9361:9361): Se agregó el parametro 0
+[INFO] 02:51:30:889 Consola/(9361:9361): Se agregó el operador EXIT
+[INFO] 02:51:30:889 Consola/(9361:9361): Se envió el cod operacion 12
+[INFO] 02:51:30:889 Consola/(9361:9361): Lista de instrucciones enviada.
+[INFO] 02:52:16:089 Consola/(9361:9361): Respuesta recibida: 191
+[INFO] 02:52:16:090 Consola/(9361:9361): Modulo consola finalizado
+[INFO] 02:56:54:656 Consola/(9954:9954): Consola iniciada
+[INFO] 02:56:54:666 Consola/(9954:9954): Se agregó el operador NO_OP
+[INFO] 02:56:54:666 Consola/(9954:9954): Se agregó el parametro 5
+[INFO] 02:56:54:666 Consola/(9954:9954): Se agregó el operador I/O
+[INFO] 02:56:54:667 Consola/(9954:9954): Se agregó el parametro 3000
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el operador WRITE
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el parametro 4
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el parametro 42
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el operador COPY
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el parametro 0
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el parametro 4
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el operador READ
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el parametro 0
+[INFO] 02:56:54:668 Consola/(9954:9954): Se agregó el operador EXIT
+[INFO] 02:56:54:669 Consola/(9954:9954): Se envió el cod operacion 12
+[INFO] 02:56:54:669 Consola/(9954:9954): Lista de instrucciones enviada.
+[INFO] 02:58:29:972 Consola/(9954:9954): Respuesta recibida: 191
+[INFO] 02:58:29:973 Consola/(9954:9954): Modulo consola finalizado
+[INFO] 02:58:54:316 Consola/(10079:10079): Consola iniciada
+[INFO] 02:58:54:317 Consola/(10079:10079): Se agregó el operador NO_OP
+[INFO] 02:58:54:317 Consola/(10079:10079): Se agregó el parametro 5
+[INFO] 02:58:54:317 Consola/(10079:10079): Se agregó el operador I/O
+[INFO] 02:58:54:317 Consola/(10079:10079): Se agregó el parametro 3000
+[INFO] 02:58:54:317 Consola/(10079:10079): Se agregó el operador WRITE
+[INFO] 02:58:54:317 Consola/(10079:10079): Se agregó el parametro 4
+[INFO] 02:58:54:317 Consola/(10079:10079): Se agregó el parametro 42
+[INFO] 02:58:54:317 Consola/(10079:10079): Se agregó el operador COPY
+[INFO] 02:58:54:318 Consola/(10079:10079): Se agregó el parametro 0
+[INFO] 02:58:54:318 Consola/(10079:10079): Se agregó el parametro 4
+[INFO] 02:58:54:318 Consola/(10079:10079): Se agregó el operador READ
+[INFO] 02:58:54:318 Consola/(10079:10079): Se agregó el parametro 0
+[INFO] 02:58:54:318 Consola/(10079:10079): Se agregó el operador EXIT
+[INFO] 02:59:50:315 Consola/(10178:10178): Consola iniciada
+[INFO] 02:59:50:331 Consola/(10178:10178): Se agregó el operador NO_OP
+[INFO] 02:59:50:332 Consola/(10178:10178): Se agregó el parametro 5
+[INFO] 02:59:50:332 Consola/(10178:10178): Se agregó el operador I/O
+[INFO] 02:59:50:332 Consola/(10178:10178): Se agregó el parametro 3000
+[INFO] 02:59:50:332 Consola/(10178:10178): Se agregó el operador WRITE
+[INFO] 02:59:50:332 Consola/(10178:10178): Se agregó el parametro 4
+[INFO] 02:59:50:332 Consola/(10178:10178): Se agregó el parametro 42
+[INFO] 02:59:50:332 Consola/(10178:10178): Se agregó el operador COPY
+[INFO] 02:59:50:332 Consola/(10178:10178): Se agregó el parametro 0
+[INFO] 02:59:50:333 Consola/(10178:10178): Se agregó el parametro 4
+[INFO] 02:59:50:333 Consola/(10178:10178): Se agregó el operador READ
+[INFO] 02:59:50:333 Consola/(10178:10178): Se agregó el parametro 0
+[INFO] 02:59:50:333 Consola/(10178:10178): Se agregó el operador EXIT
+[INFO] 02:59:50:333 Consola/(10178:10178): Se envió el cod operacion 12
+[INFO] 02:59:50:333 Consola/(10178:10178): Lista de instrucciones enviada.
+[INFO] 03:03:50:193 Consola/(10323:10323): Consola iniciada
+[INFO] 03:03:50:204 Consola/(10323:10323): Se agregó el operador NO_OP
+[INFO] 03:03:50:204 Consola/(10323:10323): Se agregó el parametro 5
+[INFO] 03:03:50:204 Consola/(10323:10323): Se agregó el operador I/O
+[INFO] 03:03:50:204 Consola/(10323:10323): Se agregó el parametro 3000
+[INFO] 03:03:50:204 Consola/(10323:10323): Se agregó el operador WRITE
+[INFO] 03:03:50:204 Consola/(10323:10323): Se agregó el parametro 4
+[INFO] 03:03:50:204 Consola/(10323:10323): Se agregó el parametro 42
+[INFO] 03:03:50:204 Consola/(10323:10323): Se agregó el operador COPY
+[INFO] 03:03:50:205 Consola/(10323:10323): Se agregó el parametro 0
+[INFO] 03:03:50:205 Consola/(10323:10323): Se agregó el parametro 4
+[INFO] 03:03:50:205 Consola/(10323:10323): Se agregó el operador READ
+[INFO] 03:03:50:205 Consola/(10323:10323): Se agregó el parametro 0
+[INFO] 03:03:50:205 Consola/(10323:10323): Se agregó el operador EXIT
+[INFO] 03:03:50:205 Consola/(10323:10323): Se envió el cod operacion 12
+[INFO] 03:03:50:205 Consola/(10323:10323): Lista de instrucciones enviada.
+[INFO] 03:03:56:259 Consola/(10404:10404): Consola iniciada
+[INFO] 03:03:56:266 Consola/(10404:10404): Se agregó el operador NO_OP
+[INFO] 03:03:56:267 Consola/(10404:10404): Se agregó el parametro 5
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el operador I/O
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el parametro 3000
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el operador WRITE
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el parametro 4
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el parametro 42
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el operador COPY
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el parametro 0
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el parametro 4
+[INFO] 03:03:56:268 Consola/(10404:10404): Se agregó el operador READ
+[INFO] 03:03:56:269 Consola/(10404:10404): Se agregó el parametro 0
+[INFO] 03:03:56:269 Consola/(10404:10404): Se agregó el operador EXIT
+[INFO] 03:03:56:269 Consola/(10404:10404): Se envió el cod operacion 12
+[INFO] 03:03:56:269 Consola/(10404:10404): Lista de instrucciones enviada.
+[INFO] 03:05:33:107 Consola/(10404:10404): Respuesta recibida: 191
+[INFO] 03:05:33:107 Consola/(10323:10323): Respuesta recibida: 191
+[INFO] 03:05:33:107 Consola/(10178:10178): Respuesta recibida: 191
+[INFO] 03:05:33:107 Consola/(10178:10178): Modulo consola finalizado
+[INFO] 03:05:33:107 Consola/(10323:10323): Modulo consola finalizado
+[INFO] 03:05:33:109 Consola/(10404:10404): Modulo consola finalizado
+[INFO] 03:05:33:138 Consola/(10455:10455): Consola iniciada
+[INFO] 03:05:33:147 Consola/(10455:10455): Se agregó el operador NO_OP
+[INFO] 03:05:33:148 Consola/(10455:10455): Se agregó el parametro 5
+[INFO] 03:05:33:152 Consola/(10455:10455): Se agregó el operador I/O
+[INFO] 03:05:33:154 Consola/(10455:10455): Se agregó el parametro 3000
+[INFO] 03:05:33:155 Consola/(10455:10455): Se agregó el operador WRITE
+[INFO] 03:05:33:155 Consola/(10455:10455): Se agregó el parametro 4
+[INFO] 03:05:33:155 Consola/(10455:10455): Se agregó el parametro 42
+[INFO] 03:05:33:155 Consola/(10455:10455): Se agregó el operador COPY
+[INFO] 03:05:33:155 Consola/(10455:10455): Se agregó el parametro 0
+[INFO] 03:05:33:155 Consola/(10455:10455): Se agregó el parametro 4
+[INFO] 03:05:33:156 Consola/(10455:10455): Se agregó el operador READ
+[INFO] 03:05:33:156 Consola/(10455:10455): Se agregó el parametro 0
+[INFO] 03:05:33:156 Consola/(10455:10455): Se agregó el operador EXIT
+[INFO] 03:06:54:350 Consola/(10651:10651): Consola iniciada
+[INFO] 03:06:54:367 Consola/(10651:10651): Se agregó el operador NO_OP
+[INFO] 03:06:54:368 Consola/(10651:10651): Se agregó el parametro 5
+[INFO] 03:06:54:368 Consola/(10651:10651): Se agregó el operador I/O
+[INFO] 03:06:54:368 Consola/(10651:10651): Se agregó el parametro 3000
+[INFO] 03:06:54:368 Consola/(10651:10651): Se agregó el operador WRITE
+[INFO] 03:06:54:368 Consola/(10651:10651): Se agregó el parametro 4
+[INFO] 03:06:54:368 Consola/(10651:10651): Se agregó el parametro 42
+[INFO] 03:06:54:368 Consola/(10651:10651): Se agregó el operador COPY
+[INFO] 03:06:54:371 Consola/(10651:10651): Se agregó el parametro 0
+[INFO] 03:06:54:371 Consola/(10651:10651): Se agregó el parametro 4
+[INFO] 03:06:54:372 Consola/(10651:10651): Se agregó el operador READ
+[INFO] 03:06:54:372 Consola/(10651:10651): Se agregó el parametro 0
+[INFO] 03:06:54:372 Consola/(10651:10651): Se agregó el operador EXIT
+[INFO] 03:06:54:372 Consola/(10651:10651): Se envió el cod operacion 12
+[INFO] 03:06:54:372 Consola/(10651:10651): Lista de instrucciones enviada.
+[INFO] 03:07:14:522 Consola/(10651:10651): Respuesta recibida: 191
+[INFO] 03:07:14:523 Consola/(10651:10651): Modulo consola finalizado
+[INFO] 03:09:16:544 Consola/(10837:10837): Consola iniciada
+[INFO] 03:09:16:553 Consola/(10837:10837): Se agregó el operador NO_OP
+[INFO] 03:09:16:553 Consola/(10837:10837): Se agregó el parametro 5
+[INFO] 03:09:16:553 Consola/(10837:10837): Se agregó el operador I/O
+[INFO] 03:09:16:554 Consola/(10837:10837): Se agregó el parametro 3000
+[INFO] 03:09:16:554 Consola/(10837:10837): Se agregó el operador WRITE
+[INFO] 03:09:16:554 Consola/(10837:10837): Se agregó el parametro 4
+[INFO] 03:09:16:554 Consola/(10837:10837): Se agregó el parametro 42
+[INFO] 03:09:16:556 Consola/(10837:10837): Se agregó el operador COPY
+[INFO] 03:09:16:556 Consola/(10837:10837): Se agregó el parametro 0
+[INFO] 03:09:16:556 Consola/(10837:10837): Se agregó el parametro 4
+[INFO] 03:09:16:556 Consola/(10837:10837): Se agregó el operador READ
+[INFO] 03:09:16:556 Consola/(10837:10837): Se agregó el parametro 0
+[INFO] 03:09:16:556 Consola/(10837:10837): Se agregó el operador EXIT
+[INFO] 03:09:16:556 Consola/(10837:10837): Se envió el cod operacion 12
+[INFO] 03:09:16:559 Consola/(10837:10837): Lista de instrucciones enviada.
+[INFO] 03:09:37:666 Consola/(10837:10837): Respuesta recibida: 191
+[INFO] 03:09:37:666 Consola/(10837:10837): Modulo consola finalizado
+[INFO] 03:11:06:055 Consola/(11052:11052): Consola iniciada
+[INFO] 03:11:06:057 Consola/(11052:11052): Se agregó el operador NO_OP
+[INFO] 03:11:06:057 Consola/(11052:11052): Se agregó el parametro 5
+[INFO] 03:11:06:057 Consola/(11052:11052): Se agregó el operador I/O
+[INFO] 03:11:06:057 Consola/(11052:11052): Se agregó el parametro 3000
+[INFO] 03:11:06:058 Consola/(11052:11052): Se agregó el operador WRITE
+[INFO] 03:11:06:058 Consola/(11052:11052): Se agregó el parametro 4
+[INFO] 03:11:06:058 Consola/(11052:11052): Se agregó el parametro 42
+[INFO] 03:11:06:058 Consola/(11052:11052): Se agregó el operador COPY
+[INFO] 03:11:06:058 Consola/(11052:11052): Se agregó el parametro 0
+[INFO] 03:11:06:058 Consola/(11052:11052): Se agregó el parametro 4
+[INFO] 03:11:06:058 Consola/(11052:11052): Se agregó el operador READ
+[INFO] 03:11:06:058 Consola/(11052:11052): Se agregó el parametro 0
+[INFO] 03:11:06:059 Consola/(11052:11052): Se agregó el operador EXIT
+[INFO] 03:11:06:059 Consola/(11052:11052): Se envió el cod operacion 12
+[INFO] 03:11:06:059 Consola/(11052:11052): Lista de instrucciones enviada.
+[INFO] 03:11:06:063 Consola/(11052:11052): Respuesta recibida: 191
+[INFO] 03:11:06:063 Consola/(11052:11052): Modulo consola finalizado
+[INFO] 03:12:25:635 Consola/(11106:11106): Consola iniciada
+[INFO] 03:12:25:637 Consola/(11106:11106): Se agregó el operador NO_OP
+[INFO] 03:12:25:637 Consola/(11106:11106): Se agregó el parametro 5
+[INFO] 03:12:25:637 Consola/(11106:11106): Se agregó el operador I/O
+[INFO] 03:12:25:637 Consola/(11106:11106): Se agregó el parametro 3000
+[INFO] 03:12:25:637 Consola/(11106:11106): Se agregó el operador WRITE
+[INFO] 03:12:25:637 Consola/(11106:11106): Se agregó el parametro 4
+[INFO] 03:12:25:638 Consola/(11106:11106): Se agregó el parametro 42
+[INFO] 03:12:25:638 Consola/(11106:11106): Se agregó el operador COPY
+[INFO] 03:12:25:638 Consola/(11106:11106): Se agregó el parametro 0
+[INFO] 03:12:25:638 Consola/(11106:11106): Se agregó el parametro 4
+[INFO] 03:12:25:638 Consola/(11106:11106): Se agregó el operador READ
+[INFO] 03:12:25:638 Consola/(11106:11106): Se agregó el parametro 0
+[INFO] 03:12:25:638 Consola/(11106:11106): Se agregó el operador EXIT
+[INFO] 03:12:25:638 Consola/(11106:11106): Se envió el cod operacion 12
+[INFO] 03:12:25:638 Consola/(11106:11106): Lista de instrucciones enviada.
+[INFO] 03:12:40:473 Consola/(11187:11187): Consola iniciada
+[INFO] 03:12:40:476 Consola/(11187:11187): Se agregó el operador NO_OP
+[INFO] 03:12:40:476 Consola/(11187:11187): Se agregó el parametro 5
+[INFO] 03:12:40:477 Consola/(11187:11187): Se agregó el operador I/O
+[INFO] 03:12:40:477 Consola/(11187:11187): Se agregó el parametro 3000
+[INFO] 03:12:40:477 Consola/(11187:11187): Se agregó el operador WRITE
+[INFO] 03:12:40:477 Consola/(11187:11187): Se agregó el parametro 4
+[INFO] 03:12:40:482 Consola/(11187:11187): Se agregó el parametro 42
+[INFO] 03:12:40:482 Consola/(11187:11187): Se agregó el operador COPY
+[INFO] 03:12:40:482 Consola/(11187:11187): Se agregó el parametro 0
+[INFO] 03:12:40:482 Consola/(11187:11187): Se agregó el parametro 4
+[INFO] 03:12:40:482 Consola/(11187:11187): Se agregó el operador READ
+[INFO] 03:12:40:482 Consola/(11187:11187): Se agregó el parametro 0
+[INFO] 03:12:40:482 Consola/(11187:11187): Se agregó el operador EXIT
+[INFO] 03:12:40:482 Consola/(11187:11187): Se envió el cod operacion 12
+[INFO] 03:12:40:482 Consola/(11187:11187): Lista de instrucciones enviada.
+[INFO] 03:13:11:952 Consola/(11200:11200): Consola iniciada
+[INFO] 03:13:11:953 Consola/(11200:11200): Se agregó el operador NO_OP
+[INFO] 03:13:11:953 Consola/(11200:11200): Se agregó el parametro 5
+[INFO] 03:13:11:953 Consola/(11200:11200): Se agregó el operador I/O
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el parametro 3000
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el operador WRITE
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el parametro 4
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el parametro 42
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el operador COPY
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el parametro 0
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el parametro 4
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el operador READ
+[INFO] 03:13:11:954 Consola/(11200:11200): Se agregó el parametro 0
+[INFO] 03:13:11:955 Consola/(11200:11200): Se agregó el operador EXIT
+[INFO] 03:13:11:955 Consola/(11200:11200): Se envió el cod operacion 12
+[INFO] 03:13:11:955 Consola/(11200:11200): Lista de instrucciones enviada.
+[INFO] 03:18:29:140 Consola/(11200:11200): Respuesta recibida: 191
+[INFO] 03:18:29:140 Consola/(11200:11200): Modulo consola finalizado

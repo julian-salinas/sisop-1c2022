@@ -54,7 +54,7 @@ void procesar_conexion(void* void_args) {
                 for (int j = 0; j < memoria_config -> paginas_por_tabla; j++) {
                     if (cantidad_frames_necesarios) {
                         // Agregar un frame
-                        log_info(logger, "Se agregó un frame al proceso ID:%d", pcb -> PID);
+                        log_info(logger, "Se agregó una entrada al proceso ID:%d", pcb -> PID);
                         cantidad_frames_necesarios--;
                         continue;
                     }
