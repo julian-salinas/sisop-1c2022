@@ -78,7 +78,7 @@ void new_a_ready(void) {
     procesoAMover -> estado = READY;
 
     // Solicitar tabla de páginas a memoria
-    enviar_pcb(conexion_memoria, SOL_TABLA_PAGINAS, procesoAMover);
+    enviar_pcb(conexion_memoria, NUEVO_PROCESO, procesoAMover);
     uint8_t resp_memoria = recibir_header(conexion_memoria);
 
     if (resp_memoria == PROCESO_RECHAZADO) {

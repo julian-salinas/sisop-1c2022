@@ -53,10 +53,10 @@ t_tabla_segundo_nivel* crear_tabla_segundo_nivel(void) {
 
     tmp -> entradas = list_create();
 
-    // for (size_t i = 0; i < memoria_config -> paginas_por_tabla; i++)
-    // {
-    //     agregar_entrada_segundo_nivel(tmp);
-    // }
+    for (size_t i = 0; i < memoria_config -> paginas_por_tabla; i++)
+    {
+        agregar_entrada_segundo_nivel(tmp);
+    }
 
     char* string_id = string_from_format("%d", tmp -> id_tabla);
 
@@ -114,10 +114,13 @@ void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla) {
         return;
     }
     
-    // TODO: Obtener marco de página
-    // TODO: Crear entrada usando el marco obtenido
-    void* entrada = NULL;
+    t_entrada_segundo_nivel* entrada = malloc(sizeof(t_entrada_segundo_nivel));
     
+    entrada -> id_marco = -1;
+    entrada -> bit_presencia = 0;
+    entrada -> bit_uso = 0;
+    entrada -> bit_modificado = 0;
+
     list_add(tabla -> entradas, (void*) entrada);
 }
 

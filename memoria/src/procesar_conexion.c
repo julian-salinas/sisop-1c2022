@@ -18,7 +18,7 @@ void procesar_conexion(void* void_args) {
 
     switch (header) {
 
-        case CONEXION_CPU_MEMORIA:;
+        case CONEXION_CPU_MEMORIA:
             //enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
             conexion_cpu = crear_socket_cliente(IP_MEMORIA, "8001");
             log_info(logger, "Socket cliente memoria-cpu creado.");
@@ -26,7 +26,10 @@ void procesar_conexion(void* void_args) {
             break;
 
 
-        case SOL_TABLA_PAGINAS:
+        case NUEVO_PROCESO:
+
+            //retardo cpu
+            usleep(memoria_config -> retardo_memoria * 1000);
 
             pcb = socket_get_PCB(socket_cliente);
 
@@ -53,77 +56,101 @@ void procesar_conexion(void* void_args) {
 
                 for (int j = 0; j < memoria_config -> paginas_por_tabla; j++) {
                     if (cantidad_frames_necesarios) {
-                        // Agregar un frame
+
+                        agregar_entrada_segundo_nivel(tabla_segundo_nivel);
+                        
                         log_info(logger, "Se agregó una entrada al proceso ID:%d", pcb -> PID);
                         cantidad_frames_necesarios--;
                         continue;
                     }
                     break;
                 } 
+                agregar_entrada_primer_nivel(tabla_primer_nivel, tabla_segundo_nivel -> id_tabla);
             }
 
             // 3. Archivo .swap del proceso (y swappear páginas)
             // TODO
 
-            // Retornar al kernel la tabla de páginas
+            
+            //Modificar pcb agregando el valor de tabla de paginas
             pcb -> tabla_paginas = tabla_primer_nivel -> id_tabla;
+
+            //Devolver pcb al kernel
             enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
             break;
 
-            // //calculo cuántas tablas necesito
-            // int cantidad_tablas_segundo_nivel = pcb -> tamanio / tamanio_tabla;
-            // int cantidad_tablas_segundo_nivel_maximas = memoria_config -> paginas_por_tabla;
-
-            // if (cantidad_tablas_segundo_nivel > cantidad_tablas_segundo_nivel_maximas){ //si el tamaño del proceso es mayor al máximo permitido
-            //     enviar_pcb(socket_cliente, PROCESO_RECHAZADO, pcb);
-            //     return;
-            // }
-
-            // //creo las tablas de primer nivel
-            // t_tabla_primer_nivel* tabla_primer_nivel = crear_tabla_primer_nivel();
-
-            // //creo las tablas de segundo nivel
-            // for (size_t i = 0; i < cantidad_tablas_segundo_nivel; i++)
-            // {
-            //     t_tabla_segundo_nivel* tablas_segundo_nivel = crear_tabla_segundo_nivel();
-            //     agregar_entrada_primer_nivel(tabla_primer_nivel, tablas_segundo_nivel -> id_tabla);
-            // }
-
-            // //modificar pcb agregando el valor de tabla de paginas
-            // pcb -> tabla_paginas = tabla_primer_nivel -> id_tabla;
-
-            // //devolver pcb al kernel
-            // enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
-            // break;
-
 
         case PROCESO_SUSPENDIDO:
-            //se libera su espacio en memoria
+
+            //retardo cpu
+            usleep(memoria_config -> retardo_memoria * 1000);
+
             //se escribe en swap la info necesaria
+            //se actulizan los bits de las tablas
+            //Devolver pcb al kernel
+            enviar_pcb(socket_cliente, MEMORIA_OK, pcb); //no haría falta que el pcb vaya y venga, pero así nos queda igual en todos lados
             break;
 
 
         case PROCESO_FINALIZADO:
-            //se libera su espacio en memoria
+        
+            //retardo cpu
+            usleep(memoria_config -> retardo_memoria * 1000);
+
+            //se actualizan los bits de las tablas
             //se elimina su archivo de swap
-            //se le avisa a consola o le avisa el kernel?
+            enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
             break;
 
-        case PRIMER_ACCESO_MEMORIA:
-            // se recibe número de tabla de página de primer nivel
-            // y entrada de la tabla de primer nivel 
 
-            // el proceso quiere conocer en qué tabla de páginas de 2do nivel
-            // está direccionado el marco en que se encuentra la página
+        case PRIMER_ACCESO_MEMORIA:
+
+            //retardo cpu
+            usleep(memoria_config -> retardo_memoria * 1000);
+            
+            //recibo el nro de tabla de primer nivel y su entrada
+            t_buffer* payload = recibir_payload(socket);
+            int32_t nro_tabla_primer_nivel = buffer_take_INT32(payload);
+            int32_t entrada_tabla_primer_nivel = buffer_take_INT32(payload);
+
+            //obtengo la tabla de primer nivel y el nro de tabla de segundo nivel
+            t_tabla_primer_nivel* tabla_primer_nivel = (t_tabla_primer_nivel*)dictionary_get(tablas_primer_nivel, string_from_format("%d", nro_tabla_primer_nivel));
+            int32_t nro_tabla_segundo_nivel = (int32_t)list_get(tabla_primer_nivel -> entradas, entrada_tabla_primer_nivel);
+            
+            //le mando a cpu el nro de tabla de segundo nivel
+            enviar_boludeces_a_cpu(nro_tabla_segundo_nivel);
+
             break;
         
 
         case SEGUNDO_ACCESO_MEMORIA:
-            // conocer en qué marco está la misma
+
+            //retardo cpu
+            usleep(memoria_config -> retardo_memoria * 1000);
+            
+            //recibo el nro de tabla de primer nivel y su entrada
+            t_buffer* payload = recibir_payload(socket);
+            int32_t nro_tabla_segundo_nivel = buffer_take_INT32(payload);
+            int32_t entrada_tabla_segundo_nivel = buffer_take_INT32(payload);
+
+             //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
+            t_tabla_segundo_nivel* tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, string_from_format("%d", nro_tabla_segundo_nivel));
+            t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*)list_get(tabla_segundo_nivel -> entradas, entrada_tabla_segundo_nivel);
+
+            //obtengo el marco de la entrada
+            //acá debería chequear que la pagina esté en memoria y si no está cargarla usando el algoritmo
+            //pero no sé hacerlo, así que codeo el camino feliz
+
+            //le mando el nro de marco al cpu
+            enviar_boludeces_a_cpu(entrada -> id_marco);
             break;
         
 
         case TERCER_ACCESO_MEMORIA:
+
+            //retardo cpu
+            usleep(memoria_config -> retardo_memoria * 1000);
+            
             // acceder a la porción de memoria correspondiente 
             break;
 
@@ -156,4 +183,11 @@ void enviar_config_a_cpu(int socket_cliente, t_log* logger, uint8_t paginas_por_
 int round_div_up(int a, int b){
     if (a % b == 0) return a / b;
     return a / b + 1;
+}
+
+void enviar_boludeces_a_cpu(int32_t nro_tabla_segundo_nivel){
+    t_paquete* paquete = crear_paquete(MEMORIA_OK, sizeof(t_PCB));
+    agregar_a_buffer_INT32(paquete -> payload, nro_tabla_segundo_nivel);
+    enviar_paquete(socket, paquete);
+    destruir_paquete(paquete);
 }
