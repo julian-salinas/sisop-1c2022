@@ -5,3 +5,7 @@ void terminar_programa(char* module_name, int conexion, t_log* logger){
     liberar_socket_cliente(conexion);
     log_destroy(logger);
 }
+
+char* int_a_string(int numerito) {
+    return string_from_format("%d", numerito);
+}
