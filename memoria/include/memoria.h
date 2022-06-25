@@ -43,10 +43,9 @@
 
     typedef struct{
         void* puntero_frame; // Es la dirección de memoria a la que apunta
-        int32_t pagina; // La pagina que lo ocupa
-        int32_t bit_presencia;  // Indica si está presente en memoria real
         int32_t bit_ocupado;  // Indica si está en uso o no
-        int32_t bit_modificado;  // Indica si fue modificado
+        // int32_t bit_modificado;  // Indica si fue modificado
+        // int32_t bit_uso; //Indica si fue usado recientemente
         int32_t numero_frame; // Es el número de frame 
     } t_frame;
 
