@@ -35,7 +35,9 @@ void procesar_conexion(void* void_args) {
             ejecutar_ciclo_instruccion(pcb);
             liberar_socket_cliente(conexion_kernel);
             break;
-        case INTERRUPCION:
+        case INTERRUPCION: 
+            //TO DO
+            //Enviar OK a Kernel 
             sem_wait(mutex_interrupt);
             interrupcion=1;
             sem_post(mutex_interrupt);
@@ -51,6 +53,5 @@ void procesar_conexion(void* void_args) {
             return;
     }
 
-    log_warning(logger, "El cliente se desconecto de server %s", nombre_servidor);
     return;
 }
