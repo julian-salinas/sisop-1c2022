@@ -109,13 +109,13 @@ void procesar_conexion(void* void_args) {
             usleep(memoria_config -> retardo_memoria * 1000);
             
             //recibo el nro de tabla de primer nivel y su entrada
-            t_buffer* payload = recibir_payload(socket);
+            t_buffer* payload = recibir_payload(socket_cliente);
             int32_t nro_tabla_primer_nivel = buffer_take_INT32(payload);
             int32_t entrada_tabla_primer_nivel = buffer_take_INT32(payload);
 
             //obtengo la tabla de primer nivel y el nro de tabla de segundo nivel
-            t_tabla_primer_nivel* tabla_primer_nivel = (t_tabla_primer_nivel*)dictionary_get(tablas_primer_nivel, string_from_format("%d", nro_tabla_primer_nivel));
-            int32_t nro_tabla_segundo_nivel = (int32_t)list_get(tabla_primer_nivel -> entradas, entrada_tabla_primer_nivel);
+            t_tabla_primer_nivel* tabla_primer_nivel = (t_tabla_primer_nivel*) dictionary_get(tablas_primer_nivel, int_a_string(nro_tabla_primer_nivel));
+            int32_t nro_tabla_segundo_nivel = (int32_t) list_get(tabla_primer_nivel -> entradas, entrada_tabla_primer_nivel);
             
             //le mando a cpu el nro de tabla de segundo nivel
             enviar_boludeces_a_cpu(nro_tabla_segundo_nivel);
@@ -135,14 +135,14 @@ void procesar_conexion(void* void_args) {
 
              //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
             t_tabla_segundo_nivel* tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, string_from_format("%d", nro_tabla_segundo_nivel));
-            t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*)list_get(tabla_segundo_nivel -> entradas, entrada_tabla_segundo_nivel);
+            t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*) list_get(tabla_segundo_nivel -> entradas, entrada_tabla_segundo_nivel);
 
-            //obtengo el marco de la entrada
-            //acá debería chequear que la pagina esté en memoria y si no está cargarla usando el algoritmo
-            //pero no sé hacerlo, así que codeo el camino feliz
+            // Si el marco no está en memoria, pasarlo a memoria
+            validar_entrada_en_memoria(entrada);
 
             //le mando el nro de marco al cpu
             enviar_boludeces_a_cpu(entrada -> id_marco);
+
             break;
         
 
@@ -180,14 +180,37 @@ void enviar_config_a_cpu(int socket_cliente, t_log* logger, uint8_t paginas_por_
 }
 
 
-int round_div_up(int a, int b){
-    if (a % b == 0) return a / b;
-    return a / b + 1;
-}
-
 void enviar_boludeces_a_cpu(int32_t nro_tabla_segundo_nivel){
-    t_paquete* paquete = crear_paquete(MEMORIA_OK, sizeof(t_PCB));
+    t_paquete* paquete = crear_paquete(MEMORIA_OK, sizeof(int32_t));
     agregar_a_buffer_INT32(paquete -> payload, nro_tabla_segundo_nivel);
     enviar_paquete(socket, paquete);
     destruir_paquete(paquete);
+}
+
+
+void validar_entrada_en_memoria(t_entrada_segundo_nivel* entrada) {
+    // Si el bit de presencia está en 1, vaya y pase
+    if (entrada -> bit_presencia) {
+        return;
+    }
+
+    int posicion_frame_libre = get_posicion_frame_libre();
+
+    // Posibilidad de obtener un frame libre, sin tener que correr algoritmo de reemplazo
+    if (get_posicion_frame_libre) {
+        entrada -> id_marco = posicion_frame_libre;
+        return;
+    }
+
+    // Si el bit de presencia está en 0, no está en memoria, correr algoritmo de reemplazo
+    if (algoritmo_reemplazo == CLOCK) {
+        log_info(logger, "Utilizando algoritmo CLOCK para reemplazar un frame");
+        posicion_frame_libre = algoritmo_clock();
+        entrada -> id_marco = posicion_frame_libre;
+    }
+    else {
+        log_info(logger, "Utilizando algoritmo CLOCK MEJORADO para reemplazar un frame");
+        posicion_frame_libre = algoritmo_clock_mejorado();
+        entrada -> id_marco = posicion_frame_libre;        
+    }
 }

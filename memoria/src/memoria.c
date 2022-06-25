@@ -92,6 +92,15 @@ t_frame* get_frame_libre(void) {
     return NULL;
 }
 
+int get_posicion_frame_libre(void) {
+	for(uint32_t i = 0; i < list_size(lista_frames); i++){
+		if(frame_esta_libre(i)) return i;
+	}
+
+	// No hay frames libres
+    return 0;
+}
+
 
 int frame_esta_libre(uint32_t posicion_frame) {
 	return get_frame(posicion_frame) -> bit_ocupado == 0;
@@ -107,13 +116,7 @@ t_frame* get_frame(uint32_t posicion_frame) {
 }
 
 
-t_frame* clock_mejorado(void) {
-	t_frame* frame = get_frame_libre();
-	
-	// Si hay un frame libre, a casa
-    if (frame != NULL) {
-        return frame;
-    }
+int algoritmo_clock_mejorado(void) {
 
 	t_frame* frame;
 
@@ -132,7 +135,7 @@ t_frame* clock_mejorado(void) {
 				aumentar_contador_clock();
 
 				// Devolver frame encontrado
-                return frame;
+                return contador_clock;
             }
 
 			// Avanzar y volver a analizar
@@ -150,7 +153,7 @@ t_frame* clock_mejorado(void) {
 				// Avanzar para la proxima vez que se use
                 aumentar_contador_clock();
                 
-				return frame;
+				return contador_clock;
             }
 
 			// Si está modificado, setear su bit de ocupado en 0 (independientemente su valor anterior)
@@ -163,13 +166,7 @@ t_frame* clock_mejorado(void) {
 }
 
 
-t_frame* clock(void) {
-	t_frame* frame = get_frame_libre();
-	
-	// Si hay un frame libre, a casa
-    if (frame != NULL) {
-        return frame;
-    }
+int algoritmo_clock(void) {
 
 	t_frame* frame;
 
@@ -180,7 +177,7 @@ t_frame* clock(void) {
 			// Si se cumple bit_ocupado == 0, devolver frame
 			if (!frame -> bit_ocupado) {
 				aumentar_contador_clock();  // Avanzar para la proxima vez que se use
-				return frame;  // Devolver frame encontrado
+				return contador_clock;  // Devolver posicion del frame encontrado
 			}
 
 			// Avanzar y volver a analizar

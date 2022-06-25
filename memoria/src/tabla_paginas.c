@@ -95,6 +95,8 @@ t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco) {
 
 
 void agregar_entrada_primer_nivel(t_tabla_primer_nivel* tabla, int32_t id_tabla_segundo_nivel) {
+    
+    // Condicional técnicamente imposible - Esto se llega a loguear y tendríamos que empezar a rezar
     if (list_size(tabla -> entradas) >= memoria_config -> paginas_por_tabla) {
         log_error(logger, "No se puede agregar una entrada más a la tabla %d, ya tiene %d entradas", 
                   tabla -> id_tabla, 

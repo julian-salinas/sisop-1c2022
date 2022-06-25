@@ -44,9 +44,9 @@
     typedef struct{
         void* puntero_frame; // Es la dirección de memoria a la que apunta
         int32_t bit_ocupado;  // Indica si está en uso o no
+        int32_t numero_frame; // Es el número de frame 
         // int32_t bit_modificado;  // Indica si fue modificado
         // int32_t bit_uso; //Indica si fue usado recientemente
-        int32_t numero_frame; // Es el número de frame 
     } t_frame;
 
     typedef t_list t_lista_frames;
@@ -72,6 +72,13 @@
 
 
     /**
+     * @DESC: Devuelve la posición de un frame libre en caso de que exista
+     * @return posición de frame libre si encontró un frame - 0 si no encontró ningún frame libre
+     */ 
+    int get_posicion_frame_libre(void);
+
+
+    /**
      * @DESC: Verifica bit de ocupado de un frame 
      * @return: 1 si un frame está libre - 0 si no lo está
      */
@@ -86,10 +93,17 @@
 
 
     /**
-     * @DESC: Algoritmo de reemplazo clock mejorado
-     * @return: frame a reemplazar
+     * @DESC: Algoritmo de reemplazo clock
+     * @return: devuelve posicion del frame liberado
      */ 
-    t_frame* clock_mejorado(void);
+    int algoritmo_clock(void);
+    
+    
+    /**
+     * @DESC: Algoritmo de reemplazo clock mejorado
+     * @return: devuelve posicion del frame liberado
+     */ 
+    int algoritmo_clock_mejorado(void);
 
 
     /**
