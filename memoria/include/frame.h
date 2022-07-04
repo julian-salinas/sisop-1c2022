@@ -50,11 +50,4 @@
      */     
     t_frame* get_frame(uint32_t posicion_frame); 
 
-
-    /**
-     * @DESC: Concatenar en una única lista todos los frames que un proceso tiene asignados
-     * @param id: id del proceso
-     */ 
-    t_list* get_entradas_en_memoria_proceso(uint32_t id);
-
 #endif /* FRAME_H */

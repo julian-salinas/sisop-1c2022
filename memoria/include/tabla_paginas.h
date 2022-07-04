@@ -43,6 +43,7 @@
      *  - entradas: lista de UINT32_T
      */ 
     typedef struct {
+        int32_t id_tabla;
         t_list* entradas;
     } t_tabla_primer_nivel;
     
@@ -111,5 +112,17 @@
      * @param tabla: estructura tabla de segundo nivel a la que se agregará la entrada
      */ 
     void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla);
+
+
+    /**
+     * @DESC: Concatenar en una única lista todos los frames que un proceso tiene asignados
+     * @param id: id del proceso
+     */ 
+    t_list* get_entradas_en_memoria_proceso(uint32_t id);
+
+    /**
+     * @DESC: Obtener la cantidad de entradas de segundo nivel que tiene un proceso
+     */ 
+    int get_cantidad_entradas_proceso(uint32_t PID);
 
 #endif

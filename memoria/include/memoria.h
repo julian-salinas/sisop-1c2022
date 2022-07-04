@@ -15,6 +15,7 @@
     #include "memoria_config.h"
     #include "swap.h"
     #include "frame.h"
+    #include "tabla_paginas.h"
 
     //includes de shared
     #include "networking.h"
@@ -54,14 +55,14 @@
      * @DESC: Algoritmo de reemplazo clock
      * @return: devuelve posicion del frame liberado
      */ 
-    int algoritmo_clock(void);
+    int algoritmo_clock(int id_proceso);
     
     
     /**
      * @DESC: Algoritmo de reemplazo clock mejorado
      * @return: devuelve posicion del frame liberado
      */ 
-    int algoritmo_clock_mejorado(void);
+    int algoritmo_clock_mejorado(int id_proceso);
 
 
     /**

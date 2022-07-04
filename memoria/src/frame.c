@@ -58,22 +58,3 @@ t_frame* get_frame(uint32_t posicion_frame) {
 
 	return frame;
 }
-
-
-t_lista_frames* get_entradas_en_memoria_proceso(uint32_t id_proceso) {
-	t_list* entradas_en_memoria = list_create();
-	t_tabla_primer_nivel* tp_lvl1 = get_tabla_primer_nivel(id_proceso);
-
-	for (uint32_t i = 0; i < memoria_config -> paginas_por_tabla; i++) {
-		t_tabla_segundo_nivel* tp_lvl2 = get_tabla_segundo_nivel((uint32_t) list_get(tp_lvl1 -> entradas, i));
-
-		for (uint32_t j = 0; j < memoria_config -> paginas_por_tabla; j++) {
-			t_entrada_segundo_nivel* entrada = list_get(tp_lvl2 -> entradas, j);
-			if (entrada -> bit_presencia) {
-				list_add(entradas_en_memoria, entrada);
-			}
-		}
-	}
-
-	return entradas_en_memoria;
-}

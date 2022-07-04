@@ -40,7 +40,7 @@ void procesar_conexion(void* void_args) {
             }
 
             //Modificar pcb agregando el valor de tabla de paginas
-            pcb -> tabla_paginas = id_tabla;
+            pcb -> tabla_paginas = id_tabla_creada;
 
             //Devolver pcb al kernel
             enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
@@ -90,36 +90,36 @@ void procesar_conexion(void* void_args) {
             break;
         
 
-        case SEGUNDO_ACCESO_MEMORIA:
+        // case SEGUNDO_ACCESO_MEMORIA:
 
-            //retardo cpu
-            usleep(memoria_config -> retardo_memoria * 1000);
+        //     //retardo cpu
+        //     usleep(memoria_config -> retardo_memoria * 1000);
             
-            //recibo el nro de tabla de primer nivel y su entrada
-            t_buffer* payload = recibir_payload(socket);
-            int32_t nro_tabla_segundo_nivel = buffer_take_INT32(payload);
-            int32_t entrada_tabla_segundo_nivel = buffer_take_INT32(payload);
+        //     //recibo el nro de tabla de primer nivel y su entrada
+        //     t_buffer* payload = recibir_payload(socket);
+        //     int32_t nro_tabla_segundo_nivel = buffer_take_INT32(payload);
+        //     int32_t entrada_tabla_segundo_nivel = buffer_take_INT32(payload);
 
-             //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
-            t_tabla_segundo_nivel* tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, string_from_format("%d", nro_tabla_segundo_nivel));
-            t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*) list_get(tabla_segundo_nivel -> entradas, entrada_tabla_segundo_nivel);
+        //      //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
+        //     t_tabla_segundo_nivel* tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, string_from_format("%d", nro_tabla_segundo_nivel));
+        //     t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*) list_get(tabla_segundo_nivel -> entradas, entrada_tabla_segundo_nivel);
 
-            // Si el marco no está en memoria, pasarlo a memoria
-            validar_entrada_en_memoria(entrada);
+        //     // Si el marco no está en memoria, pasarlo a memoria
+        //     validar_entrada_en_memoria(entrada);
 
-            //le mando el nro de marco al cpu
-            enviar_boludeces_a_cpu(entrada -> id_marco);
+        //     //le mando el nro de marco al cpu
+        //     enviar_boludeces_a_cpu(entrada -> nro_frame);
 
-            break;
+        //     break;
         
 
-        case TERCER_ACCESO_MEMORIA:
+        // case TERCER_ACCESO_MEMORIA:
 
-            //retardo cpu
-            usleep(memoria_config -> retardo_memoria * 1000);
+        //     //retardo cpu
+        //     usleep(memoria_config -> retardo_memoria * 1000);
             
-            // acceder a la porción de memoria correspondiente 
-            break;
+        //     // acceder a la porción de memoria correspondiente 
+        //     break;
 
 
         case -1:
@@ -156,35 +156,35 @@ void enviar_boludeces_a_cpu(int32_t nro_tabla_segundo_nivel){
 
 
 // no sé en qué estaba pensando cuando hice esta función, creo que no tiene ningún sentido, porlas la dejo
-void validar_entrada_en_memoria(t_entrada_segundo_nivel* entrada) {
-    // Si el bit de presencia está en 1, vaya y pase
-    if (entrada -> bit_presencia) {
-        return;
-    }
+// void validar_entrada_en_memoria(t_entrada_segundo_nivel* entrada) {
+//     // Si el bit de presencia está en 1, vaya y pase
+//     if (entrada -> bit_presencia) {
+//         return;
+//     }
 
-    int posicion_frame_libre = get_posicion_frame_libre();
+//     int posicion_frame_libre = get_posicion_frame_libre();
 
-    // Posibilidad de obtener un frame libre, sin tener que correr algoritmo de reemplazo
-    if (get_posicion_frame_libre) {
-        entrada -> id_marco = posicion_frame_libre;
-        return;
-    }
+//     // Posibilidad de obtener un frame libre, sin tener que correr algoritmo de reemplazo
+//     if (get_posicion_frame_libre) {
+//         entrada -> nro_frame = posicion_frame_libre;
+//         return;
+//     }
 
-    // Si el bit de presencia está en 0, no está en memoria, correr algoritmo de reemplazo
-    if (algoritmo_reemplazo == CLOCK) {
-        log_info(logger, "Utilizando algoritmo CLOCK para reemplazar un frame");
-        posicion_frame_libre = algoritmo_clock();
-        entrada -> id_marco = posicion_frame_libre;
-    }
-    else {
-        log_info(logger, "Utilizando algoritmo CLOCK MEJORADO para reemplazar un frame");
-        posicion_frame_libre = algoritmo_clock_mejorado();
-        entrada -> id_marco = posicion_frame_libre;        
-    }
-}
+//     // Si el bit de presencia está en 0, no está en memoria, correr algoritmo de reemplazo
+//     if (algoritmo_reemplazo == CLOCK) {
+//         log_info(logger, "Utilizando algoritmo CLOCK para reemplazar un frame");
+//         posicion_frame_libre = algoritmo_clock();
+//         entrada -> nro_frame = posicion_frame_libre;
+//     }
+//     else {
+//         log_info(logger, "Utilizando algoritmo CLOCK MEJORADO para reemplazar un frame");
+//         posicion_frame_libre = algoritmo_clock_mejorado();
+//         entrada -> nro_frame = posicion_frame_libre;        
+//     }
+// }
 
 
-int crear_proceso_memoria(t_PCB* proceso) {
+int crear_proceso_memoria(t_PCB* pcb) {
     // Validar que el tamaño del proceso no está re zarpado
     if (pcb -> tamanio > (memoria_config -> tamanio_pagina * memoria_config -> paginas_por_tabla * memoria_config -> paginas_por_tabla)) {
         log_error(logger, "Proceso con ID:%d es demasiado grande y no puede alojarse en memoria", pcb -> PID);
@@ -199,7 +199,7 @@ int crear_proceso_memoria(t_PCB* proceso) {
 
     /* ESTRUCTURAS NECESARIAS PARA PROCESO */
     // Archivo swap    
-    crear_archivo_proceso(pcb -> PID, pcb -> tamanio)
+    crear_archivo_proceso(pcb -> PID);
 
     // Tabla de primer nivel
     t_tabla_primer_nivel* tabla_primer_nivel = crear_tabla_primer_nivel(pcb -> PID);

@@ -19,10 +19,10 @@ int main(void) {
 	// Elegir entre CLOCK y CLOCK_MEJORADO
 	elegir_algoritmo_reemplazo(memoria_config -> algoritmo_reemplazo);
 
-	diccionario_clocks = dict_create();
+	diccionario_clocks = dictionary_create();
 
 	generarFrames(memoria, memoria_config -> tamanio_memoria, memoria_config -> tamanio_pagina);
-
+	
 	int server_fd = iniciar_servidor(logger, "memoria", memoria_config -> ip_memoria, memoria_config -> puerto_escucha);	
 	
 	log_info(logger, "Memoria lista para recibir al cliente");
@@ -59,7 +59,7 @@ void elegir_algoritmo_reemplazo(char* algoritmo) {
 int algoritmo_clock_mejorado(int id_proceso) {
 
 	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(id_proceso);
-	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, id_proceso);
+	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(id_proceso));
 
 	while (1) {
 		for (uint32_t i = 0; i < list_size(entradas_en_memoria); i++) {
@@ -84,10 +84,10 @@ int algoritmo_clock_mejorado(int id_proceso) {
 }
 
 
-int algoritmo_clock_mejorado(int id_proceso) {
+int algoritmo_clock(int id_proceso) {
 
 	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(id_proceso);
-	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, id_proceso);
+	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(id_proceso));
 
 	while (1) {
 		for (uint32_t i = 0; i < list_size(entradas_en_memoria); i++) {
