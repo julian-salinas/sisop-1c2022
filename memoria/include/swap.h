@@ -8,15 +8,16 @@
     #include <string.h>
     #include <stdlib.h>
     #include <commons/string.h>
-    
+
     #include "memoria.h"
     #include "frame.h"
     #include "tabla_paginas.h"
+    #include "memoria_config.h"
 
     void eliminar_archivo_proceso(uint32_t PID);
     void crear_archivo_proceso(uint32_t PID);
 
-
+    
     typedef struct {
         int32_t nro_pagina;
         uint32_t dato;
@@ -30,6 +31,8 @@
         t_page_data* entradas;
     } t_swap;
 
+
+    t_dictionary* diccionario_swap;
 
     t_page_data* crear_page_data(int32_t nro_pagina, uint32_t dato);
 
@@ -49,7 +52,7 @@
     void escribir_indice(t_swap* archivito_swap, int indice, t_page_data* page_data);
 
 
-    void swappear(t_entrada_segundo_nivel* entrada);
+    void swappear_a_disco(uint32_t PID, t_entrada_segundo_nivel* entrada);
 
 
 #endif /* SWAP_H */

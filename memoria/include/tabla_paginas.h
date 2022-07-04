@@ -125,4 +125,4 @@
      */ 
     int get_cantidad_entradas_proceso(uint32_t PID);
 
-#endif
+#endif /* TABLA_PAGINAS_H */

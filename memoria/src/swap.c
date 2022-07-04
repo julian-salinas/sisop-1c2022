@@ -74,6 +74,7 @@ t_swap* crear_archivo_swap(uint32_t PID, size_t tamanio) {
     }
 
     log_info(logger, "Se creó el archivo %s para el proceso ID:%d", archivito_swap -> path, PID);
+    dictionary_put(diccionario_swap, int_a_string(PID), archivito_swap);
 
     return archivito_swap;
 }
@@ -105,13 +106,14 @@ void escribir_indice(t_swap* archivito_swap, int indice, t_page_data* page_data)
 }
 
 
-void swappear(t_entrada_segundo_nivel* entrada) {
+void swappear_a_disco(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     // Si el bit de modificado está en 1, leer el marco y almacenar el dato
-    int dato;
+    uint32_t dato;
 
     if (entrada -> bit_modificado) {
-        // TODO: Leer marco
+        // TODO: Leer frame
         entrada -> bit_modificado = 0;
+        dato = leer_contenido_frame(entrada -> nro_frame);
     }
     else {
         dato = 0;
@@ -119,11 +121,40 @@ void swappear(t_entrada_segundo_nivel* entrada) {
 
     entrada -> bit_presencia = 0;
     entrada -> bit_uso = 0;
+    entrada -> bit_modificado = 0;
+
+    // Liberar el frame
+    liberar_frame(entrada -> nro_frame);
 
     // TODO: encontrar una forma piola de saber el numero de página
     int nro_pagina = 1; // ¡cambiar!
+
     t_page_data* page_data = crear_page_data(nro_pagina, dato);
+    t_swap* swap_proceso = (t_swap*) dictionary_get(diccionario_swap, int_a_string(PID));
+    escribir_indice(swap_proceso, nro_pagina, page_data);
+}
 
-    // ¿Liberar el frame? Komoasemoseso?
 
+t_page_data* swappear_a_memoria(uint32_t PID, t_entrada_segundo_nivel* entrada) {
+    t_page_data* page_data = malloc(sizeof(t_page_data));
+
+    // TODO: encontrar una forma piola de saber el numero de página   
+    int nro_pagina = 1;
+
+    t_swap* swap_proceso = (t_swap*) dictionary_get(diccionario_swap, int_a_string(PID));
+    page_data = leer_indice(swap_proceso, nro_pagina);
+
+    if (list_size(get_entradas_en_memoria_proceso(PID)) >= memoria_config -> marcos_por_proceso) {
+        // Correr algoritmo de reemplazo
+    }
+    else {
+        // Asignarle un frame
+
+        // ¿Qué pasa si no hay frames libres, pero el proceos no tiene la cant max de frames?
+    }
+
+    entrada -> bit_presencia = 1;
+    entrada -> bit_uso = 1;
+
+    return page_data;
 }

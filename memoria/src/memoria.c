@@ -15,6 +15,7 @@ int main(void) {
 	
 	// Inicializar memoria
 	void* memoria = inicializar_memoria();
+	diccionario_swap = dictionary_create();
 
 	// Elegir entre CLOCK y CLOCK_MEJORADO
 	elegir_algoritmo_reemplazo(memoria_config -> algoritmo_reemplazo);
@@ -56,17 +57,17 @@ void elegir_algoritmo_reemplazo(char* algoritmo) {
 }
 
 
-int algoritmo_clock_mejorado(int id_proceso) {
+int algoritmo_clock_mejorado(uint32_t PID) {
 
-	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(id_proceso);
-	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(id_proceso));
+	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(PID);
+	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(PID));
 
 	while (1) {
 		for (uint32_t i = 0; i < list_size(entradas_en_memoria); i++) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if ((!entrada -> bit_uso) && (!entrada -> bit_modificado)) {
-				swappear(entrada);
+				swappear_a_disco(entrada, PID);
 				return entrada -> nro_frame;
 			}
 		}
@@ -75,7 +76,7 @@ int algoritmo_clock_mejorado(int id_proceso) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if (!entrada -> bit_uso) {
-				swappear(entrada);
+				swappear_a_disco(entrada, PID);
 				return entrada -> nro_frame;
 			}
 			entrada -> bit_uso = 0;
@@ -84,17 +85,17 @@ int algoritmo_clock_mejorado(int id_proceso) {
 }
 
 
-int algoritmo_clock(int id_proceso) {
+int algoritmo_clock(uint32_t PID) {
 
-	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(id_proceso);
-	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(id_proceso));
+	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(PID);
+	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(PID));
 
 	while (1) {
 		for (uint32_t i = 0; i < list_size(entradas_en_memoria); i++) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if (!entrada -> bit_uso) {
-				swappear(entrada);
+				swappear_a_disco(entrada, PID);
 				return entrada -> nro_frame;
 			}
 		}

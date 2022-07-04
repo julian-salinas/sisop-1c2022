@@ -55,14 +55,14 @@
      * @DESC: Algoritmo de reemplazo clock
      * @return: devuelve posicion del frame liberado
      */ 
-    int algoritmo_clock(int id_proceso);
+    int algoritmo_clock(uint32_t id_proceso);
     
     
     /**
      * @DESC: Algoritmo de reemplazo clock mejorado
      * @return: devuelve posicion del frame liberado
      */ 
-    int algoritmo_clock_mejorado(int id_proceso);
+    int algoritmo_clock_mejorado(uint32_t id_proceso);
 
 
     /**
