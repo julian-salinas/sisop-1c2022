@@ -32,48 +32,15 @@ void procesar_conexion(void* void_args) {
             usleep(memoria_config -> retardo_memoria * 1000);
 
             pcb = socket_get_PCB(socket_cliente);
+            
+            int id_tabla_creada = crear_proceso_memoria(pcb);
 
-            // Validar que el tamaño del proceso no está re zarpado
-            if (pcb -> tamanio > (memoria_config -> tamanio_pagina * memoria_config -> paginas_por_tabla * memoria_config -> paginas_por_tabla)) {
-                log_error(logger, "Proceso con ID:%d es demasiado grande y no puede alojarse en memoria", pcb -> PID);
+            if (!id_tabla_creada) {
                 enviar_pcb(socket_cliente, PROCESO_RECHAZADO, pcb);
             }
 
-            // Calcular cuantos frames va a necesitar el proceso (cuantas páginas) - Redondear para arriba
-            int cantidad_frames_necesarios = round_div_up(pcb -> tamanio, memoria_config -> tamanio_pagina);
-
-            // Calcular cantidad de tablas de segundo nivel necesarias - Redondear para arriba
-            int cantidad_tablas_necesarias = round_div_up(cantidad_frames_necesarios, memoria_config -> paginas_por_tabla);
-
-            // Crear las tablas estructuras necesarias para el proceso
-            // 1. Tabla de primer nivel
-            t_tabla_primer_nivel* tabla_primer_nivel = crear_tabla_primer_nivel();
-
-            // 2. Tablas de segundo nivel
-            t_tabla_segundo_nivel* tabla_segundo_nivel;
-            for(int i = 0; i < cantidad_tablas_necesarias; i++) {
-                tabla_segundo_nivel = crear_tabla_segundo_nivel();
-
-                for (int j = 0; j < memoria_config -> paginas_por_tabla; j++) {
-                    if (cantidad_frames_necesarios) {
-
-                        agregar_entrada_segundo_nivel(tabla_segundo_nivel);
-                        
-                        log_info(logger, "Se agregó una entrada al proceso ID:%d", pcb -> PID);
-                        cantidad_frames_necesarios--;
-                        continue;
-                    }
-                    break;
-                } 
-                agregar_entrada_primer_nivel(tabla_primer_nivel, tabla_segundo_nivel -> id_tabla);
-            }
-
-            // 3. Archivo .swap del proceso (y swappear páginas)
-            // TODO
-
-            
             //Modificar pcb agregando el valor de tabla de paginas
-            pcb -> tabla_paginas = tabla_primer_nivel -> id_tabla;
+            pcb -> tabla_paginas = id_tabla;
 
             //Devolver pcb al kernel
             enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
@@ -188,6 +155,7 @@ void enviar_boludeces_a_cpu(int32_t nro_tabla_segundo_nivel){
 }
 
 
+// no sé en qué estaba pensando cuando hice esta función, creo que no tiene ningún sentido, porlas la dejo
 void validar_entrada_en_memoria(t_entrada_segundo_nivel* entrada) {
     // Si el bit de presencia está en 1, vaya y pase
     if (entrada -> bit_presencia) {
@@ -213,4 +181,50 @@ void validar_entrada_en_memoria(t_entrada_segundo_nivel* entrada) {
         posicion_frame_libre = algoritmo_clock_mejorado();
         entrada -> id_marco = posicion_frame_libre;        
     }
+}
+
+
+int crear_proceso_memoria(t_PCB* proceso) {
+    // Validar que el tamaño del proceso no está re zarpado
+    if (pcb -> tamanio > (memoria_config -> tamanio_pagina * memoria_config -> paginas_por_tabla * memoria_config -> paginas_por_tabla)) {
+        log_error(logger, "Proceso con ID:%d es demasiado grande y no puede alojarse en memoria", pcb -> PID);
+        return 0; 
+    }
+
+    // Calcular cuantos frames va a necesitar el proceso (cuantas páginas) - Redondear para arriba
+    int cantidad_frames_necesarios = round_div_up(pcb -> tamanio, memoria_config -> tamanio_pagina);
+
+    // Calcular cantidad de tablas de segundo nivel necesarias - Redondear para arriba
+    int cantidad_tablas_necesarias = round_div_up(cantidad_frames_necesarios, memoria_config -> paginas_por_tabla);
+
+    /* ESTRUCTURAS NECESARIAS PARA PROCESO */
+    // Archivo swap    
+    crear_archivo_proceso(pcb -> PID, pcb -> tamanio)
+
+    // Tabla de primer nivel
+    t_tabla_primer_nivel* tabla_primer_nivel = crear_tabla_primer_nivel(pcb -> PID);
+
+    // Tablas de segundo nivel
+    t_tabla_segundo_nivel* tabla_segundo_nivel;
+    for(int i = 0; i < cantidad_tablas_necesarias; i++) {
+        tabla_segundo_nivel = crear_tabla_segundo_nivel();
+
+        for (int j = 0; j < memoria_config -> paginas_por_tabla; j++) {
+            if (cantidad_frames_necesarios) {
+                agregar_entrada_segundo_nivel(tabla_segundo_nivel);
+                    
+                log_info(logger, "Se agregó una entrada a la tabla de segundo nivel %d del proceso ID:%d", 
+                        tabla_segundo_nivel -> id_tabla, 
+                        pcb -> PID);
+
+                cantidad_frames_necesarios--;
+                continue;
+            }
+            break;
+        } 
+        agregar_entrada_primer_nivel(tabla_primer_nivel, tabla_segundo_nivel -> id_tabla);
+        log_info(logger, "Se agregó una entrada a la tabla de primer nivel del proceo %d", pcb -> PID);
+    }
+
+    return tabla_primer_nivel -> id_tabla;
 }

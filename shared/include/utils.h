@@ -17,4 +17,9 @@
      */
     char* int_a_string(int numerito); 
 
+    /**
+     * @DESC: Realiza la división a/b y retorna el resultado de redondear ese valor para arriba
+     */ 
+    int round_div_up(int a, int b);
+
 #endif /* UTILS_H */

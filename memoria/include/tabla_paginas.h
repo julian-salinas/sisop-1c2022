@@ -9,6 +9,7 @@
     #include <commons/collections/dictionary.h>
     #include <commons/collections/list.h>
 
+    #include "utils.h"
     #include "memoria.h"
 
     // Diccionarios que contienen todas las tablas
@@ -19,13 +20,8 @@
     sem_t* mutex_tablas_primer_nivel;
     sem_t* mutex_tablas_segundo_nivel;
 
-    // Contadores para IDs de tablas
-    int contador_id_primer_nivel;
-    int contador_id_segundo_nivel;
-
-    // Mutex para contadores de IDs de tablas
-    sem_t* mutex_id_primer_nivel;
-    sem_t* mutex_id_segundo_nivel;
+    int id_tablas_segundo_nivel;
+    sem_t* mutex_id_tablas;
 
     /**
      * @DESC: Entrada de una tabla de segundo nivel
@@ -34,9 +30,9 @@
      *  - bit_modificado: 1 si el marco fue modificado
      */ 
     typedef struct {
-        uint32_t id_marco;
+        int32_t nro_frame;
         int8_t bit_presencia;
-        int8_t bit_uso;
+        int8_t bit_uso; 
         int8_t bit_modificado; 
     } t_entrada_segundo_nivel;
 
@@ -44,10 +40,9 @@
     /**
      * Tabla de primer nivel, "tabla previa", cada entrada hace referencia a una tabla de 2do nivel
      *  - cantidad_entradas: cantidad de filas de la tabla
-     *  - entradas: filas de la tabla (valores)
+     *  - entradas: lista de UINT32_T
      */ 
     typedef struct {
-        int32_t id_tabla;
         t_list* entradas;
     } t_tabla_primer_nivel;
     
@@ -73,7 +68,7 @@
      * @DESC: Crear una tabla de primer nivel (hacer el malloc e inicializar valores)
      * @return t_tabla_primer_nivel
      */ 
-    t_tabla_primer_nivel* crear_tabla_primer_nivel(void);
+    t_tabla_primer_nivel* crear_tabla_primer_nivel(int id_tabla);
 
 
     /**
@@ -97,10 +92,10 @@
 
     /**
      * @DESC: Crea un puntero a una estructura de tipo entrada para tabla de segundo nivel
-     * @param id_marco: id del marco/frame que vincula una entrada a un marco
+     * @param nro_frame: número de frame que está ocupando la página - frame que vincula una entrada a un marco
      * Todos los bits de estado están inicializados en 0
      */
-    t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int id_marco);
+    t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int nro_frame);
 
 
     /**
