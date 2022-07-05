@@ -10,14 +10,6 @@
     #include <commons/collections/dictionary.h>
     #include <commons/collections/list.h>
 
-    // includes del módulo
-    #include "procesar_conexion.h"
-    #include "memoria_config.h"
-    #include "swap.h"
-    #include "frame.h"
-    #include "tabla_paginas.h"
-
-    //includes de shared
     #include "networking.h"
     #include "serializacion.h"
     #include "logging.h"
@@ -25,10 +17,15 @@
     #include "utils.h"
     #include "proceso.h"
 
+    #include "memoria_config.h"
+    #include "tabla_paginas.h"
+    #include "frame.h"
+    #include "swap.h"
+    #include "procesar_conexion.h"
+
     int conexion_cpu;
     int tamanio_tabla;
 
-    // Logger
     t_log* logger;
 
     t_memoria_config* memoria_config;
@@ -55,14 +52,14 @@
      * @DESC: Algoritmo de reemplazo clock
      * @return: devuelve posicion del frame liberado
      */ 
-    int algoritmo_clock(uint32_t id_proceso);
+    t_entrada_segundo_nivel* algoritmo_clock(uint32_t id_proceso);
     
     
     /**
      * @DESC: Algoritmo de reemplazo clock mejorado
      * @return: devuelve posicion del frame liberado
      */ 
-    int algoritmo_clock_mejorado(uint32_t id_proceso);
+    t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t id_proceso);
 
 
     /**
@@ -70,5 +67,6 @@
      * Si al aumentar el contador se superaría la cantidad de frames que tenemos, el contador se setea en 0
      */ 
     int aumentar_contador_clock(int contador_actual, int maximo);
+
 
 #endif /* MEMORIA_H_ */

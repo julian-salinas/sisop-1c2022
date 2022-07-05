@@ -1,6 +1,5 @@
 #include "tabla_paginas.h"
 
-
 void inicializar_tablas_de_paginas(void) {
     tablas_primer_nivel = dictionary_create();
     tablas_segundo_nivel = dictionary_create();
@@ -64,9 +63,10 @@ void destruir_tabla_segundo_nivel(t_tabla_segundo_nivel* tabla) {
 } 
 
 
-t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int nro_frame) {
+t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int32_t nro_pagina, int32_t nro_frame) {
     t_entrada_segundo_nivel* tmp = malloc(sizeof(t_entrada_segundo_nivel));
     
+    tmp -> nro_pagina = nro_pagina;
     tmp -> nro_frame = nro_frame;
     tmp -> bit_presencia = 0;
     tmp -> bit_uso = 0;
@@ -81,9 +81,10 @@ void agregar_entrada_primer_nivel(t_tabla_primer_nivel* tabla, int32_t id_tabla_
 }
 
 
-void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla) {
+void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla, int32_t nro_pagina) {
     t_entrada_segundo_nivel* entrada = malloc(sizeof(t_entrada_segundo_nivel));
     
+    entrada -> nro_pagina = nro_pagina;
     entrada -> nro_frame = -1;
     entrada -> bit_presencia = 0;
     entrada -> bit_uso = 0;
@@ -117,7 +118,7 @@ t_tabla_segundo_nivel* get_tabla_segundo_nivel(uint32_t id) {
 }
 
 
-t_lista_frames* get_entradas_en_memoria_proceso(uint32_t PID) {
+t_list* get_entradas_en_memoria_proceso(uint32_t PID) {
 	t_list* entradas_en_memoria = list_create();
 	t_tabla_primer_nivel* tp_lvl1 = get_tabla_primer_nivel(PID);
 

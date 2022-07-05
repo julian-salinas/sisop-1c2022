@@ -1,7 +1,7 @@
 #include "frame.h"
 
 
-void generarFrames(void* memoria, uint32_t tamanio_memoria, uint32_t tamanio_frame){
+void generarFrames(void* memoria, uint32_t tamanio_memoria, uint32_t tamanio_frame) {
 	int cantidad_frames = tamanio_memoria / tamanio_frame;
 	void* aux = memoria;
 	int contador_frame = 0;
@@ -57,4 +57,34 @@ t_frame* get_frame(uint32_t posicion_frame) {
 	sem_post(mutex_lista_frames);
 
 	return frame;
+}
+
+
+uint32_t leer_contenido_frame(uint32_t nro_frame) {
+	t_frame* frame = get_frame(nro_frame);
+	uint32_t dato;
+	memcpy(&dato, frame -> puntero_frame, sizeof(uint32_t));
+	return dato;
+}
+
+
+void escribir_frame(t_frame* frame, uint32_t contenido) {
+	memcpy(frame -> puntero_frame, &contenido, sizeof(uint32_t));
+}
+
+
+void escribir_frame_n(uint32_t nro_frame, uint32_t contenido) {
+	t_frame* frame = get_frame(nro_frame);
+	memcpy(frame -> puntero_frame, &contenido, sizeof(uint32_t));
+}
+
+
+void liberar_frame(t_frame* frame) {
+	frame -> bit_ocupado = 0;
+}
+
+
+void liberar_frame_n(uint32_t nro_frame) {
+	t_frame* frame = get_frame(nro_frame);
+	frame -> bit_ocupado = 0;
 }

@@ -8,9 +8,7 @@
     #include <commons/string.h>
     #include <commons/collections/dictionary.h>
     #include <commons/collections/list.h>
-
     #include "utils.h"
-    #include "memoria.h"
 
     // Diccionarios que contienen todas las tablas
     t_dictionary* tablas_primer_nivel;
@@ -26,10 +24,11 @@
     /**
      * @DESC: Entrada de una tabla de segundo nivel
      *  - bit_presencia: 1 si el marco está en memoria principal
-     *  - bit_u: indica si la pagina fue usada recientemente, se pone en 1 cuando se trae a memoria y lo modifica el algoritmo clock
+     *  - bit_uso: indica si la pagina fue usada recientemente, se pone en 1 cuando se trae a memoria y lo modifica el algoritmo clock
      *  - bit_modificado: 1 si el marco fue modificado
      */ 
     typedef struct {
+        int32_t nro_pagina;
         int32_t nro_frame;
         int8_t bit_presencia;
         int8_t bit_uso; 
@@ -96,7 +95,7 @@
      * @param nro_frame: número de frame que está ocupando la página - frame que vincula una entrada a un marco
      * Todos los bits de estado están inicializados en 0
      */
-    t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int nro_frame);
+    t_entrada_segundo_nivel* crear_entrada_segundo_nivel(int32_t nro_frame, int32_t nro_pagina);
 
 
     /**
@@ -111,7 +110,7 @@
      * @DESC: Agrega una entrada a la lista de entradas de una tabla de segundo nivel
      * @param tabla: estructura tabla de segundo nivel a la que se agregará la entrada
      */ 
-    void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla);
+    void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla, int nro_pagina);
 
 
     /**

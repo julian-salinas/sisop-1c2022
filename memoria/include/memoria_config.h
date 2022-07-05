@@ -1,8 +1,9 @@
 #ifndef MEMORIA_CONFIG
 #define MEMORIA_CONFIG
 
-    #include "networking.h"
-    #include "serializacion.h"
+    #include <commons/config.h>
+    #include <netdb.h>
+    #include <stdlib.h>
 
     typedef struct
     {

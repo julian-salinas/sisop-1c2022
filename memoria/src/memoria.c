@@ -1,6 +1,5 @@
 #include "memoria.h"
 
-
 int main(void) {
 
 	// Inicializar config
@@ -57,7 +56,7 @@ void elegir_algoritmo_reemplazo(char* algoritmo) {
 }
 
 
-int algoritmo_clock_mejorado(uint32_t PID) {
+t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 
 	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(PID);
 	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(PID));
@@ -67,8 +66,8 @@ int algoritmo_clock_mejorado(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if ((!entrada -> bit_uso) && (!entrada -> bit_modificado)) {
-				swappear_a_disco(entrada, PID);
-				return entrada -> nro_frame;
+				swappear(PID, entrada);
+				return entrada;
 			}
 		}
 
@@ -76,8 +75,8 @@ int algoritmo_clock_mejorado(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if (!entrada -> bit_uso) {
-				swappear_a_disco(entrada, PID);
-				return entrada -> nro_frame;
+				swappear(PID, entrada);
+				return entrada;
 			}
 			entrada -> bit_uso = 0;
 		}
@@ -85,7 +84,7 @@ int algoritmo_clock_mejorado(uint32_t PID) {
 }
 
 
-int algoritmo_clock(uint32_t PID) {
+t_entrada_segundo_nivel* algoritmo_clock(uint32_t PID) {
 
 	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(PID);
 	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(PID));
@@ -95,8 +94,8 @@ int algoritmo_clock(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if (!entrada -> bit_uso) {
-				swappear_a_disco(entrada, PID);
-				return entrada -> nro_frame;
+				swappear(PID, entrada);
+				return entrada;
 			}
 		}
 	}

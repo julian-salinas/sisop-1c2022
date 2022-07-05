@@ -90,36 +90,40 @@ void procesar_conexion(void* void_args) {
             break;
         
 
-        // case SEGUNDO_ACCESO_MEMORIA:
+        // NOTA: DEJO ESTO COMENTADO PORQUE TIENE REDEFINICIONES - ARREGLAR Y DESCOMENTAR
 
-        //     //retardo cpu
-        //     usleep(memoria_config -> retardo_memoria * 1000);
+        /*
+        case SEGUNDO_ACCESO_MEMORIA:
+
+            //retardo cpu
+            usleep(memoria_config -> retardo_memoria * 1000);
             
-        //     //recibo el nro de tabla de primer nivel y su entrada
-        //     t_buffer* payload = recibir_payload(socket);
-        //     int32_t nro_tabla_segundo_nivel = buffer_take_INT32(payload);
-        //     int32_t entrada_tabla_segundo_nivel = buffer_take_INT32(payload);
+            //recibo el nro de tabla de primer nivel y su entrada
+            t_buffer* payload = recibir_payload(socket);
+            int32_t nro_tabla_segundo_nivel = buffer_take_INT32(payload);
+            int32_t entrada_tabla_segundo_nivel = buffer_take_INT32(payload);
 
-        //      //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
-        //     t_tabla_segundo_nivel* tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, string_from_format("%d", nro_tabla_segundo_nivel));
-        //     t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*) list_get(tabla_segundo_nivel -> entradas, entrada_tabla_segundo_nivel);
+             //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
+            t_tabla_segundo_nivel* tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, string_from_format("%d", nro_tabla_segundo_nivel));
+            t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*) list_get(tabla_segundo_nivel -> entradas, entrada_tabla_segundo_nivel);
 
-        //     // Si el marco no está en memoria, pasarlo a memoria
-        //     validar_entrada_en_memoria(entrada);
+            // Si el marco no está en memoria, pasarlo a memoria
+            validar_entrada_en_memoria(entrada);
 
-        //     //le mando el nro de marco al cpu
-        //     enviar_boludeces_a_cpu(entrada -> nro_frame);
+            //le mando el nro de marco al cpu
+            enviar_boludeces_a_cpu(entrada -> nro_frame);
 
-        //     break;
+            break;
         
 
-        // case TERCER_ACCESO_MEMORIA:
+        case TERCER_ACCESO_MEMORIA:
 
-        //     //retardo cpu
-        //     usleep(memoria_config -> retardo_memoria * 1000);
+            //retardo cpu
+            usleep(memoria_config -> retardo_memoria * 1000);
             
-        //     // acceder a la porción de memoria correspondiente 
-        //     break;
+            // acceder a la porción de memoria correspondiente 
+            break; 
+        */
 
 
         case -1:
@@ -147,7 +151,7 @@ void enviar_config_a_cpu(int socket_cliente, t_log* logger, uint8_t paginas_por_
 }
 
 
-void enviar_boludeces_a_cpu(int32_t nro_tabla_segundo_nivel){
+void enviar_boludeces_a_cpu(int32_t nro_tabla_segundo_nivel) {
     t_paquete* paquete = crear_paquete(MEMORIA_OK, sizeof(int32_t));
     agregar_a_buffer_INT32(paquete -> payload, nro_tabla_segundo_nivel);
     enviar_paquete(socket, paquete);
@@ -211,7 +215,7 @@ int crear_proceso_memoria(t_PCB* pcb) {
 
         for (int j = 0; j < memoria_config -> paginas_por_tabla; j++) {
             if (cantidad_frames_necesarios) {
-                agregar_entrada_segundo_nivel(tabla_segundo_nivel);
+                agregar_entrada_segundo_nivel(tabla_segundo_nivel, j);
                     
                 log_info(logger, "Se agregó una entrada a la tabla de segundo nivel %d del proceso ID:%d", 
                         tabla_segundo_nivel -> id_tabla, 
