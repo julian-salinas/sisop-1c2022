@@ -52,10 +52,17 @@ void procesar_conexion(void* void_args) {
             //retardo cpu
             usleep(memoria_config -> retardo_memoria * 1000);
 
-            //se escribe en swap la info necesaria
-            //se actulizan los bits de las tablas
+            pcb = socket_get_PCB(socket_cliente);
+
+            //obtengo las entradas que esten en memoria y las swappeo
+            t_list* entradas_a_swappear = get_entradas_en_memoria_proceso(pcb -> PID);
+            for (uint32_t i = 0; i < list_size(entradas_a_swappear); i++)
+            {
+                swappear(pcb -> PID, list_get(entradas_a_swappear, i));
+            }
+
             //Devolver pcb al kernel
-            enviar_pcb(socket_cliente, MEMORIA_OK, pcb); //no haría falta que el pcb vaya y venga, pero así nos queda igual en todos lados
+            enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
             break;
 
 
@@ -64,8 +71,21 @@ void procesar_conexion(void* void_args) {
             //retardo cpu
             usleep(memoria_config -> retardo_memoria * 1000);
 
-            //se actualizan los bits de las tablas
-            //se elimina su archivo de swap
+            pcb = socket_get_PCB(socket_cliente);
+
+            //libero memoria de las tablas
+            t_tabla_primer_nivel* tp_lvl1 = get_tabla_primer_nivel(pcb -> tabla_paginas);
+            for (uint32_t i = 0; i < list_size(tp_lvl1); i++)
+            {
+                t_tabla_segundo_nivel* tp_lvl2 = get_tabla_segundo_nivel(list_get(tp_lvl1 -> entradas, i));
+                free((void*)tp_lvl2 -> entradas);
+            }
+            free((void*)tp_lvl1 -> entradas);
+            //PREGUNTA: Hace falta sacar la tabla del diccionario?
+
+            //borro archivo swap
+            destruir_archivo_swap(pcb -> PID);
+
             enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
             break;
 

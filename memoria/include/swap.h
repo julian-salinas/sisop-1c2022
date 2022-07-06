@@ -75,7 +75,7 @@
     /**
      * @DESC: Destruye variable t_swap* y todo lo que contiene
      */ 
-    void destruir_archivo_swap(t_swap* archivito_swap);
+    void destruir_archivo_swap(uint32_t PID);
 
 
     /**
