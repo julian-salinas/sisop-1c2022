@@ -2490,3 +2490,15 @@
 [INFO] 23:28:35:229 CPU/(1175:1176): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
 
 [INFO] 23:28:35:230 CPU/(1175:1176): Request config memoria enviada.
+[INFO] 16:54:25:077 CPU/(10564:10564): Modulo CPU iniciado
+[INFO] 16:54:25:078 CPU/(10564:10564): Config CPU load
+[INFO] 16:54:25:078 CPU/(10564:10564): Conexión cpu-memoria ok.
+[INFO] 16:54:25:078 CPU/(10564:10564): Se creó entrada de tlb 0
+[INFO] 16:54:25:078 CPU/(10564:10564): Se creó entrada de tlb 1
+[INFO] 16:54:25:079 CPU/(10564:10564): Se creó entrada de tlb 2
+[INFO] 16:54:25:079 CPU/(10564:10564): Se creó entrada de tlb 3
+[INFO] 16:54:25:079 CPU/(10564:10566): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 16:54:25:080 CPU/(10564:10565): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 16:54:25:080 CPU/(10564:10565): Request config memoria enviada.

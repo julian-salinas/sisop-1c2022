@@ -53,13 +53,13 @@ void ini_semaforos(void){
 }
 
 void* atender_dispatch(void *arg){
-     server_cpu_dispatch = iniciar_servidor(logger, "CPU Dispatch",IP_MEMORIA, "8001");
+     server_cpu_dispatch = iniciar_servidor(logger, "CPU Dispatch", cpu_config -> ip_cpu, cpu_config -> puerto_escucha_dispatch);
      obtener_config_memoria();
      while(server_listen(logger, "CPU Dispatch", server_cpu_dispatch, (void*)(*procesar_conexion)));
 }
 
 void* atender_interrupt(void *arg){
-    server_cpu_interrupt = iniciar_servidor(logger, "CPU Interrupt",IP_MEMORIA, "8005");   
+    server_cpu_interrupt = iniciar_servidor(logger, "CPU Interrupt", cpu_config -> ip_cpu, cpu_config -> puerto_escucha_interrupt);   
     while(server_listen(logger, "CPU Interrupt", server_cpu_interrupt, (void*)(*procesar_conexion)));
 }
 

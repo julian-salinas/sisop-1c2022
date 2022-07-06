@@ -8,6 +8,7 @@ t_cpu_config* ini_cpu_config(char* path_a_config) {
     cpu_config -> reemplazo_tlb = config_get_string_value(cpu_config -> config, "REEMPLAZO_TLB");
     cpu_config -> retardo_noop = config_get_int_value(cpu_config -> config, "RETARDO_NOOP");
     cpu_config -> ip_memoria = config_get_string_value(cpu_config -> config, "IP_MEMORIA");
+    cpu_config -> ip_cpu = config_get_string_value(cpu_config -> config, "IP_CPU");
     cpu_config -> puerto_memoria = config_get_string_value(cpu_config -> config, "PUERTO_MEMORIA");
     cpu_config -> puerto_escucha_dispatch = config_get_string_value(cpu_config -> config, "PUERTO_ESCUCHA_DISPATCH");
     cpu_config -> puerto_escucha_interrupt = config_get_string_value(cpu_config -> config, "PUERTO_ESCUCHA_INTERRUPT");
