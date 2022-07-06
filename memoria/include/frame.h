@@ -54,7 +54,7 @@
     /**
      * @DESC: Leer el contenido de un frame
      */
-    uint32_t leer_contenido_frame(uint32_t nro_frame);
+    uint32_t leer_contenido_frame_n(uint32_t nro_frame);
 
 
     /**

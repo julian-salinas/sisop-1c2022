@@ -113,7 +113,7 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     if (entrada -> bit_modificado) {
         // TODO: Leer frame
         entrada -> bit_modificado = 0;
-        dato = leer_contenido_frame(entrada -> nro_frame);
+        dato = leer_contenido_frame_n(entrada -> nro_frame);
     }
     else {
         dato = 0;
