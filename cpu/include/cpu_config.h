@@ -11,6 +11,7 @@
         char* reemplazo_tlb; //Algoritmo de reemplazo para las entradas de la TLB
         int retardo_noop; //Tiempo en milisegundos que se deberá esperar al ejecutar una instrucción NoOp
         char* ip_memoria; //IP a la cual se deberá conectar con la Memoria
+        char* ip_cpu;
         char* puerto_memoria; //Puerto al cual se deberá conectar con la Memoria
         char* puerto_escucha_dispatch; //Puerto en el cual se escuchará la conexión del Kernel para mensajes de dispatch
         char* puerto_escucha_interrupt; //Puerto en el cual se escuchará la conexión del Kernel para mensajes de interrupciones

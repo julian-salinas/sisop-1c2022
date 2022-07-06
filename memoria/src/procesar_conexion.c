@@ -20,7 +20,7 @@ void procesar_conexion(void* void_args) {
 
         case CONEXION_CPU_MEMORIA:
             //enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
-            conexion_cpu = crear_socket_cliente(IP_MEMORIA, "8001");
+            conexion_cpu = crear_socket_cliente(memoria_config->ip_memoria, memoria_config->puerto_escucha);
             log_info(logger, "Socket cliente memoria-cpu creado.");
             enviar_config_a_cpu(conexion_cpu, logger, memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);	
             break;
