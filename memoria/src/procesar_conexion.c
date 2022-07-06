@@ -203,7 +203,7 @@ int crear_proceso_memoria(t_PCB* pcb) {
 
     /* ESTRUCTURAS NECESARIAS PARA PROCESO */
     // Archivo swap    
-    crear_archivo_proceso(pcb -> PID);
+    crear_archivo_swap(pcb -> PID, pcb -> tamanio);
 
     // Tabla de primer nivel
     t_tabla_primer_nivel* tabla_primer_nivel = crear_tabla_primer_nivel(pcb -> PID);
@@ -227,7 +227,7 @@ int crear_proceso_memoria(t_PCB* pcb) {
             break;
         } 
         agregar_entrada_primer_nivel(tabla_primer_nivel, tabla_segundo_nivel -> id_tabla);
-        log_info(logger, "Se agregó una entrada a la tabla de primer nivel del proceo %d", pcb -> PID);
+        log_info(logger, "Se agregó una entrada a la tabla de primer nivel del proceso %d", pcb -> PID);
     }
 
     return tabla_primer_nivel -> id_tabla;

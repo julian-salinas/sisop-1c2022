@@ -28,10 +28,10 @@
      *  - bit_modificado: 1 si el marco fue modificado
      */ 
     typedef struct {
-        int32_t nro_pagina;
+        int32_t nro_pagina; 
         int32_t nro_frame;
         int8_t bit_presencia;
-        int8_t bit_uso; 
+        int8_t bit_uso;
         int8_t bit_modificado; 
     } t_entrada_segundo_nivel;
 
@@ -68,7 +68,7 @@
      * @DESC: Crear una tabla de primer nivel (hacer el malloc e inicializar valores)
      * @return t_tabla_primer_nivel
      */ 
-    t_tabla_primer_nivel* crear_tabla_primer_nivel(int id_tabla);
+    t_tabla_primer_nivel* crear_tabla_primer_nivel(int PID);
 
 
     /**

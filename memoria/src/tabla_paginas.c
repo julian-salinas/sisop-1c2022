@@ -15,15 +15,15 @@ void inicializar_tablas_de_paginas(void) {
 }
 
 
-t_tabla_primer_nivel* crear_tabla_primer_nivel(int id_tabla) {
+t_tabla_primer_nivel* crear_tabla_primer_nivel(int PID) {
     t_tabla_primer_nivel* tmp = malloc(sizeof(t_tabla_primer_nivel));
     
-    tmp -> id_tabla = id_tabla;
+    tmp -> id_tabla = PID;
     tmp -> entradas = list_create();
-    char* str_id = int_a_string(id_tabla);
+    char* str_id = int_a_string(PID);
 
     sem_wait(mutex_tablas_primer_nivel);
-        dictionary_put(tablas_primer_nivel, int_a_string(id_tabla), (void*) tmp);
+        dictionary_put(tablas_primer_nivel, str_id, (void*) tmp);
     sem_post(mutex_tablas_primer_nivel);
 
     free(str_id);
@@ -39,7 +39,9 @@ t_tabla_segundo_nivel* crear_tabla_segundo_nivel(void) {
 
     sem_wait(mutex_id_tablas);
         char* str_id = int_a_string(id_tablas_segundo_nivel);
+        id_tablas_segundo_nivel++;
     sem_post(mutex_id_tablas);
+
 
     sem_wait(mutex_tablas_segundo_nivel);
         dictionary_put(tablas_segundo_nivel, str_id, (void*) tmp);

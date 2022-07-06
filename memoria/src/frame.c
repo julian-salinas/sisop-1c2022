@@ -69,13 +69,13 @@ uint32_t leer_contenido_frame(uint32_t nro_frame) {
 
 
 void escribir_frame(t_frame* frame, uint32_t contenido) {
-	memcpy(frame -> puntero_frame, &contenido, sizeof(uint32_t));
+	memcpy(frame -> puntero_frame, *(&contenido), sizeof(uint32_t));
 }
 
 
 void escribir_frame_n(uint32_t nro_frame, uint32_t contenido) {
 	t_frame* frame = get_frame(nro_frame);
-	memcpy(frame -> puntero_frame, &contenido, sizeof(uint32_t));
+	memcpy(frame -> puntero_frame, *(&contenido), sizeof(uint32_t));
 }
 
 
