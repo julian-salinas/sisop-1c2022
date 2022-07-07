@@ -90,6 +90,7 @@ pcb->tiempo_ejecucion += end_t-start_t;
 log_info(logger,"devolviendo pcb %d",header);
 log_info(logger,"tiempo de ejecucion %d",pcb->tiempo_ejecucion);
 enviar_pcb(socket_cliente,header, pcb);
+//se podria limpiar la tlb aca?
 finCicloInstruccion = 1;
 }
 

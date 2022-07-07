@@ -11,6 +11,14 @@
      *  - instante_carga: se almacena el time en segundos cuando fue creado para FIFO
      *  - instante_ultima_referencia: se almacena el time en segundos cuando fue usado para LRU
      */ 
+
+    typedef enum {
+        FIFO,
+        LRU
+    } algoritmo_planificacion;
+
+    algoritmo_planificacion algoritmo_elegido;
+
     typedef struct {
         uint32_t pagina;
         uint32_t marco;
@@ -26,6 +34,23 @@
 
     typedef t_list t_lista_entradas;
 
-    void generarEntradasTlb(t_tlb* tlb);
+    t_lista_entradas* entradas_tlb;
+
+    t_lista_entradas* generarEntradasTlb(t_tlb* tlb);
+
+    bool algoritmo_LRU(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2);
+
+    void ordenar_tlb(t_lista_entradas* lista_entradas);
+
+    void elegir_algoritmo(char* algoritmo);
+
+    int _soy_el_numero_buscado(t_entrada_tlb *p);
+
+    uint32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina);
+
+    void reemplazar_entrada_tlb(t_lista_entradas* lista_entradas, t_entrada_tlb* entrada);
+
+    uint32_t numero_pagina_buscada;
+
 
 #endif /* TLB */

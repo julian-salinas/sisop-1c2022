@@ -82,5 +82,5 @@ void obtener_config_memoria(void){
 
 void ini_tlb(void){
     tlb= inicializar_tlb();
-    generarEntradasTlb(tlb);
+    entradas_tlb = generarEntradasTlb(tlb);
 }
