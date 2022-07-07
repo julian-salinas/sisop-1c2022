@@ -131,6 +131,7 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     t_page_data* page_data = crear_page_data(entrada -> nro_pagina, dato);
     t_swap* swap_proceso = (t_swap*) dictionary_get(diccionario_swap, int_a_string(PID));
     escribir_pagina(swap_proceso, entrada -> nro_pagina, page_data);
+    destruir_page_data(page_data);
 }
 
 
@@ -172,4 +173,5 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
 
     // Por último, escribir en el frame lo que ya estaba en la página (lo que leímos de swap)
     escribir_frame_n(entrada -> nro_frame, page_data -> dato);
+    destruir_page_data(page_data);
 }
