@@ -33,7 +33,9 @@
 
         PRIMER_ACCESO_MEMORIA, // para conocer en qué tabla de páginas de 2do nivel está direccionado el marco
         SEGUNDO_ACCESO_MEMORIA, // en qué marco está la misma
-        TERCER_ACCESO_MEMORIA // acceder a la porción de memoria correspondiente
+        TERCER_ACCESO_MEMORIA, // acceder a la porción de memoria correspondiente
+
+        ESCRIBIR_EN_MEMORIA // se pasa un marco un desplazamiento y un valor
     } codigo_operacion;
 
 #endif /* ENUM_H */

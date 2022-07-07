@@ -27,7 +27,8 @@
     // Variables para los 2 hilos de CPU
     pthread_t thread_dispatch, thread_interrupt;
     t_cpu_config* cpu_config;
-    int conexion_memoria, conexion_kernel, server_cpu_dispatch, server_cpu_interrupt;
+    int conexion_memoria, server_cpu_dispatch, server_cpu_interrupt;
+    //conexion_kernel
     t_paquete* paquete;
 	t_config* config;
     t_log* logger;
