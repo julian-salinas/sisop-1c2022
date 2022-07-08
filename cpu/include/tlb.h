@@ -3,7 +3,7 @@
 
 #include "networking.h"
 #include "serializacion.h"
-#include "time.h"    
+#include <time.h>    
     /**
      * @DESC: Entrada de la TLB
      *  - pagina: contiene el n° de página
@@ -44,13 +44,9 @@
 
     void elegir_algoritmo(char* algoritmo);
 
-    int _soy_el_numero_buscado(t_entrada_tlb *p);
-
     uint32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina);
 
-    void reemplazar_entrada_tlb(t_lista_entradas* lista_entradas, t_entrada_tlb* entrada);
-
-    uint32_t numero_pagina_buscada;
+    void agregar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina, uint32_t numero_marco);
 
 
 #endif /* TLB */
