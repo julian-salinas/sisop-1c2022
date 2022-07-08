@@ -163,7 +163,7 @@ void procesar_conexion(void* void_args) {
             t_frame* frame = get_frame(nro_frame);
 
             // acceder a la porción de memoria correspondiente 
-            enviar_boludeces_a_cpu((int) frame -> puntero_frame);
+            enviar_boludeces_a_cpu(hexa_a_int(frame -> puntero_frame));
             
             break; 
 

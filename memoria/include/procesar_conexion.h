@@ -9,6 +9,7 @@
     #include "proceso.h"
     #include "memoria.h"
     #include "tabla_paginas.h"
+    #include "utils.h"
 
     void procesar_conexion(void* void_args);
 

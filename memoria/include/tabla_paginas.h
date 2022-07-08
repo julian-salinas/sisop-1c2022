@@ -113,9 +113,17 @@
     void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla, int nro_pagina);
 
 
+    /**
+     * @DESC: Obtiene la tabla de páginas del diccionario de tablas de primer nivel usando el ID de la tabla
+     * @param id: id de la tabla
+     */ 
     t_tabla_primer_nivel* get_tabla_primer_nivel(uint32_t id);
 
 
+    /**
+     * @DESC: Obtiene la tabla de páginas del diccionario de tablas de segundo nivel usando el ID de la tabla
+     * @param id: id de la tabla
+     */
     t_tabla_segundo_nivel* get_tabla_segundo_nivel(uint32_t id);
 
 
@@ -131,9 +139,22 @@
     int get_cantidad_entradas_proceso(uint32_t PID);
 
 
+    /**
+     * @DESC: Dada una tabla y un número de página, devuelve en qué tabla de segundo nivel se encuentra
+     *        la entrada que contiene la página
+     * @param nto_tp_lvl1: ID de la tabla de primer nivel
+     * @para nro_pagina: número de la página buscada
+     * @return id de la tabla de segundo nivel que contiene la página en una de sus entradas
+     */ 
     int get_nro_tabla_segundo_nivel_pagina(uint32_t nro_tp_lvl1, uint32_t nro_pagina);
 
 
+    /**
+     * @DESC: Dada una tabla de segundo nivel y un número de página, devuelve la entrada que contiene a la página
+     *        buscada
+     * @param tabla_segundo_nivel: puntero a tabla de segundo nivel donde se hará la búsqueda
+     * @param nro_pagina: número de la página que se está buscando
+     */ 
     t_entrada_segundo_nivel* get_entrada_de_pagina(t_tabla_segundo_nivel* tabla_segundo_nivel, uint32_t nro_pagina);
 
 #endif /* TABLA_PAGINAS_H */

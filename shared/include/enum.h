@@ -35,7 +35,8 @@
         SEGUNDO_ACCESO_MEMORIA, // en qué marco está la misma
         TERCER_ACCESO_MEMORIA, // acceder a la porción de memoria correspondiente
 
-        ESCRIBIR_EN_MEMORIA // se pasa un marco un desplazamiento y un valor
+        ESCRIBIR_EN_MEMORIA, // se pasa un marco un desplazamiento y un valor
+        KERNEL
     } codigo_operacion;
 
 #endif /* ENUM_H */
