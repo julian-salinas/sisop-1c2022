@@ -30,71 +30,77 @@ void procesar_conexion(void* void_args) {
             break;
 
 
-        case NUEVO_PROCESO:
+        case KERNEL: // Handshake inicial con Kernel
 
-            //retardo cpu
-            usleep(memoria_config -> retardo_memoria * 1000);
+            while (1) {
+                header = recibir_header(socket_cliente);
+                log_info(logger, "Conexion con Kernel - Se recibio header %d", header);
 
-            pcb = socket_get_PCB(socket_cliente);
-            
-            int id_tabla_creada = crear_proceso_memoria(pcb);
+                switch (header) {
 
-            if (!id_tabla_creada) {
-                enviar_pcb(socket_cliente, PROCESO_RECHAZADO, pcb);
+                    case NUEVO_PROCESO:
+                        //retardo cpu
+                        usleep(memoria_config -> retardo_memoria * 1000);
+
+                        pcb = socket_get_PCB(socket_cliente);
+                        
+                        int id_tabla_creada = crear_proceso_memoria(pcb);
+
+                        if (!id_tabla_creada) {
+                            enviar_pcb(socket_cliente, PROCESO_RECHAZADO, pcb);
+                        }
+
+                        //Modificar pcb agregando el valor de tabla de paginas
+                        pcb -> tabla_paginas = id_tabla_creada;
+
+                        //Devolver pcb al kernel
+                        enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
+                        log_info(logger, "Se devolvió PCB con tabla de páginas");
+
+                        break;
+                    
+
+                    case PROCESO_SUSPENDIDO:
+                        //retardo cpu
+                        usleep(memoria_config -> retardo_memoria * 1000);
+
+                        pcb = socket_get_PCB(socket_cliente);
+
+                        //obtengo las entradas que esten en memoria y las swappeo
+                        t_list* entradas_a_swappear = get_entradas_en_memoria_proceso(pcb -> PID);
+                        for (uint32_t i = 0; i < list_size(entradas_a_swappear); i++)
+                        {
+                            swappear(pcb -> PID, list_get(entradas_a_swappear, i));
+                        }
+
+                        //Devolver pcb al kernel
+                        enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
+                        break;
+
+
+                    case PROCESO_FINALIZADO:
+                        //retardo cpu
+                        usleep(memoria_config -> retardo_memoria * 1000);
+
+                        pcb = socket_get_PCB(socket_cliente);
+
+                        //libero memoria de las tablas
+                        t_tabla_primer_nivel* tp_lvl1 = get_tabla_primer_nivel(pcb -> tabla_paginas);
+                        for (uint32_t i = 0; i < list_size(tp_lvl1 -> entradas); i++)
+                        {
+                            t_tabla_segundo_nivel* tp_lvl2 = get_tabla_segundo_nivel((t_tabla_segundo_nivel*) list_get(tp_lvl1 -> entradas, i));
+                            free((void*)tp_lvl2 -> entradas);
+                        }
+                        free((void*)tp_lvl1 -> entradas);
+                        //PREGUNTA: Hace falta sacar la tabla del diccionario?
+
+                        //borro archivo swap
+                        destruir_archivo_swap(pcb -> PID);
+
+                        enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
+                        break;
+                }
             }
-
-            //Modificar pcb agregando el valor de tabla de paginas
-            pcb -> tabla_paginas = id_tabla_creada;
-
-            //Devolver pcb al kernel
-            enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
-            log_info(logger, "Se devolvió PCB con tabla de páginas");
-
-            break;
-
-
-        case PROCESO_SUSPENDIDO:
-
-            //retardo cpu
-            usleep(memoria_config -> retardo_memoria * 1000);
-
-            pcb = socket_get_PCB(socket_cliente);
-
-            //obtengo las entradas que esten en memoria y las swappeo
-            t_list* entradas_a_swappear = get_entradas_en_memoria_proceso(pcb -> PID);
-            for (uint32_t i = 0; i < list_size(entradas_a_swappear); i++)
-            {
-                swappear(pcb -> PID, list_get(entradas_a_swappear, i));
-            }
-
-            //Devolver pcb al kernel
-            enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
-            break;
-
-
-        case PROCESO_FINALIZADO:
-        
-            //retardo cpu
-            usleep(memoria_config -> retardo_memoria * 1000);
-
-            pcb = socket_get_PCB(socket_cliente);
-
-            //libero memoria de las tablas
-            t_tabla_primer_nivel* tp_lvl1 = get_tabla_primer_nivel(pcb -> tabla_paginas);
-            for (uint32_t i = 0; i < list_size(tp_lvl1 -> entradas); i++)
-            {
-                t_tabla_segundo_nivel* tp_lvl2 = get_tabla_segundo_nivel((t_tabla_segundo_nivel*) list_get(tp_lvl1 -> entradas, i));
-                free((void*)tp_lvl2 -> entradas);
-            }
-            free((void*)tp_lvl1 -> entradas);
-            //PREGUNTA: Hace falta sacar la tabla del diccionario?
-
-            //borro archivo swap
-            destruir_archivo_swap(pcb -> PID);
-
-            enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
-            break;
-
 
         case PRIMER_ACCESO_MEMORIA:
 

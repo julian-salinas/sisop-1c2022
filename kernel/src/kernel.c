@@ -26,13 +26,13 @@ int main(void) {
 	// Incializo estimacion de rafaga para PCB
 	estimacion_rafaga_inicial = kernel_config -> estimacion_inicial;
 
-	// Conexión con memoria
+	// Conexión con memoria y handshake inicial
 	conexion_memoria = crear_socket_cliente(kernel_config -> ip_memoria, kernel_config -> puerto_memoria);
-	
+	enviar_header(conexion_memoria, KERNEL);
+
 	// Conexion con CPU
 	conexion_cpu_dispatch = crear_socket_cliente(kernel_config -> ip_cpu, kernel_config -> puerto_cpu_dispatch);
 	conexion_cpu_interrupt = crear_socket_cliente(kernel_config -> ip_cpu, kernel_config -> puerto_cpu_interrupt);
-	
 	
 
 	// Iniciar servidor para que se conecte la consola
