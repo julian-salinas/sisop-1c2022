@@ -39,6 +39,7 @@
     t_lista_entradas* generarEntradasTlb(t_tlb* tlb);
 
     bool algoritmo_LRU(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2);
+    bool algoritmo_FIFO(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2);
 
     void ordenar_tlb(t_lista_entradas* lista_entradas);
 

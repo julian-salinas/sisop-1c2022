@@ -83,7 +83,7 @@ uint32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pa
 	for (uint32_t j=0;j<list_size(lista_entradas);j++) {
 			t_entrada_tlb* entrada = list_get(lista_entradas, j);
 			if (entrada -> pagina == numero_pagina) {
-				time(entrada -> instante_ultima_referencia);
+				entrada -> instante_ultima_referencia = time(NULL);
 				return entrada -> marco;
 			}
 	}
@@ -100,8 +100,8 @@ void agregar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagin
 			if (entrada -> pagina == 0) {
 				entrada -> pagina = numero_pagina;
 				entrada -> marco = numero_marco;
-				time(entrada -> instante_carga);
-				time(entrada -> instante_ultima_referencia);
+				entrada -> instante_carga = time(NULL);
+				entrada -> instante_ultima_referencia = time(NULL);
 				pagina_encontrada = 1;
 			}
 		}
@@ -110,8 +110,8 @@ void agregar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagin
 			t_entrada_tlb* entrada = list_get(lista_entradas, list_size(lista_entradas) - 1);
 			entrada -> pagina = numero_pagina;
 			entrada -> marco = numero_marco;
-			time(entrada -> instante_carga);
-			time(entrada -> instante_ultima_referencia);
+			entrada -> instante_carga = time(NULL);
+			entrada -> instante_ultima_referencia = time(NULL);
 		}
 
 		ordenar_tlb(lista_entradas);
