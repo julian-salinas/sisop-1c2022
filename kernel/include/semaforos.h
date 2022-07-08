@@ -24,8 +24,8 @@
     // Semáforos binarios? Para despertar procesos - Arrancan en 0 todos
     sem_t* sem_largo_plazo;
 
-    // Semáforo mutex para comunicacion con memoria
-    sem_t* sem_memoria;
+    // Semáforos mutex para sockets
+    sem_t* mutex_socket_memoria, *mutex_socket_cpu_dispatch, *mutex_socket_cpu_interrupt;
 
     // Inicializar todos los semaforos
     void ini_semaforos(void);

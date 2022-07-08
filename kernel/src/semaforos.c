@@ -42,7 +42,14 @@ void ini_semaforos(void) {
 	sem_procesos_bloqueados = malloc(sizeof(sem_t));
 	sem_init(sem_procesos_bloqueados, 0, 0);
 
-	/* ============= Semáforo mutex socket comunicación con memoria ============= */
-	sem_memoria = malloc(sizeof(sem_t));
-	sem_init(sem_memoria, 0, 1);
+	/* ============= Semáforos mutex sockets comunicación con otros módulos ============= */
+	mutex_socket_memoria = malloc(sizeof(sem_t));
+	sem_init(mutex_socket_memoria, 0, 1);
+
+	mutex_socket_cpu_dispatch = malloc(sizeof(sem_t));
+	sem_init(mutex_socket_cpu_dispatch, 0, 1);
+
+	mutex_socket_cpu_interrupt = malloc(sizeof(sem_t));
+	sem_init(mutex_socket_cpu_interrupt, 0, 1);
+
 }

@@ -44,6 +44,7 @@ void suspended_ready_a_ready(void) {
 
     procesoAMover -> estado = READY;
 
+    /*
     // Re-insertar proceso en memoria - Solicitar tabla de páginas a memoria
     enviar_pcb(conexion_memoria, SOL_TABLA_PAGINAS, procesoAMover);
     log_info(logger, "Se solicitó la tabla de páginas del proceso");
@@ -58,6 +59,7 @@ void suspended_ready_a_ready(void) {
     procesoAMover = socket_get_PCB(conexion_memoria);
 
     log_info(logger, "Se recibió el proceso %d con la tabla de páginas %d",procesoAMover -> PID, procesoAMover -> tabla_paginas);
+    */
 
     sem_wait(mutex_cola_ready);
         queue_push(cola_ready, (void*) procesoAMover);
@@ -78,19 +80,22 @@ void new_a_ready(void) {
     procesoAMover -> estado = READY;
 
     // Solicitar tabla de páginas a memoria
-    sem_wait(sem_memoria);
-        log_info(logger, "Pidiendo memoria para el proceso con ID %d: ", procesoAMover -> PID);
+    log_info(logger, "Pidiendo memoria para el proceso con ID %d: ", procesoAMover -> PID);
+    sem_wait(mutex_socket_memoria);
+
         enviar_pcb(conexion_memoria, NUEVO_PROCESO, procesoAMover);
         uint8_t resp_memoria = recibir_header(conexion_memoria);
-    sem_post(sem_memoria);
     
-    if (resp_memoria == PROCESO_RECHAZADO) {
-        log_warning(logger, "EL proceso %d fue rechazado por memoria por ser demasiado grande.", procesoAMover -> PID);
-        close(procesoAMover -> socket_cliente);
-        return;
-    }
+        if (resp_memoria == PROCESO_RECHAZADO) {
+            log_warning(logger, "EL proceso %d fue rechazado por memoria por ser demasiado grande.", procesoAMover -> PID);
+            close(procesoAMover -> socket_cliente);
+            return;
+        }
 
-    procesoAMover = socket_get_PCB(conexion_memoria);
+        procesoAMover = socket_get_PCB(conexion_memoria);
+
+    sem_post(mutex_socket_memoria);
+    
     log_info(logger, "Se recibió el proceso %d con la tabla de páginas %d", procesoAMover -> PID, procesoAMover -> tabla_paginas);
 
     sem_wait(mutex_cola_ready);
@@ -111,8 +116,12 @@ void ready_a_running(void) {
     procesoAMover -> estado = RUNNING;
     procesoAMover -> tiempo_restante = 0;
 
-    // enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
-    
+    /*
+    sem_wait(mutex_socket_dispatch);
+        enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
+    sem_post(mutex_socket_dispatch);
+    */
+   
     log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
 }
 
@@ -151,17 +160,20 @@ void blocked_a_ready(t_PCB* procesoAMover){
         queue_push(cola_ready, (void*) procesoAMover);
     sem_post(mutex_cola_ready);
 
-    log_info(logger, "El proceso con Id:%d  pasó de BLOCKED a READY.", procesoAMover -> PID);
+    log_info(logger, "El proceso con ID:%d  pasó de BLOCKED a READY.", procesoAMover -> PID);
 
     sem_post(sem_procesos_en_ready);
 }
+
 
 void blocked_a_suspended_blocked(t_PCB* procesoAMover){
     procesoAMover -> estado = SUSPENDED_BLOCKED;
 
     log_info(logger, "El proceso con ID:%d pasó de BLOCKED a SUSPENDED-BLOCKED", procesoAMover -> PID);
 
-    enviar_pcb(conexion_memoria, PROCESO_SUSPENDIDO, procesoAMover);
+    sem_wait(mutex_socket_memoria);
+        enviar_pcb(conexion_memoria, PROCESO_SUSPENDIDO, procesoAMover);
+    sem_wait(mutex_socket_memoria);
 }
 
 

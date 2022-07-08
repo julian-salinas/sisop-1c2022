@@ -1,12 +1,12 @@
 #include "procesar_conexion.h"
 
-void procesar_conexion(void *void_args) {
+void procesar_conexion(void *args) {
 
-    t_procesar_conexion_args *args = (t_procesar_conexion_args *)void_args;
-    t_log *logger = args->log;
-    int socket = args->fd;
-    char *nombre_servidor = args->server_name;
-    free(args);
+    t_procesar_conexion_args *casted_args = (t_procesar_conexion_args *)args;
+    t_log *logger = casted_args->log;
+    int socket = casted_args->fd;
+    char *nombre_servidor = casted_args->server_name;
+    free(casted_args);
 
     int header = recibir_header(socket);
     log_info(logger, "Se recibió el cod operacion %d  - %s", header, nombre_servidor);
@@ -29,6 +29,7 @@ void procesar_conexion(void *void_args) {
     }
 }
 
+
 void procesar_conexion_dispatch(void *args) {
     uint32_t header;
     t_PCB* pcb;
@@ -36,13 +37,18 @@ void procesar_conexion_dispatch(void *args) {
     while (1) {
         header = recibir_header(conexion_cpu_dispatch);
 
+        sem_wait(mutex_socket_cpu_dispatch);
         switch (header) {
 
             case PROCESO_FINALIZADO:
                 sem_post(sem_cpu_disponible);
                 pcb = socket_get_PCB(conexion_cpu_dispatch);
+                sem_post(mutex_socket_cpu_dispatch);
                 
-                enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb);  // Avisarle a memoria para que desaloje al proceso
+                sem_wait(mutex_socket_memoria);
+                    enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb);  // Avisarle a memoria para que desaloje al proceso
+                sem_post(mutex_socket_memoria);
+                
                 enviar_header(pcb->socket_cliente, PROCESO_FINALIZADO); // Avisarle a consola que terminó la ejecución
                 sem_post(sem_multiprogramacion);                        // Se libera multiprog. después de sacar al proceso de memoria
                 
@@ -51,6 +57,7 @@ void procesar_conexion_dispatch(void *args) {
             case PROCESO_BLOQUEADO:
                 sem_post(sem_cpu_disponible);
                 pcb = socket_get_PCB(conexion_cpu_dispatch); // Obtener pcb del proceso bloqueado
+                sem_post(mutex_socket_cpu_dispatch);
                 log_info(logger, "Se recibió proceso bloqueado por %d ms", pcb->tiempo_bloqueo);
 
                 ajustar_estimacion(pcb);

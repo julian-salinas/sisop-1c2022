@@ -27,5 +27,6 @@
     // Variable que nos va a ayudar a saber si tenemos multiprogramacion disponible
     int grado_multiprogramacion_usado;
 
+    pthread_t thread_cpu_dispatch;
 
 #endif /* KERNEL_H_ */

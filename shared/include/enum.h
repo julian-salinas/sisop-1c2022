@@ -36,7 +36,8 @@
         TERCER_ACCESO_MEMORIA, // acceder a la porción de memoria correspondiente
 
         ESCRIBIR_EN_MEMORIA, // se pasa un marco un desplazamiento y un valor
-        KERNEL
+        KERNEL,
+        CPU
     } codigo_operacion;
 
 #endif /* ENUM_H */

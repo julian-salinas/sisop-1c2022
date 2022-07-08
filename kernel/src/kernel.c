@@ -36,11 +36,13 @@ int main(void) {
 	conexion_cpu_interrupt = crear_socket_cliente(kernel_config -> ip_cpu, kernel_config -> puerto_cpu_interrupt);
 	enviar_header(conexion_cpu_interrupt, KERNEL);
 
+	// Hilo que atiende respuestas de CPU Dispatch
+	pthread_create(&thread_cpu_dispatch, 0, (void*) procesar_conexion_dispatch, NULL);
+	pthread_detach(thread_cpu_dispatch);
+
 	// Iniciar servidor para que se conecte la consola
 	int server_fd = iniciar_servidor(logger, "Kernel", kernel_config -> ip_kernel, kernel_config -> puerto_escucha);
-
 	log_info(logger, "Kernel esperando clientes");
-	
 	while(server_listen(logger, "Kernel", server_fd, (void*)(*procesar_conexion)));
 
     liberar_socket_cliente(conexion_memoria);

@@ -23,7 +23,9 @@
 
     int estimacion_rafaga_inicial;
 
-    void procesar_conexion(void* void_args);
+    void procesar_conexion(void* args);
+
+    void procesar_conexion_dispatch(void *args);
 
     /**
      * @DESC: Crear un PCB a partir de un proceso
@@ -40,5 +42,6 @@
      * @param socket: socket cliente que contiene el proceso a extraer
      */ 
     t_PCB* socket_create_PCB(int socket);
+
 
 #endif /* PROCESAR_CONEXION_H */
