@@ -78,9 +78,12 @@ void new_a_ready(void) {
     procesoAMover -> estado = READY;
 
     // Solicitar tabla de páginas a memoria
-    enviar_pcb(conexion_memoria, NUEVO_PROCESO, procesoAMover);
-    uint8_t resp_memoria = recibir_header(conexion_memoria);
-
+    sem_wait(sem_memoria);
+        log_info(logger, "Pidiendo memoria para el proceso con ID %d: ", procesoAMover -> PID);
+        enviar_pcb(conexion_memoria, NUEVO_PROCESO, procesoAMover);
+        uint8_t resp_memoria = recibir_header(conexion_memoria);
+    sem_post(sem_memoria);
+    
     if (resp_memoria == PROCESO_RECHAZADO) {
         log_warning(logger, "EL proceso %d fue rechazado por memoria por ser demasiado grande.", procesoAMover -> PID);
         close(procesoAMover -> socket_cliente);

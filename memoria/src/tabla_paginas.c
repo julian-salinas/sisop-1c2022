@@ -112,10 +112,11 @@ t_tabla_segundo_nivel* get_tabla_segundo_nivel(uint32_t id) {
     char* str_id = int_a_string(id);
 
     sem_wait(mutex_tablas_segundo_nivel);
-        t_tabla_segundo_nivel* tabla = dictionary_get(tablas_segundo_nivel, str_id); 
+        t_tabla_segundo_nivel* tabla = (t_tabla_segundo_nivel*) dictionary_get(tablas_segundo_nivel, str_id); 
     sem_post(mutex_tablas_segundo_nivel);
 
     free(str_id);
+    
     return tabla;
 }
 
@@ -140,7 +141,7 @@ t_list* get_entradas_en_memoria_proceso(uint32_t PID) {
 
 
 int get_cantidad_entradas_proceso(uint32_t PID) {
-    int contador;
+    int contador = 0;
     t_tabla_primer_nivel* tp_lvl1 = get_tabla_primer_nivel(PID);
     
 	for (uint32_t i=0;i< list_size(tp_lvl1->entradas);i++) {
@@ -149,4 +150,37 @@ int get_cantidad_entradas_proceso(uint32_t PID) {
 	}
 
     return contador;
+}
+
+
+int get_nro_tabla_segundo_nivel_pagina(uint32_t nro_tp_lvl1, uint32_t nro_pagina) {
+	t_tabla_primer_nivel* tp_lvl1 = get_tabla_primer_nivel(nro_tp_lvl1);
+
+	for (uint32_t i = 0;i<list_size(tp_lvl1->entradas);i++) {
+		t_tabla_segundo_nivel* tp_lvl2 = get_tabla_segundo_nivel((uint32_t) list_get(tp_lvl1->entradas, i));
+
+		for (uint32_t j=0;j<list_size(tp_lvl2->entradas);j++) {
+			t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*) list_get(tp_lvl2->entradas, j);
+			if (entrada -> nro_pagina == nro_pagina) {
+				return tp_lvl2 -> id_tabla;
+			}
+		}
+	}
+    return 0;
+}
+
+
+t_entrada_segundo_nivel* get_entrada_de_pagina(t_tabla_segundo_nivel* tabla_segundo_nivel, uint32_t nro_pagina) {
+
+    t_entrada_segundo_nivel* entrada;
+
+    for (uint32_t i = 0; i < list_size(tabla_segundo_nivel -> entradas); i++){
+        entrada = (t_entrada_segundo_nivel*) list_get(tabla_segundo_nivel -> entradas, i);
+        
+        if (entrada -> nro_pagina == nro_pagina) {
+            return entrada;
+        }
+    }
+
+    return NULL;
 }

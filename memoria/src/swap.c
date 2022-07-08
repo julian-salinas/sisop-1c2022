@@ -56,9 +56,6 @@ t_swap* crear_archivo_swap(uint32_t PID, size_t tamanio) {
     archivito_swap -> tamanio = tamanio;
     archivito_swap -> fd = open(archivito_swap -> path, O_RDWR|O_CREAT, S_IRWXU);
 
-    log_info(logger, "Se inicializó archivito swap path:%s, tamanio:%d, fd:%d", 
-            archivito_swap -> path, archivito_swap -> tamanio, archivito_swap -> fd);
-    
     ftruncate(archivito_swap -> fd, tamanio);
 
     void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE,MAP_SHARED, archivito_swap->fd, 0);

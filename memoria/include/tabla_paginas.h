@@ -113,6 +113,12 @@
     void agregar_entrada_segundo_nivel(t_tabla_segundo_nivel* tabla, int nro_pagina);
 
 
+    t_tabla_primer_nivel* get_tabla_primer_nivel(uint32_t id);
+
+
+    t_tabla_segundo_nivel* get_tabla_segundo_nivel(uint32_t id);
+
+
     /**
      * @DESC: Concatenar en una única lista todos los frames que un proceso tiene asignados
      * @param id: id del proceso
@@ -123,5 +129,11 @@
      * @DESC: Obtener la cantidad de entradas de segundo nivel que tiene un proceso
      */ 
     int get_cantidad_entradas_proceso(uint32_t PID);
+
+
+    int get_nro_tabla_segundo_nivel_pagina(uint32_t nro_tp_lvl1, uint32_t nro_pagina);
+
+
+    t_entrada_segundo_nivel* get_entrada_de_pagina(t_tabla_segundo_nivel* tabla_segundo_nivel, uint32_t nro_pagina);
 
 #endif /* TABLA_PAGINAS_H */
