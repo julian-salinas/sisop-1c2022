@@ -32,8 +32,9 @@ int main(void) {
 
 	// Conexion con CPU
 	conexion_cpu_dispatch = crear_socket_cliente(kernel_config -> ip_cpu, kernel_config -> puerto_cpu_dispatch);
+	enviar_header(conexion_cpu_dispatch, KERNEL);
 	conexion_cpu_interrupt = crear_socket_cliente(kernel_config -> ip_cpu, kernel_config -> puerto_cpu_interrupt);
-	
+	enviar_header(conexion_cpu_interrupt, KERNEL);
 
 	// Iniciar servidor para que se conecte la consola
 	int server_fd = iniciar_servidor(logger, "Kernel", kernel_config -> ip_kernel, kernel_config -> puerto_escucha);
