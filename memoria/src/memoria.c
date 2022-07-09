@@ -29,7 +29,7 @@ int main(void) {
 	diccionario_clocks = dictionary_create();
 
 	generarFrames(memoria, memoria_config -> tamanio_memoria, memoria_config -> tamanio_pagina);
-	
+
 	int server_fd = iniciar_servidor(logger, "memoria", memoria_config -> ip_memoria, memoria_config -> puerto_escucha);	
 	
 	log_info(logger, "Memoria lista para recibir al cliente");

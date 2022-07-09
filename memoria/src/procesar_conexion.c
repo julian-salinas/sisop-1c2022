@@ -127,13 +127,11 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
 
 void procesar_conexion_cpu_memoria(int socket_cliente) {
     int8_t header;
-    int32_t nro_pagina, nro_tabla_primer_nivel, nro_tabla_segundo_nivel, PID;
+    int32_t nro_pagina, nro_tabla_primer_nivel, nro_tabla_segundo_nivel, PID, direccion_fisica, nro_frame;
+    uint32_t dato;
     t_buffer* payload;
     t_tabla_segundo_nivel* tabla_segundo_nivel;
     t_entrada_segundo_nivel* entrada;
-    t_frame* frame;
-    int32_t direccion_fisica;
-    uint32_t dato;
     
     while (1) {
         header = recibir_header(socket_cliente);
@@ -188,11 +186,9 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 usleep(memoria_config -> retardo_memoria * 1000);
                 
                 payload = recibir_payload(socket_cliente);
-                int32_t nro_frame = buffer_take_INT32(payload);
-                frame = get_frame(nro_frame);
-
-                // acceder a la porción de memoria correspondiente 
-                enviar_boludeces_a_cpu(socket_cliente, hexa_a_int(frame -> puntero_frame));
+                nro_frame = buffer_take_INT32(payload);
+                direccion_fisica = nro_frame * memoria_config -> tamanio_pagina;
+                enviar_boludeces_a_cpu(socket_cliente, direccion_fisica);
                 
                 break; 
             
