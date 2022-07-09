@@ -36,8 +36,13 @@
         TERCER_ACCESO_MEMORIA, // acceder a la porción de memoria correspondiente
 
         ESCRIBIR_EN_MEMORIA, // se pasa un marco un desplazamiento y un valor
-        KERNEL,
-        CPU
+        PEDIDO_LECTURA, // Pasar direccion física (int32_t)
+        PEDIDO_ESCRITURA, // Pasar direccion física (int32_t) y dato a escribir (uint32_t)
+
+        /* ENUMS PARA HANDSHAKES INICIALES - CADA MODULO DEBE AUTOREFERENCIARSE EN EL HANDSHAKE INICIAL */
+        KERNEL, 
+        CPU,
+        
     } codigo_operacion;
 
 #endif /* ENUM_H */

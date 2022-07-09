@@ -133,6 +133,8 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
     t_tabla_segundo_nivel* tabla_segundo_nivel;
     t_entrada_segundo_nivel* entrada;
     t_frame* frame;
+    int32_t direccion_fisica;
+    uint32_t dato;
     
     while (1) {
         header = recibir_header(socket_cliente);
@@ -157,7 +159,6 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 break;
             
-
             case SEGUNDO_ACCESO_MEMORIA:
                 //retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
@@ -183,11 +184,11 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 break;
             
-
             case TERCER_ACCESO_MEMORIA:
                 //retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
                 
+                payload = recibir_payload(socket_cliente);
                 int32_t nro_frame = buffer_take_INT32(payload);
                 frame = get_frame(nro_frame);
 
@@ -195,6 +196,31 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 enviar_boludeces_a_cpu(socket_cliente, hexa_a_int(frame -> puntero_frame));
                 
                 break; 
+            
+            case PEDIDO_LECTURA:
+                // Retardo memoria
+                usleep(memoria_config -> retardo_memoria * 1000);
+
+                // Obtener dirección que envió CPU
+                payload = recibir_payload(socket_cliente);
+                direccion_fisica = buffer_take_INT32(payload);
+                
+                // Leer dato y enviárselo a CPU
+                dato = leer_direccion_memoria(direccion_fisica);
+                enviar_boludeces_a_cpu(socket_cliente, dato);
+                break;
+            
+            case PEDIDO_ESCRITURA:
+                // Retardo memoria
+                usleep(memoria_config -> retardo_memoria * 1000);
+
+                // Obtener dirección que envió CPU
+                payload = recibir_payload(socket_cliente);
+                direccion_fisica = buffer_take_INT32(payload);
+                dato = buffer_take_UINT32(payload);
+
+                // Escribir dato y enviar mensaje OK
+                enviar_header(socket_cliente, MEMORIA_OK);
         }
     }
 }

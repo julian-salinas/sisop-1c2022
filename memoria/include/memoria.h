@@ -27,8 +27,10 @@
     int tamanio_tabla;
 
     t_log* logger;
-
     t_memoria_config* memoria_config;
+
+    // Espacio contiguo que representa la memoria
+    void* memoria;
 
     typedef enum {
         CLOCK,
@@ -39,6 +41,9 @@
 
     t_dictionary* diccionario_clocks;
 
+    /**
+     * @DESC: Hace malloc del tamaño de la memoria
+     */ 
     void* inicializar_memoria(void);
 
 

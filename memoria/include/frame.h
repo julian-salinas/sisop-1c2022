@@ -87,4 +87,9 @@
     void liberar_frame_n(uint32_t nro_frame); 
 
 
+    uint32_t leer_direccion_memoria(int32_t direccion_fisica);
+
+
+    void escribir_direccion_memoria(int32_t direccion_fisica, uint32_t dato);
+
 #endif /* FRAME_H */

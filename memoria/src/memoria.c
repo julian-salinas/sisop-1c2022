@@ -13,7 +13,7 @@ int main(void) {
 	inicializar_tablas_de_paginas();
 	
 	// Inicializar memoria
-	void* memoria = inicializar_memoria();
+	memoria = inicializar_memoria();
 	diccionario_swap = dictionary_create();
 
 	// Elegir entre CLOCK y CLOCK_MEJORADO
@@ -36,9 +36,9 @@ int main(void) {
 
 
 void* inicializar_memoria(void) {
-	void* memoria = malloc(memoria_config -> tamanio_memoria);
+	void* tmp = malloc(memoria_config -> tamanio_memoria);
 
-	return memoria;
+	return tmp;
 }
 
 
