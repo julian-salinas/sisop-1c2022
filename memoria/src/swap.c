@@ -87,20 +87,23 @@ void destruir_archivo_swap(uint32_t PID) {
 
 
 t_page_data* leer_pagina(t_swap* archivito_swap, int nro_pagina) {
-    log_info(logger, "flaco q te pasa");
+    sem_wait(mutex_swap);
     void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE, MAP_SHARED, archivito_swap->fd, 0);
     void* datos = malloc(sizeof(memoria_config -> tamanio_pagina));
     memcpy(datos, archivito_mapeado + (nro_pagina * (memoria_config -> tamanio_pagina)), memoria_config -> tamanio_pagina);
     munmap(archivito_mapeado, archivito_swap -> tamanio);
+    sem_post(mutex_swap);
     return datos;
 }
 
 
 void escribir_pagina(t_swap* archivito_swap, int nro_pagina, t_page_data* page_data) {
+    sem_wait(mutex_swap);
     void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE,MAP_SHARED, archivito_swap->fd, 0);
     memcpy(archivito_mapeado + nro_pagina * memoria_config -> tamanio_pagina, page_data, memoria_config -> tamanio_pagina);
     msync(archivito_mapeado, archivito_swap->tamanio, MS_SYNC);
     munmap(archivito_mapeado, archivito_swap->tamanio);
+    sem_post(mutex_swap);
 }
 
 

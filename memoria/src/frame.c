@@ -61,21 +61,27 @@ t_frame* get_frame(uint32_t posicion_frame) {
 
 
 uint32_t leer_contenido_frame_n(uint32_t nro_frame) {
-	t_frame* frame = get_frame(nro_frame);
 	uint32_t dato;
-	memcpy(&dato, frame -> puntero_frame, sizeof(uint32_t));
+	sem_wait(mutex_memoria);
+		t_frame* frame = get_frame(nro_frame);
+		memcpy(&dato, frame -> puntero_frame, sizeof(uint32_t));
+	sem_post(mutex_memoria);
 	return dato;
 }
 
 
 void escribir_frame(t_frame* frame, uint32_t dato) {
-	memcpy(frame -> puntero_frame, &dato, sizeof(uint32_t));
+	sem_wait(mutex_memoria);
+		memcpy(frame -> puntero_frame, &dato, sizeof(uint32_t));
+	sem_post(mutex_memoria);
 }
 
 
 void escribir_frame_n(uint32_t nro_frame, uint32_t dato) {
-	t_frame* frame = get_frame(nro_frame);
-	memcpy(frame -> puntero_frame, &dato, sizeof(uint32_t));
+	sem_wait(mutex_memoria);
+		t_frame* frame = get_frame(nro_frame);
+		memcpy(frame -> puntero_frame, &dato, sizeof(uint32_t));
+	sem_post(mutex_memoria);
 }
 
 
@@ -92,10 +98,14 @@ void liberar_frame_n(uint32_t nro_frame) {
 
 uint32_t leer_direccion_memoria(int32_t direccion_fisica) {
 	uint32_t dato;
-	memcpy(&dato, memoria + direccion_fisica, sizeof(uint32_t));
+	sem_wait(mutex_memoria);
+		memcpy(&dato, memoria + direccion_fisica, sizeof(uint32_t));
+	sem_post(mutex_memoria);
 	return dato;
 } 
 
 void escribir_direccion_memoria(int32_t direccion_fisica, uint32_t dato) {
-	memcpy(memoria + direccion_fisica, &dato, sizeof(uint32_t));;
+	sem_wait(mutex_memoria);
+		memcpy(memoria + direccion_fisica, &dato, sizeof(uint32_t));;
+	sem_post(mutex_memoria);
 }

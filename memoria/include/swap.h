@@ -7,6 +7,7 @@
     #include <sys/mman.h>
     #include <string.h>
     #include <stdlib.h>
+    #include <semaphore.h>
     #include <commons/string.h>
     
     #include "memoria.h"
@@ -17,6 +18,7 @@
     void eliminar_archivo_proceso(uint32_t PID);
     void crear_archivo_proceso(uint32_t PID);
 
+    sem_t* mutex_swap;
 
     /**
      * @DESC: Contiene "una entrada" de swap, o sea, lo que se guarda en swap por cada página

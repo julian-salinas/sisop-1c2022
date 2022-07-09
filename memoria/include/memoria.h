@@ -41,6 +41,8 @@
 
     t_dictionary* diccionario_clocks;
 
+    sem_t* mutex_memoria;
+    
     /**
      * @DESC: Hace malloc del tamaño de la memoria
      */ 

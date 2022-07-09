@@ -12,6 +12,13 @@ int main(void) {
 	// Inicializar estructuras de tablas de páginas
 	inicializar_tablas_de_paginas();
 	
+	// Inicializar semáforos de memoria
+	mutex_swap = malloc(sizeof(sem_t));
+	sem_init(mutex_swap, 0, 1);
+
+	mutex_memoria = malloc(sizeof(sem_t));
+	sem_init(mutex_memoria, 0, 1);
+
 	// Inicializar memoria
 	memoria = inicializar_memoria();
 	diccionario_swap = dictionary_create();
