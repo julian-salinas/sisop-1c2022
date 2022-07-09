@@ -87,9 +87,19 @@
     void liberar_frame_n(uint32_t nro_frame); 
 
 
+    /**
+     * @DESC: Lee el contenido de una dirección en memoria
+     * @param direccion fisica: Desplazamiento que habrá desde que inicia la memoria
+     * @return: dato leído
+     */ 
     uint32_t leer_direccion_memoria(int32_t direccion_fisica);
 
 
+    /**
+     * @DESC: Escribe un dato en una dirección de memoria
+     * @param direccion fisica: Desplazamiento que habrá desde que inicia la memoria
+     * @param dato: dato que se desea escribir en la memoria
+     */ 
     void escribir_direccion_memoria(int32_t direccion_fisica, uint32_t dato);
 
 #endif /* FRAME_H */

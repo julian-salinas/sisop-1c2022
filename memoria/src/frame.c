@@ -1,6 +1,5 @@
 #include "frame.h"
 
-
 void generarFrames(void* memoria, uint32_t tamanio_memoria, uint32_t tamanio_frame) {
 	int cantidad_frames = tamanio_memoria / tamanio_frame;
 	void* aux = memoria;
@@ -103,6 +102,7 @@ uint32_t leer_direccion_memoria(int32_t direccion_fisica) {
 	sem_post(mutex_memoria);
 	return dato;
 } 
+
 
 void escribir_direccion_memoria(int32_t direccion_fisica, uint32_t dato) {
 	sem_wait(mutex_memoria);
