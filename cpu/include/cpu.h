@@ -40,4 +40,16 @@
 
     t_tlb* tlb;
 
+    //ini
+    void ini_semaforos(void);
+    void ini_conexiones(void);
+    void* atender_dispatch(void *arg);
+    void* atender_interrupt(void *arg);
+    void ini_threads(void);
+    void obtener_config_memoria(void);
+    //lib
+    void liberar_conexiones(void);
+    void finalizar_semaforos_cpu(void);
+
+
 #endif /* CPU_H_ */

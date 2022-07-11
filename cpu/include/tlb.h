@@ -26,17 +26,14 @@
         time_t instante_ultima_referencia; 
     } t_entrada_tlb;
 
-    typedef struct {
-        void* tlb;
-    } t_tlb;
-
-    t_tlb* inicializar_tlb(void);
-
     typedef t_list t_lista_entradas;
+    typedef t_list t_tlb;
 
     t_lista_entradas* entradas_tlb;
 
-    t_lista_entradas* generarEntradasTlb(t_tlb* tlb);
+    void inicializar_tlb(void);
+    void generar_entradas_tlb(void);
+    void liberar_tlb(void);
 
     bool algoritmo_LRU(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2);
     bool algoritmo_FIFO(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2);
@@ -49,5 +46,6 @@
 
     void agregar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina, uint32_t numero_marco);
 
+    void limpiar_tlb2(void);
 
 #endif /* TLB */

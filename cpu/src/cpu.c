@@ -13,7 +13,7 @@ int main(void) {
     //memoria y kernel
     ini_conexiones();
 
-    ini_tlb();
+    inicializar_tlb();
     
     ini_semaforos();
     
@@ -22,6 +22,7 @@ int main(void) {
     //libera memoria y kernel
     liberar_conexiones();
     finalizar_semaforos_cpu();
+    liberar_tlb();
 
     return EXIT_SUCCESS;
 } //end MAIN
@@ -78,9 +79,4 @@ void obtener_config_memoria(void){
 	destruir_paquete(paquete_config);
 	//liberar_socket_cliente(conexion_memoria);
 	log_info(logger, "Request config memoria enviada.");
-}
-
-void ini_tlb(void){
-    tlb= inicializar_tlb();
-    entradas_tlb = generarEntradasTlb(tlb);
 }

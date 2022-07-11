@@ -1,11 +1,9 @@
 #include "tlb.h"
 #include "cpu.h"
 
-t_tlb* inicializar_tlb(void){
-    t_tlb* tlb = malloc(sizeof(t_tlb));
-	tlb -> tlb = malloc(cpu_config->entradas_tlb*sizeof(t_entrada_tlb));
-
-	return tlb;
+void inicializar_tlb(void){
+		tlb = list_create();
+		generar_entradas_tlb();
 }
 
 void elegir_algoritmo(char* algoritmo) {
@@ -21,11 +19,7 @@ void elegir_algoritmo(char* algoritmo) {
     }
 }
 
-t_lista_entradas* generarEntradasTlb(t_tlb* tlb){
-
-	void* aux = tlb -> tlb;
-	int indice = 0;
-	t_lista_entradas* lista_entradas = list_create();
+void generar_entradas_tlb(void){
 
 	for (size_t i = 0; i < cpu_config->entradas_tlb; i++)
 	{
@@ -36,11 +30,16 @@ t_lista_entradas* generarEntradasTlb(t_tlb* tlb){
         entrada -> instante_ultima_referencia = 0;
 
 
-		list_add(lista_entradas, entrada);
+		list_add(tlb, entrada);
 		log_info(logger, "Se creó entrada de tlb %d", i);
 	}
-	return lista_entradas;
+
 }
+
+ // Función para liberar la lista de entradas
+ void liberar_tlb(void){
+	 list_destroy(tlb);
+ }
 
 void ordenar_tlb(t_lista_entradas* lista_entradas) {
     if (algoritmo_elegido == LRU) {
@@ -62,14 +61,14 @@ bool algoritmo_FIFO(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2) {
 }
 
 
-//Aca no se si combiene eliminar las entradas (limpiar_tlb) o simplemente iterar la lista y poner todo en 0 (limpiar_tlb2)
+//Aca no se si conviene eliminar las entradas (limpiar_tlb) o simplemente iterar la lista y poner todo en 0 (limpiar_tlb2)
 void limpiar_tlb(t_lista_entradas* lista_entradas){
 	list_clean(lista_entradas);
 }
 
-void limpiar_tlb2(t_lista_entradas* lista_entradas){
-	for (uint32_t j=0;j<list_size(lista_entradas);j++) {
-		t_entrada_tlb* entrada = list_get(lista_entradas, j);
+void limpiar_tlb2(void){
+	for (uint32_t j=0;j<list_size(tlb);j++) {
+		t_entrada_tlb* entrada = list_get(tlb, j);
 		entrada -> pagina = 0;
 		entrada -> marco = 0;
 		entrada -> instante_carga = 0;
@@ -118,4 +117,3 @@ void agregar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagin
 }
 
 
- //Falta funcion para liberar la lista de entradas
