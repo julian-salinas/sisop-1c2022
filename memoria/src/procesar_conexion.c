@@ -22,15 +22,16 @@ void procesar_conexion(void* void_args) {
         case CPU: // Handshake inicial con CPU
             log_info(logger, "Se conectó CPU - header %d", header);
             procesar_conexion_cpu_memoria(socket_cliente);
+            break;
 
         case -1:
             log_error(logger, "Cliente desconectado de %s...", nombre_servidor);
-            return;
+            break;
 
         default:
             log_error(logger, "Algo anduvo mal en el server de %s", nombre_servidor);
             log_info(logger, "Cop: %d", header);
-            return;
+            break;
     }
 
     return;
@@ -161,7 +162,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 
                 //le mando a cpu el nro de tabla de segundo nivel
                 enviar_boludeces_a_cpu(socket_cliente, nro_tabla_segundo_nivel);
-
+                
                 break;
             
             case SEGUNDO_ACCESO_MEMORIA:
@@ -197,7 +198,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 nro_frame = buffer_take_INT32(payload);
                 direccion_fisica = nro_frame * memoria_config -> tamanio_pagina;
                 enviar_boludeces_a_cpu(socket_cliente, direccion_fisica);
-                
+
                 break; 
             
             case LEER_MEMORIA:
@@ -211,6 +212,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 // Leer dato y enviárselo a CPU
                 dato = leer_direccion_memoria(direccion_fisica);
                 enviar_boludeces_a_cpu(socket_cliente, dato);
+                
                 break;
             
             case ESCRIBIR_EN_MEMORIA:
@@ -224,6 +226,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 // Escribir dato y enviar mensaje OK
                 enviar_header(socket_cliente, MEMORIA_OK);
+                
                 break;
             
             case -1:
