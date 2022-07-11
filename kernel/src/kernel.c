@@ -41,7 +41,8 @@ int main(void) {
 	pthread_detach(thread_cpu_dispatch);
 
 	// Iniciar servidor para que se conecte la consola
-	int server_fd = iniciar_servidor(logger, "Kernel", kernel_config -> ip_kernel, kernel_config -> puerto_escucha);
+	int server_fd = crear_socket_servidor(kernel_config -> ip_kernel, kernel_config -> puerto_escucha, logger);
+
 	log_info(logger, "Kernel esperando clientes");
 	while(server_listen(logger, "Kernel", server_fd, (void*)(*procesar_conexion)));
 

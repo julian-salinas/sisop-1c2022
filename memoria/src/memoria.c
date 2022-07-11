@@ -30,8 +30,8 @@ int main(void) {
 
 	generarFrames(memoria, memoria_config -> tamanio_memoria, memoria_config -> tamanio_pagina);
 
-	int server_fd = iniciar_servidor(logger, "memoria", memoria_config -> ip_memoria, memoria_config -> puerto_escucha);	
-	
+	int server_fd = crear_socket_servidor(memoria_config -> ip_memoria, memoria_config -> puerto_escucha, logger);
+
 	log_info(logger, "Memoria lista para recibir al cliente");
 
 	while(server_listen(logger, "memoria", server_fd, (void*)(*procesar_conexion)));

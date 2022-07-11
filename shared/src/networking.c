@@ -32,8 +32,19 @@ void liberar_socket_cliente(int socket_cliente) {
 }
 
 
-int crear_socket_servidor(char *ip, char* puerto) {
-	int socket_servidor;
+void guard_syscall(int returncode, t_log* logger) {
+    if (returncode == -1) {
+        int error = errno;
+        char* buf = malloc(100);
+        strerror_r(error, buf, 100);
+        log_error(logger, "Error: %s", buf);
+        free(buf);
+    }
+}
+
+
+int crear_socket_servidor(char *ip, char* puerto, t_log* logger) {
+	int socket_servidor = 0;
 
 	struct addrinfo hints, *servinfo;
 
@@ -45,13 +56,14 @@ int crear_socket_servidor(char *ip, char* puerto) {
 	getaddrinfo(ip, puerto, &hints, &servinfo);
 
 	// Crear el socket de escucha del servidor
-	socket_servidor = socket(servinfo->ai_family, servinfo->ai_socktype, servinfo->ai_protocol);
-	
-	// Asociar el socket a un puerto
-	bind(socket_servidor, servinfo->ai_addr, servinfo->ai_addrlen);
+    guard_syscall(socket_servidor = socket(servinfo->ai_family, servinfo->ai_socktype, servinfo->ai_protocol), logger);
+    guard_syscall(setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEADDR, &(int){ 1 }, sizeof(int)), logger);
 
-	// Escuchar las conexiones entrantes
-	listen(socket_servidor, SOMAXCONN);
+	// Asociar el socket a un puerto
+	guard_syscall(bind(socket_servidor, servinfo->ai_addr, servinfo->ai_addrlen), logger);
+	
+    // Escuchar las conexiones entrantes
+	guard_syscall(listen(socket_servidor, SOMAXCONN), logger);
 
 	freeaddrinfo(servinfo);
 
@@ -220,7 +232,7 @@ t_buffer* recibir_payload(int socket) {
 }
 
 
-t_paquete* recibir_paquete(int socket_cliente){
+t_paquete* recibir_paquete(int socket){
     uint8_t header = recibir_header(socket);
     uint32_t tamanio_buffer;
 

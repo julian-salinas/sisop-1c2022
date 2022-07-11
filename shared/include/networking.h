@@ -14,6 +14,7 @@
     #include<commons/config.h>
     #include<commons/collections/list.h>    
     #include <pthread.h>
+    #include <errno.h>
 
     #include "serializacion.h"
     #include "enum.h"
@@ -48,7 +49,7 @@
      * @param ip: ip a la cual va a conectarse el socket
      * @param puerto: puerto al cual va a conectarse el socket
      */
-    int crear_socket_servidor(char *ip, char *puerto);
+    int crear_socket_servidor(char *ip, char *puerto, t_log* logger);
 
 
     /**
