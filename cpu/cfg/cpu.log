@@ -2538,3 +2538,23 @@
 [INFO] 18:55:17:675 CPU/(6703:6704): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
 
 [INFO] 18:55:17:676 CPU/(6703:6704): Request config memoria enviada.
+[INFO] 19:52:04:019 CPU/(8326:8326): Modulo CPU iniciado
+[INFO] 19:52:04:021 CPU/(8326:8326): Config CPU load
+[INFO] 19:52:04:021 CPU/(8326:8326): Conexión cpu-memoria ok.
+[INFO] 19:52:04:021 CPU/(8326:8326): Se creó entrada de tlb 0
+[INFO] 19:52:04:021 CPU/(8326:8326): Se creó entrada de tlb 1
+[INFO] 19:52:04:021 CPU/(8326:8326): Se creó entrada de tlb 2
+[INFO] 19:52:04:022 CPU/(8326:8326): Se creó entrada de tlb 3
+[INFO] 19:52:04:022 CPU/(8326:8329): Escuchando en 127.0.0.1:8005 (CPU Interrupt)
+
+[INFO] 19:52:04:023 CPU/(8326:8328): Escuchando en 127.0.0.1:8001 (CPU Dispatch)
+
+[INFO] 19:52:04:036 CPU/(8326:8328): Request config memoria enviada.
+[INFO] 19:52:08:736 CPU/(8326:8328): Cliente conectado (a CPU Dispatch)
+
+[INFO] 19:52:08:738 CPU/(8326:8329): Cliente conectado (a CPU Interrupt)
+
+[ERROR] 19:52:08:739 CPU/(8326:8339): Algo anduvo mal en el server de CPU Dispatch
+[INFO] 19:52:08:739 CPU/(8326:8339): Cop: 23
+[ERROR] 19:52:08:739 CPU/(8326:8340): Algo anduvo mal en el server de CPU Interrupt
+[INFO] 19:52:08:739 CPU/(8326:8340): Cop: 23
