@@ -25,21 +25,10 @@ void procesar_conexion(void* void_args) {
             printf("Tamaño de página: %u\n",tamanio_pagina);
             break; 
         }
-        case PCB:
-            log_info(logger, "Se recibió pcb del Kernel.");
-            t_buffer* buffer = recibir_payload(socket_cliente);
-            t_PCB* pcb = buffer_take_PCB(buffer);  
-            //acá debería ir un mutex???
-            ejecutar_ciclo_instruccion(pcb, socket_cliente);
+        case KERNEL: // Handshake inicial con Kernel
+            log_info(logger, "Se conectó Kernel - header %d", header);
+            procesar_conexion_kernel_cpu(socket_cliente);
             break;
-        case INTERRUPCION: 
-            //TO DO
-            //Enviar OK a Kernel 
-            sem_wait(mutex_interrupt);
-            interrupcion=1;
-            sem_post(mutex_interrupt);
-            break;
-
         case -1:
             log_error(logger, "Cliente desconectado de %s...", nombre_servidor);
             return;
@@ -51,4 +40,30 @@ void procesar_conexion(void* void_args) {
     }
 
     return;
+}
+
+void procesar_conexion_kernel_cpu(int socket_cliente) {
+    int8_t header;
+    
+    while (1) {
+        header = recibir_header(socket_cliente);
+        log_info(logger, "Conexion con KERNEL - Se recibió header %d", header);
+
+        switch (header) {
+
+        case EJECUTAR_PROCESO:
+            log_info(logger, "Se recibió pcb del Kernel.");
+            t_buffer* buffer = recibir_payload(socket_cliente);
+            t_PCB* pcb = buffer_take_PCB(buffer);  
+            ejecutar_ciclo_instruccion(pcb, socket_cliente);
+            break;
+        case INTERRUPCION: 
+            //TO DO
+            //Enviar OK a Kernel 
+            sem_wait(mutex_interrupt);
+            interrupcion=1;
+            sem_post(mutex_interrupt);
+            break;               
+        }
+    }
 }
