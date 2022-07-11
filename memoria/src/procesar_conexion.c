@@ -14,13 +14,6 @@ void procesar_conexion(void* void_args) {
 
     switch (header) {
 
-        case CONEXION_CPU_MEMORIA:
-            //enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
-            log_info(logger, "Se recibió header %d - Enviando config a CPU", header);
-            log_info(logger, "Socket cliente memoria-cpu creado.");
-            enviar_config_a_cpu(socket_cliente, logger, memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);	
-            break;
-
         case KERNEL: // Handshake inicial con Kernel
             log_info(logger, "Se conectó Kernel - header %d", header);
             procesar_conexion_kernel_memoria(socket_cliente);
@@ -120,6 +113,14 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
 
                 enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
                 break;
+
+            case -1:
+                log_error(logger, "Kernel se desconectó");
+                return;
+
+            default:
+                log_error(logger, "Kernel acaba de mandarnos cualquier cosa - %d", header);
+                return;
         }
     }
 }
@@ -138,6 +139,13 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
         log_info(logger, "Conexion con CPU - Se recibió header %d", header);
 
         switch (header) {
+
+            case CONEXION_CPU_MEMORIA:
+                //enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
+                log_info(logger, "Se recibió header %d - Enviando config a CPU", header);
+                log_info(logger, "Socket cliente memoria-cpu creado.");
+                enviar_config_a_cpu(socket_cliente, logger, memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);	
+                break;
 
             case PRIMER_ACCESO_MEMORIA:
                 //retardo memoria
@@ -192,7 +200,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 
                 break; 
             
-            case PEDIDO_LECTURA:
+            case LEER_MEMORIA:
                 // Retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
 
@@ -205,7 +213,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 enviar_boludeces_a_cpu(socket_cliente, dato);
                 break;
             
-            case PEDIDO_ESCRITURA:
+            case ESCRIBIR_EN_MEMORIA:
                 // Retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
 
@@ -216,6 +224,15 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 // Escribir dato y enviar mensaje OK
                 enviar_header(socket_cliente, MEMORIA_OK);
+                break;
+            
+            case -1:
+                log_error(logger, "CPU se desconectó");
+                return;
+
+            default:
+                log_error(logger, "CPU acaba de mandarnos cualquier cosa - %d", header);
+                return;
         }
     }
 }
