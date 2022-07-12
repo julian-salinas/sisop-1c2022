@@ -12,6 +12,6 @@ void traer_operandos(t_instruccion* instruccion, int direccion_logica, uint32_t 
 
 int parametro_instruccion(t_list* parametros_instruccion, int indice);
 uint32_t buscar_operando(int direccion_logica);
-void escribir_operando(int direccion_logica, uint32_t valor_1);
+void escribir_operando(int direccion_logica, uint32_t valor_1, uint32_t PID);
 
 #endif /* CICLO_INSTRUCCION */

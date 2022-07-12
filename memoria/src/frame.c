@@ -23,6 +23,7 @@ void generarFrames(void* memoria, uint32_t tamanio_memoria, uint32_t tamanio_fra
 		aux += tamanio_frame;
 		contador_frame ++;
 	}	
+	
 }
 
 

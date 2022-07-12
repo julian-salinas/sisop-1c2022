@@ -129,9 +129,10 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
 
 void procesar_conexion_cpu_memoria(int socket_cliente) {
     int8_t header;
-    int32_t nro_pagina, nro_tabla_primer_nivel, nro_tabla_segundo_nivel, PID, direccion_fisica, nro_frame;
-    uint32_t dato;
+    int32_t nro_pagina, nro_tabla_primer_nivel, nro_tabla_segundo_nivel, direccion_fisica, nro_frame, nro_entrada_primer_nivel;
+    uint32_t dato, PID;
     t_buffer* payload;
+    t_tabla_primer_nivel* tabla_primer_nivel;
     t_tabla_segundo_nivel* tabla_segundo_nivel;
     t_entrada_segundo_nivel* entrada;
     
@@ -149,16 +150,27 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 break;
 
             case PRIMER_ACCESO_MEMORIA:
+                log_info(logger, "CASE: Primer acceso a memoria");
+
                 //retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
+
+                log_info(logger, "Terminó usleep");
                 
                 //recibo el nro de tabla de primer nivel y pagina buscada
                 payload = recibir_payload(socket_cliente);
-                nro_tabla_primer_nivel = buffer_take_INT32(payload); // Nro TP primer nivel del proceso donde vamos a buscar la página
-                nro_pagina = buffer_take_INT32(payload); // Número de página a la que se desea acceder
+                PID = buffer_take_UINT32(payload); // Número de página a la que se desea acceder
+                nro_entrada_primer_nivel = buffer_take_INT32(payload); // Nro TP primer nivel del proceso donde vamos a buscar la página
 
-                //obtengo nro de tabla de segundo nivel
-                nro_tabla_segundo_nivel = get_nro_tabla_segundo_nivel_pagina(nro_tabla_primer_nivel, nro_pagina);
+                log_info(logger, "Se leyó paquete enviado por cpu");
+
+                // obtengo nro de tabla de segundo nivel
+                // nro_tabla_segundo_nivel = get_nro_tabla_segundo_nivel_pagina(nro_tabla_primer_nivel, nro_pagina);
+                
+                tabla_primer_nivel = get_tabla_primer_nivel(PID);
+                nro_tabla_segundo_nivel = list_get(tabla_primer_nivel -> entradas, nro_entrada_primer_nivel);
+
+                log_info(logger, "Se obtuvo tabla de 2do nivel");
                 
                 //le mando a cpu el nro de tabla de segundo nivel
                 enviar_boludeces_a_cpu(socket_cliente, nro_tabla_segundo_nivel);
@@ -166,6 +178,8 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 break;
             
             case SEGUNDO_ACCESO_MEMORIA:
+                log_info(logger, "CASE: Segundo acceso a memoria");
+
                 //retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
                 
@@ -190,18 +204,20 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 break;
             
-            case TERCER_ACCESO_MEMORIA:
-                //retardo memoria
-                usleep(memoria_config -> retardo_memoria * 1000);
+            // case TERCER_ACCESO_MEMORIA:
+            //     //retardo memoria
+            //     usleep(memoria_config -> retardo_memoria * 1000);
                 
-                payload = recibir_payload(socket_cliente);
-                nro_frame = buffer_take_INT32(payload);
-                direccion_fisica = nro_frame * memoria_config -> tamanio_pagina;
-                enviar_boludeces_a_cpu(socket_cliente, direccion_fisica);
+            //     payload = recibir_payload(socket_cliente);
+            //     nro_frame = buffer_take_INT32(payload);
+            //     direccion_fisica = nro_frame * memoria_config -> tamanio_pagina;
+            //     enviar_boludeces_a_cpu(socket_cliente, direccion_fisica);
 
-                break; 
+            //     break; 
             
             case LEER_MEMORIA:
+                log_info(logger, "CASE: Leer memoria");
+
                 // Retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
 
@@ -216,6 +232,8 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 break;
             
             case ESCRIBIR_EN_MEMORIA:
+                log_info(logger, "CASE: Escribir memoria");
+
                 // Retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
 

@@ -28,4 +28,6 @@
 
 uint32_t acceso_a_memoria(codigo_operacion header, uint32_t valor1, uint32_t valor2);
 
+uint32_t acceso_a_memoria_2(codigo_operacion header, uint32_t valor1, uint32_t valor2, uint32_t valor3);
+
 #endif /* MMU */

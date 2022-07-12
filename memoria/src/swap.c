@@ -144,8 +144,10 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     // Leer el contenido de la página en swap
     page_data = leer_pagina(swap_proceso, entrada -> nro_pagina);
 
+    t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(PID);
+
     // Si el proceso tiene límite de marcos asignados, correr algoritmo de reemplazo
-    if (list_size(get_entradas_en_memoria_proceso(PID)) >= memoria_config -> marcos_por_proceso) {
+    if (list_size(entradas_en_memoria) >= memoria_config -> marcos_por_proceso) {
         t_entrada_segundo_nivel* entrada_a_reemplazar;
 
         if (algoritmo_reemplazo == CLOCK) {

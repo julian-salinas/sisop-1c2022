@@ -92,6 +92,7 @@ void new_a_ready(void) {
             return;
         }
 
+        free(procesoAMover);
         procesoAMover = socket_get_PCB(conexion_memoria);
 
     sem_post(mutex_socket_memoria);

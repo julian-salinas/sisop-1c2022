@@ -12,19 +12,19 @@ void procesar_conexion(void* void_args) {
 
     switch (header) {
 
-        case CONEXION_CPU_MEMORIA:
-        {
-            /* TODO
-            / recibir paquete y guardar paginas por tabla y tamanio pagina */
-            t_buffer* payload = recibir_payload(socket_cliente);
-            paginas_por_tabla = buffer_take_UINT8(payload);
-            tamanio_pagina = buffer_take_UINT8(payload);
-            //funciona 
-            log_info(logger, "Se recibió configuración de memoria.");
-            printf("Páginas por tabla: %u\n",paginas_por_tabla);
-            printf("Tamaño de página: %u\n",tamanio_pagina);
-            break; 
-        }
+        // case CONEXION_CPU_MEMORIA:
+        // {
+        //     /* TODO
+        //     / recibir paquete y guardar paginas por tabla y tamanio pagina */
+        //     t_buffer* payload = recibir_payload(socket_cliente);
+        //     paginas_por_tabla = buffer_take_UINT8(payload);
+        //     tamanio_pagina = buffer_take_UINT8(payload);
+        //     //funciona 
+        //     log_info(logger, "Se recibió configuración de memoria.");
+        //     printf("Páginas por tabla: %u\n",paginas_por_tabla);
+        //     printf("Tamaño de página: %u\n",tamanio_pagina);
+        //     break; 
+        // }
         case KERNEL: // Handshake inicial con Kernel
             log_info(logger, "Se conectó Kernel - header %d", header);
             procesar_conexion_kernel_cpu(socket_cliente);
@@ -55,6 +55,7 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
             log_info(logger, "Se recibió pcb del Kernel.");
             t_buffer* buffer = recibir_payload(socket_cliente);
             t_PCB* pcb = buffer_take_PCB(buffer);  
+            log_info(logger, "Recibimos PCB con ID:%d y Tabla de páginas %d", pcb -> PID, pcb -> tabla_paginas);
             ejecutar_ciclo_instruccion(pcb, socket_cliente);
             break;
         case INTERRUPCION: 

@@ -53,8 +53,13 @@ t_tabla_segundo_nivel* crear_tabla_segundo_nivel(void) {
 }
 
 
+void destruir_entrada_segundo_nivel(t_entrada_segundo_nivel* entrada) {
+    free(entrada);
+}
+
+
 void destruir_tabla_primer_nivel(t_tabla_primer_nivel* tabla) {
-    list_destroy(tabla -> entradas);
+    list_destroy_and_destroy_elements(tabla -> entradas, (void*) *(destruir_entrada_segundo_nivel));
     free(tabla);
 }
 
@@ -100,7 +105,7 @@ t_tabla_primer_nivel* get_tabla_primer_nivel(uint32_t id) {
     char* str_id = int_a_string(id);
 
     sem_wait(mutex_tablas_primer_nivel);
-        t_tabla_primer_nivel* tabla = dictionary_get(tablas_primer_nivel, str_id); 
+        t_tabla_primer_nivel* tabla = (t_tabla_primer_nivel*) dictionary_get(tablas_primer_nivel, str_id); 
     sem_post(mutex_tablas_primer_nivel);
     
     free(str_id);
@@ -153,19 +158,24 @@ int get_cantidad_entradas_proceso(uint32_t PID) {
 }
 
 
-int get_nro_tabla_segundo_nivel_pagina(uint32_t nro_tp_lvl1, uint32_t nro_pagina) {
+int get_nro_tabla_segundo_nivel_pagina(int32_t nro_tp_lvl1, int32_t nro_pagina) {
+    printf("Tabla de primer nivel NO obtenida");
 	t_tabla_primer_nivel* tp_lvl1 = get_tabla_primer_nivel(nro_tp_lvl1);
 
 	for (uint32_t i = 0;i<list_size(tp_lvl1->entradas);i++) {
 		t_tabla_segundo_nivel* tp_lvl2 = get_tabla_segundo_nivel((uint32_t) list_get(tp_lvl1->entradas, i));
+        printf("Se obtuvo tabla %d de segundo nivel", i);
 
 		for (uint32_t j=0;j<list_size(tp_lvl2->entradas);j++) {
-			t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*) list_get(tp_lvl2->entradas, j);
-			if (entrada -> nro_pagina == nro_pagina) {
+        	t_entrada_segundo_nivel* entrada = (t_entrada_segundo_nivel*) list_get(tp_lvl2->entradas, j);
+			printf("Se obtuvo entrada numero %d", j);
+            if (entrada -> nro_pagina == nro_pagina) {
 				return tp_lvl2 -> id_tabla;
 			}
 		}
 	}
+
+    printf("algo anda mal");
     return 0;
 }
 

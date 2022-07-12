@@ -67,6 +67,7 @@ void func_corto_plazo(void* args) {
                 sem_wait(mutex_socket_cpu_interrupt);
                     enviar_header(conexion_cpu_interrupt, INTERRUPCION);  // Avisar a CPU para que desaloje proceso actual
                     omitir_header(conexion_cpu_interrupt); // No nos interesa el header que se recibe, solo queremos el PCB
+                    free(procesoAMover);
                     procesoAMover = socket_get_PCB(conexion_cpu_interrupt);
                 sem_post(mutex_socket_cpu_interrupt);
                 // Agregar tiempo restante al PCB

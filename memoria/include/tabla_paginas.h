@@ -146,7 +146,7 @@
      * @para nro_pagina: número de la página buscada
      * @return id de la tabla de segundo nivel que contiene la página en una de sus entradas
      */ 
-    int get_nro_tabla_segundo_nivel_pagina(uint32_t nro_tp_lvl1, uint32_t nro_pagina);
+    int get_nro_tabla_segundo_nivel_pagina(int32_t nro_tp_lvl1, int32_t nro_pagina);
 
 
     /**
