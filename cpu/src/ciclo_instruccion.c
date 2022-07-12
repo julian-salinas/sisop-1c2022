@@ -38,6 +38,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
         log_info(logger, "program counter %d", pcb->program_counter);
         log_info(logger, "cantidad de instrucciones: %d", list_size(pcb->lista_instrucciones));
 
+        pcb -> program_counter++;
         //Decode
         switch (instruccion->identificador)
         {
@@ -58,7 +59,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             break;
         case READ:
             direccion_logica = parametro_instruccion(instruccion->parametros, 0);
-            valor = buscar_operando(direccion_logica);
+            valor = buscar_operando(direccion_logica, pcb -> PID);
             //Execute
             printf("%d", valor);
             break;
@@ -70,9 +71,9 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             break;
         case COPY:
             //Fetch operands
-            traer_operandos(instruccion, direccion_logica, valor);
+            log_info(logger, "COPY - EL PCB TIENE ID %d", pcb->PID);
+            traer_operandos(instruccion, direccion_logica, valor, pcb -> PID);
             //Execute
-            log_info(logger, "EL PCB TIENE ID %d", pcb->PID);
             escribir_operando(direccion_logica, valor, pcb->PID);
             break;
         case EXIT:
@@ -124,15 +125,15 @@ void escribir_operando(int direccion_logica, uint32_t valor_1, uint32_t PID)
 }
 
 // Busca en una dirección lógica determinada un valor
-uint32_t buscar_operando(int direccion_logica)
+uint32_t buscar_operando(int direccion_logica, uint32_t PID)
 {
 
     uint32_t marco, desplazamiento;
 
     //mmu carga el marco y el desplazamiento
-    mmu(direccion_logica, marco, desplazamiento);
+    int direccion_fisica = mmu(direccion_logica, marco, desplazamiento, PID);
 
-    uint32_t operando = acceso_a_memoria(TERCER_ACCESO_MEMORIA, marco, desplazamiento);
+    uint32_t operando = acceso_a_memoria_3(LEER_MEMORIA, direccion_fisica);
 
     return operando;
 }
@@ -142,11 +143,11 @@ int parametro_instruccion(t_list *parametros_instruccion, int indice)
     return (int)list_get(parametros_instruccion, indice);
 }
 
-void traer_operandos(t_instruccion *instruccion, int direccion_logica, uint32_t valor_2)
+void traer_operandos(t_instruccion *instruccion, int direccion_logica, uint32_t valor_2, uint32_t PID)
 {
     //busca en memoria y carga en direccion_logica, valor_2 los valores correspondientes
     int direccion_logica_aux = parametro_instruccion(instruccion->parametros, 1);
-    valor_2 = buscar_operando(direccion_logica_aux);
+    valor_2 = buscar_operando(direccion_logica_aux, PID);
     direccion_logica = parametro_instruccion(instruccion->parametros, 0);
 }
 
@@ -154,7 +155,6 @@ void traer_operandos(t_instruccion *instruccion, int direccion_logica, uint32_t 
 void devolver_pcb(t_PCB *pcb, codigo_operacion header, int socket_cliente)
 {
     end_t = time(NULL);
-    pcb->program_counter++;
     pcb->tiempo_ejecucion += end_t - start_t;
     log_info(logger, "devolviendo pcb %d - PID:%d", header, pcb->PID);
     log_info(logger, "tiempo de ejecucion %f", pcb->tiempo_ejecucion);

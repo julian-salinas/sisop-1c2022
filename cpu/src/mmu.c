@@ -93,3 +93,29 @@ uint32_t acceso_a_memoria_2(codigo_operacion header, uint32_t valor1, uint32_t v
 
     return rta_memoria;
 }
+
+
+// funcion auxiliar genérica para accesos a memoria
+uint32_t acceso_a_memoria_3(codigo_operacion header, uint32_t valor1)
+{
+    uint32_t rta_memoria;
+
+    t_paquete *paquete = crear_paquete(header, sizeof(uint32_t) * 2);
+    agregar_a_buffer_UINT32(paquete->payload, (uint32_t)valor1);
+    enviar_paquete(conexion_memoria, paquete);
+    destruir_paquete(paquete);
+
+    uint8_t resp_memoria = recibir_header(conexion_memoria);
+
+    if (resp_memoria != MEMORIA_OK)
+    {
+        log_info(logger, "Ha ocurrido un error durante el acceso a memoria. - ACCESO 3");
+    }
+
+    t_buffer *payload = recibir_payload(conexion_memoria);
+    rta_memoria = buffer_take_UINT32(payload);
+
+    log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
+
+    return rta_memoria;
+}

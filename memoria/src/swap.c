@@ -90,7 +90,7 @@ t_page_data* leer_pagina(t_swap* archivito_swap, int nro_pagina) {
     sem_wait(mutex_swap);
     void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE, MAP_SHARED, archivito_swap->fd, 0);
     void* datos = malloc(sizeof(memoria_config -> tamanio_pagina));
-    memcpy(datos, archivito_mapeado + (nro_pagina * (memoria_config -> tamanio_pagina)), memoria_config -> tamanio_pagina);
+    memcpy(datos, archivito_mapeado + (nro_pagina * (memoria_config -> tamanio_pagina)), sizeof(memoria_config -> tamanio_pagina));
     munmap(archivito_mapeado, archivito_swap -> tamanio);
     sem_post(mutex_swap);
     return datos;
@@ -139,8 +139,10 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     t_page_data* page_data = malloc(sizeof(t_page_data));
 
     // Obtener los datos de swap del diccionario
-    t_swap* swap_proceso = (t_swap*) dictionary_get(diccionario_swap, int_a_string(PID));
-
+    char* str_id = int_a_string(PID);
+    t_swap* swap_proceso = (t_swap*) dictionary_get(diccionario_swap, str_id);
+    free(str_id);
+    
     // Leer el contenido de la página en swap
     page_data = leer_pagina(swap_proceso, entrada -> nro_pagina);
 

@@ -36,6 +36,7 @@ void procesar_conexion_dispatch(void *args) {
 
     while (1) {
         header = recibir_header(conexion_cpu_dispatch);
+        log_info(logger, "AAAAAAAAAAAAAAAAAA - Se recibió header de dispatch %d", header);
 
         sem_wait(mutex_socket_cpu_dispatch);
         switch (header) {
