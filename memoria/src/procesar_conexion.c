@@ -55,8 +55,9 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
             case NUEVO_PROCESO:
                 //retardo cpu
                 usleep(memoria_config -> retardo_memoria * 1000);
-
+                
                 pcb = socket_get_PCB(socket_cliente);
+                log_info(logger, "Nuevo proceso - ID:%d", pcb -> PID);
                 
                 id_tabla_creada = crear_proceso_memoria(pcb);
 
@@ -79,6 +80,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 usleep(memoria_config -> retardo_memoria * 1000);
 
                 pcb = socket_get_PCB(socket_cliente);
+                log_info(logger, "Proceso SUSPENDIDO - ID:%d", pcb -> PID);
 
                 //obtengo las entradas que esten en memoria y las swappeo
                 entradas_a_swappear = get_entradas_en_memoria_proceso(pcb -> PID);
@@ -97,7 +99,8 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 usleep(memoria_config -> retardo_memoria * 1000);
 
                 pcb = socket_get_PCB(socket_cliente);
-
+                log_info(logger, "Proceso FINALIZADO - ID:%d", pcb -> PID);
+                
                 //libero memoria de las tablas
                 tp_lvl1 = get_tabla_primer_nivel(pcb -> tabla_paginas);
                 for (uint32_t i = 0; i < list_size(tp_lvl1 -> entradas); i++)
@@ -185,14 +188,18 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 
                 //recibo el nro de tabla de primer nivel y su entrada
                 payload = recibir_payload(socket_cliente);
-                nro_tabla_segundo_nivel = buffer_take_INT32(payload);
-                nro_pagina = buffer_take_INT32(payload);
-                PID = buffer_take_INT32(payload);
+                nro_tabla_segundo_nivel = buffer_take_UINT32(payload);
+                nro_pagina = buffer_take_UINT32(payload);
+                PID = buffer_take_UINT32(payload);
+
+                log_info(logger, "Se leyeron los datos enviados por CPU");
 
                 //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
                 tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, int_a_string(nro_tabla_segundo_nivel));
                 entrada = get_entrada_de_pagina(tabla_segundo_nivel, nro_pagina);
 
+                log_info(logger, "Se pudo obtener tabla de segundo nivel y entrada");
+                
                 if (!entrada -> bit_presencia) {
                     desswappear(PID, entrada);
                 }
@@ -271,7 +278,7 @@ void enviar_config_a_cpu(int socket_cliente, t_log* logger, uint8_t paginas_por_
 
 void enviar_boludeces_a_cpu(int socket_cliente, int32_t nro_tabla_segundo_nivel) {
     t_paquete* paquete = crear_paquete(MEMORIA_OK, sizeof(int32_t));
-    agregar_a_buffer_INT32(paquete -> payload, nro_tabla_segundo_nivel);
+    agregar_a_buffer_UINT32(paquete -> payload, nro_tabla_segundo_nivel);
     enviar_paquete(socket_cliente, paquete);
     destruir_paquete(paquete);
 }

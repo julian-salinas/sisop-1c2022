@@ -44,6 +44,8 @@ void procesar_conexion(void* void_args) {
 
 void procesar_conexion_kernel_cpu(int socket_cliente) {
     int8_t header;
+    t_buffer* buffer;
+    t_PCB* pcb;
     
     while (1) {
         header = recibir_header(socket_cliente);
@@ -53,11 +55,12 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
 
         case EJECUTAR_PROCESO:
             log_info(logger, "Se recibió pcb del Kernel.");
-            t_buffer* buffer = recibir_payload(socket_cliente);
-            t_PCB* pcb = buffer_take_PCB(buffer);  
+            buffer = recibir_payload(socket_cliente);
+            pcb = buffer_take_PCB(buffer);  
             log_info(logger, "Recibimos PCB con ID:%d y Tabla de páginas %d", pcb -> PID, pcb -> tabla_paginas);
             ejecutar_ciclo_instruccion(pcb, socket_cliente);
             break;
+
         case INTERRUPCION: 
             //TO DO
             //Enviar OK a Kernel 

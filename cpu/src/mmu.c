@@ -13,6 +13,7 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
     marco = buscar_entrada_tlb(tlb, numero_pagina);
     if (!marco)
     {
+        log_info(logger, "NO se encontró entrada en TLB");
         //SI NO ENCUENTRA
         //primer acceso a memoria
         log_info(logger, "Enviando PID %d y entrada tabla primer nivel %d", PID, entrada_tabla_1er_nivel);
@@ -29,6 +30,7 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
     }
     else
     {
+        log_info(logger, "Se encontró entrada en TLB");
         return marco * tamanio_pagina + desplazamiento;
 
         // //nos ahorramos una entrada
@@ -72,7 +74,7 @@ uint32_t acceso_a_memoria_2(codigo_operacion header, uint32_t valor1, uint32_t v
 {
     uint32_t rta_memoria;
 
-    t_paquete *paquete = crear_paquete(header, sizeof(uint32_t) * 2);
+    t_paquete *paquete = crear_paquete(header, sizeof(uint32_t) * 3);
     agregar_a_buffer_UINT32(paquete->payload, (uint32_t)valor1);
     agregar_a_buffer_UINT32(paquete->payload, (uint32_t)valor2);
     agregar_a_buffer_UINT32(paquete->payload, (uint32_t)valor3);
@@ -100,7 +102,7 @@ uint32_t acceso_a_memoria_3(codigo_operacion header, uint32_t valor1)
 {
     uint32_t rta_memoria;
 
-    t_paquete *paquete = crear_paquete(header, sizeof(uint32_t) * 2);
+    t_paquete *paquete = crear_paquete(header, sizeof(uint32_t));
     agregar_a_buffer_UINT32(paquete->payload, (uint32_t)valor1);
     enviar_paquete(conexion_memoria, paquete);
     destruir_paquete(paquete);
@@ -109,13 +111,13 @@ uint32_t acceso_a_memoria_3(codigo_operacion header, uint32_t valor1)
 
     if (resp_memoria != MEMORIA_OK)
     {
-        log_info(logger, "Ha ocurrido un error durante el acceso a memoria. - ACCESO 3");
+        log_error(logger, "Ha ocurrido un error durante el acceso a memoria. - ACCESO 3");
     }
 
     t_buffer *payload = recibir_payload(conexion_memoria);
     rta_memoria = buffer_take_UINT32(payload);
 
-    log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
+    log_info(logger, "Se recibió respuesta de memoria %d - DATO LEIDO:", rta_memoria);
 
     return rta_memoria;
 }

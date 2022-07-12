@@ -36,7 +36,6 @@ void procesar_conexion_dispatch(void *args) {
 
     while (1) {
         header = recibir_header(conexion_cpu_dispatch);
-        log_info(logger, "AAAAAAAAAAAAAAAAAA - Se recibió header de dispatch %d", header);
 
         sem_wait(mutex_socket_cpu_dispatch);
         switch (header) {
@@ -46,6 +45,8 @@ void procesar_conexion_dispatch(void *args) {
                 pcb = socket_get_PCB(conexion_cpu_dispatch);
                 sem_post(mutex_socket_cpu_dispatch);
                 
+                log_info(logger, "Proceso finalizado: %d", pcb -> PID);
+
                 sem_wait(mutex_socket_memoria);
                     enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb);  // Avisarle a memoria para que desaloje al proceso
                 sem_post(mutex_socket_memoria);
@@ -59,6 +60,7 @@ void procesar_conexion_dispatch(void *args) {
                 sem_post(sem_cpu_disponible);
                 pcb = socket_get_PCB(conexion_cpu_dispatch); // Obtener pcb del proceso bloqueado
                 sem_post(mutex_socket_cpu_dispatch);
+
                 log_info(logger, "Se recibió proceso bloqueado por %d ms", pcb->tiempo_bloqueo);
 
                 ajustar_estimacion(pcb);

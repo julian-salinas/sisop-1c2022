@@ -71,11 +71,14 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             break;
         case COPY:
             //Fetch operands
-            log_info(logger, "COPY - EL PCB TIENE ID %d", pcb->PID);
-            traer_operandos(instruccion, direccion_logica, valor, pcb -> PID);
+            //traer_operandos(instruccion, direccion_logica, valor, pcb -> PID);
             //Execute
-            escribir_operando(direccion_logica, valor, pcb->PID);
+            //escribir_operando(direccion_logica, valor, pcb->PID);
+            direccion_logica = parametro_instruccion(instruccion -> parametros, 0);
+            valor = buscar_operando(direccion_logica, pcb -> PID);
+            escribir_operando(parametro_instruccion(instruccion -> parametros, 1), valor, pcb -> PID);
             break;
+
         case EXIT:
             // Syscall finalización de proceso
             finCicloInstruccion = 1;
@@ -107,7 +110,7 @@ void escribir_operando(int direccion_logica, uint32_t valor_1, uint32_t PID)
     //mmu carga el marco y el desplazamiento
     int direccion_fisica = mmu(direccion_logica, marco, desplazamiento, PID);
 
-    t_paquete *paquete = crear_paquete(ESCRIBIR_EN_MEMORIA, sizeof(uint32_t) * 3);
+    t_paquete *paquete = crear_paquete(ESCRIBIR_EN_MEMORIA, sizeof(uint32_t) * 2);
     // agregar_a_buffer_UINT32(paquete->payload, (uint32_t)marco);
     // agregar_a_buffer_UINT32(paquete->payload, (uint32_t)desplazamiento);
     agregar_a_buffer_INT32(paquete->payload, (int32_t)direccion_fisica);
