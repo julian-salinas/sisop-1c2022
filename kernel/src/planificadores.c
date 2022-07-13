@@ -78,19 +78,10 @@ void func_corto_plazo(void* args) {
 
             ordenar_cola_ready();
             log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
-            
-            sem_wait(mutex_cola_ready);
-            // Imprimir cola ready
-            for (int i = 0; i < queue_size(cola_ready); i++) {
-                log_warning(logger, "Proceso posicion %d: %d", i, ((t_PCB*) list_get(cola_ready -> elements, i)) -> PID);
-            }
-            sem_post(mutex_cola_ready);
-
             ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
         }
     }
 }
-
 
 
 void func_mediano_plazo(void* args) {
@@ -146,6 +137,7 @@ void func_io(void* args) {
 
         sem_wait(mutex_cola_blocked);
             t_PCB* proceso = (t_PCB*) queue_pop(cola_blocked);
+            log_info(logger, "Se sacó de la cola de bloqueados al proceso %d", proceso -> PID);
         sem_post(mutex_cola_blocked);
 
         int tiempo_bloqueo = proceso -> tiempo_bloqueo * 1000; // microseg -> miliseg
@@ -154,21 +146,27 @@ void func_io(void* args) {
 
         usleep(tiempo_bloqueo);
 
+        log_info(logger, "Termina IO del proceso ID:%d", proceso -> PID);
+
         sem_wait(mutex_suspension);
+        log_info(logger, "Hice un wait");
+
 
             if (proceso -> estado == BLOCKED) {
                 sem_wait(mutex_mediano_plazo);
                     blocked_a_ready(proceso);
                 sem_post(mutex_mediano_plazo);
             }
-
+            log_info(logger, "Pasé el mutex de suspensión wiii");
             if (proceso -> estado == SUSPENDED_BLOCKED) {
                 sem_wait(mutex_mediano_plazo);
                     suspended_blocked_a_suspended_ready(proceso);
-                sem_wait(mutex_mediano_plazo);
+                sem_post(mutex_mediano_plazo);
             }
 
         sem_post(mutex_suspension);
+        log_info(logger, "Hice un post");
+
     }
 }
 
@@ -176,13 +174,19 @@ void func_io(void* args) {
 void func_suspension(void* args) {
     t_PCB* proceso = (t_PCB*) args;
 
+    log_info(logger, "Arranca sleep de suspencion");
+
     usleep(kernel_config -> tiempo_maximo_bloqueado * 1000);
 
+    log_info(logger, "Finaliza sleep de suspencion");
+
     sem_wait(mutex_suspension);
+    log_info(logger, "Hice un wait");
         // Si el proceso sigue estando realizando IO, suspenderlo
         if (proceso -> estado == BLOCKED) {
             blocked_a_suspended_blocked(proceso);
         }
 
     sem_post(mutex_suspension);
+    log_info(logger, "Hice un post");
 }

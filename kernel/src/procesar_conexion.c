@@ -24,7 +24,7 @@ void procesar_conexion(void *args) {
             break;
 
         default:
-            log_error(logger, "Recepcion de cliente - El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
+            log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
             break;
     }
 }
@@ -78,7 +78,7 @@ void procesar_conexion_dispatch(void *args) {
                 break;
 
             default:
-                log_error(logger, "Conexion con CPU - El codigo de operacion es incorrecto - %d", header);
+                log_error(logger, "El codigo de operacion es incorrecto - %d", header);
                 break;
         }
     }

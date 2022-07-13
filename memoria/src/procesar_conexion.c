@@ -195,17 +195,15 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 nro_pagina = buffer_take_UINT32(payload);
                 PID = buffer_take_UINT32(payload);
 
-                log_info(logger, "Se leyeron los datos enviados por CPU %d %d %d", nro_tabla_segundo_nivel, nro_pagina, PID);
+                log_info(logger, "Se leyeron los datos enviados por CPU");
 
                 //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
                 tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, int_a_string(nro_tabla_segundo_nivel));
                 entrada = get_entrada_de_pagina(tabla_segundo_nivel, nro_pagina);
 
-                log_info(logger, "Se pudo obtener tabla de segundo nivel: %d y entrada: %d", tabla_segundo_nivel -> id_tabla, entrada -> nro_pagina);
-
-                log_info(logger, "¿Ocurrió un Page Fault? - página %d", entrada -> nro_pagina);
+                log_info(logger, "Se pudo obtener tabla de segundo nivel y entrada");
+                
                 if (!entrada -> bit_presencia) {
-                    log_info(logger, "SI");
                     desswappear(PID, entrada);
                 }
 
@@ -236,15 +234,11 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 // Obtener dirección que envió CPU
                 payload = recibir_payload(socket_cliente);
                 direccion_fisica = buffer_take_INT32(payload);
-
-                log_info(logger, "Pedido de lectura en la posición: %d", direccion_fisica);
                 
                 // Leer dato y enviárselo a CPU
                 dato = leer_direccion_memoria(direccion_fisica);
                 enviar_boludeces_a_cpu(socket_cliente, dato);
                 
-                log_info(logger, "Dato leído: %d", dato);
-
                 break;
             
             case ESCRIBIR_EN_MEMORIA:
@@ -257,10 +251,6 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 payload = recibir_payload(socket_cliente);
                 direccion_fisica = buffer_take_INT32(payload);
                 dato = buffer_take_UINT32(payload);
-
-                escribir_direccion_memoria(direccion_fisica, dato);
-                
-                log_info(logger, "Pedido de escritura de dato %d en la posición: %d", dato, direccion_fisica);
 
                 // Escribir dato y enviar mensaje OK
                 enviar_header(socket_cliente, MEMORIA_OK);

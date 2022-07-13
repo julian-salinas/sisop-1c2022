@@ -176,7 +176,9 @@ void blocked_a_suspended_blocked(t_PCB* procesoAMover){
 
     sem_wait(mutex_socket_memoria);
         enviar_pcb(conexion_memoria, PROCESO_SUSPENDIDO, procesoAMover);
-    sem_wait(mutex_socket_memoria);
+    sem_post(mutex_socket_memoria);
+
+    sem_post(sem_multiprogramacion);
 }
 
 
@@ -191,4 +193,11 @@ void suspended_blocked_a_suspended_ready(t_PCB* procesoAMover) {
     log_info(logger, "El proceso con ID:%d  pasó de SUSPENDED-BLOCKED a SUSPENDED-READY.", procesoAMover -> PID);
 
     sem_post(sem_procesos_esperando);
+    int value;
+    sem_getvalue(sem_multiprogramacion, &value);
+    log_info(logger, "sem_multiprogramacion vale: %d ", value);
+    sem_getvalue(sem_procesos_esperando, &value);
+    log_info(logger, "sem_procesos_esperando vale: %d ", value);
+    sem_getvalue(mutex_mediano_plazo, &value);
+    log_info(logger, "mutex_mediano_plazo vale: %d ", value);
 }
