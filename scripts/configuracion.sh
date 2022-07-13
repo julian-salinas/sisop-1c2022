@@ -34,4 +34,9 @@ cd ..
 cd shared/
 mkdir obj
 
+echo 5- Crear carpeta swap
+sleep 1
+cd ../memoria/
+mkdir swapfiles
+
 echo Finaliza configuracion.sh
