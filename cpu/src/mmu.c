@@ -115,7 +115,7 @@ uint32_t acceso_a_memoria_3(codigo_operacion header, uint32_t valor1)
     t_buffer *payload = recibir_payload(conexion_memoria);
     rta_memoria = buffer_take_UINT32(payload);
 
-    log_info(logger, "Se recibió respuesta de memoria %d - DATO LEIDO:", rta_memoria);
+    log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
 
     return rta_memoria;
 }

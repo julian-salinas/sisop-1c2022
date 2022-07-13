@@ -1,4 +1,4 @@
-echo Copiando configs de PRUEBA BASE
+echo Copiando configs de PRUEBA PLANIFICACION
 
 echo Copiando archivos de configuracion...
 cp consola.config ../../consola/cfg/

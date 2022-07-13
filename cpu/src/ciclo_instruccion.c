@@ -61,12 +61,13 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             direccion_logica = parametro_instruccion(instruccion->parametros, 0);
             valor = buscar_operando(direccion_logica, pcb -> PID);
             //Execute
-            printf("%d", valor);
+            log_info(logger, "LEYENDO %d", valor);
             break;
         case WRITE:
             direccion_logica = parametro_instruccion(instruccion->parametros, 0);
             valor = parametro_instruccion(instruccion->parametros, 1);
             //Execute
+            log_info(logger, "ESCRIBIENDO %d", valor);
             escribir_operando(direccion_logica, valor, pcb->PID);
             break;
         case COPY:

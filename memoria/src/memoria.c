@@ -11,6 +11,7 @@ int main(void) {
 
 	// Inicializar estructuras de tablas de páginas
 	inicializar_tablas_de_paginas();
+	log_info(logger, "Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:");
 	
 	// Inicializar semáforos de memoria
 	mutex_swap = malloc(sizeof(sem_t));
@@ -22,11 +23,14 @@ int main(void) {
 	// Inicializar memoria
 	memoria = inicializar_memoria();
 	diccionario_swap = dictionary_create();
+	log_info(logger, "Se inicializó puntero a memoria EXITOSAMENTE :smirk:");
 
 	// Elegir entre CLOCK y CLOCK_MEJORADO
 	elegir_algoritmo_reemplazo(memoria_config -> algoritmo_reemplazo);
 
 	diccionario_clocks = dictionary_create();
+
+	log_info(logger, "watafoc");
 
 	generarFrames(memoria, memoria_config -> tamanio_memoria, memoria_config -> tamanio_pagina);
 

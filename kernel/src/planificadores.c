@@ -78,10 +78,19 @@ void func_corto_plazo(void* args) {
 
             ordenar_cola_ready();
             log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+            
+            sem_wait(mutex_cola_ready);
+            // Imprimir cola ready
+            for (int i = 0; i < queue_size(cola_ready); i++) {
+                log_warning(logger, "Proceso posicion %d: %d", i, ((t_PCB*) list_get(cola_ready -> elements, i)) -> PID);
+            }
+            sem_post(mutex_cola_ready);
+
             ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
         }
     }
 }
+
 
 
 void func_mediano_plazo(void* args) {

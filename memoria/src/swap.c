@@ -80,6 +80,7 @@ t_swap* crear_archivo_swap(uint32_t PID, size_t tamanio) {
 void destruir_archivo_swap(uint32_t PID) {
     t_swap* archivito_swap = (t_swap*) dictionary_get(diccionario_swap, int_a_string(PID));
     close(archivito_swap -> fd);
+    unlink(archivito_swap -> path);
     free(archivito_swap -> path);
     free(archivito_swap -> entradas);
     free(archivito_swap);

@@ -68,6 +68,9 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
             interrupcion=1;
             sem_post(mutex_interrupt);
             break;               
+
+        default:
+            return;
         }
     }
 }
