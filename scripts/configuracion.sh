@@ -39,4 +39,7 @@ sleep 1
 cd ../memoria/
 mkdir swapfiles
 
+cd ~
+mkdir swap
+
 echo Finaliza configuracion.sh
