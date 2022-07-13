@@ -88,8 +88,8 @@ void obtener_config_memoria(void){
     / recibir paquete y guardar paginas por tabla y tamanio pagina */
     omitir_header(conexion_memoria);
     t_buffer* payload = recibir_payload(conexion_memoria);
-    paginas_por_tabla = buffer_take_UINT8(payload);
-    tamanio_pagina = buffer_take_UINT8(payload);
+    paginas_por_tabla = buffer_take_UINT32(payload);
+    tamanio_pagina = buffer_take_UINT32(payload);
     //funciona 
     log_info(logger, "Se recibió configuración de memoria.");
     printf("Páginas por tabla: %u\n",paginas_por_tabla);

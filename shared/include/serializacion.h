@@ -209,8 +209,8 @@
         uint8_t tam_pagina;
     } t_conexion_cpu_memoria;
 
-    t_paquete* serializar_config_cpu_memoria(uint8_t paginas_por_tabla, uint8_t tam_pagina);
-    void deserializar_config_cpu_memoria(void* stream, uint8_t* paginas_por_tabla, uint8_t* tam_pagina);
+    t_paquete* serializar_config_cpu_memoria(uint32_t paginas_por_tabla, uint32_t tam_pagina);
+    void deserializar_config_cpu_memoria(void* stream, uint32_t* paginas_por_tabla, uint32_t* tam_pagina);
 
 
 #endif /* SERIALIZACION_H */

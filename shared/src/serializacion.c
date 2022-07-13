@@ -178,14 +178,14 @@ double buffer_take_DOUBLE(t_buffer* buffer){
 -------------------- Comunicación entre cpu y memoria ------------------------------------
 */
 
-t_paquete* serializar_config_cpu_memoria(uint8_t paginas_por_tabla, uint8_t tam_pagina) {
-    t_paquete* paquete= crear_paquete(CONEXION_CPU_MEMORIA, sizeof(uint8_t)*2);
-    agregar_a_buffer_UINT8(paquete->payload, paginas_por_tabla);
-    agregar_a_buffer_UINT8(paquete->payload, tam_pagina);
+t_paquete* serializar_config_cpu_memoria(uint32_t paginas_por_tabla, uint32_t tam_pagina) {
+    t_paquete* paquete= crear_paquete(CONEXION_CPU_MEMORIA, sizeof(uint32_t)*2);
+    agregar_a_buffer_UINT32(paquete->payload, paginas_por_tabla);
+    agregar_a_buffer_UINT32(paquete->payload, tam_pagina);
     return paquete;
 }
 
-void deserializar_config_cpu_memoria(void* stream, uint8_t* paginas_por_tabla, uint8_t* tam_pagina) {
-    memcpy(paginas_por_tabla, stream, sizeof(uint8_t));
-    memcpy(tam_pagina, stream+sizeof(uint8_t), sizeof(uint8_t));
+void deserializar_config_cpu_memoria(void* stream, uint32_t* paginas_por_tabla, uint32_t* tam_pagina) {
+    memcpy(paginas_por_tabla, stream, sizeof(uint32_t));
+    memcpy(tam_pagina, stream+sizeof(uint32_t), sizeof(uint32_t));
 }

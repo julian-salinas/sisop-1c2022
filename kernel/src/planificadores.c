@@ -182,11 +182,7 @@ void func_io(void* args) {
 void func_suspension(void* args) {
     t_PCB* proceso = (t_PCB*) args;
 
-    log_info(logger, "Arranca sleep de suspencion");
-
     usleep(kernel_config -> tiempo_maximo_bloqueado * 1000);
-
-    log_info(logger, "Finaliza sleep de suspencion");
 
     sem_wait(mutex_suspension);
     log_info(logger, "Hice un wait");
