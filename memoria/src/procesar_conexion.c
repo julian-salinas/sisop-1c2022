@@ -45,6 +45,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
     t_list* entradas_a_swappear;
     t_tabla_primer_nivel* tp_lvl1;
     t_tabla_segundo_nivel* tp_lvl2;
+    t_paquete* respuesta;
 
     while (1) {
         header = recibir_header(socket_cliente);
@@ -69,8 +70,10 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 pcb -> tabla_paginas = id_tabla_creada;
 
                 //Devolver pcb al kernel
-                enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
-                log_info(logger, "Se devolvió PCB con tabla de páginas");
+                respuesta = crear_paquete(MEMORIA_OK, sizeof(uint32_t));
+                agregar_a_buffer_INT32(respuesta -> payload, id_tabla_creada);
+                enviar_paquete(socket_cliente, respuesta);
+                log_info(logger, "Se devolvió PCB del proceso %d con tabla de páginas %d", pcb -> PID, id_tabla_creada);
 
                 break;
             

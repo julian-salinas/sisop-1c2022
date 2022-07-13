@@ -39,6 +39,7 @@ t_tabla_segundo_nivel* crear_tabla_segundo_nivel(void) {
 
     sem_wait(mutex_id_tablas);
         char* str_id = int_a_string(id_tablas_segundo_nivel);
+        tmp -> id_tabla = id_tablas_segundo_nivel;
         id_tablas_segundo_nivel++;
     sem_post(mutex_id_tablas);
 

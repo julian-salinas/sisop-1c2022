@@ -1,6 +1,5 @@
 #include "mmu.h"
 
-//MMU FALTA USO DE TLB
 int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t PID)
 {
     uint32_t nro_tabla_segundo_nivel;
@@ -26,20 +25,19 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
         // Agregar a tlb -> numero pagina | numero marco
         agregar_entrada_tlb(tlb, numero_pagina, marco);
 
-        return marco * tamanio_pagina + desplazamiento;
     }
     else
     {
         log_info(logger, "Se encontró entrada en TLB");
-        return marco * tamanio_pagina + desplazamiento;
 
         // //nos ahorramos una entrada
         // //segundo acceso a memoria
         // entrada_tabla_2do_nivel = (uint32_t)numero_pagina % paginas_por_tabla;
 
-        // marco = acceso_a_memoria(SEGUNDO_ACCESO_MEMORIA, nro_tabla_segundo_nivel, entrada_tabla_2do_nivel);
-        // desplazamiento = (direccion_logica - (numero_pagina * tamanio_pagina));
+        //marco = acceso_a_memoria(SEGUNDO_ACCESO_MEMORIA, nro_tabla_segundo_nivel, entrada_tabla_2do_nivel);
     }
+    desplazamiento = (direccion_logica - (numero_pagina * tamanio_pagina));
+    return marco * tamanio_pagina + desplazamiento;
 }
 
 // funcion auxiliar genérica para accesos a memoria

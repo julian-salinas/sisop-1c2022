@@ -12,6 +12,6 @@ gnome-terminal -e ./kernel
 
 echo Enviando consolas...
 cd ../consola
-gnome-terminal -e "./consola 20 ../scripts/1-prueba_base/BASE_1"
-gnome-terminal -e "./consola 20 ../scripts/1-prueba_base/BASE_2"
-gnome-terminal -e "./consola 20 ../scripts/1-prueba_base/BASE_2"
+gnome-terminal -e "./consola 20 ../scripts/1-base/BASE_1"
+gnome-terminal -e "./consola 20 ../scripts/1-base/BASE_2"
+gnome-terminal -e "./consola 20 ../scripts/1-base/BASE_2"

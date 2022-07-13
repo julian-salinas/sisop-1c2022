@@ -92,8 +92,10 @@ void new_a_ready(void) {
             return;
         }
 
-        free(procesoAMover);
-        procesoAMover = socket_get_PCB(conexion_memoria);
+        t_buffer* payload = recibir_payload(conexion_memoria);
+        uint32_t tabla_paginas = buffer_take_INT32(payload);
+        tabla_paginas = procesoAMover -> PID;
+        procesoAMover -> tabla_paginas = tabla_paginas;
 
     sem_post(mutex_socket_memoria);
     
