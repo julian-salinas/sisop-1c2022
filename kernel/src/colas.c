@@ -126,6 +126,7 @@ void ready_a_running(void) {
     
    
     log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
+    //proceso_corriendo = true;
 }
 
 
@@ -166,6 +167,9 @@ void blocked_a_ready(t_PCB* procesoAMover){
     log_info(logger, "El proceso con ID:%d  pasó de BLOCKED a READY.", procesoAMover -> PID);
 
     sem_post(sem_procesos_en_ready);
+    int value;
+    sem_getvalue(sem_procesos_en_ready, &value);
+    log_info(logger, "sem_procesos_en_ready vale: %d ", value);
 }
 
 

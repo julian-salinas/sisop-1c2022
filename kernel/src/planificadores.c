@@ -62,9 +62,13 @@ void func_corto_plazo(void* args) {
 
         else {
             sem_wait(sem_procesos_en_ready);
-
+                log_info(logger, "1 - debajo del wait");
+                log_info(logger, "proceso_corriendo vale: %d", proceso_corriendo);
             if (proceso_corriendo) {
+                log_info(logger, "2 - dentro del if");
                 sem_wait(mutex_socket_cpu_interrupt);
+                    log_info(logger, "3 - yendo a mandar la interrupcion");
+
                     enviar_header(conexion_cpu_interrupt, INTERRUPCION);  // Avisar a CPU para que desaloje proceso actual
                     omitir_header(conexion_cpu_interrupt); // No nos interesa el header que se recibe, solo queremos el PCB
                     free(procesoAMover);
