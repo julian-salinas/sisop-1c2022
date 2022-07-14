@@ -27,6 +27,8 @@
     // Semáforos mutex para sockets
     sem_t* mutex_socket_memoria, *mutex_socket_cpu_dispatch, *mutex_socket_cpu_interrupt;
 
+    sem_t* sem_proceso_interrumpido;
+    
     // Inicializar todos los semaforos
     void ini_semaforos(void);
 

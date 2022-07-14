@@ -52,4 +52,6 @@ void ini_semaforos(void) {
 	mutex_socket_cpu_interrupt = malloc(sizeof(sem_t));
 	sem_init(mutex_socket_cpu_interrupt, 0, 1);
 
+    sem_proceso_interrumpido = malloc(sizeof(sem_t));
+	sem_init(sem_proceso_interrumpido, 0, 0);
 }

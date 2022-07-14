@@ -66,18 +66,26 @@ void func_corto_plazo(void* args) {
                 log_info(logger, "proceso_corriendo vale: %d", proceso_corriendo);
             if (proceso_corriendo) {
                 log_info(logger, "2 - dentro del if");
+                // sem_wait(mutex_cola_ready);
                 sem_wait(mutex_socket_cpu_interrupt);
+                // sem_wait(mutex_socket_cpu_dispatch);
+                    
                     log_info(logger, "3 - yendo a mandar la interrupcion");
 
                     enviar_header(conexion_cpu_interrupt, INTERRUPCION);  // Avisar a CPU para que desaloje proceso actual
-                    omitir_header(conexion_cpu_interrupt); // No nos interesa el header que se recibe, solo queremos el PCB
-                    free(procesoAMover);
-                    procesoAMover = socket_get_PCB(conexion_cpu_interrupt);
-                sem_post(mutex_socket_cpu_interrupt);
-                // Agregar tiempo restante al PCB
-                procesoAMover -> tiempo_restante = procesoAMover -> estimacion_rafaga - procesoAMover -> tiempo_ejecucion;
+                    log_info(logger, "MANDÉ UNA INTERRUPCION A CPU INTERRUPT");
+                    // omitir_header(conexion_cpu_dispatch); // No nos interesa el header que se recibe, solo queremos el PCB
+                    // free(procesoAMover);
+                    // procesoAMover = socket_get_PCB(conexion_cpu_dispatch);
 
-                running_a_ready(procesoAMover);
+                sem_post(mutex_socket_cpu_interrupt);
+                continue;
+                // sem_wait(sem_proceso_interrumpido);
+                // sem_post(conexion_cpu_dispatch);
+                // Agregar tiempo restante al PCB
+                // procesoAMover -> tiempo_restante = procesoAMover -> estimacion_rafaga - procesoAMover -> tiempo_ejecucion;
+
+                // running_a_ready(procesoAMover);
             }
 
             ordenar_cola_ready();

@@ -54,6 +54,7 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
         switch (header) {
 
         case EJECUTAR_PROCESO:
+            log_info(logger, "CASE EJECUTAR PROCESO");
             log_info(logger, "Se recibió pcb del Kernel.");
             buffer = recibir_payload(socket_cliente);
             pcb = buffer_take_PCB(buffer);  
@@ -62,11 +63,14 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
             break;
 
         case INTERRUPCION: 
+            log_info(logger, "INTERRUPCION");
             //TO DO
             //Enviar OK a Kernel 
             sem_wait(mutex_interrupt);
             interrupcion=1;
+            log_info(logger, "INTERRUPCION %d", interrupcion);
             sem_post(mutex_interrupt);
+
             break;               
 
         default:

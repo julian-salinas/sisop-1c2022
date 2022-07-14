@@ -62,8 +62,8 @@ void* atender_dispatch(void *arg){
 }
 
 void* atender_interrupt(void *arg){
-//    server_cpu_interrupt = iniciar_servidor(logger, "CPU Interrupt", cpu_config -> ip_cpu, cpu_config -> puerto_escucha_interrupt);   
-     server_cpu_dispatch = crear_socket_servidor(cpu_config -> ip_cpu, cpu_config -> puerto_escucha_interrupt, logger);
+    server_cpu_interrupt = crear_socket_servidor(cpu_config -> ip_cpu, cpu_config -> puerto_escucha_interrupt, logger);   
+    // server_cpu_dispatch = crear_socket_servidor(cpu_config -> ip_cpu, cpu_config -> puerto_escucha_dispatch, logger);
     while(server_listen(logger, "CPU Interrupt", server_cpu_interrupt, (void*)(*procesar_conexion)));
 }
 

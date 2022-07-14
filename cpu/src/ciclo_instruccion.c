@@ -75,6 +75,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             //traer_operandos(instruccion, direccion_logica, valor, pcb -> PID);
             //Execute
             //escribir_operando(direccion_logica, valor, pcb->PID);
+            log_info(logger, "COPYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
             direccion_logica = parametro_instruccion(instruccion -> parametros, 0);
             valor = buscar_operando(direccion_logica, pcb -> PID);
             escribir_operando(parametro_instruccion(instruccion -> parametros, 1), valor, pcb -> PID);
@@ -92,11 +93,13 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
         sem_wait(mutex_interrupt);
         if (interrupcion == 1)
         {
+            log_info(logger, "DEVOLVIENDO POR INTERRUPCION");
             finCicloInstruccion = 1;
             //Regreso por interrupcion
-            pcb->estado = BLOCKED;
+            // pcb->estado = BLOCKED;
             devolver_pcb(pcb, INTERRUPCION, socket_cliente);
             interrupcion = 0;
+            log_info(logger, "YA DEVOLVÍ POR INTERRUPCION");
         }
         sem_post(mutex_interrupt);
 

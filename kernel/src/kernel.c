@@ -20,6 +20,9 @@ int main(void) {
 	// Inicializar contador de ID Procesos para PCB
 	contador_id_proceso = 1;
 
+	// Inicializar variable que indica que se está usando la CPU
+	proceso_corriendo = false;
+
 	// Inicializacion de threads
 	ini_threads();
 

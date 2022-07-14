@@ -54,6 +54,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
         switch (header) {
 
             case NUEVO_PROCESO:
+                log_info(logger, "CASE NUEVO PROCESO");
                 //retardo cpu
                 usleep(memoria_config -> retardo_memoria * 1000);
                 
@@ -79,6 +80,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
             
 
             case PROCESO_SUSPENDIDO:
+                log_info(logger, "CASE PROCESO SUSPENDIDO");
                 //retardo cpu
                 usleep(memoria_config -> retardo_memoria * 1000);
 

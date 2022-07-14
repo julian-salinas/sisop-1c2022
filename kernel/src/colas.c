@@ -126,7 +126,7 @@ void ready_a_running(void) {
     
    
     log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
-    //proceso_corriendo = true;
+    proceso_corriendo = true;
 }
 
 
