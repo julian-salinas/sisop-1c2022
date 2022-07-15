@@ -114,7 +114,10 @@ void ready_a_running(void) {
     sem_post(mutex_socket_cpu_dispatch);
     
     log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
+
+    sem_wait(mutex_proceso_corriendo);
     proceso_corriendo = true;
+    sem_post(mutex_proceso_corriendo);
 }
 
 

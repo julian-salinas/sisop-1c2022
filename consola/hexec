@@ -1,5 +1,5 @@
 #!/bin/bash
-FILE=cpu
+FILE=consola
 make $FILE
 if test -f "./$FILE"; then
     valgrind --tool=helgrind ./$FILE

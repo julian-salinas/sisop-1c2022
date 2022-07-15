@@ -1,6 +1,7 @@
 #include "procesar_conexion.h"
 
-void procesar_conexion(void *args) {
+void procesar_conexion(void *args)
+{
 
     t_procesar_conexion_args *casted_args = (t_procesar_conexion_args *)args;
     t_log *logger = casted_args->log;
@@ -12,124 +13,138 @@ void procesar_conexion(void *args) {
     log_info(logger, "Se recibió el cod operacion %d  - %s", header, nombre_servidor);
     t_PCB *pcb;
 
-    switch (header) {
+    switch (header)
+    {
 
-        case NUEVO_PROCESO:
-            pcb = socket_create_PCB(socket);
-            agregar_a_new(pcb); // Se agrega proceso a cola NEW y se actualiza su estado
-            break;
+    case NUEVO_PROCESO:
+        pcb = socket_create_PCB(socket);
+        agregar_a_new(pcb); // Se agrega proceso a cola NEW y se actualiza su estado
+        break;
 
-        case -1:
-            log_error(logger, "Cliente desconectado de %s", nombre_servidor);
-            break;
+    case -1:
+        log_error(logger, "Cliente desconectado de %s", nombre_servidor);
+        break;
 
-        default:
-            log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
-            break;
+    default:
+        log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
+        break;
     }
 }
 
-
-void procesar_conexion_dispatch(void *args) {
+void procesar_conexion_dispatch(void *args)
+{
     uint32_t header;
-    t_PCB* pcb;
+    t_PCB *pcb;
 
-    while (1) {
+    while (1)
+    {
         header = recibir_header(conexion_cpu_dispatch);
         log_info(logger, "Se recibió header de CPU:%d", header);
         sem_wait(mutex_socket_cpu_dispatch);
-        switch (header) {
+        switch (header)
+        {
 
-            case PROCESO_FINALIZADO:
-                proceso_corriendo = false;
+        case PROCESO_FINALIZADO:
 
-                pcb = socket_get_PCB(conexion_cpu_dispatch);
-                sem_post(mutex_socket_cpu_dispatch);
-                log_info(logger, "Proceso finalizado: %d", pcb -> PID);
-                
-                sem_post(sem_cpu_disponible);
+            sem_wait(mutex_proceso_corriendo);
+            proceso_corriendo = false;
+            sem_post(mutex_proceso_corriendo);
 
-                sem_wait(mutex_socket_memoria);
-                    enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb);  // Avisarle a memoria para que desaloje al proceso
-                sem_post(mutex_socket_memoria);
-                
-                enviar_header(pcb->socket_cliente, PROCESO_FINALIZADO); // Avisarle a consola que terminó la ejecución
-                sem_post(sem_multiprogramacion);                        // Se libera multiprog. después de sacar al proceso de memoria
+            pcb = socket_get_PCB(conexion_cpu_dispatch);
+            sem_post(mutex_socket_cpu_dispatch);
+            log_info(logger, "Proceso finalizado: %d", pcb->PID);
 
-                if (algoritmo_elegido == SJF) {
-                    sem_wait(mutex_cola_ready);  
-                    if (queue_size(cola_ready)) {
-                        sem_post(mutex_cola_ready);  
+            sem_post(sem_cpu_disponible);
 
-                        ordenar_cola_ready();
-                        log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+            sem_wait(mutex_socket_memoria);
+            enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb); // Avisarle a memoria para que desaloje al proceso
+            sem_post(mutex_socket_memoria);
 
-                        ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
-                    }
-                    else {
-                        sem_post(mutex_cola_ready);
-                    }
+            enviar_header(pcb->socket_cliente, PROCESO_FINALIZADO); // Avisarle a consola que terminó la ejecución
+            sem_post(sem_multiprogramacion);                        // Se libera multiprog. después de sacar al proceso de memoria
+
+            if (algoritmo_elegido == SJF)
+            {
+                sem_wait(mutex_cola_ready);
+                if (queue_size(cola_ready))
+                {
+                    sem_post(mutex_cola_ready);
+
+                    ordenar_cola_ready();
+                    log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+
+                    ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
                 }
+                else
+                {
+                    sem_post(mutex_cola_ready);
+                }
+            }
 
-                break;
+            break;
 
-            case PROCESO_BLOQUEADO:
-                proceso_corriendo = false;
-                sem_post(sem_cpu_disponible);
-                pcb = socket_get_PCB(conexion_cpu_dispatch); // Obtener pcb del proceso bloqueado
-                sem_post(mutex_socket_cpu_dispatch);
+        case PROCESO_BLOQUEADO:
+            sem_wait(mutex_proceso_corriendo);
+            proceso_corriendo = false;
+            sem_post(mutex_proceso_corriendo);
 
-                log_info(logger, "Se recibió proceso bloqueado por %d ms", pcb->tiempo_bloqueo);
+            sem_post(sem_cpu_disponible);
+            pcb = socket_get_PCB(conexion_cpu_dispatch); // Obtener pcb del proceso bloqueado
+            sem_post(mutex_socket_cpu_dispatch);
 
-                ajustar_estimacion(pcb);
+            log_info(logger, "Se recibió proceso bloqueado por %d ms", pcb->tiempo_bloqueo);
 
-                running_a_blocked(pcb); // Pasar a cola blocked
+            ajustar_estimacion(pcb);
 
-                // Iniciar hilo que se va a encargar de suspender al proceso en caso de que se zarpe de tiempo
-                pthread_create(&thread_suspension, 0, (void *)func_suspension, (void *)pcb);
-                pthread_detach(thread_suspension);
+            running_a_blocked(pcb); // Pasar a cola blocked
 
-                break;
+            // Iniciar hilo que se va a encargar de suspender al proceso en caso de que se zarpe de tiempo
+            pthread_create(&thread_suspension, 0, (void *)func_suspension, (void *)pcb);
+            pthread_detach(thread_suspension);
 
-            case INTERRUPCION:
-                proceso_corriendo = false;
-                pcb = socket_get_PCB(conexion_cpu_dispatch);
-                sem_post(mutex_socket_cpu_dispatch);
+            break;
 
-                log_info(logger, "Se recibió proceso interrumpido: PID:%d", pcb -> PID);
+        case INTERRUPCION:
+            proceso_corriendo = false;
+            pcb = socket_get_PCB(conexion_cpu_dispatch);
+            sem_post(mutex_socket_cpu_dispatch);
 
-                running_a_ready(pcb);
+            log_info(logger, "Se recibió proceso interrumpido: PID:%d", pcb->PID);
 
-                ordenar_cola_ready();
-                log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+            running_a_ready(pcb);
 
-                ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
-                
-                break;
+            ordenar_cola_ready();
+            log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
 
-            case INTERRUPCION_RECHAZADA:
-                sem_post(mutex_socket_cpu_dispatch);
-                log_info(logger, "Interrupcion rechazada - no hay procesos en cpu");
-                break;
+            ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
 
-            case -1:
-                sem_post(mutex_socket_cpu_dispatch);                
-                log_error(logger, "¡Hubo un problema con la conexión de CPU!");
-                return;
+            break;
 
-            default:
-                sem_post(mutex_socket_cpu_dispatch);                
-                log_error(logger, "El codigo de operacion es incorrecto - %d", header);
-                return;
+        case INTERRUPCION_RECHAZADA:
+            sem_post(mutex_socket_cpu_dispatch);
+            log_info(logger, "Interrupcion rechazada - no hay procesos en cpu");
+            break;
+
+        case -1:
+            sem_post(mutex_socket_cpu_dispatch);
+            log_error(logger, "¡Hubo un problema con la conexión de CPU!");
+            return;
+
+        default:
+            sem_post(mutex_socket_cpu_dispatch);
+            log_error(logger, "El codigo de operacion es incorrecto - %d", header);
+            return;
         }
     }
 }
 
-
-t_PCB *crear_PCB(t_proceso *proceso, int socket) {
+t_PCB *crear_PCB(t_proceso *proceso, int socket)
+{
 
     t_PCB *pcb = malloc(sizeof(t_PCB));
+    sem_wait(mutex_pid);
     pcb->PID = contador_id_proceso;
+    sem_post(mutex_pid);
     pcb->tamanio = proceso->tamanio;
     pcb->lista_instrucciones = proceso->lista_instrucciones;
     pcb->program_counter = 0;
@@ -148,8 +163,8 @@ t_PCB *crear_PCB(t_proceso *proceso, int socket) {
     return pcb;
 }
 
-
-t_PCB *socket_create_PCB(int socket) {
+t_PCB *socket_create_PCB(int socket)
+{
     t_buffer *payload = recibir_payload(socket);
     t_proceso *proceso = buffer_take_PROCESO(payload);
     t_PCB *pcb = crear_PCB(proceso, socket);
