@@ -30,6 +30,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
     uint32_t valor;
     start_t = time(NULL);
     finCicloInstruccion = 0;
+    int param;
     do
     {
         //Fetch
@@ -43,11 +44,19 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
         switch (instruccion->identificador)
         {
         case NO_OP:
-            sleep_time = cpu_config->retardo_noop * parametro_instruccion(instruccion->parametros, 0) * 1000;
             //Execute
-            log_info(logger, "tiempo de sleep %d", sleep_time);
+            param = parametro_instruccion(instruccion -> parametros, 0);
+            log_info(logger, "parametro_instruccion recibido: %d", param);
+            sleep_time = cpu_config->retardo_noop * param;
             log_info(logger, "Ejecutando NO_OP.");
-            usleep(sleep_time);
+            log_info(logger, "tiempo de sleep %d", sleep_time);
+
+            for (size_t i = 0; i < sleep_time; i++)
+            {
+                usleep(1000);
+            }
+
+            log_info(logger, "Terminó usleep");
             break;
         case I_O:
             // se bloquea
@@ -89,10 +98,19 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             devolver_pcb(pcb, PROCESO_FINALIZADO, socket_cliente);
             break;
         }
-        log_info(logger, "program counter %d", pcb->program_counter);
         sem_wait(mutex_interrupt);
+        
         if (interrupcion == 1)
         {
+            log_warning(logger, "Condicional: interrupcion == 1");
+            
+            if (finCicloInstruccion == 1) {
+                enviar_header(socket_cliente, INTERRUPCION_RECHAZADA);
+                sem_post(mutex_interrupt);
+                interrupcion = 0;
+                continue;
+            }
+
             log_info(logger, "DEVOLVIENDO POR INTERRUPCION");
             finCicloInstruccion = 1;
             //Regreso por interrupcion
@@ -102,7 +120,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             log_info(logger, "YA DEVOLVÍ POR INTERRUPCION");
         }
         sem_post(mutex_interrupt);
-
+    log_info(logger, "Linea 121");
     } while (!finCicloInstruccion); //Check Interrupt //Ciclo de instruccion
 }
 
@@ -166,6 +184,7 @@ void devolver_pcb(t_PCB *pcb, codigo_operacion header, int socket_cliente)
     log_info(logger, "devolviendo pcb %d - PID:%d", header, pcb->PID);
     log_info(logger, "tiempo de ejecucion %f", pcb->tiempo_ejecucion);
     enviar_pcb(socket_cliente, header, pcb);
+    log_info(logger, "pcb devolvido");
     //limpieza de tlb
     limpiar_tlb2();
 

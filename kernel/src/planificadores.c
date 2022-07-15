@@ -50,8 +50,8 @@ void finalizar_semaforos_plani() {
 }
 
 
+
 void func_corto_plazo(void* args) {
-    t_PCB* procesoAMover;
 
     while (1) {
         if (algoritmo_elegido == FIFO) {
@@ -62,30 +62,18 @@ void func_corto_plazo(void* args) {
 
         else {
             sem_wait(sem_procesos_en_ready);
-                log_info(logger, "1 - debajo del wait");
-                log_info(logger, "proceso_corriendo vale: %d", proceso_corriendo);
-            if (proceso_corriendo) {
-                log_info(logger, "2 - dentro del if");
-                // sem_wait(mutex_cola_ready);
-                sem_wait(mutex_socket_cpu_interrupt);
-                // sem_wait(mutex_socket_cpu_dispatch);
-                    
-                    log_info(logger, "3 - yendo a mandar la interrupcion");
 
+            log_info(logger, "proceso_corriendo vale: %d", proceso_corriendo);
+
+            if (proceso_corriendo) {
+                sem_wait(mutex_socket_cpu_interrupt);
+                    
+                    log_info(logger, "Enviando interrupción a CPU INTERRUPT");
                     enviar_header(conexion_cpu_interrupt, INTERRUPCION);  // Avisar a CPU para que desaloje proceso actual
-                    log_info(logger, "MANDÉ UNA INTERRUPCION A CPU INTERRUPT");
-                    // omitir_header(conexion_cpu_dispatch); // No nos interesa el header que se recibe, solo queremos el PCB
-                    // free(procesoAMover);
-                    // procesoAMover = socket_get_PCB(conexion_cpu_dispatch);
+                    log_info(logger, "Interrupción enviada");
 
                 sem_post(mutex_socket_cpu_interrupt);
                 continue;
-                // sem_wait(sem_proceso_interrumpido);
-                // sem_post(conexion_cpu_dispatch);
-                // Agregar tiempo restante al PCB
-                // procesoAMover -> tiempo_restante = procesoAMover -> estimacion_rafaga - procesoAMover -> tiempo_ejecucion;
-
-                // running_a_ready(procesoAMover);
             }
 
             ordenar_cola_ready();
@@ -93,11 +81,12 @@ void func_corto_plazo(void* args) {
 
             sem_wait(mutex_cola_ready);
             // Imprimir cola ready
+            log_warning(logger, "Imprimiendo cola ready...");
             for (int i = 0; i < queue_size(cola_ready); i++){
                 log_warning(logger, "Proceso posicion %d: %d", i, ((t_PCB*) list_get(cola_ready -> elements, i)) -> PID);
             }
             sem_post(mutex_cola_ready);
-
+            log_info(logger, "Se va a pasar proceso a running");
             ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
         }
     }
@@ -169,17 +158,27 @@ void func_io(void* args) {
         log_info(logger, "Termina IO del proceso ID:%d", proceso -> PID);
 
         sem_wait(mutex_suspension);
-        log_info(logger, "Hice un wait");
+        log_info(logger, "Hice un wait - Función IO");
 
 
             if (proceso -> estado == BLOCKED) {
+                log_info(logger, "EEEEEEEEEEEEEEEEEEEEE!!!!!!!!!");
+                int value; 
+                sem_getvalue(mutex_mediano_plazo, &value);
+                log_info(logger, "Valor de semaforo mediano plazo: %d", value);
                 sem_wait(mutex_mediano_plazo);
+                    log_info(logger, "Se pasó el semáforo mutex_mediano plazo");
                     blocked_a_ready(proceso);
+                    log_info(logger, "se sobrevivió a la función blocked_a_ready");
                 sem_post(mutex_mediano_plazo);
             }
+
             log_info(logger, "Pasé el mutex de suspensión wiii");
+            
             if (proceso -> estado == SUSPENDED_BLOCKED) {
+                log_info(logger, "IIIIIIIIIIIIIIIIIIIIIII!!!!!!!!! PT2");
                 sem_wait(mutex_mediano_plazo);
+                    log_info(logger, "MUTEX MEDIANO PLAZO!!!!!!!!! PT2");
                     suspended_blocked_a_suspended_ready(proceso);
                 sem_post(mutex_mediano_plazo);
             }
@@ -197,12 +196,12 @@ void func_suspension(void* args) {
     usleep(kernel_config -> tiempo_maximo_bloqueado * 1000);
 
     sem_wait(mutex_suspension);
-    log_info(logger, "Hice un wait");
+    log_info(logger, "Hice un wait - Función suspensión");
         // Si el proceso sigue estando realizando IO, suspenderlo
         if (proceso -> estado == BLOCKED) {
             blocked_a_suspended_blocked(proceso);
         }
 
     sem_post(mutex_suspension);
-    log_info(logger, "Hice un post");
+    log_info(logger, "Hice un post - Función suspensión");
 }

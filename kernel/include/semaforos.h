@@ -29,6 +29,10 @@
 
     sem_t* sem_proceso_interrumpido;
     
+    sem_t* mutex_proceso_corriendo;
+
+    sem_t* mutex_log;
+    
     // Inicializar todos los semaforos
     void ini_semaforos(void);
 

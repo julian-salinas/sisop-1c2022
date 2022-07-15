@@ -43,3 +43,24 @@ int hexa_a_int(void* puntero) {
 
     return decimal;
 }
+
+
+void mutex_log_info(sem_t* semaforo, t_log* logger, char* mensaje) {
+    sem_wait(semaforo);
+        log_info(logger, mensaje);
+    sem_post(semaforo);
+}
+
+
+void mutex_log_warning(sem_t* semaforo, t_log* logger, char* mensaje) {
+    sem_wait(semaforo);
+        log_warning(logger, mensaje);
+    sem_post(semaforo);
+}
+
+
+void mutex_log_error(sem_t* semaforo, t_log* logger, char* mensaje) {
+    sem_wait(semaforo);
+        log_error(logger, mensaje);
+    sem_post(semaforo);
+}

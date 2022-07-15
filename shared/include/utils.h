@@ -6,6 +6,7 @@
     #include <sys/socket.h>
     #include <commons/string.h>
     #include "networking.h"
+    #include <semaphore.h>
  
     /**
      * @DESC: Loggear que módulo está siendo finalizado, liberar conexion y destruir logger 
@@ -28,5 +29,12 @@
      * @return: conversión a entero
      */ 
     int hexa_a_int(void* puntero);
+
+
+    void mutex_log_info(sem_t* semaforo, t_log* logger, char* mensaje);
+
+    void mutex_log_warning(sem_t* semaforo, t_log* logger, char* mensaje);
+
+    void mutex_log_error(sem_t* semaforo, t_log* logger, char* mensaje);
 
 #endif /* UTILS_H */

@@ -4,7 +4,7 @@ int main(void) {
 
 	// Inicializar configuración
 	kernel_config = ini_kernel_config("cfg/kernel.config");
-	
+
 	// Crear logger
 	logger = log_create("cfg/kernel.log", "kernel", 1, LOG_LEVEL_INFO);
 	log_info(logger,"Kernel iniciado");

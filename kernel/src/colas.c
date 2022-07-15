@@ -44,23 +44,6 @@ void suspended_ready_a_ready(void) {
 
     procesoAMover -> estado = READY;
 
-    /*
-    // Re-insertar proceso en memoria - Solicitar tabla de páginas a memoria
-    enviar_pcb(conexion_memoria, SOL_TABLA_PAGINAS, procesoAMover);
-    log_info(logger, "Se solicitó la tabla de páginas del proceso");
-
-    uint8_t resp_memoria = recibir_header(conexion_memoria);
-
-    if (resp_memoria != MEMORIA_OK) {
-        close(procesoAMover -> socket_cliente);
-        return;
-    }
-
-    procesoAMover = socket_get_PCB(conexion_memoria);
-
-    log_info(logger, "Se recibió el proceso %d con la tabla de páginas %d",procesoAMover -> PID, procesoAMover -> tabla_paginas);
-    */
-
     sem_wait(mutex_cola_ready);
         queue_push(cola_ready, (void*) procesoAMover);
     sem_post(mutex_cola_ready);
@@ -112,6 +95,8 @@ void new_a_ready(void) {
 
 
 void ready_a_running(void) {
+    log_info(logger, "Entré a la función ready a runnning");
+
     sem_wait(mutex_cola_ready);
         t_PCB* procesoAMover = (t_PCB*) queue_pop(cola_ready);
     sem_post(mutex_cola_ready);
@@ -119,8 +104,10 @@ void ready_a_running(void) {
     procesoAMover -> estado = RUNNING;
     procesoAMover -> tiempo_restante = 0;
 
+    log_info(logger, "El proceso con ID:%d está a punto de pasar de READY a RUNNING", procesoAMover -> PID);
     
     sem_wait(mutex_socket_cpu_dispatch);
+        log_info(logger, "CHAAAAAAAAAAAAAAAN");
         enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
     sem_post(mutex_socket_cpu_dispatch);
     
@@ -160,7 +147,10 @@ void blocked_a_ready(t_PCB* procesoAMover){
 
     procesoAMover -> estado = READY;
 
+    log_info(logger, "blocked a readyyyyyyyyyyyyyyyy");
+    
     sem_wait(mutex_cola_ready);
+        log_info(logger, "¿MUTEX COLA READY?");
         queue_push(cola_ready, (void*) procesoAMover);
     sem_post(mutex_cola_ready);
 
