@@ -48,9 +48,10 @@ void suspended_ready_a_ready(void) {
         queue_push(cola_ready, (void*) procesoAMover);
     sem_post(mutex_cola_ready);
 
-     if (algoritmo_elegido == SJF) {
-          ordenar_cola_ready();
-     }
+    if (algoritmo_elegido == SJF) {
+        // No es necesario verificar que la cola ready tenga procesos, acabamos de agregarle uno
+        ordenar_cola_ready();
+    }
 
     log_info(logger, "El proceso con ID:%d pasó de SUSPENDED-READY a READY.", procesoAMover -> PID);
     
@@ -99,7 +100,6 @@ void new_a_ready(void) {
 
 
 void ready_a_running(void) {
-    log_info(logger, "Entré a la función ready a runnning");
 
     sem_wait(mutex_cola_ready);
         t_PCB* procesoAMover = (t_PCB*) queue_pop(cola_ready);
@@ -108,14 +108,11 @@ void ready_a_running(void) {
     procesoAMover -> estado = RUNNING;
     procesoAMover -> tiempo_restante = 0;
 
-    log_info(logger, "El proceso con ID:%d está a punto de pasar de READY a RUNNING", procesoAMover -> PID);
     
     sem_wait(mutex_socket_cpu_dispatch);
-        log_info(logger, "CHAAAAAAAAAAAAAAAN");
         enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
     sem_post(mutex_socket_cpu_dispatch);
     
-   
     log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
     proceso_corriendo = true;
 }
@@ -151,19 +148,13 @@ void blocked_a_ready(t_PCB* procesoAMover){
 
     procesoAMover -> estado = READY;
 
-    log_info(logger, "blocked a readyyyyyyyyyyyyyyyy");
-    
     sem_wait(mutex_cola_ready);
-        log_info(logger, "¿MUTEX COLA READY?");
         queue_push(cola_ready, (void*) procesoAMover);
     sem_post(mutex_cola_ready);
 
     log_info(logger, "El proceso con ID:%d  pasó de BLOCKED a READY.", procesoAMover -> PID);
 
     sem_post(sem_procesos_en_ready);
-    int value;
-    sem_getvalue(sem_procesos_en_ready, &value);
-    log_info(logger, "sem_procesos_en_ready vale: %d ", value);
 }
 
 
@@ -191,11 +182,4 @@ void suspended_blocked_a_suspended_ready(t_PCB* procesoAMover) {
     log_info(logger, "El proceso con ID:%d  pasó de SUSPENDED-BLOCKED a SUSPENDED-READY.", procesoAMover -> PID);
 
     sem_post(sem_procesos_esperando);
-    int value;
-    sem_getvalue(sem_multiprogramacion, &value);
-    log_info(logger, "sem_multiprogramacion vale: %d ", value);
-    sem_getvalue(sem_procesos_esperando, &value);
-    log_info(logger, "sem_procesos_esperando vale: %d ", value);
-    sem_getvalue(mutex_mediano_plazo, &value);
-    log_info(logger, "mutex_mediano_plazo vale: %d ", value);
 }
