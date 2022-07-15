@@ -38,7 +38,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
         log_info(logger, "Decode instrucción.");
         log_info(logger, "program counter %d", pcb->program_counter);
         log_info(logger, "cantidad de instrucciones: %d", list_size(pcb->lista_instrucciones));
-
+        finCicloInstruccion = 0;
         pcb -> program_counter++;
         //Decode
         switch (instruccion->identificador)

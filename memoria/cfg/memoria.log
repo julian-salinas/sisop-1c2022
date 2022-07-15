@@ -1744,3 +1744,1789 @@
 [INFO] 01:03:47:205 memoria/(21979:21989): Proceso FINALIZADO - ID:2
 [INFO] 01:03:47:206 memoria/(21979:21989): Conexion con Kernel - Se recibio header 14
 [INFO] 01:03:48:206 memoria/(21979:21989): Proceso FINALIZADO - ID:3
+[INFO] 12:37:27:058 memoria/(9605:9605): Memoria iniciada
+[INFO] 12:37:27:061 memoria/(9605:9605): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 12:37:27:061 memoria/(9605:9605): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 12:37:27:061 memoria/(9605:9605): watafoc
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 0 que apunta a la dirección 0x850d6f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 1 que apunta a la dirección 0x850d730
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 2 que apunta a la dirección 0x850d770
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 3 que apunta a la dirección 0x850d7b0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 4 que apunta a la dirección 0x850d7f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 5 que apunta a la dirección 0x850d830
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 6 que apunta a la dirección 0x850d870
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 7 que apunta a la dirección 0x850d8b0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 8 que apunta a la dirección 0x850d8f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 9 que apunta a la dirección 0x850d930
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 10 que apunta a la dirección 0x850d970
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 11 que apunta a la dirección 0x850d9b0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 12 que apunta a la dirección 0x850d9f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 13 que apunta a la dirección 0x850da30
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 14 que apunta a la dirección 0x850da70
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 15 que apunta a la dirección 0x850dab0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 16 que apunta a la dirección 0x850daf0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 17 que apunta a la dirección 0x850db30
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 18 que apunta a la dirección 0x850db70
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 19 que apunta a la dirección 0x850dbb0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 20 que apunta a la dirección 0x850dbf0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 21 que apunta a la dirección 0x850dc30
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 22 que apunta a la dirección 0x850dc70
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 23 que apunta a la dirección 0x850dcb0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 24 que apunta a la dirección 0x850dcf0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 25 que apunta a la dirección 0x850dd30
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 26 que apunta a la dirección 0x850dd70
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 27 que apunta a la dirección 0x850ddb0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 28 que apunta a la dirección 0x850ddf0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 29 que apunta a la dirección 0x850de30
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 30 que apunta a la dirección 0x850de70
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 31 que apunta a la dirección 0x850deb0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 32 que apunta a la dirección 0x850def0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 33 que apunta a la dirección 0x850df30
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 34 que apunta a la dirección 0x850df70
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 35 que apunta a la dirección 0x850dfb0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 36 que apunta a la dirección 0x850dff0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 37 que apunta a la dirección 0x850e030
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 38 que apunta a la dirección 0x850e070
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 39 que apunta a la dirección 0x850e0b0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 40 que apunta a la dirección 0x850e0f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 41 que apunta a la dirección 0x850e130
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 42 que apunta a la dirección 0x850e170
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 43 que apunta a la dirección 0x850e1b0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 44 que apunta a la dirección 0x850e1f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 45 que apunta a la dirección 0x850e230
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 46 que apunta a la dirección 0x850e270
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 47 que apunta a la dirección 0x850e2b0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 48 que apunta a la dirección 0x850e2f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 49 que apunta a la dirección 0x850e330
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 50 que apunta a la dirección 0x850e370
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 51 que apunta a la dirección 0x850e3b0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 52 que apunta a la dirección 0x850e3f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 53 que apunta a la dirección 0x850e430
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 54 que apunta a la dirección 0x850e470
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 55 que apunta a la dirección 0x850e4b0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 56 que apunta a la dirección 0x850e4f0
+[INFO] 12:37:27:061 memoria/(9605:9605): Se creó el frame 57 que apunta a la dirección 0x850e530
+[INFO] 12:37:27:062 memoria/(9605:9605): Se creó el frame 58 que apunta a la dirección 0x850e570
+[INFO] 12:37:27:062 memoria/(9605:9605): Se creó el frame 59 que apunta a la dirección 0x850e5b0
+[INFO] 12:37:27:062 memoria/(9605:9605): Se creó el frame 60 que apunta a la dirección 0x850e5f0
+[INFO] 12:37:27:062 memoria/(9605:9605): Se creó el frame 61 que apunta a la dirección 0x850e630
+[INFO] 12:37:27:062 memoria/(9605:9605): Se creó el frame 62 que apunta a la dirección 0x850e670
+[INFO] 12:37:27:062 memoria/(9605:9605): Se creó el frame 63 que apunta a la dirección 0x850e6b0
+[INFO] 12:37:27:062 memoria/(9605:9605): Memoria lista para recibir al cliente
+[INFO] 12:37:27:174 memoria/(9605:9605): Cliente conectado (a memoria)
+
+[INFO] 12:37:27:178 memoria/(9605:9616): Se conectó CPU - header 25
+[INFO] 12:37:27:178 memoria/(9605:9616): Conexion con CPU - Se recibió header 4
+[INFO] 12:37:27:178 memoria/(9605:9616): Se recibió header 4 - Enviando config a CPU
+[INFO] 12:37:27:178 memoria/(9605:9616): Socket cliente memoria-cpu creado.
+[INFO] 12:37:27:178 memoria/(9605:9616): Config enviado.
+[INFO] 12:37:27:328 memoria/(9605:9605): Cliente conectado (a memoria)
+
+[INFO] 12:37:27:335 memoria/(9605:9632): Se conectó Kernel - header 24
+[INFO] 12:37:36:347 memoria/(9605:9632): Conexion con Kernel - Se recibio header -74
+[ERROR] 12:37:36:347 memoria/(9605:9632): Kernel acaba de mandarnos cualquier cosa - -74
+[INFO] 12:37:39:995 memoria/(9605:9616): Conexion con CPU - Se recibió header -73
+[ERROR] 12:37:39:996 memoria/(9605:9616): CPU acaba de mandarnos cualquier cosa - -73
+[INFO] 12:38:28:030 memoria/(9812:9812): Memoria iniciada
+[INFO] 12:38:28:031 memoria/(9812:9812): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 12:38:28:031 memoria/(9812:9812): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 12:38:28:031 memoria/(9812:9812): watafoc
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 0 que apunta a la dirección 0x9ac36f0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 1 que apunta a la dirección 0x9ac3730
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 2 que apunta a la dirección 0x9ac3770
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 3 que apunta a la dirección 0x9ac37b0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 4 que apunta a la dirección 0x9ac37f0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 5 que apunta a la dirección 0x9ac3830
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 6 que apunta a la dirección 0x9ac3870
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 7 que apunta a la dirección 0x9ac38b0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 8 que apunta a la dirección 0x9ac38f0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 9 que apunta a la dirección 0x9ac3930
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 10 que apunta a la dirección 0x9ac3970
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 11 que apunta a la dirección 0x9ac39b0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 12 que apunta a la dirección 0x9ac39f0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 13 que apunta a la dirección 0x9ac3a30
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 14 que apunta a la dirección 0x9ac3a70
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 15 que apunta a la dirección 0x9ac3ab0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 16 que apunta a la dirección 0x9ac3af0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 17 que apunta a la dirección 0x9ac3b30
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 18 que apunta a la dirección 0x9ac3b70
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 19 que apunta a la dirección 0x9ac3bb0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 20 que apunta a la dirección 0x9ac3bf0
+[INFO] 12:38:28:031 memoria/(9812:9812): Se creó el frame 21 que apunta a la dirección 0x9ac3c30
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 22 que apunta a la dirección 0x9ac3c70
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 23 que apunta a la dirección 0x9ac3cb0
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 24 que apunta a la dirección 0x9ac3cf0
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 25 que apunta a la dirección 0x9ac3d30
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 26 que apunta a la dirección 0x9ac3d70
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 27 que apunta a la dirección 0x9ac3db0
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 28 que apunta a la dirección 0x9ac3df0
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 29 que apunta a la dirección 0x9ac3e30
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 30 que apunta a la dirección 0x9ac3e70
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 31 que apunta a la dirección 0x9ac3eb0
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 32 que apunta a la dirección 0x9ac3ef0
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 33 que apunta a la dirección 0x9ac3f30
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 34 que apunta a la dirección 0x9ac3f70
+[INFO] 12:38:28:032 memoria/(9812:9812): Se creó el frame 35 que apunta a la dirección 0x9ac3fb0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 36 que apunta a la dirección 0x9ac3ff0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 37 que apunta a la dirección 0x9ac4030
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 38 que apunta a la dirección 0x9ac4070
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 39 que apunta a la dirección 0x9ac40b0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 40 que apunta a la dirección 0x9ac40f0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 41 que apunta a la dirección 0x9ac4130
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 42 que apunta a la dirección 0x9ac4170
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 43 que apunta a la dirección 0x9ac41b0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 44 que apunta a la dirección 0x9ac41f0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 45 que apunta a la dirección 0x9ac4230
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 46 que apunta a la dirección 0x9ac4270
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 47 que apunta a la dirección 0x9ac42b0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 48 que apunta a la dirección 0x9ac42f0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 49 que apunta a la dirección 0x9ac4330
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 50 que apunta a la dirección 0x9ac4370
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 51 que apunta a la dirección 0x9ac43b0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 52 que apunta a la dirección 0x9ac43f0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 53 que apunta a la dirección 0x9ac4430
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 54 que apunta a la dirección 0x9ac4470
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 55 que apunta a la dirección 0x9ac44b0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 56 que apunta a la dirección 0x9ac44f0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 57 que apunta a la dirección 0x9ac4530
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 58 que apunta a la dirección 0x9ac4570
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 59 que apunta a la dirección 0x9ac45b0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 60 que apunta a la dirección 0x9ac45f0
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 61 que apunta a la dirección 0x9ac4630
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 62 que apunta a la dirección 0x9ac4670
+[INFO] 12:38:28:033 memoria/(9812:9812): Se creó el frame 63 que apunta a la dirección 0x9ac46b0
+[INFO] 12:38:28:033 memoria/(9812:9812): Memoria lista para recibir al cliente
+[INFO] 12:38:28:142 memoria/(9812:9812): Cliente conectado (a memoria)
+
+[INFO] 12:38:28:143 memoria/(9812:9823): Se conectó CPU - header 25
+[INFO] 12:38:28:143 memoria/(9812:9823): Conexion con CPU - Se recibió header 4
+[INFO] 12:38:28:144 memoria/(9812:9823): Se recibió header 4 - Enviando config a CPU
+[INFO] 12:38:28:144 memoria/(9812:9823): Socket cliente memoria-cpu creado.
+[INFO] 12:38:28:144 memoria/(9812:9823): Config enviado.
+[INFO] 12:38:28:270 memoria/(9812:9812): Cliente conectado (a memoria)
+
+[INFO] 12:38:28:270 memoria/(9812:9839): Se conectó Kernel - header 24
+[INFO] 12:38:28:444 memoria/(9812:9839): Conexion con Kernel - Se recibio header 12
+[INFO] 12:38:28:444 memoria/(9812:9839): CASE NUEVO PROCESO
+[INFO] 12:38:29:445 memoria/(9812:9839): Nuevo proceso - ID:1
+[INFO] 12:38:29:446 memoria/(9812:9839): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 12:38:29:446 memoria/(9812:9839): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 12:38:29:454 memoria/(9812:9839): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 12:38:29:459 memoria/(9812:9839): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 12:38:29:461 memoria/(9812:9839): Conexion con Kernel - Se recibio header 12
+[INFO] 12:38:29:461 memoria/(9812:9839): CASE NUEVO PROCESO
+[INFO] 12:38:30:462 memoria/(9812:9839): Nuevo proceso - ID:2
+[INFO] 12:38:30:462 memoria/(9812:9839): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 12:38:30:462 memoria/(9812:9839): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 12:38:30:469 memoria/(9812:9839): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 12:38:30:470 memoria/(9812:9839): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 12:38:30:510 memoria/(9812:9839): Conexion con Kernel - Se recibio header 12
+[INFO] 12:38:30:511 memoria/(9812:9839): CASE NUEVO PROCESO
+[INFO] 12:38:31:511 memoria/(9812:9839): Nuevo proceso - ID:3
+[INFO] 12:38:31:512 memoria/(9812:9839): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 12:38:31:512 memoria/(9812:9839): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 12:38:31:519 memoria/(9812:9839): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 12:38:31:520 memoria/(9812:9839): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 12:38:59:889 memoria/(9812:9839): Conexion con Kernel - Se recibio header 14
+[INFO] 12:39:00:889 memoria/(9812:9839): Proceso FINALIZADO - ID:1
+[INFO] 12:39:08:948 memoria/(9812:9839): Conexion con Kernel - Se recibio header 14
+[INFO] 12:39:09:949 memoria/(9812:9839): Proceso FINALIZADO - ID:2
+[INFO] 12:39:09:949 memoria/(9812:9839): Conexion con Kernel - Se recibio header 14
+[INFO] 12:39:10:950 memoria/(9812:9839): Proceso FINALIZADO - ID:3
+[INFO] 12:39:15:466 memoria/(9812:9839): Conexion con Kernel - Se recibio header -73
+[ERROR] 12:39:15:466 memoria/(9812:9839): Kernel acaba de mandarnos cualquier cosa - -73
+[INFO] 12:39:17:346 memoria/(9812:9823): Conexion con CPU - Se recibió header -73
+[ERROR] 12:39:17:346 memoria/(9812:9823): CPU acaba de mandarnos cualquier cosa - -73
+[INFO] 12:40:51:813 memoria/(10232:10232): Memoria iniciada
+[INFO] 12:40:51:814 memoria/(10232:10232): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 12:40:51:814 memoria/(10232:10232): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 12:40:51:814 memoria/(10232:10232): watafoc
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 0 que apunta a la dirección 0x8d616f0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 1 que apunta a la dirección 0x8d61730
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 2 que apunta a la dirección 0x8d61770
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 3 que apunta a la dirección 0x8d617b0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 4 que apunta a la dirección 0x8d617f0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 5 que apunta a la dirección 0x8d61830
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 6 que apunta a la dirección 0x8d61870
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 7 que apunta a la dirección 0x8d618b0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 8 que apunta a la dirección 0x8d618f0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 9 que apunta a la dirección 0x8d61930
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 10 que apunta a la dirección 0x8d61970
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 11 que apunta a la dirección 0x8d619b0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 12 que apunta a la dirección 0x8d619f0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 13 que apunta a la dirección 0x8d61a30
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 14 que apunta a la dirección 0x8d61a70
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 15 que apunta a la dirección 0x8d61ab0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 16 que apunta a la dirección 0x8d61af0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 17 que apunta a la dirección 0x8d61b30
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 18 que apunta a la dirección 0x8d61b70
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 19 que apunta a la dirección 0x8d61bb0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 20 que apunta a la dirección 0x8d61bf0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 21 que apunta a la dirección 0x8d61c30
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 22 que apunta a la dirección 0x8d61c70
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 23 que apunta a la dirección 0x8d61cb0
+[INFO] 12:40:51:814 memoria/(10232:10232): Se creó el frame 24 que apunta a la dirección 0x8d61cf0
+[INFO] 12:40:51:815 memoria/(10232:10232): Se creó el frame 25 que apunta a la dirección 0x8d61d30
+[INFO] 12:40:51:815 memoria/(10232:10232): Se creó el frame 26 que apunta a la dirección 0x8d61d70
+[INFO] 12:40:51:815 memoria/(10232:10232): Se creó el frame 27 que apunta a la dirección 0x8d61db0
+[INFO] 12:40:51:815 memoria/(10232:10232): Se creó el frame 28 que apunta a la dirección 0x8d61df0
+[INFO] 12:40:51:815 memoria/(10232:10232): Se creó el frame 29 que apunta a la dirección 0x8d61e30
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 30 que apunta a la dirección 0x8d61e70
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 31 que apunta a la dirección 0x8d61eb0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 32 que apunta a la dirección 0x8d61ef0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 33 que apunta a la dirección 0x8d61f30
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 34 que apunta a la dirección 0x8d61f70
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 35 que apunta a la dirección 0x8d61fb0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 36 que apunta a la dirección 0x8d61ff0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 37 que apunta a la dirección 0x8d62030
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 38 que apunta a la dirección 0x8d62070
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 39 que apunta a la dirección 0x8d620b0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 40 que apunta a la dirección 0x8d620f0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 41 que apunta a la dirección 0x8d62130
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 42 que apunta a la dirección 0x8d62170
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 43 que apunta a la dirección 0x8d621b0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 44 que apunta a la dirección 0x8d621f0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 45 que apunta a la dirección 0x8d62230
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 46 que apunta a la dirección 0x8d62270
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 47 que apunta a la dirección 0x8d622b0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 48 que apunta a la dirección 0x8d622f0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 49 que apunta a la dirección 0x8d62330
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 50 que apunta a la dirección 0x8d62370
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 51 que apunta a la dirección 0x8d623b0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 52 que apunta a la dirección 0x8d623f0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 53 que apunta a la dirección 0x8d62430
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 54 que apunta a la dirección 0x8d62470
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 55 que apunta a la dirección 0x8d624b0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 56 que apunta a la dirección 0x8d624f0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 57 que apunta a la dirección 0x8d62530
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 58 que apunta a la dirección 0x8d62570
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 59 que apunta a la dirección 0x8d625b0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 60 que apunta a la dirección 0x8d625f0
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 61 que apunta a la dirección 0x8d62630
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 62 que apunta a la dirección 0x8d62670
+[INFO] 12:40:51:816 memoria/(10232:10232): Se creó el frame 63 que apunta a la dirección 0x8d626b0
+[INFO] 12:40:51:816 memoria/(10232:10232): Memoria lista para recibir al cliente
+[INFO] 12:40:51:923 memoria/(10232:10232): Cliente conectado (a memoria)
+
+[INFO] 12:40:51:924 memoria/(10232:10243): Se conectó CPU - header 25
+[INFO] 12:40:51:924 memoria/(10232:10243): Conexion con CPU - Se recibió header 4
+[INFO] 12:40:51:924 memoria/(10232:10243): Se recibió header 4 - Enviando config a CPU
+[INFO] 12:40:51:925 memoria/(10232:10243): Socket cliente memoria-cpu creado.
+[INFO] 12:40:51:926 memoria/(10232:10243): Config enviado.
+[INFO] 12:40:52:048 memoria/(10232:10232): Cliente conectado (a memoria)
+
+[INFO] 12:40:52:058 memoria/(10232:10260): Se conectó Kernel - header 24
+[INFO] 12:40:52:197 memoria/(10232:10260): Conexion con Kernel - Se recibio header 12
+[INFO] 12:40:52:197 memoria/(10232:10260): CASE NUEVO PROCESO
+[INFO] 12:40:53:197 memoria/(10232:10260): Nuevo proceso - ID:1
+[INFO] 12:40:53:197 memoria/(10232:10260): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 12:40:53:198 memoria/(10232:10260): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 12:40:53:207 memoria/(10232:10260): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 12:40:53:213 memoria/(10232:10260): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 12:40:53:213 memoria/(10232:10260): Conexion con Kernel - Se recibio header 12
+[INFO] 12:40:53:213 memoria/(10232:10260): CASE NUEVO PROCESO
+[INFO] 12:40:54:223 memoria/(10232:10260): Nuevo proceso - ID:2
+[INFO] 12:40:54:223 memoria/(10232:10260): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 12:40:54:223 memoria/(10232:10260): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 12:40:54:230 memoria/(10232:10260): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 12:40:54:231 memoria/(10232:10260): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 12:41:05:233 memoria/(10232:10260): Conexion con Kernel - Se recibio header 17
+[INFO] 12:41:05:233 memoria/(10232:10260): CASE PROCESO SUSPENDIDO
+[INFO] 12:41:06:234 memoria/(10232:10260): Proceso SUSPENDIDO - ID:1
+[INFO] 12:41:06:235 memoria/(10232:10260): Conexion con Kernel - Se recibio header 12
+[INFO] 12:41:06:237 memoria/(10232:10260): CASE NUEVO PROCESO
+[INFO] 12:41:07:237 memoria/(10232:10260): Nuevo proceso - ID:3
+[INFO] 12:41:07:238 memoria/(10232:10260): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 12:41:07:238 memoria/(10232:10260): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 12:41:07:250 memoria/(10232:10260): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 12:41:07:250 memoria/(10232:10260): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 12:41:09:214 memoria/(10232:10260): Conexion con Kernel - Se recibio header 17
+[INFO] 12:41:09:214 memoria/(10232:10260): CASE PROCESO SUSPENDIDO
+[INFO] 12:41:10:215 memoria/(10232:10260): Proceso SUSPENDIDO - ID:2
+[INFO] 12:41:19:493 memoria/(10232:10260): Conexion con Kernel - Se recibio header 14
+[INFO] 12:41:20:494 memoria/(10232:10260): Proceso FINALIZADO - ID:3
+[INFO] 12:41:23:559 memoria/(10232:10260): Conexion con Kernel - Se recibio header 14
+[INFO] 12:41:24:560 memoria/(10232:10260): Proceso FINALIZADO - ID:1
+[INFO] 12:41:27:633 memoria/(10232:10260): Conexion con Kernel - Se recibio header 14
+[INFO] 12:41:28:634 memoria/(10232:10260): Proceso FINALIZADO - ID:2
+[INFO] 12:42:33:604 memoria/(10232:10260): Conexion con Kernel - Se recibio header -73
+[ERROR] 12:42:33:604 memoria/(10232:10260): Kernel acaba de mandarnos cualquier cosa - -73
+[INFO] 12:42:35:400 memoria/(10232:10243): Conexion con CPU - Se recibió header -73
+[ERROR] 12:42:35:401 memoria/(10232:10243): CPU acaba de mandarnos cualquier cosa - -73
+[INFO] 12:42:52:026 memoria/(10631:10631): Memoria iniciada
+[INFO] 12:42:52:027 memoria/(10631:10631): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 12:42:52:027 memoria/(10631:10631): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 12:42:52:027 memoria/(10631:10631): watafoc
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 0 que apunta a la dirección 0x927c6f0
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 1 que apunta a la dirección 0x927c730
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 2 que apunta a la dirección 0x927c770
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 3 que apunta a la dirección 0x927c7b0
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 4 que apunta a la dirección 0x927c7f0
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 5 que apunta a la dirección 0x927c830
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 6 que apunta a la dirección 0x927c870
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 7 que apunta a la dirección 0x927c8b0
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 8 que apunta a la dirección 0x927c8f0
+[INFO] 12:42:52:027 memoria/(10631:10631): Se creó el frame 9 que apunta a la dirección 0x927c930
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 10 que apunta a la dirección 0x927c970
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 11 que apunta a la dirección 0x927c9b0
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 12 que apunta a la dirección 0x927c9f0
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 13 que apunta a la dirección 0x927ca30
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 14 que apunta a la dirección 0x927ca70
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 15 que apunta a la dirección 0x927cab0
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 16 que apunta a la dirección 0x927caf0
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 17 que apunta a la dirección 0x927cb30
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 18 que apunta a la dirección 0x927cb70
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 19 que apunta a la dirección 0x927cbb0
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 20 que apunta a la dirección 0x927cbf0
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 21 que apunta a la dirección 0x927cc30
+[INFO] 12:42:52:028 memoria/(10631:10631): Se creó el frame 22 que apunta a la dirección 0x927cc70
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 23 que apunta a la dirección 0x927ccb0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 24 que apunta a la dirección 0x927ccf0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 25 que apunta a la dirección 0x927cd30
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 26 que apunta a la dirección 0x927cd70
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 27 que apunta a la dirección 0x927cdb0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 28 que apunta a la dirección 0x927cdf0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 29 que apunta a la dirección 0x927ce30
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 30 que apunta a la dirección 0x927ce70
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 31 que apunta a la dirección 0x927ceb0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 32 que apunta a la dirección 0x927cef0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 33 que apunta a la dirección 0x927cf30
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 34 que apunta a la dirección 0x927cf70
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 35 que apunta a la dirección 0x927cfb0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 36 que apunta a la dirección 0x927cff0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 37 que apunta a la dirección 0x927d030
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 38 que apunta a la dirección 0x927d070
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 39 que apunta a la dirección 0x927d0b0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 40 que apunta a la dirección 0x927d0f0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 41 que apunta a la dirección 0x927d130
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 42 que apunta a la dirección 0x927d170
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 43 que apunta a la dirección 0x927d1b0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 44 que apunta a la dirección 0x927d1f0
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 45 que apunta a la dirección 0x927d230
+[INFO] 12:42:52:030 memoria/(10631:10631): Se creó el frame 46 que apunta a la dirección 0x927d270
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 47 que apunta a la dirección 0x927d2b0
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 48 que apunta a la dirección 0x927d2f0
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 49 que apunta a la dirección 0x927d330
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 50 que apunta a la dirección 0x927d370
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 51 que apunta a la dirección 0x927d3b0
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 52 que apunta a la dirección 0x927d3f0
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 53 que apunta a la dirección 0x927d430
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 54 que apunta a la dirección 0x927d470
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 55 que apunta a la dirección 0x927d4b0
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 56 que apunta a la dirección 0x927d4f0
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 57 que apunta a la dirección 0x927d530
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 58 que apunta a la dirección 0x927d570
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 59 que apunta a la dirección 0x927d5b0
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 60 que apunta a la dirección 0x927d5f0
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 61 que apunta a la dirección 0x927d630
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 62 que apunta a la dirección 0x927d670
+[INFO] 12:42:52:031 memoria/(10631:10631): Se creó el frame 63 que apunta a la dirección 0x927d6b0
+[INFO] 12:42:52:031 memoria/(10631:10631): Memoria lista para recibir al cliente
+[INFO] 12:42:52:171 memoria/(10631:10631): Cliente conectado (a memoria)
+
+[INFO] 12:42:52:172 memoria/(10631:10642): Se conectó CPU - header 25
+[INFO] 12:42:52:172 memoria/(10631:10642): Conexion con CPU - Se recibió header 4
+[INFO] 12:42:52:172 memoria/(10631:10642): Se recibió header 4 - Enviando config a CPU
+[INFO] 12:42:52:172 memoria/(10631:10642): Socket cliente memoria-cpu creado.
+[INFO] 12:42:52:173 memoria/(10631:10642): Config enviado.
+[INFO] 12:42:52:309 memoria/(10631:10631): Cliente conectado (a memoria)
+
+[INFO] 12:42:52:311 memoria/(10631:10658): Se conectó Kernel - header 24
+[INFO] 12:42:52:449 memoria/(10631:10658): Conexion con Kernel - Se recibio header 12
+[INFO] 12:42:52:449 memoria/(10631:10658): CASE NUEVO PROCESO
+[INFO] 12:42:53:450 memoria/(10631:10658): Nuevo proceso - ID:1
+[INFO] 12:42:53:450 memoria/(10631:10658): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 12:42:53:450 memoria/(10631:10658): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 12:42:53:460 memoria/(10631:10658): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 12:42:53:463 memoria/(10631:10658): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 12:42:53:466 memoria/(10631:10658): Conexion con Kernel - Se recibio header 12
+[INFO] 12:42:53:466 memoria/(10631:10658): CASE NUEVO PROCESO
+[INFO] 12:42:54:466 memoria/(10631:10658): Nuevo proceso - ID:2
+[INFO] 12:42:54:467 memoria/(10631:10658): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 12:42:54:467 memoria/(10631:10658): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 12:42:54:474 memoria/(10631:10658): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 12:42:54:474 memoria/(10631:10658): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 12:43:09:522 memoria/(10631:10658): Conexion con Kernel - Se recibio header 17
+[INFO] 12:43:09:522 memoria/(10631:10658): CASE PROCESO SUSPENDIDO
+[INFO] 12:43:10:523 memoria/(10631:10658): Proceso SUSPENDIDO - ID:1
+[INFO] 12:43:10:524 memoria/(10631:10658): Conexion con Kernel - Se recibio header 12
+[INFO] 12:43:10:525 memoria/(10631:10658): CASE NUEVO PROCESO
+[INFO] 12:43:11:525 memoria/(10631:10658): Nuevo proceso - ID:3
+[INFO] 12:43:11:525 memoria/(10631:10658): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 12:43:11:526 memoria/(10631:10658): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 12:43:11:537 memoria/(10631:10658): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 12:43:11:537 memoria/(10631:10658): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 12:43:18:562 memoria/(10631:10658): Conexion con Kernel - Se recibio header 17
+[INFO] 12:43:18:562 memoria/(10631:10658): CASE PROCESO SUSPENDIDO
+[INFO] 12:43:19:563 memoria/(10631:10658): Proceso SUSPENDIDO - ID:2
+[INFO] 12:43:22:583 memoria/(10631:10658): Conexion con Kernel - Se recibio header 14
+[INFO] 12:43:23:583 memoria/(10631:10658): Proceso FINALIZADO - ID:1
+[INFO] 12:43:35:950 memoria/(10631:10658): Conexion con Kernel - Se recibio header 14
+[INFO] 12:43:36:950 memoria/(10631:10658): Proceso FINALIZADO - ID:3
+[INFO] 12:43:39:964 memoria/(10631:10658): Conexion con Kernel - Se recibio header 14
+[INFO] 12:43:40:965 memoria/(10631:10658): Proceso FINALIZADO - ID:2
+[INFO] 13:07:06:132 memoria/(13561:13561): Memoria iniciada
+[INFO] 13:07:06:133 memoria/(13561:13561): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 13:07:06:133 memoria/(13561:13561): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 13:07:06:133 memoria/(13561:13561): watafoc
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 0 que apunta a la dirección 0x9ba36f0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 1 que apunta a la dirección 0x9ba3730
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 2 que apunta a la dirección 0x9ba3770
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 3 que apunta a la dirección 0x9ba37b0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 4 que apunta a la dirección 0x9ba37f0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 5 que apunta a la dirección 0x9ba3830
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 6 que apunta a la dirección 0x9ba3870
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 7 que apunta a la dirección 0x9ba38b0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 8 que apunta a la dirección 0x9ba38f0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 9 que apunta a la dirección 0x9ba3930
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 10 que apunta a la dirección 0x9ba3970
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 11 que apunta a la dirección 0x9ba39b0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 12 que apunta a la dirección 0x9ba39f0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 13 que apunta a la dirección 0x9ba3a30
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 14 que apunta a la dirección 0x9ba3a70
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 15 que apunta a la dirección 0x9ba3ab0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 16 que apunta a la dirección 0x9ba3af0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 17 que apunta a la dirección 0x9ba3b30
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 18 que apunta a la dirección 0x9ba3b70
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 19 que apunta a la dirección 0x9ba3bb0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 20 que apunta a la dirección 0x9ba3bf0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 21 que apunta a la dirección 0x9ba3c30
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 22 que apunta a la dirección 0x9ba3c70
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 23 que apunta a la dirección 0x9ba3cb0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 24 que apunta a la dirección 0x9ba3cf0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 25 que apunta a la dirección 0x9ba3d30
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 26 que apunta a la dirección 0x9ba3d70
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 27 que apunta a la dirección 0x9ba3db0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 28 que apunta a la dirección 0x9ba3df0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 29 que apunta a la dirección 0x9ba3e30
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 30 que apunta a la dirección 0x9ba3e70
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 31 que apunta a la dirección 0x9ba3eb0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 32 que apunta a la dirección 0x9ba3ef0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 33 que apunta a la dirección 0x9ba3f30
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 34 que apunta a la dirección 0x9ba3f70
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 35 que apunta a la dirección 0x9ba3fb0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 36 que apunta a la dirección 0x9ba3ff0
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 37 que apunta a la dirección 0x9ba4030
+[INFO] 13:07:06:133 memoria/(13561:13561): Se creó el frame 38 que apunta a la dirección 0x9ba4070
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 39 que apunta a la dirección 0x9ba40b0
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 40 que apunta a la dirección 0x9ba40f0
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 41 que apunta a la dirección 0x9ba4130
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 42 que apunta a la dirección 0x9ba4170
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 43 que apunta a la dirección 0x9ba41b0
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 44 que apunta a la dirección 0x9ba41f0
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 45 que apunta a la dirección 0x9ba4230
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 46 que apunta a la dirección 0x9ba4270
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 47 que apunta a la dirección 0x9ba42b0
+[INFO] 13:07:06:134 memoria/(13561:13561): Se creó el frame 48 que apunta a la dirección 0x9ba42f0
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 49 que apunta a la dirección 0x9ba4330
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 50 que apunta a la dirección 0x9ba4370
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 51 que apunta a la dirección 0x9ba43b0
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 52 que apunta a la dirección 0x9ba43f0
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 53 que apunta a la dirección 0x9ba4430
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 54 que apunta a la dirección 0x9ba4470
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 55 que apunta a la dirección 0x9ba44b0
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 56 que apunta a la dirección 0x9ba44f0
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 57 que apunta a la dirección 0x9ba4530
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 58 que apunta a la dirección 0x9ba4570
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 59 que apunta a la dirección 0x9ba45b0
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 60 que apunta a la dirección 0x9ba45f0
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 61 que apunta a la dirección 0x9ba4630
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 62 que apunta a la dirección 0x9ba4670
+[INFO] 13:07:06:135 memoria/(13561:13561): Se creó el frame 63 que apunta a la dirección 0x9ba46b0
+[INFO] 13:07:06:135 memoria/(13561:13561): Memoria lista para recibir al cliente
+[INFO] 13:07:06:266 memoria/(13561:13561): Cliente conectado (a memoria)
+
+[INFO] 13:07:06:266 memoria/(13561:13572): Se conectó CPU - header 25
+[INFO] 13:07:06:266 memoria/(13561:13572): Conexion con CPU - Se recibió header 4
+[INFO] 13:07:06:266 memoria/(13561:13572): Se recibió header 4 - Enviando config a CPU
+[INFO] 13:07:06:267 memoria/(13561:13572): Socket cliente memoria-cpu creado.
+[INFO] 13:07:06:267 memoria/(13561:13572): Config enviado.
+[INFO] 13:07:06:396 memoria/(13561:13561): Cliente conectado (a memoria)
+
+[INFO] 13:07:06:397 memoria/(13561:13588): Se conectó Kernel - header 24
+[INFO] 13:07:06:528 memoria/(13561:13588): Conexion con Kernel - Se recibio header 12
+[INFO] 13:07:06:528 memoria/(13561:13588): CASE NUEVO PROCESO
+[INFO] 13:07:07:529 memoria/(13561:13588): Nuevo proceso - ID:1
+[INFO] 13:07:07:529 memoria/(13561:13588): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 13:07:07:529 memoria/(13561:13588): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 13:07:07:616 memoria/(13561:13588): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 13:07:07:616 memoria/(13561:13588): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 13:07:07:619 memoria/(13561:13588): Conexion con Kernel - Se recibio header 12
+[INFO] 13:07:07:619 memoria/(13561:13588): CASE NUEVO PROCESO
+[INFO] 13:07:08:619 memoria/(13561:13588): Nuevo proceso - ID:2
+[INFO] 13:07:08:619 memoria/(13561:13588): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 13:07:08:619 memoria/(13561:13588): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 13:07:08:624 memoria/(13561:13588): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 13:07:08:625 memoria/(13561:13588): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 13:07:23:786 memoria/(13561:13588): Conexion con Kernel - Se recibio header 17
+[INFO] 13:07:23:786 memoria/(13561:13588): CASE PROCESO SUSPENDIDO
+[INFO] 13:07:24:787 memoria/(13561:13588): Proceso SUSPENDIDO - ID:1
+[INFO] 13:07:24:787 memoria/(13561:13588): Conexion con Kernel - Se recibio header 12
+[INFO] 13:07:24:788 memoria/(13561:13588): CASE NUEVO PROCESO
+[INFO] 13:07:25:789 memoria/(13561:13588): Nuevo proceso - ID:3
+[INFO] 13:07:25:789 memoria/(13561:13588): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 13:07:25:789 memoria/(13561:13588): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 13:07:25:797 memoria/(13561:13588): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 13:07:25:798 memoria/(13561:13588): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 13:07:25:798 memoria/(13561:13588): Conexion con Kernel - Se recibio header 17
+[INFO] 13:07:25:798 memoria/(13561:13588): CASE PROCESO SUSPENDIDO
+[INFO] 13:07:26:799 memoria/(13561:13588): Proceso SUSPENDIDO - ID:2
+[INFO] 13:07:42:136 memoria/(13561:13588): Conexion con Kernel - Se recibio header 14
+[INFO] 13:07:43:137 memoria/(13561:13588): Proceso FINALIZADO - ID:1
+[INFO] 13:07:43:137 memoria/(13561:13588): Conexion con Kernel - Se recibio header 14
+[INFO] 13:07:44:138 memoria/(13561:13588): Proceso FINALIZADO - ID:3
+[INFO] 13:07:46:284 memoria/(13561:13588): Conexion con Kernel - Se recibio header 14
+[INFO] 13:07:47:285 memoria/(13561:13588): Proceso FINALIZADO - ID:2
+[INFO] 14:30:11:919 memoria/(13561:13588): Conexion con Kernel - Se recibio header -73
+[ERROR] 14:30:11:919 memoria/(13561:13588): Kernel acaba de mandarnos cualquier cosa - -73
+[INFO] 14:30:15:380 memoria/(13561:13572): Conexion con CPU - Se recibió header -73
+[ERROR] 14:30:15:380 memoria/(13561:13572): CPU acaba de mandarnos cualquier cosa - -73
+[INFO] 14:30:23:059 memoria/(23094:23094): Memoria iniciada
+[INFO] 14:30:23:059 memoria/(23094:23094): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:30:23:059 memoria/(23094:23094): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:30:23:059 memoria/(23094:23094): watafoc
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 0 que apunta a la dirección 0x992a6f0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 1 que apunta a la dirección 0x992a730
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 2 que apunta a la dirección 0x992a770
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 3 que apunta a la dirección 0x992a7b0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 4 que apunta a la dirección 0x992a7f0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 5 que apunta a la dirección 0x992a830
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 6 que apunta a la dirección 0x992a870
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 7 que apunta a la dirección 0x992a8b0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 8 que apunta a la dirección 0x992a8f0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 9 que apunta a la dirección 0x992a930
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 10 que apunta a la dirección 0x992a970
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 11 que apunta a la dirección 0x992a9b0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 12 que apunta a la dirección 0x992a9f0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 13 que apunta a la dirección 0x992aa30
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 14 que apunta a la dirección 0x992aa70
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 15 que apunta a la dirección 0x992aab0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 16 que apunta a la dirección 0x992aaf0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 17 que apunta a la dirección 0x992ab30
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 18 que apunta a la dirección 0x992ab70
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 19 que apunta a la dirección 0x992abb0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 20 que apunta a la dirección 0x992abf0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 21 que apunta a la dirección 0x992ac30
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 22 que apunta a la dirección 0x992ac70
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 23 que apunta a la dirección 0x992acb0
+[INFO] 14:30:23:059 memoria/(23094:23094): Se creó el frame 24 que apunta a la dirección 0x992acf0
+[INFO] 14:30:23:060 memoria/(23094:23094): Se creó el frame 25 que apunta a la dirección 0x992ad30
+[INFO] 14:30:23:060 memoria/(23094:23094): Se creó el frame 26 que apunta a la dirección 0x992ad70
+[INFO] 14:30:23:060 memoria/(23094:23094): Se creó el frame 27 que apunta a la dirección 0x992adb0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 28 que apunta a la dirección 0x992adf0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 29 que apunta a la dirección 0x992ae30
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 30 que apunta a la dirección 0x992ae70
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 31 que apunta a la dirección 0x992aeb0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 32 que apunta a la dirección 0x992aef0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 33 que apunta a la dirección 0x992af30
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 34 que apunta a la dirección 0x992af70
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 35 que apunta a la dirección 0x992afb0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 36 que apunta a la dirección 0x992aff0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 37 que apunta a la dirección 0x992b030
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 38 que apunta a la dirección 0x992b070
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 39 que apunta a la dirección 0x992b0b0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 40 que apunta a la dirección 0x992b0f0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 41 que apunta a la dirección 0x992b130
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 42 que apunta a la dirección 0x992b170
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 43 que apunta a la dirección 0x992b1b0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 44 que apunta a la dirección 0x992b1f0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 45 que apunta a la dirección 0x992b230
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 46 que apunta a la dirección 0x992b270
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 47 que apunta a la dirección 0x992b2b0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 48 que apunta a la dirección 0x992b2f0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 49 que apunta a la dirección 0x992b330
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 50 que apunta a la dirección 0x992b370
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 51 que apunta a la dirección 0x992b3b0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 52 que apunta a la dirección 0x992b3f0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 53 que apunta a la dirección 0x992b430
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 54 que apunta a la dirección 0x992b470
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 55 que apunta a la dirección 0x992b4b0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 56 que apunta a la dirección 0x992b4f0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 57 que apunta a la dirección 0x992b530
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 58 que apunta a la dirección 0x992b570
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 59 que apunta a la dirección 0x992b5b0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 60 que apunta a la dirección 0x992b5f0
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 61 que apunta a la dirección 0x992b630
+[INFO] 14:30:23:061 memoria/(23094:23094): Se creó el frame 62 que apunta a la dirección 0x992b670
+[INFO] 14:30:23:062 memoria/(23094:23094): Se creó el frame 63 que apunta a la dirección 0x992b6b0
+[INFO] 14:30:23:062 memoria/(23094:23094): Memoria lista para recibir al cliente
+[INFO] 14:30:23:188 memoria/(23094:23094): Cliente conectado (a memoria)
+
+[INFO] 14:30:23:188 memoria/(23094:23106): Se conectó CPU - header 25
+[INFO] 14:30:23:188 memoria/(23094:23106): Conexion con CPU - Se recibió header 4
+[INFO] 14:30:23:189 memoria/(23094:23106): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:30:23:189 memoria/(23094:23106): Socket cliente memoria-cpu creado.
+[INFO] 14:30:23:189 memoria/(23094:23106): Config enviado.
+[INFO] 14:30:23:313 memoria/(23094:23094): Cliente conectado (a memoria)
+
+[INFO] 14:30:23:315 memoria/(23094:23121): Se conectó Kernel - header 24
+[INFO] 14:30:23:486 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:30:23:486 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:30:24:486 memoria/(23094:23121): Nuevo proceso - ID:1
+[INFO] 14:30:24:487 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 14:30:24:487 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 14:30:24:530 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 14:30:24:531 memoria/(23094:23121): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 14:30:24:532 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:30:24:532 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:30:25:532 memoria/(23094:23121): Nuevo proceso - ID:2
+[INFO] 14:30:25:533 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 14:30:25:533 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 14:30:25:539 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 14:30:25:539 memoria/(23094:23121): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 14:30:40:595 memoria/(23094:23121): Conexion con Kernel - Se recibio header 17
+[INFO] 14:30:40:595 memoria/(23094:23121): CASE PROCESO SUSPENDIDO
+[INFO] 14:30:41:596 memoria/(23094:23121): Proceso SUSPENDIDO - ID:1
+[INFO] 14:30:41:597 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:30:41:598 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:30:42:599 memoria/(23094:23121): Nuevo proceso - ID:3
+[INFO] 14:30:42:599 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 14:30:42:599 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 14:30:42:604 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 14:30:42:604 memoria/(23094:23121): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 14:30:42:605 memoria/(23094:23121): Conexion con Kernel - Se recibio header 17
+[INFO] 14:30:42:605 memoria/(23094:23121): CASE PROCESO SUSPENDIDO
+[INFO] 14:30:43:605 memoria/(23094:23121): Proceso SUSPENDIDO - ID:2
+[INFO] 14:30:58:939 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:30:59:940 memoria/(23094:23121): Proceso FINALIZADO - ID:1
+[INFO] 14:31:02:984 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:31:03:985 memoria/(23094:23121): Proceso FINALIZADO - ID:2
+[INFO] 14:31:03:986 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:31:04:986 memoria/(23094:23121): Proceso FINALIZADO - ID:3
+[INFO] 14:31:28:193 memoria/(23340:23340): Memoria iniciada
+[INFO] 14:31:28:193 memoria/(23340:23340): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:31:28:194 memoria/(23340:23340): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:31:28:194 memoria/(23340:23340): watafoc
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 0 que apunta a la dirección 0x8c226f0
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 1 que apunta a la dirección 0x8c22730
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 2 que apunta a la dirección 0x8c22770
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 3 que apunta a la dirección 0x8c227b0
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 4 que apunta a la dirección 0x8c227f0
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 5 que apunta a la dirección 0x8c22830
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 6 que apunta a la dirección 0x8c22870
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 7 que apunta a la dirección 0x8c228b0
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 8 que apunta a la dirección 0x8c228f0
+[INFO] 14:31:28:194 memoria/(23340:23340): Se creó el frame 9 que apunta a la dirección 0x8c22930
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 10 que apunta a la dirección 0x8c22970
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 11 que apunta a la dirección 0x8c229b0
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 12 que apunta a la dirección 0x8c229f0
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 13 que apunta a la dirección 0x8c22a30
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 14 que apunta a la dirección 0x8c22a70
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 15 que apunta a la dirección 0x8c22ab0
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 16 que apunta a la dirección 0x8c22af0
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 17 que apunta a la dirección 0x8c22b30
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 18 que apunta a la dirección 0x8c22b70
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 19 que apunta a la dirección 0x8c22bb0
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 20 que apunta a la dirección 0x8c22bf0
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 21 que apunta a la dirección 0x8c22c30
+[INFO] 14:31:28:195 memoria/(23340:23340): Se creó el frame 22 que apunta a la dirección 0x8c22c70
+[INFO] 14:31:28:196 memoria/(23340:23340): Se creó el frame 23 que apunta a la dirección 0x8c22cb0
+[INFO] 14:31:28:196 memoria/(23340:23340): Se creó el frame 24 que apunta a la dirección 0x8c22cf0
+[INFO] 14:31:28:196 memoria/(23340:23340): Se creó el frame 25 que apunta a la dirección 0x8c22d30
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 26 que apunta a la dirección 0x8c22d70
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 27 que apunta a la dirección 0x8c22db0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 28 que apunta a la dirección 0x8c22df0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 29 que apunta a la dirección 0x8c22e30
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 30 que apunta a la dirección 0x8c22e70
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 31 que apunta a la dirección 0x8c22eb0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 32 que apunta a la dirección 0x8c22ef0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 33 que apunta a la dirección 0x8c22f30
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 34 que apunta a la dirección 0x8c22f70
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 35 que apunta a la dirección 0x8c22fb0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 36 que apunta a la dirección 0x8c22ff0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 37 que apunta a la dirección 0x8c23030
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 38 que apunta a la dirección 0x8c23070
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 39 que apunta a la dirección 0x8c230b0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 40 que apunta a la dirección 0x8c230f0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 41 que apunta a la dirección 0x8c23130
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 42 que apunta a la dirección 0x8c23170
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 43 que apunta a la dirección 0x8c231b0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 44 que apunta a la dirección 0x8c231f0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 45 que apunta a la dirección 0x8c23230
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 46 que apunta a la dirección 0x8c23270
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 47 que apunta a la dirección 0x8c232b0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 48 que apunta a la dirección 0x8c232f0
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 49 que apunta a la dirección 0x8c23330
+[INFO] 14:31:28:197 memoria/(23340:23340): Se creó el frame 50 que apunta a la dirección 0x8c23370
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 51 que apunta a la dirección 0x8c233b0
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 52 que apunta a la dirección 0x8c233f0
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 53 que apunta a la dirección 0x8c23430
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 54 que apunta a la dirección 0x8c23470
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 55 que apunta a la dirección 0x8c234b0
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 56 que apunta a la dirección 0x8c234f0
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 57 que apunta a la dirección 0x8c23530
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 58 que apunta a la dirección 0x8c23570
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 59 que apunta a la dirección 0x8c235b0
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 60 que apunta a la dirección 0x8c235f0
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 61 que apunta a la dirección 0x8c23630
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 62 que apunta a la dirección 0x8c23670
+[INFO] 14:31:28:198 memoria/(23340:23340): Se creó el frame 63 que apunta a la dirección 0x8c236b0
+[ERROR] 14:31:28:198 memoria/(23340:23340): Error: Address already in use
+[INFO] 14:31:28:198 memoria/(23340:23340): Memoria lista para recibir al cliente
+[INFO] 14:31:28:321 memoria/(23094:23094): Cliente conectado (a memoria)
+
+[INFO] 14:31:28:322 memoria/(23094:23351): Se conectó CPU - header 25
+[INFO] 14:31:28:322 memoria/(23094:23351): Conexion con CPU - Se recibió header 4
+[INFO] 14:31:28:322 memoria/(23094:23351): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:31:28:323 memoria/(23094:23351): Socket cliente memoria-cpu creado.
+[INFO] 14:31:28:323 memoria/(23094:23351): Config enviado.
+[INFO] 14:31:28:445 memoria/(23094:23094): Cliente conectado (a memoria)
+
+[INFO] 14:31:28:446 memoria/(23094:23367): Se conectó Kernel - header 24
+[INFO] 14:31:28:572 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:31:28:572 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:31:29:573 memoria/(23094:23121): Nuevo proceso - ID:4
+[INFO] 14:31:29:573 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 3 del proceso ID:4
+[INFO] 14:31:29:574 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 4
+[INFO] 14:31:29:581 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/4.swap para el proceso ID:4
+[INFO] 14:31:29:582 memoria/(23094:23121): Se devolvió PCB del proceso 4 con tabla de páginas 4
+[INFO] 14:31:29:582 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:31:29:583 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:31:30:583 memoria/(23094:23121): Nuevo proceso - ID:5
+[INFO] 14:31:30:584 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 4 del proceso ID:5
+[INFO] 14:31:30:584 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 5
+[INFO] 14:31:30:591 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/5.swap para el proceso ID:5
+[INFO] 14:31:30:592 memoria/(23094:23121): Se devolvió PCB del proceso 5 con tabla de páginas 5
+[INFO] 14:31:34:505 memoria/(23094:23367): Conexion con Kernel - Se recibio header -74
+[ERROR] 14:31:34:505 memoria/(23094:23367): Kernel acaba de mandarnos cualquier cosa - -74
+[INFO] 14:31:38:290 memoria/(23094:23351): Conexion con CPU - Se recibió header -74
+[ERROR] 14:31:38:290 memoria/(23094:23351): CPU acaba de mandarnos cualquier cosa - -74
+[INFO] 14:31:45:100 memoria/(23094:23121): Conexion con Kernel - Se recibio header 17
+[INFO] 14:31:45:100 memoria/(23094:23121): CASE PROCESO SUSPENDIDO
+[INFO] 14:31:46:101 memoria/(23094:23121): Proceso SUSPENDIDO - ID:4
+[INFO] 14:31:46:101 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:31:46:102 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:31:47:102 memoria/(23094:23121): Nuevo proceso - ID:6
+[INFO] 14:31:47:103 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 5 del proceso ID:6
+[INFO] 14:31:47:103 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 6
+[INFO] 14:31:47:137 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/6.swap para el proceso ID:6
+[INFO] 14:31:47:138 memoria/(23094:23121): Se devolvió PCB del proceso 6 con tabla de páginas 6
+[INFO] 14:31:47:139 memoria/(23094:23121): Conexion con Kernel - Se recibio header 17
+[INFO] 14:31:47:139 memoria/(23094:23121): CASE PROCESO SUSPENDIDO
+[INFO] 14:31:48:139 memoria/(23094:23121): Proceso SUSPENDIDO - ID:5
+[INFO] 14:32:02:531 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:32:03:532 memoria/(23094:23121): Proceso FINALIZADO - ID:4
+[INFO] 14:32:03:532 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:32:04:533 memoria/(23094:23121): Proceso FINALIZADO - ID:6
+[INFO] 14:32:06:713 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:32:07:714 memoria/(23094:23121): Proceso FINALIZADO - ID:5
+[INFO] 14:32:33:351 memoria/(23576:23576): Memoria iniciada
+[INFO] 14:32:33:357 memoria/(23576:23576): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:32:33:357 memoria/(23576:23576): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:32:33:357 memoria/(23576:23576): watafoc
+[INFO] 14:32:33:357 memoria/(23576:23576): Se creó el frame 0 que apunta a la dirección 0x9fce6f0
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 1 que apunta a la dirección 0x9fce730
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 2 que apunta a la dirección 0x9fce770
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 3 que apunta a la dirección 0x9fce7b0
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 4 que apunta a la dirección 0x9fce7f0
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 5 que apunta a la dirección 0x9fce830
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 6 que apunta a la dirección 0x9fce870
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 7 que apunta a la dirección 0x9fce8b0
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 8 que apunta a la dirección 0x9fce8f0
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 9 que apunta a la dirección 0x9fce930
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 10 que apunta a la dirección 0x9fce970
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 11 que apunta a la dirección 0x9fce9b0
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 12 que apunta a la dirección 0x9fce9f0
+[INFO] 14:32:33:358 memoria/(23576:23576): Se creó el frame 13 que apunta a la dirección 0x9fcea30
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 14 que apunta a la dirección 0x9fcea70
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 15 que apunta a la dirección 0x9fceab0
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 16 que apunta a la dirección 0x9fceaf0
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 17 que apunta a la dirección 0x9fceb30
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 18 que apunta a la dirección 0x9fceb70
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 19 que apunta a la dirección 0x9fcebb0
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 20 que apunta a la dirección 0x9fcebf0
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 21 que apunta a la dirección 0x9fcec30
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 22 que apunta a la dirección 0x9fcec70
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 23 que apunta a la dirección 0x9fcecb0
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 24 que apunta a la dirección 0x9fcecf0
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 25 que apunta a la dirección 0x9fced30
+[INFO] 14:32:33:359 memoria/(23576:23576): Se creó el frame 26 que apunta a la dirección 0x9fced70
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 27 que apunta a la dirección 0x9fcedb0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 28 que apunta a la dirección 0x9fcedf0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 29 que apunta a la dirección 0x9fcee30
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 30 que apunta a la dirección 0x9fcee70
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 31 que apunta a la dirección 0x9fceeb0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 32 que apunta a la dirección 0x9fceef0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 33 que apunta a la dirección 0x9fcef30
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 34 que apunta a la dirección 0x9fcef70
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 35 que apunta a la dirección 0x9fcefb0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 36 que apunta a la dirección 0x9fceff0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 37 que apunta a la dirección 0x9fcf030
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 38 que apunta a la dirección 0x9fcf070
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 39 que apunta a la dirección 0x9fcf0b0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 40 que apunta a la dirección 0x9fcf0f0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 41 que apunta a la dirección 0x9fcf130
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 42 que apunta a la dirección 0x9fcf170
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 43 que apunta a la dirección 0x9fcf1b0
+[INFO] 14:32:33:360 memoria/(23576:23576): Se creó el frame 44 que apunta a la dirección 0x9fcf1f0
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 45 que apunta a la dirección 0x9fcf230
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 46 que apunta a la dirección 0x9fcf270
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 47 que apunta a la dirección 0x9fcf2b0
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 48 que apunta a la dirección 0x9fcf2f0
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 49 que apunta a la dirección 0x9fcf330
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 50 que apunta a la dirección 0x9fcf370
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 51 que apunta a la dirección 0x9fcf3b0
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 52 que apunta a la dirección 0x9fcf3f0
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 53 que apunta a la dirección 0x9fcf430
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 54 que apunta a la dirección 0x9fcf470
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 55 que apunta a la dirección 0x9fcf4b0
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 56 que apunta a la dirección 0x9fcf4f0
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 57 que apunta a la dirección 0x9fcf530
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 58 que apunta a la dirección 0x9fcf570
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 59 que apunta a la dirección 0x9fcf5b0
+[INFO] 14:32:33:361 memoria/(23576:23576): Se creó el frame 60 que apunta a la dirección 0x9fcf5f0
+[INFO] 14:32:33:362 memoria/(23576:23576): Se creó el frame 61 que apunta a la dirección 0x9fcf630
+[INFO] 14:32:33:362 memoria/(23576:23576): Se creó el frame 62 que apunta a la dirección 0x9fcf670
+[INFO] 14:32:33:362 memoria/(23576:23576): Se creó el frame 63 que apunta a la dirección 0x9fcf6b0
+[ERROR] 14:32:33:362 memoria/(23576:23576): Error: Address already in use
+[INFO] 14:32:33:362 memoria/(23576:23576): Memoria lista para recibir al cliente
+[INFO] 14:32:33:487 memoria/(23094:23094): Cliente conectado (a memoria)
+
+[INFO] 14:32:33:488 memoria/(23094:23586): Se conectó CPU - header 25
+[INFO] 14:32:33:488 memoria/(23094:23586): Conexion con CPU - Se recibió header 4
+[INFO] 14:32:33:488 memoria/(23094:23586): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:32:33:488 memoria/(23094:23586): Socket cliente memoria-cpu creado.
+[INFO] 14:32:33:489 memoria/(23094:23586): Config enviado.
+[INFO] 14:32:33:611 memoria/(23094:23094): Cliente conectado (a memoria)
+
+[INFO] 14:32:33:617 memoria/(23094:23601): Se conectó Kernel - header 24
+[INFO] 14:32:33:751 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:32:33:751 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:32:34:752 memoria/(23094:23121): Nuevo proceso - ID:7
+[INFO] 14:32:34:752 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 6 del proceso ID:7
+[INFO] 14:32:34:753 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 7
+[INFO] 14:32:34:787 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/7.swap para el proceso ID:7
+[INFO] 14:32:34:787 memoria/(23094:23121): Se devolvió PCB del proceso 7 con tabla de páginas 7
+[INFO] 14:32:34:787 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:32:34:787 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:32:35:788 memoria/(23094:23121): Nuevo proceso - ID:8
+[INFO] 14:32:35:788 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 7 del proceso ID:8
+[INFO] 14:32:35:789 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 8
+[INFO] 14:32:35:796 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/8.swap para el proceso ID:8
+[INFO] 14:32:35:797 memoria/(23094:23121): Se devolvió PCB del proceso 8 con tabla de páginas 8
+[INFO] 14:32:41:342 memoria/(23094:23601): Conexion con Kernel - Se recibio header 9
+[ERROR] 14:32:41:343 memoria/(23094:23601): Kernel acaba de mandarnos cualquier cosa - 9
+[INFO] 14:32:50:110 memoria/(23094:23121): Conexion con Kernel - Se recibio header 17
+[INFO] 14:32:50:110 memoria/(23094:23121): CASE PROCESO SUSPENDIDO
+[INFO] 14:32:50:636 memoria/(23094:23586): Conexion con CPU - Se recibió header -74
+[ERROR] 14:32:50:636 memoria/(23094:23586): CPU acaba de mandarnos cualquier cosa - -74
+[INFO] 14:32:51:111 memoria/(23094:23121): Proceso SUSPENDIDO - ID:7
+[INFO] 14:32:51:112 memoria/(23094:23121): Conexion con Kernel - Se recibio header 12
+[INFO] 14:32:51:112 memoria/(23094:23121): CASE NUEVO PROCESO
+[INFO] 14:32:52:113 memoria/(23094:23121): Nuevo proceso - ID:9
+[INFO] 14:32:52:113 memoria/(23094:23121): Se agregó una entrada a la tabla de segundo nivel 8 del proceso ID:9
+[INFO] 14:32:52:113 memoria/(23094:23121): Se agregó una entrada a la tabla de primer nivel del proceso 9
+[INFO] 14:32:52:122 memoria/(23094:23121): Se creó el archivo /home/utnso/swap/9.swap para el proceso ID:9
+[INFO] 14:32:52:122 memoria/(23094:23121): Se devolvió PCB del proceso 9 con tabla de páginas 9
+[INFO] 14:32:58:164 memoria/(23094:23121): Conexion con Kernel - Se recibio header 17
+[INFO] 14:32:58:164 memoria/(23094:23121): CASE PROCESO SUSPENDIDO
+[INFO] 14:32:59:164 memoria/(23094:23121): Proceso SUSPENDIDO - ID:8
+[INFO] 14:33:02:177 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:33:03:178 memoria/(23094:23121): Proceso FINALIZADO - ID:7
+[INFO] 14:33:06:205 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:33:07:206 memoria/(23094:23121): Proceso FINALIZADO - ID:8
+[INFO] 14:33:19:540 memoria/(23094:23121): Conexion con Kernel - Se recibio header 14
+[INFO] 14:33:20:545 memoria/(23094:23121): Proceso FINALIZADO - ID:9
+[INFO] 14:35:49:710 memoria/(24063:24063): Memoria iniciada
+[INFO] 14:35:49:710 memoria/(24063:24063): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:35:49:710 memoria/(24063:24063): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:35:49:710 memoria/(24063:24063): watafoc
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 0 que apunta a la dirección 0x98a76f0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 1 que apunta a la dirección 0x98a7730
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 2 que apunta a la dirección 0x98a7770
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 3 que apunta a la dirección 0x98a77b0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 4 que apunta a la dirección 0x98a77f0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 5 que apunta a la dirección 0x98a7830
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 6 que apunta a la dirección 0x98a7870
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 7 que apunta a la dirección 0x98a78b0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 8 que apunta a la dirección 0x98a78f0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 9 que apunta a la dirección 0x98a7930
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 10 que apunta a la dirección 0x98a7970
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 11 que apunta a la dirección 0x98a79b0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 12 que apunta a la dirección 0x98a79f0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 13 que apunta a la dirección 0x98a7a30
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 14 que apunta a la dirección 0x98a7a70
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 15 que apunta a la dirección 0x98a7ab0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 16 que apunta a la dirección 0x98a7af0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 17 que apunta a la dirección 0x98a7b30
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 18 que apunta a la dirección 0x98a7b70
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 19 que apunta a la dirección 0x98a7bb0
+[INFO] 14:35:49:710 memoria/(24063:24063): Se creó el frame 20 que apunta a la dirección 0x98a7bf0
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 21 que apunta a la dirección 0x98a7c30
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 22 que apunta a la dirección 0x98a7c70
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 23 que apunta a la dirección 0x98a7cb0
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 24 que apunta a la dirección 0x98a7cf0
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 25 que apunta a la dirección 0x98a7d30
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 26 que apunta a la dirección 0x98a7d70
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 27 que apunta a la dirección 0x98a7db0
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 28 que apunta a la dirección 0x98a7df0
+[INFO] 14:35:49:711 memoria/(24063:24063): Se creó el frame 29 que apunta a la dirección 0x98a7e30
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 30 que apunta a la dirección 0x98a7e70
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 31 que apunta a la dirección 0x98a7eb0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 32 que apunta a la dirección 0x98a7ef0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 33 que apunta a la dirección 0x98a7f30
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 34 que apunta a la dirección 0x98a7f70
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 35 que apunta a la dirección 0x98a7fb0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 36 que apunta a la dirección 0x98a7ff0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 37 que apunta a la dirección 0x98a8030
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 38 que apunta a la dirección 0x98a8070
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 39 que apunta a la dirección 0x98a80b0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 40 que apunta a la dirección 0x98a80f0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 41 que apunta a la dirección 0x98a8130
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 42 que apunta a la dirección 0x98a8170
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 43 que apunta a la dirección 0x98a81b0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 44 que apunta a la dirección 0x98a81f0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 45 que apunta a la dirección 0x98a8230
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 46 que apunta a la dirección 0x98a8270
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 47 que apunta a la dirección 0x98a82b0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 48 que apunta a la dirección 0x98a82f0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 49 que apunta a la dirección 0x98a8330
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 50 que apunta a la dirección 0x98a8370
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 51 que apunta a la dirección 0x98a83b0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 52 que apunta a la dirección 0x98a83f0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 53 que apunta a la dirección 0x98a8430
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 54 que apunta a la dirección 0x98a8470
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 55 que apunta a la dirección 0x98a84b0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 56 que apunta a la dirección 0x98a84f0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 57 que apunta a la dirección 0x98a8530
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 58 que apunta a la dirección 0x98a8570
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 59 que apunta a la dirección 0x98a85b0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 60 que apunta a la dirección 0x98a85f0
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 61 que apunta a la dirección 0x98a8630
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 62 que apunta a la dirección 0x98a8670
+[INFO] 14:35:49:712 memoria/(24063:24063): Se creó el frame 63 que apunta a la dirección 0x98a86b0
+[INFO] 14:35:49:713 memoria/(24063:24063): Memoria lista para recibir al cliente
+[INFO] 14:35:49:835 memoria/(24063:24063): Cliente conectado (a memoria)
+
+[INFO] 14:35:49:836 memoria/(24063:24073): Se conectó CPU - header 25
+[INFO] 14:35:49:836 memoria/(24063:24073): Conexion con CPU - Se recibió header 4
+[INFO] 14:35:49:836 memoria/(24063:24073): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:35:49:836 memoria/(24063:24073): Socket cliente memoria-cpu creado.
+[INFO] 14:35:49:837 memoria/(24063:24073): Config enviado.
+[INFO] 14:35:49:969 memoria/(24063:24063): Cliente conectado (a memoria)
+
+[INFO] 14:35:49:970 memoria/(24063:24088): Se conectó Kernel - header 24
+[INFO] 14:35:50:096 memoria/(24063:24088): Conexion con Kernel - Se recibio header 12
+[INFO] 14:35:50:096 memoria/(24063:24088): CASE NUEVO PROCESO
+[INFO] 14:35:51:098 memoria/(24063:24088): Nuevo proceso - ID:1
+[INFO] 14:35:51:098 memoria/(24063:24088): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 14:35:51:098 memoria/(24063:24088): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 14:35:51:106 memoria/(24063:24088): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 14:35:51:113 memoria/(24063:24088): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 14:35:51:113 memoria/(24063:24088): Conexion con Kernel - Se recibio header 12
+[INFO] 14:35:51:113 memoria/(24063:24088): CASE NUEVO PROCESO
+[INFO] 14:35:52:113 memoria/(24063:24088): Nuevo proceso - ID:2
+[INFO] 14:35:52:114 memoria/(24063:24088): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 14:35:52:114 memoria/(24063:24088): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 14:35:52:121 memoria/(24063:24088): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 14:35:52:122 memoria/(24063:24088): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 14:36:07:114 memoria/(24063:24088): Conexion con Kernel - Se recibio header 17
+[INFO] 14:36:07:114 memoria/(24063:24088): CASE PROCESO SUSPENDIDO
+[INFO] 14:36:08:115 memoria/(24063:24088): Proceso SUSPENDIDO - ID:1
+[INFO] 14:36:08:115 memoria/(24063:24088): Conexion con Kernel - Se recibio header 12
+[INFO] 14:36:08:117 memoria/(24063:24088): CASE NUEVO PROCESO
+[INFO] 14:36:09:118 memoria/(24063:24088): Nuevo proceso - ID:3
+[INFO] 14:36:09:119 memoria/(24063:24088): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 14:36:09:119 memoria/(24063:24088): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 14:36:09:156 memoria/(24063:24088): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 14:36:09:157 memoria/(24063:24088): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 14:36:16:161 memoria/(24063:24088): Conexion con Kernel - Se recibio header 17
+[INFO] 14:36:16:161 memoria/(24063:24088): CASE PROCESO SUSPENDIDO
+[INFO] 14:36:17:162 memoria/(24063:24088): Proceso SUSPENDIDO - ID:2
+[INFO] 14:36:20:167 memoria/(24063:24088): Conexion con Kernel - Se recibio header 14
+[INFO] 14:36:21:167 memoria/(24063:24088): Proceso FINALIZADO - ID:1
+[INFO] 14:36:24:146 memoria/(24063:24088): Conexion con Kernel - Se recibio header 14
+[INFO] 14:36:25:146 memoria/(24063:24088): Proceso FINALIZADO - ID:2
+[INFO] 14:36:37:470 memoria/(24063:24088): Conexion con Kernel - Se recibio header 14
+[INFO] 14:36:38:471 memoria/(24063:24088): Proceso FINALIZADO - ID:3
+[INFO] 14:40:22:738 memoria/(24674:24674): Memoria iniciada
+[INFO] 14:40:22:741 memoria/(24674:24674): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:40:22:741 memoria/(24674:24674): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:40:22:741 memoria/(24674:24674): watafoc
+[INFO] 14:40:22:741 memoria/(24674:24674): Se creó el frame 0 que apunta a la dirección 0x8a146f0
+[INFO] 14:40:22:741 memoria/(24674:24674): Se creó el frame 1 que apunta a la dirección 0x8a14730
+[INFO] 14:40:22:741 memoria/(24674:24674): Se creó el frame 2 que apunta a la dirección 0x8a14770
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 3 que apunta a la dirección 0x8a147b0
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 4 que apunta a la dirección 0x8a147f0
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 5 que apunta a la dirección 0x8a14830
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 6 que apunta a la dirección 0x8a14870
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 7 que apunta a la dirección 0x8a148b0
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 8 que apunta a la dirección 0x8a148f0
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 9 que apunta a la dirección 0x8a14930
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 10 que apunta a la dirección 0x8a14970
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 11 que apunta a la dirección 0x8a149b0
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 12 que apunta a la dirección 0x8a149f0
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 13 que apunta a la dirección 0x8a14a30
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 14 que apunta a la dirección 0x8a14a70
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 15 que apunta a la dirección 0x8a14ab0
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 16 que apunta a la dirección 0x8a14af0
+[INFO] 14:40:22:742 memoria/(24674:24674): Se creó el frame 17 que apunta a la dirección 0x8a14b30
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 18 que apunta a la dirección 0x8a14b70
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 19 que apunta a la dirección 0x8a14bb0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 20 que apunta a la dirección 0x8a14bf0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 21 que apunta a la dirección 0x8a14c30
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 22 que apunta a la dirección 0x8a14c70
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 23 que apunta a la dirección 0x8a14cb0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 24 que apunta a la dirección 0x8a14cf0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 25 que apunta a la dirección 0x8a14d30
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 26 que apunta a la dirección 0x8a14d70
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 27 que apunta a la dirección 0x8a14db0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 28 que apunta a la dirección 0x8a14df0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 29 que apunta a la dirección 0x8a14e30
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 30 que apunta a la dirección 0x8a14e70
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 31 que apunta a la dirección 0x8a14eb0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 32 que apunta a la dirección 0x8a14ef0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 33 que apunta a la dirección 0x8a14f30
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 34 que apunta a la dirección 0x8a14f70
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 35 que apunta a la dirección 0x8a14fb0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 36 que apunta a la dirección 0x8a14ff0
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 37 que apunta a la dirección 0x8a15030
+[INFO] 14:40:22:743 memoria/(24674:24674): Se creó el frame 38 que apunta a la dirección 0x8a15070
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 39 que apunta a la dirección 0x8a150b0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 40 que apunta a la dirección 0x8a150f0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 41 que apunta a la dirección 0x8a15130
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 42 que apunta a la dirección 0x8a15170
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 43 que apunta a la dirección 0x8a151b0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 44 que apunta a la dirección 0x8a151f0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 45 que apunta a la dirección 0x8a15230
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 46 que apunta a la dirección 0x8a15270
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 47 que apunta a la dirección 0x8a152b0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 48 que apunta a la dirección 0x8a152f0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 49 que apunta a la dirección 0x8a15330
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 50 que apunta a la dirección 0x8a15370
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 51 que apunta a la dirección 0x8a153b0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 52 que apunta a la dirección 0x8a153f0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 53 que apunta a la dirección 0x8a15430
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 54 que apunta a la dirección 0x8a15470
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 55 que apunta a la dirección 0x8a154b0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 56 que apunta a la dirección 0x8a154f0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 57 que apunta a la dirección 0x8a15530
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 58 que apunta a la dirección 0x8a15570
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 59 que apunta a la dirección 0x8a155b0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 60 que apunta a la dirección 0x8a155f0
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 61 que apunta a la dirección 0x8a15630
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 62 que apunta a la dirección 0x8a15670
+[INFO] 14:40:22:744 memoria/(24674:24674): Se creó el frame 63 que apunta a la dirección 0x8a156b0
+[INFO] 14:40:22:744 memoria/(24674:24674): Memoria lista para recibir al cliente
+[INFO] 14:40:22:898 memoria/(24674:24674): Cliente conectado (a memoria)
+
+[INFO] 14:40:22:899 memoria/(24674:24684): Se conectó CPU - header 25
+[INFO] 14:40:22:899 memoria/(24674:24684): Conexion con CPU - Se recibió header 4
+[INFO] 14:40:22:899 memoria/(24674:24684): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:40:22:899 memoria/(24674:24684): Socket cliente memoria-cpu creado.
+[INFO] 14:40:22:900 memoria/(24674:24684): Config enviado.
+[INFO] 14:40:23:045 memoria/(24674:24674): Cliente conectado (a memoria)
+
+[INFO] 14:40:23:047 memoria/(24674:24699): Se conectó Kernel - header 24
+[INFO] 14:40:23:198 memoria/(24674:24699): Conexion con Kernel - Se recibio header 12
+[INFO] 14:40:23:198 memoria/(24674:24699): CASE NUEVO PROCESO
+[INFO] 14:40:24:199 memoria/(24674:24699): Nuevo proceso - ID:1
+[INFO] 14:40:24:199 memoria/(24674:24699): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 14:40:24:199 memoria/(24674:24699): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 14:40:24:199 memoria/(24674:24699): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 14:40:24:208 memoria/(24674:24699): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 14:40:24:211 memoria/(24674:24699): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 14:40:24:214 memoria/(24674:24699): Conexion con Kernel - Se recibio header 12
+[INFO] 14:40:24:214 memoria/(24674:24699): CASE NUEVO PROCESO
+[INFO] 14:40:25:214 memoria/(24674:24699): Nuevo proceso - ID:2
+[INFO] 14:40:25:215 memoria/(24674:24699): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 14:40:25:215 memoria/(24674:24699): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 14:40:25:215 memoria/(24674:24699): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 14:40:25:222 memoria/(24674:24699): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 14:40:25:222 memoria/(24674:24699): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 14:40:25:272 memoria/(24674:24699): Conexion con Kernel - Se recibio header 12
+[INFO] 14:40:25:272 memoria/(24674:24699): CASE NUEVO PROCESO
+[INFO] 14:40:26:272 memoria/(24674:24699): Nuevo proceso - ID:3
+[INFO] 14:40:26:273 memoria/(24674:24699): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 14:40:26:273 memoria/(24674:24699): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 14:40:26:273 memoria/(24674:24699): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 14:40:26:280 memoria/(24674:24699): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 14:40:26:281 memoria/(24674:24699): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 14:40:37:628 memoria/(24674:24699): Conexion con Kernel - Se recibio header 14
+[INFO] 14:40:38:628 memoria/(24674:24699): Proceso FINALIZADO - ID:2
+[INFO] 14:40:44:234 memoria/(24674:24699): Conexion con Kernel - Se recibio header 14
+[INFO] 14:40:45:234 memoria/(24674:24699): Proceso FINALIZADO - ID:3
+[INFO] 14:40:48:239 memoria/(24674:24699): Conexion con Kernel - Se recibio header 14
+[INFO] 14:40:49:240 memoria/(24674:24699): Proceso FINALIZADO - ID:1
+[INFO] 14:41:23:847 memoria/(24674:24699): Conexion con Kernel - Se recibio header -73
+[ERROR] 14:41:23:847 memoria/(24674:24699): Kernel acaba de mandarnos cualquier cosa - -73
+[INFO] 14:41:25:742 memoria/(24674:24684): Conexion con CPU - Se recibió header -73
+[ERROR] 14:41:25:743 memoria/(24674:24684): CPU acaba de mandarnos cualquier cosa - -73
+[INFO] 14:41:49:107 memoria/(24910:24910): Memoria iniciada
+[INFO] 14:41:49:107 memoria/(24910:24910): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:41:49:108 memoria/(24910:24910): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:41:49:108 memoria/(24910:24910): watafoc
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 0 que apunta a la dirección 0x99eb6f0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 1 que apunta a la dirección 0x99eb730
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 2 que apunta a la dirección 0x99eb770
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 3 que apunta a la dirección 0x99eb7b0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 4 que apunta a la dirección 0x99eb7f0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 5 que apunta a la dirección 0x99eb830
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 6 que apunta a la dirección 0x99eb870
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 7 que apunta a la dirección 0x99eb8b0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 8 que apunta a la dirección 0x99eb8f0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 9 que apunta a la dirección 0x99eb930
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 10 que apunta a la dirección 0x99eb970
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 11 que apunta a la dirección 0x99eb9b0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 12 que apunta a la dirección 0x99eb9f0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 13 que apunta a la dirección 0x99eba30
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 14 que apunta a la dirección 0x99eba70
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 15 que apunta a la dirección 0x99ebab0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 16 que apunta a la dirección 0x99ebaf0
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 17 que apunta a la dirección 0x99ebb30
+[INFO] 14:41:49:108 memoria/(24910:24910): Se creó el frame 18 que apunta a la dirección 0x99ebb70
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 19 que apunta a la dirección 0x99ebbb0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 20 que apunta a la dirección 0x99ebbf0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 21 que apunta a la dirección 0x99ebc30
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 22 que apunta a la dirección 0x99ebc70
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 23 que apunta a la dirección 0x99ebcb0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 24 que apunta a la dirección 0x99ebcf0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 25 que apunta a la dirección 0x99ebd30
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 26 que apunta a la dirección 0x99ebd70
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 27 que apunta a la dirección 0x99ebdb0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 28 que apunta a la dirección 0x99ebdf0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 29 que apunta a la dirección 0x99ebe30
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 30 que apunta a la dirección 0x99ebe70
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 31 que apunta a la dirección 0x99ebeb0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 32 que apunta a la dirección 0x99ebef0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 33 que apunta a la dirección 0x99ebf30
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 34 que apunta a la dirección 0x99ebf70
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 35 que apunta a la dirección 0x99ebfb0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 36 que apunta a la dirección 0x99ebff0
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 37 que apunta a la dirección 0x99ec030
+[INFO] 14:41:49:109 memoria/(24910:24910): Se creó el frame 38 que apunta a la dirección 0x99ec070
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 39 que apunta a la dirección 0x99ec0b0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 40 que apunta a la dirección 0x99ec0f0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 41 que apunta a la dirección 0x99ec130
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 42 que apunta a la dirección 0x99ec170
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 43 que apunta a la dirección 0x99ec1b0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 44 que apunta a la dirección 0x99ec1f0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 45 que apunta a la dirección 0x99ec230
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 46 que apunta a la dirección 0x99ec270
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 47 que apunta a la dirección 0x99ec2b0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 48 que apunta a la dirección 0x99ec2f0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 49 que apunta a la dirección 0x99ec330
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 50 que apunta a la dirección 0x99ec370
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 51 que apunta a la dirección 0x99ec3b0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 52 que apunta a la dirección 0x99ec3f0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 53 que apunta a la dirección 0x99ec430
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 54 que apunta a la dirección 0x99ec470
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 55 que apunta a la dirección 0x99ec4b0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 56 que apunta a la dirección 0x99ec4f0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 57 que apunta a la dirección 0x99ec530
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 58 que apunta a la dirección 0x99ec570
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 59 que apunta a la dirección 0x99ec5b0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 60 que apunta a la dirección 0x99ec5f0
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 61 que apunta a la dirección 0x99ec630
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 62 que apunta a la dirección 0x99ec670
+[INFO] 14:41:49:110 memoria/(24910:24910): Se creó el frame 63 que apunta a la dirección 0x99ec6b0
+[INFO] 14:41:49:112 memoria/(24910:24910): Memoria lista para recibir al cliente
+[INFO] 14:41:49:235 memoria/(24910:24910): Cliente conectado (a memoria)
+
+[INFO] 14:41:49:236 memoria/(24910:24920): Se conectó CPU - header 25
+[INFO] 14:41:49:236 memoria/(24910:24920): Conexion con CPU - Se recibió header 4
+[INFO] 14:41:49:237 memoria/(24910:24920): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:41:49:237 memoria/(24910:24920): Socket cliente memoria-cpu creado.
+[INFO] 14:41:49:237 memoria/(24910:24920): Config enviado.
+[INFO] 14:41:49:367 memoria/(24910:24910): Cliente conectado (a memoria)
+
+[INFO] 14:41:49:368 memoria/(24910:24935): Se conectó Kernel - header 24
+[INFO] 14:41:49:499 memoria/(24910:24935): Conexion con Kernel - Se recibio header 12
+[INFO] 14:41:49:499 memoria/(24910:24935): CASE NUEVO PROCESO
+[INFO] 14:41:50:499 memoria/(24910:24935): Nuevo proceso - ID:1
+[INFO] 14:41:50:500 memoria/(24910:24935): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 14:41:50:500 memoria/(24910:24935): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 14:41:50:508 memoria/(24910:24935): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 14:41:50:511 memoria/(24910:24935): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 14:41:50:511 memoria/(24910:24935): Conexion con Kernel - Se recibio header 12
+[INFO] 14:41:50:511 memoria/(24910:24935): CASE NUEVO PROCESO
+[INFO] 14:41:51:515 memoria/(24910:24935): Nuevo proceso - ID:2
+[INFO] 14:41:51:515 memoria/(24910:24935): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 14:41:51:515 memoria/(24910:24935): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 14:41:51:524 memoria/(24910:24935): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 14:41:51:524 memoria/(24910:24935): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 14:41:51:561 memoria/(24910:24935): Conexion con Kernel - Se recibio header 12
+[INFO] 14:41:51:561 memoria/(24910:24935): CASE NUEVO PROCESO
+[INFO] 14:41:52:561 memoria/(24910:24935): Nuevo proceso - ID:3
+[INFO] 14:41:52:562 memoria/(24910:24935): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 14:41:52:562 memoria/(24910:24935): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 14:41:52:567 memoria/(24910:24935): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 14:41:52:567 memoria/(24910:24935): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 14:42:11:893 memoria/(24910:24935): Conexion con Kernel - Se recibio header 14
+[INFO] 14:42:12:893 memoria/(24910:24935): Proceso FINALIZADO - ID:3
+[INFO] 14:42:15:956 memoria/(24910:24935): Conexion con Kernel - Se recibio header 14
+[INFO] 14:42:16:957 memoria/(24910:24935): Proceso FINALIZADO - ID:1
+[INFO] 14:42:19:977 memoria/(24910:24935): Conexion con Kernel - Se recibio header 14
+[INFO] 14:42:20:977 memoria/(24910:24935): Proceso FINALIZADO - ID:2
+[INFO] 14:42:46:865 memoria/(24910:24935): Conexion con Kernel - Se recibio header -73
+[ERROR] 14:42:46:865 memoria/(24910:24935): Kernel acaba de mandarnos cualquier cosa - -73
+[INFO] 14:42:49:974 memoria/(24910:24920): Conexion con CPU - Se recibió header -73
+[ERROR] 14:42:49:974 memoria/(24910:24920): CPU acaba de mandarnos cualquier cosa - -73
+[INFO] 14:42:56:641 memoria/(25161:25161): Memoria iniciada
+[INFO] 14:42:56:642 memoria/(25161:25161): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:42:56:642 memoria/(25161:25161): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:42:56:642 memoria/(25161:25161): watafoc
+[INFO] 14:42:56:642 memoria/(25161:25161): Se creó el frame 0 que apunta a la dirección 0x88f16f0
+[INFO] 14:42:56:642 memoria/(25161:25161): Se creó el frame 1 que apunta a la dirección 0x88f1730
+[INFO] 14:42:56:642 memoria/(25161:25161): Se creó el frame 2 que apunta a la dirección 0x88f1770
+[INFO] 14:42:56:642 memoria/(25161:25161): Se creó el frame 3 que apunta a la dirección 0x88f17b0
+[INFO] 14:42:56:642 memoria/(25161:25161): Se creó el frame 4 que apunta a la dirección 0x88f17f0
+[INFO] 14:42:56:642 memoria/(25161:25161): Se creó el frame 5 que apunta a la dirección 0x88f1830
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 6 que apunta a la dirección 0x88f1870
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 7 que apunta a la dirección 0x88f18b0
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 8 que apunta a la dirección 0x88f18f0
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 9 que apunta a la dirección 0x88f1930
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 10 que apunta a la dirección 0x88f1970
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 11 que apunta a la dirección 0x88f19b0
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 12 que apunta a la dirección 0x88f19f0
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 13 que apunta a la dirección 0x88f1a30
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 14 que apunta a la dirección 0x88f1a70
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 15 que apunta a la dirección 0x88f1ab0
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 16 que apunta a la dirección 0x88f1af0
+[INFO] 14:42:56:643 memoria/(25161:25161): Se creó el frame 17 que apunta a la dirección 0x88f1b30
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 18 que apunta a la dirección 0x88f1b70
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 19 que apunta a la dirección 0x88f1bb0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 20 que apunta a la dirección 0x88f1bf0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 21 que apunta a la dirección 0x88f1c30
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 22 que apunta a la dirección 0x88f1c70
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 23 que apunta a la dirección 0x88f1cb0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 24 que apunta a la dirección 0x88f1cf0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 25 que apunta a la dirección 0x88f1d30
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 26 que apunta a la dirección 0x88f1d70
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 27 que apunta a la dirección 0x88f1db0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 28 que apunta a la dirección 0x88f1df0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 29 que apunta a la dirección 0x88f1e30
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 30 que apunta a la dirección 0x88f1e70
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 31 que apunta a la dirección 0x88f1eb0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 32 que apunta a la dirección 0x88f1ef0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 33 que apunta a la dirección 0x88f1f30
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 34 que apunta a la dirección 0x88f1f70
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 35 que apunta a la dirección 0x88f1fb0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 36 que apunta a la dirección 0x88f1ff0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 37 que apunta a la dirección 0x88f2030
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 38 que apunta a la dirección 0x88f2070
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 39 que apunta a la dirección 0x88f20b0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 40 que apunta a la dirección 0x88f20f0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 41 que apunta a la dirección 0x88f2130
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 42 que apunta a la dirección 0x88f2170
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 43 que apunta a la dirección 0x88f21b0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 44 que apunta a la dirección 0x88f21f0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 45 que apunta a la dirección 0x88f2230
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 46 que apunta a la dirección 0x88f2270
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 47 que apunta a la dirección 0x88f22b0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 48 que apunta a la dirección 0x88f22f0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 49 que apunta a la dirección 0x88f2330
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 50 que apunta a la dirección 0x88f2370
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 51 que apunta a la dirección 0x88f23b0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 52 que apunta a la dirección 0x88f23f0
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 53 que apunta a la dirección 0x88f2430
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 54 que apunta a la dirección 0x88f2470
+[INFO] 14:42:56:644 memoria/(25161:25161): Se creó el frame 55 que apunta a la dirección 0x88f24b0
+[INFO] 14:42:56:645 memoria/(25161:25161): Se creó el frame 56 que apunta a la dirección 0x88f24f0
+[INFO] 14:42:56:645 memoria/(25161:25161): Se creó el frame 57 que apunta a la dirección 0x88f2530
+[INFO] 14:42:56:645 memoria/(25161:25161): Se creó el frame 58 que apunta a la dirección 0x88f2570
+[INFO] 14:42:56:645 memoria/(25161:25161): Se creó el frame 59 que apunta a la dirección 0x88f25b0
+[INFO] 14:42:56:645 memoria/(25161:25161): Se creó el frame 60 que apunta a la dirección 0x88f25f0
+[INFO] 14:42:56:645 memoria/(25161:25161): Se creó el frame 61 que apunta a la dirección 0x88f2630
+[INFO] 14:42:56:645 memoria/(25161:25161): Se creó el frame 62 que apunta a la dirección 0x88f2670
+[INFO] 14:42:56:645 memoria/(25161:25161): Se creó el frame 63 que apunta a la dirección 0x88f26b0
+[INFO] 14:42:56:645 memoria/(25161:25161): Memoria lista para recibir al cliente
+[INFO] 14:42:56:776 memoria/(25161:25161): Cliente conectado (a memoria)
+
+[INFO] 14:42:56:777 memoria/(25161:25171): Se conectó CPU - header 25
+[INFO] 14:42:56:777 memoria/(25161:25171): Conexion con CPU - Se recibió header 4
+[INFO] 14:42:56:778 memoria/(25161:25171): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:42:56:778 memoria/(25161:25171): Socket cliente memoria-cpu creado.
+[INFO] 14:42:56:778 memoria/(25161:25171): Config enviado.
+[INFO] 14:42:56:910 memoria/(25161:25161): Cliente conectado (a memoria)
+
+[INFO] 14:42:56:911 memoria/(25161:25186): Se conectó Kernel - header 24
+[INFO] 14:42:57:040 memoria/(25161:25186): Conexion con Kernel - Se recibio header 12
+[INFO] 14:42:57:040 memoria/(25161:25186): CASE NUEVO PROCESO
+[INFO] 14:42:58:041 memoria/(25161:25186): Nuevo proceso - ID:1
+[INFO] 14:42:58:041 memoria/(25161:25186): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 14:42:58:041 memoria/(25161:25186): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 14:42:58:050 memoria/(25161:25186): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 14:42:58:053 memoria/(25161:25186): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 14:42:58:053 memoria/(25161:25186): Conexion con Kernel - Se recibio header 12
+[INFO] 14:42:58:056 memoria/(25161:25186): CASE NUEVO PROCESO
+[INFO] 14:42:59:056 memoria/(25161:25186): Nuevo proceso - ID:2
+[INFO] 14:42:59:057 memoria/(25161:25186): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 14:42:59:057 memoria/(25161:25186): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 14:42:59:063 memoria/(25161:25186): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 14:42:59:064 memoria/(25161:25186): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 14:42:59:100 memoria/(25161:25186): Conexion con Kernel - Se recibio header 12
+[INFO] 14:42:59:100 memoria/(25161:25186): CASE NUEVO PROCESO
+[INFO] 14:43:00:101 memoria/(25161:25186): Nuevo proceso - ID:3
+[INFO] 14:43:00:101 memoria/(25161:25186): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 14:43:00:102 memoria/(25161:25186): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 14:43:00:109 memoria/(25161:25186): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 14:43:00:109 memoria/(25161:25186): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 14:43:28:544 memoria/(25161:25186): Conexion con Kernel - Se recibio header 14
+[INFO] 14:43:29:549 memoria/(25161:25186): Proceso FINALIZADO - ID:1
+[INFO] 14:43:37:598 memoria/(25161:25186): Conexion con Kernel - Se recibio header 14
+[INFO] 14:43:38:599 memoria/(25161:25186): Proceso FINALIZADO - ID:2
+[INFO] 14:43:38:600 memoria/(25161:25186): Conexion con Kernel - Se recibio header 14
+[INFO] 14:43:39:601 memoria/(25161:25186): Proceso FINALIZADO - ID:3
+[INFO] 14:43:44:449 memoria/(25161:25186): Conexion con Kernel - Se recibio header -73
+[ERROR] 14:43:44:449 memoria/(25161:25186): Kernel acaba de mandarnos cualquier cosa - -73
+[INFO] 14:43:46:302 memoria/(25161:25171): Conexion con CPU - Se recibió header -73
+[ERROR] 14:43:46:302 memoria/(25161:25171): CPU acaba de mandarnos cualquier cosa - -73
+[INFO] 14:44:08:925 memoria/(25378:25378): Memoria iniciada
+[INFO] 14:44:08:925 memoria/(25378:25378): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:44:08:925 memoria/(25378:25378): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:44:08:925 memoria/(25378:25378): watafoc
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 0 que apunta a la dirección 0x851c6f0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 1 que apunta a la dirección 0x851c730
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 2 que apunta a la dirección 0x851c770
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 3 que apunta a la dirección 0x851c7b0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 4 que apunta a la dirección 0x851c7f0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 5 que apunta a la dirección 0x851c830
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 6 que apunta a la dirección 0x851c870
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 7 que apunta a la dirección 0x851c8b0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 8 que apunta a la dirección 0x851c8f0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 9 que apunta a la dirección 0x851c930
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 10 que apunta a la dirección 0x851c970
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 11 que apunta a la dirección 0x851c9b0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 12 que apunta a la dirección 0x851c9f0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 13 que apunta a la dirección 0x851ca30
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 14 que apunta a la dirección 0x851ca70
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 15 que apunta a la dirección 0x851cab0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 16 que apunta a la dirección 0x851caf0
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 17 que apunta a la dirección 0x851cb30
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 18 que apunta a la dirección 0x851cb70
+[INFO] 14:44:08:925 memoria/(25378:25378): Se creó el frame 19 que apunta a la dirección 0x851cbb0
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 20 que apunta a la dirección 0x851cbf0
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 21 que apunta a la dirección 0x851cc30
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 22 que apunta a la dirección 0x851cc70
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 23 que apunta a la dirección 0x851ccb0
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 24 que apunta a la dirección 0x851ccf0
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 25 que apunta a la dirección 0x851cd30
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 26 que apunta a la dirección 0x851cd70
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 27 que apunta a la dirección 0x851cdb0
+[INFO] 14:44:08:926 memoria/(25378:25378): Se creó el frame 28 que apunta a la dirección 0x851cdf0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 29 que apunta a la dirección 0x851ce30
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 30 que apunta a la dirección 0x851ce70
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 31 que apunta a la dirección 0x851ceb0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 32 que apunta a la dirección 0x851cef0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 33 que apunta a la dirección 0x851cf30
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 34 que apunta a la dirección 0x851cf70
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 35 que apunta a la dirección 0x851cfb0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 36 que apunta a la dirección 0x851cff0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 37 que apunta a la dirección 0x851d030
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 38 que apunta a la dirección 0x851d070
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 39 que apunta a la dirección 0x851d0b0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 40 que apunta a la dirección 0x851d0f0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 41 que apunta a la dirección 0x851d130
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 42 que apunta a la dirección 0x851d170
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 43 que apunta a la dirección 0x851d1b0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 44 que apunta a la dirección 0x851d1f0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 45 que apunta a la dirección 0x851d230
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 46 que apunta a la dirección 0x851d270
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 47 que apunta a la dirección 0x851d2b0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 48 que apunta a la dirección 0x851d2f0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 49 que apunta a la dirección 0x851d330
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 50 que apunta a la dirección 0x851d370
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 51 que apunta a la dirección 0x851d3b0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 52 que apunta a la dirección 0x851d3f0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 53 que apunta a la dirección 0x851d430
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 54 que apunta a la dirección 0x851d470
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 55 que apunta a la dirección 0x851d4b0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 56 que apunta a la dirección 0x851d4f0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 57 que apunta a la dirección 0x851d530
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 58 que apunta a la dirección 0x851d570
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 59 que apunta a la dirección 0x851d5b0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 60 que apunta a la dirección 0x851d5f0
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 61 que apunta a la dirección 0x851d630
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 62 que apunta a la dirección 0x851d670
+[INFO] 14:44:08:927 memoria/(25378:25378): Se creó el frame 63 que apunta a la dirección 0x851d6b0
+[INFO] 14:44:08:927 memoria/(25378:25378): Memoria lista para recibir al cliente
+[INFO] 14:44:09:057 memoria/(25378:25378): Cliente conectado (a memoria)
+
+[INFO] 14:44:09:058 memoria/(25378:25388): Se conectó CPU - header 25
+[INFO] 14:44:09:059 memoria/(25378:25388): Conexion con CPU - Se recibió header 4
+[INFO] 14:44:09:059 memoria/(25378:25388): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:44:09:059 memoria/(25378:25388): Socket cliente memoria-cpu creado.
+[INFO] 14:44:09:059 memoria/(25378:25388): Config enviado.
+[INFO] 14:44:09:186 memoria/(25378:25378): Cliente conectado (a memoria)
+
+[INFO] 14:44:09:188 memoria/(25378:25403): Se conectó Kernel - header 24
+[INFO] 14:44:09:318 memoria/(25378:25403): Conexion con Kernel - Se recibio header 12
+[INFO] 14:44:09:318 memoria/(25378:25403): CASE NUEVO PROCESO
+[INFO] 14:44:10:319 memoria/(25378:25403): Nuevo proceso - ID:1
+[INFO] 14:44:10:319 memoria/(25378:25403): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 14:44:10:319 memoria/(25378:25403): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 14:44:10:355 memoria/(25378:25403): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 14:44:10:356 memoria/(25378:25403): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 14:44:10:357 memoria/(25378:25403): Conexion con Kernel - Se recibio header 12
+[INFO] 14:44:10:357 memoria/(25378:25403): CASE NUEVO PROCESO
+[INFO] 14:44:11:358 memoria/(25378:25403): Nuevo proceso - ID:2
+[INFO] 14:44:11:358 memoria/(25378:25403): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 14:44:11:359 memoria/(25378:25403): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 14:44:11:366 memoria/(25378:25403): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 14:44:11:366 memoria/(25378:25403): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 14:44:22:371 memoria/(25378:25403): Conexion con Kernel - Se recibio header 17
+[INFO] 14:44:22:371 memoria/(25378:25403): CASE PROCESO SUSPENDIDO
+[INFO] 14:44:23:371 memoria/(25378:25403): Proceso SUSPENDIDO - ID:1
+[INFO] 14:44:23:372 memoria/(25378:25403): Conexion con Kernel - Se recibio header 12
+[INFO] 14:44:23:374 memoria/(25378:25403): CASE NUEVO PROCESO
+[INFO] 14:44:24:374 memoria/(25378:25403): Nuevo proceso - ID:3
+[INFO] 14:44:24:375 memoria/(25378:25403): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 14:44:24:375 memoria/(25378:25403): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 14:44:24:382 memoria/(25378:25403): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 14:44:24:382 memoria/(25378:25403): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 14:44:26:385 memoria/(25378:25403): Conexion con Kernel - Se recibio header 17
+[INFO] 14:44:26:385 memoria/(25378:25403): CASE PROCESO SUSPENDIDO
+[INFO] 14:44:27:385 memoria/(25378:25403): Proceso SUSPENDIDO - ID:2
+[INFO] 14:44:36:666 memoria/(25378:25403): Conexion con Kernel - Se recibio header 14
+[INFO] 14:44:37:666 memoria/(25378:25403): Proceso FINALIZADO - ID:3
+[INFO] 14:44:40:717 memoria/(25378:25403): Conexion con Kernel - Se recibio header 14
+[INFO] 14:44:41:717 memoria/(25378:25403): Proceso FINALIZADO - ID:1
+[INFO] 14:44:44:759 memoria/(25378:25403): Conexion con Kernel - Se recibio header 14
+[INFO] 14:44:45:761 memoria/(25378:25403): Proceso FINALIZADO - ID:2
+[INFO] 14:45:33:347 memoria/(25618:25618): Memoria iniciada
+[INFO] 14:45:33:356 memoria/(25618:25618): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:45:33:356 memoria/(25618:25618): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:45:33:356 memoria/(25618:25618): watafoc
+[INFO] 14:45:33:356 memoria/(25618:25618): Se creó el frame 0 que apunta a la dirección 0x8fd66f0
+[INFO] 14:45:33:356 memoria/(25618:25618): Se creó el frame 1 que apunta a la dirección 0x8fd6730
+[INFO] 14:45:33:356 memoria/(25618:25618): Se creó el frame 2 que apunta a la dirección 0x8fd6770
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 3 que apunta a la dirección 0x8fd67b0
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 4 que apunta a la dirección 0x8fd67f0
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 5 que apunta a la dirección 0x8fd6830
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 6 que apunta a la dirección 0x8fd6870
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 7 que apunta a la dirección 0x8fd68b0
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 8 que apunta a la dirección 0x8fd68f0
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 9 que apunta a la dirección 0x8fd6930
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 10 que apunta a la dirección 0x8fd6970
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 11 que apunta a la dirección 0x8fd69b0
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 12 que apunta a la dirección 0x8fd69f0
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 13 que apunta a la dirección 0x8fd6a30
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 14 que apunta a la dirección 0x8fd6a70
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 15 que apunta a la dirección 0x8fd6ab0
+[INFO] 14:45:33:357 memoria/(25618:25618): Se creó el frame 16 que apunta a la dirección 0x8fd6af0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 17 que apunta a la dirección 0x8fd6b30
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 18 que apunta a la dirección 0x8fd6b70
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 19 que apunta a la dirección 0x8fd6bb0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 20 que apunta a la dirección 0x8fd6bf0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 21 que apunta a la dirección 0x8fd6c30
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 22 que apunta a la dirección 0x8fd6c70
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 23 que apunta a la dirección 0x8fd6cb0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 24 que apunta a la dirección 0x8fd6cf0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 25 que apunta a la dirección 0x8fd6d30
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 26 que apunta a la dirección 0x8fd6d70
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 27 que apunta a la dirección 0x8fd6db0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 28 que apunta a la dirección 0x8fd6df0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 29 que apunta a la dirección 0x8fd6e30
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 30 que apunta a la dirección 0x8fd6e70
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 31 que apunta a la dirección 0x8fd6eb0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 32 que apunta a la dirección 0x8fd6ef0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 33 que apunta a la dirección 0x8fd6f30
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 34 que apunta a la dirección 0x8fd6f70
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 35 que apunta a la dirección 0x8fd6fb0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 36 que apunta a la dirección 0x8fd6ff0
+[INFO] 14:45:33:358 memoria/(25618:25618): Se creó el frame 37 que apunta a la dirección 0x8fd7030
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 38 que apunta a la dirección 0x8fd7070
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 39 que apunta a la dirección 0x8fd70b0
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 40 que apunta a la dirección 0x8fd70f0
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 41 que apunta a la dirección 0x8fd7130
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 42 que apunta a la dirección 0x8fd7170
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 43 que apunta a la dirección 0x8fd71b0
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 44 que apunta a la dirección 0x8fd71f0
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 45 que apunta a la dirección 0x8fd7230
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 46 que apunta a la dirección 0x8fd7270
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 47 que apunta a la dirección 0x8fd72b0
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 48 que apunta a la dirección 0x8fd72f0
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 49 que apunta a la dirección 0x8fd7330
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 50 que apunta a la dirección 0x8fd7370
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 51 que apunta a la dirección 0x8fd73b0
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 52 que apunta a la dirección 0x8fd73f0
+[INFO] 14:45:33:359 memoria/(25618:25618): Se creó el frame 53 que apunta a la dirección 0x8fd7430
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 54 que apunta a la dirección 0x8fd7470
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 55 que apunta a la dirección 0x8fd74b0
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 56 que apunta a la dirección 0x8fd74f0
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 57 que apunta a la dirección 0x8fd7530
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 58 que apunta a la dirección 0x8fd7570
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 59 que apunta a la dirección 0x8fd75b0
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 60 que apunta a la dirección 0x8fd75f0
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 61 que apunta a la dirección 0x8fd7630
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 62 que apunta a la dirección 0x8fd7670
+[INFO] 14:45:33:360 memoria/(25618:25618): Se creó el frame 63 que apunta a la dirección 0x8fd76b0
+[ERROR] 14:45:33:360 memoria/(25618:25618): Error: Address already in use
+[INFO] 14:45:33:360 memoria/(25618:25618): Memoria lista para recibir al cliente
+[INFO] 14:45:33:489 memoria/(25378:25378): Cliente conectado (a memoria)
+
+[INFO] 14:45:33:491 memoria/(25378:25628): Se conectó CPU - header 25
+[INFO] 14:45:33:491 memoria/(25378:25628): Conexion con CPU - Se recibió header 4
+[INFO] 14:45:33:491 memoria/(25378:25628): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:45:33:491 memoria/(25378:25628): Socket cliente memoria-cpu creado.
+[INFO] 14:45:33:492 memoria/(25378:25628): Config enviado.
+[INFO] 14:45:33:618 memoria/(25378:25378): Cliente conectado (a memoria)
+
+[INFO] 14:45:33:618 memoria/(25378:25643): Se conectó Kernel - header 24
+[INFO] 14:45:33:756 memoria/(25378:25403): Conexion con Kernel - Se recibio header 12
+[INFO] 14:45:33:756 memoria/(25378:25403): CASE NUEVO PROCESO
+[INFO] 14:45:34:756 memoria/(25378:25403): Nuevo proceso - ID:4
+[INFO] 14:45:34:757 memoria/(25378:25403): Se agregó una entrada a la tabla de segundo nivel 3 del proceso ID:4
+[INFO] 14:45:34:757 memoria/(25378:25403): Se agregó una entrada a la tabla de primer nivel del proceso 4
+[INFO] 14:45:34:793 memoria/(25378:25403): Se creó el archivo /home/utnso/swap/4.swap para el proceso ID:4
+[INFO] 14:45:34:794 memoria/(25378:25403): Se devolvió PCB del proceso 4 con tabla de páginas 4
+[INFO] 14:45:34:794 memoria/(25378:25403): Conexion con Kernel - Se recibio header 12
+[INFO] 14:45:34:794 memoria/(25378:25403): CASE NUEVO PROCESO
+[INFO] 14:45:35:794 memoria/(25378:25403): Nuevo proceso - ID:5
+[INFO] 14:45:35:794 memoria/(25378:25403): Se agregó una entrada a la tabla de segundo nivel 4 del proceso ID:5
+[INFO] 14:45:35:794 memoria/(25378:25403): Se agregó una entrada a la tabla de primer nivel del proceso 5
+[INFO] 14:45:35:800 memoria/(25378:25403): Se creó el archivo /home/utnso/swap/5.swap para el proceso ID:5
+[INFO] 14:45:35:800 memoria/(25378:25403): Se devolvió PCB del proceso 5 con tabla de páginas 5
+[INFO] 14:45:38:735 memoria/(25378:25643): Conexion con Kernel - Se recibio header -74
+[ERROR] 14:45:38:736 memoria/(25378:25643): Kernel acaba de mandarnos cualquier cosa - -74
+[INFO] 14:45:43:942 memoria/(25378:25628): Conexion con CPU - Se recibió header -74
+[ERROR] 14:45:43:942 memoria/(25378:25628): CPU acaba de mandarnos cualquier cosa - -74
+[INFO] 14:45:46:040 memoria/(25378:25403): Conexion con Kernel - Se recibio header 17
+[INFO] 14:45:46:040 memoria/(25378:25403): CASE PROCESO SUSPENDIDO
+[INFO] 14:45:47:040 memoria/(25378:25403): Proceso SUSPENDIDO - ID:4
+[INFO] 14:45:47:041 memoria/(25378:25403): Conexion con Kernel - Se recibio header 12
+[INFO] 14:45:47:041 memoria/(25378:25403): CASE NUEVO PROCESO
+[INFO] 14:45:48:041 memoria/(25378:25403): Nuevo proceso - ID:6
+[INFO] 14:45:48:041 memoria/(25378:25403): Se agregó una entrada a la tabla de segundo nivel 5 del proceso ID:6
+[INFO] 14:45:48:042 memoria/(25378:25403): Se agregó una entrada a la tabla de primer nivel del proceso 6
+[INFO] 14:45:48:048 memoria/(25378:25403): Se creó el archivo /home/utnso/swap/6.swap para el proceso ID:6
+[INFO] 14:45:48:049 memoria/(25378:25403): Se devolvió PCB del proceso 6 con tabla de páginas 6
+[INFO] 14:45:50:073 memoria/(25378:25403): Conexion con Kernel - Se recibio header 17
+[INFO] 14:45:50:074 memoria/(25378:25403): CASE PROCESO SUSPENDIDO
+[INFO] 14:45:51:074 memoria/(25378:25403): Proceso SUSPENDIDO - ID:5
+[INFO] 14:45:59:314 memoria/(25378:25403): Conexion con Kernel - Se recibio header 14
+[INFO] 14:46:00:315 memoria/(25378:25403): Proceso FINALIZADO - ID:6
+[INFO] 14:46:03:260 memoria/(25378:25403): Conexion con Kernel - Se recibio header 14
+[INFO] 14:46:04:261 memoria/(25378:25403): Proceso FINALIZADO - ID:4
+[INFO] 14:46:07:240 memoria/(25378:25403): Conexion con Kernel - Se recibio header 14
+[INFO] 14:46:08:241 memoria/(25378:25403): Proceso FINALIZADO - ID:5
+[INFO] 14:47:01:662 memoria/(25866:25866): Memoria iniciada
+[INFO] 14:47:01:662 memoria/(25866:25866): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:47:01:662 memoria/(25866:25866): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:47:01:662 memoria/(25866:25866): watafoc
+[INFO] 14:47:01:662 memoria/(25866:25866): Se creó el frame 0 que apunta a la dirección 0x8dc16f0
+[INFO] 14:47:01:662 memoria/(25866:25866): Se creó el frame 1 que apunta a la dirección 0x8dc1730
+[INFO] 14:47:01:662 memoria/(25866:25866): Se creó el frame 2 que apunta a la dirección 0x8dc1770
+[INFO] 14:47:01:662 memoria/(25866:25866): Se creó el frame 3 que apunta a la dirección 0x8dc17b0
+[INFO] 14:47:01:662 memoria/(25866:25866): Se creó el frame 4 que apunta a la dirección 0x8dc17f0
+[INFO] 14:47:01:662 memoria/(25866:25866): Se creó el frame 5 que apunta a la dirección 0x8dc1830
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 6 que apunta a la dirección 0x8dc1870
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 7 que apunta a la dirección 0x8dc18b0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 8 que apunta a la dirección 0x8dc18f0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 9 que apunta a la dirección 0x8dc1930
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 10 que apunta a la dirección 0x8dc1970
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 11 que apunta a la dirección 0x8dc19b0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 12 que apunta a la dirección 0x8dc19f0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 13 que apunta a la dirección 0x8dc1a30
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 14 que apunta a la dirección 0x8dc1a70
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 15 que apunta a la dirección 0x8dc1ab0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 16 que apunta a la dirección 0x8dc1af0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 17 que apunta a la dirección 0x8dc1b30
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 18 que apunta a la dirección 0x8dc1b70
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 19 que apunta a la dirección 0x8dc1bb0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 20 que apunta a la dirección 0x8dc1bf0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 21 que apunta a la dirección 0x8dc1c30
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 22 que apunta a la dirección 0x8dc1c70
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 23 que apunta a la dirección 0x8dc1cb0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 24 que apunta a la dirección 0x8dc1cf0
+[INFO] 14:47:01:663 memoria/(25866:25866): Se creó el frame 25 que apunta a la dirección 0x8dc1d30
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 26 que apunta a la dirección 0x8dc1d70
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 27 que apunta a la dirección 0x8dc1db0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 28 que apunta a la dirección 0x8dc1df0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 29 que apunta a la dirección 0x8dc1e30
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 30 que apunta a la dirección 0x8dc1e70
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 31 que apunta a la dirección 0x8dc1eb0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 32 que apunta a la dirección 0x8dc1ef0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 33 que apunta a la dirección 0x8dc1f30
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 34 que apunta a la dirección 0x8dc1f70
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 35 que apunta a la dirección 0x8dc1fb0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 36 que apunta a la dirección 0x8dc1ff0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 37 que apunta a la dirección 0x8dc2030
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 38 que apunta a la dirección 0x8dc2070
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 39 que apunta a la dirección 0x8dc20b0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 40 que apunta a la dirección 0x8dc20f0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 41 que apunta a la dirección 0x8dc2130
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 42 que apunta a la dirección 0x8dc2170
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 43 que apunta a la dirección 0x8dc21b0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 44 que apunta a la dirección 0x8dc21f0
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 45 que apunta a la dirección 0x8dc2230
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 46 que apunta a la dirección 0x8dc2270
+[INFO] 14:47:01:664 memoria/(25866:25866): Se creó el frame 47 que apunta a la dirección 0x8dc22b0
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 48 que apunta a la dirección 0x8dc22f0
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 49 que apunta a la dirección 0x8dc2330
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 50 que apunta a la dirección 0x8dc2370
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 51 que apunta a la dirección 0x8dc23b0
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 52 que apunta a la dirección 0x8dc23f0
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 53 que apunta a la dirección 0x8dc2430
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 54 que apunta a la dirección 0x8dc2470
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 55 que apunta a la dirección 0x8dc24b0
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 56 que apunta a la dirección 0x8dc24f0
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 57 que apunta a la dirección 0x8dc2530
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 58 que apunta a la dirección 0x8dc2570
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 59 que apunta a la dirección 0x8dc25b0
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 60 que apunta a la dirección 0x8dc25f0
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 61 que apunta a la dirección 0x8dc2630
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 62 que apunta a la dirección 0x8dc2670
+[INFO] 14:47:01:665 memoria/(25866:25866): Se creó el frame 63 que apunta a la dirección 0x8dc26b0
+[INFO] 14:47:01:665 memoria/(25866:25866): Memoria lista para recibir al cliente
+[INFO] 14:47:01:788 memoria/(25866:25866): Cliente conectado (a memoria)
+
+[INFO] 14:47:01:789 memoria/(25866:25876): Se conectó CPU - header 25
+[INFO] 14:47:01:789 memoria/(25866:25876): Conexion con CPU - Se recibió header 4
+[INFO] 14:47:01:789 memoria/(25866:25876): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:47:01:789 memoria/(25866:25876): Socket cliente memoria-cpu creado.
+[INFO] 14:47:01:790 memoria/(25866:25876): Config enviado.
+[INFO] 14:47:01:915 memoria/(25866:25866): Cliente conectado (a memoria)
+
+[INFO] 14:47:01:917 memoria/(25866:25891): Se conectó Kernel - header 24
+[INFO] 14:47:02:048 memoria/(25866:25891): Conexion con Kernel - Se recibio header 12
+[INFO] 14:47:02:048 memoria/(25866:25891): CASE NUEVO PROCESO
+[INFO] 14:47:03:049 memoria/(25866:25891): Nuevo proceso - ID:1
+[INFO] 14:47:03:049 memoria/(25866:25891): Se agregó una entrada a la tabla de segundo nivel 0 del proceso ID:1
+[INFO] 14:47:03:049 memoria/(25866:25891): Se agregó una entrada a la tabla de primer nivel del proceso 1
+[INFO] 14:47:03:058 memoria/(25866:25891): Se creó el archivo /home/utnso/swap/1.swap para el proceso ID:1
+[INFO] 14:47:03:065 memoria/(25866:25891): Se devolvió PCB del proceso 1 con tabla de páginas 1
+[INFO] 14:47:03:065 memoria/(25866:25891): Conexion con Kernel - Se recibio header 12
+[INFO] 14:47:03:065 memoria/(25866:25891): CASE NUEVO PROCESO
+[INFO] 14:47:04:065 memoria/(25866:25891): Nuevo proceso - ID:2
+[INFO] 14:47:04:065 memoria/(25866:25891): Se agregó una entrada a la tabla de segundo nivel 1 del proceso ID:2
+[INFO] 14:47:04:066 memoria/(25866:25891): Se agregó una entrada a la tabla de primer nivel del proceso 2
+[INFO] 14:47:04:070 memoria/(25866:25891): Se creó el archivo /home/utnso/swap/2.swap para el proceso ID:2
+[INFO] 14:47:04:071 memoria/(25866:25891): Se devolvió PCB del proceso 2 con tabla de páginas 2
+[INFO] 14:47:19:123 memoria/(25866:25891): Conexion con Kernel - Se recibio header 17
+[INFO] 14:47:19:123 memoria/(25866:25891): CASE PROCESO SUSPENDIDO
+[INFO] 14:47:20:124 memoria/(25866:25891): Proceso SUSPENDIDO - ID:1
+[INFO] 14:47:20:124 memoria/(25866:25891): Conexion con Kernel - Se recibio header 12
+[INFO] 14:47:20:126 memoria/(25866:25891): CASE NUEVO PROCESO
+[INFO] 14:47:21:126 memoria/(25866:25891): Nuevo proceso - ID:3
+[INFO] 14:47:21:127 memoria/(25866:25891): Se agregó una entrada a la tabla de segundo nivel 2 del proceso ID:3
+[INFO] 14:47:21:127 memoria/(25866:25891): Se agregó una entrada a la tabla de primer nivel del proceso 3
+[INFO] 14:47:21:135 memoria/(25866:25891): Se creó el archivo /home/utnso/swap/3.swap para el proceso ID:3
+[INFO] 14:47:21:136 memoria/(25866:25891): Se devolvió PCB del proceso 3 con tabla de páginas 3
+[INFO] 14:47:28:173 memoria/(25866:25891): Conexion con Kernel - Se recibio header 17
+[INFO] 14:47:28:174 memoria/(25866:25891): CASE PROCESO SUSPENDIDO
+[INFO] 14:47:29:180 memoria/(25866:25891): Proceso SUSPENDIDO - ID:2
+[INFO] 14:47:32:289 memoria/(25866:25891): Conexion con Kernel - Se recibio header 14
+[INFO] 14:47:33:289 memoria/(25866:25891): Proceso FINALIZADO - ID:1
+[INFO] 14:47:36:307 memoria/(25866:25891): Conexion con Kernel - Se recibio header 14
+[INFO] 14:47:37:308 memoria/(25866:25891): Proceso FINALIZADO - ID:2
+[INFO] 14:47:49:371 memoria/(25866:25891): Conexion con Kernel - Se recibio header 14
+[INFO] 14:47:50:372 memoria/(25866:25891): Proceso FINALIZADO - ID:3
+[INFO] 14:48:01:370 memoria/(26036:26036): Memoria iniciada
+[INFO] 14:48:01:371 memoria/(26036:26036): Se inicializaron las tablas de páginas EXITOSAMENTE :smirk:
+[INFO] 14:48:01:371 memoria/(26036:26036): Se inicializó puntero a memoria EXITOSAMENTE :smirk:
+[INFO] 14:48:01:371 memoria/(26036:26036): watafoc
+[INFO] 14:48:01:371 memoria/(26036:26036): Se creó el frame 0 que apunta a la dirección 0x90166f0
+[INFO] 14:48:01:371 memoria/(26036:26036): Se creó el frame 1 que apunta a la dirección 0x9016730
+[INFO] 14:48:01:371 memoria/(26036:26036): Se creó el frame 2 que apunta a la dirección 0x9016770
+[INFO] 14:48:01:371 memoria/(26036:26036): Se creó el frame 3 que apunta a la dirección 0x90167b0
+[INFO] 14:48:01:371 memoria/(26036:26036): Se creó el frame 4 que apunta a la dirección 0x90167f0
+[INFO] 14:48:01:371 memoria/(26036:26036): Se creó el frame 5 que apunta a la dirección 0x9016830
+[INFO] 14:48:01:371 memoria/(26036:26036): Se creó el frame 6 que apunta a la dirección 0x9016870
+[INFO] 14:48:01:371 memoria/(26036:26036): Se creó el frame 7 que apunta a la dirección 0x90168b0
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 8 que apunta a la dirección 0x90168f0
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 9 que apunta a la dirección 0x9016930
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 10 que apunta a la dirección 0x9016970
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 11 que apunta a la dirección 0x90169b0
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 12 que apunta a la dirección 0x90169f0
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 13 que apunta a la dirección 0x9016a30
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 14 que apunta a la dirección 0x9016a70
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 15 que apunta a la dirección 0x9016ab0
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 16 que apunta a la dirección 0x9016af0
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 17 que apunta a la dirección 0x9016b30
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 18 que apunta a la dirección 0x9016b70
+[INFO] 14:48:01:372 memoria/(26036:26036): Se creó el frame 19 que apunta a la dirección 0x9016bb0
+[INFO] 14:48:01:373 memoria/(26036:26036): Se creó el frame 20 que apunta a la dirección 0x9016bf0
+[INFO] 14:48:01:373 memoria/(26036:26036): Se creó el frame 21 que apunta a la dirección 0x9016c30
+[INFO] 14:48:01:373 memoria/(26036:26036): Se creó el frame 22 que apunta a la dirección 0x9016c70
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 23 que apunta a la dirección 0x9016cb0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 24 que apunta a la dirección 0x9016cf0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 25 que apunta a la dirección 0x9016d30
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 26 que apunta a la dirección 0x9016d70
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 27 que apunta a la dirección 0x9016db0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 28 que apunta a la dirección 0x9016df0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 29 que apunta a la dirección 0x9016e30
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 30 que apunta a la dirección 0x9016e70
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 31 que apunta a la dirección 0x9016eb0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 32 que apunta a la dirección 0x9016ef0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 33 que apunta a la dirección 0x9016f30
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 34 que apunta a la dirección 0x9016f70
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 35 que apunta a la dirección 0x9016fb0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 36 que apunta a la dirección 0x9016ff0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 37 que apunta a la dirección 0x9017030
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 38 que apunta a la dirección 0x9017070
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 39 que apunta a la dirección 0x90170b0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 40 que apunta a la dirección 0x90170f0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 41 que apunta a la dirección 0x9017130
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 42 que apunta a la dirección 0x9017170
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 43 que apunta a la dirección 0x90171b0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 44 que apunta a la dirección 0x90171f0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 45 que apunta a la dirección 0x9017230
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 46 que apunta a la dirección 0x9017270
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 47 que apunta a la dirección 0x90172b0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 48 que apunta a la dirección 0x90172f0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 49 que apunta a la dirección 0x9017330
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 50 que apunta a la dirección 0x9017370
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 51 que apunta a la dirección 0x90173b0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 52 que apunta a la dirección 0x90173f0
+[INFO] 14:48:01:374 memoria/(26036:26036): Se creó el frame 53 que apunta a la dirección 0x9017430
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 54 que apunta a la dirección 0x9017470
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 55 que apunta a la dirección 0x90174b0
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 56 que apunta a la dirección 0x90174f0
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 57 que apunta a la dirección 0x9017530
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 58 que apunta a la dirección 0x9017570
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 59 que apunta a la dirección 0x90175b0
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 60 que apunta a la dirección 0x90175f0
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 61 que apunta a la dirección 0x9017630
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 62 que apunta a la dirección 0x9017670
+[INFO] 14:48:01:375 memoria/(26036:26036): Se creó el frame 63 que apunta a la dirección 0x90176b0
+[ERROR] 14:48:01:375 memoria/(26036:26036): Error: Address already in use
+[INFO] 14:48:01:375 memoria/(26036:26036): Memoria lista para recibir al cliente
+[INFO] 14:48:01:496 memoria/(25866:25866): Cliente conectado (a memoria)
+
+[INFO] 14:48:01:499 memoria/(25866:26046): Se conectó CPU - header 25
+[INFO] 14:48:01:500 memoria/(25866:26046): Conexion con CPU - Se recibió header 4
+[INFO] 14:48:01:500 memoria/(25866:26046): Se recibió header 4 - Enviando config a CPU
+[INFO] 14:48:01:500 memoria/(25866:26046): Socket cliente memoria-cpu creado.
+[INFO] 14:48:01:500 memoria/(25866:26046): Config enviado.
+[INFO] 14:48:01:630 memoria/(25866:25866): Cliente conectado (a memoria)
+
+[INFO] 14:48:01:631 memoria/(25866:26061): Se conectó Kernel - header 24
+[INFO] 14:48:01:761 memoria/(25866:25891): Conexion con Kernel - Se recibio header 12
+[INFO] 14:48:01:761 memoria/(25866:25891): CASE NUEVO PROCESO
+[INFO] 14:48:02:762 memoria/(25866:25891): Nuevo proceso - ID:4
+[INFO] 14:48:02:762 memoria/(25866:25891): Se agregó una entrada a la tabla de segundo nivel 3 del proceso ID:4
+[INFO] 14:48:02:763 memoria/(25866:25891): Se agregó una entrada a la tabla de primer nivel del proceso 4
+[INFO] 14:48:02:770 memoria/(25866:25891): Se creó el archivo /home/utnso/swap/4.swap para el proceso ID:4
+[INFO] 14:48:02:771 memoria/(25866:25891): Se devolvió PCB del proceso 4 con tabla de páginas 4
+[INFO] 14:48:02:771 memoria/(25866:25891): Conexion con Kernel - Se recibio header 12
+[INFO] 14:48:02:771 memoria/(25866:25891): CASE NUEVO PROCESO
+[INFO] 14:48:03:772 memoria/(25866:25891): Nuevo proceso - ID:5
+[INFO] 14:48:03:772 memoria/(25866:25891): Se agregó una entrada a la tabla de segundo nivel 4 del proceso ID:5
+[INFO] 14:48:03:772 memoria/(25866:25891): Se agregó una entrada a la tabla de primer nivel del proceso 5
+[INFO] 14:48:03:777 memoria/(25866:25891): Se creó el archivo /home/utnso/swap/5.swap para el proceso ID:5
+[INFO] 14:48:03:777 memoria/(25866:25891): Se devolvió PCB del proceso 5 con tabla de páginas 5
+[INFO] 14:48:05:353 memoria/(25866:26061): Conexion con Kernel - Se recibio header -74
+[ERROR] 14:48:05:353 memoria/(25866:26061): Kernel acaba de mandarnos cualquier cosa - -74
+[INFO] 14:48:18:184 memoria/(25866:25891): Conexion con Kernel - Se recibio header 17
+[INFO] 14:48:18:184 memoria/(25866:25891): CASE PROCESO SUSPENDIDO
+[INFO] 14:48:19:085 memoria/(25866:26046): Conexion con CPU - Se recibió header -74
+[ERROR] 14:48:19:085 memoria/(25866:26046): CPU acaba de mandarnos cualquier cosa - -74
+[INFO] 14:48:19:185 memoria/(25866:25891): Proceso SUSPENDIDO - ID:4
+[INFO] 14:48:19:185 memoria/(25866:25891): Conexion con Kernel - Se recibio header 12
+[INFO] 14:48:19:186 memoria/(25866:25891): CASE NUEVO PROCESO
+[INFO] 14:48:20:187 memoria/(25866:25891): Nuevo proceso - ID:6
+[INFO] 14:48:20:187 memoria/(25866:25891): Se agregó una entrada a la tabla de segundo nivel 5 del proceso ID:6
+[INFO] 14:48:20:187 memoria/(25866:25891): Se agregó una entrada a la tabla de primer nivel del proceso 6
+[INFO] 14:48:20:194 memoria/(25866:25891): Se creó el archivo /home/utnso/swap/6.swap para el proceso ID:6
+[INFO] 14:48:20:194 memoria/(25866:25891): Se devolvió PCB del proceso 6 con tabla de páginas 6
+[INFO] 14:48:26:225 memoria/(25866:25891): Conexion con Kernel - Se recibio header 17
+[INFO] 14:48:26:225 memoria/(25866:25891): CASE PROCESO SUSPENDIDO
+[INFO] 14:48:27:225 memoria/(25866:25891): Proceso SUSPENDIDO - ID:5
+[INFO] 14:48:30:249 memoria/(25866:25891): Conexion con Kernel - Se recibio header 14
+[INFO] 14:48:31:250 memoria/(25866:25891): Proceso FINALIZADO - ID:4
+[INFO] 14:48:34:261 memoria/(25866:25891): Conexion con Kernel - Se recibio header 14
+[INFO] 14:48:35:262 memoria/(25866:25891): Proceso FINALIZADO - ID:5
+[INFO] 14:48:47:474 memoria/(25866:25891): Conexion con Kernel - Se recibio header 14
+[INFO] 14:48:48:475 memoria/(25866:25891): Proceso FINALIZADO - ID:6

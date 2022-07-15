@@ -574,3 +574,539 @@
 [INFO] 01:03:46:206 Consola/(22015:22015): Modulo consola finalizado
 [INFO] 01:03:46:257 Consola/(22024:22024): Respuesta recibida: 14
 [INFO] 01:03:46:257 Consola/(22024:22024): Modulo consola finalizado
+[INFO] 12:30:00:326 Consola/(8374:8374): Consola iniciada
+[INFO] 12:30:00:327 Consola/(8374:8374): Se agregó el operador NO_OP
+[INFO] 12:30:00:327 Consola/(8374:8374): Se agregó el parametro 3
+[INFO] 12:30:00:327 Consola/(8374:8374): Se agregó el operador I/O
+[INFO] 12:30:00:327 Consola/(8374:8374): Se agregó el parametro 5000
+[INFO] 12:30:00:327 Consola/(8374:8374): Se agregó el operador NO_OP
+[INFO] 12:30:00:327 Consola/(8374:8374): Se agregó el parametro 3
+[INFO] 12:30:00:327 Consola/(8374:8374): Se agregó el operador EXIT
+[INFO] 12:30:00:465 Consola/(8383:8383): Consola iniciada
+[INFO] 12:30:00:465 Consola/(8383:8383): Se agregó el operador NO_OP
+[INFO] 12:30:00:465 Consola/(8383:8383): Se agregó el parametro 3
+[INFO] 12:30:00:465 Consola/(8383:8383): Se agregó el operador I/O
+[INFO] 12:30:00:465 Consola/(8383:8383): Se agregó el parametro 5000
+[INFO] 12:30:00:465 Consola/(8383:8383): Se agregó el operador NO_OP
+[INFO] 12:30:00:465 Consola/(8383:8383): Se agregó el parametro 3
+[INFO] 12:30:00:466 Consola/(8383:8383): Se agregó el operador EXIT
+[INFO] 12:30:00:603 Consola/(8391:8391): Consola iniciada
+[INFO] 12:30:00:606 Consola/(8391:8391): Se agregó el operador NO_OP
+[INFO] 12:30:00:606 Consola/(8391:8391): Se agregó el parametro 10
+[INFO] 12:30:00:606 Consola/(8391:8391): Se agregó el operador EXIT
+[INFO] 12:30:41:121 Consola/(8600:8600): Consola iniciada
+[INFO] 12:30:41:122 Consola/(8600:8600): Se agregó el operador NO_OP
+[INFO] 12:30:41:122 Consola/(8600:8600): Se agregó el parametro 3
+[INFO] 12:30:41:122 Consola/(8600:8600): Se agregó el operador I/O
+[INFO] 12:30:41:122 Consola/(8600:8600): Se agregó el parametro 5000
+[INFO] 12:30:41:122 Consola/(8600:8600): Se agregó el operador NO_OP
+[INFO] 12:30:41:122 Consola/(8600:8600): Se agregó el parametro 3
+[INFO] 12:30:41:122 Consola/(8600:8600): Se agregó el operador EXIT
+[INFO] 12:30:41:378 Consola/(8616:8616): Consola iniciada
+[INFO] 12:30:41:378 Consola/(8616:8616): Se agregó el operador NO_OP
+[INFO] 12:30:41:378 Consola/(8616:8616): Se agregó el parametro 3
+[INFO] 12:30:41:378 Consola/(8616:8616): Se agregó el operador I/O
+[INFO] 12:30:41:378 Consola/(8616:8616): Se agregó el parametro 5000
+[INFO] 12:30:41:378 Consola/(8616:8616): Se agregó el operador NO_OP
+[INFO] 12:30:41:378 Consola/(8616:8616): Se agregó el parametro 3
+[INFO] 12:30:41:378 Consola/(8616:8616): Se agregó el operador EXIT
+[INFO] 12:30:41:605 Consola/(8631:8631): Consola iniciada
+[INFO] 12:30:41:606 Consola/(8631:8631): Se agregó el operador NO_OP
+[INFO] 12:30:41:606 Consola/(8631:8631): Se agregó el parametro 10
+[INFO] 12:30:41:606 Consola/(8631:8631): Se agregó el operador EXIT
+[INFO] 12:36:30:556 Consola/(9447:9447): Consola iniciada
+[INFO] 12:36:30:557 Consola/(9447:9447): Se agregó el operador NO_OP
+[INFO] 12:36:30:557 Consola/(9447:9447): Se agregó el parametro 3
+[INFO] 12:36:30:557 Consola/(9447:9447): Se agregó el operador I/O
+[INFO] 12:36:30:557 Consola/(9447:9447): Se agregó el parametro 5000
+[INFO] 12:36:30:557 Consola/(9447:9447): Se agregó el operador NO_OP
+[INFO] 12:36:30:557 Consola/(9447:9447): Se agregó el parametro 3
+[INFO] 12:36:30:557 Consola/(9447:9447): Se agregó el operador EXIT
+[INFO] 12:36:30:697 Consola/(9456:9456): Consola iniciada
+[INFO] 12:36:30:697 Consola/(9456:9456): Se agregó el operador NO_OP
+[INFO] 12:36:30:698 Consola/(9456:9456): Se agregó el parametro 3
+[INFO] 12:36:30:698 Consola/(9456:9456): Se agregó el operador I/O
+[INFO] 12:36:30:698 Consola/(9456:9456): Se agregó el parametro 5000
+[INFO] 12:36:30:698 Consola/(9456:9456): Se agregó el operador NO_OP
+[INFO] 12:36:30:698 Consola/(9456:9456): Se agregó el parametro 3
+[INFO] 12:36:30:698 Consola/(9456:9456): Se agregó el operador EXIT
+[INFO] 12:36:30:933 Consola/(9475:9475): Consola iniciada
+[INFO] 12:36:30:934 Consola/(9475:9475): Se agregó el operador NO_OP
+[INFO] 12:36:30:934 Consola/(9475:9475): Se agregó el parametro 10
+[INFO] 12:36:30:934 Consola/(9475:9475): Se agregó el operador EXIT
+[INFO] 12:38:28:439 Consola/(9850:9850): Consola iniciada
+[INFO] 12:38:28:443 Consola/(9850:9850): Se agregó el operador NO_OP
+[INFO] 12:38:28:443 Consola/(9850:9850): Se agregó el parametro 3
+[INFO] 12:38:28:443 Consola/(9850:9850): Se agregó el operador I/O
+[INFO] 12:38:28:443 Consola/(9850:9850): Se agregó el parametro 5000
+[INFO] 12:38:28:443 Consola/(9850:9850): Se agregó el operador NO_OP
+[INFO] 12:38:28:443 Consola/(9850:9850): Se agregó el parametro 3
+[INFO] 12:38:28:443 Consola/(9850:9850): Se agregó el operador EXIT
+[INFO] 12:38:28:443 Consola/(9850:9850): Se envió el cod operacion 12
+[INFO] 12:38:28:443 Consola/(9850:9850): Lista de instrucciones enviada.
+[INFO] 12:38:28:567 Consola/(9861:9861): Consola iniciada
+[INFO] 12:38:28:568 Consola/(9861:9861): Se agregó el operador NO_OP
+[INFO] 12:38:28:568 Consola/(9861:9861): Se agregó el parametro 3
+[INFO] 12:38:28:568 Consola/(9861:9861): Se agregó el operador I/O
+[INFO] 12:38:28:568 Consola/(9861:9861): Se agregó el parametro 5000
+[INFO] 12:38:28:573 Consola/(9861:9861): Se agregó el operador NO_OP
+[INFO] 12:38:28:573 Consola/(9861:9861): Se agregó el parametro 3
+[INFO] 12:38:28:573 Consola/(9861:9861): Se agregó el operador EXIT
+[INFO] 12:38:28:573 Consola/(9861:9861): Se envió el cod operacion 12
+[INFO] 12:38:28:573 Consola/(9861:9861): Lista de instrucciones enviada.
+[INFO] 12:38:28:690 Consola/(9875:9875): Consola iniciada
+[INFO] 12:38:28:700 Consola/(9875:9875): Se agregó el operador NO_OP
+[INFO] 12:38:28:700 Consola/(9875:9875): Se agregó el parametro 10
+[INFO] 12:38:28:700 Consola/(9875:9875): Se agregó el operador EXIT
+[INFO] 12:38:28:700 Consola/(9875:9875): Se envió el cod operacion 12
+[INFO] 12:38:28:700 Consola/(9875:9875): Lista de instrucciones enviada.
+[INFO] 12:38:59:889 Consola/(9850:9850): Respuesta recibida: 14
+[INFO] 12:38:59:889 Consola/(9850:9850): Modulo consola finalizado
+[INFO] 12:39:08:948 Consola/(9861:9861): Respuesta recibida: 14
+[INFO] 12:39:08:948 Consola/(9861:9861): Modulo consola finalizado
+[INFO] 12:39:09:000 Consola/(9875:9875): Respuesta recibida: 14
+[INFO] 12:39:09:000 Consola/(9875:9875): Modulo consola finalizado
+[INFO] 12:40:52:194 Consola/(10274:10274): Consola iniciada
+[INFO] 12:40:52:195 Consola/(10274:10274): Se agregó el operador NO_OP
+[INFO] 12:40:52:195 Consola/(10274:10274): Se agregó el parametro 3
+[INFO] 12:40:52:195 Consola/(10274:10274): Se agregó el operador I/O
+[INFO] 12:40:52:195 Consola/(10274:10274): Se agregó el parametro 13000
+[INFO] 12:40:52:195 Consola/(10274:10274): Se agregó el operador NO_OP
+[INFO] 12:40:52:195 Consola/(10274:10274): Se agregó el parametro 3
+[INFO] 12:40:52:195 Consola/(10274:10274): Se agregó el operador EXIT
+[INFO] 12:40:52:196 Consola/(10274:10274): Se envió el cod operacion 12
+[INFO] 12:40:52:196 Consola/(10274:10274): Lista de instrucciones enviada.
+[INFO] 12:40:52:318 Consola/(10284:10284): Consola iniciada
+[INFO] 12:40:52:326 Consola/(10284:10284): Se agregó el operador NO_OP
+[INFO] 12:40:52:327 Consola/(10284:10284): Se agregó el parametro 3
+[INFO] 12:40:52:327 Consola/(10284:10284): Se agregó el operador I/O
+[INFO] 12:40:52:327 Consola/(10284:10284): Se agregó el parametro 5000
+[INFO] 12:40:52:327 Consola/(10284:10284): Se agregó el operador NO_OP
+[INFO] 12:40:52:327 Consola/(10284:10284): Se agregó el parametro 3
+[INFO] 12:40:52:327 Consola/(10284:10284): Se agregó el operador EXIT
+[INFO] 12:40:52:327 Consola/(10284:10284): Se envió el cod operacion 12
+[INFO] 12:40:52:327 Consola/(10284:10284): Lista de instrucciones enviada.
+[INFO] 12:40:52:448 Consola/(10294:10294): Consola iniciada
+[INFO] 12:40:52:449 Consola/(10294:10294): Se agregó el operador NO_OP
+[INFO] 12:40:52:449 Consola/(10294:10294): Se agregó el parametro 10
+[INFO] 12:40:52:449 Consola/(10294:10294): Se agregó el operador EXIT
+[INFO] 12:40:52:449 Consola/(10294:10294): Se envió el cod operacion 12
+[INFO] 12:40:52:449 Consola/(10294:10294): Lista de instrucciones enviada.
+[INFO] 12:41:19:493 Consola/(10294:10294): Respuesta recibida: 14
+[INFO] 12:41:19:493 Consola/(10294:10294): Modulo consola finalizado
+[INFO] 12:41:23:559 Consola/(10274:10274): Respuesta recibida: 14
+[INFO] 12:41:23:559 Consola/(10274:10274): Modulo consola finalizado
+[INFO] 12:41:27:633 Consola/(10284:10284): Respuesta recibida: 14
+[INFO] 12:41:27:633 Consola/(10284:10284): Modulo consola finalizado
+[INFO] 12:42:52:445 Consola/(10669:10669): Consola iniciada
+[INFO] 12:42:52:447 Consola/(10669:10669): Se agregó el operador NO_OP
+[INFO] 12:42:52:447 Consola/(10669:10669): Se agregó el parametro 3
+[INFO] 12:42:52:447 Consola/(10669:10669): Se agregó el operador I/O
+[INFO] 12:42:52:447 Consola/(10669:10669): Se agregó el parametro 13000
+[INFO] 12:42:52:447 Consola/(10669:10669): Se agregó el operador NO_OP
+[INFO] 12:42:52:447 Consola/(10669:10669): Se agregó el parametro 3
+[INFO] 12:42:52:447 Consola/(10669:10669): Se agregó el operador EXIT
+[INFO] 12:42:52:447 Consola/(10669:10669): Se envió el cod operacion 12
+[INFO] 12:42:52:447 Consola/(10669:10669): Lista de instrucciones enviada.
+[INFO] 12:42:52:577 Consola/(10679:10679): Consola iniciada
+[INFO] 12:42:52:578 Consola/(10679:10679): Se agregó el operador NO_OP
+[INFO] 12:42:52:578 Consola/(10679:10679): Se agregó el parametro 3
+[INFO] 12:42:52:578 Consola/(10679:10679): Se agregó el operador I/O
+[INFO] 12:42:52:578 Consola/(10679:10679): Se agregó el parametro 5000
+[INFO] 12:42:52:578 Consola/(10679:10679): Se agregó el operador NO_OP
+[INFO] 12:42:52:578 Consola/(10679:10679): Se agregó el parametro 3
+[INFO] 12:42:52:578 Consola/(10679:10679): Se agregó el operador EXIT
+[INFO] 12:42:52:578 Consola/(10679:10679): Se envió el cod operacion 12
+[INFO] 12:42:52:578 Consola/(10679:10679): Lista de instrucciones enviada.
+[INFO] 12:42:52:711 Consola/(10693:10693): Consola iniciada
+[INFO] 12:42:52:716 Consola/(10693:10693): Se agregó el operador NO_OP
+[INFO] 12:42:52:717 Consola/(10693:10693): Se agregó el parametro 10
+[INFO] 12:42:52:717 Consola/(10693:10693): Se agregó el operador EXIT
+[INFO] 12:42:52:717 Consola/(10693:10693): Se envió el cod operacion 12
+[INFO] 12:42:52:717 Consola/(10693:10693): Lista de instrucciones enviada.
+[INFO] 12:43:22:583 Consola/(10669:10669): Respuesta recibida: 14
+[INFO] 12:43:22:583 Consola/(10669:10669): Modulo consola finalizado
+[INFO] 12:43:35:950 Consola/(10693:10693): Respuesta recibida: 14
+[INFO] 12:43:35:950 Consola/(10693:10693): Modulo consola finalizado
+[INFO] 12:43:39:964 Consola/(10679:10679): Respuesta recibida: 14
+[INFO] 12:43:39:964 Consola/(10679:10679): Modulo consola finalizado
+[INFO] 13:07:06:525 Consola/(13599:13599): Consola iniciada
+[INFO] 13:07:06:527 Consola/(13599:13599): Se agregó el operador NO_OP
+[INFO] 13:07:06:527 Consola/(13599:13599): Se agregó el parametro 3
+[INFO] 13:07:06:527 Consola/(13599:13599): Se agregó el operador I/O
+[INFO] 13:07:06:527 Consola/(13599:13599): Se agregó el parametro 13000
+[INFO] 13:07:06:527 Consola/(13599:13599): Se agregó el operador NO_OP
+[INFO] 13:07:06:527 Consola/(13599:13599): Se agregó el parametro 3
+[INFO] 13:07:06:527 Consola/(13599:13599): Se agregó el operador EXIT
+[INFO] 13:07:06:527 Consola/(13599:13599): Se envió el cod operacion 12
+[INFO] 13:07:06:528 Consola/(13599:13599): Lista de instrucciones enviada.
+[INFO] 13:07:06:647 Consola/(13609:13609): Consola iniciada
+[INFO] 13:07:06:657 Consola/(13609:13609): Se agregó el operador NO_OP
+[INFO] 13:07:06:657 Consola/(13609:13609): Se agregó el parametro 3
+[INFO] 13:07:06:657 Consola/(13609:13609): Se agregó el operador I/O
+[INFO] 13:07:06:657 Consola/(13609:13609): Se agregó el parametro 5000
+[INFO] 13:07:06:657 Consola/(13609:13609): Se agregó el operador NO_OP
+[INFO] 13:07:06:657 Consola/(13609:13609): Se agregó el parametro 3
+[INFO] 13:07:06:657 Consola/(13609:13609): Se agregó el operador EXIT
+[INFO] 13:07:06:657 Consola/(13609:13609): Se envió el cod operacion 12
+[INFO] 13:07:06:658 Consola/(13609:13609): Lista de instrucciones enviada.
+[INFO] 13:07:06:787 Consola/(13619:13619): Consola iniciada
+[INFO] 13:07:06:788 Consola/(13619:13619): Se agregó el operador NO_OP
+[INFO] 13:07:06:788 Consola/(13619:13619): Se agregó el parametro 10
+[INFO] 13:07:06:788 Consola/(13619:13619): Se agregó el operador EXIT
+[INFO] 13:07:06:788 Consola/(13619:13619): Se envió el cod operacion 12
+[INFO] 13:07:06:788 Consola/(13619:13619): Lista de instrucciones enviada.
+[INFO] 13:07:42:136 Consola/(13599:13599): Respuesta recibida: 14
+[INFO] 13:07:42:136 Consola/(13599:13599): Modulo consola finalizado
+[INFO] 13:07:42:216 Consola/(13619:13619): Respuesta recibida: 14
+[INFO] 13:07:42:216 Consola/(13619:13619): Modulo consola finalizado
+[INFO] 13:07:46:284 Consola/(13609:13609): Respuesta recibida: 14
+[INFO] 13:07:46:284 Consola/(13609:13609): Modulo consola finalizado
+[INFO] 14:30:23:484 Consola/(23132:23132): Consola iniciada
+[INFO] 14:30:23:485 Consola/(23132:23132): Se agregó el operador NO_OP
+[INFO] 14:30:23:485 Consola/(23132:23132): Se agregó el parametro 3
+[INFO] 14:30:23:485 Consola/(23132:23132): Se agregó el operador I/O
+[INFO] 14:30:23:485 Consola/(23132:23132): Se agregó el parametro 13000
+[INFO] 14:30:23:486 Consola/(23132:23132): Se agregó el operador NO_OP
+[INFO] 14:30:23:486 Consola/(23132:23132): Se agregó el parametro 3
+[INFO] 14:30:23:486 Consola/(23132:23132): Se agregó el operador EXIT
+[INFO] 14:30:23:486 Consola/(23132:23132): Se envió el cod operacion 12
+[INFO] 14:30:23:486 Consola/(23132:23132): Lista de instrucciones enviada.
+[INFO] 14:30:23:612 Consola/(23142:23142): Consola iniciada
+[INFO] 14:30:23:618 Consola/(23142:23142): Se agregó el operador NO_OP
+[INFO] 14:30:23:618 Consola/(23142:23142): Se agregó el parametro 3
+[INFO] 14:30:23:618 Consola/(23142:23142): Se agregó el operador I/O
+[INFO] 14:30:23:619 Consola/(23142:23142): Se agregó el parametro 5000
+[INFO] 14:30:23:619 Consola/(23142:23142): Se agregó el operador NO_OP
+[INFO] 14:30:23:619 Consola/(23142:23142): Se agregó el parametro 3
+[INFO] 14:30:23:619 Consola/(23142:23142): Se agregó el operador EXIT
+[INFO] 14:30:23:619 Consola/(23142:23142): Se envió el cod operacion 12
+[INFO] 14:30:23:619 Consola/(23142:23142): Lista de instrucciones enviada.
+[INFO] 14:30:23:742 Consola/(23152:23152): Consola iniciada
+[INFO] 14:30:23:744 Consola/(23152:23152): Se agregó el operador NO_OP
+[INFO] 14:30:23:744 Consola/(23152:23152): Se agregó el parametro 10
+[INFO] 14:30:23:744 Consola/(23152:23152): Se agregó el operador EXIT
+[INFO] 14:30:23:744 Consola/(23152:23152): Se envió el cod operacion 12
+[INFO] 14:30:23:744 Consola/(23152:23152): Lista de instrucciones enviada.
+[INFO] 14:30:58:940 Consola/(23132:23132): Respuesta recibida: 14
+[INFO] 14:30:58:940 Consola/(23132:23132): Modulo consola finalizado
+[INFO] 14:31:02:984 Consola/(23142:23142): Respuesta recibida: 14
+[INFO] 14:31:02:984 Consola/(23142:23142): Modulo consola finalizado
+[INFO] 14:31:03:064 Consola/(23152:23152): Respuesta recibida: 14
+[INFO] 14:31:03:064 Consola/(23152:23152): Modulo consola finalizado
+[INFO] 14:31:28:570 Consola/(23378:23378): Consola iniciada
+[INFO] 14:31:28:570 Consola/(23378:23378): Se agregó el operador NO_OP
+[INFO] 14:31:28:571 Consola/(23378:23378): Se agregó el parametro 3
+[INFO] 14:31:28:571 Consola/(23378:23378): Se agregó el operador I/O
+[INFO] 14:31:28:571 Consola/(23378:23378): Se agregó el parametro 13000
+[INFO] 14:31:28:571 Consola/(23378:23378): Se agregó el operador NO_OP
+[INFO] 14:31:28:571 Consola/(23378:23378): Se agregó el parametro 3
+[INFO] 14:31:28:571 Consola/(23378:23378): Se agregó el operador EXIT
+[INFO] 14:31:28:571 Consola/(23378:23378): Se envió el cod operacion 12
+[INFO] 14:31:28:571 Consola/(23378:23378): Lista de instrucciones enviada.
+[INFO] 14:31:28:699 Consola/(23388:23388): Consola iniciada
+[INFO] 14:31:28:702 Consola/(23388:23388): Se agregó el operador NO_OP
+[INFO] 14:31:28:702 Consola/(23388:23388): Se agregó el parametro 3
+[INFO] 14:31:28:702 Consola/(23388:23388): Se agregó el operador I/O
+[INFO] 14:31:28:702 Consola/(23388:23388): Se agregó el parametro 5000
+[INFO] 14:31:28:702 Consola/(23388:23388): Se agregó el operador NO_OP
+[INFO] 14:31:28:702 Consola/(23388:23388): Se agregó el parametro 3
+[INFO] 14:31:28:702 Consola/(23388:23388): Se agregó el operador EXIT
+[INFO] 14:31:28:703 Consola/(23388:23388): Se envió el cod operacion 12
+[INFO] 14:31:28:703 Consola/(23388:23388): Lista de instrucciones enviada.
+[INFO] 14:31:28:827 Consola/(23398:23398): Consola iniciada
+[INFO] 14:31:28:827 Consola/(23398:23398): Se agregó el operador NO_OP
+[INFO] 14:31:28:827 Consola/(23398:23398): Se agregó el parametro 10
+[INFO] 14:31:28:827 Consola/(23398:23398): Se agregó el operador EXIT
+[INFO] 14:31:28:828 Consola/(23398:23398): Se envió el cod operacion 12
+[INFO] 14:31:28:828 Consola/(23398:23398): Lista de instrucciones enviada.
+[INFO] 14:32:02:531 Consola/(23378:23378): Respuesta recibida: 14
+[INFO] 14:32:02:531 Consola/(23378:23378): Modulo consola finalizado
+[INFO] 14:32:02:608 Consola/(23398:23398): Respuesta recibida: 14
+[INFO] 14:32:02:608 Consola/(23398:23398): Modulo consola finalizado
+[INFO] 14:32:06:713 Consola/(23388:23388): Respuesta recibida: 14
+[INFO] 14:32:06:713 Consola/(23388:23388): Modulo consola finalizado
+[INFO] 14:32:33:749 Consola/(23616:23616): Consola iniciada
+[INFO] 14:32:33:750 Consola/(23616:23616): Se agregó el operador NO_OP
+[INFO] 14:32:33:750 Consola/(23616:23616): Se agregó el parametro 3
+[INFO] 14:32:33:750 Consola/(23616:23616): Se agregó el operador I/O
+[INFO] 14:32:33:750 Consola/(23616:23616): Se agregó el parametro 13000
+[INFO] 14:32:33:750 Consola/(23616:23616): Se agregó el operador NO_OP
+[INFO] 14:32:33:750 Consola/(23616:23616): Se agregó el parametro 3
+[INFO] 14:32:33:750 Consola/(23616:23616): Se agregó el operador EXIT
+[INFO] 14:32:33:750 Consola/(23616:23616): Se envió el cod operacion 12
+[INFO] 14:32:33:750 Consola/(23616:23616): Lista de instrucciones enviada.
+[INFO] 14:32:33:877 Consola/(23625:23625): Consola iniciada
+[INFO] 14:32:33:877 Consola/(23625:23625): Se agregó el operador NO_OP
+[INFO] 14:32:33:877 Consola/(23625:23625): Se agregó el parametro 3
+[INFO] 14:32:33:878 Consola/(23625:23625): Se agregó el operador I/O
+[INFO] 14:32:33:878 Consola/(23625:23625): Se agregó el parametro 5000
+[INFO] 14:32:33:878 Consola/(23625:23625): Se agregó el operador NO_OP
+[INFO] 14:32:33:878 Consola/(23625:23625): Se agregó el parametro 3
+[INFO] 14:32:33:878 Consola/(23625:23625): Se agregó el operador EXIT
+[INFO] 14:32:33:878 Consola/(23625:23625): Se envió el cod operacion 12
+[INFO] 14:32:33:878 Consola/(23625:23625): Lista de instrucciones enviada.
+[INFO] 14:32:34:009 Consola/(23634:23634): Consola iniciada
+[INFO] 14:32:34:009 Consola/(23634:23634): Se agregó el operador NO_OP
+[INFO] 14:32:34:009 Consola/(23634:23634): Se agregó el parametro 10
+[INFO] 14:32:34:009 Consola/(23634:23634): Se agregó el operador EXIT
+[INFO] 14:32:34:009 Consola/(23634:23634): Se envió el cod operacion 12
+[INFO] 14:32:34:010 Consola/(23634:23634): Lista de instrucciones enviada.
+[INFO] 14:33:02:177 Consola/(23616:23616): Respuesta recibida: 14
+[INFO] 14:33:02:178 Consola/(23616:23616): Modulo consola finalizado
+[INFO] 14:33:06:205 Consola/(23625:23625): Respuesta recibida: 14
+[INFO] 14:33:06:205 Consola/(23625:23625): Modulo consola finalizado
+[INFO] 14:33:19:540 Consola/(23634:23634): Respuesta recibida: 14
+[INFO] 14:33:19:541 Consola/(23634:23634): Modulo consola finalizado
+[INFO] 14:35:50:094 Consola/(24098:24098): Consola iniciada
+[INFO] 14:35:50:095 Consola/(24098:24098): Se agregó el operador NO_OP
+[INFO] 14:35:50:095 Consola/(24098:24098): Se agregó el parametro 3
+[INFO] 14:35:50:095 Consola/(24098:24098): Se agregó el operador I/O
+[INFO] 14:35:50:095 Consola/(24098:24098): Se agregó el parametro 13000
+[INFO] 14:35:50:095 Consola/(24098:24098): Se agregó el operador NO_OP
+[INFO] 14:35:50:095 Consola/(24098:24098): Se agregó el parametro 3
+[INFO] 14:35:50:095 Consola/(24098:24098): Se agregó el operador EXIT
+[INFO] 14:35:50:095 Consola/(24098:24098): Se envió el cod operacion 12
+[INFO] 14:35:50:095 Consola/(24098:24098): Lista de instrucciones enviada.
+[INFO] 14:35:50:224 Consola/(24107:24107): Consola iniciada
+[INFO] 14:35:50:224 Consola/(24107:24107): Se agregó el operador NO_OP
+[INFO] 14:35:50:224 Consola/(24107:24107): Se agregó el parametro 3
+[INFO] 14:35:50:225 Consola/(24107:24107): Se agregó el operador I/O
+[INFO] 14:35:50:225 Consola/(24107:24107): Se agregó el parametro 5000
+[INFO] 14:35:50:225 Consola/(24107:24107): Se agregó el operador NO_OP
+[INFO] 14:35:50:225 Consola/(24107:24107): Se agregó el parametro 3
+[INFO] 14:35:50:225 Consola/(24107:24107): Se agregó el operador EXIT
+[INFO] 14:35:50:225 Consola/(24107:24107): Se envió el cod operacion 12
+[INFO] 14:35:50:225 Consola/(24107:24107): Lista de instrucciones enviada.
+[INFO] 14:35:50:346 Consola/(24116:24116): Consola iniciada
+[INFO] 14:35:50:347 Consola/(24116:24116): Se agregó el operador NO_OP
+[INFO] 14:35:50:347 Consola/(24116:24116): Se agregó el parametro 10
+[INFO] 14:35:50:347 Consola/(24116:24116): Se agregó el operador EXIT
+[INFO] 14:35:50:347 Consola/(24116:24116): Se envió el cod operacion 12
+[INFO] 14:35:50:347 Consola/(24116:24116): Lista de instrucciones enviada.
+[INFO] 14:36:20:167 Consola/(24098:24098): Respuesta recibida: 14
+[INFO] 14:36:20:167 Consola/(24098:24098): Modulo consola finalizado
+[INFO] 14:36:24:146 Consola/(24107:24107): Respuesta recibida: 14
+[INFO] 14:36:24:146 Consola/(24107:24107): Modulo consola finalizado
+[INFO] 14:36:37:470 Consola/(24116:24116): Respuesta recibida: 14
+[INFO] 14:36:37:470 Consola/(24116:24116): Modulo consola finalizado
+[INFO] 14:40:23:194 Consola/(24709:24709): Consola iniciada
+[INFO] 14:40:23:197 Consola/(24709:24709): Se agregó el operador NO_OP
+[INFO] 14:40:23:197 Consola/(24709:24709): Se agregó el parametro 5
+[INFO] 14:40:23:197 Consola/(24709:24709): Se agregó el operador I/O
+[INFO] 14:40:23:197 Consola/(24709:24709): Se agregó el parametro 3000
+[INFO] 14:40:23:197 Consola/(24709:24709): Se agregó el operador NO_OP
+[INFO] 14:40:23:197 Consola/(24709:24709): Se agregó el parametro 3
+[INFO] 14:40:23:198 Consola/(24709:24709): Se agregó el operador EXIT
+[INFO] 14:40:23:198 Consola/(24709:24709): Se envió el cod operacion 12
+[INFO] 14:40:23:198 Consola/(24709:24709): Lista de instrucciones enviada.
+[INFO] 14:40:23:341 Consola/(24718:24718): Consola iniciada
+[INFO] 14:40:23:342 Consola/(24718:24718): Se agregó el operador NO_OP
+[INFO] 14:40:23:342 Consola/(24718:24718): Se agregó el parametro 5
+[INFO] 14:40:23:342 Consola/(24718:24718): Se agregó el operador EXIT
+[INFO] 14:40:23:342 Consola/(24718:24718): Se envió el cod operacion 12
+[INFO] 14:40:23:342 Consola/(24718:24718): Lista de instrucciones enviada.
+[INFO] 14:40:23:479 Consola/(24727:24727): Consola iniciada
+[INFO] 14:40:23:480 Consola/(24727:24727): Se agregó el operador NO_OP
+[INFO] 14:40:23:480 Consola/(24727:24727): Se agregó el parametro 5
+[INFO] 14:40:23:480 Consola/(24727:24727): Se agregó el operador EXIT
+[INFO] 14:40:23:480 Consola/(24727:24727): Se envió el cod operacion 12
+[INFO] 14:40:23:480 Consola/(24727:24727): Lista de instrucciones enviada.
+[INFO] 14:40:37:628 Consola/(24718:24718): Respuesta recibida: 14
+[INFO] 14:40:37:628 Consola/(24718:24718): Modulo consola finalizado
+[INFO] 14:40:44:234 Consola/(24727:24727): Respuesta recibida: 14
+[INFO] 14:40:44:234 Consola/(24727:24727): Modulo consola finalizado
+[INFO] 14:40:48:239 Consola/(24709:24709): Respuesta recibida: 14
+[INFO] 14:40:48:239 Consola/(24709:24709): Modulo consola finalizado
+[INFO] 14:41:49:485 Consola/(24945:24945): Consola iniciada
+[INFO] 14:41:49:497 Consola/(24945:24945): Se agregó el operador NO_OP
+[INFO] 14:41:49:498 Consola/(24945:24945): Se agregó el parametro 3
+[INFO] 14:41:49:498 Consola/(24945:24945): Se agregó el operador I/O
+[INFO] 14:41:49:498 Consola/(24945:24945): Se agregó el parametro 5000
+[INFO] 14:41:49:498 Consola/(24945:24945): Se agregó el operador NO_OP
+[INFO] 14:41:49:498 Consola/(24945:24945): Se agregó el parametro 3
+[INFO] 14:41:49:498 Consola/(24945:24945): Se agregó el operador EXIT
+[INFO] 14:41:49:498 Consola/(24945:24945): Se envió el cod operacion 12
+[INFO] 14:41:49:498 Consola/(24945:24945): Lista de instrucciones enviada.
+[INFO] 14:41:49:625 Consola/(24954:24954): Consola iniciada
+[INFO] 14:41:49:626 Consola/(24954:24954): Se agregó el operador NO_OP
+[INFO] 14:41:49:626 Consola/(24954:24954): Se agregó el parametro 3
+[INFO] 14:41:49:626 Consola/(24954:24954): Se agregó el operador I/O
+[INFO] 14:41:49:626 Consola/(24954:24954): Se agregó el parametro 5000
+[INFO] 14:41:49:626 Consola/(24954:24954): Se agregó el operador NO_OP
+[INFO] 14:41:49:626 Consola/(24954:24954): Se agregó el parametro 3
+[INFO] 14:41:49:626 Consola/(24954:24954): Se agregó el operador EXIT
+[INFO] 14:41:49:626 Consola/(24954:24954): Se envió el cod operacion 12
+[INFO] 14:41:49:626 Consola/(24954:24954): Lista de instrucciones enviada.
+[INFO] 14:41:49:738 Consola/(24963:24963): Consola iniciada
+[INFO] 14:41:49:748 Consola/(24963:24963): Se agregó el operador NO_OP
+[INFO] 14:41:49:748 Consola/(24963:24963): Se agregó el parametro 10
+[INFO] 14:41:49:748 Consola/(24963:24963): Se agregó el operador EXIT
+[INFO] 14:41:49:748 Consola/(24963:24963): Se envió el cod operacion 12
+[INFO] 14:41:49:748 Consola/(24963:24963): Lista de instrucciones enviada.
+[INFO] 14:42:11:893 Consola/(24963:24963): Respuesta recibida: 14
+[INFO] 14:42:11:893 Consola/(24963:24963): Modulo consola finalizado
+[INFO] 14:42:15:957 Consola/(24945:24945): Respuesta recibida: 14
+[INFO] 14:42:15:957 Consola/(24945:24945): Modulo consola finalizado
+[INFO] 14:42:19:977 Consola/(24954:24954): Respuesta recibida: 14
+[INFO] 14:42:19:977 Consola/(24954:24954): Modulo consola finalizado
+[INFO] 14:42:57:031 Consola/(25196:25196): Consola iniciada
+[INFO] 14:42:57:039 Consola/(25196:25196): Se agregó el operador NO_OP
+[INFO] 14:42:57:039 Consola/(25196:25196): Se agregó el parametro 3
+[INFO] 14:42:57:039 Consola/(25196:25196): Se agregó el operador I/O
+[INFO] 14:42:57:039 Consola/(25196:25196): Se agregó el parametro 5000
+[INFO] 14:42:57:039 Consola/(25196:25196): Se agregó el operador NO_OP
+[INFO] 14:42:57:039 Consola/(25196:25196): Se agregó el parametro 3
+[INFO] 14:42:57:039 Consola/(25196:25196): Se agregó el operador EXIT
+[INFO] 14:42:57:040 Consola/(25196:25196): Se envió el cod operacion 12
+[INFO] 14:42:57:040 Consola/(25196:25196): Lista de instrucciones enviada.
+[INFO] 14:42:57:164 Consola/(25205:25205): Consola iniciada
+[INFO] 14:42:57:165 Consola/(25205:25205): Se agregó el operador NO_OP
+[INFO] 14:42:57:165 Consola/(25205:25205): Se agregó el parametro 3
+[INFO] 14:42:57:165 Consola/(25205:25205): Se agregó el operador I/O
+[INFO] 14:42:57:165 Consola/(25205:25205): Se agregó el parametro 5000
+[INFO] 14:42:57:165 Consola/(25205:25205): Se agregó el operador NO_OP
+[INFO] 14:42:57:165 Consola/(25205:25205): Se agregó el parametro 3
+[INFO] 14:42:57:165 Consola/(25205:25205): Se agregó el operador EXIT
+[INFO] 14:42:57:165 Consola/(25205:25205): Se envió el cod operacion 12
+[INFO] 14:42:57:165 Consola/(25205:25205): Lista de instrucciones enviada.
+[INFO] 14:42:57:287 Consola/(25214:25214): Consola iniciada
+[INFO] 14:42:57:288 Consola/(25214:25214): Se agregó el operador NO_OP
+[INFO] 14:42:57:288 Consola/(25214:25214): Se agregó el parametro 10
+[INFO] 14:42:57:288 Consola/(25214:25214): Se agregó el operador EXIT
+[INFO] 14:42:57:288 Consola/(25214:25214): Se envió el cod operacion 12
+[INFO] 14:42:57:289 Consola/(25214:25214): Lista de instrucciones enviada.
+[INFO] 14:43:28:544 Consola/(25196:25196): Respuesta recibida: 14
+[INFO] 14:43:28:544 Consola/(25196:25196): Modulo consola finalizado
+[INFO] 14:43:37:598 Consola/(25205:25205): Respuesta recibida: 14
+[INFO] 14:43:37:598 Consola/(25205:25205): Modulo consola finalizado
+[INFO] 14:43:37:648 Consola/(25214:25214): Respuesta recibida: 14
+[INFO] 14:43:37:648 Consola/(25214:25214): Modulo consola finalizado
+[INFO] 14:44:09:314 Consola/(25413:25413): Consola iniciada
+[INFO] 14:44:09:316 Consola/(25413:25413): Se agregó el operador NO_OP
+[INFO] 14:44:09:317 Consola/(25413:25413): Se agregó el parametro 3
+[INFO] 14:44:09:317 Consola/(25413:25413): Se agregó el operador I/O
+[INFO] 14:44:09:317 Consola/(25413:25413): Se agregó el parametro 13000
+[INFO] 14:44:09:317 Consola/(25413:25413): Se agregó el operador NO_OP
+[INFO] 14:44:09:317 Consola/(25413:25413): Se agregó el parametro 3
+[INFO] 14:44:09:317 Consola/(25413:25413): Se agregó el operador EXIT
+[INFO] 14:44:09:317 Consola/(25413:25413): Se envió el cod operacion 12
+[INFO] 14:44:09:317 Consola/(25413:25413): Lista de instrucciones enviada.
+[INFO] 14:44:09:436 Consola/(25422:25422): Consola iniciada
+[INFO] 14:44:09:444 Consola/(25422:25422): Se agregó el operador NO_OP
+[INFO] 14:44:09:444 Consola/(25422:25422): Se agregó el parametro 3
+[INFO] 14:44:09:444 Consola/(25422:25422): Se agregó el operador I/O
+[INFO] 14:44:09:444 Consola/(25422:25422): Se agregó el parametro 5000
+[INFO] 14:44:09:444 Consola/(25422:25422): Se agregó el operador NO_OP
+[INFO] 14:44:09:444 Consola/(25422:25422): Se agregó el parametro 3
+[INFO] 14:44:09:445 Consola/(25422:25422): Se agregó el operador EXIT
+[INFO] 14:44:09:445 Consola/(25422:25422): Se envió el cod operacion 12
+[INFO] 14:44:09:445 Consola/(25422:25422): Lista de instrucciones enviada.
+[INFO] 14:44:09:571 Consola/(25436:25436): Consola iniciada
+[INFO] 14:44:09:572 Consola/(25436:25436): Se agregó el operador NO_OP
+[INFO] 14:44:09:572 Consola/(25436:25436): Se agregó el parametro 10
+[INFO] 14:44:09:572 Consola/(25436:25436): Se agregó el operador EXIT
+[INFO] 14:44:09:572 Consola/(25436:25436): Se envió el cod operacion 12
+[INFO] 14:44:09:572 Consola/(25436:25436): Lista de instrucciones enviada.
+[INFO] 14:44:36:666 Consola/(25436:25436): Respuesta recibida: 14
+[INFO] 14:44:36:666 Consola/(25436:25436): Modulo consola finalizado
+[INFO] 14:44:40:717 Consola/(25413:25413): Respuesta recibida: 14
+[INFO] 14:44:40:717 Consola/(25413:25413): Modulo consola finalizado
+[INFO] 14:44:44:759 Consola/(25422:25422): Respuesta recibida: 14
+[INFO] 14:44:44:760 Consola/(25422:25422): Modulo consola finalizado
+[INFO] 14:45:33:753 Consola/(25657:25657): Consola iniciada
+[INFO] 14:45:33:754 Consola/(25657:25657): Se agregó el operador NO_OP
+[INFO] 14:45:33:754 Consola/(25657:25657): Se agregó el parametro 3
+[INFO] 14:45:33:754 Consola/(25657:25657): Se agregó el operador I/O
+[INFO] 14:45:33:754 Consola/(25657:25657): Se agregó el parametro 13000
+[INFO] 14:45:33:754 Consola/(25657:25657): Se agregó el operador NO_OP
+[INFO] 14:45:33:754 Consola/(25657:25657): Se agregó el parametro 3
+[INFO] 14:45:33:754 Consola/(25657:25657): Se agregó el operador EXIT
+[INFO] 14:45:33:754 Consola/(25657:25657): Se envió el cod operacion 12
+[INFO] 14:45:33:755 Consola/(25657:25657): Lista de instrucciones enviada.
+[INFO] 14:45:33:878 Consola/(25666:25666): Consola iniciada
+[INFO] 14:45:33:885 Consola/(25666:25666): Se agregó el operador NO_OP
+[INFO] 14:45:33:885 Consola/(25666:25666): Se agregó el parametro 3
+[INFO] 14:45:33:885 Consola/(25666:25666): Se agregó el operador I/O
+[INFO] 14:45:33:885 Consola/(25666:25666): Se agregó el parametro 5000
+[INFO] 14:45:33:885 Consola/(25666:25666): Se agregó el operador NO_OP
+[INFO] 14:45:33:886 Consola/(25666:25666): Se agregó el parametro 3
+[INFO] 14:45:33:886 Consola/(25666:25666): Se agregó el operador EXIT
+[INFO] 14:45:33:886 Consola/(25666:25666): Se envió el cod operacion 12
+[INFO] 14:45:33:886 Consola/(25666:25666): Lista de instrucciones enviada.
+[INFO] 14:45:34:006 Consola/(25675:25675): Consola iniciada
+[INFO] 14:45:34:012 Consola/(25675:25675): Se agregó el operador NO_OP
+[INFO] 14:45:34:013 Consola/(25675:25675): Se agregó el parametro 10
+[INFO] 14:45:34:013 Consola/(25675:25675): Se agregó el operador EXIT
+[INFO] 14:45:34:013 Consola/(25675:25675): Se envió el cod operacion 12
+[INFO] 14:45:34:013 Consola/(25675:25675): Lista de instrucciones enviada.
+[INFO] 14:45:59:314 Consola/(25675:25675): Respuesta recibida: 14
+[INFO] 14:45:59:314 Consola/(25675:25675): Modulo consola finalizado
+[INFO] 14:46:03:260 Consola/(25657:25657): Respuesta recibida: 14
+[INFO] 14:46:03:260 Consola/(25657:25657): Modulo consola finalizado
+[INFO] 14:46:07:240 Consola/(25666:25666): Respuesta recibida: 14
+[INFO] 14:46:07:241 Consola/(25666:25666): Modulo consola finalizado
+[INFO] 14:47:02:045 Consola/(25901:25901): Consola iniciada
+[INFO] 14:47:02:046 Consola/(25901:25901): Se agregó el operador NO_OP
+[INFO] 14:47:02:046 Consola/(25901:25901): Se agregó el parametro 3
+[INFO] 14:47:02:046 Consola/(25901:25901): Se agregó el operador I/O
+[INFO] 14:47:02:046 Consola/(25901:25901): Se agregó el parametro 13000
+[INFO] 14:47:02:046 Consola/(25901:25901): Se agregó el operador NO_OP
+[INFO] 14:47:02:046 Consola/(25901:25901): Se agregó el parametro 3
+[INFO] 14:47:02:046 Consola/(25901:25901): Se agregó el operador EXIT
+[INFO] 14:47:02:047 Consola/(25901:25901): Se envió el cod operacion 12
+[INFO] 14:47:02:047 Consola/(25901:25901): Lista de instrucciones enviada.
+[INFO] 14:47:02:174 Consola/(25910:25910): Consola iniciada
+[INFO] 14:47:02:175 Consola/(25910:25910): Se agregó el operador NO_OP
+[INFO] 14:47:02:175 Consola/(25910:25910): Se agregó el parametro 3
+[INFO] 14:47:02:175 Consola/(25910:25910): Se agregó el operador I/O
+[INFO] 14:47:02:175 Consola/(25910:25910): Se agregó el parametro 5000
+[INFO] 14:47:02:175 Consola/(25910:25910): Se agregó el operador NO_OP
+[INFO] 14:47:02:175 Consola/(25910:25910): Se agregó el parametro 3
+[INFO] 14:47:02:175 Consola/(25910:25910): Se agregó el operador EXIT
+[INFO] 14:47:02:175 Consola/(25910:25910): Se envió el cod operacion 12
+[INFO] 14:47:02:176 Consola/(25910:25910): Lista de instrucciones enviada.
+[INFO] 14:47:02:308 Consola/(25923:25923): Consola iniciada
+[INFO] 14:47:02:309 Consola/(25923:25923): Se agregó el operador NO_OP
+[INFO] 14:47:02:309 Consola/(25923:25923): Se agregó el parametro 10
+[INFO] 14:47:02:309 Consola/(25923:25923): Se agregó el operador EXIT
+[INFO] 14:47:02:309 Consola/(25923:25923): Se envió el cod operacion 12
+[INFO] 14:47:02:309 Consola/(25923:25923): Lista de instrucciones enviada.
+[INFO] 14:47:32:289 Consola/(25901:25901): Respuesta recibida: 14
+[INFO] 14:47:32:289 Consola/(25901:25901): Modulo consola finalizado
+[INFO] 14:47:36:307 Consola/(25910:25910): Respuesta recibida: 14
+[INFO] 14:47:36:307 Consola/(25910:25910): Modulo consola finalizado
+[INFO] 14:47:49:371 Consola/(25923:25923): Respuesta recibida: 14
+[INFO] 14:47:49:371 Consola/(25923:25923): Modulo consola finalizado
+[INFO] 14:48:01:759 Consola/(26071:26071): Consola iniciada
+[INFO] 14:48:01:760 Consola/(26071:26071): Se agregó el operador NO_OP
+[INFO] 14:48:01:760 Consola/(26071:26071): Se agregó el parametro 3
+[INFO] 14:48:01:760 Consola/(26071:26071): Se agregó el operador I/O
+[INFO] 14:48:01:760 Consola/(26071:26071): Se agregó el parametro 13000
+[INFO] 14:48:01:760 Consola/(26071:26071): Se agregó el operador NO_OP
+[INFO] 14:48:01:760 Consola/(26071:26071): Se agregó el parametro 3
+[INFO] 14:48:01:760 Consola/(26071:26071): Se agregó el operador EXIT
+[INFO] 14:48:01:760 Consola/(26071:26071): Se envió el cod operacion 12
+[INFO] 14:48:01:760 Consola/(26071:26071): Lista de instrucciones enviada.
+[INFO] 14:48:01:890 Consola/(26080:26080): Consola iniciada
+[INFO] 14:48:01:897 Consola/(26080:26080): Se agregó el operador NO_OP
+[INFO] 14:48:01:898 Consola/(26080:26080): Se agregó el parametro 3
+[INFO] 14:48:01:898 Consola/(26080:26080): Se agregó el operador I/O
+[INFO] 14:48:01:898 Consola/(26080:26080): Se agregó el parametro 5000
+[INFO] 14:48:01:898 Consola/(26080:26080): Se agregó el operador NO_OP
+[INFO] 14:48:01:898 Consola/(26080:26080): Se agregó el parametro 3
+[INFO] 14:48:01:898 Consola/(26080:26080): Se agregó el operador EXIT
+[INFO] 14:48:01:898 Consola/(26080:26080): Se envió el cod operacion 12
+[INFO] 14:48:01:898 Consola/(26080:26080): Lista de instrucciones enviada.
+[INFO] 14:48:02:028 Consola/(26089:26089): Consola iniciada
+[INFO] 14:48:02:029 Consola/(26089:26089): Se agregó el operador NO_OP
+[INFO] 14:48:02:029 Consola/(26089:26089): Se agregó el parametro 10
+[INFO] 14:48:02:029 Consola/(26089:26089): Se agregó el operador EXIT
+[INFO] 14:48:02:029 Consola/(26089:26089): Se envió el cod operacion 12
+[INFO] 14:48:02:029 Consola/(26089:26089): Lista de instrucciones enviada.
+[INFO] 14:48:30:249 Consola/(26071:26071): Respuesta recibida: 14
+[INFO] 14:48:30:249 Consola/(26071:26071): Modulo consola finalizado
+[INFO] 14:48:34:261 Consola/(26080:26080): Respuesta recibida: 14
+[INFO] 14:48:34:262 Consola/(26080:26080): Modulo consola finalizado
+[INFO] 14:48:47:474 Consola/(26089:26089): Respuesta recibida: 14
+[INFO] 14:48:47:475 Consola/(26089:26089): Modulo consola finalizado

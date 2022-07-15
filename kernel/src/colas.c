@@ -48,6 +48,10 @@ void suspended_ready_a_ready(void) {
         queue_push(cola_ready, (void*) procesoAMover);
     sem_post(mutex_cola_ready);
 
+     if (algoritmo_elegido == SJF) {
+          ordenar_cola_ready();
+     }
+
     log_info(logger, "El proceso con ID:%d pasó de SUSPENDED-READY a READY.", procesoAMover -> PID);
     
     sem_post(sem_procesos_en_ready);

@@ -2454,3 +2454,2272 @@
 [INFO] 01:03:46:218 CPU/(21980:21990): tiempo de ejecucion 11.000000
 [INFO] 01:03:46:219 CPU/(21980:21990): pcb devolvido
 [INFO] 01:03:46:219 CPU/(21980:21990): Linea 121
+[INFO] 12:37:27:169 CPU/(9614:9614): Modulo CPU iniciado
+[INFO] 12:37:27:174 CPU/(9614:9614): Config CPU load
+[INFO] 12:37:27:174 CPU/(9614:9614): Conexión cpu-memoria ok.
+[INFO] 12:37:27:174 CPU/(9614:9614): Request config memoria enviada.
+[INFO] 12:37:27:178 CPU/(9614:9614): Se recibió configuración de memoria.
+[INFO] 12:37:27:178 CPU/(9614:9614): Se creó entrada de tlb 0
+[INFO] 12:37:27:178 CPU/(9614:9614): Se creó entrada de tlb 1
+[INFO] 12:37:27:178 CPU/(9614:9614): Se creó entrada de tlb 2
+[INFO] 12:37:27:178 CPU/(9614:9614): Se creó entrada de tlb 3
+[INFO] 12:37:27:332 CPU/(9614:9618): Cliente conectado (a CPU Dispatch)
+
+[INFO] 12:37:27:332 CPU/(9614:9619): Cliente conectado (a CPU Interrupt)
+
+[INFO] 12:37:27:336 CPU/(9614:9633): Se conectó Kernel - header 24
+[INFO] 12:37:27:336 CPU/(9614:9634): Se conectó Kernel - header 24
+[INFO] 12:37:36:347 CPU/(9614:9634): Conexion con KERNEL - Se recibió header -75
+[INFO] 12:37:36:347 CPU/(9614:9633): Conexion con KERNEL - Se recibió header -74
+[INFO] 12:38:28:142 CPU/(9821:9821): Modulo CPU iniciado
+[INFO] 12:38:28:142 CPU/(9821:9821): Config CPU load
+[INFO] 12:38:28:142 CPU/(9821:9821): Conexión cpu-memoria ok.
+[INFO] 12:38:28:142 CPU/(9821:9821): Request config memoria enviada.
+[INFO] 12:38:28:144 CPU/(9821:9821): Se recibió configuración de memoria.
+[INFO] 12:38:28:144 CPU/(9821:9821): Se creó entrada de tlb 0
+[INFO] 12:38:28:144 CPU/(9821:9821): Se creó entrada de tlb 1
+[INFO] 12:38:28:144 CPU/(9821:9821): Se creó entrada de tlb 2
+[INFO] 12:38:28:144 CPU/(9821:9821): Se creó entrada de tlb 3
+[INFO] 12:38:28:270 CPU/(9821:9826): Cliente conectado (a CPU Dispatch)
+
+[INFO] 12:38:28:270 CPU/(9821:9827): Cliente conectado (a CPU Interrupt)
+
+[INFO] 12:38:28:270 CPU/(9821:9840): Se conectó Kernel - header 24
+[INFO] 12:38:28:270 CPU/(9821:9841): Se conectó Kernel - header 24
+[INFO] 12:38:29:458 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:38:29:458 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:38:29:458 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:38:29:458 CPU/(9821:9840): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:38:29:458 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:38:29:458 CPU/(9821:9840): program counter 0
+[INFO] 12:38:29:458 CPU/(9821:9840): cantidad de instrucciones: 4
+[INFO] 12:38:29:458 CPU/(9821:9840): parametro_instruccion recibido: 3
+[INFO] 12:38:29:458 CPU/(9821:9840): Ejecutando NO_OP.
+[INFO] 12:38:29:458 CPU/(9821:9840): tiempo de sleep 3000
+[INFO] 12:38:30:511 CPU/(9821:9841): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:38:30:511 CPU/(9821:9841): INTERRUPCION
+[INFO] 12:38:30:511 CPU/(9821:9841): INTERRUPCION 1
+[INFO] 12:38:31:558 CPU/(9821:9841): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:38:31:558 CPU/(9821:9841): INTERRUPCION
+[INFO] 12:38:31:559 CPU/(9821:9841): INTERRUPCION 1
+[INFO] 12:38:33:549 CPU/(9821:9840): Terminó usleep
+[WARNING] 12:38:33:550 CPU/(9821:9840): Condicional: interrupcion == 1
+[INFO] 12:38:33:550 CPU/(9821:9840): DEVOLVIENDO POR INTERRUPCION
+[INFO] 12:38:33:550 CPU/(9821:9840): devolviendo pcb 15 - PID:1
+[INFO] 12:38:33:550 CPU/(9821:9840): tiempo de ejecucion 4.000000
+[INFO] 12:38:33:551 CPU/(9821:9841): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:38:33:551 CPU/(9821:9841): INTERRUPCION
+[INFO] 12:38:33:551 CPU/(9821:9840): pcb devolvido
+[INFO] 12:38:33:551 CPU/(9821:9840): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 12:38:33:552 CPU/(9821:9841): INTERRUPCION 1
+[INFO] 12:38:33:552 CPU/(9821:9840): Linea 121
+[INFO] 12:38:33:552 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:38:33:552 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:38:33:552 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:38:33:552 CPU/(9821:9840): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 12:38:33:552 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:38:33:552 CPU/(9821:9840): program counter 0
+[INFO] 12:38:33:553 CPU/(9821:9840): cantidad de instrucciones: 4
+[INFO] 12:38:33:553 CPU/(9821:9840): parametro_instruccion recibido: 3
+[INFO] 12:38:33:553 CPU/(9821:9840): Ejecutando NO_OP.
+[INFO] 12:38:33:553 CPU/(9821:9840): tiempo de sleep 3000
+[INFO] 12:38:37:505 CPU/(9821:9840): Terminó usleep
+[WARNING] 12:38:37:506 CPU/(9821:9840): Condicional: interrupcion == 1
+[INFO] 12:38:37:506 CPU/(9821:9840): DEVOLVIENDO POR INTERRUPCION
+[INFO] 12:38:37:506 CPU/(9821:9840): devolviendo pcb 15 - PID:2
+[INFO] 12:38:37:507 CPU/(9821:9840): tiempo de ejecucion 4.000000
+[INFO] 12:38:37:507 CPU/(9821:9840): pcb devolvido
+[INFO] 12:38:37:508 CPU/(9821:9840): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 12:38:37:508 CPU/(9821:9840): Linea 121
+[INFO] 12:38:37:548 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:38:37:548 CPU/(9821:9841): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:38:37:548 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:38:37:548 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:38:37:548 CPU/(9821:9840): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 12:38:37:548 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:38:37:548 CPU/(9821:9840): program counter 0
+[INFO] 12:38:37:548 CPU/(9821:9840): cantidad de instrucciones: 2
+[INFO] 12:38:37:549 CPU/(9821:9840): parametro_instruccion recibido: 10
+[INFO] 12:38:37:549 CPU/(9821:9840): Ejecutando NO_OP.
+[INFO] 12:38:37:549 CPU/(9821:9840): tiempo de sleep 10000
+[INFO] 12:38:37:549 CPU/(9821:9841): INTERRUPCION
+[INFO] 12:38:37:549 CPU/(9821:9841): INTERRUPCION 1
+[INFO] 12:38:50:759 CPU/(9821:9840): Terminó usleep
+[WARNING] 12:38:50:759 CPU/(9821:9840): Condicional: interrupcion == 1
+[INFO] 12:38:50:760 CPU/(9821:9840): DEVOLVIENDO POR INTERRUPCION
+[INFO] 12:38:50:760 CPU/(9821:9840): devolviendo pcb 15 - PID:3
+[INFO] 12:38:50:760 CPU/(9821:9840): tiempo de ejecucion 13.000000
+[INFO] 12:38:50:761 CPU/(9821:9840): pcb devolvido
+[INFO] 12:38:50:761 CPU/(9821:9840): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 12:38:50:762 CPU/(9821:9840): Linea 121
+[INFO] 12:38:50:801 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:38:50:801 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:38:50:801 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:38:50:801 CPU/(9821:9840): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:38:50:801 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:38:50:801 CPU/(9821:9840): program counter 1
+[INFO] 12:38:50:801 CPU/(9821:9840): cantidad de instrucciones: 4
+[INFO] 12:38:50:801 CPU/(9821:9840): PCB se bloquea.
+[INFO] 12:38:50:801 CPU/(9821:9840): Pre devolver PCB.
+[INFO] 12:38:50:801 CPU/(9821:9840): devolviendo pcb 13 - PID:1
+[INFO] 12:38:50:802 CPU/(9821:9840): tiempo de ejecucion 4.000000
+[INFO] 12:38:50:802 CPU/(9821:9840): pcb devolvido
+[INFO] 12:38:50:802 CPU/(9821:9840): Linea 121
+[INFO] 12:38:50:802 CPU/(9821:9841): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:38:50:802 CPU/(9821:9841): INTERRUPCION
+[INFO] 12:38:50:802 CPU/(9821:9841): INTERRUPCION 1
+[INFO] 12:38:55:844 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:38:55:844 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:38:55:844 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:38:55:881 CPU/(9821:9840): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:38:55:881 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:38:55:881 CPU/(9821:9840): program counter 2
+[INFO] 12:38:55:881 CPU/(9821:9840): cantidad de instrucciones: 4
+[INFO] 12:38:55:881 CPU/(9821:9840): parametro_instruccion recibido: 3
+[INFO] 12:38:55:881 CPU/(9821:9840): Ejecutando NO_OP.
+[INFO] 12:38:55:882 CPU/(9821:9840): tiempo de sleep 3000
+[INFO] 12:38:59:848 CPU/(9821:9840): Terminó usleep
+[WARNING] 12:38:59:849 CPU/(9821:9840): Condicional: interrupcion == 1
+[INFO] 12:38:59:849 CPU/(9821:9840): DEVOLVIENDO POR INTERRUPCION
+[INFO] 12:38:59:849 CPU/(9821:9840): devolviendo pcb 15 - PID:1
+[INFO] 12:38:59:850 CPU/(9821:9840): tiempo de ejecucion 8.000000
+[INFO] 12:38:59:852 CPU/(9821:9841): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:38:59:852 CPU/(9821:9841): INTERRUPCION
+[INFO] 12:38:59:852 CPU/(9821:9840): pcb devolvido
+[INFO] 12:38:59:853 CPU/(9821:9840): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 12:38:59:853 CPU/(9821:9841): INTERRUPCION 1
+[INFO] 12:38:59:853 CPU/(9821:9840): Linea 121
+[INFO] 12:38:59:854 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:38:59:854 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:38:59:854 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:38:59:854 CPU/(9821:9840): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:38:59:855 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:38:59:855 CPU/(9821:9840): program counter 3
+[INFO] 12:38:59:855 CPU/(9821:9840): cantidad de instrucciones: 4
+[INFO] 12:38:59:856 CPU/(9821:9840): Finaliza proceso. EXIT
+[INFO] 12:38:59:856 CPU/(9821:9840): devolviendo pcb 14 - PID:1
+[INFO] 12:38:59:856 CPU/(9821:9840): tiempo de ejecucion 8.000000
+[INFO] 12:38:59:857 CPU/(9821:9840): pcb devolvido
+[WARNING] 12:38:59:857 CPU/(9821:9840): Condicional: interrupcion == 1
+[INFO] 12:38:59:889 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:38:59:889 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:38:59:889 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:38:59:928 CPU/(9821:9840): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 12:38:59:928 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:38:59:928 CPU/(9821:9840): program counter 1
+[INFO] 12:38:59:928 CPU/(9821:9840): cantidad de instrucciones: 4
+[INFO] 12:38:59:928 CPU/(9821:9840): PCB se bloquea.
+[INFO] 12:38:59:928 CPU/(9821:9840): Pre devolver PCB.
+[INFO] 12:38:59:928 CPU/(9821:9840): devolviendo pcb 13 - PID:2
+[INFO] 12:38:59:928 CPU/(9821:9840): tiempo de ejecucion 4.000000
+[INFO] 12:38:59:928 CPU/(9821:9840): pcb devolvido
+[INFO] 12:38:59:928 CPU/(9821:9840): Linea 121
+[INFO] 12:39:04:973 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:39:04:974 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:39:04:974 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:39:05:008 CPU/(9821:9840): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 12:39:05:008 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:39:05:008 CPU/(9821:9840): program counter 2
+[INFO] 12:39:05:008 CPU/(9821:9840): cantidad de instrucciones: 4
+[INFO] 12:39:05:008 CPU/(9821:9840): parametro_instruccion recibido: 3
+[INFO] 12:39:05:009 CPU/(9821:9840): Ejecutando NO_OP.
+[INFO] 12:39:05:009 CPU/(9821:9840): tiempo de sleep 3000
+[INFO] 12:39:08:944 CPU/(9821:9840): Terminó usleep
+[INFO] 12:39:08:945 CPU/(9821:9840): Linea 121
+[INFO] 12:39:08:945 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:39:08:945 CPU/(9821:9840): program counter 3
+[INFO] 12:39:08:946 CPU/(9821:9840): cantidad de instrucciones: 4
+[INFO] 12:39:08:946 CPU/(9821:9840): Finaliza proceso. EXIT
+[INFO] 12:39:08:946 CPU/(9821:9840): devolviendo pcb 14 - PID:2
+[INFO] 12:39:08:947 CPU/(9821:9840): tiempo de ejecucion 7.000000
+[INFO] 12:39:08:962 CPU/(9821:9840): pcb devolvido
+[INFO] 12:39:08:962 CPU/(9821:9840): Linea 121
+[INFO] 12:39:08:962 CPU/(9821:9840): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:39:08:962 CPU/(9821:9840): CASE EJECUTAR PROCESO
+[INFO] 12:39:08:962 CPU/(9821:9840): Se recibió pcb del Kernel.
+[INFO] 12:39:08:962 CPU/(9821:9840): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 12:39:08:962 CPU/(9821:9840): Decode instrucción.
+[INFO] 12:39:08:962 CPU/(9821:9840): program counter 1
+[INFO] 12:39:08:963 CPU/(9821:9840): cantidad de instrucciones: 2
+[INFO] 12:39:08:963 CPU/(9821:9840): Finaliza proceso. EXIT
+[INFO] 12:39:08:963 CPU/(9821:9840): devolviendo pcb 14 - PID:3
+[INFO] 12:39:08:963 CPU/(9821:9840): tiempo de ejecucion 13.000000
+[INFO] 12:39:08:963 CPU/(9821:9840): pcb devolvido
+[INFO] 12:39:08:963 CPU/(9821:9840): Linea 121
+[INFO] 12:39:15:466 CPU/(9821:9841): Conexion con KERNEL - Se recibió header -75
+[INFO] 12:39:15:466 CPU/(9821:9840): Conexion con KERNEL - Se recibió header -74
+[INFO] 12:40:51:915 CPU/(10241:10241): Modulo CPU iniciado
+[INFO] 12:40:51:923 CPU/(10241:10241): Config CPU load
+[INFO] 12:40:51:923 CPU/(10241:10241): Conexión cpu-memoria ok.
+[INFO] 12:40:51:923 CPU/(10241:10241): Request config memoria enviada.
+[INFO] 12:40:51:925 CPU/(10241:10241): Se recibió configuración de memoria.
+[INFO] 12:40:51:926 CPU/(10241:10241): Se creó entrada de tlb 0
+[INFO] 12:40:51:926 CPU/(10241:10241): Se creó entrada de tlb 1
+[INFO] 12:40:51:926 CPU/(10241:10241): Se creó entrada de tlb 2
+[INFO] 12:40:51:926 CPU/(10241:10241): Se creó entrada de tlb 3
+[INFO] 12:40:52:048 CPU/(10241:10246): Cliente conectado (a CPU Dispatch)
+
+[INFO] 12:40:52:049 CPU/(10241:10247): Cliente conectado (a CPU Interrupt)
+
+[INFO] 12:40:52:058 CPU/(10241:10262): Se conectó Kernel - header 24
+[INFO] 12:40:52:058 CPU/(10241:10261): Se conectó Kernel - header 24
+[INFO] 12:40:53:212 CPU/(10241:10261): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:40:53:212 CPU/(10241:10261): CASE EJECUTAR PROCESO
+[INFO] 12:40:53:212 CPU/(10241:10261): Se recibió pcb del Kernel.
+[INFO] 12:40:53:212 CPU/(10241:10261): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:40:53:212 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:40:53:212 CPU/(10241:10261): program counter 0
+[INFO] 12:40:53:213 CPU/(10241:10261): cantidad de instrucciones: 4
+[INFO] 12:40:53:213 CPU/(10241:10261): parametro_instruccion recibido: 3
+[INFO] 12:40:53:213 CPU/(10241:10261): Ejecutando NO_OP.
+[INFO] 12:40:53:213 CPU/(10241:10261): tiempo de sleep 3000
+[INFO] 12:40:57:224 CPU/(10241:10261): Terminó usleep
+[INFO] 12:40:57:224 CPU/(10241:10261): Linea 121
+[INFO] 12:40:57:225 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:40:57:225 CPU/(10241:10261): program counter 1
+[INFO] 12:40:57:225 CPU/(10241:10261): cantidad de instrucciones: 4
+[INFO] 12:40:57:226 CPU/(10241:10261): PCB se bloquea.
+[INFO] 12:40:57:226 CPU/(10241:10261): Pre devolver PCB.
+[INFO] 12:40:57:226 CPU/(10241:10261): devolviendo pcb 13 - PID:1
+[INFO] 12:40:57:226 CPU/(10241:10261): tiempo de ejecucion 4.000000
+[INFO] 12:40:57:229 CPU/(10241:10261): pcb devolvido
+[INFO] 12:40:57:229 CPU/(10241:10261): Linea 121
+[INFO] 12:40:57:229 CPU/(10241:10261): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:40:57:229 CPU/(10241:10261): CASE EJECUTAR PROCESO
+[INFO] 12:40:57:230 CPU/(10241:10261): Se recibió pcb del Kernel.
+[INFO] 12:40:57:230 CPU/(10241:10261): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 12:40:57:230 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:40:57:231 CPU/(10241:10261): program counter 0
+[INFO] 12:40:57:231 CPU/(10241:10261): cantidad de instrucciones: 4
+[INFO] 12:40:57:231 CPU/(10241:10261): parametro_instruccion recibido: 3
+[INFO] 12:40:57:231 CPU/(10241:10261): Ejecutando NO_OP.
+[INFO] 12:40:57:232 CPU/(10241:10261): tiempo de sleep 3000
+[INFO] 12:41:01:173 CPU/(10241:10261): Terminó usleep
+[INFO] 12:41:01:173 CPU/(10241:10261): Linea 121
+[INFO] 12:41:01:174 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:41:01:174 CPU/(10241:10261): program counter 1
+[INFO] 12:41:01:174 CPU/(10241:10261): cantidad de instrucciones: 4
+[INFO] 12:41:01:175 CPU/(10241:10261): PCB se bloquea.
+[INFO] 12:41:01:175 CPU/(10241:10261): Pre devolver PCB.
+[INFO] 12:41:01:175 CPU/(10241:10261): devolviendo pcb 13 - PID:2
+[INFO] 12:41:01:176 CPU/(10241:10261): tiempo de ejecucion 4.000000
+[INFO] 12:41:01:176 CPU/(10241:10261): pcb devolvido
+[INFO] 12:41:01:177 CPU/(10241:10261): Linea 121
+[INFO] 12:41:06:236 CPU/(10241:10261): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:41:06:236 CPU/(10241:10261): CASE EJECUTAR PROCESO
+[INFO] 12:41:06:236 CPU/(10241:10261): Se recibió pcb del Kernel.
+[INFO] 12:41:06:236 CPU/(10241:10261): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 12:41:06:236 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:41:06:237 CPU/(10241:10261): program counter 0
+[INFO] 12:41:06:237 CPU/(10241:10261): cantidad de instrucciones: 2
+[INFO] 12:41:06:237 CPU/(10241:10261): parametro_instruccion recibido: 10
+[INFO] 12:41:06:237 CPU/(10241:10261): Ejecutando NO_OP.
+[INFO] 12:41:06:237 CPU/(10241:10261): tiempo de sleep 10000
+[INFO] 12:41:19:489 CPU/(10241:10261): Terminó usleep
+[INFO] 12:41:19:490 CPU/(10241:10261): Linea 121
+[INFO] 12:41:19:490 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:41:19:490 CPU/(10241:10261): program counter 1
+[INFO] 12:41:19:491 CPU/(10241:10261): cantidad de instrucciones: 2
+[INFO] 12:41:19:491 CPU/(10241:10261): Finaliza proceso. EXIT
+[INFO] 12:41:19:491 CPU/(10241:10261): devolviendo pcb 14 - PID:3
+[INFO] 12:41:19:491 CPU/(10241:10261): tiempo de ejecucion 13.000000
+[INFO] 12:41:19:505 CPU/(10241:10261): pcb devolvido
+[INFO] 12:41:19:505 CPU/(10241:10261): Linea 121
+[INFO] 12:41:19:505 CPU/(10241:10261): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:41:19:505 CPU/(10241:10261): CASE EJECUTAR PROCESO
+[INFO] 12:41:19:505 CPU/(10241:10261): Se recibió pcb del Kernel.
+[INFO] 12:41:19:505 CPU/(10241:10261): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:41:19:506 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:41:19:506 CPU/(10241:10261): program counter 2
+[INFO] 12:41:19:506 CPU/(10241:10261): cantidad de instrucciones: 4
+[INFO] 12:41:19:506 CPU/(10241:10261): parametro_instruccion recibido: 3
+[INFO] 12:41:19:506 CPU/(10241:10261): Ejecutando NO_OP.
+[INFO] 12:41:19:506 CPU/(10241:10261): tiempo de sleep 3000
+[INFO] 12:41:23:515 CPU/(10241:10261): Terminó usleep
+[INFO] 12:41:23:516 CPU/(10241:10261): Linea 121
+[INFO] 12:41:23:516 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:41:23:516 CPU/(10241:10261): program counter 3
+[INFO] 12:41:23:517 CPU/(10241:10261): cantidad de instrucciones: 4
+[INFO] 12:41:23:517 CPU/(10241:10261): Finaliza proceso. EXIT
+[INFO] 12:41:23:517 CPU/(10241:10261): devolviendo pcb 14 - PID:1
+[INFO] 12:41:23:518 CPU/(10241:10261): tiempo de ejecucion 8.000000
+[INFO] 12:41:23:519 CPU/(10241:10261): pcb devolvido
+[INFO] 12:41:23:519 CPU/(10241:10261): Linea 121
+[INFO] 12:41:23:559 CPU/(10241:10261): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:41:23:560 CPU/(10241:10261): CASE EJECUTAR PROCESO
+[INFO] 12:41:23:560 CPU/(10241:10261): Se recibió pcb del Kernel.
+[INFO] 12:41:23:560 CPU/(10241:10261): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 12:41:23:560 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:41:23:560 CPU/(10241:10261): program counter 2
+[INFO] 12:41:23:561 CPU/(10241:10261): cantidad de instrucciones: 4
+[INFO] 12:41:23:561 CPU/(10241:10261): parametro_instruccion recibido: 3
+[INFO] 12:41:23:561 CPU/(10241:10261): Ejecutando NO_OP.
+[INFO] 12:41:23:561 CPU/(10241:10261): tiempo de sleep 3000
+[INFO] 12:41:27:594 CPU/(10241:10261): Terminó usleep
+[INFO] 12:41:27:595 CPU/(10241:10261): Linea 121
+[INFO] 12:41:27:595 CPU/(10241:10261): Decode instrucción.
+[INFO] 12:41:27:596 CPU/(10241:10261): program counter 3
+[INFO] 12:41:27:596 CPU/(10241:10261): cantidad de instrucciones: 4
+[INFO] 12:41:27:596 CPU/(10241:10261): Finaliza proceso. EXIT
+[INFO] 12:41:27:597 CPU/(10241:10261): devolviendo pcb 14 - PID:2
+[INFO] 12:41:27:597 CPU/(10241:10261): tiempo de ejecucion 8.000000
+[INFO] 12:41:27:597 CPU/(10241:10261): pcb devolvido
+[INFO] 12:41:27:598 CPU/(10241:10261): Linea 121
+[INFO] 12:42:33:604 CPU/(10241:10262): Conexion con KERNEL - Se recibió header -75
+[INFO] 12:42:33:604 CPU/(10241:10261): Conexion con KERNEL - Se recibió header -74
+[INFO] 12:42:52:170 CPU/(10640:10640): Modulo CPU iniciado
+[INFO] 12:42:52:170 CPU/(10640:10640): Config CPU load
+[INFO] 12:42:52:171 CPU/(10640:10640): Conexión cpu-memoria ok.
+[INFO] 12:42:52:171 CPU/(10640:10640): Request config memoria enviada.
+[INFO] 12:42:52:172 CPU/(10640:10640): Se recibió configuración de memoria.
+[INFO] 12:42:52:172 CPU/(10640:10640): Se creó entrada de tlb 0
+[INFO] 12:42:52:173 CPU/(10640:10640): Se creó entrada de tlb 1
+[INFO] 12:42:52:173 CPU/(10640:10640): Se creó entrada de tlb 2
+[INFO] 12:42:52:173 CPU/(10640:10640): Se creó entrada de tlb 3
+[INFO] 12:42:52:310 CPU/(10640:10644): Cliente conectado (a CPU Dispatch)
+
+[INFO] 12:42:52:310 CPU/(10640:10645): Cliente conectado (a CPU Interrupt)
+
+[INFO] 12:42:52:311 CPU/(10640:10659): Se conectó Kernel - header 24
+[INFO] 12:42:52:311 CPU/(10640:10660): Se conectó Kernel - header 24
+[INFO] 12:42:53:462 CPU/(10640:10659): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:42:53:462 CPU/(10640:10659): CASE EJECUTAR PROCESO
+[INFO] 12:42:53:462 CPU/(10640:10659): Se recibió pcb del Kernel.
+[INFO] 12:42:53:462 CPU/(10640:10659): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:42:53:462 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:42:53:462 CPU/(10640:10659): program counter 0
+[INFO] 12:42:53:463 CPU/(10640:10659): cantidad de instrucciones: 4
+[INFO] 12:42:53:463 CPU/(10640:10659): parametro_instruccion recibido: 3
+[INFO] 12:42:53:463 CPU/(10640:10659): Ejecutando NO_OP.
+[INFO] 12:42:53:463 CPU/(10640:10659): tiempo de sleep 3000
+[INFO] 12:42:54:513 CPU/(10640:10660): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:42:54:513 CPU/(10640:10660): INTERRUPCION
+[INFO] 12:42:54:513 CPU/(10640:10660): INTERRUPCION 1
+[INFO] 12:42:57:458 CPU/(10640:10659): Terminó usleep
+[WARNING] 12:42:57:459 CPU/(10640:10659): Condicional: interrupcion == 1
+[INFO] 12:42:57:459 CPU/(10640:10659): DEVOLVIENDO POR INTERRUPCION
+[INFO] 12:42:57:460 CPU/(10640:10659): devolviendo pcb 15 - PID:1
+[INFO] 12:42:57:460 CPU/(10640:10659): tiempo de ejecucion 4.000000
+[INFO] 12:42:57:462 CPU/(10640:10660): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:42:57:462 CPU/(10640:10660): INTERRUPCION
+[INFO] 12:42:57:462 CPU/(10640:10659): pcb devolvido
+[INFO] 12:42:57:463 CPU/(10640:10659): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 12:42:57:463 CPU/(10640:10660): INTERRUPCION 1
+[INFO] 12:42:57:463 CPU/(10640:10659): Linea 121
+[INFO] 12:42:57:464 CPU/(10640:10659): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:42:57:464 CPU/(10640:10659): CASE EJECUTAR PROCESO
+[INFO] 12:42:57:464 CPU/(10640:10659): Se recibió pcb del Kernel.
+[INFO] 12:42:57:465 CPU/(10640:10659): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 12:42:57:465 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:42:57:465 CPU/(10640:10659): program counter 0
+[INFO] 12:42:57:466 CPU/(10640:10659): cantidad de instrucciones: 4
+[INFO] 12:42:57:466 CPU/(10640:10659): parametro_instruccion recibido: 3
+[INFO] 12:42:57:466 CPU/(10640:10659): Ejecutando NO_OP.
+[INFO] 12:42:57:467 CPU/(10640:10659): tiempo de sleep 3000
+[INFO] 12:43:01:430 CPU/(10640:10659): Terminó usleep
+[WARNING] 12:43:01:430 CPU/(10640:10659): Condicional: interrupcion == 1
+[INFO] 12:43:01:430 CPU/(10640:10659): DEVOLVIENDO POR INTERRUPCION
+[INFO] 12:43:01:430 CPU/(10640:10659): devolviendo pcb 15 - PID:2
+[INFO] 12:43:01:431 CPU/(10640:10659): tiempo de ejecucion 4.000000
+[INFO] 12:43:01:431 CPU/(10640:10659): pcb devolvido
+[INFO] 12:43:01:431 CPU/(10640:10659): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 12:43:01:431 CPU/(10640:10659): Linea 121
+[INFO] 12:43:01:474 CPU/(10640:10660): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:43:01:474 CPU/(10640:10660): INTERRUPCION
+[INFO] 12:43:01:474 CPU/(10640:10660): INTERRUPCION 1
+[INFO] 12:43:01:474 CPU/(10640:10659): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:43:01:475 CPU/(10640:10659): CASE EJECUTAR PROCESO
+[INFO] 12:43:01:475 CPU/(10640:10659): Se recibió pcb del Kernel.
+[INFO] 12:43:01:475 CPU/(10640:10659): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:43:01:475 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:43:01:475 CPU/(10640:10659): program counter 1
+[INFO] 12:43:01:475 CPU/(10640:10659): cantidad de instrucciones: 4
+[INFO] 12:43:01:475 CPU/(10640:10659): PCB se bloquea.
+[INFO] 12:43:01:475 CPU/(10640:10659): Pre devolver PCB.
+[INFO] 12:43:01:475 CPU/(10640:10659): devolviendo pcb 13 - PID:1
+[INFO] 12:43:01:475 CPU/(10640:10659): tiempo de ejecucion 4.000000
+[INFO] 12:43:01:476 CPU/(10640:10659): pcb devolvido
+[WARNING] 12:43:01:476 CPU/(10640:10659): Condicional: interrupcion == 1
+[INFO] 12:43:10:525 CPU/(10640:10659): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:43:10:525 CPU/(10640:10659): CASE EJECUTAR PROCESO
+[INFO] 12:43:10:526 CPU/(10640:10659): Se recibió pcb del Kernel.
+[INFO] 12:43:10:560 CPU/(10640:10659): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 12:43:10:561 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:43:10:561 CPU/(10640:10659): program counter 1
+[INFO] 12:43:10:561 CPU/(10640:10659): cantidad de instrucciones: 4
+[INFO] 12:43:10:561 CPU/(10640:10659): PCB se bloquea.
+[INFO] 12:43:10:561 CPU/(10640:10659): Pre devolver PCB.
+[INFO] 12:43:10:561 CPU/(10640:10659): devolviendo pcb 13 - PID:2
+[INFO] 12:43:10:561 CPU/(10640:10659): tiempo de ejecucion 4.000000
+[INFO] 12:43:10:561 CPU/(10640:10659): pcb devolvido
+[INFO] 12:43:10:561 CPU/(10640:10659): Linea 121
+[INFO] 12:43:18:563 CPU/(10640:10659): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:43:18:563 CPU/(10640:10659): CASE EJECUTAR PROCESO
+[INFO] 12:43:18:563 CPU/(10640:10659): Se recibió pcb del Kernel.
+[INFO] 12:43:18:601 CPU/(10640:10659): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 12:43:18:601 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:43:18:601 CPU/(10640:10659): program counter 2
+[INFO] 12:43:18:601 CPU/(10640:10659): cantidad de instrucciones: 4
+[INFO] 12:43:18:602 CPU/(10640:10659): parametro_instruccion recibido: 3
+[INFO] 12:43:18:602 CPU/(10640:10659): Ejecutando NO_OP.
+[INFO] 12:43:18:602 CPU/(10640:10659): tiempo de sleep 3000
+[INFO] 12:43:22:579 CPU/(10640:10659): Terminó usleep
+[INFO] 12:43:22:580 CPU/(10640:10659): Linea 121
+[INFO] 12:43:22:580 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:43:22:580 CPU/(10640:10659): program counter 3
+[INFO] 12:43:22:581 CPU/(10640:10659): cantidad de instrucciones: 4
+[INFO] 12:43:22:581 CPU/(10640:10659): Finaliza proceso. EXIT
+[INFO] 12:43:22:581 CPU/(10640:10659): devolviendo pcb 14 - PID:1
+[INFO] 12:43:22:582 CPU/(10640:10659): tiempo de ejecucion 8.000000
+[INFO] 12:43:22:585 CPU/(10640:10660): Conexion con KERNEL - Se recibió header 15
+[INFO] 12:43:22:585 CPU/(10640:10660): INTERRUPCION
+[INFO] 12:43:22:585 CPU/(10640:10660): INTERRUPCION 1
+[INFO] 12:43:22:599 CPU/(10640:10659): pcb devolvido
+[WARNING] 12:43:22:600 CPU/(10640:10659): Condicional: interrupcion == 1
+[INFO] 12:43:22:600 CPU/(10640:10659): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:43:22:600 CPU/(10640:10659): CASE EJECUTAR PROCESO
+[INFO] 12:43:22:600 CPU/(10640:10659): Se recibió pcb del Kernel.
+[INFO] 12:43:22:600 CPU/(10640:10659): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 12:43:22:600 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:43:22:600 CPU/(10640:10659): program counter 0
+[INFO] 12:43:22:600 CPU/(10640:10659): cantidad de instrucciones: 2
+[INFO] 12:43:22:600 CPU/(10640:10659): parametro_instruccion recibido: 10
+[INFO] 12:43:22:601 CPU/(10640:10659): Ejecutando NO_OP.
+[INFO] 12:43:22:601 CPU/(10640:10659): tiempo de sleep 10000
+[INFO] 12:43:35:946 CPU/(10640:10659): Terminó usleep
+[INFO] 12:43:35:947 CPU/(10640:10659): Linea 121
+[INFO] 12:43:35:947 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:43:35:947 CPU/(10640:10659): program counter 1
+[INFO] 12:43:35:948 CPU/(10640:10659): cantidad de instrucciones: 2
+[INFO] 12:43:35:948 CPU/(10640:10659): Finaliza proceso. EXIT
+[INFO] 12:43:35:948 CPU/(10640:10659): devolviendo pcb 14 - PID:3
+[INFO] 12:43:35:949 CPU/(10640:10659): tiempo de ejecucion 13.000000
+[INFO] 12:43:35:962 CPU/(10640:10659): pcb devolvido
+[INFO] 12:43:35:962 CPU/(10640:10659): Linea 121
+[INFO] 12:43:35:962 CPU/(10640:10659): Conexion con KERNEL - Se recibió header 16
+[INFO] 12:43:35:962 CPU/(10640:10659): CASE EJECUTAR PROCESO
+[INFO] 12:43:35:962 CPU/(10640:10659): Se recibió pcb del Kernel.
+[INFO] 12:43:35:995 CPU/(10640:10659): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 12:43:35:995 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:43:35:995 CPU/(10640:10659): program counter 2
+[INFO] 12:43:35:995 CPU/(10640:10659): cantidad de instrucciones: 4
+[INFO] 12:43:35:995 CPU/(10640:10659): parametro_instruccion recibido: 3
+[INFO] 12:43:35:995 CPU/(10640:10659): Ejecutando NO_OP.
+[INFO] 12:43:35:995 CPU/(10640:10659): tiempo de sleep 3000
+[INFO] 12:43:39:927 CPU/(10640:10659): Terminó usleep
+[INFO] 12:43:39:928 CPU/(10640:10659): Linea 121
+[INFO] 12:43:39:928 CPU/(10640:10659): Decode instrucción.
+[INFO] 12:43:39:928 CPU/(10640:10659): program counter 3
+[INFO] 12:43:39:929 CPU/(10640:10659): cantidad de instrucciones: 4
+[INFO] 12:43:39:929 CPU/(10640:10659): Finaliza proceso. EXIT
+[INFO] 12:43:39:929 CPU/(10640:10659): devolviendo pcb 14 - PID:2
+[INFO] 12:43:39:930 CPU/(10640:10659): tiempo de ejecucion 8.000000
+[INFO] 12:43:39:930 CPU/(10640:10659): pcb devolvido
+[INFO] 12:43:39:931 CPU/(10640:10659): Linea 121
+[INFO] 13:06:54:895 CPU/(10640:10660): Conexion con KERNEL - Se recibió header -75
+[INFO] 13:06:54:895 CPU/(10640:10659): Conexion con KERNEL - Se recibió header -74
+[INFO] 13:07:06:256 CPU/(13570:13570): Modulo CPU iniciado
+[INFO] 13:07:06:265 CPU/(13570:13570): Config CPU load
+[INFO] 13:07:06:266 CPU/(13570:13570): Conexión cpu-memoria ok.
+[INFO] 13:07:06:266 CPU/(13570:13570): Request config memoria enviada.
+[INFO] 13:07:06:267 CPU/(13570:13570): Se recibió configuración de memoria.
+[INFO] 13:07:06:267 CPU/(13570:13570): Se creó entrada de tlb 0
+[INFO] 13:07:06:267 CPU/(13570:13570): Se creó entrada de tlb 1
+[INFO] 13:07:06:267 CPU/(13570:13570): Se creó entrada de tlb 2
+[INFO] 13:07:06:267 CPU/(13570:13570): Se creó entrada de tlb 3
+[INFO] 13:07:06:396 CPU/(13570:13574): Cliente conectado (a CPU Dispatch)
+
+[INFO] 13:07:06:396 CPU/(13570:13575): Cliente conectado (a CPU Interrupt)
+
+[INFO] 13:07:06:397 CPU/(13570:13589): Se conectó Kernel - header 24
+[INFO] 13:07:06:397 CPU/(13570:13590): Se conectó Kernel - header 24
+[INFO] 13:07:07:618 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:07:618 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:07:618 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:07:618 CPU/(13570:13589): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 13:07:07:618 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:07:618 CPU/(13570:13589): program counter 0
+[INFO] 13:07:07:618 CPU/(13570:13589): cantidad de instrucciones: 4
+[INFO] 13:07:07:618 CPU/(13570:13589): parametro_instruccion recibido: 3
+[INFO] 13:07:07:618 CPU/(13570:13589): Ejecutando NO_OP.
+[INFO] 13:07:07:619 CPU/(13570:13589): tiempo de sleep 3000
+[INFO] 13:07:08:665 CPU/(13570:13590): Conexion con KERNEL - Se recibió header 15
+[INFO] 13:07:08:665 CPU/(13570:13590): INTERRUPCION
+[INFO] 13:07:08:665 CPU/(13570:13590): INTERRUPCION 1
+[INFO] 13:07:11:627 CPU/(13570:13589): Terminó usleep
+[WARNING] 13:07:11:628 CPU/(13570:13589): Condicional: interrupcion == 1
+[INFO] 13:07:11:629 CPU/(13570:13589): DEVOLVIENDO POR INTERRUPCION
+[INFO] 13:07:11:629 CPU/(13570:13589): devolviendo pcb 15 - PID:1
+[INFO] 13:07:11:630 CPU/(13570:13589): tiempo de ejecucion 4.000000
+[INFO] 13:07:11:632 CPU/(13570:13590): Conexion con KERNEL - Se recibió header 15
+[INFO] 13:07:11:632 CPU/(13570:13590): INTERRUPCION
+[INFO] 13:07:11:632 CPU/(13570:13589): pcb devolvido
+[INFO] 13:07:11:633 CPU/(13570:13589): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 13:07:11:633 CPU/(13570:13590): INTERRUPCION 1
+[INFO] 13:07:11:633 CPU/(13570:13589): Linea 121
+[INFO] 13:07:11:634 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:11:634 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:11:635 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:11:635 CPU/(13570:13589): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 13:07:11:635 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:11:636 CPU/(13570:13589): program counter 0
+[INFO] 13:07:11:636 CPU/(13570:13589): cantidad de instrucciones: 4
+[INFO] 13:07:11:636 CPU/(13570:13589): parametro_instruccion recibido: 3
+[INFO] 13:07:11:637 CPU/(13570:13589): Ejecutando NO_OP.
+[INFO] 13:07:11:637 CPU/(13570:13589): tiempo de sleep 3000
+[INFO] 13:07:15:707 CPU/(13570:13589): Terminó usleep
+[WARNING] 13:07:15:707 CPU/(13570:13589): Condicional: interrupcion == 1
+[INFO] 13:07:15:707 CPU/(13570:13589): DEVOLVIENDO POR INTERRUPCION
+[INFO] 13:07:15:707 CPU/(13570:13589): devolviendo pcb 15 - PID:2
+[INFO] 13:07:15:707 CPU/(13570:13589): tiempo de ejecucion 4.000000
+[INFO] 13:07:15:707 CPU/(13570:13589): pcb devolvido
+[INFO] 13:07:15:707 CPU/(13570:13589): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 13:07:15:708 CPU/(13570:13589): Linea 121
+[INFO] 13:07:15:745 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:15:745 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:15:745 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:15:745 CPU/(13570:13589): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 13:07:15:745 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:15:745 CPU/(13570:13589): program counter 1
+[INFO] 13:07:15:745 CPU/(13570:13589): cantidad de instrucciones: 4
+[INFO] 13:07:15:745 CPU/(13570:13589): PCB se bloquea.
+[INFO] 13:07:15:745 CPU/(13570:13589): Pre devolver PCB.
+[INFO] 13:07:15:745 CPU/(13570:13589): devolviendo pcb 13 - PID:1
+[INFO] 13:07:15:745 CPU/(13570:13589): tiempo de ejecucion 4.000000
+[INFO] 13:07:15:746 CPU/(13570:13589): pcb devolvido
+[INFO] 13:07:15:746 CPU/(13570:13589): Linea 121
+[INFO] 13:07:15:785 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:15:785 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:15:785 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:15:824 CPU/(13570:13589): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 13:07:15:824 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:15:824 CPU/(13570:13589): program counter 1
+[INFO] 13:07:15:824 CPU/(13570:13589): cantidad de instrucciones: 4
+[INFO] 13:07:15:824 CPU/(13570:13589): PCB se bloquea.
+[INFO] 13:07:15:824 CPU/(13570:13589): Pre devolver PCB.
+[INFO] 13:07:15:824 CPU/(13570:13589): devolviendo pcb 13 - PID:2
+[INFO] 13:07:15:824 CPU/(13570:13589): tiempo de ejecucion 4.000000
+[INFO] 13:07:15:825 CPU/(13570:13589): pcb devolvido
+[INFO] 13:07:15:825 CPU/(13570:13589): Linea 121
+[INFO] 13:07:24:788 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:24:788 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:24:788 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:24:824 CPU/(13570:13589): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 13:07:24:825 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:24:825 CPU/(13570:13589): program counter 0
+[INFO] 13:07:24:825 CPU/(13570:13589): cantidad de instrucciones: 2
+[INFO] 13:07:24:825 CPU/(13570:13589): parametro_instruccion recibido: 10
+[INFO] 13:07:24:825 CPU/(13570:13589): Ejecutando NO_OP.
+[INFO] 13:07:24:825 CPU/(13570:13589): tiempo de sleep 10000
+[INFO] 13:07:28:786 CPU/(13570:13590): Conexion con KERNEL - Se recibió header 15
+[INFO] 13:07:28:786 CPU/(13570:13590): INTERRUPCION
+[INFO] 13:07:28:786 CPU/(13570:13590): INTERRUPCION 1
+[INFO] 13:07:38:096 CPU/(13570:13589): Terminó usleep
+[WARNING] 13:07:38:096 CPU/(13570:13589): Condicional: interrupcion == 1
+[INFO] 13:07:38:096 CPU/(13570:13589): DEVOLVIENDO POR INTERRUPCION
+[INFO] 13:07:38:097 CPU/(13570:13589): devolviendo pcb 15 - PID:3
+[INFO] 13:07:38:097 CPU/(13570:13589): tiempo de ejecucion 14.000000
+[INFO] 13:07:38:099 CPU/(13570:13590): Conexion con KERNEL - Se recibió header 15
+[INFO] 13:07:38:100 CPU/(13570:13590): INTERRUPCION
+[INFO] 13:07:38:100 CPU/(13570:13589): pcb devolvido
+[INFO] 13:07:38:100 CPU/(13570:13589): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 13:07:38:100 CPU/(13570:13590): INTERRUPCION 1
+[INFO] 13:07:38:101 CPU/(13570:13589): Linea 121
+[INFO] 13:07:38:101 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:38:101 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:38:102 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:38:102 CPU/(13570:13589): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 13:07:38:102 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:38:103 CPU/(13570:13589): program counter 2
+[INFO] 13:07:38:103 CPU/(13570:13589): cantidad de instrucciones: 4
+[INFO] 13:07:38:103 CPU/(13570:13589): parametro_instruccion recibido: 3
+[INFO] 13:07:38:103 CPU/(13570:13589): Ejecutando NO_OP.
+[INFO] 13:07:38:104 CPU/(13570:13589): tiempo de sleep 3000
+[INFO] 13:07:42:059 CPU/(13570:13589): Terminó usleep
+[WARNING] 13:07:42:059 CPU/(13570:13589): Condicional: interrupcion == 1
+[INFO] 13:07:42:060 CPU/(13570:13589): DEVOLVIENDO POR INTERRUPCION
+[INFO] 13:07:42:060 CPU/(13570:13589): devolviendo pcb 15 - PID:1
+[INFO] 13:07:42:060 CPU/(13570:13589): tiempo de ejecucion 8.000000
+[INFO] 13:07:42:061 CPU/(13570:13589): pcb devolvido
+[INFO] 13:07:42:061 CPU/(13570:13589): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 13:07:42:062 CPU/(13570:13589): Linea 121
+[INFO] 13:07:42:099 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:42:099 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:42:099 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:42:099 CPU/(13570:13589): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 13:07:42:099 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:42:099 CPU/(13570:13589): program counter 3
+[INFO] 13:07:42:099 CPU/(13570:13589): cantidad de instrucciones: 4
+[INFO] 13:07:42:099 CPU/(13570:13589): Finaliza proceso. EXIT
+[INFO] 13:07:42:099 CPU/(13570:13589): devolviendo pcb 14 - PID:1
+[INFO] 13:07:42:099 CPU/(13570:13589): tiempo de ejecucion 8.000000
+[INFO] 13:07:42:099 CPU/(13570:13589): pcb devolvido
+[INFO] 13:07:42:099 CPU/(13570:13589): Linea 121
+[INFO] 13:07:42:100 CPU/(13570:13590): Conexion con KERNEL - Se recibió header 15
+[INFO] 13:07:42:100 CPU/(13570:13590): INTERRUPCION
+[INFO] 13:07:42:100 CPU/(13570:13590): INTERRUPCION 1
+[INFO] 13:07:42:137 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:42:137 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:42:137 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:42:137 CPU/(13570:13590): Conexion con KERNEL - Se recibió header 15
+[INFO] 13:07:42:137 CPU/(13570:13590): INTERRUPCION
+[INFO] 13:07:42:137 CPU/(13570:13590): INTERRUPCION 1
+[INFO] 13:07:42:180 CPU/(13570:13589): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 13:07:42:180 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:42:180 CPU/(13570:13589): program counter 1
+[INFO] 13:07:42:180 CPU/(13570:13589): cantidad de instrucciones: 2
+[INFO] 13:07:42:180 CPU/(13570:13589): Finaliza proceso. EXIT
+[INFO] 13:07:42:180 CPU/(13570:13589): devolviendo pcb 14 - PID:3
+[INFO] 13:07:42:180 CPU/(13570:13589): tiempo de ejecucion 14.000000
+[INFO] 13:07:42:180 CPU/(13570:13589): pcb devolvido
+[WARNING] 13:07:42:180 CPU/(13570:13589): Condicional: interrupcion == 1
+[INFO] 13:07:42:217 CPU/(13570:13589): Conexion con KERNEL - Se recibió header 16
+[INFO] 13:07:42:217 CPU/(13570:13589): CASE EJECUTAR PROCESO
+[INFO] 13:07:42:217 CPU/(13570:13589): Se recibió pcb del Kernel.
+[INFO] 13:07:42:256 CPU/(13570:13589): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 13:07:42:256 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:42:256 CPU/(13570:13589): program counter 2
+[INFO] 13:07:42:256 CPU/(13570:13589): cantidad de instrucciones: 4
+[INFO] 13:07:42:256 CPU/(13570:13589): parametro_instruccion recibido: 3
+[INFO] 13:07:42:256 CPU/(13570:13589): Ejecutando NO_OP.
+[INFO] 13:07:42:256 CPU/(13570:13589): tiempo de sleep 3000
+[INFO] 13:07:46:240 CPU/(13570:13589): Terminó usleep
+[INFO] 13:07:46:241 CPU/(13570:13589): Linea 121
+[INFO] 13:07:46:241 CPU/(13570:13589): Decode instrucción.
+[INFO] 13:07:46:241 CPU/(13570:13589): program counter 3
+[INFO] 13:07:46:242 CPU/(13570:13589): cantidad de instrucciones: 4
+[INFO] 13:07:46:242 CPU/(13570:13589): Finaliza proceso. EXIT
+[INFO] 13:07:46:242 CPU/(13570:13589): devolviendo pcb 14 - PID:2
+[INFO] 13:07:46:243 CPU/(13570:13589): tiempo de ejecucion 8.000000
+[INFO] 13:07:46:243 CPU/(13570:13589): pcb devolvido
+[INFO] 13:07:46:244 CPU/(13570:13589): Linea 121
+[INFO] 14:30:11:919 CPU/(13570:13590): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:30:11:919 CPU/(13570:13589): Conexion con KERNEL - Se recibió header -74
+[INFO] 14:30:23:187 CPU/(23103:23103): Modulo CPU iniciado
+[INFO] 14:30:23:188 CPU/(23103:23103): Config CPU load
+[INFO] 14:30:23:188 CPU/(23103:23103): Conexión cpu-memoria ok.
+[INFO] 14:30:23:188 CPU/(23103:23103): Request config memoria enviada.
+[INFO] 14:30:23:189 CPU/(23103:23103): Se recibió configuración de memoria.
+[INFO] 14:30:23:189 CPU/(23103:23103): Se creó entrada de tlb 0
+[INFO] 14:30:23:189 CPU/(23103:23103): Se creó entrada de tlb 1
+[INFO] 14:30:23:189 CPU/(23103:23103): Se creó entrada de tlb 2
+[INFO] 14:30:23:189 CPU/(23103:23103): Se creó entrada de tlb 3
+[INFO] 14:30:23:314 CPU/(23103:23107): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:30:23:314 CPU/(23103:23108): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:30:23:315 CPU/(23103:23122): Se conectó Kernel - header 24
+[INFO] 14:30:23:315 CPU/(23103:23123): Se conectó Kernel - header 24
+[INFO] 14:30:24:531 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:30:24:531 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:30:24:531 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:30:24:532 CPU/(23103:23122): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:30:24:532 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:30:24:532 CPU/(23103:23122): program counter 0
+[INFO] 14:30:24:532 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:30:24:532 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:30:24:532 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:30:24:532 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:30:25:577 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:30:25:577 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:30:25:577 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:30:28:479 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:30:28:479 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:30:28:480 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:30:28:480 CPU/(23103:23122): devolviendo pcb 15 - PID:1
+[INFO] 14:30:28:480 CPU/(23103:23122): tiempo de ejecucion 4.000000
+[INFO] 14:30:28:483 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:30:28:483 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:30:28:483 CPU/(23103:23122): pcb devolvido
+[INFO] 14:30:28:483 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:30:28:484 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:30:28:484 CPU/(23103:23122): Linea 121
+[INFO] 14:30:28:484 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:30:28:484 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:30:28:485 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:30:28:485 CPU/(23103:23122): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:30:28:485 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:30:28:486 CPU/(23103:23122): program counter 0
+[INFO] 14:30:28:486 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:30:28:486 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:30:28:487 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:30:28:487 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:30:32:515 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:30:32:515 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:30:32:515 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:30:32:515 CPU/(23103:23122): devolviendo pcb 15 - PID:2
+[INFO] 14:30:32:516 CPU/(23103:23122): tiempo de ejecucion 4.000000
+[INFO] 14:30:32:516 CPU/(23103:23122): pcb devolvido
+[INFO] 14:30:32:516 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:30:32:516 CPU/(23103:23122): Linea 121
+[INFO] 14:30:32:553 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:30:32:553 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:30:32:553 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:30:32:553 CPU/(23103:23122): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:30:32:553 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:30:32:553 CPU/(23103:23122): program counter 1
+[INFO] 14:30:32:553 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:30:32:553 CPU/(23103:23122): PCB se bloquea.
+[INFO] 14:30:32:553 CPU/(23103:23122): Pre devolver PCB.
+[INFO] 14:30:32:553 CPU/(23103:23122): devolviendo pcb 13 - PID:1
+[INFO] 14:30:32:553 CPU/(23103:23122): tiempo de ejecucion 4.000000
+[INFO] 14:30:32:554 CPU/(23103:23122): pcb devolvido
+[INFO] 14:30:32:554 CPU/(23103:23122): Linea 121
+[INFO] 14:30:32:593 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:30:32:593 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:30:32:593 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:30:32:633 CPU/(23103:23122): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:30:32:633 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:30:32:633 CPU/(23103:23122): program counter 1
+[INFO] 14:30:32:633 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:30:32:633 CPU/(23103:23122): PCB se bloquea.
+[INFO] 14:30:32:633 CPU/(23103:23122): Pre devolver PCB.
+[INFO] 14:30:32:633 CPU/(23103:23122): devolviendo pcb 13 - PID:2
+[INFO] 14:30:32:633 CPU/(23103:23122): tiempo de ejecucion 4.000000
+[INFO] 14:30:32:633 CPU/(23103:23122): pcb devolvido
+[INFO] 14:30:32:633 CPU/(23103:23122): Linea 121
+[INFO] 14:30:41:598 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:30:41:598 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:30:41:598 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:30:41:633 CPU/(23103:23122): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:30:41:633 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:30:41:633 CPU/(23103:23122): program counter 0
+[INFO] 14:30:41:633 CPU/(23103:23122): cantidad de instrucciones: 2
+[INFO] 14:30:41:633 CPU/(23103:23122): parametro_instruccion recibido: 10
+[INFO] 14:30:41:633 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:30:41:633 CPU/(23103:23122): tiempo de sleep 10000
+[INFO] 14:30:45:596 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:30:45:596 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:30:45:596 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:30:54:887 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:30:54:888 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:30:54:888 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:30:54:888 CPU/(23103:23122): devolviendo pcb 15 - PID:3
+[INFO] 14:30:54:889 CPU/(23103:23122): tiempo de ejecucion 13.000000
+[INFO] 14:30:54:891 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:30:54:891 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:30:54:891 CPU/(23103:23122): pcb devolvido
+[INFO] 14:30:54:891 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:30:54:892 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:30:54:892 CPU/(23103:23122): Linea 121
+[INFO] 14:30:54:892 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:30:54:892 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:30:54:893 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:30:54:893 CPU/(23103:23122): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:30:54:893 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:30:54:894 CPU/(23103:23122): program counter 2
+[INFO] 14:30:54:894 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:30:54:894 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:30:54:895 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:30:54:895 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:30:58:858 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:30:58:858 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:30:58:861 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:30:58:861 CPU/(23103:23122): devolviendo pcb 15 - PID:1
+[INFO] 14:30:58:862 CPU/(23103:23122): tiempo de ejecucion 8.000000
+[INFO] 14:30:58:862 CPU/(23103:23122): pcb devolvido
+[INFO] 14:30:58:862 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:30:58:862 CPU/(23103:23122): Linea 121
+[INFO] 14:30:58:897 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:30:58:897 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:30:58:897 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:30:58:897 CPU/(23103:23122): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:30:58:897 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:30:58:897 CPU/(23103:23122): program counter 3
+[INFO] 14:30:58:897 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:30:58:897 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:30:58:897 CPU/(23103:23122): devolviendo pcb 14 - PID:1
+[INFO] 14:30:58:897 CPU/(23103:23122): tiempo de ejecucion 8.000000
+[INFO] 14:30:58:897 CPU/(23103:23122): pcb devolvido
+[INFO] 14:30:58:897 CPU/(23103:23122): Linea 121
+[INFO] 14:30:58:897 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:30:58:897 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:30:58:897 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:30:58:940 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:30:58:940 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:30:58:940 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:30:58:940 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:30:58:941 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:30:58:941 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:30:58:976 CPU/(23103:23122): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:30:58:976 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:30:58:976 CPU/(23103:23122): program counter 2
+[INFO] 14:30:58:976 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:30:58:976 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:30:58:976 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:30:58:976 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:31:02:907 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:31:02:907 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:31:02:908 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:31:02:908 CPU/(23103:23122): devolviendo pcb 15 - PID:2
+[INFO] 14:31:02:908 CPU/(23103:23122): tiempo de ejecucion 8.000000
+[INFO] 14:31:02:909 CPU/(23103:23122): pcb devolvido
+[INFO] 14:31:02:909 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:31:02:910 CPU/(23103:23122): Linea 121
+[INFO] 14:31:02:950 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:31:02:950 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:31:02:951 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:31:02:951 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:31:02:951 CPU/(23103:23122): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:31:02:951 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:31:02:951 CPU/(23103:23122): program counter 3
+[INFO] 14:31:02:951 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:31:02:951 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:31:02:951 CPU/(23103:23122): devolviendo pcb 14 - PID:2
+[INFO] 14:31:02:951 CPU/(23103:23122): tiempo de ejecucion 8.000000
+[INFO] 14:31:02:951 CPU/(23103:23122): pcb devolvido
+[INFO] 14:31:02:952 CPU/(23103:23122): Linea 121
+[INFO] 14:31:02:952 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:31:02:952 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:31:02:985 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:31:02:985 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:31:02:985 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:31:03:024 CPU/(23103:23122): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:31:03:024 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:31:03:024 CPU/(23103:23122): program counter 1
+[INFO] 14:31:03:024 CPU/(23103:23122): cantidad de instrucciones: 2
+[INFO] 14:31:03:024 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:31:03:024 CPU/(23103:23122): devolviendo pcb 14 - PID:3
+[INFO] 14:31:03:025 CPU/(23103:23122): tiempo de ejecucion 13.000000
+[INFO] 14:31:03:025 CPU/(23103:23122): pcb devolvido
+[WARNING] 14:31:03:025 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:31:28:321 CPU/(23349:23349): Modulo CPU iniciado
+[INFO] 14:31:28:321 CPU/(23349:23349): Config CPU load
+[INFO] 14:31:28:321 CPU/(23349:23349): Conexión cpu-memoria ok.
+[INFO] 14:31:28:321 CPU/(23349:23349): Request config memoria enviada.
+[INFO] 14:31:28:323 CPU/(23349:23349): Se recibió configuración de memoria.
+[INFO] 14:31:28:323 CPU/(23349:23349): Se creó entrada de tlb 0
+[INFO] 14:31:28:323 CPU/(23349:23349): Se creó entrada de tlb 1
+[INFO] 14:31:28:323 CPU/(23349:23349): Se creó entrada de tlb 2
+[INFO] 14:31:28:323 CPU/(23349:23349): Se creó entrada de tlb 3
+[ERROR] 14:31:28:323 CPU/(23349:23354): Error: Address already in use
+[ERROR] 14:31:28:323 CPU/(23349:23353): Error: Address already in use
+[INFO] 14:31:28:445 CPU/(23103:23107): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:31:28:445 CPU/(23103:23108): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:31:28:447 CPU/(23103:23368): Se conectó Kernel - header 24
+[INFO] 14:31:28:447 CPU/(23103:23369): Se conectó Kernel - header 24
+[INFO] 14:31:28:573 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:31:28:573 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:31:28:573 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:31:28:609 CPU/(23103:23122): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:31:28:609 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:31:28:609 CPU/(23103:23122): program counter 0
+[INFO] 14:31:28:609 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:31:28:609 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:31:28:609 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:31:28:609 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:31:28:704 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:31:28:704 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:31:28:704 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:31:32:943 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:31:32:943 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:31:32:943 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:31:32:943 CPU/(23103:23122): devolviendo pcb 15 - PID:4
+[INFO] 14:31:32:943 CPU/(23103:23122): tiempo de ejecucion 4.000000
+[INFO] 14:31:32:944 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:31:32:944 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:31:32:944 CPU/(23103:23122): pcb devolvido
+[INFO] 14:31:32:944 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:31:32:944 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:31:32:944 CPU/(23103:23122): Linea 121
+[INFO] 14:31:32:944 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:31:32:944 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:31:32:944 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:31:32:945 CPU/(23103:23122): Recibimos PCB con ID:5 y Tabla de páginas 5
+[INFO] 14:31:32:945 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:31:32:945 CPU/(23103:23122): program counter 0
+[INFO] 14:31:32:945 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:31:32:945 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:31:32:945 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:31:32:945 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:31:34:504 CPU/(23103:23369): Conexion con KERNEL - Se recibió header -76
+[INFO] 14:31:34:505 CPU/(23103:23368): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:31:37:016 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:31:37:017 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:31:37:017 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:31:37:017 CPU/(23103:23122): devolviendo pcb 15 - PID:5
+[INFO] 14:31:37:018 CPU/(23103:23122): tiempo de ejecucion 5.000000
+[INFO] 14:31:37:019 CPU/(23103:23122): pcb devolvido
+[INFO] 14:31:37:019 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:31:37:019 CPU/(23103:23122): Linea 121
+[INFO] 14:31:37:057 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:31:37:057 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:31:37:058 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:31:37:058 CPU/(23103:23122): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:31:37:058 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:31:37:058 CPU/(23103:23122): program counter 1
+[INFO] 14:31:37:058 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:31:37:058 CPU/(23103:23122): PCB se bloquea.
+[INFO] 14:31:37:058 CPU/(23103:23122): Pre devolver PCB.
+[INFO] 14:31:37:058 CPU/(23103:23122): devolviendo pcb 13 - PID:4
+[INFO] 14:31:37:058 CPU/(23103:23122): tiempo de ejecucion 4.000000
+[INFO] 14:31:37:058 CPU/(23103:23122): pcb devolvido
+[INFO] 14:31:37:058 CPU/(23103:23122): Linea 121
+[INFO] 14:31:37:098 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:31:37:098 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:31:37:098 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:31:37:136 CPU/(23103:23122): Recibimos PCB con ID:5 y Tabla de páginas 5
+[INFO] 14:31:37:136 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:31:37:136 CPU/(23103:23122): program counter 1
+[INFO] 14:31:37:136 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:31:37:136 CPU/(23103:23122): PCB se bloquea.
+[INFO] 14:31:37:136 CPU/(23103:23122): Pre devolver PCB.
+[INFO] 14:31:37:136 CPU/(23103:23122): devolviendo pcb 13 - PID:5
+[INFO] 14:31:37:136 CPU/(23103:23122): tiempo de ejecucion 5.000000
+[INFO] 14:31:37:136 CPU/(23103:23122): pcb devolvido
+[INFO] 14:31:37:136 CPU/(23103:23122): Linea 121
+[INFO] 14:31:45:101 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:31:45:102 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:31:45:102 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:31:45:136 CPU/(23103:23122): Recibimos PCB con ID:6 y Tabla de páginas 6
+[INFO] 14:31:45:136 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:31:45:136 CPU/(23103:23122): program counter 0
+[INFO] 14:31:45:136 CPU/(23103:23122): cantidad de instrucciones: 2
+[INFO] 14:31:45:136 CPU/(23103:23122): parametro_instruccion recibido: 10
+[INFO] 14:31:45:136 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:31:45:136 CPU/(23103:23122): tiempo de sleep 10000
+[INFO] 14:31:50:101 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:31:50:101 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:31:50:101 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:31:58:458 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:31:58:458 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:31:58:459 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:31:58:459 CPU/(23103:23122): devolviendo pcb 15 - PID:6
+[INFO] 14:31:58:459 CPU/(23103:23122): tiempo de ejecucion 13.000000
+[INFO] 14:31:58:462 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:31:58:462 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:31:58:462 CPU/(23103:23122): pcb devolvido
+[INFO] 14:31:58:462 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:31:58:463 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:31:58:463 CPU/(23103:23122): Linea 121
+[INFO] 14:31:58:463 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:31:58:463 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:31:58:464 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:31:58:464 CPU/(23103:23122): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:31:58:464 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:31:58:465 CPU/(23103:23122): program counter 2
+[INFO] 14:31:58:465 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:31:58:465 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:31:58:466 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:31:58:466 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:32:02:448 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:32:02:449 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:32:02:449 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:32:02:450 CPU/(23103:23122): devolviendo pcb 15 - PID:4
+[INFO] 14:32:02:450 CPU/(23103:23122): tiempo de ejecucion 8.000000
+[INFO] 14:32:02:451 CPU/(23103:23122): pcb devolvido
+[INFO] 14:32:02:451 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:32:02:451 CPU/(23103:23122): Linea 121
+[INFO] 14:32:02:489 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:32:02:489 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:32:02:489 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:32:02:489 CPU/(23103:23122): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:32:02:489 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:02:489 CPU/(23103:23122): program counter 3
+[INFO] 14:32:02:489 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:32:02:489 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:32:02:489 CPU/(23103:23122): devolviendo pcb 14 - PID:4
+[INFO] 14:32:02:489 CPU/(23103:23122): tiempo de ejecucion 8.000000
+[INFO] 14:32:02:489 CPU/(23103:23122): pcb devolvido
+[INFO] 14:32:02:489 CPU/(23103:23122): Linea 121
+[INFO] 14:32:02:532 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:32:02:532 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:32:02:532 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:32:02:532 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:32:02:532 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:32:02:532 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:32:02:568 CPU/(23103:23122): Recibimos PCB con ID:6 y Tabla de páginas 6
+[INFO] 14:32:02:569 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:02:569 CPU/(23103:23122): program counter 1
+[INFO] 14:32:02:569 CPU/(23103:23122): cantidad de instrucciones: 2
+[INFO] 14:32:02:569 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:32:02:569 CPU/(23103:23122): devolviendo pcb 14 - PID:6
+[INFO] 14:32:02:569 CPU/(23103:23122): tiempo de ejecucion 13.000000
+[INFO] 14:32:02:569 CPU/(23103:23122): pcb devolvido
+[WARNING] 14:32:02:569 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:32:02:609 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:32:02:609 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:32:02:609 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:32:02:648 CPU/(23103:23122): Recibimos PCB con ID:5 y Tabla de páginas 5
+[INFO] 14:32:02:648 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:02:648 CPU/(23103:23122): program counter 2
+[INFO] 14:32:02:648 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:32:02:648 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:32:02:648 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:32:02:648 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:32:06:673 CPU/(23103:23122): Terminó usleep
+[INFO] 14:32:06:673 CPU/(23103:23122): Linea 121
+[INFO] 14:32:06:673 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:06:674 CPU/(23103:23122): program counter 3
+[INFO] 14:32:06:674 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:32:06:674 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:32:06:674 CPU/(23103:23122): devolviendo pcb 14 - PID:5
+[INFO] 14:32:06:675 CPU/(23103:23122): tiempo de ejecucion 9.000000
+[INFO] 14:32:06:675 CPU/(23103:23122): pcb devolvido
+[INFO] 14:32:06:675 CPU/(23103:23122): Linea 121
+[INFO] 14:32:33:486 CPU/(23584:23584): Modulo CPU iniciado
+[INFO] 14:32:33:486 CPU/(23584:23584): Config CPU load
+[INFO] 14:32:33:487 CPU/(23584:23584): Conexión cpu-memoria ok.
+[INFO] 14:32:33:487 CPU/(23584:23584): Request config memoria enviada.
+[INFO] 14:32:33:488 CPU/(23584:23584): Se recibió configuración de memoria.
+[INFO] 14:32:33:488 CPU/(23584:23584): Se creó entrada de tlb 0
+[INFO] 14:32:33:488 CPU/(23584:23584): Se creó entrada de tlb 1
+[INFO] 14:32:33:488 CPU/(23584:23584): Se creó entrada de tlb 2
+[INFO] 14:32:33:488 CPU/(23584:23584): Se creó entrada de tlb 3
+[ERROR] 14:32:33:489 CPU/(23584:23589): Error: Address already in use
+[ERROR] 14:32:33:489 CPU/(23584:23588): Error: Address already in use
+[INFO] 14:32:33:611 CPU/(23103:23107): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:32:33:611 CPU/(23103:23108): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:32:33:617 CPU/(23103:23602): Se conectó Kernel - header 24
+[INFO] 14:32:33:617 CPU/(23103:23603): Se conectó Kernel - header 24
+[INFO] 14:32:33:752 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:32:33:752 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:32:33:752 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:32:33:752 CPU/(23103:23122): Recibimos PCB con ID:7 y Tabla de páginas 7
+[INFO] 14:32:33:752 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:33:752 CPU/(23103:23122): program counter 0
+[INFO] 14:32:33:752 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:32:33:752 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:32:33:752 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:32:33:752 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:32:33:881 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:32:33:881 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:32:33:881 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:32:38:006 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:32:38:006 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:32:38:007 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:32:38:007 CPU/(23103:23122): devolviendo pcb 15 - PID:7
+[INFO] 14:32:38:008 CPU/(23103:23122): tiempo de ejecucion 5.000000
+[INFO] 14:32:38:010 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:32:38:010 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:32:38:010 CPU/(23103:23122): pcb devolvido
+[INFO] 14:32:38:011 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:32:38:011 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:32:38:011 CPU/(23103:23122): Linea 121
+[INFO] 14:32:38:012 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:32:38:012 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:32:38:012 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:32:38:013 CPU/(23103:23122): Recibimos PCB con ID:8 y Tabla de páginas 8
+[INFO] 14:32:38:013 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:38:014 CPU/(23103:23122): program counter 0
+[INFO] 14:32:38:014 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:32:38:014 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:32:38:014 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:32:38:015 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:32:41:342 CPU/(23103:23603): Conexion con KERNEL - Se recibió header -76
+[INFO] 14:32:41:342 CPU/(23103:23602): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:32:42:014 CPU/(23103:23122): Terminó usleep
+[WARNING] 14:32:42:015 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:32:42:015 CPU/(23103:23122): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:32:42:015 CPU/(23103:23122): devolviendo pcb 15 - PID:8
+[INFO] 14:32:42:015 CPU/(23103:23122): tiempo de ejecucion 4.000000
+[INFO] 14:32:42:015 CPU/(23103:23122): pcb devolvido
+[INFO] 14:32:42:015 CPU/(23103:23122): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:32:42:015 CPU/(23103:23122): Linea 121
+[INFO] 14:32:42:054 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:32:42:054 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:32:42:054 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:32:42:054 CPU/(23103:23122): Recibimos PCB con ID:7 y Tabla de páginas 7
+[INFO] 14:32:42:055 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:42:055 CPU/(23103:23122): program counter 1
+[INFO] 14:32:42:055 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:32:42:055 CPU/(23103:23122): PCB se bloquea.
+[INFO] 14:32:42:055 CPU/(23103:23122): Pre devolver PCB.
+[INFO] 14:32:42:055 CPU/(23103:23122): devolviendo pcb 13 - PID:7
+[INFO] 14:32:42:055 CPU/(23103:23122): tiempo de ejecucion 5.000000
+[INFO] 14:32:42:055 CPU/(23103:23122): pcb devolvido
+[INFO] 14:32:42:055 CPU/(23103:23122): Linea 121
+[INFO] 14:32:42:056 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:32:42:056 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:32:42:056 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:32:50:111 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:32:50:111 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:32:50:111 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:32:50:160 CPU/(23103:23122): Recibimos PCB con ID:8 y Tabla de páginas 8
+[INFO] 14:32:50:161 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:50:161 CPU/(23103:23122): program counter 1
+[INFO] 14:32:50:161 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:32:50:161 CPU/(23103:23122): PCB se bloquea.
+[INFO] 14:32:50:161 CPU/(23103:23122): Pre devolver PCB.
+[INFO] 14:32:50:161 CPU/(23103:23122): devolviendo pcb 13 - PID:8
+[INFO] 14:32:50:161 CPU/(23103:23122): tiempo de ejecucion 4.000000
+[INFO] 14:32:50:161 CPU/(23103:23122): pcb devolvido
+[WARNING] 14:32:50:161 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:32:58:165 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:32:58:165 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:32:58:165 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:32:58:207 CPU/(23103:23122): Recibimos PCB con ID:7 y Tabla de páginas 7
+[INFO] 14:32:58:207 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:32:58:207 CPU/(23103:23122): program counter 2
+[INFO] 14:32:58:207 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:32:58:207 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:32:58:208 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:32:58:208 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:33:02:174 CPU/(23103:23122): Terminó usleep
+[INFO] 14:33:02:174 CPU/(23103:23122): Linea 121
+[INFO] 14:33:02:175 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:33:02:175 CPU/(23103:23122): program counter 3
+[INFO] 14:33:02:175 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:33:02:176 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:33:02:176 CPU/(23103:23122): devolviendo pcb 14 - PID:7
+[INFO] 14:33:02:176 CPU/(23103:23122): tiempo de ejecucion 9.000000
+[INFO] 14:33:02:179 CPU/(23103:23123): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:33:02:179 CPU/(23103:23123): INTERRUPCION
+[INFO] 14:33:02:179 CPU/(23103:23123): INTERRUPCION 1
+[INFO] 14:33:02:190 CPU/(23103:23122): pcb devolvido
+[WARNING] 14:33:02:190 CPU/(23103:23122): Condicional: interrupcion == 1
+[INFO] 14:33:02:190 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:33:02:190 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:33:02:190 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:33:02:190 CPU/(23103:23122): Recibimos PCB con ID:8 y Tabla de páginas 8
+[INFO] 14:33:02:190 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:33:02:191 CPU/(23103:23122): program counter 2
+[INFO] 14:33:02:191 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:33:02:191 CPU/(23103:23122): parametro_instruccion recibido: 3
+[INFO] 14:33:02:191 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:33:02:191 CPU/(23103:23122): tiempo de sleep 3000
+[INFO] 14:33:06:201 CPU/(23103:23122): Terminó usleep
+[INFO] 14:33:06:202 CPU/(23103:23122): Linea 121
+[INFO] 14:33:06:202 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:33:06:203 CPU/(23103:23122): program counter 3
+[INFO] 14:33:06:203 CPU/(23103:23122): cantidad de instrucciones: 4
+[INFO] 14:33:06:203 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:33:06:203 CPU/(23103:23122): devolviendo pcb 14 - PID:8
+[INFO] 14:33:06:204 CPU/(23103:23122): tiempo de ejecucion 8.000000
+[INFO] 14:33:06:217 CPU/(23103:23122): pcb devolvido
+[INFO] 14:33:06:217 CPU/(23103:23122): Linea 121
+[INFO] 14:33:06:217 CPU/(23103:23122): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:33:06:218 CPU/(23103:23122): CASE EJECUTAR PROCESO
+[INFO] 14:33:06:218 CPU/(23103:23122): Se recibió pcb del Kernel.
+[INFO] 14:33:06:247 CPU/(23103:23122): Recibimos PCB con ID:9 y Tabla de páginas 9
+[INFO] 14:33:06:247 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:33:06:247 CPU/(23103:23122): program counter 0
+[INFO] 14:33:06:247 CPU/(23103:23122): cantidad de instrucciones: 2
+[INFO] 14:33:06:247 CPU/(23103:23122): parametro_instruccion recibido: 10
+[INFO] 14:33:06:247 CPU/(23103:23122): Ejecutando NO_OP.
+[INFO] 14:33:06:247 CPU/(23103:23122): tiempo de sleep 10000
+[INFO] 14:33:19:501 CPU/(23103:23122): Terminó usleep
+[INFO] 14:33:19:502 CPU/(23103:23122): Linea 121
+[INFO] 14:33:19:502 CPU/(23103:23122): Decode instrucción.
+[INFO] 14:33:19:502 CPU/(23103:23122): program counter 1
+[INFO] 14:33:19:503 CPU/(23103:23122): cantidad de instrucciones: 2
+[INFO] 14:33:19:503 CPU/(23103:23122): Finaliza proceso. EXIT
+[INFO] 14:33:19:503 CPU/(23103:23122): devolviendo pcb 14 - PID:9
+[INFO] 14:33:19:504 CPU/(23103:23122): tiempo de ejecucion 13.000000
+[INFO] 14:33:19:504 CPU/(23103:23122): pcb devolvido
+[INFO] 14:33:19:505 CPU/(23103:23122): Linea 121
+[INFO] 14:35:49:834 CPU/(24071:24071): Modulo CPU iniciado
+[INFO] 14:35:49:835 CPU/(24071:24071): Config CPU load
+[INFO] 14:35:49:835 CPU/(24071:24071): Conexión cpu-memoria ok.
+[INFO] 14:35:49:835 CPU/(24071:24071): Request config memoria enviada.
+[INFO] 14:35:49:836 CPU/(24071:24071): Se recibió configuración de memoria.
+[INFO] 14:35:49:836 CPU/(24071:24071): Se creó entrada de tlb 0
+[INFO] 14:35:49:837 CPU/(24071:24071): Se creó entrada de tlb 1
+[INFO] 14:35:49:837 CPU/(24071:24071): Se creó entrada de tlb 2
+[INFO] 14:35:49:837 CPU/(24071:24071): Se creó entrada de tlb 3
+[INFO] 14:35:49:969 CPU/(24071:24075): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:35:49:969 CPU/(24071:24076): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:35:49:970 CPU/(24071:24089): Se conectó Kernel - header 24
+[INFO] 14:35:49:970 CPU/(24071:24090): Se conectó Kernel - header 24
+[INFO] 14:35:51:109 CPU/(24071:24089): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:35:51:109 CPU/(24071:24089): CASE EJECUTAR PROCESO
+[INFO] 14:35:51:109 CPU/(24071:24089): Se recibió pcb del Kernel.
+[INFO] 14:35:51:109 CPU/(24071:24089): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:35:51:109 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:35:51:109 CPU/(24071:24089): program counter 0
+[INFO] 14:35:51:109 CPU/(24071:24089): cantidad de instrucciones: 4
+[INFO] 14:35:51:110 CPU/(24071:24089): parametro_instruccion recibido: 3
+[INFO] 14:35:51:110 CPU/(24071:24089): Ejecutando NO_OP.
+[INFO] 14:35:51:110 CPU/(24071:24089): tiempo de sleep 3000
+[INFO] 14:35:52:161 CPU/(24071:24090): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:35:52:161 CPU/(24071:24090): INTERRUPCION
+[INFO] 14:35:52:161 CPU/(24071:24090): INTERRUPCION 1
+[INFO] 14:35:55:081 CPU/(24071:24089): Terminó usleep
+[WARNING] 14:35:55:082 CPU/(24071:24089): Condicional: interrupcion == 1
+[INFO] 14:35:55:082 CPU/(24071:24089): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:35:55:083 CPU/(24071:24089): devolviendo pcb 15 - PID:1
+[INFO] 14:35:55:083 CPU/(24071:24089): tiempo de ejecucion 4.000000
+[INFO] 14:35:55:086 CPU/(24071:24090): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:35:55:086 CPU/(24071:24090): INTERRUPCION
+[INFO] 14:35:55:086 CPU/(24071:24089): pcb devolvido
+[INFO] 14:35:55:086 CPU/(24071:24089): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:35:55:087 CPU/(24071:24090): INTERRUPCION 1
+[INFO] 14:35:55:087 CPU/(24071:24089): Linea 121
+[INFO] 14:35:55:087 CPU/(24071:24089): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:35:55:088 CPU/(24071:24089): CASE EJECUTAR PROCESO
+[INFO] 14:35:55:088 CPU/(24071:24089): Se recibió pcb del Kernel.
+[INFO] 14:35:55:088 CPU/(24071:24089): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:35:55:088 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:35:55:089 CPU/(24071:24089): program counter 0
+[INFO] 14:35:55:089 CPU/(24071:24089): cantidad de instrucciones: 4
+[INFO] 14:35:55:089 CPU/(24071:24089): parametro_instruccion recibido: 3
+[INFO] 14:35:55:090 CPU/(24071:24089): Ejecutando NO_OP.
+[INFO] 14:35:55:090 CPU/(24071:24089): tiempo de sleep 3000
+[INFO] 14:35:59:034 CPU/(24071:24089): Terminó usleep
+[WARNING] 14:35:59:034 CPU/(24071:24089): Condicional: interrupcion == 1
+[INFO] 14:35:59:035 CPU/(24071:24089): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:35:59:035 CPU/(24071:24089): devolviendo pcb 15 - PID:2
+[INFO] 14:35:59:035 CPU/(24071:24089): tiempo de ejecucion 4.000000
+[INFO] 14:35:59:036 CPU/(24071:24089): pcb devolvido
+[INFO] 14:35:59:036 CPU/(24071:24089): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:35:59:037 CPU/(24071:24089): Linea 121
+[INFO] 14:35:59:074 CPU/(24071:24089): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:35:59:075 CPU/(24071:24090): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:35:59:075 CPU/(24071:24089): CASE EJECUTAR PROCESO
+[INFO] 14:35:59:075 CPU/(24071:24089): Se recibió pcb del Kernel.
+[INFO] 14:35:59:075 CPU/(24071:24089): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:35:59:075 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:35:59:075 CPU/(24071:24089): program counter 1
+[INFO] 14:35:59:075 CPU/(24071:24089): cantidad de instrucciones: 4
+[INFO] 14:35:59:075 CPU/(24071:24089): PCB se bloquea.
+[INFO] 14:35:59:075 CPU/(24071:24089): Pre devolver PCB.
+[INFO] 14:35:59:075 CPU/(24071:24089): devolviendo pcb 13 - PID:1
+[INFO] 14:35:59:075 CPU/(24071:24089): tiempo de ejecucion 4.000000
+[INFO] 14:35:59:076 CPU/(24071:24089): pcb devolvido
+[INFO] 14:35:59:076 CPU/(24071:24089): Linea 121
+[INFO] 14:35:59:076 CPU/(24071:24090): INTERRUPCION
+[INFO] 14:35:59:076 CPU/(24071:24090): INTERRUPCION 1
+[INFO] 14:36:08:117 CPU/(24071:24089): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:36:08:117 CPU/(24071:24089): CASE EJECUTAR PROCESO
+[INFO] 14:36:08:117 CPU/(24071:24089): Se recibió pcb del Kernel.
+[INFO] 14:36:08:157 CPU/(24071:24089): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:36:08:157 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:36:08:157 CPU/(24071:24089): program counter 1
+[INFO] 14:36:08:157 CPU/(24071:24089): cantidad de instrucciones: 4
+[INFO] 14:36:08:157 CPU/(24071:24089): PCB se bloquea.
+[INFO] 14:36:08:158 CPU/(24071:24089): Pre devolver PCB.
+[INFO] 14:36:08:158 CPU/(24071:24089): devolviendo pcb 13 - PID:2
+[INFO] 14:36:08:158 CPU/(24071:24089): tiempo de ejecucion 4.000000
+[INFO] 14:36:08:158 CPU/(24071:24089): pcb devolvido
+[WARNING] 14:36:08:158 CPU/(24071:24089): Condicional: interrupcion == 1
+[INFO] 14:36:16:163 CPU/(24071:24089): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:36:16:163 CPU/(24071:24089): CASE EJECUTAR PROCESO
+[INFO] 14:36:16:163 CPU/(24071:24089): Se recibió pcb del Kernel.
+[INFO] 14:36:16:204 CPU/(24071:24089): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:36:16:204 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:36:16:204 CPU/(24071:24089): program counter 2
+[INFO] 14:36:16:204 CPU/(24071:24089): cantidad de instrucciones: 4
+[INFO] 14:36:16:204 CPU/(24071:24089): parametro_instruccion recibido: 3
+[INFO] 14:36:16:204 CPU/(24071:24089): Ejecutando NO_OP.
+[INFO] 14:36:16:204 CPU/(24071:24089): tiempo de sleep 3000
+[INFO] 14:36:20:163 CPU/(24071:24089): Terminó usleep
+[INFO] 14:36:20:164 CPU/(24071:24089): Linea 121
+[INFO] 14:36:20:164 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:36:20:164 CPU/(24071:24089): program counter 3
+[INFO] 14:36:20:165 CPU/(24071:24089): cantidad de instrucciones: 4
+[INFO] 14:36:20:165 CPU/(24071:24089): Finaliza proceso. EXIT
+[INFO] 14:36:20:165 CPU/(24071:24089): devolviendo pcb 14 - PID:1
+[INFO] 14:36:20:166 CPU/(24071:24089): tiempo de ejecucion 8.000000
+[INFO] 14:36:20:169 CPU/(24071:24090): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:36:20:169 CPU/(24071:24090): INTERRUPCION
+[INFO] 14:36:20:169 CPU/(24071:24090): INTERRUPCION 1
+[INFO] 14:36:20:181 CPU/(24071:24089): pcb devolvido
+[WARNING] 14:36:20:181 CPU/(24071:24089): Condicional: interrupcion == 1
+[INFO] 14:36:20:181 CPU/(24071:24089): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:36:20:182 CPU/(24071:24089): CASE EJECUTAR PROCESO
+[INFO] 14:36:20:182 CPU/(24071:24089): Se recibió pcb del Kernel.
+[INFO] 14:36:20:182 CPU/(24071:24089): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:36:20:182 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:36:20:182 CPU/(24071:24089): program counter 2
+[INFO] 14:36:20:182 CPU/(24071:24089): cantidad de instrucciones: 4
+[INFO] 14:36:20:182 CPU/(24071:24089): parametro_instruccion recibido: 3
+[INFO] 14:36:20:182 CPU/(24071:24089): Ejecutando NO_OP.
+[INFO] 14:36:20:182 CPU/(24071:24089): tiempo de sleep 3000
+[INFO] 14:36:24:142 CPU/(24071:24089): Terminó usleep
+[INFO] 14:36:24:143 CPU/(24071:24089): Linea 121
+[INFO] 14:36:24:143 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:36:24:143 CPU/(24071:24089): program counter 3
+[INFO] 14:36:24:143 CPU/(24071:24089): cantidad de instrucciones: 4
+[INFO] 14:36:24:144 CPU/(24071:24089): Finaliza proceso. EXIT
+[INFO] 14:36:24:144 CPU/(24071:24089): devolviendo pcb 14 - PID:2
+[INFO] 14:36:24:144 CPU/(24071:24089): tiempo de ejecucion 8.000000
+[INFO] 14:36:24:160 CPU/(24071:24089): pcb devolvido
+[INFO] 14:36:24:160 CPU/(24071:24089): Linea 121
+[INFO] 14:36:24:160 CPU/(24071:24089): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:36:24:160 CPU/(24071:24089): CASE EJECUTAR PROCESO
+[INFO] 14:36:24:160 CPU/(24071:24089): Se recibió pcb del Kernel.
+[INFO] 14:36:24:186 CPU/(24071:24089): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:36:24:186 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:36:24:186 CPU/(24071:24089): program counter 0
+[INFO] 14:36:24:187 CPU/(24071:24089): cantidad de instrucciones: 2
+[INFO] 14:36:24:187 CPU/(24071:24089): parametro_instruccion recibido: 10
+[INFO] 14:36:24:187 CPU/(24071:24089): Ejecutando NO_OP.
+[INFO] 14:36:24:187 CPU/(24071:24089): tiempo de sleep 10000
+[INFO] 14:36:37:428 CPU/(24071:24089): Terminó usleep
+[INFO] 14:36:37:429 CPU/(24071:24089): Linea 121
+[INFO] 14:36:37:429 CPU/(24071:24089): Decode instrucción.
+[INFO] 14:36:37:429 CPU/(24071:24089): program counter 1
+[INFO] 14:36:37:430 CPU/(24071:24089): cantidad de instrucciones: 2
+[INFO] 14:36:37:430 CPU/(24071:24089): Finaliza proceso. EXIT
+[INFO] 14:36:37:430 CPU/(24071:24089): devolviendo pcb 14 - PID:3
+[INFO] 14:36:37:431 CPU/(24071:24089): tiempo de ejecucion 13.000000
+[INFO] 14:36:37:431 CPU/(24071:24089): pcb devolvido
+[INFO] 14:36:37:432 CPU/(24071:24089): Linea 121
+[INFO] 14:39:18:291 CPU/(24071:24090): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:39:18:291 CPU/(24071:24089): Conexion con KERNEL - Se recibió header -74
+[INFO] 14:40:22:898 CPU/(24682:24682): Modulo CPU iniciado
+[INFO] 14:40:22:898 CPU/(24682:24682): Config CPU load
+[INFO] 14:40:22:898 CPU/(24682:24682): Conexión cpu-memoria ok.
+[INFO] 14:40:22:898 CPU/(24682:24682): Request config memoria enviada.
+[INFO] 14:40:22:899 CPU/(24682:24682): Se recibió configuración de memoria.
+[INFO] 14:40:22:899 CPU/(24682:24682): Se creó entrada de tlb 0
+[INFO] 14:40:22:900 CPU/(24682:24682): Se creó entrada de tlb 1
+[INFO] 14:40:22:900 CPU/(24682:24682): Se creó entrada de tlb 2
+[INFO] 14:40:22:900 CPU/(24682:24682): Se creó entrada de tlb 3
+[INFO] 14:40:23:045 CPU/(24682:24686): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:40:23:045 CPU/(24682:24687): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:40:23:047 CPU/(24682:24700): Se conectó Kernel - header 24
+[INFO] 14:40:23:047 CPU/(24682:24701): Se conectó Kernel - header 24
+[INFO] 14:40:24:210 CPU/(24682:24700): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:40:24:210 CPU/(24682:24700): CASE EJECUTAR PROCESO
+[INFO] 14:40:24:210 CPU/(24682:24700): Se recibió pcb del Kernel.
+[INFO] 14:40:24:211 CPU/(24682:24700): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:40:24:211 CPU/(24682:24700): Decode instrucción.
+[INFO] 14:40:24:211 CPU/(24682:24700): program counter 0
+[INFO] 14:40:24:211 CPU/(24682:24700): cantidad de instrucciones: 4
+[INFO] 14:40:24:211 CPU/(24682:24700): parametro_instruccion recibido: 5
+[INFO] 14:40:24:211 CPU/(24682:24700): Ejecutando NO_OP.
+[INFO] 14:40:24:211 CPU/(24682:24700): tiempo de sleep 5000
+[INFO] 14:40:30:904 CPU/(24682:24700): Terminó usleep
+[INFO] 14:40:30:904 CPU/(24682:24700): Linea 121
+[INFO] 14:40:30:904 CPU/(24682:24700): Decode instrucción.
+[INFO] 14:40:30:905 CPU/(24682:24700): program counter 1
+[INFO] 14:40:30:905 CPU/(24682:24700): cantidad de instrucciones: 4
+[INFO] 14:40:30:905 CPU/(24682:24700): PCB se bloquea.
+[INFO] 14:40:30:906 CPU/(24682:24700): Pre devolver PCB.
+[INFO] 14:40:30:906 CPU/(24682:24700): devolviendo pcb 13 - PID:1
+[INFO] 14:40:30:906 CPU/(24682:24700): tiempo de ejecucion 6.000000
+[INFO] 14:40:30:908 CPU/(24682:24700): pcb devolvido
+[INFO] 14:40:30:909 CPU/(24682:24700): Linea 121
+[INFO] 14:40:30:909 CPU/(24682:24700): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:40:30:909 CPU/(24682:24700): CASE EJECUTAR PROCESO
+[INFO] 14:40:30:910 CPU/(24682:24700): Se recibió pcb del Kernel.
+[INFO] 14:40:30:910 CPU/(24682:24700): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:40:30:910 CPU/(24682:24700): Decode instrucción.
+[INFO] 14:40:30:911 CPU/(24682:24700): program counter 0
+[INFO] 14:40:30:911 CPU/(24682:24700): cantidad de instrucciones: 2
+[INFO] 14:40:30:911 CPU/(24682:24700): parametro_instruccion recibido: 5
+[INFO] 14:40:30:912 CPU/(24682:24700): Ejecutando NO_OP.
+[INFO] 14:40:30:912 CPU/(24682:24700): tiempo de sleep 5000
+[INFO] 14:40:37:590 CPU/(24682:24700): Terminó usleep
+[INFO] 14:40:37:591 CPU/(24682:24700): Linea 121
+[INFO] 14:40:37:591 CPU/(24682:24700): Decode instrucción.
+[INFO] 14:40:37:592 CPU/(24682:24700): program counter 1
+[INFO] 14:40:37:592 CPU/(24682:24700): cantidad de instrucciones: 2
+[INFO] 14:40:37:592 CPU/(24682:24700): Finaliza proceso. EXIT
+[INFO] 14:40:37:593 CPU/(24682:24700): devolviendo pcb 14 - PID:2
+[INFO] 14:40:37:593 CPU/(24682:24700): tiempo de ejecucion 7.000000
+[INFO] 14:40:37:594 CPU/(24682:24700): pcb devolvido
+[INFO] 14:40:37:594 CPU/(24682:24700): Linea 121
+[INFO] 14:40:37:629 CPU/(24682:24700): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:40:37:629 CPU/(24682:24700): CASE EJECUTAR PROCESO
+[INFO] 14:40:37:629 CPU/(24682:24700): Se recibió pcb del Kernel.
+[INFO] 14:40:37:629 CPU/(24682:24700): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:40:37:629 CPU/(24682:24700): Decode instrucción.
+[INFO] 14:40:37:629 CPU/(24682:24700): program counter 0
+[INFO] 14:40:37:629 CPU/(24682:24700): cantidad de instrucciones: 2
+[INFO] 14:40:37:629 CPU/(24682:24700): parametro_instruccion recibido: 5
+[INFO] 14:40:37:629 CPU/(24682:24700): Ejecutando NO_OP.
+[INFO] 14:40:37:629 CPU/(24682:24700): tiempo de sleep 5000
+[INFO] 14:40:44:194 CPU/(24682:24700): Terminó usleep
+[INFO] 14:40:44:195 CPU/(24682:24700): Linea 121
+[INFO] 14:40:44:195 CPU/(24682:24700): Decode instrucción.
+[INFO] 14:40:44:195 CPU/(24682:24700): program counter 1
+[INFO] 14:40:44:196 CPU/(24682:24700): cantidad de instrucciones: 2
+[INFO] 14:40:44:196 CPU/(24682:24700): Finaliza proceso. EXIT
+[INFO] 14:40:44:196 CPU/(24682:24700): devolviendo pcb 14 - PID:3
+[INFO] 14:40:44:196 CPU/(24682:24700): tiempo de ejecucion 7.000000
+[INFO] 14:40:44:197 CPU/(24682:24700): pcb devolvido
+[INFO] 14:40:44:198 CPU/(24682:24700): Linea 121
+[INFO] 14:40:44:234 CPU/(24682:24700): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:40:44:235 CPU/(24682:24700): CASE EJECUTAR PROCESO
+[INFO] 14:40:44:235 CPU/(24682:24700): Se recibió pcb del Kernel.
+[INFO] 14:40:44:235 CPU/(24682:24700): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:40:44:235 CPU/(24682:24700): Decode instrucción.
+[INFO] 14:40:44:235 CPU/(24682:24700): program counter 2
+[INFO] 14:40:44:235 CPU/(24682:24700): cantidad de instrucciones: 4
+[INFO] 14:40:44:235 CPU/(24682:24700): parametro_instruccion recibido: 3
+[INFO] 14:40:44:235 CPU/(24682:24700): Ejecutando NO_OP.
+[INFO] 14:40:44:235 CPU/(24682:24700): tiempo de sleep 3000
+[INFO] 14:40:48:200 CPU/(24682:24700): Terminó usleep
+[INFO] 14:40:48:201 CPU/(24682:24700): Linea 121
+[INFO] 14:40:48:201 CPU/(24682:24700): Decode instrucción.
+[INFO] 14:40:48:201 CPU/(24682:24700): program counter 3
+[INFO] 14:40:48:201 CPU/(24682:24700): cantidad de instrucciones: 4
+[INFO] 14:40:48:202 CPU/(24682:24700): Finaliza proceso. EXIT
+[INFO] 14:40:48:202 CPU/(24682:24700): devolviendo pcb 14 - PID:1
+[INFO] 14:40:48:202 CPU/(24682:24700): tiempo de ejecucion 10.000000
+[INFO] 14:40:48:203 CPU/(24682:24700): pcb devolvido
+[INFO] 14:40:48:203 CPU/(24682:24700): Linea 121
+[INFO] 14:41:23:847 CPU/(24682:24701): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:41:23:847 CPU/(24682:24700): Conexion con KERNEL - Se recibió header -74
+[INFO] 14:41:49:235 CPU/(24918:24918): Modulo CPU iniciado
+[INFO] 14:41:49:235 CPU/(24918:24918): Config CPU load
+[INFO] 14:41:49:235 CPU/(24918:24918): Conexión cpu-memoria ok.
+[INFO] 14:41:49:235 CPU/(24918:24918): Request config memoria enviada.
+[INFO] 14:41:49:237 CPU/(24918:24918): Se recibió configuración de memoria.
+[INFO] 14:41:49:237 CPU/(24918:24918): Se creó entrada de tlb 0
+[INFO] 14:41:49:237 CPU/(24918:24918): Se creó entrada de tlb 1
+[INFO] 14:41:49:237 CPU/(24918:24918): Se creó entrada de tlb 2
+[INFO] 14:41:49:237 CPU/(24918:24918): Se creó entrada de tlb 3
+[INFO] 14:41:49:367 CPU/(24918:24922): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:41:49:367 CPU/(24918:24923): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:41:49:368 CPU/(24918:24936): Se conectó Kernel - header 24
+[INFO] 14:41:49:368 CPU/(24918:24937): Se conectó Kernel - header 24
+[INFO] 14:41:50:510 CPU/(24918:24936): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:41:50:510 CPU/(24918:24936): CASE EJECUTAR PROCESO
+[INFO] 14:41:50:510 CPU/(24918:24936): Se recibió pcb del Kernel.
+[INFO] 14:41:50:510 CPU/(24918:24936): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:41:50:510 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:41:50:511 CPU/(24918:24936): program counter 0
+[INFO] 14:41:50:511 CPU/(24918:24936): cantidad de instrucciones: 4
+[INFO] 14:41:50:511 CPU/(24918:24936): parametro_instruccion recibido: 3
+[INFO] 14:41:50:511 CPU/(24918:24936): Ejecutando NO_OP.
+[INFO] 14:41:50:511 CPU/(24918:24936): tiempo de sleep 3000
+[INFO] 14:41:54:564 CPU/(24918:24936): Terminó usleep
+[INFO] 14:41:54:565 CPU/(24918:24936): Linea 121
+[INFO] 14:41:54:565 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:41:54:565 CPU/(24918:24936): program counter 1
+[INFO] 14:41:54:566 CPU/(24918:24936): cantidad de instrucciones: 4
+[INFO] 14:41:54:566 CPU/(24918:24936): PCB se bloquea.
+[INFO] 14:41:54:566 CPU/(24918:24936): Pre devolver PCB.
+[INFO] 14:41:54:567 CPU/(24918:24936): devolviendo pcb 13 - PID:1
+[INFO] 14:41:54:567 CPU/(24918:24936): tiempo de ejecucion 4.000000
+[INFO] 14:41:54:569 CPU/(24918:24936): pcb devolvido
+[INFO] 14:41:54:569 CPU/(24918:24936): Linea 121
+[INFO] 14:41:54:570 CPU/(24918:24936): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:41:54:570 CPU/(24918:24936): CASE EJECUTAR PROCESO
+[INFO] 14:41:54:570 CPU/(24918:24936): Se recibió pcb del Kernel.
+[INFO] 14:41:54:571 CPU/(24918:24936): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:41:54:571 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:41:54:571 CPU/(24918:24936): program counter 0
+[INFO] 14:41:54:572 CPU/(24918:24936): cantidad de instrucciones: 4
+[INFO] 14:41:54:572 CPU/(24918:24936): parametro_instruccion recibido: 3
+[INFO] 14:41:54:572 CPU/(24918:24936): Ejecutando NO_OP.
+[INFO] 14:41:54:572 CPU/(24918:24936): tiempo de sleep 3000
+[INFO] 14:41:58:560 CPU/(24918:24936): Terminó usleep
+[INFO] 14:41:58:561 CPU/(24918:24936): Linea 121
+[INFO] 14:41:58:561 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:41:58:561 CPU/(24918:24936): program counter 1
+[INFO] 14:41:58:562 CPU/(24918:24936): cantidad de instrucciones: 4
+[INFO] 14:41:58:562 CPU/(24918:24936): PCB se bloquea.
+[INFO] 14:41:58:562 CPU/(24918:24936): Pre devolver PCB.
+[INFO] 14:41:58:563 CPU/(24918:24936): devolviendo pcb 13 - PID:2
+[INFO] 14:41:58:563 CPU/(24918:24936): tiempo de ejecucion 4.000000
+[INFO] 14:41:58:564 CPU/(24918:24936): pcb devolvido
+[INFO] 14:41:58:564 CPU/(24918:24936): Linea 121
+[INFO] 14:41:58:602 CPU/(24918:24936): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:41:58:602 CPU/(24918:24936): CASE EJECUTAR PROCESO
+[INFO] 14:41:58:602 CPU/(24918:24936): Se recibió pcb del Kernel.
+[INFO] 14:41:58:602 CPU/(24918:24936): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:41:58:602 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:41:58:602 CPU/(24918:24936): program counter 0
+[INFO] 14:41:58:602 CPU/(24918:24936): cantidad de instrucciones: 2
+[INFO] 14:41:58:602 CPU/(24918:24936): parametro_instruccion recibido: 10
+[INFO] 14:41:58:602 CPU/(24918:24936): Ejecutando NO_OP.
+[INFO] 14:41:58:603 CPU/(24918:24936): tiempo de sleep 10000
+[INFO] 14:42:11:852 CPU/(24918:24936): Terminó usleep
+[INFO] 14:42:11:853 CPU/(24918:24936): Linea 121
+[INFO] 14:42:11:853 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:42:11:853 CPU/(24918:24936): program counter 1
+[INFO] 14:42:11:854 CPU/(24918:24936): cantidad de instrucciones: 2
+[INFO] 14:42:11:854 CPU/(24918:24936): Finaliza proceso. EXIT
+[INFO] 14:42:11:854 CPU/(24918:24936): devolviendo pcb 14 - PID:3
+[INFO] 14:42:11:855 CPU/(24918:24936): tiempo de ejecucion 13.000000
+[INFO] 14:42:11:856 CPU/(24918:24936): pcb devolvido
+[INFO] 14:42:11:856 CPU/(24918:24936): Linea 121
+[INFO] 14:42:11:893 CPU/(24918:24936): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:42:11:893 CPU/(24918:24936): CASE EJECUTAR PROCESO
+[INFO] 14:42:11:893 CPU/(24918:24936): Se recibió pcb del Kernel.
+[INFO] 14:42:11:893 CPU/(24918:24936): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:42:11:894 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:42:11:894 CPU/(24918:24936): program counter 2
+[INFO] 14:42:11:894 CPU/(24918:24936): cantidad de instrucciones: 4
+[INFO] 14:42:11:894 CPU/(24918:24936): parametro_instruccion recibido: 3
+[INFO] 14:42:11:894 CPU/(24918:24936): Ejecutando NO_OP.
+[INFO] 14:42:11:894 CPU/(24918:24936): tiempo de sleep 3000
+[INFO] 14:42:15:914 CPU/(24918:24936): Terminó usleep
+[INFO] 14:42:15:914 CPU/(24918:24936): Linea 121
+[INFO] 14:42:15:915 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:42:15:915 CPU/(24918:24936): program counter 3
+[INFO] 14:42:15:915 CPU/(24918:24936): cantidad de instrucciones: 4
+[INFO] 14:42:15:916 CPU/(24918:24936): Finaliza proceso. EXIT
+[INFO] 14:42:15:916 CPU/(24918:24936): devolviendo pcb 14 - PID:1
+[INFO] 14:42:15:916 CPU/(24918:24936): tiempo de ejecucion 8.000000
+[INFO] 14:42:15:917 CPU/(24918:24936): pcb devolvido
+[INFO] 14:42:15:917 CPU/(24918:24936): Linea 121
+[INFO] 14:42:15:957 CPU/(24918:24936): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:42:15:957 CPU/(24918:24936): CASE EJECUTAR PROCESO
+[INFO] 14:42:15:957 CPU/(24918:24936): Se recibió pcb del Kernel.
+[INFO] 14:42:15:958 CPU/(24918:24936): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:42:15:958 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:42:15:958 CPU/(24918:24936): program counter 2
+[INFO] 14:42:15:958 CPU/(24918:24936): cantidad de instrucciones: 4
+[INFO] 14:42:15:958 CPU/(24918:24936): parametro_instruccion recibido: 3
+[INFO] 14:42:15:958 CPU/(24918:24936): Ejecutando NO_OP.
+[INFO] 14:42:15:958 CPU/(24918:24936): tiempo de sleep 3000
+[INFO] 14:42:19:936 CPU/(24918:24936): Terminó usleep
+[INFO] 14:42:19:937 CPU/(24918:24936): Linea 121
+[INFO] 14:42:19:937 CPU/(24918:24936): Decode instrucción.
+[INFO] 14:42:19:937 CPU/(24918:24936): program counter 3
+[INFO] 14:42:19:938 CPU/(24918:24936): cantidad de instrucciones: 4
+[INFO] 14:42:19:938 CPU/(24918:24936): Finaliza proceso. EXIT
+[INFO] 14:42:19:938 CPU/(24918:24936): devolviendo pcb 14 - PID:2
+[INFO] 14:42:19:939 CPU/(24918:24936): tiempo de ejecucion 8.000000
+[INFO] 14:42:19:939 CPU/(24918:24936): pcb devolvido
+[INFO] 14:42:19:940 CPU/(24918:24936): Linea 121
+[INFO] 14:42:46:864 CPU/(24918:24937): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:42:46:865 CPU/(24918:24936): Conexion con KERNEL - Se recibió header -74
+[INFO] 14:42:56:775 CPU/(25169:25169): Modulo CPU iniciado
+[INFO] 14:42:56:776 CPU/(25169:25169): Config CPU load
+[INFO] 14:42:56:776 CPU/(25169:25169): Conexión cpu-memoria ok.
+[INFO] 14:42:56:777 CPU/(25169:25169): Request config memoria enviada.
+[INFO] 14:42:56:778 CPU/(25169:25169): Se recibió configuración de memoria.
+[INFO] 14:42:56:778 CPU/(25169:25169): Se creó entrada de tlb 0
+[INFO] 14:42:56:778 CPU/(25169:25169): Se creó entrada de tlb 1
+[INFO] 14:42:56:778 CPU/(25169:25169): Se creó entrada de tlb 2
+[INFO] 14:42:56:778 CPU/(25169:25169): Se creó entrada de tlb 3
+[INFO] 14:42:56:910 CPU/(25169:25173): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:42:56:910 CPU/(25169:25174): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:42:56:911 CPU/(25169:25187): Se conectó Kernel - header 24
+[INFO] 14:42:56:911 CPU/(25169:25188): Se conectó Kernel - header 24
+[INFO] 14:42:58:052 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:42:58:052 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:42:58:052 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:42:58:052 CPU/(25169:25187): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:42:58:052 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:42:58:052 CPU/(25169:25187): program counter 0
+[INFO] 14:42:58:052 CPU/(25169:25187): cantidad de instrucciones: 4
+[INFO] 14:42:58:052 CPU/(25169:25187): parametro_instruccion recibido: 3
+[INFO] 14:42:58:053 CPU/(25169:25187): Ejecutando NO_OP.
+[INFO] 14:42:58:053 CPU/(25169:25187): tiempo de sleep 3000
+[INFO] 14:42:59:100 CPU/(25169:25188): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:42:59:100 CPU/(25169:25188): INTERRUPCION
+[INFO] 14:42:59:101 CPU/(25169:25188): INTERRUPCION 1
+[INFO] 14:43:00:149 CPU/(25169:25188): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:43:00:149 CPU/(25169:25188): INTERRUPCION
+[INFO] 14:43:00:149 CPU/(25169:25188): INTERRUPCION 1
+[INFO] 14:43:02:078 CPU/(25169:25187): Terminó usleep
+[WARNING] 14:43:02:078 CPU/(25169:25187): Condicional: interrupcion == 1
+[INFO] 14:43:02:079 CPU/(25169:25187): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:43:02:079 CPU/(25169:25187): devolviendo pcb 15 - PID:1
+[INFO] 14:43:02:079 CPU/(25169:25187): tiempo de ejecucion 4.000000
+[INFO] 14:43:02:081 CPU/(25169:25188): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:43:02:082 CPU/(25169:25188): INTERRUPCION
+[INFO] 14:43:02:082 CPU/(25169:25187): pcb devolvido
+[INFO] 14:43:02:082 CPU/(25169:25187): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:43:02:082 CPU/(25169:25188): INTERRUPCION 1
+[INFO] 14:43:02:083 CPU/(25169:25187): Linea 121
+[INFO] 14:43:02:083 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:43:02:083 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:43:02:084 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:43:02:084 CPU/(25169:25187): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:43:02:084 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:02:085 CPU/(25169:25187): program counter 0
+[INFO] 14:43:02:085 CPU/(25169:25187): cantidad de instrucciones: 4
+[INFO] 14:43:02:085 CPU/(25169:25187): parametro_instruccion recibido: 3
+[INFO] 14:43:02:086 CPU/(25169:25187): Ejecutando NO_OP.
+[INFO] 14:43:02:086 CPU/(25169:25187): tiempo de sleep 3000
+[INFO] 14:43:06:049 CPU/(25169:25187): Terminó usleep
+[WARNING] 14:43:06:050 CPU/(25169:25187): Condicional: interrupcion == 1
+[INFO] 14:43:06:050 CPU/(25169:25187): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:43:06:051 CPU/(25169:25187): devolviendo pcb 15 - PID:2
+[INFO] 14:43:06:051 CPU/(25169:25187): tiempo de ejecucion 4.000000
+[INFO] 14:43:06:052 CPU/(25169:25187): pcb devolvido
+[INFO] 14:43:06:052 CPU/(25169:25187): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:43:06:052 CPU/(25169:25187): Linea 121
+[INFO] 14:43:06:093 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:43:06:093 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:43:06:093 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:43:06:093 CPU/(25169:25187): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:43:06:093 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:06:093 CPU/(25169:25187): program counter 0
+[INFO] 14:43:06:093 CPU/(25169:25187): cantidad de instrucciones: 2
+[INFO] 14:43:06:093 CPU/(25169:25187): parametro_instruccion recibido: 10
+[INFO] 14:43:06:093 CPU/(25169:25187): Ejecutando NO_OP.
+[INFO] 14:43:06:094 CPU/(25169:25187): tiempo de sleep 10000
+[INFO] 14:43:06:094 CPU/(25169:25188): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:43:06:094 CPU/(25169:25188): INTERRUPCION
+[INFO] 14:43:06:094 CPU/(25169:25188): INTERRUPCION 1
+[INFO] 14:43:19:415 CPU/(25169:25187): Terminó usleep
+[WARNING] 14:43:19:415 CPU/(25169:25187): Condicional: interrupcion == 1
+[INFO] 14:43:19:415 CPU/(25169:25187): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:43:19:416 CPU/(25169:25187): devolviendo pcb 15 - PID:3
+[INFO] 14:43:19:416 CPU/(25169:25187): tiempo de ejecucion 13.000000
+[INFO] 14:43:19:417 CPU/(25169:25187): pcb devolvido
+[INFO] 14:43:19:417 CPU/(25169:25187): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:43:19:417 CPU/(25169:25187): Linea 121
+[INFO] 14:43:19:457 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:43:19:457 CPU/(25169:25188): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:43:19:457 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:43:19:457 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:43:19:457 CPU/(25169:25187): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:43:19:457 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:19:457 CPU/(25169:25187): program counter 1
+[INFO] 14:43:19:457 CPU/(25169:25187): cantidad de instrucciones: 4
+[INFO] 14:43:19:457 CPU/(25169:25187): PCB se bloquea.
+[INFO] 14:43:19:457 CPU/(25169:25187): Pre devolver PCB.
+[INFO] 14:43:19:457 CPU/(25169:25187): devolviendo pcb 13 - PID:1
+[INFO] 14:43:19:458 CPU/(25169:25187): tiempo de ejecucion 4.000000
+[INFO] 14:43:19:458 CPU/(25169:25187): pcb devolvido
+[INFO] 14:43:19:458 CPU/(25169:25187): Linea 121
+[INFO] 14:43:19:458 CPU/(25169:25188): INTERRUPCION
+[INFO] 14:43:19:458 CPU/(25169:25188): INTERRUPCION 1
+[INFO] 14:43:24:496 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:43:24:496 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:43:24:496 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:43:24:532 CPU/(25169:25187): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:43:24:532 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:24:532 CPU/(25169:25187): program counter 2
+[INFO] 14:43:24:532 CPU/(25169:25187): cantidad de instrucciones: 4
+[INFO] 14:43:24:532 CPU/(25169:25187): parametro_instruccion recibido: 3
+[INFO] 14:43:24:532 CPU/(25169:25187): Ejecutando NO_OP.
+[INFO] 14:43:24:532 CPU/(25169:25187): tiempo de sleep 3000
+[INFO] 14:43:28:508 CPU/(25169:25187): Terminó usleep
+[WARNING] 14:43:28:508 CPU/(25169:25187): Condicional: interrupcion == 1
+[INFO] 14:43:28:509 CPU/(25169:25187): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:43:28:509 CPU/(25169:25187): devolviendo pcb 15 - PID:1
+[INFO] 14:43:28:509 CPU/(25169:25187): tiempo de ejecucion 8.000000
+[INFO] 14:43:28:512 CPU/(25169:25188): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:43:28:512 CPU/(25169:25188): INTERRUPCION
+[INFO] 14:43:28:512 CPU/(25169:25187): pcb devolvido
+[INFO] 14:43:28:512 CPU/(25169:25187): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:43:28:512 CPU/(25169:25188): INTERRUPCION 1
+[INFO] 14:43:28:512 CPU/(25169:25187): Linea 121
+[INFO] 14:43:28:512 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:43:28:512 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:43:28:512 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:43:28:513 CPU/(25169:25187): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:43:28:513 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:28:513 CPU/(25169:25187): program counter 3
+[INFO] 14:43:28:513 CPU/(25169:25187): cantidad de instrucciones: 4
+[INFO] 14:43:28:513 CPU/(25169:25187): Finaliza proceso. EXIT
+[INFO] 14:43:28:513 CPU/(25169:25187): devolviendo pcb 14 - PID:1
+[INFO] 14:43:28:513 CPU/(25169:25187): tiempo de ejecucion 8.000000
+[INFO] 14:43:28:513 CPU/(25169:25187): pcb devolvido
+[WARNING] 14:43:28:513 CPU/(25169:25187): Condicional: interrupcion == 1
+[INFO] 14:43:28:545 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:43:28:545 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:43:28:545 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:43:28:584 CPU/(25169:25187): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:43:28:584 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:28:584 CPU/(25169:25187): program counter 1
+[INFO] 14:43:28:584 CPU/(25169:25187): cantidad de instrucciones: 4
+[INFO] 14:43:28:584 CPU/(25169:25187): PCB se bloquea.
+[INFO] 14:43:28:584 CPU/(25169:25187): Pre devolver PCB.
+[INFO] 14:43:28:584 CPU/(25169:25187): devolviendo pcb 13 - PID:2
+[INFO] 14:43:28:584 CPU/(25169:25187): tiempo de ejecucion 4.000000
+[INFO] 14:43:28:584 CPU/(25169:25187): pcb devolvido
+[INFO] 14:43:28:584 CPU/(25169:25187): Linea 121
+[INFO] 14:43:33:628 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:43:33:628 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:43:33:628 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:43:33:665 CPU/(25169:25187): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:43:33:666 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:33:666 CPU/(25169:25187): program counter 2
+[INFO] 14:43:33:666 CPU/(25169:25187): cantidad de instrucciones: 4
+[INFO] 14:43:33:666 CPU/(25169:25187): parametro_instruccion recibido: 3
+[INFO] 14:43:33:666 CPU/(25169:25187): Ejecutando NO_OP.
+[INFO] 14:43:33:666 CPU/(25169:25187): tiempo de sleep 3000
+[INFO] 14:43:37:594 CPU/(25169:25187): Terminó usleep
+[INFO] 14:43:37:595 CPU/(25169:25187): Linea 121
+[INFO] 14:43:37:595 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:37:596 CPU/(25169:25187): program counter 3
+[INFO] 14:43:37:596 CPU/(25169:25187): cantidad de instrucciones: 4
+[INFO] 14:43:37:596 CPU/(25169:25187): Finaliza proceso. EXIT
+[INFO] 14:43:37:597 CPU/(25169:25187): devolviendo pcb 14 - PID:2
+[INFO] 14:43:37:597 CPU/(25169:25187): tiempo de ejecucion 8.000000
+[INFO] 14:43:37:612 CPU/(25169:25187): pcb devolvido
+[INFO] 14:43:37:612 CPU/(25169:25187): Linea 121
+[INFO] 14:43:37:612 CPU/(25169:25187): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:43:37:612 CPU/(25169:25187): CASE EJECUTAR PROCESO
+[INFO] 14:43:37:612 CPU/(25169:25187): Se recibió pcb del Kernel.
+[INFO] 14:43:37:613 CPU/(25169:25187): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:43:37:613 CPU/(25169:25187): Decode instrucción.
+[INFO] 14:43:37:613 CPU/(25169:25187): program counter 1
+[INFO] 14:43:37:613 CPU/(25169:25187): cantidad de instrucciones: 2
+[INFO] 14:43:37:613 CPU/(25169:25187): Finaliza proceso. EXIT
+[INFO] 14:43:37:613 CPU/(25169:25187): devolviendo pcb 14 - PID:3
+[INFO] 14:43:37:613 CPU/(25169:25187): tiempo de ejecucion 13.000000
+[INFO] 14:43:37:613 CPU/(25169:25187): pcb devolvido
+[INFO] 14:43:37:613 CPU/(25169:25187): Linea 121
+[INFO] 14:43:44:449 CPU/(25169:25188): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:43:44:449 CPU/(25169:25187): Conexion con KERNEL - Se recibió header -74
+[INFO] 14:44:09:057 CPU/(25386:25386): Modulo CPU iniciado
+[INFO] 14:44:09:057 CPU/(25386:25386): Config CPU load
+[INFO] 14:44:09:058 CPU/(25386:25386): Conexión cpu-memoria ok.
+[INFO] 14:44:09:058 CPU/(25386:25386): Request config memoria enviada.
+[INFO] 14:44:09:059 CPU/(25386:25386): Se recibió configuración de memoria.
+[INFO] 14:44:09:059 CPU/(25386:25386): Se creó entrada de tlb 0
+[INFO] 14:44:09:059 CPU/(25386:25386): Se creó entrada de tlb 1
+[INFO] 14:44:09:059 CPU/(25386:25386): Se creó entrada de tlb 2
+[INFO] 14:44:09:059 CPU/(25386:25386): Se creó entrada de tlb 3
+[INFO] 14:44:09:186 CPU/(25386:25390): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:44:09:188 CPU/(25386:25391): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:44:09:189 CPU/(25386:25404): Se conectó Kernel - header 24
+[INFO] 14:44:09:189 CPU/(25386:25405): Se conectó Kernel - header 24
+[INFO] 14:44:10:356 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:44:10:357 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:44:10:357 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:44:10:357 CPU/(25386:25404): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:44:10:357 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:10:357 CPU/(25386:25404): program counter 0
+[INFO] 14:44:10:357 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:44:10:358 CPU/(25386:25404): parametro_instruccion recibido: 3
+[INFO] 14:44:10:358 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:44:10:358 CPU/(25386:25404): tiempo de sleep 3000
+[INFO] 14:44:14:360 CPU/(25386:25404): Terminó usleep
+[INFO] 14:44:14:361 CPU/(25386:25404): Linea 121
+[INFO] 14:44:14:361 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:14:361 CPU/(25386:25404): program counter 1
+[INFO] 14:44:14:362 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:44:14:362 CPU/(25386:25404): PCB se bloquea.
+[INFO] 14:44:14:362 CPU/(25386:25404): Pre devolver PCB.
+[INFO] 14:44:14:363 CPU/(25386:25404): devolviendo pcb 13 - PID:1
+[INFO] 14:44:14:363 CPU/(25386:25404): tiempo de ejecucion 4.000000
+[INFO] 14:44:14:365 CPU/(25386:25404): pcb devolvido
+[INFO] 14:44:14:366 CPU/(25386:25404): Linea 121
+[INFO] 14:44:14:366 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:44:14:366 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:44:14:367 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:44:14:367 CPU/(25386:25404): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:44:14:367 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:14:368 CPU/(25386:25404): program counter 0
+[INFO] 14:44:14:368 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:44:14:368 CPU/(25386:25404): parametro_instruccion recibido: 3
+[INFO] 14:44:14:369 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:44:14:369 CPU/(25386:25404): tiempo de sleep 3000
+[INFO] 14:44:18:342 CPU/(25386:25404): Terminó usleep
+[INFO] 14:44:18:342 CPU/(25386:25404): Linea 121
+[INFO] 14:44:18:343 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:18:343 CPU/(25386:25404): program counter 1
+[INFO] 14:44:18:343 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:44:18:344 CPU/(25386:25404): PCB se bloquea.
+[INFO] 14:44:18:344 CPU/(25386:25404): Pre devolver PCB.
+[INFO] 14:44:18:344 CPU/(25386:25404): devolviendo pcb 13 - PID:2
+[INFO] 14:44:18:344 CPU/(25386:25404): tiempo de ejecucion 4.000000
+[INFO] 14:44:18:345 CPU/(25386:25404): pcb devolvido
+[INFO] 14:44:18:345 CPU/(25386:25404): Linea 121
+[INFO] 14:44:23:373 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:44:23:373 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:44:23:373 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:44:23:373 CPU/(25386:25404): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:44:23:373 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:23:374 CPU/(25386:25404): program counter 0
+[INFO] 14:44:23:374 CPU/(25386:25404): cantidad de instrucciones: 2
+[INFO] 14:44:23:374 CPU/(25386:25404): parametro_instruccion recibido: 10
+[INFO] 14:44:23:374 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:44:23:374 CPU/(25386:25404): tiempo de sleep 10000
+[INFO] 14:44:36:662 CPU/(25386:25404): Terminó usleep
+[INFO] 14:44:36:663 CPU/(25386:25404): Linea 121
+[INFO] 14:44:36:663 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:36:663 CPU/(25386:25404): program counter 1
+[INFO] 14:44:36:663 CPU/(25386:25404): cantidad de instrucciones: 2
+[INFO] 14:44:36:664 CPU/(25386:25404): Finaliza proceso. EXIT
+[INFO] 14:44:36:664 CPU/(25386:25404): devolviendo pcb 14 - PID:3
+[INFO] 14:44:36:664 CPU/(25386:25404): tiempo de ejecucion 13.000000
+[INFO] 14:44:36:678 CPU/(25386:25404): pcb devolvido
+[INFO] 14:44:36:678 CPU/(25386:25404): Linea 121
+[INFO] 14:44:36:678 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:44:36:678 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:44:36:678 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:44:36:678 CPU/(25386:25404): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:44:36:678 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:36:678 CPU/(25386:25404): program counter 2
+[INFO] 14:44:36:679 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:44:36:679 CPU/(25386:25404): parametro_instruccion recibido: 3
+[INFO] 14:44:36:679 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:44:36:679 CPU/(25386:25404): tiempo de sleep 3000
+[INFO] 14:44:40:677 CPU/(25386:25404): Terminó usleep
+[INFO] 14:44:40:678 CPU/(25386:25404): Linea 121
+[INFO] 14:44:40:678 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:40:678 CPU/(25386:25404): program counter 3
+[INFO] 14:44:40:679 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:44:40:679 CPU/(25386:25404): Finaliza proceso. EXIT
+[INFO] 14:44:40:679 CPU/(25386:25404): devolviendo pcb 14 - PID:1
+[INFO] 14:44:40:680 CPU/(25386:25404): tiempo de ejecucion 8.000000
+[INFO] 14:44:40:681 CPU/(25386:25404): pcb devolvido
+[INFO] 14:44:40:681 CPU/(25386:25404): Linea 121
+[INFO] 14:44:40:718 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:44:40:718 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:44:40:718 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:44:40:718 CPU/(25386:25404): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:44:40:718 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:40:718 CPU/(25386:25404): program counter 2
+[INFO] 14:44:40:718 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:44:40:719 CPU/(25386:25404): parametro_instruccion recibido: 3
+[INFO] 14:44:40:719 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:44:40:719 CPU/(25386:25404): tiempo de sleep 3000
+[INFO] 14:44:44:718 CPU/(25386:25404): Terminó usleep
+[INFO] 14:44:44:719 CPU/(25386:25404): Linea 121
+[INFO] 14:44:44:719 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:44:44:719 CPU/(25386:25404): program counter 3
+[INFO] 14:44:44:720 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:44:44:720 CPU/(25386:25404): Finaliza proceso. EXIT
+[INFO] 14:44:44:720 CPU/(25386:25404): devolviendo pcb 14 - PID:2
+[INFO] 14:44:44:720 CPU/(25386:25404): tiempo de ejecucion 8.000000
+[INFO] 14:44:44:721 CPU/(25386:25404): pcb devolvido
+[INFO] 14:44:44:721 CPU/(25386:25404): Linea 121
+[INFO] 14:45:33:489 CPU/(25626:25626): Modulo CPU iniciado
+[INFO] 14:45:33:489 CPU/(25626:25626): Config CPU load
+[INFO] 14:45:33:490 CPU/(25626:25626): Conexión cpu-memoria ok.
+[INFO] 14:45:33:490 CPU/(25626:25626): Request config memoria enviada.
+[INFO] 14:45:33:492 CPU/(25626:25626): Se recibió configuración de memoria.
+[INFO] 14:45:33:492 CPU/(25626:25626): Se creó entrada de tlb 0
+[INFO] 14:45:33:492 CPU/(25626:25626): Se creó entrada de tlb 1
+[INFO] 14:45:33:492 CPU/(25626:25626): Se creó entrada de tlb 2
+[INFO] 14:45:33:492 CPU/(25626:25626): Se creó entrada de tlb 3
+[ERROR] 14:45:33:492 CPU/(25626:25631): Error: Address already in use
+[ERROR] 14:45:33:492 CPU/(25626:25630): Error: Address already in use
+[INFO] 14:45:33:618 CPU/(25386:25390): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:45:33:618 CPU/(25386:25391): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:45:33:618 CPU/(25386:25644): Se conectó Kernel - header 24
+[INFO] 14:45:33:618 CPU/(25386:25645): Se conectó Kernel - header 24
+[INFO] 14:45:33:756 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:45:33:756 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:45:33:756 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:45:33:756 CPU/(25386:25404): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:45:33:756 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:45:33:756 CPU/(25386:25404): program counter 0
+[INFO] 14:45:33:756 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:45:33:756 CPU/(25386:25404): parametro_instruccion recibido: 3
+[INFO] 14:45:33:756 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:45:33:756 CPU/(25386:25404): tiempo de sleep 3000
+[INFO] 14:45:38:031 CPU/(25386:25404): Terminó usleep
+[INFO] 14:45:38:032 CPU/(25386:25404): Linea 121
+[INFO] 14:45:38:032 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:45:38:032 CPU/(25386:25404): program counter 1
+[INFO] 14:45:38:033 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:45:38:033 CPU/(25386:25404): PCB se bloquea.
+[INFO] 14:45:38:033 CPU/(25386:25404): Pre devolver PCB.
+[INFO] 14:45:38:034 CPU/(25386:25404): devolviendo pcb 13 - PID:4
+[INFO] 14:45:38:034 CPU/(25386:25404): tiempo de ejecucion 5.000000
+[INFO] 14:45:38:036 CPU/(25386:25404): pcb devolvido
+[INFO] 14:45:38:036 CPU/(25386:25404): Linea 121
+[INFO] 14:45:38:036 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:45:38:036 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:45:38:037 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:45:38:037 CPU/(25386:25404): Recibimos PCB con ID:5 y Tabla de páginas 5
+[INFO] 14:45:38:037 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:45:38:037 CPU/(25386:25404): program counter 0
+[INFO] 14:45:38:037 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:45:38:037 CPU/(25386:25404): parametro_instruccion recibido: 3
+[INFO] 14:45:38:037 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:45:38:038 CPU/(25386:25404): tiempo de sleep 3000
+[INFO] 14:45:38:735 CPU/(25386:25645): Conexion con KERNEL - Se recibió header -76
+[INFO] 14:45:38:735 CPU/(25386:25644): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:45:42:029 CPU/(25386:25404): Terminó usleep
+[INFO] 14:45:42:030 CPU/(25386:25404): Linea 121
+[INFO] 14:45:42:030 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:45:42:031 CPU/(25386:25404): program counter 1
+[INFO] 14:45:42:031 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:45:42:031 CPU/(25386:25404): PCB se bloquea.
+[INFO] 14:45:42:032 CPU/(25386:25404): Pre devolver PCB.
+[INFO] 14:45:42:032 CPU/(25386:25404): devolviendo pcb 13 - PID:5
+[INFO] 14:45:42:033 CPU/(25386:25404): tiempo de ejecucion 4.000000
+[INFO] 14:45:42:034 CPU/(25386:25404): pcb devolvido
+[INFO] 14:45:42:034 CPU/(25386:25404): Linea 121
+[INFO] 14:45:46:041 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:45:46:041 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:45:46:041 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:45:46:041 CPU/(25386:25404): Recibimos PCB con ID:6 y Tabla de páginas 6
+[INFO] 14:45:46:041 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:45:46:041 CPU/(25386:25404): program counter 0
+[INFO] 14:45:46:042 CPU/(25386:25404): cantidad de instrucciones: 2
+[INFO] 14:45:46:042 CPU/(25386:25404): parametro_instruccion recibido: 10
+[INFO] 14:45:46:042 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:45:46:042 CPU/(25386:25404): tiempo de sleep 10000
+[INFO] 14:45:59:313 CPU/(25386:25404): Terminó usleep
+[INFO] 14:45:59:313 CPU/(25386:25404): Linea 121
+[INFO] 14:45:59:313 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:45:59:313 CPU/(25386:25404): program counter 1
+[INFO] 14:45:59:314 CPU/(25386:25404): cantidad de instrucciones: 2
+[INFO] 14:45:59:314 CPU/(25386:25404): Finaliza proceso. EXIT
+[INFO] 14:45:59:314 CPU/(25386:25404): devolviendo pcb 14 - PID:6
+[INFO] 14:45:59:314 CPU/(25386:25404): tiempo de ejecucion 13.000000
+[INFO] 14:45:59:330 CPU/(25386:25404): pcb devolvido
+[INFO] 14:45:59:330 CPU/(25386:25404): Linea 121
+[INFO] 14:45:59:330 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:45:59:330 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:45:59:330 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:45:59:330 CPU/(25386:25404): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:45:59:330 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:45:59:330 CPU/(25386:25404): program counter 2
+[INFO] 14:45:59:330 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:45:59:331 CPU/(25386:25404): parametro_instruccion recibido: 3
+[INFO] 14:45:59:331 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:45:59:331 CPU/(25386:25404): tiempo de sleep 3000
+[INFO] 14:46:03:223 CPU/(25386:25404): Terminó usleep
+[INFO] 14:46:03:223 CPU/(25386:25404): Linea 121
+[INFO] 14:46:03:223 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:46:03:223 CPU/(25386:25404): program counter 3
+[INFO] 14:46:03:223 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:46:03:223 CPU/(25386:25404): Finaliza proceso. EXIT
+[INFO] 14:46:03:224 CPU/(25386:25404): devolviendo pcb 14 - PID:4
+[INFO] 14:46:03:224 CPU/(25386:25404): tiempo de ejecucion 9.000000
+[INFO] 14:46:03:224 CPU/(25386:25404): pcb devolvido
+[INFO] 14:46:03:224 CPU/(25386:25404): Linea 121
+[INFO] 14:46:03:261 CPU/(25386:25404): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:46:03:261 CPU/(25386:25404): CASE EJECUTAR PROCESO
+[INFO] 14:46:03:261 CPU/(25386:25404): Se recibió pcb del Kernel.
+[INFO] 14:46:03:261 CPU/(25386:25404): Recibimos PCB con ID:5 y Tabla de páginas 5
+[INFO] 14:46:03:261 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:46:03:261 CPU/(25386:25404): program counter 2
+[INFO] 14:46:03:261 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:46:03:261 CPU/(25386:25404): parametro_instruccion recibido: 3
+[INFO] 14:46:03:261 CPU/(25386:25404): Ejecutando NO_OP.
+[INFO] 14:46:03:261 CPU/(25386:25404): tiempo de sleep 3000
+[INFO] 14:46:07:196 CPU/(25386:25404): Terminó usleep
+[INFO] 14:46:07:197 CPU/(25386:25404): Linea 121
+[INFO] 14:46:07:197 CPU/(25386:25404): Decode instrucción.
+[INFO] 14:46:07:198 CPU/(25386:25404): program counter 3
+[INFO] 14:46:07:198 CPU/(25386:25404): cantidad de instrucciones: 4
+[INFO] 14:46:07:198 CPU/(25386:25404): Finaliza proceso. EXIT
+[INFO] 14:46:07:199 CPU/(25386:25404): devolviendo pcb 14 - PID:5
+[INFO] 14:46:07:199 CPU/(25386:25404): tiempo de ejecucion 8.000000
+[INFO] 14:46:07:200 CPU/(25386:25404): pcb devolvido
+[INFO] 14:46:07:200 CPU/(25386:25404): Linea 121
+[INFO] 14:47:01:788 CPU/(25874:25874): Modulo CPU iniciado
+[INFO] 14:47:01:788 CPU/(25874:25874): Config CPU load
+[INFO] 14:47:01:788 CPU/(25874:25874): Conexión cpu-memoria ok.
+[INFO] 14:47:01:788 CPU/(25874:25874): Request config memoria enviada.
+[INFO] 14:47:01:789 CPU/(25874:25874): Se recibió configuración de memoria.
+[INFO] 14:47:01:790 CPU/(25874:25874): Se creó entrada de tlb 0
+[INFO] 14:47:01:790 CPU/(25874:25874): Se creó entrada de tlb 1
+[INFO] 14:47:01:790 CPU/(25874:25874): Se creó entrada de tlb 2
+[INFO] 14:47:01:790 CPU/(25874:25874): Se creó entrada de tlb 3
+[INFO] 14:47:01:916 CPU/(25874:25878): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:47:01:916 CPU/(25874:25879): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:47:01:917 CPU/(25874:25892): Se conectó Kernel - header 24
+[INFO] 14:47:01:917 CPU/(25874:25893): Se conectó Kernel - header 24
+[INFO] 14:47:03:060 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:03:060 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:03:060 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:03:060 CPU/(25874:25892): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:47:03:060 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:03:061 CPU/(25874:25892): program counter 0
+[INFO] 14:47:03:061 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:47:03:061 CPU/(25874:25892): parametro_instruccion recibido: 3
+[INFO] 14:47:03:061 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:47:03:061 CPU/(25874:25892): tiempo de sleep 3000
+[INFO] 14:47:04:108 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:47:04:108 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:47:04:109 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:47:07:027 CPU/(25874:25892): Terminó usleep
+[WARNING] 14:47:07:027 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:47:07:028 CPU/(25874:25892): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:47:07:028 CPU/(25874:25892): devolviendo pcb 15 - PID:1
+[INFO] 14:47:07:028 CPU/(25874:25892): tiempo de ejecucion 4.000000
+[INFO] 14:47:07:030 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:47:07:031 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:47:07:031 CPU/(25874:25892): pcb devolvido
+[INFO] 14:47:07:031 CPU/(25874:25892): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:47:07:031 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:47:07:032 CPU/(25874:25892): Linea 121
+[INFO] 14:47:07:032 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:07:032 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:07:033 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:07:033 CPU/(25874:25892): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:47:07:033 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:07:034 CPU/(25874:25892): program counter 0
+[INFO] 14:47:07:034 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:47:07:034 CPU/(25874:25892): parametro_instruccion recibido: 3
+[INFO] 14:47:07:035 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:47:07:035 CPU/(25874:25892): tiempo de sleep 3000
+[INFO] 14:47:11:027 CPU/(25874:25892): Terminó usleep
+[WARNING] 14:47:11:027 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:47:11:028 CPU/(25874:25892): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:47:11:028 CPU/(25874:25892): devolviendo pcb 15 - PID:2
+[INFO] 14:47:11:028 CPU/(25874:25892): tiempo de ejecucion 4.000000
+[INFO] 14:47:11:029 CPU/(25874:25892): pcb devolvido
+[INFO] 14:47:11:029 CPU/(25874:25892): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:47:11:030 CPU/(25874:25892): Linea 121
+[INFO] 14:47:11:067 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:11:067 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:11:067 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:11:067 CPU/(25874:25892): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:47:11:067 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:11:067 CPU/(25874:25892): program counter 1
+[INFO] 14:47:11:067 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:47:11:067 CPU/(25874:25892): PCB se bloquea.
+[INFO] 14:47:11:067 CPU/(25874:25892): Pre devolver PCB.
+[INFO] 14:47:11:067 CPU/(25874:25892): devolviendo pcb 13 - PID:1
+[INFO] 14:47:11:067 CPU/(25874:25892): tiempo de ejecucion 4.000000
+[INFO] 14:47:11:067 CPU/(25874:25892): pcb devolvido
+[INFO] 14:47:11:067 CPU/(25874:25892): Linea 121
+[INFO] 14:47:11:067 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:47:11:067 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:47:11:068 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:47:20:126 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:20:126 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:20:126 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:20:170 CPU/(25874:25892): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:47:20:170 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:20:170 CPU/(25874:25892): program counter 1
+[INFO] 14:47:20:170 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:47:20:171 CPU/(25874:25892): PCB se bloquea.
+[INFO] 14:47:20:171 CPU/(25874:25892): Pre devolver PCB.
+[INFO] 14:47:20:171 CPU/(25874:25892): devolviendo pcb 13 - PID:2
+[INFO] 14:47:20:171 CPU/(25874:25892): tiempo de ejecucion 4.000000
+[INFO] 14:47:20:171 CPU/(25874:25892): pcb devolvido
+[WARNING] 14:47:20:171 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:47:28:175 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:28:175 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:28:175 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:28:217 CPU/(25874:25892): Recibimos PCB con ID:1 y Tabla de páginas 1
+[INFO] 14:47:28:219 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:28:220 CPU/(25874:25892): program counter 2
+[INFO] 14:47:28:220 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:47:28:220 CPU/(25874:25892): parametro_instruccion recibido: 3
+[INFO] 14:47:28:220 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:47:28:220 CPU/(25874:25892): tiempo de sleep 3000
+[INFO] 14:47:32:288 CPU/(25874:25892): Terminó usleep
+[INFO] 14:47:32:288 CPU/(25874:25892): Linea 121
+[INFO] 14:47:32:288 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:32:288 CPU/(25874:25892): program counter 3
+[INFO] 14:47:32:289 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:47:32:289 CPU/(25874:25892): Finaliza proceso. EXIT
+[INFO] 14:47:32:289 CPU/(25874:25892): devolviendo pcb 14 - PID:1
+[INFO] 14:47:32:289 CPU/(25874:25892): tiempo de ejecucion 8.000000
+[INFO] 14:47:32:289 CPU/(25874:25892): pcb devolvido
+[INFO] 14:47:32:290 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:47:32:290 CPU/(25874:25892): Linea 121
+[INFO] 14:47:32:290 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:32:290 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:32:290 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:32:290 CPU/(25874:25892): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:47:32:290 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:32:290 CPU/(25874:25892): program counter 2
+[INFO] 14:47:32:290 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:47:32:290 CPU/(25874:25892): parametro_instruccion recibido: 3
+[INFO] 14:47:32:290 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:47:32:290 CPU/(25874:25892): tiempo de sleep 3000
+[INFO] 14:47:32:300 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:47:32:300 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:47:36:222 CPU/(25874:25892): Terminó usleep
+[WARNING] 14:47:36:223 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:47:36:223 CPU/(25874:25892): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:47:36:223 CPU/(25874:25892): devolviendo pcb 15 - PID:2
+[INFO] 14:47:36:223 CPU/(25874:25892): tiempo de ejecucion 8.000000
+[INFO] 14:47:36:224 CPU/(25874:25892): pcb devolvido
+[INFO] 14:47:36:225 CPU/(25874:25892): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:47:36:225 CPU/(25874:25892): Linea 121
+[INFO] 14:47:36:263 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:36:263 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:47:36:263 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:36:264 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:36:264 CPU/(25874:25892): Recibimos PCB con ID:2 y Tabla de páginas 2
+[INFO] 14:47:36:264 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:36:264 CPU/(25874:25892): program counter 3
+[INFO] 14:47:36:264 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:47:36:264 CPU/(25874:25892): Finaliza proceso. EXIT
+[INFO] 14:47:36:264 CPU/(25874:25892): devolviendo pcb 14 - PID:2
+[INFO] 14:47:36:264 CPU/(25874:25892): tiempo de ejecucion 8.000000
+[INFO] 14:47:36:264 CPU/(25874:25892): pcb devolvido
+[INFO] 14:47:36:265 CPU/(25874:25892): Linea 121
+[INFO] 14:47:36:265 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:47:36:265 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:47:36:307 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:36:308 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:36:308 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:36:344 CPU/(25874:25892): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:47:36:344 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:36:344 CPU/(25874:25892): program counter 0
+[INFO] 14:47:36:344 CPU/(25874:25892): cantidad de instrucciones: 2
+[INFO] 14:47:36:344 CPU/(25874:25892): parametro_instruccion recibido: 10
+[INFO] 14:47:36:344 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:47:36:344 CPU/(25874:25892): tiempo de sleep 10000
+[INFO] 14:47:49:290 CPU/(25874:25892): Terminó usleep
+[WARNING] 14:47:49:291 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:47:49:291 CPU/(25874:25892): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:47:49:291 CPU/(25874:25892): devolviendo pcb 15 - PID:3
+[INFO] 14:47:49:291 CPU/(25874:25892): tiempo de ejecucion 13.000000
+[INFO] 14:47:49:291 CPU/(25874:25892): pcb devolvido
+[INFO] 14:47:49:291 CPU/(25874:25892): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:47:49:291 CPU/(25874:25892): Linea 121
+[INFO] 14:47:49:329 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:47:49:329 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:47:49:329 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:47:49:329 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:47:49:329 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:47:49:329 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:47:49:329 CPU/(25874:25892): Recibimos PCB con ID:3 y Tabla de páginas 3
+[INFO] 14:47:49:329 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:47:49:329 CPU/(25874:25892): program counter 1
+[INFO] 14:47:49:329 CPU/(25874:25892): cantidad de instrucciones: 2
+[INFO] 14:47:49:329 CPU/(25874:25892): Finaliza proceso. EXIT
+[INFO] 14:47:49:329 CPU/(25874:25892): devolviendo pcb 14 - PID:3
+[INFO] 14:47:49:329 CPU/(25874:25892): tiempo de ejecucion 13.000000
+[INFO] 14:47:49:329 CPU/(25874:25892): pcb devolvido
+[WARNING] 14:47:49:329 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:48:01:495 CPU/(26044:26044): Modulo CPU iniciado
+[INFO] 14:48:01:495 CPU/(26044:26044): Config CPU load
+[INFO] 14:48:01:498 CPU/(26044:26044): Conexión cpu-memoria ok.
+[INFO] 14:48:01:499 CPU/(26044:26044): Request config memoria enviada.
+[INFO] 14:48:01:500 CPU/(26044:26044): Se recibió configuración de memoria.
+[INFO] 14:48:01:500 CPU/(26044:26044): Se creó entrada de tlb 0
+[INFO] 14:48:01:500 CPU/(26044:26044): Se creó entrada de tlb 1
+[INFO] 14:48:01:500 CPU/(26044:26044): Se creó entrada de tlb 2
+[INFO] 14:48:01:500 CPU/(26044:26044): Se creó entrada de tlb 3
+[ERROR] 14:48:01:501 CPU/(26044:26049): Error: Address already in use
+[ERROR] 14:48:01:501 CPU/(26044:26048): Error: Address already in use
+[INFO] 14:48:01:630 CPU/(25874:25878): Cliente conectado (a CPU Dispatch)
+
+[INFO] 14:48:01:630 CPU/(25874:25879): Cliente conectado (a CPU Interrupt)
+
+[INFO] 14:48:01:631 CPU/(25874:26062): Se conectó Kernel - header 24
+[INFO] 14:48:01:631 CPU/(25874:26063): Se conectó Kernel - header 24
+[INFO] 14:48:01:762 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:48:01:762 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:48:01:762 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:48:01:797 CPU/(25874:25892): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:48:01:798 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:01:798 CPU/(25874:25892): program counter 0
+[INFO] 14:48:01:798 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:48:01:798 CPU/(25874:25892): parametro_instruccion recibido: 3
+[INFO] 14:48:01:798 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:48:01:798 CPU/(25874:25892): tiempo de sleep 3000
+[INFO] 14:48:01:899 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:48:01:899 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:48:01:899 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:48:05:353 CPU/(25874:26063): Conexion con KERNEL - Se recibió header -76
+[INFO] 14:48:05:353 CPU/(25874:26062): Conexion con KERNEL - Se recibió header -75
+[INFO] 14:48:06:056 CPU/(25874:25892): Terminó usleep
+[WARNING] 14:48:06:057 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:48:06:058 CPU/(25874:25892): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:48:06:058 CPU/(25874:25892): devolviendo pcb 15 - PID:4
+[INFO] 14:48:06:058 CPU/(25874:25892): tiempo de ejecucion 5.000000
+[INFO] 14:48:06:061 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:48:06:061 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:48:06:061 CPU/(25874:25892): pcb devolvido
+[INFO] 14:48:06:062 CPU/(25874:25892): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:48:06:062 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:48:06:062 CPU/(25874:25892): Linea 121
+[INFO] 14:48:06:063 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:48:06:063 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:48:06:063 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:48:06:064 CPU/(25874:25892): Recibimos PCB con ID:5 y Tabla de páginas 5
+[INFO] 14:48:06:064 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:06:065 CPU/(25874:25892): program counter 0
+[INFO] 14:48:06:065 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:48:06:065 CPU/(25874:25892): parametro_instruccion recibido: 3
+[INFO] 14:48:06:066 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:48:06:066 CPU/(25874:25892): tiempo de sleep 3000
+[INFO] 14:48:10:096 CPU/(25874:25892): Terminó usleep
+[WARNING] 14:48:10:096 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:48:10:096 CPU/(25874:25892): DEVOLVIENDO POR INTERRUPCION
+[INFO] 14:48:10:097 CPU/(25874:25892): devolviendo pcb 15 - PID:5
+[INFO] 14:48:10:097 CPU/(25874:25892): tiempo de ejecucion 4.000000
+[INFO] 14:48:10:097 CPU/(25874:25892): pcb devolvido
+[INFO] 14:48:10:097 CPU/(25874:25892): YA DEVOLVÍ POR INTERRUPCION
+[INFO] 14:48:10:097 CPU/(25874:25892): Linea 121
+[INFO] 14:48:10:137 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:48:10:137 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:48:10:137 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:48:10:137 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:48:10:137 CPU/(25874:25892): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:48:10:138 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:10:138 CPU/(25874:25892): program counter 1
+[INFO] 14:48:10:138 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:48:10:138 CPU/(25874:25892): PCB se bloquea.
+[INFO] 14:48:10:138 CPU/(25874:25892): Pre devolver PCB.
+[INFO] 14:48:10:138 CPU/(25874:25892): devolviendo pcb 13 - PID:4
+[INFO] 14:48:10:138 CPU/(25874:25892): tiempo de ejecucion 5.000000
+[INFO] 14:48:10:138 CPU/(25874:25892): pcb devolvido
+[INFO] 14:48:10:138 CPU/(25874:25892): Linea 121
+[INFO] 14:48:10:139 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:48:10:139 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:48:18:186 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:48:18:186 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:48:18:186 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:48:18:223 CPU/(25874:25892): Recibimos PCB con ID:5 y Tabla de páginas 5
+[INFO] 14:48:18:223 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:18:223 CPU/(25874:25892): program counter 1
+[INFO] 14:48:18:223 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:48:18:223 CPU/(25874:25892): PCB se bloquea.
+[INFO] 14:48:18:223 CPU/(25874:25892): Pre devolver PCB.
+[INFO] 14:48:18:223 CPU/(25874:25892): devolviendo pcb 13 - PID:5
+[INFO] 14:48:18:223 CPU/(25874:25892): tiempo de ejecucion 4.000000
+[INFO] 14:48:18:223 CPU/(25874:25892): pcb devolvido
+[WARNING] 14:48:18:224 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:48:26:226 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:48:26:226 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:48:26:226 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:48:26:269 CPU/(25874:25892): Recibimos PCB con ID:4 y Tabla de páginas 4
+[INFO] 14:48:26:269 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:26:269 CPU/(25874:25892): program counter 2
+[INFO] 14:48:26:269 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:48:26:269 CPU/(25874:25892): parametro_instruccion recibido: 3
+[INFO] 14:48:26:269 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:48:26:269 CPU/(25874:25892): tiempo de sleep 3000
+[INFO] 14:48:30:245 CPU/(25874:25892): Terminó usleep
+[INFO] 14:48:30:246 CPU/(25874:25892): Linea 121
+[INFO] 14:48:30:246 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:30:247 CPU/(25874:25892): program counter 3
+[INFO] 14:48:30:247 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:48:30:247 CPU/(25874:25892): Finaliza proceso. EXIT
+[INFO] 14:48:30:248 CPU/(25874:25892): devolviendo pcb 14 - PID:4
+[INFO] 14:48:30:248 CPU/(25874:25892): tiempo de ejecucion 9.000000
+[INFO] 14:48:30:251 CPU/(25874:25893): Conexion con KERNEL - Se recibió header 15
+[INFO] 14:48:30:251 CPU/(25874:25893): INTERRUPCION
+[INFO] 14:48:30:251 CPU/(25874:25893): INTERRUPCION 1
+[INFO] 14:48:30:262 CPU/(25874:25892): pcb devolvido
+[WARNING] 14:48:30:262 CPU/(25874:25892): Condicional: interrupcion == 1
+[INFO] 14:48:30:263 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:48:30:263 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:48:30:263 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:48:30:263 CPU/(25874:25892): Recibimos PCB con ID:5 y Tabla de páginas 5
+[INFO] 14:48:30:263 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:30:263 CPU/(25874:25892): program counter 2
+[INFO] 14:48:30:263 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:48:30:263 CPU/(25874:25892): parametro_instruccion recibido: 3
+[INFO] 14:48:30:263 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:48:30:263 CPU/(25874:25892): tiempo de sleep 3000
+[INFO] 14:48:34:258 CPU/(25874:25892): Terminó usleep
+[INFO] 14:48:34:258 CPU/(25874:25892): Linea 121
+[INFO] 14:48:34:259 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:34:259 CPU/(25874:25892): program counter 3
+[INFO] 14:48:34:259 CPU/(25874:25892): cantidad de instrucciones: 4
+[INFO] 14:48:34:260 CPU/(25874:25892): Finaliza proceso. EXIT
+[INFO] 14:48:34:260 CPU/(25874:25892): devolviendo pcb 14 - PID:5
+[INFO] 14:48:34:260 CPU/(25874:25892): tiempo de ejecucion 8.000000
+[INFO] 14:48:34:274 CPU/(25874:25892): pcb devolvido
+[INFO] 14:48:34:274 CPU/(25874:25892): Linea 121
+[INFO] 14:48:34:274 CPU/(25874:25892): Conexion con KERNEL - Se recibió header 16
+[INFO] 14:48:34:274 CPU/(25874:25892): CASE EJECUTAR PROCESO
+[INFO] 14:48:34:274 CPU/(25874:25892): Se recibió pcb del Kernel.
+[INFO] 14:48:34:296 CPU/(25874:25892): Recibimos PCB con ID:6 y Tabla de páginas 6
+[INFO] 14:48:34:296 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:34:296 CPU/(25874:25892): program counter 0
+[INFO] 14:48:34:296 CPU/(25874:25892): cantidad de instrucciones: 2
+[INFO] 14:48:34:296 CPU/(25874:25892): parametro_instruccion recibido: 10
+[INFO] 14:48:34:296 CPU/(25874:25892): Ejecutando NO_OP.
+[INFO] 14:48:34:296 CPU/(25874:25892): tiempo de sleep 10000
+[INFO] 14:48:47:434 CPU/(25874:25892): Terminó usleep
+[INFO] 14:48:47:434 CPU/(25874:25892): Linea 121
+[INFO] 14:48:47:435 CPU/(25874:25892): Decode instrucción.
+[INFO] 14:48:47:435 CPU/(25874:25892): program counter 1
+[INFO] 14:48:47:435 CPU/(25874:25892): cantidad de instrucciones: 2
+[INFO] 14:48:47:436 CPU/(25874:25892): Finaliza proceso. EXIT
+[INFO] 14:48:47:436 CPU/(25874:25892): devolviendo pcb 14 - PID:6
+[INFO] 14:48:47:436 CPU/(25874:25892): tiempo de ejecucion 13.000000
+[INFO] 14:48:47:437 CPU/(25874:25892): pcb devolvido
+[INFO] 14:48:47:437 CPU/(25874:25892): Linea 121
