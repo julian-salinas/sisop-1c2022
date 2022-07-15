@@ -65,6 +65,7 @@ void func_corto_plazo(void* args) {
 
             log_info(logger, "proceso_corriendo vale: %d", proceso_corriendo);
 
+            sem_wait(mutex_proceso_corriendo);
             if (proceso_corriendo) {
                 log_info(logger, "Enviando interrupción a CPU INTERRUPT");
                     
@@ -72,8 +73,10 @@ void func_corto_plazo(void* args) {
                     enviar_header(conexion_cpu_interrupt, INTERRUPCION);  // Avisar a CPU para que desaloje proceso actual
                 sem_post(mutex_socket_cpu_interrupt);
 
+                sem_post(mutex_proceso_corriendo);
                 continue;
             }
+            sem_post(mutex_proceso_corriendo);
 
             ordenar_cola_ready();
             log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
@@ -87,8 +90,11 @@ void func_mediano_plazo(void* args) {
 
     while (1) {
         sem_wait(sem_multiprogramacion); // Hay grado de multiprogramación disponible
+        log_info(logger, "Se paso el semaforo sem_multiprogramacion.");
         sem_wait(sem_procesos_esperando); // Hay algo para planificar
+        log_info(logger, "Se paso el semaforo sem_procesos_esperando.");
         sem_wait(mutex_mediano_plazo);
+        log_info(logger, "Se paso el semaforo mutex_mediano_plazo.");
             if(queue_is_empty(cola_suspended_ready)) {
                 sem_post(sem_largo_plazo);
                 sem_post(mutex_mediano_plazo);
@@ -170,6 +176,14 @@ void func_io(void* args) {
                 sem_wait(mutex_mediano_plazo);
                     suspended_blocked_a_suspended_ready(proceso);
                 sem_post(mutex_mediano_plazo);
+
+                int value;
+                sem_getvalue(sem_multiprogramacion, &value);
+                log_info(logger, "sem_multiprogramacion : %d.", value);
+                sem_getvalue(sem_procesos_esperando, &value);
+                log_info(logger, "sem_procesos_esperando : %d.", value);
+                sem_getvalue(mutex_mediano_plazo, &value);
+                log_info(logger, "mutex_mediano_plazo : %d.", value);
             }
 
         sem_post(mutex_suspension);

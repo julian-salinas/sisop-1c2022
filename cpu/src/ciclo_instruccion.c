@@ -45,13 +45,10 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
         {
         case NO_OP:
             //Execute
-            param = parametro_instruccion(instruccion -> parametros, 0);
-            log_info(logger, "parametro_instruccion recibido: %d", param);
-            sleep_time = cpu_config->retardo_noop * param;
             log_info(logger, "Ejecutando NO_OP.");
-            log_info(logger, "tiempo de sleep %d", sleep_time);
+            log_info(logger, "tiempo de sleep %d", cpu_config->retardo_noop);
 
-            for (size_t i = 0; i < sleep_time; i++)
+            for (size_t i = 0; i < cpu_config->retardo_noop; i++)
             {
                 usleep(1000);
             }

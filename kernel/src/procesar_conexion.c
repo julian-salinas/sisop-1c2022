@@ -102,14 +102,36 @@ void procesar_conexion_dispatch(void *args)
             pthread_create(&thread_suspension, 0, (void *)func_suspension, (void *)pcb);
             pthread_detach(thread_suspension);
 
+            if (algoritmo_elegido == SJF)
+            {
+                sem_wait(mutex_cola_ready);
+                if (queue_size(cola_ready))
+                {
+                    sem_post(mutex_cola_ready);
+
+                    ordenar_cola_ready();
+                    log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+
+                    ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
+                }
+                else
+                {
+                    sem_post(mutex_cola_ready);
+                }
+            }
+
             break;
 
         case INTERRUPCION:
+            sem_wait(mutex_proceso_corriendo);
             proceso_corriendo = false;
+            sem_post(mutex_proceso_corriendo);
             pcb = socket_get_PCB(conexion_cpu_dispatch);
             sem_post(mutex_socket_cpu_dispatch);
 
             log_info(logger, "Se recibió proceso interrumpido: PID:%d", pcb->PID);
+
+            pcb -> tiempo_restante = pcb -> estimacion_rafaga - pcb -> tiempo_ejecucion;
 
             running_a_ready(pcb);
 

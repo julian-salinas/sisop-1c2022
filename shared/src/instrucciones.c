@@ -33,6 +33,17 @@ void destruir_lista_instrucciones(t_lista_instrucciones *lista_instrucciones) {
 
 
 void agregar_instruccion_a_lista(t_lista_instrucciones* lista_instrucciones, t_instruccion* instruccion) {
+
+    if(instruccion -> identificador == NO_OP){
+        t_instruccion* inst;
+        for (int i = 0; i < list_get(instruccion -> parametros, 0); i++)
+        {
+             inst = crear_instruccion(NO_OP);
+            list_add(lista_instrucciones, inst);
+        }
+        return;
+        
+    };
     list_add(lista_instrucciones, instruccion);
 }
 
