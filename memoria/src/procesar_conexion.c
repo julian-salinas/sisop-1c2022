@@ -153,7 +153,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
             case CONEXION_CPU_MEMORIA:
                 //enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
                 log_info(logger, "Se recibió header %d - Enviando config a CPU", header);
-                log_info(logger, "Socket cliente memoria-cpu creado.");
+                log_warning(logger, "Entradas por tabla:%d - Tamaño de página:%d", memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);
                 enviar_config_a_cpu(socket_cliente, logger, memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);	
                 break;
 
@@ -275,9 +275,12 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 }
 
 
-void enviar_config_a_cpu(int socket_cliente, t_log* logger, uint8_t paginas_por_tabla, uint8_t tamanio_pagina){
+void enviar_config_a_cpu(int socket_cliente, t_log* logger, uint32_t paginas_por_tabla, uint32_t tamanio_pagina){
+
+    log_warning(logger, "Enviando PPT:%d - TP:%d", paginas_por_tabla, tamanio_pagina);
 
     t_paquete* paquete = serializar_config_cpu_memoria(paginas_por_tabla, tamanio_pagina);
+    
     enviar_paquete(socket_cliente,paquete);
     destruir_paquete(paquete);
     log_info(logger, "Config enviado.");

@@ -33,8 +33,8 @@
 	t_config* config;
     t_log* logger;
  
-    uint8_t paginas_por_tabla;
-    uint8_t tamanio_pagina;
+    uint32_t paginas_por_tabla;
+    uint32_t tamanio_pagina;
 
     int interrupcion, finCicloInstruccion; //0 el kernel no envio interrupcion, 1 interrumpir ejecución
 
