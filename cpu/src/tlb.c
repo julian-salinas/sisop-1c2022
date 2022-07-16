@@ -42,6 +42,14 @@ void generar_entradas_tlb(void){
  }
 
 void ordenar_tlb(t_lista_entradas* lista_entradas) {
+
+	// log_warning(logger, "Entradas de la TLB ANTES DE ORDENAR:");
+	// for (size_t i = 0; i < list_size(lista_entradas); i++)
+	// {
+	// 	t_entrada_tlb* e = list_get(lista_entradas, i);
+	// 	log_error(logger, "Entrada %d: pag %d,marco %d - TSR:%f - TSC:%f", i, e -> pagina, e -> marco, e -> instante_ultima_referencia, e -> instante_carga);
+	// }
+
     if (algoritmo_elegido == LRU) {
         list_sort(lista_entradas, (void*) *(algoritmo_LRU));
     }
@@ -49,6 +57,13 @@ void ordenar_tlb(t_lista_entradas* lista_entradas) {
 	else {
 		list_sort(lista_entradas, (void*) *(algoritmo_FIFO));
 	}
+
+	// log_warning(logger, "Entradas de la TLB DESPUES DE ORDENAR:");
+	// for (size_t i = 0; i < list_size(lista_entradas); i++)
+	// {
+	// 	t_entrada_tlb* e = list_get(lista_entradas, i);
+	// 	log_error(logger, "Entrada %d: pag %d,marco %d - TSR:%f - TSC:%f", i, e -> pagina, e -> marco, e -> instante_ultima_referencia, e -> instante_carga);
+	// }
 }
 
 
@@ -56,8 +71,9 @@ bool algoritmo_LRU(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2) {
 	return (entrada1 -> instante_ultima_referencia <= entrada2 -> instante_ultima_referencia);
 }
 
+
 bool algoritmo_FIFO(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2) {
-	return (entrada1 -> instante_carga <= entrada2 -> instante_carga);
+	return (entrada1 -> instante_carga >= entrada2 -> instante_carga);
 }
 
 
@@ -82,7 +98,9 @@ int32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pag
 	for (uint32_t j=0;j<list_size(lista_entradas);j++) {
 			t_entrada_tlb* entrada = list_get(lista_entradas, j);
 			if (entrada -> pagina == numero_pagina) {
-				entrada -> instante_ultima_referencia = time(NULL);
+				if (algoritmo_elegido == LRU) {
+					entrada -> instante_ultima_referencia = time(NULL);
+				}
 				return entrada -> marco;
 			}
 	}
@@ -94,37 +112,41 @@ int32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pag
 // finalmente ordena la lista 
 void agregar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina, uint32_t numero_marco){
 
-	log_error(logger, "Entradas de la TLB:");
-	for (size_t i = 0; i < list_size(lista_entradas); i++)
-	{
-		t_entrada_tlb* e = list_get(lista_entradas, i);
-		log_error(logger, "Entrada %d: pag %d,marco %d", i, e -> pagina, e -> marco);
-	}
+	// log_error(logger, "Entradas de la TLB ANTES de agregar %d|%d:", numero_pagina, numero_marco);
+	// for (size_t i = 0; i < list_size(lista_entradas); i++)
+	// {
+	// 	t_entrada_tlb* e = list_get(lista_entradas, i);
+	// 	log_error(logger, "Entrada %d: pag %d,marco %d", i, e -> pagina, e -> marco);
+	// }
 	
 
-	int pagina_encontrada = 0;
 	for (uint32_t j=0;j<list_size(lista_entradas);j++) {
 		t_entrada_tlb* entrada = list_get(lista_entradas, j);
 		if (entrada -> pagina == -1) {
 			entrada -> pagina = numero_pagina;
 			entrada -> marco = numero_marco;
 			entrada -> instante_carga = time(NULL);
+			log_warning(logger, "Se cargó entrada con instante de carga %f", entrada -> instante_carga);
 			entrada -> instante_ultima_referencia = time(NULL);
-			pagina_encontrada = 1;
+			log_warning(logger, "Se cargó entrada con instante de ultima referencia %f", entrada -> instante_ultima_referencia);
 			ordenar_tlb(lista_entradas);
 			return;
 		}
 	}
 
-	if(!pagina_encontrada){
-		t_entrada_tlb* entrada = list_get(lista_entradas, list_size(lista_entradas) - 1);
-		entrada -> pagina = numero_pagina;
-		entrada -> marco = numero_marco;
-		entrada -> instante_carga = time(NULL);
-		entrada -> instante_ultima_referencia = time(NULL);
-	}
+	t_entrada_tlb* entrada = list_get(lista_entradas, list_size(lista_entradas) - 1);
 
+	entrada -> pagina = numero_pagina;
+	entrada -> marco = numero_marco;
+	entrada -> instante_carga = time(NULL);
+	entrada -> instante_ultima_referencia = time(NULL);
+	
 	ordenar_tlb(lista_entradas);
+
+	// log_error(logger, "Entradas de la TLB:");
+	// for (size_t i = 0; i < list_size(lista_entradas); i++)
+	// {
+	// 	t_entrada_tlb* e = list_get(lista_entradas, i);
+	// 	log_error(logger, "Entrada %d: pag %d,marco %d", i, e -> pagina, e -> marco);
+	// }
 }
-
-

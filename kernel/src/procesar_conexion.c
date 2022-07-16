@@ -54,6 +54,8 @@ void procesar_conexion_dispatch(void *args)
             sem_post(mutex_socket_cpu_dispatch);
             log_info(logger, "Proceso finalizado: %d", pcb->PID);
 
+            pcb -> estado = EXIT;
+
             sem_post(sem_cpu_disponible);
 
             sem_wait(mutex_socket_memoria);
@@ -136,6 +138,7 @@ void procesar_conexion_dispatch(void *args)
             running_a_ready(pcb);
 
             ordenar_cola_ready();
+            
             log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
 
             ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado

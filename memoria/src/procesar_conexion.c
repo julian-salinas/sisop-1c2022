@@ -245,14 +245,14 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 direccion_fisica = buffer_take_INT32(payload);
                 dato = buffer_take_UINT32(payload);
 
+                log_info(logger, "Pedido de escritura de dato %d en la posicion: %d", dato, direccion_fisica);
+
                 escribir_direccion_memoria(direccion_fisica, dato);
 
                 entrada = obtener_entrada_por_DF(direccion_fisica);
 
                 entrada -> bit_modificado = 1;
                 entrada -> bit_uso = 1;
-
-                log_info(logger, "Pedido de escritura de dato %d en la posicion: %d", dato, direccion_fisica);
 
                 // Escribir dato y enviar mensaje OK
                 enviar_header(socket_cliente, MEMORIA_OK);

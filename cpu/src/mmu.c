@@ -13,16 +13,14 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
     if (marco == -1)
     {
         log_warning(logger, "NO se encontró entrada en TLB la pag %d", numero_pagina);
-        //SI NO ENCUENTRA
-        //primer acceso a memoria
-        log_warning(logger, "Enviando PID %d y entrada tabla primer nivel %d", PID, entrada_tabla_1er_nivel);
+
+        // Primer acceso a memoria
+        log_info(logger, "PAM: Enviando PID %d y entrada tabla primer nivel %d", PID, entrada_tabla_1er_nivel);
         nro_tabla_segundo_nivel = acceso_a_memoria(PRIMER_ACCESO_MEMORIA, PID, entrada_tabla_1er_nivel);
         log_warning(logger, "Recibí de memoria el nro tabla de segundo nivel: %d....", nro_tabla_segundo_nivel);
 
-        // agregar_entrada_tlb(tlb, numero_pagina, nro_tabla_segundo_nivel);
-        
         // Segundo acceso a memoria
-        log_warning(logger, "Pidiendo a memoria el nro de página: %d....", numero_pagina);
+        log_info(logger, "SAM: Pidiendo a memoria el nro de página: %d....", numero_pagina);
         marco = acceso_a_memoria_2(SEGUNDO_ACCESO_MEMORIA, nro_tabla_segundo_nivel, numero_pagina, PID);
         log_warning(logger, "Recibí de memoria el marco: %d....", marco);
 
@@ -30,10 +28,12 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
         log_warning(logger, "Agregando a la TBL la pagina %d con el marco %d", numero_pagina, marco);
         agregar_entrada_tlb(tlb, numero_pagina, marco);
 
+        cantidad_accesos_memoria++;
+        log_error(logger, "Cantidad accesos a memoria (primer y segundo nivel): %d", cantidad_accesos_memoria);
     }
     else
     {
-        log_info(logger, "Se encontró entrada en TLB");
+        log_warning(logger, "Se encontró entrada en TLB");
 
         // //nos ahorramos una entrada
         // //segundo acceso a memoria
@@ -41,6 +41,7 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
 
         //marco = acceso_a_memoria(SEGUNDO_ACCESO_MEMORIA, nro_tabla_segundo_nivel, entrada_tabla_2do_nivel);
     }
+
     desplazamiento = direccion_logica - numero_pagina * tamanio_pagina;
     return marco * tamanio_pagina + desplazamiento;
 }

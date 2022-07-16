@@ -22,6 +22,8 @@
     #include "utils.h"
     #include "tlb.h"
 
+    int cantidad_accesos_memoria;
+
     // Semáforo mutex para variable interrupt
     sem_t* mutex_interrupt;
     // Variables para los 2 hilos de CPU

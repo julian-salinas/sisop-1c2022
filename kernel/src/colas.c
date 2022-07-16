@@ -105,6 +105,8 @@ void ready_a_running(void) {
         t_PCB* procesoAMover = (t_PCB*) queue_pop(cola_ready);
     sem_post(mutex_cola_ready);
 
+    log_info(logger, "Vamos a pasar el proceso %d a running", procesoAMover -> PID);
+
     procesoAMover -> estado = RUNNING;
     procesoAMover -> tiempo_restante = 0;
 
@@ -136,6 +138,8 @@ void running_a_ready(t_PCB* procesoAMover) {
 
 
 void running_a_blocked(t_PCB* procesoAMover){
+
+    procesoAMover -> estado = BLOCKED;
 
     sem_wait(mutex_cola_blocked);
         queue_push(cola_blocked, (void*) procesoAMover);

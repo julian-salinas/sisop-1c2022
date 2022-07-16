@@ -10,6 +10,10 @@ int main(void) {
 	cpu_config = ini_cpu_config("cfg/cpu.config");
 	log_info(logger,"Config CPU load");
 
+    cantidad_accesos_memoria = 0;
+
+    elegir_algoritmo(cpu_config -> reemplazo_tlb);
+
     //memoria y kernel
     ini_conexiones();
 

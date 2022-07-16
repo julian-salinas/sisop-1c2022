@@ -63,8 +63,6 @@ void func_corto_plazo(void* args) {
         else {
             sem_wait(sem_procesos_en_ready);
 
-            log_info(logger, "proceso_corriendo vale: %d", proceso_corriendo);
-
             sem_wait(mutex_proceso_corriendo);
             if (proceso_corriendo) {
                 log_info(logger, "Enviando interrupción a CPU INTERRUPT");
@@ -80,6 +78,7 @@ void func_corto_plazo(void* args) {
 
             ordenar_cola_ready();
             log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+
             ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
         }
     }
@@ -170,8 +169,6 @@ void func_io(void* args) {
                 sem_post(mutex_mediano_plazo);
             }
 
-            log_info(logger, "Pasé el mutex de suspensión wiii");
-            
             if (proceso -> estado == SUSPENDED_BLOCKED) {
                 sem_wait(mutex_mediano_plazo);
                     suspended_blocked_a_suspended_ready(proceso);

@@ -35,9 +35,8 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
     {
         //Fetch
         instruccion = list_get(pcb->lista_instrucciones, pcb->program_counter);
-        log_info(logger, "Decode instrucción.");
-        log_info(logger, "program counter %d", pcb->program_counter);
-        log_info(logger, "cantidad de instrucciones: %d", list_size(pcb->lista_instrucciones));
+        log_info(logger, "PID:%d - Decode instrucción - Program counter %d", pcb -> PID, pcb -> program_counter);
+        // log_info(logger, "cantidad de instrucciones: %d", list_size(pcb->lista_instrucciones));
         finCicloInstruccion = 0;
         pcb -> program_counter++;
         //Decode
@@ -45,35 +44,34 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
         {
         case NO_OP:
             //Execute
-            log_info(logger, "Ejecutando NO_OP.");
-            log_info(logger, "tiempo de sleep %d", cpu_config->retardo_noop);
+            log_info(logger, "Ejecutando NO_OP - Retardo: %d", cpu_config -> retardo_noop);
 
             for (size_t i = 0; i < cpu_config->retardo_noop; i++)
             {
                 usleep(1000);
             }
 
-            log_info(logger, "Terminó usleep");
+            log_info(logger, "Finalizó NO_OP");
             break;
         case I_O:
             // se bloquea
-            log_info(logger, "PCB se bloquea.");
-            pcb->estado = BLOCKED;
+            log_info(logger, "Ejecutando I/O - Proceso %d se bloquea", pcb -> PID);
             pcb->tiempo_bloqueo = parametro_instruccion(instruccion->parametros, 0);
-            log_info(logger, "Pre devolver PCB.");
             devolver_pcb(pcb, PROCESO_BLOQUEADO, socket_cliente);
             break;
         case READ:
+            log_info(logger, "Ejecutando READ");
             direccion_logica = parametro_instruccion(instruccion->parametros, 0);
             valor = buscar_operando(direccion_logica, pcb -> PID);
             //Execute
-            log_info(logger, "LEYENDO %d", valor);
+            log_info(logger, "Se leyó el valor: %d", valor);
             break;
         case WRITE:
+            log_info(logger, "Ejecutando WRITE");
             direccion_logica = parametro_instruccion(instruccion->parametros, 0);
             valor = parametro_instruccion(instruccion->parametros, 1);
             //Execute
-            log_info(logger, "ESCRIBIENDO %d", valor);
+            log_info(logger, "Se escribió el valor: %d", valor);
             escribir_operando(direccion_logica, valor, pcb->PID);
             break;
         case COPY:
@@ -81,20 +79,21 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             //traer_operandos(instruccion, direccion_logica, valor, pcb -> PID);
             //Execute
             //escribir_operando(direccion_logica, valor, pcb->PID);
-            log_info(logger, "COPYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
+            log_info(logger, "Ejecutando COPY");
             direccion_logica = parametro_instruccion(instruccion -> parametros, 0);
             valor = buscar_operando(direccion_logica, pcb -> PID);
+            log_info(logger, "Se va a copiar el valor %d en direccion lógica %d", valor, direccion_logica);
             escribir_operando(parametro_instruccion(instruccion -> parametros, 1), valor, pcb -> PID);
             break;
 
         case EXIT:
             // Syscall finalización de proceso
+            log_info(logger, "Ejecutando EXIT - Finaliza proceso %d", pcb -> PID);
             finCicloInstruccion = 1;
-            log_info(logger, "Finaliza proceso. EXIT");
-            pcb->estado = PROCESO_FINALIZADO;
             devolver_pcb(pcb, PROCESO_FINALIZADO, socket_cliente);
             break;
         }
+
         sem_wait(mutex_interrupt);
         
         if (interrupcion == 1)
@@ -108,16 +107,15 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
                 continue;
             }
 
-            log_info(logger, "DEVOLVIENDO POR INTERRUPCION");
+            log_info(logger, "Interrumpiendo proceso PID:%d", pcb -> PID);
             finCicloInstruccion = 1;
             //Regreso por interrupcion
             // pcb->estado = BLOCKED;
             devolver_pcb(pcb, INTERRUPCION, socket_cliente);
             interrupcion = 0;
-            log_info(logger, "YA DEVOLVÍ POR INTERRUPCION");
+            log_info(logger, "Proceso PID:%d interrumpido", pcb -> PID);
         }
         sem_post(mutex_interrupt);
-    log_info(logger, "Linea 121");
     } while (!finCicloInstruccion); //Check Interrupt //Ciclo de instruccion
 }
 
@@ -178,11 +176,10 @@ void devolver_pcb(t_PCB *pcb, codigo_operacion header, int socket_cliente)
 {
     end_t = time(NULL);
     pcb->tiempo_ejecucion += end_t - start_t;
-    log_info(logger, "devolviendo pcb %d - PID:%d", header, pcb->PID);
-    log_info(logger, "tiempo de ejecucion %f", pcb->tiempo_ejecucion);
+    log_info(logger, "Devolviendo PCB - Header %d - PID:%d - Tiempo de ejecucion:%f", header, pcb->PID, pcb->tiempo_ejecucion);
     enviar_pcb(socket_cliente, header, pcb);
-    log_info(logger, "pcb devolvido");
     //limpieza de tlb
+    log_warning(logger, "Limpiando TLB");
     limpiar_tlb2();
 
     finCicloInstruccion = 1;
