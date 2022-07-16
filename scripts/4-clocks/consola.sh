@@ -1,0 +1,3 @@
+echo Enviando consolas...
+cd ../../consola
+gnome-terminal -e "./consola 4096 ../scripts/4-clocks/MEMORIA_1"
