@@ -95,6 +95,11 @@ void liberar_frame_n(uint32_t nro_frame) {
 	frame -> bit_ocupado = 0;
 }
 
+void ocupar_frame_n(uint32_t nro_frame){
+	t_frame* frame = get_frame(nro_frame);
+	frame -> bit_ocupado = 1;
+}
+
 
 uint32_t leer_direccion_memoria(int32_t direccion_fisica) {
 	uint32_t dato;

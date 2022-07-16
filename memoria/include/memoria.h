@@ -75,5 +75,8 @@
      */ 
     int aumentar_contador_clock(int contador_actual, int maximo);
 
+    t_entrada_segundo_nivel* obtener_entrada_por_DF(int32_t direccion_fisica);
+	
+
 
 #endif /* MEMORIA_H_ */

@@ -71,13 +71,13 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 
 	t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(PID);
 	int contador_clock_proceso = (int) dictionary_get(diccionario_clocks, int_a_string(PID));
+	int aux = 0;
 
 	while (1) {
 		for (uint32_t i = 0; i < list_size(entradas_en_memoria); i++) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if ((!entrada -> bit_uso) && (!entrada -> bit_modificado)) {
-				swappear(PID, entrada);
 				return entrada;
 			}
 		}
@@ -86,11 +86,14 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if (!entrada -> bit_uso) {
-				swappear(PID, entrada);
-				return entrada;
+				if(aux > 0)
+				{
+					return entrada;
+				}
 			}
 			entrada -> bit_uso = 0;
 		}
+		aux++;
 	}
 }
 
@@ -105,9 +108,10 @@ t_entrada_segundo_nivel* algoritmo_clock(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, i); // Posible víctima
 			aumentar_contador_clock(contador_clock_proceso, list_size(entradas_en_memoria));
 			if (!entrada -> bit_uso) {
-				swappear(PID, entrada);
+				//swappear(PID, entrada);
 				return entrada;
 			}
+			entrada -> bit_uso = 0;
 		}
 	}
 }
@@ -120,4 +124,29 @@ int aumentar_contador_clock(int contador_actual, int max) {
 	else {
 		return contador_actual + 1;
 	}
+}
+
+t_entrada_segundo_nivel* obtener_entrada_por_DF(int32_t direccion_fisica){
+	t_tabla_segundo_nivel* tabla;
+    t_entrada_segundo_nivel* entrada;
+	char* str;
+	
+	for (size_t i = 0; i < dictionary_size(tablas_segundo_nivel); i++)
+	{
+		str = int_a_string(i);
+		tabla = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, str);
+		free(str);
+        for (size_t i = 0; i < list_size(tabla -> entradas); i++)
+        {
+            entrada = ((t_entrada_segundo_nivel*)list_get(tabla -> entradas, i));
+            int marco = entrada -> nro_frame;
+            int inicio = marco * memoria_config -> tamanio_pagina;
+            int final = inicio + memoria_config -> tamanio_pagina;
+            if ((inicio <= direccion_fisica) && (direccion_fisica <= final)){
+                return entrada;
+            }
+        }
+        
+	}
+	
 }

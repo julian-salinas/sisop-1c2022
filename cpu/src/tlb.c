@@ -24,7 +24,7 @@ void generar_entradas_tlb(void){
 	for (size_t i = 0; i < cpu_config->entradas_tlb; i++)
 	{
 		t_entrada_tlb* entrada = malloc(sizeof(t_entrada_tlb));
-		entrada -> pagina = 0;
+		entrada -> pagina = -1;
 		entrada -> marco = 0;
 		entrada -> instante_carga = 0;
         entrada -> instante_ultima_referencia = 0;
@@ -69,7 +69,7 @@ void limpiar_tlb(t_lista_entradas* lista_entradas){
 void limpiar_tlb2(void){
 	for (uint32_t j=0;j<list_size(tlb);j++) {
 		t_entrada_tlb* entrada = list_get(tlb, j);
-		entrada -> pagina = 0;
+		entrada -> pagina = -1;
 		entrada -> marco = 0;
 		entrada -> instante_carga = 0;
         entrada -> instante_ultima_referencia = 0;
@@ -78,7 +78,7 @@ void limpiar_tlb2(void){
 
 //Busca la entrada y si la encuentra devuleve el marco y actualiza instante de referencia
 
-uint32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina){
+int32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina){
 	for (uint32_t j=0;j<list_size(lista_entradas);j++) {
 			t_entrada_tlb* entrada = list_get(lista_entradas, j);
 			if (entrada -> pagina == numero_pagina) {
@@ -86,34 +86,45 @@ uint32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pa
 				return entrada -> marco;
 			}
 	}
-	return 0;
+	return -1;
 }
 
 
 //se fija que entradas no estan ocupadas y las agrega la entrada ahi, si no hay ninguna entonces reemplaza la ultima entrada que esta ordenada segun el algoritmo
 // finalmente ordena la lista 
 void agregar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina, uint32_t numero_marco){
-	int pagina_encontrada = 0;
-		for (uint32_t j=0;j<list_size(lista_entradas);j++) {
-			t_entrada_tlb* entrada = list_get(lista_entradas, j);
-			if (entrada -> pagina == 0) {
-				entrada -> pagina = numero_pagina;
-				entrada -> marco = numero_marco;
-				entrada -> instante_carga = time(NULL);
-				entrada -> instante_ultima_referencia = time(NULL);
-				pagina_encontrada = 1;
-			}
-		}
 
-		if(!pagina_encontrada){
-			t_entrada_tlb* entrada = list_get(lista_entradas, list_size(lista_entradas) - 1);
+	log_error(logger, "Entradas de la TLB:");
+	for (size_t i = 0; i < list_size(lista_entradas); i++)
+	{
+		t_entrada_tlb* e = list_get(lista_entradas, i);
+		log_error(logger, "Entrada %d: pag %d,marco %d", i, e -> pagina, e -> marco);
+	}
+	
+
+	int pagina_encontrada = 0;
+	for (uint32_t j=0;j<list_size(lista_entradas);j++) {
+		t_entrada_tlb* entrada = list_get(lista_entradas, j);
+		if (entrada -> pagina == -1) {
 			entrada -> pagina = numero_pagina;
 			entrada -> marco = numero_marco;
 			entrada -> instante_carga = time(NULL);
 			entrada -> instante_ultima_referencia = time(NULL);
+			pagina_encontrada = 1;
+			ordenar_tlb(lista_entradas);
+			return;
 		}
+	}
 
-		ordenar_tlb(lista_entradas);
+	if(!pagina_encontrada){
+		t_entrada_tlb* entrada = list_get(lista_entradas, list_size(lista_entradas) - 1);
+		entrada -> pagina = numero_pagina;
+		entrada -> marco = numero_marco;
+		entrada -> instante_carga = time(NULL);
+		entrada -> instante_ultima_referencia = time(NULL);
+	}
+
+	ordenar_tlb(lista_entradas);
 }
 
 

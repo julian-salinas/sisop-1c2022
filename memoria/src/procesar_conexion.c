@@ -72,7 +72,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
 
                 //Devolver pcb al kernel
                 respuesta = crear_paquete(MEMORIA_OK, sizeof(uint32_t));
-                agregar_a_buffer_INT32(respuesta -> payload, id_tabla_creada);
+                agregar_a_buffer_UINT32(respuesta -> payload, id_tabla_creada);
                 enviar_paquete(socket_cliente, respuesta);
                 log_info(logger, "Se devolvió PCB del proceso %d con tabla de páginas %d", pcb -> PID, id_tabla_creada);
 
@@ -203,7 +203,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, int_a_string(nro_tabla_segundo_nivel));
                 entrada = get_entrada_de_pagina(tabla_segundo_nivel, nro_pagina);
 
-                log_info(logger, "Se pudo obtener tabla de segundo nivel y entrada");
+                log_info(logger, "Se pudo obtener tabla de segundo nivel %d y entrada %d", tabla_segundo_nivel -> id_tabla, entrada -> nro_pagina);
                 
                 if (!entrada -> bit_presencia) {
                     desswappear(PID, entrada);
@@ -236,6 +236,9 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 // Obtener dirección que envió CPU
                 payload = recibir_payload(socket_cliente);
                 direccion_fisica = buffer_take_INT32(payload);
+
+                entrada = obtener_entrada_por_DF(direccion_fisica);
+                entrada -> bit_uso = 1;
                 
                 // Leer dato y enviárselo a CPU
                 dato = leer_direccion_memoria(direccion_fisica);
@@ -255,6 +258,10 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 dato = buffer_take_UINT32(payload);
 
                 escribir_direccion_memoria(direccion_fisica, dato);
+
+                entrada = obtener_entrada_por_DF(direccion_fisica);
+                entrada -> bit_modificado = 1;
+                entrada -> bit_uso = 1;
 
                 log_info(logger, "Pedido de escritura de dato %d en la posicion: %d", dato, direccion_fisica);
 
@@ -316,12 +323,14 @@ int crear_proceso_memoria(t_PCB* pcb) {
 
     // Tablas de segundo nivel
     t_tabla_segundo_nivel* tabla_segundo_nivel;
+    int contador_nro_pag = 0;
     for(int i = 0; i < cantidad_tablas_necesarias; i++) {
         tabla_segundo_nivel = crear_tabla_segundo_nivel();
 
         for (int j = 0; j < memoria_config -> paginas_por_tabla; j++) {
             if (cantidad_frames_necesarios) {
-                agregar_entrada_segundo_nivel(tabla_segundo_nivel, j);
+                agregar_entrada_segundo_nivel(tabla_segundo_nivel, contador_nro_pag);
+                contador_nro_pag++;
                     
                 log_info(logger, "Se agregó una entrada a la tabla de segundo nivel %d del proceso ID:%d", 
                         tabla_segundo_nivel -> id_tabla, 

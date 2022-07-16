@@ -112,6 +112,8 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     // Si el bit de modificado está en 1, leer el marco y almacenar el dato
     uint32_t dato;
 
+    log_warning(logger, "Swappeando la entrada %d", entrada -> nro_pagina);
+
     if (entrada -> bit_modificado) {
         // TODO: Leer frame
         entrada -> bit_modificado = 0;
@@ -133,11 +135,16 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     t_swap* swap_proceso = (t_swap*) dictionary_get(diccionario_swap, int_a_string(PID));
     escribir_pagina(swap_proceso, entrada -> nro_pagina, page_data);
     destruir_page_data(page_data);
+
+    log_warning(logger, "Se swappeo la entrada %d", entrada -> nro_pagina);
+
 }
 
 
 void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     t_page_data* page_data = malloc(sizeof(t_page_data));
+
+    log_warning(logger, "Deswappeando la entrada %d", entrada -> nro_pagina);
 
     // Obtener los datos de swap del diccionario
     char* str_id = int_a_string(PID);
@@ -176,7 +183,12 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     entrada -> bit_uso = 1;
     entrada -> bit_modificado = 0; // Esto ya debería estar en 0, peroweno porlasdudas lo pongo
 
+    ocupar_frame_n(entrada -> nro_frame);
+
     // Por último, escribir en el frame lo que ya estaba en la página (lo que leímos de swap)
     escribir_frame_n(entrada -> nro_frame, page_data -> dato);
     destruir_page_data(page_data);
+
+    log_warning(logger, "Se deswappeo la entrada %d en el marco %d", entrada -> nro_pagina, entrada -> nro_frame);
+
 }

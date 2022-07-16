@@ -88,6 +88,14 @@
 
 
     /**
+     * @DESC: Ocupar frame que está en una posición - setear su bit de ocupado en 1
+     * @param nro_frame: posición del frame a ocupar
+     */
+    void ocupar_frame_n(uint32_t nro_frame);
+
+
+
+    /**
      * @DESC: Lee el contenido de una dirección en memoria
      * @param direccion fisica: Desplazamiento que habrá desde que inicia la memoria
      * @return: dato leído

@@ -12,6 +12,8 @@ void inicializar_tablas_de_paginas(void) {
 
     mutex_id_tablas = malloc(sizeof(sem_t));
     sem_init(mutex_id_tablas, 0, 1);
+
+    id_tablas_segundo_nivel = 0;
 }
 
 
