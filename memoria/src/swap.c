@@ -109,6 +109,8 @@ void escribir_pagina(t_swap* archivito_swap, int nro_pagina, t_page_data* page_d
 
 
 void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
+    
+
     // Si el bit de modificado está en 1, leer el marco y almacenar el dato
     uint32_t dato;
 
@@ -138,10 +140,15 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
 
     log_warning(logger, "Se swappeo la entrada %d", entrada -> nro_pagina);
 
+    sem_wait(mutex_cantidad_accesos_swap);
+        cantidad_accesos_swap++;
+        log_info(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
+    sem_post(mutex_cantidad_accesos_swap);
 }
 
 
 void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
+
     t_page_data* page_data = malloc(sizeof(t_page_data));
 
     log_warning(logger, "Deswappeando la entrada %d", entrada -> nro_pagina);
@@ -190,5 +197,8 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     destruir_page_data(page_data);
 
     log_warning(logger, "Se deswappeo la entrada %d en el marco %d", entrada -> nro_pagina, entrada -> nro_frame);
-
+    sem_wait(mutex_cantidad_accesos_swap);
+        cantidad_accesos_swap++;
+        log_info(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
+    sem_post(mutex_cantidad_accesos_swap);
 }

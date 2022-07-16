@@ -54,7 +54,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
         switch (header) {
 
             case NUEVO_PROCESO:
-                log_info(logger, "CASE NUEVO PROCESO");
+                log_info(logger, "Se recibió un nuevo proceso");
                 //retardo cpu
                 usleep(memoria_config -> retardo_memoria * 1000);
                 
@@ -80,12 +80,12 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
             
 
             case PROCESO_SUSPENDIDO:
-                log_info(logger, "CASE PROCESO SUSPENDIDO");
+                log_info(logger, "Se recibió un proceso suspendido");
                 //retardo cpu
                 usleep(memoria_config -> retardo_memoria * 1000);
 
                 pcb = socket_get_PCB(socket_cliente);
-                log_info(logger, "Proceso SUSPENDIDO - ID:%d", pcb -> PID);
+                log_info(logger, "Proceso suspendido - ID:%d", pcb -> PID);
 
                 //obtengo las entradas que esten en memoria y las swappeo
                 entradas_a_swappear = get_entradas_en_memoria_proceso(pcb -> PID);
@@ -100,11 +100,13 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
 
 
             case PROCESO_FINALIZADO:
+                log_info(logger, "Se recibió un proceso finalizado");
+
                 //retardo cpu
                 usleep(memoria_config -> retardo_memoria * 1000);
 
                 pcb = socket_get_PCB(socket_cliente);
-                log_info(logger, "Proceso FINALIZADO - ID:%d", pcb -> PID);
+                log_info(logger, "Proceso finalizado - ID:%d", pcb -> PID);
                 
                 //libero memoria de las tablas
                 tp_lvl1 = get_tabla_primer_nivel(pcb -> tabla_paginas);
@@ -114,8 +116,6 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                     free((void*)tp_lvl2 -> entradas);
                 }
                 free((void*)tp_lvl1 -> entradas);
-
-                //PREGUNTA: Hace falta sacar la tabla del diccionario? - noup
 
                 //borro archivo swap
                 destruir_archivo_swap(pcb -> PID);
@@ -158,19 +158,15 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 break;
 
             case PRIMER_ACCESO_MEMORIA:
-                log_info(logger, "CASE: Primer acceso a memoria");
+                log_info(logger, "Primer acceso a memoria");
 
                 //retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
 
-                log_info(logger, "Terminó usleep");
-                
                 //recibo el nro de tabla de primer nivel y pagina buscada
                 payload = recibir_payload(socket_cliente);
                 PID = buffer_take_UINT32(payload); // Número de página a la que se desea acceder
                 nro_entrada_primer_nivel = buffer_take_INT32(payload); // Nro TP primer nivel del proceso donde vamos a buscar la página
-
-                log_info(logger, "Se leyó paquete enviado por cpu");
 
                 // obtengo nro de tabla de segundo nivel
                 // nro_tabla_segundo_nivel = get_nro_tabla_segundo_nivel_pagina(nro_tabla_primer_nivel, nro_pagina);
@@ -178,7 +174,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 tabla_primer_nivel = get_tabla_primer_nivel(PID);
                 nro_tabla_segundo_nivel = list_get(tabla_primer_nivel -> entradas, nro_entrada_primer_nivel);
 
-                log_info(logger, "Se obtuvo tabla de 2do nivel");
+                log_info(logger, "Enviando tabla de 2do nivel - %d", nro_tabla_segundo_nivel);
                 
                 //le mando a cpu el nro de tabla de segundo nivel
                 enviar_boludeces_a_cpu(socket_cliente, nro_tabla_segundo_nivel);
@@ -186,7 +182,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 break;
             
             case SEGUNDO_ACCESO_MEMORIA:
-                log_info(logger, "CASE: Segundo acceso a memoria");
+                log_info(logger, "Segundo acceso a memoria");
 
                 //retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
@@ -197,14 +193,10 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 nro_pagina = buffer_take_UINT32(payload);
                 PID = buffer_take_UINT32(payload);
 
-                log_info(logger, "Se leyeron los datos enviados por CPU");
-
                 //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
                 tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, int_a_string(nro_tabla_segundo_nivel));
                 entrada = get_entrada_de_pagina(tabla_segundo_nivel, nro_pagina);
 
-                log_info(logger, "Se pudo obtener tabla de segundo nivel %d y entrada %d", tabla_segundo_nivel -> id_tabla, entrada -> nro_pagina);
-                
                 if (!entrada -> bit_presencia) {
                     desswappear(PID, entrada);
                 }
@@ -216,19 +208,8 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 break;
             
-            // case TERCER_ACCESO_MEMORIA:
-            //     //retardo memoria
-            //     usleep(memoria_config -> retardo_memoria * 1000);
-                
-            //     payload = recibir_payload(socket_cliente);
-            //     nro_frame = buffer_take_INT32(payload);
-            //     direccion_fisica = nro_frame * memoria_config -> tamanio_pagina;
-            //     enviar_boludeces_a_cpu(socket_cliente, direccion_fisica);
-
-            //     break; 
-            
             case LEER_MEMORIA:
-                log_info(logger, "CASE: Leer memoria");
+                log_info(logger, "Se recibió pedido de lectura");
 
                 // Retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
@@ -238,6 +219,13 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 direccion_fisica = buffer_take_INT32(payload);
 
                 entrada = obtener_entrada_por_DF(direccion_fisica);
+
+                log_warning(logger,
+                            "DIRECCION: %d - ENTRADA OBTENIDA: NRO_MARCO %d, NRO_PAGINA %d",
+                            direccion_fisica,
+                            entrada -> nro_frame,
+                            entrada -> nro_pagina);
+
                 entrada -> bit_uso = 1;
                 
                 // Leer dato y enviárselo a CPU
@@ -247,7 +235,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 break;
             
             case ESCRIBIR_EN_MEMORIA:
-                log_info(logger, "CASE: Escribir memoria");
+                log_info(logger, "Pedido de escritura");
 
                 // Retardo memoria
                 usleep(memoria_config -> retardo_memoria * 1000);
@@ -260,6 +248,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 escribir_direccion_memoria(direccion_fisica, dato);
 
                 entrada = obtener_entrada_por_DF(direccion_fisica);
+
                 entrada -> bit_modificado = 1;
                 entrada -> bit_uso = 1;
 

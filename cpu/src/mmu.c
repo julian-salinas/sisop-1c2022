@@ -41,7 +41,7 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
 
         //marco = acceso_a_memoria(SEGUNDO_ACCESO_MEMORIA, nro_tabla_segundo_nivel, entrada_tabla_2do_nivel);
     }
-    desplazamiento = (direccion_logica - (numero_pagina * tamanio_pagina));
+    desplazamiento = direccion_logica - numero_pagina * tamanio_pagina;
     return marco * tamanio_pagina + desplazamiento;
 }
 

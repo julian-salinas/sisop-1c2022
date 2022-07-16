@@ -19,7 +19,9 @@
     void crear_archivo_proceso(uint32_t PID);
 
     sem_t* mutex_swap;
-
+    sem_t* mutex_cantidad_accesos_swap;
+    int cantidad_accesos_swap;
+    
     /**
      * @DESC: Contiene "una entrada" de swap, o sea, lo que se guarda en swap por cada página
      */
