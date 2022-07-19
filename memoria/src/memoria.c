@@ -153,17 +153,25 @@ t_entrada_segundo_nivel* obtener_entrada_por_DF(int32_t direccion_fisica){
     t_entrada_segundo_nivel* entrada;
 	char* str;
 	
-	for (size_t i = 0; i < dictionary_size(tablas_segundo_nivel); i++)
+	sem_wait(mutex_tablas_segundo_nivel);
+		int dict_size = dictionary_size(tablas_segundo_nivel);
+	sem_post(mutex_tablas_segundo_nivel);
+
+	for (size_t i = 0; i < dict_size; i++)
 	{
-		if (direccion_fisica == 512) {
-			log_info(logger, " ");
-		}
 		str = int_a_string(i);
-		tabla = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, str);
+
+		sem_wait(mutex_tablas_segundo_nivel);
+			tabla = (t_tabla_segundo_nivel*) dictionary_get(tablas_segundo_nivel, str);
+		sem_post(mutex_tablas_segundo_nivel);
+
 		free(str);
+
+		log_info(logger, "Que está pasando wacho: ID:%d - List Size:%d", tabla -> id_tabla, list_size(tabla -> entradas));
+
         for (size_t i = 0; i < list_size(tabla -> entradas); i++)
         {
-            entrada = ((t_entrada_segundo_nivel*)list_get(tabla -> entradas, i));
+            entrada = ((t_entrada_segundo_nivel*) list_get(tabla -> entradas, i));
 
 			if ((entrada -> nro_frame == -1) || (!entrada -> bit_presencia)) {
 				continue;
@@ -184,6 +192,5 @@ t_entrada_segundo_nivel* obtener_entrada_por_DF(int32_t direccion_fisica){
         
 	}
 
-	log_error(logger, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 	return NULL;
 }

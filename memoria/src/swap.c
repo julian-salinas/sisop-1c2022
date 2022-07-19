@@ -64,7 +64,8 @@ t_swap* crear_archivo_swap(uint32_t PID, size_t tamanio) {
     munmap(archivito_mapeado, archivito_swap -> tamanio);
 
     int cantidad_entradas_proceso = get_cantidad_entradas_proceso(PID);
-    archivito_swap -> entradas = malloc(sizeof(t_page_data) * cantidad_entradas_proceso);
+    // archivito_swap -> entradas = malloc(sizeof(t_page_data) * cantidad_entradas_proceso);
+    archivito_swap -> entradas = calloc(cantidad_entradas_proceso, sizeof(t_page_data));
     
     for (uint32_t i=0;i<cantidad_entradas_proceso;i++) {
         archivito_swap -> entradas[i].dato = 0;
@@ -91,7 +92,8 @@ t_page_data* leer_pagina(t_swap* archivito_swap, int nro_pagina) {
     sem_wait(mutex_swap);
     void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE, MAP_SHARED, archivito_swap->fd, 0);
     void* datos = malloc(sizeof(memoria_config -> tamanio_pagina));
-    memcpy(datos, archivito_mapeado + (nro_pagina * (memoria_config -> tamanio_pagina)), sizeof(memoria_config -> tamanio_pagina));
+    // memcpy(datos, archivito_mapeado + nro_pagina * memoria_config -> tamanio_pagina, memoria_config -> tamanio_pagina);
+    memcpy(datos, archivito_mapeado + nro_pagina * memoria_config -> tamanio_pagina, sizeof(t_page_data));
     munmap(archivito_mapeado, archivito_swap -> tamanio);
     sem_post(mutex_swap);
     return datos;
@@ -100,8 +102,9 @@ t_page_data* leer_pagina(t_swap* archivito_swap, int nro_pagina) {
 
 void escribir_pagina(t_swap* archivito_swap, int nro_pagina, t_page_data* page_data) {
     sem_wait(mutex_swap);
-    void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE,MAP_SHARED, archivito_swap->fd, 0);
-    memcpy(archivito_mapeado + nro_pagina * memoria_config -> tamanio_pagina, page_data, memoria_config -> tamanio_pagina);
+    void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE,MAP_SHARED, archivito_swap -> fd, 0);
+    // memcpy(archivito_mapeado + nro_pagina * memoria_config -> tamanio_pagina, page_data, memoria_config -> tamanio_pagina);
+    memcpy(archivito_mapeado + nro_pagina * memoria_config -> tamanio_pagina, page_data, sizeof(t_page_data));
     msync(archivito_mapeado, archivito_swap->tamanio, MS_SYNC);
     munmap(archivito_mapeado, archivito_swap->tamanio);
     sem_post(mutex_swap);

@@ -46,6 +46,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
     t_tabla_primer_nivel* tp_lvl1;
     t_tabla_segundo_nivel* tp_lvl2;
     t_paquete* respuesta;
+    t_entrada_segundo_nivel* entrada;
 
     while (1) {
         header = recibir_header(socket_cliente);
@@ -113,9 +114,22 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 for (uint32_t i = 0; i < list_size(tp_lvl1 -> entradas); i++)
                 {
                     tp_lvl2 = get_tabla_segundo_nivel((int) list_get(tp_lvl1 -> entradas, i));
-                    free((void*)tp_lvl2 -> entradas);
+                    // free((void*)tp_lvl2 -> entradas);
+                    
+                    for (uint32_t j = 0; j < list_size(tp_lvl2 -> entradas); j++) {
+                        entrada = (t_entrada_segundo_nivel*) list_get(tp_lvl2 -> entradas, 0); 
+                        
+                        if (entrada -> nro_frame != -1) {
+                            liberar_frame_n(entrada -> nro_frame);
+                        }
+
+                        entrada -> nro_frame = -1;
+                        entrada -> bit_presencia = 0;
+                        entrada -> bit_uso = 0;
+                        entrada -> bit_modificado = 0;
+                    }
                 }
-                free((void*)tp_lvl1 -> entradas);
+                // free((void*)tp_lvl1 -> entradas);
 
                 //borro archivo swap
                 destruir_archivo_swap(pcb -> PID);
@@ -168,9 +182,6 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 PID = buffer_take_UINT32(payload); // Número de página a la que se desea acceder
                 nro_entrada_primer_nivel = buffer_take_INT32(payload); // Nro TP primer nivel del proceso donde vamos a buscar la página
 
-                // obtengo nro de tabla de segundo nivel
-                // nro_tabla_segundo_nivel = get_nro_tabla_segundo_nivel_pagina(nro_tabla_primer_nivel, nro_pagina);
-                
                 tabla_primer_nivel = get_tabla_primer_nivel(PID);
                 nro_tabla_segundo_nivel = list_get(tabla_primer_nivel -> entradas, nro_entrada_primer_nivel);
 
@@ -194,7 +205,10 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 PID = buffer_take_UINT32(payload);
 
                 //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
-                tabla_segundo_nivel = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, int_a_string(nro_tabla_segundo_nivel));
+                sem_wait(mutex_tablas_segundo_nivel);
+                    tabla_segundo_nivel = (t_tabla_segundo_nivel*) dictionary_get(tablas_segundo_nivel, int_a_string(nro_tabla_segundo_nivel));
+                sem_post(mutex_tablas_segundo_nivel);
+
                 entrada = get_entrada_de_pagina(tabla_segundo_nivel, nro_pagina);
 
                 if (!entrada -> bit_presencia) {
@@ -249,11 +263,23 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 escribir_direccion_memoria(direccion_fisica, dato);
 
+                log_info(logger, "Se escribió el dato en memoria");
+
+                if (dato != leer_direccion_memoria(direccion_fisica)) {
+                    log_error(logger, "El dato se escribió erróneamente");
+                }
+                else {
+                    log_info(logger, "El dato se escribió perfecto!");
+                }
+
                 entrada = obtener_entrada_por_DF(direccion_fisica);
+
+                log_info(logger, "Se pudo obtener entrada en memoria");
 
                 entrada -> bit_modificado = 1;
                 entrada -> bit_uso = 1;
 
+                log_info(logger, "Enviando respuesta a CPU...");
                 // Escribir dato y enviar mensaje OK
                 enviar_header(socket_cliente, MEMORIA_OK);
                 
