@@ -102,6 +102,13 @@ void new_a_ready(void) {
 void ready_a_running(void) {
 
     sem_wait(mutex_cola_ready);
+    if (proceso_corriendo || queue_is_empty(cola_ready)) {
+        sem_post(mutex_cola_ready);
+        return;
+    }
+    sem_post(mutex_cola_ready);
+
+    sem_wait(mutex_cola_ready);
         t_PCB* procesoAMover = (t_PCB*) queue_pop(cola_ready);
     sem_post(mutex_cola_ready);
 
@@ -109,7 +116,6 @@ void ready_a_running(void) {
 
     procesoAMover -> estado = RUNNING;
     procesoAMover -> tiempo_restante = 0;
-
     
     sem_wait(mutex_socket_cpu_dispatch);
         enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute

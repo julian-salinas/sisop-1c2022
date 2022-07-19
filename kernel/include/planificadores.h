@@ -23,7 +23,7 @@
     pthread_t thread_corto_plazo, thread_mediano_plazo, thread_largo_plazo;
 
     /* Threads de I/O */
-    pthread_t thread_io, thread_suspension;
+    pthread_t thread_io;
 
     /* Modificar el valor de estimacion de un proceso */
     void ajustar_estimacion(t_PCB* pcb);

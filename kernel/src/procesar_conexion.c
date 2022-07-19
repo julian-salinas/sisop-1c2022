@@ -47,7 +47,7 @@ void procesar_conexion_dispatch(void *args)
         case PROCESO_FINALIZADO:
 
             sem_wait(mutex_proceso_corriendo);
-            proceso_corriendo = false;
+                proceso_corriendo = false;
             sem_post(mutex_proceso_corriendo);
 
             pcb = socket_get_PCB(conexion_cpu_dispatch);
@@ -68,12 +68,12 @@ void procesar_conexion_dispatch(void *args)
             if (algoritmo_elegido == SJF)
             {
                 sem_wait(mutex_cola_ready);
-                if (queue_size(cola_ready))
+                if (!queue_is_empty(cola_ready))
                 {
                     sem_post(mutex_cola_ready);
 
                     ordenar_cola_ready();
-                    log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+                    log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF luego de interrupcion.");
 
                     ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
                 }
@@ -85,14 +85,15 @@ void procesar_conexion_dispatch(void *args)
 
             break;
 
-        case PROCESO_BLOQUEADO:
+        case PROCESO_BLOQUEADO:;
+            pcb = socket_get_PCB(conexion_cpu_dispatch); // Obtener pcb del proceso bloqueado
+            sem_post(mutex_socket_cpu_dispatch);
+
             sem_wait(mutex_proceso_corriendo);
             proceso_corriendo = false;
             sem_post(mutex_proceso_corriendo);
 
             sem_post(sem_cpu_disponible);
-            pcb = socket_get_PCB(conexion_cpu_dispatch); // Obtener pcb del proceso bloqueado
-            sem_post(mutex_socket_cpu_dispatch);
 
             log_info(logger, "Se recibió proceso bloqueado por %d ms", pcb->tiempo_bloqueo);
 
@@ -101,13 +102,14 @@ void procesar_conexion_dispatch(void *args)
             running_a_blocked(pcb); // Pasar a cola blocked
 
             // Iniciar hilo que se va a encargar de suspender al proceso en caso de que se zarpe de tiempo
+            pthread_t thread_suspension;
             pthread_create(&thread_suspension, 0, (void *)func_suspension, (void *)pcb);
             pthread_detach(thread_suspension);
 
             if (algoritmo_elegido == SJF)
             {
                 sem_wait(mutex_cola_ready);
-                if (queue_size(cola_ready))
+                if (!queue_is_empty(cola_ready))
                 {
                     sem_post(mutex_cola_ready);
 

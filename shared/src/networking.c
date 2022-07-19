@@ -152,7 +152,7 @@ int esperar_clientes(t_log* logger, const char* name, int socket_servidor) {
 
 int send_all(int socket, void *buffer, size_t size){
     while (size > 0){
-        int i = send(socket, buffer, size, MSG_NOSIGNAL);
+        int i = send(socket, buffer, size, 0);
         if (i == 0) return 0;
         if (i < 0) return -1;
         buffer += i;
