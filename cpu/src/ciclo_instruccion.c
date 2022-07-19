@@ -1,5 +1,4 @@
 #include "ciclo_instruccion.h"
-
 #include "cpu.h"
 #include "mmu.h"
 #include "tlb.h"
@@ -55,6 +54,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             break;
         case I_O:
             // se bloquea
+            log_warning(logger, "SUSPENSIONNNNNNNNNNNNNNNNNNNN %d", pcb -> PID);
             log_info(logger, "Ejecutando I/O - Proceso %d se bloquea", pcb -> PID);
             pcb->tiempo_bloqueo = parametro_instruccion(instruccion->parametros, 0);
             devolver_pcb(pcb, PROCESO_BLOQUEADO, socket_cliente);

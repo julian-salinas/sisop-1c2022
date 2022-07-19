@@ -29,8 +29,6 @@
     typedef t_list t_lista_entradas;
     typedef t_list t_tlb;
 
-    t_lista_entradas* entradas_tlb;
-
     void inicializar_tlb(void);
     void generar_entradas_tlb(void);
     void liberar_tlb(void);
@@ -38,13 +36,13 @@
     bool algoritmo_LRU(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2);
     bool algoritmo_FIFO(t_entrada_tlb* entrada1, t_entrada_tlb* entrada2);
 
-    void ordenar_tlb(t_lista_entradas* lista_entradas);
+    void ordenar_tlb(void);
 
     void elegir_algoritmo(char* algoritmo);
 
-    int32_t buscar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina);
+    int32_t buscar_entrada_tlb(uint32_t numero_pagina);
 
-    void agregar_entrada_tlb(t_lista_entradas* lista_entradas, uint32_t numero_pagina, uint32_t numero_marco);
+    void agregar_entrada_tlb(uint32_t numero_pagina, uint32_t numero_marco);
 
     void limpiar_tlb2(void);
 

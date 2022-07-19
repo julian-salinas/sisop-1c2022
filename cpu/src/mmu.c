@@ -1,5 +1,6 @@
 #include "mmu.h"
 
+
 int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t PID)
 {
     uint32_t nro_tabla_segundo_nivel;
@@ -8,43 +9,39 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
     uint32_t numero_pagina = (uint32_t)floor(direccion_logica / tamanio_pagina);
     uint32_t entrada_tabla_1er_nivel = (int32_t)floor(numero_pagina / paginas_por_tabla);
 
-    //CHEQUEO EN TLB
-    marco = buscar_entrada_tlb(tlb, numero_pagina);
-    if (marco == -1)
-    {
-        log_warning(logger, "NO se encontró entrada en TLB la pag %d", numero_pagina);
+    // CHEQUEO EN TLB
+    marco = buscar_entrada_tlb(numero_pagina);
+
+    if (marco == -1) {
+        log_warning(logger, "NO se encontró entrada en TLB con la pagina %d", numero_pagina);
 
         // Primer acceso a memoria
         log_info(logger, "PAM: Enviando PID %d y entrada tabla primer nivel %d", PID, entrada_tabla_1er_nivel);
         nro_tabla_segundo_nivel = acceso_a_memoria(PRIMER_ACCESO_MEMORIA, PID, entrada_tabla_1er_nivel);
-        log_warning(logger, "Recibí de memoria el nro tabla de segundo nivel: %d....", nro_tabla_segundo_nivel);
+        log_info(logger, "Recibí de memoria el nro tabla de segundo nivel: %d....", nro_tabla_segundo_nivel);
 
         // Segundo acceso a memoria
         log_info(logger, "SAM: Pidiendo a memoria el nro de página: %d....", numero_pagina);
         marco = acceso_a_memoria_2(SEGUNDO_ACCESO_MEMORIA, nro_tabla_segundo_nivel, numero_pagina, PID);
-        log_warning(logger, "Recibí de memoria el marco: %d....", marco);
+        log_info(logger, "Recibí de memoria el marco: %d....", marco);
 
         // Agregar a tlb -> numero pagina | numero marco
-        log_warning(logger, "Agregando a la TBL la pagina %d con el marco %d", numero_pagina, marco);
-        agregar_entrada_tlb(tlb, numero_pagina, marco);
+        log_warning(logger, "Agregando a la TBL la entrada Marco|Pagina %d|%d", marco, numero_pagina);
+        agregar_entrada_tlb(numero_pagina, marco);
 
         cantidad_accesos_memoria++;
-        log_error(logger, "Cantidad accesos a memoria (primer y segundo nivel): %d", cantidad_accesos_memoria);
+        log_error(logger, "Cantidad de veces que no se encontró entrada en TLB: %d", cantidad_accesos_memoria);
     }
+
     else
     {
         log_warning(logger, "Se encontró entrada en TLB");
-
-        // //nos ahorramos una entrada
-        // //segundo acceso a memoria
-        // entrada_tabla_2do_nivel = (uint32_t)numero_pagina % paginas_por_tabla;
-
-        //marco = acceso_a_memoria(SEGUNDO_ACCESO_MEMORIA, nro_tabla_segundo_nivel, entrada_tabla_2do_nivel);
     }
 
     desplazamiento = direccion_logica - numero_pagina * tamanio_pagina;
     return marco * tamanio_pagina + desplazamiento;
 }
+
 
 // funcion auxiliar genérica para accesos a memoria
 uint32_t acceso_a_memoria(codigo_operacion header, uint32_t valor1, uint32_t valor2)
