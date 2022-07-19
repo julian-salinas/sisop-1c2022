@@ -1,23 +1,9 @@
 #include "planificadores.h"
 
 
-int calcular_estimacion(t_PCB* pcb){
-
-    // inicializo config para el alfa
-    int estimacion_actual = 0, tiempo_ejecucion = 0;
-    float alfa = kernel_config -> alfa;
-
-    estimacion_actual = pcb -> estimacion_rafaga;
-
-    // falta que llegue la info del tiempo_ejecucion desde CPU
-
-    estimacion_actual = alfa * tiempo_ejecucion + (1 - alfa) * estimacion_actual;  
-
-    pcb -> estimacion_rafaga = estimacion_actual;
-
-    destruir_kernel_config(kernel_config);
-
-    return estimacion_actual;
+void ajustar_estimacion(t_PCB* pcb) {
+    pcb -> estimacion_rafaga = pcb -> tiempo_ejecucion * kernel_config -> alfa + 
+                                (1 - kernel_config -> alfa) * pcb -> estimacion_rafaga;
 }
 
 
@@ -48,125 +34,84 @@ void ini_threads(void) {
 
     pthread_create(&thread_io, 0, (void*) func_io, NULL);
     pthread_detach(thread_io);
-
 }
+
 
 void finalizar_semaforos_plani() {
     free(mutex_cola_new);
     free(mutex_cola_ready);
-    free(mutex_cola_exit);
     free(mutex_cola_blocked);
     free(mutex_cola_suspended_ready);
-    free(mutex_proceso_corriendo);
-    free(mutex_proceso_buscado);
     
     free(mutex_pid);
     free(mutex_mediano_plazo);
     free(sem_multiprogramacion);
-    free(sem_mediano_plazo);
-    free(sem_corto_plazo);
     free(sem_largo_plazo);
 }
 
 
-void* func_corto_plazo(void* args){
-    t_PCB* procesoAMover;
-    
+
+void func_corto_plazo(void* args) {
+
     while (1) {
-
-        sem_wait(sem_corto_plazo);
-
-        if (transicion_running_a_blocked) {
-            // Agarrar variable global que contiene PCB
-            // Agregarlo a cola blocked
-            running_a_blocked(proceso_desalojado);
-
-            // Empezar a contabilizar tiempo bloqueado
-
-            // pasar transicion running a blocked a false
-            transicion_running_a_blocked = false;
+        if (algoritmo_elegido == FIFO) {
+            sem_wait(sem_cpu_disponible);
+            sem_wait(sem_procesos_en_ready);
+            ready_a_running();
         }
 
-        else if (transicion_ready_a_running) {
+        else {
+            sem_wait(sem_procesos_en_ready);
 
+            sem_wait(mutex_proceso_corriendo);
             if (proceso_corriendo) {
-
-                // Avisar a CPU
-                enviar_header(conexion_cpu, NUEVO_PROCESO_READY);
-
-                uint8_t resp_cpu = recibir_header(conexion_cpu);
-
-                if (resp_cpu != CPU_OK) {
-                    log_error(logger, "Planif. Corto Plazo - Fallo comunicación con CPU");
+                log_info(logger, "Enviando interrupción a CPU INTERRUPT");
                     
-                    // Recursividad hasta que la CPU responda
-                    sem_post(sem_corto_plazo);
-                    continue;
-                }
+                sem_wait(mutex_socket_cpu_interrupt);
+                    enviar_header(conexion_cpu_interrupt, INTERRUPCION);  // Avisar a CPU para que desaloje proceso actual
+                sem_post(mutex_socket_cpu_interrupt);
 
-                t_buffer* payload = recibir_payload(conexion_cpu);
-                procesoAMover = buffer_take_PCB(payload);
-
-                running_a_ready(procesoAMover);
+                sem_post(mutex_proceso_corriendo);
+                continue;
             }
+            sem_post(mutex_proceso_corriendo);
 
             ordenar_cola_ready();
+            log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
 
-            log_info(logger, "Cola ready ordenada");
-
-            procesoAMover = ready_a_running();
-            
-            enviar_pcb(conexion_cpu, procesoAMover);
+            ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
         }
     }
 }
 
 
-void* func_mediano_plazo(void* args) {
+void func_mediano_plazo(void* args) {
 
     while (1) {
-        sem_wait(sem_multiprogramacion);
-        sem_wait(sem_mediano_plazo);
+        sem_wait(sem_multiprogramacion); // Hay grado de multiprogramación disponible
+        log_info(logger, "Se paso el semaforo sem_multiprogramacion.");
+        sem_wait(sem_procesos_esperando); // Hay algo para planificar
+        log_info(logger, "Se paso el semaforo sem_procesos_esperando.");
         sem_wait(mutex_mediano_plazo);
-
-            if(cola_esta_vacia(cola_suspended_ready)) {
+        log_info(logger, "Se paso el semaforo mutex_mediano_plazo.");
+            if(queue_is_empty(cola_suspended_ready)) {
                 sem_post(sem_largo_plazo);
                 sem_post(mutex_mediano_plazo);
-                continue;
+                continue; 
             }
-
             suspended_ready_a_ready();
-
-            // Avisar al planificador de corto plazo para que planifique
-            sem_post(sem_corto_plazo);
-
         sem_post(mutex_mediano_plazo);
     }
 }
 
 
-void* func_largo_plazo(void* args){
-    // No es necesario hacer un wait multiprogramación, ya la hizo la función del planif. mediano plazo
+void func_largo_plazo(void* args){
     while (1) {
+        // No es necesario hacer un wait multiprogramación, ya la hizo la función del planif. mediano plazo
         sem_wait(sem_largo_plazo);
-
-        if (transicion_new_a_ready) {
-            sem_wait(mutex_mediano_plazo);
-                new_a_ready();
-            sem_post(mutex_mediano_plazo);
-
-            transicion_ready_a_running = true;
-            
-            sem_post(sem_corto_plazo);
-        }
-        else if (transicion_running_a_exit) {
-            // Pasar proceso a exit
-            running_a_exit(proceso_desalojado);
-            // Informar a consola que finalizó
-            enviar_header(proceso_desalojado -> socket_cliente, PROCESO_FINALIZADO);
-            // devolver variable a false
-            transicion_running_a_exit = false;
-        }
+        sem_wait(mutex_mediano_plazo);
+            new_a_ready();
+        sem_post(mutex_mediano_plazo);
     }
 }
 
@@ -175,35 +120,85 @@ void ordenar_cola_ready(void) {
     if (algoritmo_elegido == SJF) {
         sem_wait(mutex_cola_ready);
             list_sort(cola_ready -> elements, (void*) *(algoritmo_SJF));
+            
+            t_PCB* tmp;
+            // Imprimir cola ready
+            for (int i = 0; i < queue_size(cola_ready); i++){
+                tmp =  (t_PCB*) list_get(cola_ready -> elements, i);
+                log_warning(logger, "%d - PID:%d - Estimacion %f - Tiempo restante %f", i, tmp -> PID, tmp -> estimacion_rafaga, tmp -> tiempo_restante);
+            }
+
         sem_post(mutex_cola_ready);
     }
 }
 
 
-bool algoritmo_SJF(void* proceso1, void* proceso2) {
-    return ((t_PCB*) proceso1) -> estimacion_rafaga <= ((t_PCB*) proceso2) -> estimacion_rafaga;
+bool algoritmo_SJF(t_PCB* proceso1, t_PCB* proceso2) {
+    double p1 = proceso1 -> tiempo_restante ? proceso1 -> tiempo_restante : proceso1 -> estimacion_rafaga;
+    double p2 = proceso2 -> tiempo_restante ? proceso2 -> tiempo_restante : proceso2 -> estimacion_rafaga;
+
+    return (p1 <= p2);
 }
 
 
-void* func_io(void* args) {
+void func_io(void* args) {
 
     while (1) {
-        // Hacer un wait del semaforo que indica que le toca a IO
+        // Hacer un wait del semaforo que indica que hay procesos en blocked
+        sem_wait(sem_procesos_bloqueados);
 
-        // Empezar a contar el tiempo
+        sem_wait(mutex_cola_blocked);
+            t_PCB* proceso = (t_PCB*) queue_pop(cola_blocked);
+        sem_post(mutex_cola_blocked);
 
-        // Si tiempo bloqueo < tiempo maximo -> Bloquear unicamente ese tiempo y pasar a ready
+        int tiempo_bloqueo = proceso -> tiempo_bloqueo * 1000; // microseg -> miliseg
+        
+        log_info(logger, "Arranca IO del proceso ID:%d", proceso -> PID);
 
-        // Si tiempo bloqueo > tiempo maximo
-            // Bloquear tiempo maximo (hilo IO)
-            // Pasar proceso a suspended blocked (avisar a planificador mediano plazo para que lo haga)
-                // hacer un post a mediano plazo
-                // variable transicion -> true
-            // Bloquear tiempo restante
-            // Pasar a suspended-ready (avisar a planificador mediano plazo para que lo haga)
-                // hacer un post a mediano plazo
-                // variable transicion -> true
+        usleep(tiempo_bloqueo);
 
-        //Hacer un post del semaforo de IO
+        log_info(logger, "Termina IO del proceso ID:%d", proceso -> PID);
+
+        sem_wait(mutex_suspension);
+
+            if (proceso -> estado == BLOCKED) {
+                int value; 
+                sem_getvalue(mutex_mediano_plazo, &value);
+                sem_wait(mutex_mediano_plazo);
+                    blocked_a_ready(proceso);
+                sem_post(mutex_mediano_plazo);
+            }
+
+            if (proceso -> estado == SUSPENDED_BLOCKED) {
+                sem_wait(mutex_mediano_plazo);
+                    suspended_blocked_a_suspended_ready(proceso);
+                sem_post(mutex_mediano_plazo);
+
+                int value;
+                sem_getvalue(sem_multiprogramacion, &value);
+                log_info(logger, "sem_multiprogramacion : %d.", value);
+                sem_getvalue(sem_procesos_esperando, &value);
+                log_info(logger, "sem_procesos_esperando : %d.", value);
+                sem_getvalue(mutex_mediano_plazo, &value);
+                log_info(logger, "mutex_mediano_plazo : %d.", value);
+            }
+
+        sem_post(mutex_suspension);
+
     }
+}
+
+
+void func_suspension(void* args) {
+    t_PCB* proceso = (t_PCB*) args;
+
+    usleep(kernel_config -> tiempo_maximo_bloqueado * 1000);
+
+    sem_wait(mutex_suspension);
+        // Si el proceso sigue estando realizando IO, suspenderlo
+        if (proceso -> estado == BLOCKED) {
+            blocked_a_suspended_blocked(proceso);
+        }
+
+    sem_post(mutex_suspension);
 }

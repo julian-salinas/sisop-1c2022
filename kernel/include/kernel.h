@@ -22,10 +22,11 @@
     t_kernel_config* kernel_config;
 
     // Conexiones (sockets)
-    int conexion_memoria, conexion_cpu;
+    int conexion_memoria, conexion_cpu_dispatch, conexion_cpu_interrupt;
 
     // Variable que nos va a ayudar a saber si tenemos multiprogramacion disponible
     int grado_multiprogramacion_usado;
 
+    pthread_t thread_cpu_dispatch;
 
 #endif /* KERNEL_H_ */

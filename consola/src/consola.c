@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
 	t_proceso* proceso = crear_proceso(size_proceso, lista_instrucciones);
 	enviar_proceso(conexion_kernel, proceso);
 
+	log_info(logger_consola, "Se envió el cod operacion %d", NUEVO_PROCESO);
 	log_info(logger_consola, "Lista de instrucciones enviada.");
 
 	uint8_t respuesta_kernel = recibir_header(conexion_kernel);

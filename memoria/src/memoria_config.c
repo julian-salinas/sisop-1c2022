@@ -8,7 +8,7 @@ t_memoria_config* ini_memoria_config(char* path_a_config) {
     memoria_config -> puerto_escucha = config_get_string_value(memoria_config -> config, "PUERTO_ESCUCHA");
     memoria_config -> tamanio_memoria = config_get_int_value(memoria_config -> config, "TAM_MEMORIA");
     memoria_config -> tamanio_pagina = config_get_int_value(memoria_config -> config, "TAM_PAGINA");
-    memoria_config -> paginas_por_tabla = config_get_int_value(memoria_config -> config, "PAGINAS_POR_TABLA");
+    memoria_config -> paginas_por_tabla = config_get_int_value(memoria_config -> config, "ENTRADAS_POR_TABLA");
     memoria_config -> retardo_memoria = config_get_int_value(memoria_config -> config, "RETARDO_MEMORIA");
     memoria_config -> algoritmo_reemplazo = config_get_string_value(memoria_config -> config, "ALGORITMO_REEMPLAZO");
     memoria_config -> marcos_por_proceso = config_get_int_value(memoria_config -> config, "MARCOS_POR_PROCESO");
@@ -23,13 +23,7 @@ void destruir_memoria_config(t_memoria_config* memoria_config) {
     config_destroy(memoria_config -> config);
     free((void*) memoria_config -> ip_memoria);   
     free((void*) memoria_config -> puerto_escucha);   
-    free((void*) memoria_config -> tamanio_memoria);   
-    free((void*) memoria_config -> tamanio_pagina);   
-    free((void*) memoria_config -> paginas_por_tabla);   
-    free((void*) memoria_config -> retardo_memoria);   
     free((void*) memoria_config -> algoritmo_reemplazo);   
-    free((void*) memoria_config -> marcos_por_proceso);   
-    free((void*) memoria_config -> retardo_swap);   
     free((void*) memoria_config -> path_swap);   
     free((void*) memoria_config);   
 }

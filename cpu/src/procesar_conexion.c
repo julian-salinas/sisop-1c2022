@@ -1,5 +1,6 @@
 #include "procesar_conexion.h"
 
+
 void procesar_conexion(void* void_args) {
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* logger = args->log;
@@ -12,28 +13,9 @@ void procesar_conexion(void* void_args) {
 
     switch (header) {
 
-        case CONEXION_CPU_MEMORIA:
-        {
-            /* TODO
-            / recibir paquete y guardar paginas por tabla y tamanio pagina */
-            t_buffer* payload = recibir_payload(socket_cliente);
-            paginas_por_tabla = buffer_take_UINT8(payload);
-            tamanio_pagina = buffer_take_UINT8(payload);
-            //funciona 
-            log_info(logger, "Se recibió configuración de memoria.");
-            printf("Páginas por tabla: %u\n",paginas_por_tabla);
-            printf("Tamaño de página: %u\n",tamanio_pagina);
-            break; 
-        }
-        case PCB:
-            log_info(logger, "Se recibió pcb del Kernel.");
-            t_buffer* buffer = recibir_payload(socket_cliente);
-            t_PCB* pcb = buffer_take_PCB(buffer);  
-            //acá debería ir un mutex???
-            ejecutar_ciclo_instruccion(pcb);
-            break;
-        case INTERRUPCION:
-            interrupcion=1;
+        case KERNEL: // Handshake inicial con Kernel
+            log_info(logger, "Se conectó Kernel - header %d", header);
+            procesar_conexion_kernel_cpu(socket_cliente);
             break;
 
         case -1:
@@ -45,7 +27,44 @@ void procesar_conexion(void* void_args) {
             log_info(logger, "Cop: %d", header);
             return;
     }
+}
 
-    log_warning(logger, "El cliente se desconecto de server %s", nombre_servidor);
-    return;
+
+void procesar_conexion_kernel_cpu(int socket_cliente) {
+    int8_t header;
+    t_buffer* buffer;
+    t_PCB* pcb;
+    
+    while (1) {
+        header = recibir_header(socket_cliente);
+        log_info(logger, "Conexion con KERNEL - Se recibió header %d", header);
+
+        switch (header) {
+
+            case EJECUTAR_PROCESO:
+                log_info(logger, "CASE EJECUTAR PROCESO");
+                log_info(logger, "Se recibió pcb del Kernel.");
+                buffer = recibir_payload(socket_cliente);
+                pcb = buffer_take_PCB(buffer);  
+                log_info(logger, "Recibimos PCB con ID:%d y Tabla de páginas %d", pcb -> PID, pcb -> tabla_paginas);
+                ejecutar_ciclo_instruccion(pcb, socket_cliente);
+                break;
+
+            case INTERRUPCION: 
+                log_info(logger, "INTERRUPCION");
+                sem_wait(mutex_interrupt);
+                interrupcion=1;
+                log_info(logger, "INTERRUPCION %d", interrupcion);
+                sem_post(mutex_interrupt);
+                break;               
+
+            case -1:
+                log_warning(logger, "Se desconectó Kernel");
+                return;
+
+            default:
+                log_warning(logger, "Kernel nos mandó cualquier cosa: %d", header);
+        
+        }
+    }
 }

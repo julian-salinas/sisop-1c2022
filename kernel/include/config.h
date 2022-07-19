@@ -15,14 +15,15 @@
         char* puerto_cpu_dispatch; 
         char* puerto_cpu_interrupt;
         char* algoritmo_planificacion; 
-        int estimacion_inicial;
-        int alfa;
+        double estimacion_inicial;
+        double alfa;
         int grado_multiprogramacion;
         int tiempo_maximo_bloqueado;    
     } t_kernel_config;
 
 
     t_kernel_config* ini_kernel_config(char* path_a_config);
+
 
     void destruir_kernel_config(t_kernel_config* kernel_config);
 

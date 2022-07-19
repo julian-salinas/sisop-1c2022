@@ -1,117 +1,201 @@
 #include "procesar_conexion.h"
 
-void procesar_conexion(void* void_args) {
+void procesar_conexion(void *args)
+{
 
-    t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
-    t_log* logger = args->log;
-    t_buffer* payload;
-    int socket_cliente = args->fd;
-    char* nombre_servidor = args->server_name;
-    free(args);
+    t_procesar_conexion_args *casted_args = (t_procesar_conexion_args *)args;
+    t_log *logger = casted_args->log;
+    int socket = casted_args->fd;
+    char *nombre_servidor = casted_args->server_name;
+    free(casted_args);
 
-    transicion_new_a_ready = false;
-    transicion_running_a_exit = false;
-    transicion_running_a_blocked = false;
-    transicion_block_a_suspended_block = false;
-    transicion_suspended_block_a_suspended_ready = false;
-    transicion_suspended_ready_a_ready = false;
-    transicion_running_a_ready = false;
-    transicion_ready_a_running = false;
-    transicion_blocked_a_ready = false;
-    transicion_blocked_a_exit = false;
-    transicion_new_a_exit = false;
-    transicion_ready_a_exit = false;
-    transacion_blocked_a_suspended_blocked = false;
+    int header = recibir_header(socket);
+    log_info(logger, "Se recibió el cod operacion %d  - %s", header, nombre_servidor);
+    t_PCB *pcb;
 
-    int header;
-    header = recibir_header(socket_cliente);
+    switch (header)
+    {
 
-    switch(header) {
-        case NUEVO_PROCESO:
+    case NUEVO_PROCESO:
+        pcb = socket_create_PCB(socket);
+        agregar_a_new(pcb); // Se agrega proceso a cola NEW y se actualiza su estado
+        break;
 
-            log_info(logger, "Se recibio un proceso");
+    case -1:
+        log_error(logger, "Cliente desconectado de %s", nombre_servidor);
+        break;
 
-            // Recibir el paquete del cliente y crear PCB del mismo
-            payload = recibir_payload(socket_cliente);
-            t_proceso* proceso = buffer_take_PROCESO(payload);                
-            t_PCB* pcb = crear_PCB(proceso, socket_cliente);
-            
-            // Agregar a New
-            // Sem post nuevo proceso
-            sem_wait(mutex_mediano_plazo);
-                
-                agregar_a_new(pcb);
-                sem_post(sem_mediano_plazo);
+    default:
+        log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
+        break;
+    }
+}
 
-                log_info(logger, "Proceso PID:%d se ahora en estado NEW", pcb -> PID);
-                 enviar_pcb(conexion_cpu, pcb);
-                 log_info(logger, "la pcb se mando es tu culpa cpu");
-            sem_post(mutex_mediano_plazo);
+void procesar_conexion_dispatch(void *args)
+{
+    uint32_t header;
+    t_PCB *pcb;
 
-            destruir_buffer(payload);
+    while (1)
+    {
+        header = recibir_header(conexion_cpu_dispatch);
+        log_info(logger, "Se recibió header de CPU:%d", header);
+        sem_wait(mutex_socket_cpu_dispatch);
+        switch (header)
+        {
+
+        case PROCESO_FINALIZADO:
+
+            sem_wait(mutex_proceso_corriendo);
+                proceso_corriendo = false;
+            sem_post(mutex_proceso_corriendo);
+
+            pcb = socket_get_PCB(conexion_cpu_dispatch);
+            sem_post(mutex_socket_cpu_dispatch);
+            log_info(logger, "Proceso finalizado: %d", pcb->PID);
+
+            pcb -> estado = EXIT;
+
+            sem_post(sem_cpu_disponible);
+
+            sem_wait(mutex_socket_memoria);
+            enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb); // Avisarle a memoria para que desaloje al proceso
+            sem_post(mutex_socket_memoria);
+
+            enviar_header(pcb->socket_cliente, PROCESO_FINALIZADO); // Avisarle a consola que terminó la ejecución
+            sem_post(sem_multiprogramacion);                        // Se libera multiprog. después de sacar al proceso de memoria
+
+            if (algoritmo_elegido == SJF)
+            {
+                sem_wait(mutex_cola_ready);
+                if (!queue_is_empty(cola_ready))
+                {
+                    sem_post(mutex_cola_ready);
+
+                    ordenar_cola_ready();
+                    log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF luego de interrupcion.");
+
+                    ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
+                }
+                else
+                {
+                    sem_post(mutex_cola_ready);
+                }
+            }
 
             break;
 
-        case PROCESO_FINALIZADO:  // mensaje de CPU
-            
-            transicion_running_a_exit = true;
+        case PROCESO_BLOQUEADO:;
+            pcb = socket_get_PCB(conexion_cpu_dispatch); // Obtener pcb del proceso bloqueado
+            sem_post(mutex_socket_cpu_dispatch);
 
-            // Recibir pcb de CPU
-            // Guardar pcb en variable global
-            payload = recibir_payload(conexion_cpu);
-            proceso_desalojado = buffer_take_PCB(payload);
+            sem_wait(mutex_proceso_corriendo);
+            proceso_corriendo = false;
+            sem_post(mutex_proceso_corriendo);
 
-            // sem post a planificador largo plazo
-            sem_post(sem_largo_plazo);
-            
+            sem_post(sem_cpu_disponible);
+
+            log_info(logger, "Se recibió proceso bloqueado por %d ms", pcb->tiempo_bloqueo);
+
+            ajustar_estimacion(pcb);
+
+            running_a_blocked(pcb); // Pasar a cola blocked
+
+            // Iniciar hilo que se va a encargar de suspender al proceso en caso de que se zarpe de tiempo
+            pthread_t thread_suspension;
+            pthread_create(&thread_suspension, 0, (void *)func_suspension, (void *)pcb);
+            pthread_detach(thread_suspension);
+
+            if (algoritmo_elegido == SJF)
+            {
+                sem_wait(mutex_cola_ready);
+                if (!queue_is_empty(cola_ready))
+                {
+                    sem_post(mutex_cola_ready);
+
+                    ordenar_cola_ready();
+                    log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+
+                    ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
+                }
+                else
+                {
+                    sem_post(mutex_cola_ready);
+                }
+            }
+
             break;
 
-        case PROCESO_BLOQUEADO: // mensaje de cpu
-            
-            transicion_running_a_blocked = true;
+        case INTERRUPCION:
+            sem_wait(mutex_proceso_corriendo);
+            proceso_corriendo = false;
+            sem_post(mutex_proceso_corriendo);
+            pcb = socket_get_PCB(conexion_cpu_dispatch);
+            sem_post(mutex_socket_cpu_dispatch);
 
-            // Recibir pcb de CPU
-            // Guardar pcb en variable global
-            payload = recibir_payload(conexion_cpu);
-            proceso_desalojado = buffer_take_PCB(payload);
+            log_info(logger, "Se recibió proceso interrumpido: PID:%d", pcb->PID);
 
-            // sem post a planificador corto plazo
-            sem_post(sem_corto_plazo);
+            pcb -> tiempo_restante = pcb -> estimacion_rafaga - pcb -> tiempo_ejecucion;
+
+            running_a_ready(pcb);
+
+            ordenar_cola_ready();
             
+            log_info(logger, "Se reordenó la cola READY usando el algoritmo SJF.");
+
+            ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
+
+            break;
+
+        case INTERRUPCION_RECHAZADA:
+            sem_post(mutex_socket_cpu_dispatch);
+            log_info(logger, "Interrupcion rechazada - no hay procesos en cpu");
             break;
 
         case -1:
-            log_error(logger, "Cliente desconectado de %s", nombre_servidor);
-            break;
+            sem_post(mutex_socket_cpu_dispatch);
+            log_error(logger, "¡Hubo un problema con la conexión de CPU!");
+            return;
 
         default:
-            log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
-            break;
+            sem_post(mutex_socket_cpu_dispatch);
+            log_error(logger, "El codigo de operacion es incorrecto - %d", header);
+            return;
+        }
     }
-
-    // Finalizar atender un cliente
-    log_warning(logger, "El cliente se desconecto de server %s", nombre_servidor);
-
 }
 
+t_PCB *crear_PCB(t_proceso *proceso, int socket)
+{
 
-t_PCB* crear_PCB(t_proceso* proceso, int fd) {
-    
-    t_PCB* pcb = malloc(sizeof(t_PCB));
-    pcb -> PID = contador_id_proceso;
-    pcb -> tamanio = proceso -> tamanio;
-    pcb -> lista_instrucciones = proceso -> lista_instrucciones;
-    pcb -> program_counter = 0;
-    pcb -> tabla_paginas = -1;
-    pcb -> estimacion_rafaga = kernel_config -> estimacion_inicial;
-    pcb -> tiempo_ejecucion = 0;
-    pcb -> socket_cliente = fd;
-    pcb -> estado = NEW;
+    t_PCB *pcb = malloc(sizeof(t_PCB));
+    sem_wait(mutex_pid);
+    pcb->PID = contador_id_proceso;
+    sem_post(mutex_pid);
+    pcb->tamanio = proceso->tamanio;
+    pcb->lista_instrucciones = proceso->lista_instrucciones;
+    pcb->program_counter = 0;
+    pcb->tabla_paginas = -1;
+    pcb->estimacion_rafaga = kernel_config->estimacion_inicial;
+    pcb->tiempo_ejecucion = 0.0;
+    pcb->socket_cliente = socket;
+    pcb->tiempo_bloqueo = -1;
+    pcb->estado = NEW;
+    pcb->tiempo_restante = 0.0;
 
     sem_wait(mutex_pid);
-        contador_id_proceso++;
+    contador_id_proceso++;
     sem_post(mutex_pid);
-    
-    return pcb;
 
+    return pcb;
+}
+
+t_PCB *socket_create_PCB(int socket)
+{
+    t_buffer *payload = recibir_payload(socket);
+    t_proceso *proceso = buffer_take_PROCESO(payload);
+    t_PCB *pcb = crear_PCB(proceso, socket);
+    destruir_buffer(payload);
+
+    return pcb;
 }

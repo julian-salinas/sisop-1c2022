@@ -14,6 +14,7 @@
     #include<commons/config.h>
     #include<commons/collections/list.h>    
     #include <pthread.h>
+    #include <errno.h>
 
     #include "serializacion.h"
     #include "enum.h"
@@ -48,10 +49,9 @@
      * @param ip: ip a la cual va a conectarse el socket
      * @param puerto: puerto al cual va a conectarse el socket
      */
-    int crear_socket_servidor(char *ip, char *puerto);
+    int crear_socket_servidor(char *ip, char *puerto, t_log* logger);
 
 
-    /* --------------------------- NUEVA FUNCION -------------------------- */
     /**
      * @DESC: Crear un socket servidor para recibir a cliente
      * @param logger: logger ya creado, que va a loggear el resultado de la operación
@@ -63,7 +63,6 @@
     int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto);
 
     
-    /* --------------------------- NUEVA FUNCION -------------------------- */
     /**
      * @DESC: Escuchar a nuevos clientes, crear un hilo si un cliente se conecta
      * @param logger: logger que va a loggear el resultado de la operación
@@ -149,5 +148,12 @@
      *                 header contiene el codigo de operacion (uint*_t) y en el payload el buffer
      */
     void enviar_paquete(int socket_cliente, t_paquete* paquete);    
+
+
+    /**
+     * @DESC: Aumentar el offset del header de un socket, para omitirlo al momento de extraer más datos
+     * @param socket: socket al cual se le omitirá el header
+     */
+    void omitir_header(int socket); 
 
 #endif /* NETWORKING_H */
