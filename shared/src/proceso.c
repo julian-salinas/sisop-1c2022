@@ -91,3 +91,8 @@ t_PCB* socket_get_PCB(int socket) {
 
     return pcb;
 }
+
+void destruir_PCB(t_PCB* pcb) {
+    list_destroy_and_destroy_elements(pcb -> lista_instrucciones, (void*)destruir_instruccion);
+    free(pcb);
+}

@@ -59,6 +59,11 @@
      * @param socket: socket cliente de donde se va a extraer el pcb
      */
     t_PCB* socket_get_PCB(int socket);
+
+    /**
+     * @DESC: Destruye un PCB y su lista de instrucciones.
+     */
+    void destruir_PCB(t_PCB* pcb);
     
 
 #endif

@@ -112,6 +112,8 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 		contador_clock_proceso = 0;
 
 	}
+
+	list_destroy(entradas_en_memoria);
 }
 
 
@@ -129,6 +131,7 @@ t_entrada_segundo_nivel* algoritmo_clock(uint32_t PID) {
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
 				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
+				free(entradas_en_memoria);
 				return entrada;
 			}
 			entrada -> bit_uso = 0;

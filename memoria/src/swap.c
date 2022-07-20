@@ -72,14 +72,18 @@ t_swap* crear_archivo_swap(uint32_t PID, size_t tamanio) {
     }
 
     log_info(logger, "Se creó el archivo %s para el proceso ID:%d", archivito_swap -> path, PID);
-    dictionary_put(diccionario_swap, int_a_string(PID), archivito_swap);
+    char* nro_pid = int_a_string(PID);
+    dictionary_put(diccionario_swap, nro_pid, archivito_swap);
+    free(nro_pid);
 
     return archivito_swap;
 }
 
 
 void destruir_archivo_swap(uint32_t PID) {
-    t_swap* archivito_swap = (t_swap*) dictionary_get(diccionario_swap, int_a_string(PID));
+    char* nro_pid = int_a_string(PID);
+    t_swap* archivito_swap = (t_swap*) dictionary_get(diccionario_swap, nro_pid);
+    free(nro_pid);
     close(archivito_swap -> fd);
     unlink(archivito_swap -> path);
     free(archivito_swap -> path);
@@ -137,7 +141,9 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
 
     // Guardar datos en swap
     t_page_data* page_data = crear_page_data(entrada -> nro_pagina, dato);
-    t_swap* swap_proceso = (t_swap*) dictionary_get(diccionario_swap, int_a_string(PID));
+    char* nro_pid = int_a_string(PID);
+    t_swap* swap_proceso = (t_swap*) dictionary_get(diccionario_swap, nro_pid);
+    free(nro_pid);
     escribir_pagina(swap_proceso, entrada -> nro_pagina, page_data);
     destruir_page_data(page_data);
 
@@ -152,8 +158,6 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
 
 void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
 
-    t_page_data* page_data = malloc(sizeof(t_page_data));
-
     log_warning(logger, "Deswappeando la entrada %d", entrada -> nro_pagina);
 
     // Obtener los datos de swap del diccionario
@@ -162,7 +166,7 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     free(str_id);
     
     // Leer el contenido de la página en swap
-    page_data = leer_pagina(swap_proceso, entrada -> nro_pagina);
+    t_page_data* page_data = leer_pagina(swap_proceso, entrada -> nro_pagina);
 
     t_list* entradas_en_memoria = get_entradas_en_memoria_proceso(PID);
 
@@ -188,6 +192,7 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
         // NOTA: el bit de ocupado del frame que se manipula nunca se altera, siempre permanece ocupado
         entrada -> nro_frame = get_posicion_frame_libre();
     }
+    list_destroy(entradas_en_memoria);
 
     entrada -> bit_presencia = 1;
     entrada -> bit_uso = 1;

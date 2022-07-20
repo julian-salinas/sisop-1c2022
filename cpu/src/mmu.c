@@ -63,6 +63,7 @@ uint32_t acceso_a_memoria(codigo_operacion header, uint32_t valor1, uint32_t val
 
     t_buffer *payload = recibir_payload(conexion_memoria);
     rta_memoria = buffer_take_UINT32(payload);
+    //TODO: DESTRUIR PAYLOAD
 
     log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
 
@@ -91,6 +92,7 @@ uint32_t acceso_a_memoria_2(codigo_operacion header, uint32_t valor1, uint32_t v
 
     t_buffer *payload = recibir_payload(conexion_memoria);
     rta_memoria = buffer_take_UINT32(payload);
+    //TODO:DESTRUIR PAYLOAD
 
     log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
 
@@ -117,6 +119,7 @@ uint32_t acceso_a_memoria_3(codigo_operacion header, uint32_t valor1)
 
     t_buffer *payload = recibir_payload(conexion_memoria);
     rta_memoria = buffer_take_UINT32(payload);
+    //TODO: DESTRUIR PAYLOAD
 
     log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
 

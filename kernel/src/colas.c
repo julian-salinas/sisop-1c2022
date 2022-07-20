@@ -82,6 +82,7 @@ void new_a_ready(void) {
 
         t_buffer* payload = recibir_payload(conexion_memoria);
         uint32_t tabla_paginas = buffer_take_INT32(payload);
+        //TODO:DESTRUIR PAYLOAD
         tabla_paginas = procesoAMover -> PID;
         procesoAMover -> tabla_paginas = tabla_paginas;
 

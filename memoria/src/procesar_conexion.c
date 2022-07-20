@@ -66,6 +66,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
 
                 if (!id_tabla_creada) {
                     enviar_pcb(socket_cliente, PROCESO_RECHAZADO, pcb);
+                    destruir_PCB(pcb);
                 }
 
                 //Modificar pcb agregando el valor de tabla de paginas
@@ -75,7 +76,9 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 respuesta = crear_paquete(MEMORIA_OK, sizeof(uint32_t));
                 agregar_a_buffer_UINT32(respuesta -> payload, id_tabla_creada);
                 enviar_paquete(socket_cliente, respuesta);
+                destruir_paquete(respuesta);
                 log_info(logger, "Se devolvió PCB del proceso %d con tabla de páginas %d", pcb -> PID, id_tabla_creada);
+                destruir_PCB(pcb);
 
                 break;
             
@@ -94,9 +97,11 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 {
                     swappear(pcb -> PID, list_get(entradas_a_swappear, i));
                 }
+                free(entradas_a_swappear);
 
                 //Devolver pcb al kernel
                 enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
+                destruir_PCB(pcb);
                 break;
 
 
@@ -135,6 +140,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 destruir_archivo_swap(pcb -> PID);
 
                 enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
+                destruir_PCB(pcb);
                 break;
 
             case -1:
@@ -151,7 +157,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
 
 void procesar_conexion_cpu_memoria(int socket_cliente) {
     int8_t header;
-    int32_t nro_pagina, nro_tabla_primer_nivel, nro_tabla_segundo_nivel, direccion_fisica, nro_frame, nro_entrada_primer_nivel;
+    int32_t nro_pagina, nro_tabla_segundo_nivel, direccion_fisica, nro_entrada_primer_nivel;
     uint32_t dato, PID;
     t_buffer* payload;
     t_tabla_primer_nivel* tabla_primer_nivel;
@@ -182,6 +188,8 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 PID = buffer_take_UINT32(payload); // Número de página a la que se desea acceder
                 nro_entrada_primer_nivel = buffer_take_INT32(payload); // Nro TP primer nivel del proceso donde vamos a buscar la página
 
+                destruir_buffer(payload);
+
                 tabla_primer_nivel = get_tabla_primer_nivel(PID);
                 nro_tabla_segundo_nivel = list_get(tabla_primer_nivel -> entradas, nro_entrada_primer_nivel);
 
@@ -204,10 +212,14 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 nro_pagina = buffer_take_UINT32(payload);
                 PID = buffer_take_UINT32(payload);
 
+                destruir_buffer(payload);
+
                 //obtengo la tabla de segundo nivel y el nro de marco de la entrada de segundo nivel
                 sem_wait(mutex_tablas_segundo_nivel);
-                    tabla_segundo_nivel = (t_tabla_segundo_nivel*) dictionary_get(tablas_segundo_nivel, int_a_string(nro_tabla_segundo_nivel));
+                char* numero_tabla = int_a_string(nro_tabla_segundo_nivel);
+                    tabla_segundo_nivel = (t_tabla_segundo_nivel*) dictionary_get(tablas_segundo_nivel, numero_tabla);
                 sem_post(mutex_tablas_segundo_nivel);
+                free(numero_tabla);
 
                 entrada = get_entrada_de_pagina(tabla_segundo_nivel, nro_pagina);
 
@@ -231,6 +243,8 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 // Obtener dirección que envió CPU
                 payload = recibir_payload(socket_cliente);
                 direccion_fisica = buffer_take_INT32(payload);
+
+                destruir_buffer(payload);
 
                 entrada = obtener_entrada_por_DF(direccion_fisica);
 
@@ -258,6 +272,8 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 payload = recibir_payload(socket_cliente);
                 direccion_fisica = buffer_take_INT32(payload);
                 dato = buffer_take_UINT32(payload);
+
+                destruir_buffer(payload);
 
                 log_info(logger, "Pedido de escritura de dato %d en la posicion: %d", dato, direccion_fisica);
 

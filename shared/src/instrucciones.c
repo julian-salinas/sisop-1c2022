@@ -71,7 +71,6 @@ t_instruccion* buffer_take_INSTRUCCION(t_buffer* buffer) {
     parametros = buffer_take_LIST(buffer, (void*) buffer_take_UINT32);
 
     tmp -> identificador = identificador;
-    tmp -> parametros = malloc(sizeof(t_list));
     tmp -> parametros = parametros;
 
     return tmp;
