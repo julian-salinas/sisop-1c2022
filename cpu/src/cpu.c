@@ -94,7 +94,7 @@ void obtener_config_memoria(void){
     t_buffer* payload = recibir_payload(conexion_memoria);
     paginas_por_tabla = buffer_take_UINT32(payload);
     tamanio_pagina = buffer_take_UINT32(payload);
-    //TODO: DESTRUIR PAYLOAD
+    destruir_buffer(payload);
     //funciona 
     log_info(logger, "Se recibió configuración de memoria.");
     printf("Páginas por tabla: %u\n",paginas_por_tabla);

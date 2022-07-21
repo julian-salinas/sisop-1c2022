@@ -15,20 +15,20 @@ void procesar_conexion(void *args)
 
     switch (header)
     {
+        case NUEVO_PROCESO:
+            pcb = socket_create_PCB(socket);
+            agregar_a_new(pcb); // Se agrega proceso a cola NEW y se actualiza su estado
+            //destruir_PCB(pcb); //?
+            break;
 
-    case NUEVO_PROCESO:
-        pcb = socket_create_PCB(socket);
-        agregar_a_new(pcb); // Se agrega proceso a cola NEW y se actualiza su estado
-        break;
+        case -1:
+            log_error(logger, "Cliente desconectado de %s", nombre_servidor);
+            break;
 
-    case -1:
-        log_error(logger, "Cliente desconectado de %s", nombre_servidor);
-        break;
-
-    default:
-        log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
-        break;
-    }
+        default:
+            log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
+            break;
+        }
 }
 
 void procesar_conexion_dispatch(void *args)
@@ -63,6 +63,7 @@ void procesar_conexion_dispatch(void *args)
             sem_post(mutex_socket_memoria);
 
             enviar_header(pcb->socket_cliente, PROCESO_FINALIZADO); // Avisarle a consola que terminó la ejecución
+            destruir_PCB(pcb);
             sem_post(sem_multiprogramacion);                        // Se libera multiprog. después de sacar al proceso de memoria
 
             if (algoritmo_elegido == SJF)
@@ -123,6 +124,7 @@ void procesar_conexion_dispatch(void *args)
                     sem_post(mutex_cola_ready);
                 }
             }
+            //TODO: DESTRUIR PCB
 
             break;
 
@@ -145,6 +147,7 @@ void procesar_conexion_dispatch(void *args)
 
             ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
 
+            //TODO: DESTRUIR PCB
             break;
 
         case INTERRUPCION_RECHAZADA:
@@ -196,6 +199,7 @@ t_PCB *socket_create_PCB(int socket)
     t_proceso *proceso = buffer_take_PROCESO(payload);
     t_PCB *pcb = crear_PCB(proceso, socket);
     destruir_buffer(payload);
+    //destruir_proceso(proceso);
 
     return pcb;
 }

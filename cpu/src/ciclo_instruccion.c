@@ -58,6 +58,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             log_info(logger, "Ejecutando I/O - Proceso %d se bloquea", pcb -> PID);
             pcb->tiempo_bloqueo = parametro_instruccion(instruccion->parametros, 0);
             devolver_pcb(pcb, PROCESO_BLOQUEADO, socket_cliente);
+            destruir_PCB(pcb);
             break;
         case READ:
             log_info(logger, "Ejecutando READ");
@@ -91,6 +92,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             log_info(logger, "Ejecutando EXIT - Finaliza proceso %d", pcb -> PID);
             finCicloInstruccion = 1;
             devolver_pcb(pcb, PROCESO_FINALIZADO, socket_cliente);
+            destruir_PCB(pcb);
             break;
         }
 
@@ -114,6 +116,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             devolver_pcb(pcb, INTERRUPCION, socket_cliente);
             interrupcion = 0;
             log_info(logger, "Proceso PID:%d interrumpido", pcb -> PID);
+            destruir_PCB(pcb);
         }
         sem_post(mutex_interrupt);
     } while (!finCicloInstruccion); //Check Interrupt //Ciclo de instruccion
