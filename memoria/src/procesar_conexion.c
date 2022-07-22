@@ -9,8 +9,7 @@ void procesar_conexion(void* void_args) {
     tamanio_tabla = memoria_config -> tamanio_pagina * memoria_config -> paginas_por_tabla;
     free(args);
 
-    int8_t header;
-    header = recibir_header(socket_cliente);
+    int8_t header = recibir_header(socket_cliente);
 
     switch (header) {
 
@@ -30,7 +29,7 @@ void procesar_conexion(void* void_args) {
 
         default:
             log_error(logger, "Algo anduvo mal en el server de %s", nombre_servidor);
-            log_info(logger, "Cop: %d", header);
+            log_info(logger, "Header recibido: %d", header);
             break;
     }
 
