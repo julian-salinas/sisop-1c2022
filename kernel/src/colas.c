@@ -121,8 +121,9 @@ void ready_a_running(void) {
     sem_wait(mutex_socket_cpu_dispatch);
         enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
     sem_post(mutex_socket_cpu_dispatch);
-    
+
     log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
+    destruir_PCB(procesoAMover);
 
     sem_wait(mutex_proceso_corriendo);
     proceso_corriendo = true;

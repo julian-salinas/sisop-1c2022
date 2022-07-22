@@ -170,13 +170,15 @@ void procesar_conexion_dispatch(void *args)
 
 t_PCB *crear_PCB(t_proceso *proceso, int socket)
 {
-
     t_PCB *pcb = malloc(sizeof(t_PCB));
+    
     sem_wait(mutex_pid);
-    pcb->PID = contador_id_proceso;
+        pcb->PID = contador_id_proceso;
+        contador_id_proceso++;
     sem_post(mutex_pid);
+    
     pcb->tamanio = proceso->tamanio;
-    pcb->lista_instrucciones = proceso->lista_instrucciones;
+    pcb -> lista_instrucciones = proceso -> lista_instrucciones;
     pcb->program_counter = 0;
     pcb->tabla_paginas = -1;
     pcb->estimacion_rafaga = kernel_config->estimacion_inicial;
@@ -186,10 +188,6 @@ t_PCB *crear_PCB(t_proceso *proceso, int socket)
     pcb->estado = NEW;
     pcb->tiempo_restante = 0.0;
 
-    sem_wait(mutex_pid);
-    contador_id_proceso++;
-    sem_post(mutex_pid);
-
     return pcb;
 }
 
@@ -198,8 +196,9 @@ t_PCB *socket_create_PCB(int socket)
     t_buffer *payload = recibir_payload(socket);
     t_proceso *proceso = buffer_take_PROCESO(payload);
     t_PCB *pcb = crear_PCB(proceso, socket);
+
+    free(proceso); // No es necesario destruir la lista de instrucciones, se destruye con el pcb
     destruir_buffer(payload);
-    //destruir_proceso(proceso);
 
     return pcb;
 }
