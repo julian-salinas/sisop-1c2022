@@ -103,6 +103,7 @@ void new_a_ready(void) {
 void ready_a_running(void) {
 
     sem_wait(mutex_cola_ready);
+    
     if (proceso_corriendo || queue_is_empty(cola_ready)) {
         sem_post(mutex_cola_ready);
         return;
@@ -112,8 +113,6 @@ void ready_a_running(void) {
     sem_wait(mutex_cola_ready);
         t_PCB* procesoAMover = (t_PCB*) queue_pop(cola_ready);
     sem_post(mutex_cola_ready);
-
-    log_info(logger, "Vamos a pasar el proceso %d a running", procesoAMover -> PID);
 
     procesoAMover -> estado = RUNNING;
     procesoAMover -> tiempo_restante = 0;

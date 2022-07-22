@@ -49,7 +49,6 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
                 destruir_buffer(buffer);
                 log_info(logger, "Recibimos PCB con ID:%d y Tabla de páginas %d", pcb -> PID, pcb -> tabla_paginas);
                 ejecutar_ciclo_instruccion(pcb, socket_cliente);
-                destruir_PCB(pcb);
                 break;
 
             case INTERRUPCION: 
@@ -66,6 +65,7 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
 
             default:
                 log_warning(logger, "Kernel nos mandó cualquier cosa: %d", header);
+                return;
         
         }
     }

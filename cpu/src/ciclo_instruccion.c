@@ -114,8 +114,8 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             //Regreso por interrupcion
             // pcb->estado = BLOCKED;
             devolver_pcb(pcb, INTERRUPCION, socket_cliente);
-            interrupcion = 0;
             log_info(logger, "Proceso PID:%d interrumpido", pcb -> PID);
+            interrupcion = 0;
             destruir_PCB(pcb);
         }
         sem_post(mutex_interrupt);

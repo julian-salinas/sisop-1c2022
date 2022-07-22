@@ -124,7 +124,6 @@ void procesar_conexion_dispatch(void *args)
                     sem_post(mutex_cola_ready);
                 }
             }
-            //TODO: DESTRUIR PCB
 
             break;
 
@@ -147,7 +146,6 @@ void procesar_conexion_dispatch(void *args)
 
             ready_a_running(); // Tomar un proceso de la cola ready y cambiar su estado
 
-            //TODO: DESTRUIR PCB
             break;
 
         case INTERRUPCION_RECHAZADA:
