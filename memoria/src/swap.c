@@ -114,7 +114,7 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
 
     sem_wait(mutex_cantidad_accesos_swap);
         cantidad_accesos_swap++;
-        log_info(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
+        log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
     sem_post(mutex_cantidad_accesos_swap);
 }
 
@@ -170,6 +170,6 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     log_warning(logger, "Se deswappeo la entrada %d en el marco %d", entrada -> nro_pagina, entrada -> nro_frame);
     sem_wait(mutex_cantidad_accesos_swap);
         cantidad_accesos_swap++;
-        log_info(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
+        log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
     sem_post(mutex_cantidad_accesos_swap);
 }

@@ -52,7 +52,7 @@ void procesar_conexion_dispatch(void *args)
 
             pcb = socket_get_PCB(conexion_cpu_dispatch);
             sem_post(mutex_socket_cpu_dispatch);
-            log_info(logger, "Proceso finalizado: %d", pcb->PID);
+            log_debug(logger, "Proceso finalizado: %d", pcb->PID);
 
             pcb -> estado = EXIT;
 

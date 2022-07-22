@@ -6,7 +6,7 @@ int main(void) {
 	memoria_config = ini_memoria_config("cfg/memoria.config");
 
 	// Crear logger
-	logger = log_create("cfg/memoria.log", "memoria", 1, LOG_LEVEL_DEBUG);
+	logger = log_create("cfg/memoria.log", "memoria", 1, LOG_LEVEL_TRACE);
 	log_info(logger,"Memoria iniciada");
 
 	// Inicializar estructuras de tablas de páginas

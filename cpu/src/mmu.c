@@ -30,7 +30,7 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
         agregar_entrada_tlb(numero_pagina, marco);
 
         cantidad_accesos_memoria++;
-        log_error(logger, "Cantidad de veces que no se encontró entrada en TLB: %d", cantidad_accesos_memoria);
+        log_trace(logger, "Cantidad de veces que no se encontró entrada en TLB: %d", cantidad_accesos_memoria);
     }
 
     else

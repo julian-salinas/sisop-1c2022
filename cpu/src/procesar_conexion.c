@@ -47,7 +47,7 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
                 buffer = recibir_payload(socket_cliente);
                 pcb = buffer_take_PCB(buffer);  
                 destruir_buffer(buffer);
-                log_info(logger, "Recibimos PCB con ID:%d y Tabla de páginas %d", pcb -> PID, pcb -> tabla_paginas);
+                log_trace(logger, "Recibimos PCB con ID:%d y Tabla de páginas %d", pcb -> PID, pcb -> tabla_paginas);
                 ejecutar_ciclo_instruccion(pcb, socket_cliente);
                 break;
 

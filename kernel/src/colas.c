@@ -30,7 +30,7 @@ void agregar_a_new(t_PCB* procesoAMover) {
         queue_push(cola_new, (void*) procesoAMover);
     sem_post(mutex_cola_new);
 
-    log_info(logger, "El proceso con ID:%d pasó a estado NEW", procesoAMover -> PID);
+    log_trace(logger, "El proceso con ID:%d pasó a estado NEW", procesoAMover -> PID);
 
     sem_post(sem_procesos_esperando);
 }
@@ -120,7 +120,7 @@ void ready_a_running(void) {
         enviar_pcb(conexion_cpu_dispatch, EJECUTAR_PROCESO, procesoAMover); // Pasarle el proceso a CPU para que lo ejecute
     sem_post(mutex_socket_cpu_dispatch);
 
-    log_info(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
+    log_debug(logger, "El proceso con ID:%d pasó de READY a RUNNING", procesoAMover -> PID);
     destruir_PCB(procesoAMover);
 
     sem_wait(mutex_proceso_corriendo);
@@ -174,7 +174,7 @@ void blocked_a_ready(t_PCB* procesoAMover){
 void blocked_a_suspended_blocked(t_PCB* procesoAMover){
     procesoAMover -> estado = SUSPENDED_BLOCKED;
 
-    log_info(logger, "El proceso con ID:%d pasó de BLOCKED a SUSPENDED-BLOCKED", procesoAMover -> PID);
+    log_debug(logger, "El proceso con ID:%d pasó de BLOCKED a SUSPENDED-BLOCKED", procesoAMover -> PID);
 
     sem_wait(mutex_socket_memoria);
         enviar_pcb(conexion_memoria, PROCESO_SUSPENDIDO, procesoAMover);
@@ -192,7 +192,7 @@ void suspended_blocked_a_suspended_ready(t_PCB* procesoAMover) {
         queue_push(cola_suspended_ready, (void*) procesoAMover);
     sem_post(mutex_cola_suspended_ready);
 
-    log_info(logger, "El proceso con ID:%d  pasó de SUSPENDED-BLOCKED a SUSPENDED-READY.", procesoAMover -> PID);
+    log_debug(logger, "El proceso con ID:%d  pasó de SUSPENDED-BLOCKED a SUSPENDED-READY.", procesoAMover -> PID);
 
     sem_post(sem_procesos_esperando);
 }

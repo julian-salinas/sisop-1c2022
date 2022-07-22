@@ -59,7 +59,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 usleep(memoria_config -> retardo_memoria * 1000);
                 
                 pcb = socket_get_PCB(socket_cliente);
-                log_info(logger, "Nuevo proceso - ID:%d", pcb -> PID);
+                log_trace(logger, "Nuevo proceso - ID:%d", pcb -> PID);
                 
                 id_tabla_creada = crear_proceso_memoria(pcb);
 
@@ -76,7 +76,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 agregar_a_buffer_UINT32(respuesta -> payload, id_tabla_creada);
                 enviar_paquete(socket_cliente, respuesta);
                 destruir_paquete(respuesta);
-                log_info(logger, "Se devolvió PCB del proceso %d con tabla de páginas %d", pcb -> PID, id_tabla_creada);
+                log_warning(logger, "Se devolvió PCB del proceso %d con tabla de páginas %d", pcb -> PID, id_tabla_creada);
                 destruir_PCB(pcb);
 
                 break;
@@ -88,7 +88,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 usleep(memoria_config -> retardo_memoria * 1000);
 
                 pcb = socket_get_PCB(socket_cliente);
-                log_info(logger, "Proceso suspendido - ID:%d", pcb -> PID);
+                log_warning(logger, "Proceso suspendido - ID:%d", pcb -> PID);
 
                 //obtengo las entradas que esten en memoria y las swappeo
                 entradas_a_swappear = get_entradas_en_memoria_proceso(pcb -> PID);
@@ -112,7 +112,7 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 usleep(memoria_config -> retardo_memoria * 1000);
 
                 pcb = socket_get_PCB(socket_cliente);
-                log_info(logger, "Proceso finalizado - ID:%d", pcb -> PID);
+                log_debug(logger, "Proceso finalizado - ID:%d", pcb -> PID);
                 
                 //libero memoria de las tablas
                 tp_lvl1 = get_tabla_primer_nivel(pcb -> tabla_paginas);

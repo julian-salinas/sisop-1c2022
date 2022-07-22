@@ -54,8 +54,8 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             break;
         case I_O:
             // se bloquea
-            log_warning(logger, "SUSPENSIONNNNNNNNNNNNNNNNNNNN %d", pcb -> PID);
-            log_info(logger, "Ejecutando I/O - Proceso %d se bloquea", pcb -> PID);
+            //log_warning(logger, "SUSPENSIONNNNNNNNNNNNNNNNNNNN %d", pcb -> PID);
+            log_warning(logger, "Ejecutando I/O - Proceso %d se bloquea", pcb -> PID);
             pcb->tiempo_bloqueo = parametro_instruccion(instruccion->parametros, 0);
             devolver_pcb(pcb, PROCESO_BLOQUEADO, socket_cliente);
             destruir_PCB(pcb);
@@ -89,7 +89,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
 
         case EXIT:
             // Syscall finalización de proceso
-            log_info(logger, "Ejecutando EXIT - Finaliza proceso %d", pcb -> PID);
+            log_debug(logger, "Ejecutando EXIT - Finaliza proceso %d", pcb -> PID);
             finCicloInstruccion = 1;
             devolver_pcb(pcb, PROCESO_FINALIZADO, socket_cliente);
             destruir_PCB(pcb);
@@ -179,7 +179,7 @@ void devolver_pcb(t_PCB *pcb, codigo_operacion header, int socket_cliente)
 {
     end_t = time(NULL);
     pcb->tiempo_ejecucion += end_t - start_t;
-    log_info(logger, "Devolviendo PCB - Header %d - PID:%d - Tiempo de ejecucion:%f", header, pcb->PID, pcb->tiempo_ejecucion);
+    log_warning(logger, "Devolviendo PCB - Header %d - PID:%d - Tiempo de ejecucion:%f", header, pcb->PID, pcb->tiempo_ejecucion);
     enviar_pcb(socket_cliente, header, pcb);
     //limpieza de tlb
     log_warning(logger, "Limpiando TLB");
