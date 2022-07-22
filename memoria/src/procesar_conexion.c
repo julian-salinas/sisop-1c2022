@@ -97,7 +97,8 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 {
                     swappear(pcb -> PID, list_get(entradas_a_swappear, i));
                 }
-                free(entradas_a_swappear);
+
+                list_destroy(entradas_a_swappear);
 
                 //Devolver pcb al kernel
                 enviar_pcb(socket_cliente, MEMORIA_OK, pcb);
@@ -172,7 +173,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
             case CONEXION_CPU_MEMORIA:
                 //enviar a CPU cantidad de entradas por tabla de páginas y tamaño de página;
-                log_info(logger, "Se recibió header %d - Enviando config a CPU", header);
+                log_info(logger, "Enviando config a CPU", header);
                 log_warning(logger, "Entradas por tabla:%d - Tamaño de página:%d", memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);
                 enviar_config_a_cpu(socket_cliente, logger, memoria_config->paginas_por_tabla, memoria_config->tamanio_pagina);	
                 break;
@@ -191,7 +192,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 destruir_buffer(payload);
 
                 tabla_primer_nivel = get_tabla_primer_nivel(PID);
-                nro_tabla_segundo_nivel = list_get(tabla_primer_nivel -> entradas, nro_entrada_primer_nivel);
+                nro_tabla_segundo_nivel = (int) list_get(tabla_primer_nivel -> entradas, nro_entrada_primer_nivel);
 
                 log_info(logger, "Enviando tabla de 2do nivel - %d", nro_tabla_segundo_nivel);
                 
@@ -248,12 +249,6 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 entrada = obtener_entrada_por_DF(direccion_fisica);
 
-                log_warning(logger,
-                            "DIRECCION: %d - ENTRADA OBTENIDA: NRO_MARCO %d, NRO_PAGINA %d",
-                            direccion_fisica,
-                            entrada -> nro_frame,
-                            entrada -> nro_pagina);
-
                 entrada -> bit_uso = 1;
                 
                 // Leer dato y enviárselo a CPU
@@ -281,6 +276,7 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 log_info(logger, "Se escribió el dato en memoria");
 
+                // TODO: Sacar esto antes de entregar
                 if (dato != leer_direccion_memoria(direccion_fisica)) {
                     log_error(logger, "El dato se escribió erróneamente");
                 }
@@ -290,12 +286,11 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
                 entrada = obtener_entrada_por_DF(direccion_fisica);
 
-                log_info(logger, "Se pudo obtener entrada en memoria");
-
                 entrada -> bit_modificado = 1;
                 entrada -> bit_uso = 1;
 
                 log_info(logger, "Enviando respuesta a CPU...");
+
                 // Escribir dato y enviar mensaje OK
                 enviar_header(socket_cliente, MEMORIA_OK);
                 
@@ -315,14 +310,9 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
 
 void enviar_config_a_cpu(int socket_cliente, t_log* logger, uint32_t paginas_por_tabla, uint32_t tamanio_pagina){
 
-    log_warning(logger, "Enviando PPT:%d - TP:%d", paginas_por_tabla, tamanio_pagina);
-
     t_paquete* paquete = serializar_config_cpu_memoria(paginas_por_tabla, tamanio_pagina);
-    
     enviar_paquete(socket_cliente,paquete);
     destruir_paquete(paquete);
-    log_info(logger, "Config enviado.");
-
 }
 
 

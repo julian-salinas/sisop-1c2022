@@ -35,8 +35,6 @@ int main(void) {
 
 	diccionario_clocks = dictionary_create();
 
-	log_info(logger, "watafoc");
-
 	generarFrames(memoria, memoria_config -> tamanio_memoria, memoria_config -> tamanio_pagina);
 
 	int server_fd = crear_socket_servidor(memoria_config -> ip_memoria, memoria_config -> puerto_escucha, logger);
@@ -90,6 +88,7 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
+				list_destroy(entradas_en_memoria);
 				return entrada;
 			}
 		}
@@ -100,9 +99,10 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, contador_clock_proceso); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, memoria_config -> marcos_por_proceso);
 			if (!entrada -> bit_uso) {
+				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
-				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
+				list_destroy(entradas_en_memoria);
 				return entrada;
 			}
 
@@ -112,8 +112,6 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 		contador_clock_proceso = 0;
 
 	}
-
-	list_destroy(entradas_en_memoria);
 }
 
 
@@ -131,7 +129,7 @@ t_entrada_segundo_nivel* algoritmo_clock(uint32_t PID) {
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
 				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
-				free(entradas_en_memoria);
+				list_destroy(entradas_en_memoria);
 				return entrada;
 			}
 			entrada -> bit_uso = 0;
@@ -169,8 +167,6 @@ t_entrada_segundo_nivel* obtener_entrada_por_DF(int32_t direccion_fisica){
 		sem_post(mutex_tablas_segundo_nivel);
 
 		free(str);
-
-		log_info(logger, "Que está pasando wacho: ID:%d - List Size:%d", tabla -> id_tabla, list_size(tabla -> entradas));
 
         for (size_t i = 0; i < list_size(tabla -> entradas); i++)
         {
