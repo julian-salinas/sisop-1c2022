@@ -56,7 +56,10 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
             case NUEVO_PROCESO:
                 log_info(logger, "Se recibió un nuevo proceso");
                 //retardo cpu
-                usleep(memoria_config -> retardo_memoria * 1000);
+                for (size_t i = 0; i < memoria_config->retardo_memoria; i++)
+                {
+                    usleep(1000);
+                }
                 
                 pcb = socket_get_PCB(socket_cliente);
                 log_trace(logger, "Nuevo proceso - ID:%d", pcb -> PID);
@@ -85,7 +88,11 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
             case PROCESO_SUSPENDIDO:
                 log_info(logger, "Se recibió un proceso suspendido");
                 //retardo cpu
-                usleep(memoria_config -> retardo_memoria * 1000);
+                //usleep(memoria_config -> retardo_memoria * 1000);
+                for (size_t i = 0; i < memoria_config->retardo_memoria; i++)
+                {
+                    usleep(1000);
+                }
 
                 pcb = socket_get_PCB(socket_cliente);
                 log_warning(logger, "Proceso suspendido - ID:%d", pcb -> PID);
@@ -94,6 +101,10 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 entradas_a_swappear = get_entradas_en_memoria_proceso(pcb -> PID);
                 for (uint32_t i = 0; i < list_size(entradas_a_swappear); i++)
                 {
+                    for (size_t i = 0; i < memoria_config->retardo_swap; i++)
+                    {
+                        usleep(1000);
+                    }
                     swappear(pcb -> PID, list_get(entradas_a_swappear, i));
                 }
 
@@ -109,7 +120,11 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 log_info(logger, "Se recibió un proceso finalizado");
 
                 //retardo cpu
-                usleep(memoria_config -> retardo_memoria * 1000);
+                //usleep(memoria_config -> retardo_memoria * 1000);
+                for (size_t i = 0; i < memoria_config->retardo_memoria; i++)
+                {
+                    usleep(1000);
+                }
 
                 pcb = socket_get_PCB(socket_cliente);
                 log_debug(logger, "Proceso finalizado - ID:%d", pcb -> PID);
@@ -181,7 +196,11 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 log_info(logger, "Primer acceso a memoria");
 
                 //retardo memoria
-                usleep(memoria_config -> retardo_memoria * 1000);
+                //usleep(memoria_config -> retardo_memoria * 1000);
+                for (size_t i = 0; i < memoria_config->retardo_memoria; i++)
+                {
+                    usleep(1000);
+                }
 
                 //recibo el nro de tabla de primer nivel y pagina buscada
                 payload = recibir_payload(socket_cliente);
@@ -204,7 +223,11 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 log_info(logger, "Segundo acceso a memoria");
 
                 //retardo memoria
-                usleep(memoria_config -> retardo_memoria * 1000);
+                //usleep(memoria_config -> retardo_memoria * 1000);
+                for (size_t i = 0; i < memoria_config->retardo_memoria; i++)
+                {
+                    usleep(1000);
+                }
                 
                 //recibo el nro de tabla de primer nivel y su entrada
                 payload = recibir_payload(socket_cliente);
@@ -224,6 +247,10 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 entrada = get_entrada_de_pagina(tabla_segundo_nivel, nro_pagina);
 
                 if (!entrada -> bit_presencia) {
+                    for (size_t i = 0; i < memoria_config->retardo_swap; i++)
+                    {
+                        usleep(1000);
+                    }
                     desswappear(PID, entrada);
                 }
 
@@ -238,7 +265,11 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 log_info(logger, "Se recibió pedido de lectura");
 
                 // Retardo memoria
-                usleep(memoria_config -> retardo_memoria * 1000);
+                //usleep(memoria_config -> retardo_memoria * 1000);
+                for (size_t i = 0; i < memoria_config->retardo_memoria; i++)
+                {
+                    usleep(1000);
+                }
 
                 // Obtener dirección que envió CPU
                 payload = recibir_payload(socket_cliente);
@@ -260,7 +291,11 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 log_info(logger, "Pedido de escritura");
 
                 // Retardo memoria
-                usleep(memoria_config -> retardo_memoria * 1000);
+                //usleep(memoria_config -> retardo_memoria * 1000);
+                for (size_t i = 0; i < memoria_config->retardo_memoria; i++)
+                {
+                    usleep(1000);
+                }
 
                 // Obtener dirección que envió CPU
                 payload = recibir_payload(socket_cliente);
@@ -365,7 +400,12 @@ int crear_proceso_memoria(t_PCB* pcb) {
         log_info(logger, "Se agregó una entrada a la tabla de primer nivel del proceso %d", pcb -> PID);
     }
 
-    // Archivo swap    
+    // Archivo swap
+    //usleep(memoria_config -> retardo_swap * 1000);   
+    for (size_t i = 0; i < memoria_config->retardo_swap; i++)
+    {
+        usleep(1000);
+    } 
     crear_archivo_swap(pcb -> PID, pcb -> tamanio);
 
     return tabla_primer_nivel -> id_tabla;
