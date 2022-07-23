@@ -35,8 +35,6 @@ t_swap* crear_archivo_swap(uint32_t PID, size_t tamanio) {
     }
 
     log_info(logger, "Se creó el archivo %s para el proceso ID:%d", archivito_swap -> path, PID);
-    cantidad_accesos_swap++;
-    log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
     char* nro_pid = int_a_string(PID);
     dictionary_put(diccionario_swap, nro_pid, archivito_swap);
     free(nro_pid);
@@ -58,10 +56,6 @@ void destruir_archivo_swap(uint32_t PID) {
 
 
 t_page_data* leer_pagina(t_swap* archivito_swap, int nro_pagina) {
-    for (size_t i = 0; i < memoria_config->retardo_swap; i++)
-    {
-        usleep(1000);
-    } 
     sem_wait(mutex_swap);
     void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE, MAP_SHARED, archivito_swap->fd, 0);
     void* datos = malloc(sizeof(memoria_config -> tamanio_pagina));
@@ -69,17 +63,11 @@ t_page_data* leer_pagina(t_swap* archivito_swap, int nro_pagina) {
     memcpy(datos, archivito_mapeado + nro_pagina * memoria_config -> tamanio_pagina, sizeof(t_page_data));
     munmap(archivito_mapeado, archivito_swap -> tamanio);
     sem_post(mutex_swap);
-    cantidad_accesos_swap++;
-    log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
     return datos;
 }
 
 
 void escribir_pagina(t_swap* archivito_swap, int nro_pagina, t_page_data* page_data) {
-    for (size_t i = 0; i < memoria_config->retardo_swap; i++)
-    {
-        usleep(1000);
-    } 
     sem_wait(mutex_swap);
     void* archivito_mapeado = mmap(NULL, archivito_swap->tamanio, PROT_READ|PROT_WRITE,MAP_SHARED, archivito_swap -> fd, 0);
     // memcpy(archivito_mapeado + nro_pagina * memoria_config -> tamanio_pagina, page_data, memoria_config -> tamanio_pagina);
@@ -87,14 +75,14 @@ void escribir_pagina(t_swap* archivito_swap, int nro_pagina, t_page_data* page_d
     msync(archivito_mapeado, archivito_swap->tamanio, MS_SYNC);
     munmap(archivito_mapeado, archivito_swap->tamanio);
     sem_post(mutex_swap);
-    cantidad_accesos_swap++;
-    log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
 }
 
 
 void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
-    
-
+    /*for (size_t i = 0; i < memoria_config->retardo_swap; i++)
+    {
+        usleep(1000);
+    }*/
     // Si el bit de modificado está en 1, leer el marco y almacenar el dato
     uint32_t dato;
 
@@ -127,14 +115,17 @@ void swappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
     log_warning(logger, "Se swappeo la entrada %d", entrada -> nro_pagina);
 
     sem_wait(mutex_cantidad_accesos_swap);
-        //cantidad_accesos_swap++;
-        //log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
+        cantidad_accesos_swap++;
+        log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
     sem_post(mutex_cantidad_accesos_swap);
 }
 
 
 void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
-
+    /*for (size_t i = 0; i < memoria_config->retardo_swap; i++)
+    {
+        usleep(1000);
+    }*/
     log_warning(logger, "Deswappeando la entrada %d", entrada -> nro_pagina);
 
     // Obtener los datos de swap del diccionario
@@ -183,7 +174,7 @@ void desswappear(uint32_t PID, t_entrada_segundo_nivel* entrada) {
 
     log_warning(logger, "Se deswappeo la entrada %d en el marco %d", entrada -> nro_pagina, entrada -> nro_frame);
     sem_wait(mutex_cantidad_accesos_swap);
-        //cantidad_accesos_swap++;
-        //log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
+        cantidad_accesos_swap++;
+        log_trace(logger, "Cantidad de accesos a SWAP: %d", cantidad_accesos_swap);
     sem_post(mutex_cantidad_accesos_swap);
 }

@@ -101,10 +101,6 @@ void procesar_conexion_kernel_memoria(int socket_cliente) {
                 entradas_a_swappear = get_entradas_en_memoria_proceso(pcb -> PID);
                 for (uint32_t i = 0; i < list_size(entradas_a_swappear); i++)
                 {
-                    for (size_t i = 0; i < memoria_config->retardo_swap; i++)
-                    {
-                        usleep(1000);
-                    }
                     swappear(pcb -> PID, list_get(entradas_a_swappear, i));
                 }
 
@@ -247,10 +243,6 @@ void procesar_conexion_cpu_memoria(int socket_cliente) {
                 entrada = get_entrada_de_pagina(tabla_segundo_nivel, nro_pagina);
 
                 if (!entrada -> bit_presencia) {
-                    for (size_t i = 0; i < memoria_config->retardo_swap; i++)
-                    {
-                        usleep(1000);
-                    }
                     desswappear(PID, entrada);
                 }
 
@@ -400,12 +392,7 @@ int crear_proceso_memoria(t_PCB* pcb) {
         log_info(logger, "Se agregó una entrada a la tabla de primer nivel del proceso %d", pcb -> PID);
     }
 
-    // Archivo swap
-    //usleep(memoria_config -> retardo_swap * 1000);   
-    for (size_t i = 0; i < memoria_config->retardo_swap; i++)
-    {
-        usleep(1000);
-    } 
+    // Archivo swap 
     crear_archivo_swap(pcb -> PID, pcb -> tamanio);
 
     return tabla_primer_nivel -> id_tabla;
