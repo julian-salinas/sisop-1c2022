@@ -6,7 +6,7 @@ int main(void) {
 	memoria_config = ini_memoria_config("cfg/memoria.config");
 
 	// Crear logger
-	logger = log_create("cfg/memoria.log", "memoria", 1, LOG_LEVEL_DEBUG);
+	logger = log_create("cfg/memoria.log", "memoria", 1, LOG_LEVEL_TRACE);
 	log_info(logger,"Memoria iniciada");
 
 	// Inicializar estructuras de tablas de páginas
@@ -34,8 +34,6 @@ int main(void) {
 	elegir_algoritmo_reemplazo(memoria_config -> algoritmo_reemplazo);
 
 	diccionario_clocks = dictionary_create();
-
-	log_info(logger, "watafoc");
 
 	generarFrames(memoria, memoria_config -> tamanio_memoria, memoria_config -> tamanio_pagina);
 
@@ -90,6 +88,7 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
+				list_destroy(entradas_en_memoria);
 				return entrada;
 			}
 		}
@@ -100,9 +99,10 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, contador_clock_proceso); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, memoria_config -> marcos_por_proceso);
 			if (!entrada -> bit_uso) {
+				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
-				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
+				list_destroy(entradas_en_memoria);
 				return entrada;
 			}
 
@@ -129,6 +129,7 @@ t_entrada_segundo_nivel* algoritmo_clock(uint32_t PID) {
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
 				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
+				list_destroy(entradas_en_memoria);
 				return entrada;
 			}
 			entrada -> bit_uso = 0;
@@ -153,17 +154,23 @@ t_entrada_segundo_nivel* obtener_entrada_por_DF(int32_t direccion_fisica){
     t_entrada_segundo_nivel* entrada;
 	char* str;
 	
-	for (size_t i = 0; i < dictionary_size(tablas_segundo_nivel); i++)
+	sem_wait(mutex_tablas_segundo_nivel);
+		int dict_size = dictionary_size(tablas_segundo_nivel);
+	sem_post(mutex_tablas_segundo_nivel);
+
+	for (size_t i = 0; i < dict_size; i++)
 	{
-		if (direccion_fisica == 512) {
-			log_info(logger, " ");
-		}
 		str = int_a_string(i);
-		tabla = (t_tabla_segundo_nivel*)dictionary_get(tablas_segundo_nivel, str);
+
+		sem_wait(mutex_tablas_segundo_nivel);
+			tabla = (t_tabla_segundo_nivel*) dictionary_get(tablas_segundo_nivel, str);
+		sem_post(mutex_tablas_segundo_nivel);
+
 		free(str);
+
         for (size_t i = 0; i < list_size(tabla -> entradas); i++)
         {
-            entrada = ((t_entrada_segundo_nivel*)list_get(tabla -> entradas, i));
+            entrada = ((t_entrada_segundo_nivel*) list_get(tabla -> entradas, i));
 
 			if ((entrada -> nro_frame == -1) || (!entrada -> bit_presencia)) {
 				continue;
@@ -184,6 +191,5 @@ t_entrada_segundo_nivel* obtener_entrada_por_DF(int32_t direccion_fisica){
         
 	}
 
-	log_error(logger, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 	return NULL;
 }

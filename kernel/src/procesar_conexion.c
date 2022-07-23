@@ -15,20 +15,20 @@ void procesar_conexion(void *args)
 
     switch (header)
     {
+        case NUEVO_PROCESO:
+            pcb = socket_create_PCB(socket);
+            agregar_a_new(pcb); // Se agrega proceso a cola NEW y se actualiza su estado
+            //destruir_PCB(pcb); //?
+            break;
 
-    case NUEVO_PROCESO:
-        pcb = socket_create_PCB(socket);
-        agregar_a_new(pcb); // Se agrega proceso a cola NEW y se actualiza su estado
-        break;
+        case -1:
+            log_error(logger, "Cliente desconectado de %s", nombre_servidor);
+            break;
 
-    case -1:
-        log_error(logger, "Cliente desconectado de %s", nombre_servidor);
-        break;
-
-    default:
-        log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
-        break;
-    }
+        default:
+            log_error(logger, "El codigo de operacion %d es incorrecto - %s", header, nombre_servidor);
+            break;
+        }
 }
 
 void procesar_conexion_dispatch(void *args)
@@ -52,7 +52,7 @@ void procesar_conexion_dispatch(void *args)
 
             pcb = socket_get_PCB(conexion_cpu_dispatch);
             sem_post(mutex_socket_cpu_dispatch);
-            log_info(logger, "Proceso finalizado: %d", pcb->PID);
+            log_debug(logger, "Proceso finalizado: %d", pcb->PID);
 
             pcb -> estado = EXIT;
 
@@ -63,6 +63,7 @@ void procesar_conexion_dispatch(void *args)
             sem_post(mutex_socket_memoria);
 
             enviar_header(pcb->socket_cliente, PROCESO_FINALIZADO); // Avisarle a consola que terminó la ejecución
+            destruir_PCB(pcb);
             sem_post(sem_multiprogramacion);                        // Se libera multiprog. después de sacar al proceso de memoria
 
             if (algoritmo_elegido == SJF)
@@ -167,13 +168,15 @@ void procesar_conexion_dispatch(void *args)
 
 t_PCB *crear_PCB(t_proceso *proceso, int socket)
 {
-
     t_PCB *pcb = malloc(sizeof(t_PCB));
+    
     sem_wait(mutex_pid);
-    pcb->PID = contador_id_proceso;
+        pcb->PID = contador_id_proceso;
+        contador_id_proceso++;
     sem_post(mutex_pid);
+    
     pcb->tamanio = proceso->tamanio;
-    pcb->lista_instrucciones = proceso->lista_instrucciones;
+    pcb -> lista_instrucciones = proceso -> lista_instrucciones;
     pcb->program_counter = 0;
     pcb->tabla_paginas = -1;
     pcb->estimacion_rafaga = kernel_config->estimacion_inicial;
@@ -183,10 +186,6 @@ t_PCB *crear_PCB(t_proceso *proceso, int socket)
     pcb->estado = NEW;
     pcb->tiempo_restante = 0.0;
 
-    sem_wait(mutex_pid);
-    contador_id_proceso++;
-    sem_post(mutex_pid);
-
     return pcb;
 }
 
@@ -195,6 +194,8 @@ t_PCB *socket_create_PCB(int socket)
     t_buffer *payload = recibir_payload(socket);
     t_proceso *proceso = buffer_take_PROCESO(payload);
     t_PCB *pcb = crear_PCB(proceso, socket);
+
+    free(proceso); // No es necesario destruir la lista de instrucciones, se destruye con el pcb
     destruir_buffer(payload);
 
     return pcb;

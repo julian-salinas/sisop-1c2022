@@ -54,10 +54,11 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             break;
         case I_O:
             // se bloquea
-            log_warning(logger, "SUSPENSIONNNNNNNNNNNNNNNNNNNN %d", pcb -> PID);
-            log_info(logger, "Ejecutando I/O - Proceso %d se bloquea", pcb -> PID);
+            //log_warning(logger, "SUSPENSIONNNNNNNNNNNNNNNNNNNN %d", pcb -> PID);
+            log_warning(logger, "Ejecutando I/O - Proceso %d se bloquea", pcb -> PID);
             pcb->tiempo_bloqueo = parametro_instruccion(instruccion->parametros, 0);
             devolver_pcb(pcb, PROCESO_BLOQUEADO, socket_cliente);
+            destruir_PCB(pcb);
             break;
         case READ:
             log_info(logger, "Ejecutando READ");
@@ -88,9 +89,10 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
 
         case EXIT:
             // Syscall finalización de proceso
-            log_info(logger, "Ejecutando EXIT - Finaliza proceso %d", pcb -> PID);
+            log_debug(logger, "Ejecutando EXIT - Finaliza proceso %d", pcb -> PID);
             finCicloInstruccion = 1;
             devolver_pcb(pcb, PROCESO_FINALIZADO, socket_cliente);
+            destruir_PCB(pcb);
             break;
         }
 
@@ -112,8 +114,9 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             //Regreso por interrupcion
             // pcb->estado = BLOCKED;
             devolver_pcb(pcb, INTERRUPCION, socket_cliente);
-            interrupcion = 0;
             log_info(logger, "Proceso PID:%d interrumpido", pcb -> PID);
+            interrupcion = 0;
+            destruir_PCB(pcb);
         }
         sem_post(mutex_interrupt);
     } while (!finCicloInstruccion); //Check Interrupt //Ciclo de instruccion
@@ -176,7 +179,7 @@ void devolver_pcb(t_PCB *pcb, codigo_operacion header, int socket_cliente)
 {
     end_t = time(NULL);
     pcb->tiempo_ejecucion += end_t - start_t;
-    log_info(logger, "Devolviendo PCB - Header %d - PID:%d - Tiempo de ejecucion:%f", header, pcb->PID, pcb->tiempo_ejecucion);
+    log_warning(logger, "Devolviendo PCB - Header %d - PID:%d - Tiempo de ejecucion:%f", header, pcb->PID, pcb->tiempo_ejecucion);
     enviar_pcb(socket_cliente, header, pcb);
     //limpieza de tlb
     log_warning(logger, "Limpiando TLB");

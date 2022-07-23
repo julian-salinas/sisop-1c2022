@@ -46,7 +46,8 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
                 log_info(logger, "Se recibió pcb del Kernel.");
                 buffer = recibir_payload(socket_cliente);
                 pcb = buffer_take_PCB(buffer);  
-                log_info(logger, "Recibimos PCB con ID:%d y Tabla de páginas %d", pcb -> PID, pcb -> tabla_paginas);
+                destruir_buffer(buffer);
+                log_trace(logger, "Recibimos PCB con ID:%d y Tabla de páginas %d", pcb -> PID, pcb -> tabla_paginas);
                 ejecutar_ciclo_instruccion(pcb, socket_cliente);
                 break;
 
@@ -64,6 +65,7 @@ void procesar_conexion_kernel_cpu(int socket_cliente) {
 
             default:
                 log_warning(logger, "Kernel nos mandó cualquier cosa: %d", header);
+                return;
         
         }
     }

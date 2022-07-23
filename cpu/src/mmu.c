@@ -30,7 +30,7 @@ int mmu(int direccion_logica, uint32_t marco, uint32_t desplazamiento, uint32_t 
         agregar_entrada_tlb(numero_pagina, marco);
 
         cantidad_accesos_memoria++;
-        log_error(logger, "Cantidad de veces que no se encontró entrada en TLB: %d", cantidad_accesos_memoria);
+        log_trace(logger, "Cantidad de veces que no se encontró entrada en TLB: %d", cantidad_accesos_memoria);
     }
 
     else
@@ -63,6 +63,7 @@ uint32_t acceso_a_memoria(codigo_operacion header, uint32_t valor1, uint32_t val
 
     t_buffer *payload = recibir_payload(conexion_memoria);
     rta_memoria = buffer_take_UINT32(payload);
+    destruir_buffer(payload);
 
     log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
 
@@ -91,6 +92,7 @@ uint32_t acceso_a_memoria_2(codigo_operacion header, uint32_t valor1, uint32_t v
 
     t_buffer *payload = recibir_payload(conexion_memoria);
     rta_memoria = buffer_take_UINT32(payload);
+    destruir_buffer(payload);
 
     log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
 
@@ -117,6 +119,7 @@ uint32_t acceso_a_memoria_3(codigo_operacion header, uint32_t valor1)
 
     t_buffer *payload = recibir_payload(conexion_memoria);
     rta_memoria = buffer_take_UINT32(payload);
+    destruir_buffer(payload);    
 
     log_info(logger, "Se recibió respuesta de memoria %d", rta_memoria);
 

@@ -7,7 +7,7 @@ git clone https://github.com/sisoputnfrba/so-commons-library/
 echo 2- Instalación de commons...
 sleep 2
 cd so-commons-library
-sudo make install
+make install
 
 echo 3- Volviendo a la carpeta principal...
 sleep 1

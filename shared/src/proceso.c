@@ -5,7 +5,6 @@ t_proceso* crear_proceso(size_t tamanio, t_lista_instrucciones* lista_instruccio
     t_proceso* tmp = malloc(sizeof(t_proceso));
     
     tmp -> tamanio = tamanio;
-    tmp -> lista_instrucciones = malloc(sizeof(t_lista_instrucciones));
     tmp -> lista_instrucciones = lista_instrucciones;
 
     return tmp;
@@ -90,4 +89,10 @@ t_PCB* socket_get_PCB(int socket) {
     destruir_buffer(payload);
 
     return pcb;
+}
+
+
+void destruir_PCB(t_PCB* pcb) {
+    destruir_lista_instrucciones(pcb -> lista_instrucciones);
+    free(pcb);
 }

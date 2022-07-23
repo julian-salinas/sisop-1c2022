@@ -28,7 +28,7 @@ t_lista_instrucciones* crear_lista_instrucciones(void) {
 
 
 void destruir_lista_instrucciones(t_lista_instrucciones *lista_instrucciones) {
-    list_destroy(lista_instrucciones);
+    list_destroy_and_destroy_elements(lista_instrucciones, (void*)*destruir_instruccion);
 }
 
 
@@ -67,11 +67,10 @@ t_instruccion* buffer_take_INSTRUCCION(t_buffer* buffer) {
     uint8_t identificador;
     identificador = buffer_take_UINT8(buffer);
 
-    t_list* parametros = malloc(sizeof(t_list));
+    t_list* parametros;
     parametros = buffer_take_LIST(buffer, (void*) buffer_take_UINT32);
 
     tmp -> identificador = identificador;
-    tmp -> parametros = malloc(sizeof(t_list));
     tmp -> parametros = parametros;
 
     return tmp;

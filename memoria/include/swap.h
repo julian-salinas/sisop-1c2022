@@ -15,9 +15,6 @@
     #include "frame.h"
 
 
-    void eliminar_archivo_proceso(uint32_t PID);
-    void crear_archivo_proceso(uint32_t PID);
-
     sem_t* mutex_swap;
     sem_t* mutex_cantidad_accesos_swap;
     int cantidad_accesos_swap;

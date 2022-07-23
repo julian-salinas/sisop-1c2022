@@ -89,11 +89,8 @@ void func_mediano_plazo(void* args) {
 
     while (1) {
         sem_wait(sem_multiprogramacion); // Hay grado de multiprogramación disponible
-        log_info(logger, "Se paso el semaforo sem_multiprogramacion.");
         sem_wait(sem_procesos_esperando); // Hay algo para planificar
-        log_info(logger, "Se paso el semaforo sem_procesos_esperando.");
         sem_wait(mutex_mediano_plazo);
-        log_info(logger, "Se paso el semaforo mutex_mediano_plazo.");
             if(queue_is_empty(cola_suspended_ready)) {
                 sem_post(sem_largo_plazo);
                 sem_post(mutex_mediano_plazo);
@@ -122,6 +119,8 @@ void ordenar_cola_ready(void) {
             list_sort(cola_ready -> elements, (void*) *(algoritmo_SJF));
             
             t_PCB* tmp;
+
+            // TODO: Sacar esto?
             // Imprimir cola ready
             for (int i = 0; i < queue_size(cola_ready); i++){
                 tmp =  (t_PCB*) list_get(cola_ready -> elements, i);
@@ -153,17 +152,15 @@ void func_io(void* args) {
 
         int tiempo_bloqueo = proceso -> tiempo_bloqueo * 1000; // microseg -> miliseg
         
-        log_info(logger, "Arranca IO del proceso ID:%d", proceso -> PID);
+        log_warning(logger, "Arranca IO del proceso ID:%d", proceso -> PID);
 
         usleep(tiempo_bloqueo);
 
-        log_info(logger, "Termina IO del proceso ID:%d", proceso -> PID);
+        log_warning(logger, "Termina IO del proceso ID:%d", proceso -> PID);
 
         sem_wait(mutex_suspension);
 
             if (proceso -> estado == BLOCKED) {
-                int value; 
-                sem_getvalue(mutex_mediano_plazo, &value);
                 sem_wait(mutex_mediano_plazo);
                     blocked_a_ready(proceso);
                 sem_post(mutex_mediano_plazo);
@@ -173,18 +170,8 @@ void func_io(void* args) {
                 sem_wait(mutex_mediano_plazo);
                     suspended_blocked_a_suspended_ready(proceso);
                 sem_post(mutex_mediano_plazo);
-
-                int value;
-                sem_getvalue(sem_multiprogramacion, &value);
-                log_info(logger, "sem_multiprogramacion : %d.", value);
-                sem_getvalue(sem_procesos_esperando, &value);
-                log_info(logger, "sem_procesos_esperando : %d.", value);
-                sem_getvalue(mutex_mediano_plazo, &value);
-                log_info(logger, "mutex_mediano_plazo : %d.", value);
             }
-
         sem_post(mutex_suspension);
-
     }
 }
 
