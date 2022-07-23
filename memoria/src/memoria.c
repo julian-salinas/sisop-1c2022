@@ -85,7 +85,7 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, contador_clock_proceso); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, memoria_config -> marcos_por_proceso);
 			if ((!entrada -> bit_uso) && (!entrada -> bit_modificado)) {
-				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
+				log_trace(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
 				list_destroy(entradas_en_memoria);
@@ -99,7 +99,7 @@ t_entrada_segundo_nivel* algoritmo_clock_mejorado(uint32_t PID) {
 			t_entrada_segundo_nivel* entrada = list_get(entradas_en_memoria, contador_clock_proceso); // Posible víctima
 			contador_clock_proceso = aumentar_contador_clock(contador_clock_proceso, memoria_config -> marcos_por_proceso);
 			if (!entrada -> bit_uso) {
-				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
+				log_trace(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
 				list_destroy(entradas_en_memoria);
@@ -128,7 +128,7 @@ t_entrada_segundo_nivel* algoritmo_clock(uint32_t PID) {
 			if (!entrada -> bit_uso) {
 				dictionary_put(diccionario_clocks, str_pid, contador_clock_proceso);
 				free(str_pid);
-				log_error(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
+				log_trace(logger, "Se va a reemplazar la entrada con la página %d", entrada -> nro_pagina);
 				list_destroy(entradas_en_memoria);
 				return entrada;
 			}

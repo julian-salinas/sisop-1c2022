@@ -75,7 +75,7 @@ void new_a_ready(void) {
         uint8_t resp_memoria = recibir_header(conexion_memoria);
     
         if (resp_memoria == PROCESO_RECHAZADO) {
-            log_warning(logger, "EL proceso %d fue rechazado por memoria por ser demasiado grande.", procesoAMover -> PID);
+            log_error(logger, "EL proceso %d fue rechazado por memoria por ser demasiado grande.", procesoAMover -> PID);
             close(procesoAMover -> socket_cliente);
             return;
         }
@@ -178,6 +178,7 @@ void blocked_a_suspended_blocked(t_PCB* procesoAMover){
 
     sem_wait(mutex_socket_memoria);
         enviar_pcb(conexion_memoria, PROCESO_SUSPENDIDO, procesoAMover);
+        omitir_header(conexion_memoria);  // No es muy importante leer ese dato
     sem_post(mutex_socket_memoria);
 
     sem_post(sem_multiprogramacion);
