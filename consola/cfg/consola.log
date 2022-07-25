@@ -1110,3 +1110,995 @@
 [INFO] 14:48:34:262 Consola/(26080:26080): Modulo consola finalizado
 [INFO] 14:48:47:474 Consola/(26089:26089): Respuesta recibida: 14
 [INFO] 14:48:47:475 Consola/(26089:26089): Modulo consola finalizado
+[INFO] 23:22:56:596 Consola/(17103:17103): Consola iniciada
+[INFO] 23:22:56:602 Consola/(17103:17103): Se agregó el operador NO_OP
+[INFO] 23:22:56:603 Consola/(17103:17103): Se agregó el parametro 5
+[INFO] 23:22:56:603 Consola/(17103:17103): Se agregó el operador I/O
+[INFO] 23:22:56:603 Consola/(17103:17103): Se agregó el parametro 3000
+[INFO] 23:22:56:603 Consola/(17103:17103): Se agregó el operador NO_OP
+[INFO] 23:22:56:603 Consola/(17103:17103): Se agregó el parametro 3
+[INFO] 23:22:56:603 Consola/(17103:17103): Se agregó el operador EXIT
+[INFO] 23:22:56:603 Consola/(17103:17103): Se envió el cod operacion 12
+[INFO] 23:22:56:603 Consola/(17103:17103): Lista de instrucciones enviada.
+[INFO] 23:22:56:766 Consola/(17112:17112): Consola iniciada
+[INFO] 23:22:56:767 Consola/(17112:17112): Se agregó el operador NO_OP
+[INFO] 23:22:56:767 Consola/(17112:17112): Se agregó el parametro 5
+[INFO] 23:22:56:767 Consola/(17112:17112): Se agregó el operador EXIT
+[INFO] 23:22:56:768 Consola/(17112:17112): Se envió el cod operacion 12
+[INFO] 23:22:56:768 Consola/(17112:17112): Lista de instrucciones enviada.
+[INFO] 23:22:56:900 Consola/(17121:17121): Consola iniciada
+[INFO] 23:22:56:902 Consola/(17121:17121): Se agregó el operador NO_OP
+[INFO] 23:22:56:902 Consola/(17121:17121): Se agregó el parametro 5
+[INFO] 23:22:56:902 Consola/(17121:17121): Se agregó el operador EXIT
+[INFO] 23:22:56:903 Consola/(17121:17121): Se envió el cod operacion 12
+[INFO] 23:22:56:903 Consola/(17121:17121): Lista de instrucciones enviada.
+[INFO] 23:23:12:288 Consola/(17103:17103): Respuesta recibida: 14
+[INFO] 23:23:12:289 Consola/(17103:17103): Modulo consola finalizado
+[INFO] 23:23:15:024 Consola/(17112:17112): Respuesta recibida: 14
+[INFO] 23:23:15:024 Consola/(17112:17112): Modulo consola finalizado
+[INFO] 23:23:21:656 Consola/(17121:17121): Respuesta recibida: 14
+[INFO] 23:23:21:657 Consola/(17121:17121): Modulo consola finalizado
+[INFO] 23:24:49:919 Consola/(17316:17316): Consola iniciada
+[INFO] 23:24:49:920 Consola/(17316:17316): Se agregó el operador NO_OP
+[INFO] 23:24:49:920 Consola/(17316:17316): Se agregó el parametro 3
+[INFO] 23:24:49:920 Consola/(17316:17316): Se agregó el operador I/O
+[INFO] 23:24:49:920 Consola/(17316:17316): Se agregó el parametro 5000
+[INFO] 23:24:49:920 Consola/(17316:17316): Se agregó el operador NO_OP
+[INFO] 23:24:49:920 Consola/(17316:17316): Se agregó el parametro 3
+[INFO] 23:24:49:920 Consola/(17316:17316): Se agregó el operador EXIT
+[INFO] 23:24:49:920 Consola/(17316:17316): Se envió el cod operacion 12
+[INFO] 23:24:49:920 Consola/(17316:17316): Lista de instrucciones enviada.
+[INFO] 23:24:50:069 Consola/(17325:17325): Consola iniciada
+[INFO] 23:24:50:069 Consola/(17325:17325): Se agregó el operador NO_OP
+[INFO] 23:24:50:070 Consola/(17325:17325): Se agregó el parametro 3
+[INFO] 23:24:50:070 Consola/(17325:17325): Se agregó el operador I/O
+[INFO] 23:24:50:070 Consola/(17325:17325): Se agregó el parametro 5000
+[INFO] 23:24:50:070 Consola/(17325:17325): Se agregó el operador NO_OP
+[INFO] 23:24:50:070 Consola/(17325:17325): Se agregó el parametro 3
+[INFO] 23:24:50:070 Consola/(17325:17325): Se agregó el operador EXIT
+[INFO] 23:24:50:070 Consola/(17325:17325): Se envió el cod operacion 12
+[INFO] 23:24:50:070 Consola/(17325:17325): Lista de instrucciones enviada.
+[INFO] 23:24:50:209 Consola/(17334:17334): Consola iniciada
+[INFO] 23:24:50:211 Consola/(17334:17334): Se agregó el operador NO_OP
+[INFO] 23:24:50:211 Consola/(17334:17334): Se agregó el parametro 10
+[INFO] 23:24:50:211 Consola/(17334:17334): Se agregó el operador EXIT
+[INFO] 23:24:50:212 Consola/(17334:17334): Se envió el cod operacion 12
+[INFO] 23:24:50:212 Consola/(17334:17334): Lista de instrucciones enviada.
+[INFO] 23:25:11:756 Consola/(17334:17334): Respuesta recibida: 14
+[INFO] 23:25:11:756 Consola/(17334:17334): Modulo consola finalizado
+[INFO] 23:25:15:620 Consola/(17316:17316): Respuesta recibida: 14
+[INFO] 23:25:15:620 Consola/(17316:17316): Modulo consola finalizado
+[INFO] 23:25:19:512 Consola/(17325:17325): Respuesta recibida: 14
+[INFO] 23:25:19:512 Consola/(17325:17325): Modulo consola finalizado
+[INFO] 23:26:20:534 Consola/(17515:17515): Consola iniciada
+[INFO] 23:26:20:535 Consola/(17515:17515): Se agregó el operador NO_OP
+[INFO] 23:26:20:535 Consola/(17515:17515): Se agregó el parametro 3
+[INFO] 23:26:20:535 Consola/(17515:17515): Se agregó el operador I/O
+[INFO] 23:26:20:535 Consola/(17515:17515): Se agregó el parametro 5000
+[INFO] 23:26:20:535 Consola/(17515:17515): Se agregó el operador NO_OP
+[INFO] 23:26:20:537 Consola/(17515:17515): Se agregó el parametro 3
+[INFO] 23:26:20:538 Consola/(17515:17515): Se agregó el operador EXIT
+[INFO] 23:26:20:538 Consola/(17515:17515): Se envió el cod operacion 12
+[INFO] 23:26:20:547 Consola/(17515:17515): Lista de instrucciones enviada.
+[INFO] 23:26:20:715 Consola/(17524:17524): Consola iniciada
+[INFO] 23:26:20:716 Consola/(17524:17524): Se agregó el operador NO_OP
+[INFO] 23:26:20:716 Consola/(17524:17524): Se agregó el parametro 3
+[INFO] 23:26:20:716 Consola/(17524:17524): Se agregó el operador I/O
+[INFO] 23:26:20:716 Consola/(17524:17524): Se agregó el parametro 5000
+[INFO] 23:26:20:716 Consola/(17524:17524): Se agregó el operador NO_OP
+[INFO] 23:26:20:716 Consola/(17524:17524): Se agregó el parametro 3
+[INFO] 23:26:20:716 Consola/(17524:17524): Se agregó el operador EXIT
+[INFO] 23:26:20:716 Consola/(17524:17524): Se envió el cod operacion 12
+[INFO] 23:26:20:716 Consola/(17524:17524): Lista de instrucciones enviada.
+[INFO] 23:26:20:860 Consola/(17533:17533): Consola iniciada
+[INFO] 23:26:20:861 Consola/(17533:17533): Se agregó el operador NO_OP
+[INFO] 23:26:20:861 Consola/(17533:17533): Se agregó el parametro 10
+[INFO] 23:26:20:861 Consola/(17533:17533): Se agregó el operador EXIT
+[INFO] 23:26:20:861 Consola/(17533:17533): Se envió el cod operacion 12
+[INFO] 23:26:20:863 Consola/(17533:17533): Lista de instrucciones enviada.
+[INFO] 23:26:35:220 Consola/(17515:17515): Respuesta recibida: 14
+[INFO] 23:26:35:220 Consola/(17515:17515): Modulo consola finalizado
+[INFO] 23:26:40:536 Consola/(17524:17524): Respuesta recibida: 14
+[INFO] 23:26:40:536 Consola/(17524:17524): Modulo consola finalizado
+[INFO] 23:26:50:840 Consola/(17533:17533): Respuesta recibida: 14
+[INFO] 23:26:50:840 Consola/(17533:17533): Modulo consola finalizado
+[INFO] 23:28:03:873 Consola/(17711:17711): Consola iniciada
+[INFO] 23:28:03:875 Consola/(17711:17711): Se agregó el operador NO_OP
+[INFO] 23:28:03:876 Consola/(17711:17711): Se agregó el parametro 3
+[INFO] 23:28:03:876 Consola/(17711:17711): Se agregó el operador I/O
+[INFO] 23:28:03:876 Consola/(17711:17711): Se agregó el parametro 13000
+[INFO] 23:28:03:876 Consola/(17711:17711): Se agregó el operador NO_OP
+[INFO] 23:28:03:876 Consola/(17711:17711): Se agregó el parametro 3
+[INFO] 23:28:03:876 Consola/(17711:17711): Se agregó el operador EXIT
+[INFO] 23:28:03:876 Consola/(17711:17711): Se envió el cod operacion 12
+[INFO] 23:28:03:876 Consola/(17711:17711): Lista de instrucciones enviada.
+[INFO] 23:28:04:019 Consola/(17720:17720): Consola iniciada
+[INFO] 23:28:04:021 Consola/(17720:17720): Se agregó el operador NO_OP
+[INFO] 23:28:04:021 Consola/(17720:17720): Se agregó el parametro 3
+[INFO] 23:28:04:021 Consola/(17720:17720): Se agregó el operador I/O
+[INFO] 23:28:04:021 Consola/(17720:17720): Se agregó el parametro 5000
+[INFO] 23:28:04:021 Consola/(17720:17720): Se agregó el operador NO_OP
+[INFO] 23:28:04:021 Consola/(17720:17720): Se agregó el parametro 3
+[INFO] 23:28:04:021 Consola/(17720:17720): Se agregó el operador EXIT
+[INFO] 23:28:04:021 Consola/(17720:17720): Se envió el cod operacion 12
+[INFO] 23:28:04:022 Consola/(17720:17720): Lista de instrucciones enviada.
+[INFO] 23:28:04:159 Consola/(17729:17729): Consola iniciada
+[INFO] 23:28:04:160 Consola/(17729:17729): Se agregó el operador NO_OP
+[INFO] 23:28:04:160 Consola/(17729:17729): Se agregó el parametro 10
+[INFO] 23:28:04:160 Consola/(17729:17729): Se agregó el operador EXIT
+[INFO] 23:28:04:161 Consola/(17729:17729): Se envió el cod operacion 12
+[INFO] 23:28:04:161 Consola/(17729:17729): Lista de instrucciones enviada.
+[INFO] 23:28:31:301 Consola/(17729:17729): Respuesta recibida: 14
+[INFO] 23:28:31:301 Consola/(17729:17729): Modulo consola finalizado
+[INFO] 23:28:35:209 Consola/(17711:17711): Respuesta recibida: 14
+[INFO] 23:28:35:209 Consola/(17711:17711): Modulo consola finalizado
+[INFO] 23:28:39:148 Consola/(17720:17720): Respuesta recibida: 14
+[INFO] 23:28:39:149 Consola/(17720:17720): Modulo consola finalizado
+[INFO] 23:29:58:449 Consola/(17935:17935): Consola iniciada
+[INFO] 23:29:58:450 Consola/(17935:17935): Se agregó el operador NO_OP
+[INFO] 23:29:58:450 Consola/(17935:17935): Se agregó el parametro 3
+[INFO] 23:29:58:450 Consola/(17935:17935): Se agregó el operador I/O
+[INFO] 23:29:58:450 Consola/(17935:17935): Se agregó el parametro 13000
+[INFO] 23:29:58:450 Consola/(17935:17935): Se agregó el operador NO_OP
+[INFO] 23:29:58:450 Consola/(17935:17935): Se agregó el parametro 3
+[INFO] 23:29:58:450 Consola/(17935:17935): Se agregó el operador EXIT
+[INFO] 23:29:58:450 Consola/(17935:17935): Se envió el cod operacion 12
+[INFO] 23:29:58:451 Consola/(17935:17935): Lista de instrucciones enviada.
+[INFO] 23:29:58:625 Consola/(17944:17944): Consola iniciada
+[INFO] 23:29:58:628 Consola/(17944:17944): Se agregó el operador NO_OP
+[INFO] 23:29:58:628 Consola/(17944:17944): Se agregó el parametro 3
+[INFO] 23:29:58:628 Consola/(17944:17944): Se agregó el operador I/O
+[INFO] 23:29:58:628 Consola/(17944:17944): Se agregó el parametro 5000
+[INFO] 23:29:58:628 Consola/(17944:17944): Se agregó el operador NO_OP
+[INFO] 23:29:58:628 Consola/(17944:17944): Se agregó el parametro 3
+[INFO] 23:29:58:628 Consola/(17944:17944): Se agregó el operador EXIT
+[INFO] 23:29:58:628 Consola/(17944:17944): Se envió el cod operacion 12
+[INFO] 23:29:58:628 Consola/(17944:17944): Lista de instrucciones enviada.
+[INFO] 23:29:58:795 Consola/(17953:17953): Consola iniciada
+[INFO] 23:29:58:801 Consola/(17953:17953): Se agregó el operador NO_OP
+[INFO] 23:29:58:801 Consola/(17953:17953): Se agregó el parametro 10
+[INFO] 23:29:58:801 Consola/(17953:17953): Se agregó el operador EXIT
+[INFO] 23:29:58:801 Consola/(17953:17953): Se envió el cod operacion 12
+[INFO] 23:29:58:801 Consola/(17953:17953): Lista de instrucciones enviada.
+[INFO] 23:30:20:980 Consola/(17935:17935): Respuesta recibida: 14
+[INFO] 23:30:20:981 Consola/(17935:17935): Modulo consola finalizado
+[INFO] 23:30:26:248 Consola/(17944:17944): Respuesta recibida: 14
+[INFO] 23:30:26:248 Consola/(17944:17944): Modulo consola finalizado
+[INFO] 23:30:34:013 Consola/(17953:17953): Respuesta recibida: 14
+[INFO] 23:30:34:013 Consola/(17953:17953): Modulo consola finalizado
+[INFO] 23:31:39:599 Consola/(18129:18129): Consola iniciada
+[INFO] 23:31:39:599 Consola/(18129:18129): Se agregó el operador WRITE
+[INFO] 23:31:39:600 Consola/(18129:18129): Se agregó el parametro 0
+[INFO] 23:31:39:600 Consola/(18129:18129): Se agregó el parametro 1000
+[INFO] 23:31:39:600 Consola/(18129:18129): Se agregó el operador WRITE
+[INFO] 23:31:39:600 Consola/(18129:18129): Se agregó el parametro 4
+[INFO] 23:31:39:601 Consola/(18129:18129): Se agregó el parametro 1001
+[INFO] 23:31:39:601 Consola/(18129:18129): Se agregó el operador WRITE
+[INFO] 23:31:39:602 Consola/(18129:18129): Se agregó el parametro 260
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 2000
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el operador COPY
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 256
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 260
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el operador WRITE
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 2048
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 4000
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el operador WRITE
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 2052
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 4001
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el operador I/O
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 6000
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el operador READ
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 0
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el operador WRITE
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 1024
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 3000
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el operador READ
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el parametro 256
+[INFO] 23:31:39:606 Consola/(18129:18129): Se agregó el operador READ
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el parametro 2048
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el operador WRITE
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el parametro 4000
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el parametro 9999
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el operador READ
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el parametro 4000
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el operador READ
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el parametro 1024
+[INFO] 23:31:39:607 Consola/(18129:18129): Se agregó el operador EXIT
+[INFO] 23:31:39:607 Consola/(18129:18129): Se envió el cod operacion 12
+[INFO] 23:31:39:607 Consola/(18129:18129): Lista de instrucciones enviada.
+[INFO] 23:33:54:506 Consola/(18129:18129): Respuesta recibida: 14
+[INFO] 23:33:54:506 Consola/(18129:18129): Modulo consola finalizado
+[INFO] 23:34:33:181 Consola/(18420:18420): Consola iniciada
+[INFO] 23:34:33:181 Consola/(18420:18420): Se agregó el operador WRITE
+[INFO] 23:34:33:181 Consola/(18420:18420): Se agregó el parametro 0
+[INFO] 23:34:33:181 Consola/(18420:18420): Se agregó el parametro 1000
+[INFO] 23:34:33:181 Consola/(18420:18420): Se agregó el operador WRITE
+[INFO] 23:34:33:181 Consola/(18420:18420): Se agregó el parametro 4
+[INFO] 23:34:33:181 Consola/(18420:18420): Se agregó el parametro 1001
+[INFO] 23:34:33:181 Consola/(18420:18420): Se agregó el operador WRITE
+[INFO] 23:34:33:181 Consola/(18420:18420): Se agregó el parametro 260
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el parametro 2000
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el operador COPY
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el parametro 256
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el parametro 260
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el operador WRITE
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el parametro 2048
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el parametro 4000
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el operador WRITE
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el parametro 2052
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el parametro 4001
+[INFO] 23:34:33:182 Consola/(18420:18420): Se agregó el operador I/O
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 6000
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el operador READ
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 0
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el operador WRITE
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 1024
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 3000
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el operador READ
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 256
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el operador READ
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 2048
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el operador WRITE
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 4000
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 9999
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el operador READ
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 4000
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el operador READ
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el parametro 1024
+[INFO] 23:34:33:183 Consola/(18420:18420): Se agregó el operador EXIT
+[INFO] 23:34:33:183 Consola/(18420:18420): Se envió el cod operacion 12
+[INFO] 23:34:33:183 Consola/(18420:18420): Lista de instrucciones enviada.
+[INFO] 23:36:35:248 Consola/(18420:18420): Respuesta recibida: 14
+[INFO] 23:36:35:249 Consola/(18420:18420): Modulo consola finalizado
+[INFO] 23:38:21:108 Consola/(18768:18768): Consola iniciada
+[INFO] 23:38:21:110 Consola/(18768:18768): Se agregó el operador WRITE
+[INFO] 23:38:21:110 Consola/(18768:18768): Se agregó el parametro 0
+[INFO] 23:38:21:110 Consola/(18768:18768): Se agregó el parametro 100
+[INFO] 23:38:21:110 Consola/(18768:18768): Se agregó el operador WRITE
+[INFO] 23:38:21:110 Consola/(18768:18768): Se agregó el parametro 132
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 101
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el operador WRITE
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 260
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 102
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el operador WRITE
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 520
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 104
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el operador WRITE
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 4
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 110
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el operador WRITE
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 8
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 120
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el operador WRITE
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 1028
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 108
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el operador READ
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el parametro 0
+[INFO] 23:38:21:111 Consola/(18768:18768): Se agregó el operador I/O
+[INFO] 23:38:21:114 Consola/(18768:18768): Se agregó el parametro 3000
+[INFO] 23:38:21:114 Consola/(18768:18768): Se agregó el operador READ
+[INFO] 23:38:21:114 Consola/(18768:18768): Se agregó el parametro 260
+[INFO] 23:38:21:114 Consola/(18768:18768): Se agregó el operador READ
+[INFO] 23:38:21:114 Consola/(18768:18768): Se agregó el parametro 520
+[INFO] 23:38:21:114 Consola/(18768:18768): Se agregó el operador EXIT
+[INFO] 23:38:21:114 Consola/(18768:18768): Se envió el cod operacion 12
+[INFO] 23:38:21:114 Consola/(18768:18768): Lista de instrucciones enviada.
+[INFO] 23:38:21:274 Consola/(18777:18777): Consola iniciada
+[INFO] 23:38:21:280 Consola/(18777:18777): Se agregó el operador WRITE
+[INFO] 23:38:21:280 Consola/(18777:18777): Se agregó el parametro 520
+[INFO] 23:38:21:281 Consola/(18777:18777): Se agregó el parametro 999
+[INFO] 23:38:21:281 Consola/(18777:18777): Se agregó el operador WRITE
+[INFO] 23:38:21:281 Consola/(18777:18777): Se agregó el parametro 260
+[INFO] 23:38:21:281 Consola/(18777:18777): Se agregó el parametro 999
+[INFO] 23:38:21:281 Consola/(18777:18777): Se agregó el operador EXIT
+[INFO] 23:38:21:281 Consola/(18777:18777): Se envió el cod operacion 12
+[INFO] 23:38:21:281 Consola/(18777:18777): Lista de instrucciones enviada.
+[INFO] 23:40:27:156 Consola/(18777:18777): Respuesta recibida: 14
+[INFO] 23:40:27:157 Consola/(18777:18777): Modulo consola finalizado
+[INFO] 23:40:50:744 Consola/(18768:18768): Respuesta recibida: 14
+[INFO] 23:40:50:744 Consola/(18768:18768): Modulo consola finalizado
+[INFO] 23:43:44:762 Consola/(19269:19269): Consola iniciada
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el operador WRITE
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el parametro 0
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el parametro 100
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el operador WRITE
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el parametro 132
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el parametro 101
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el operador WRITE
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el parametro 260
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el parametro 102
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el operador WRITE
+[INFO] 23:43:44:762 Consola/(19269:19269): Se agregó el parametro 520
+[INFO] 23:43:44:763 Consola/(19269:19269): Se agregó el parametro 104
+[INFO] 23:43:44:763 Consola/(19269:19269): Se agregó el operador WRITE
+[INFO] 23:43:44:763 Consola/(19269:19269): Se agregó el parametro 4
+[INFO] 23:43:44:763 Consola/(19269:19269): Se agregó el parametro 110
+[INFO] 23:43:44:763 Consola/(19269:19269): Se agregó el operador WRITE
+[INFO] 23:43:44:763 Consola/(19269:19269): Se agregó el parametro 8
+[INFO] 23:43:44:764 Consola/(19269:19269): Se agregó el parametro 120
+[INFO] 23:43:44:764 Consola/(19269:19269): Se agregó el operador WRITE
+[INFO] 23:43:44:764 Consola/(19269:19269): Se agregó el parametro 1028
+[INFO] 23:43:44:764 Consola/(19269:19269): Se agregó el parametro 108
+[INFO] 23:43:44:764 Consola/(19269:19269): Se agregó el operador READ
+[INFO] 23:43:44:764 Consola/(19269:19269): Se agregó el parametro 0
+[INFO] 23:43:44:767 Consola/(19269:19269): Se agregó el operador I/O
+[INFO] 23:43:44:767 Consola/(19269:19269): Se agregó el parametro 3000
+[INFO] 23:43:44:767 Consola/(19269:19269): Se agregó el operador READ
+[INFO] 23:43:44:767 Consola/(19269:19269): Se agregó el parametro 260
+[INFO] 23:43:44:767 Consola/(19269:19269): Se agregó el operador READ
+[INFO] 23:43:44:767 Consola/(19269:19269): Se agregó el parametro 520
+[INFO] 23:43:44:767 Consola/(19269:19269): Se agregó el operador EXIT
+[INFO] 23:43:44:767 Consola/(19269:19269): Se envió el cod operacion 12
+[INFO] 23:43:44:767 Consola/(19269:19269): Lista de instrucciones enviada.
+[INFO] 23:43:44:939 Consola/(19278:19278): Consola iniciada
+[INFO] 23:43:44:940 Consola/(19278:19278): Se agregó el operador WRITE
+[INFO] 23:43:44:940 Consola/(19278:19278): Se agregó el parametro 520
+[INFO] 23:43:44:940 Consola/(19278:19278): Se agregó el parametro 999
+[INFO] 23:43:44:940 Consola/(19278:19278): Se agregó el operador WRITE
+[INFO] 23:43:44:940 Consola/(19278:19278): Se agregó el parametro 260
+[INFO] 23:43:44:940 Consola/(19278:19278): Se agregó el parametro 999
+[INFO] 23:43:44:940 Consola/(19278:19278): Se agregó el operador EXIT
+[INFO] 23:43:44:940 Consola/(19278:19278): Se envió el cod operacion 12
+[INFO] 23:43:44:940 Consola/(19278:19278): Lista de instrucciones enviada.
+[INFO] 23:45:48:052 Consola/(19278:19278): Respuesta recibida: 14
+[INFO] 23:45:48:052 Consola/(19278:19278): Modulo consola finalizado
+[INFO] 23:46:11:356 Consola/(19269:19269): Respuesta recibida: 14
+[INFO] 23:46:11:356 Consola/(19269:19269): Modulo consola finalizado
+[INFO] 23:48:06:886 Consola/(19668:19668): Consola iniciada
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el parametro 10
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el parametro 0
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el parametro 1
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el parametro 4
+[INFO] 23:48:06:912 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:913 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:913 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:913 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:913 Consola/(19668:19668): Se agregó el parametro 8
+[INFO] 23:48:06:913 Consola/(19668:19668): Se agregó el parametro 3
+[INFO] 23:48:06:913 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:921 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:921 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:921 Consola/(19668:19668): Se agregó el parametro 12
+[INFO] 23:48:06:921 Consola/(19668:19668): Se agregó el parametro 4
+[INFO] 23:48:06:921 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:921 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:921 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el parametro 16
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el parametro 5
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el parametro 256
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el parametro 11
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el parametro 260
+[INFO] 23:48:06:922 Consola/(19668:19668): Se agregó el parametro 12
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 264
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 13
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 268
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 14
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 272
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 15
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 512
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 21
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:923 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:932 Consola/(19668:19668): Se agregó el parametro 516
+[INFO] 23:48:06:932 Consola/(19668:19668): Se agregó el parametro 22
+[INFO] 23:48:06:932 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:932 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:932 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:936 Consola/(19668:19668): Se agregó el parametro 520
+[INFO] 23:48:06:936 Consola/(19668:19668): Se agregó el parametro 23
+[INFO] 23:48:06:936 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:936 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:936 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:941 Consola/(19668:19668): Se agregó el parametro 524
+[INFO] 23:48:06:941 Consola/(19668:19668): Se agregó el parametro 24
+[INFO] 23:48:06:941 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:941 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:941 Consola/(19668:19668): Se agregó el operador WRITE
+[INFO] 23:48:06:942 Consola/(19668:19668): Se agregó el parametro 528
+[INFO] 23:48:06:942 Consola/(19668:19668): Se agregó el parametro 25
+[INFO] 23:48:06:942 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:942 Consola/(19668:19668): Se agregó el parametro 10
+[INFO] 23:48:06:942 Consola/(19668:19668): Se agregó el operador I/O
+[INFO] 23:48:06:942 Consola/(19668:19668): Se agregó el parametro 5000
+[INFO] 23:48:06:942 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:942 Consola/(19668:19668): Se agregó el parametro 10
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el parametro 0
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el parametro 4
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el parametro 8
+[INFO] 23:48:06:943 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el parametro 12
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el parametro 16
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el parametro 256
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:944 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el parametro 260
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el parametro 264
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:945 Consola/(19668:19668): Se agregó el parametro 268
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 272
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 512
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 516
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 520
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 524
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 2
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador READ
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 528
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador NO_OP
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el parametro 10
+[INFO] 23:48:06:946 Consola/(19668:19668): Se agregó el operador EXIT
+[INFO] 23:48:06:947 Consola/(19668:19668): Se envió el cod operacion 12
+[INFO] 23:48:06:947 Consola/(19668:19668): Lista de instrucciones enviada.
+[INFO] 23:48:07:124 Consola/(19677:19677): Consola iniciada
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 10
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el operador WRITE
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 0
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 1
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el operador WRITE
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 256
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 11
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el operador WRITE
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 512
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 21
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el operador WRITE
+[INFO] 23:48:07:134 Consola/(19677:19677): Se agregó el parametro 768
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el parametro 31
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el operador WRITE
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el parametro 1024
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el parametro 41
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el parametro 10
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el operador I/O
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el parametro 5000
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el parametro 10
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el operador READ
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el parametro 1024
+[INFO] 23:48:07:135 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:137 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:137 Consola/(19677:19677): Se agregó el operador READ
+[INFO] 23:48:07:137 Consola/(19677:19677): Se agregó el parametro 768
+[INFO] 23:48:07:137 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:137 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador READ
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 512
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador READ
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 256
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador READ
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 0
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador I/O
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 100
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador I/O
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 100
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador I/O
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 100
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador I/O
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 100
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador I/O
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 100
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 5
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador I/O
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 100
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador NO_OP
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el parametro 10
+[INFO] 23:48:07:139 Consola/(19677:19677): Se agregó el operador EXIT
+[INFO] 23:48:07:139 Consola/(19677:19677): Se envió el cod operacion 12
+[INFO] 23:48:07:143 Consola/(19677:19677): Lista de instrucciones enviada.
+[INFO] 23:48:07:280 Consola/(19689:19689): Consola iniciada
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 0
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 1
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 4
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 2
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 256
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 11
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 260
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 12
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:282 Consola/(19689:19689): Se agregó el parametro 512
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 21
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 516
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 22
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 768
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 31
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 772
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 32
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 1024
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 41
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 1028
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 42
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 1280
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 51
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el operador WRITE
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 1284
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 52
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:283 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 0
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 256
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 512
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 768
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 1024
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 1280
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 4
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 260
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 516
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 772
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 1028
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 1284
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:284 Consola/(19689:19689): Se agregó el parametro 0
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 256
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 512
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 768
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 1024
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 1280
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 4
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 260
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 516
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 772
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 1028
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 1284
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 0
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 256
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 512
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 768
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 1024
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 1280
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:285 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 4
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 260
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 516
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 772
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 1028
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 1284
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 20
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 0
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 256
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 512
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 768
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 1024
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 1280
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:286 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:291 Consola/(19689:19689): Se agregó el parametro 4
+[INFO] 23:48:07:291 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:291 Consola/(19689:19689): Se agregó el parametro 260
+[INFO] 23:48:07:291 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el parametro 516
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el parametro 772
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el parametro 1028
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el parametro 1284
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el parametro 0
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el parametro 256
+[INFO] 23:48:07:292 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 512
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 768
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 1024
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 1280
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 4
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 260
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 516
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 772
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 1028
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador READ
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 1284
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador NO_OP
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el parametro 10
+[INFO] 23:48:07:293 Consola/(19689:19689): Se agregó el operador EXIT
+[INFO] 23:48:07:294 Consola/(19689:19689): Se envió el cod operacion 12
+[INFO] 23:48:07:295 Consola/(19689:19689): Lista de instrucciones enviada.
+[INFO] 23:48:07:429 Consola/(19698:19698): Consola iniciada
+[INFO] 23:48:07:431 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:431 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:431 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:431 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:432 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:433 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:434 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:437 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:438 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el operador NO_OP
+[INFO] 23:48:07:439 Consola/(19698:19698): Se agregó el parametro 2
+[INFO] 23:48:07:454 Consola/(19698:19698): Se agregó el operador I/O
+[INFO] 23:48:07:454 Consola/(19698:19698): Se agregó el parametro 100
+[INFO] 23:48:07:454 Consola/(19698:19698): Se agregó el operador EXIT
+[INFO] 23:48:07:454 Consola/(19698:19698): Se envió el cod operacion 12
+[INFO] 23:48:07:454 Consola/(19698:19698): Lista de instrucciones enviada.
+[INFO] 23:48:07:607 Consola/(19707:19707): Consola iniciada
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el operador WRITE
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el parametro 0
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el parametro 1
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el operador WRITE
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el parametro 4
+[INFO] 23:48:07:609 Consola/(19707:19707): Se agregó el parametro 2
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el operador WRITE
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 256
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 11
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el operador WRITE
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 260
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 12
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:610 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador READ
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 0
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador READ
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 256
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador READ
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 4
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:611 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador READ
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 260
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador WRITE
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 512
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 21
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador WRITE
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 516
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 22
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el operador WRITE
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 768
+[INFO] 23:48:07:612 Consola/(19707:19707): Se agregó el parametro 31
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador WRITE
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 772
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 32
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador READ
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 512
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador READ
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 516
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador READ
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 768
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador READ
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 772
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador NO_OP
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 10
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el operador I/O
+[INFO] 23:48:07:613 Consola/(19707:19707): Se agregó el parametro 100
+[INFO] 23:48:07:614 Consola/(19707:19707): Se agregó el operador EXIT
+[INFO] 23:48:07:614 Consola/(19707:19707): Se envió el cod operacion 12
+[INFO] 23:48:07:614 Consola/(19707:19707): Lista de instrucciones enviada.
+[INFO] 23:49:08:232 Consola/(19677:19677): Respuesta recibida: 14
+[INFO] 23:49:08:233 Consola/(19677:19677): Modulo consola finalizado
+[INFO] 23:49:55:752 Consola/(19668:19668): Respuesta recibida: 14
+[INFO] 23:49:55:753 Consola/(19668:19668): Modulo consola finalizado
+[INFO] 23:54:58:126 Consola/(19689:19689): Respuesta recibida: 14
+[INFO] 23:54:58:126 Consola/(19689:19689): Modulo consola finalizado
+[INFO] 23:55:44:164 Consola/(19698:19698): Respuesta recibida: 14
+[INFO] 23:55:44:164 Consola/(19698:19698): Modulo consola finalizado
+[INFO] 23:56:05:355 Consola/(19707:19707): Respuesta recibida: 14
+[INFO] 23:56:05:355 Consola/(19707:19707): Modulo consola finalizado

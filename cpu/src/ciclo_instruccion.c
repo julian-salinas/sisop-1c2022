@@ -65,7 +65,7 @@ void ejecutar_ciclo_instruccion(t_PCB *pcb, int socket_cliente) {
             direccion_logica = parametro_instruccion(instruccion->parametros, 0);
             valor = buscar_operando(direccion_logica, pcb -> PID);
             //Execute
-            log_info(logger, "Se leyó el valor: %d", valor);
+            log_trace(logger, "Se leyó el valor: %d", valor);
             break;
         case WRITE:
             log_info(logger, "Ejecutando WRITE");

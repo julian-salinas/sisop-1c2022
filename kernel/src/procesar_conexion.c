@@ -59,7 +59,8 @@ void procesar_conexion_dispatch(void *args)
             sem_post(sem_cpu_disponible);
 
             sem_wait(mutex_socket_memoria);
-            enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb); // Avisarle a memoria para que desaloje al proceso
+                enviar_pcb(conexion_memoria, PROCESO_FINALIZADO, pcb); // Avisarle a memoria para que desaloje al proceso
+                omitir_header(conexion_memoria); // No es importante leer la respuesta y manejarla
             sem_post(mutex_socket_memoria);
 
             enviar_header(pcb->socket_cliente, PROCESO_FINALIZADO); // Avisarle a consola que terminó la ejecución
