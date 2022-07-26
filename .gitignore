@@ -50,22 +50,3 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-
-*.code-workspace
-help.md
-
-# a ver si dejan de joder los cpp properties
-**/.vscode
-.vscode
-.json
-consola/.vscode/
-kernel/.vscode/
-memoria/.vscode/
-cpu/.vscode/
-
-# docker
-docker-compose.yml
-docker.md
-Dockerfile
-
-**/*.log
